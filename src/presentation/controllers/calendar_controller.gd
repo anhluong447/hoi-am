@@ -20,13 +20,16 @@ func model() -> Dictionary:
 	for definition: Dictionary in _pack.phases:
 		if definition.id == state.phase:
 			phase_key = definition.name_key
+	var capacity: int = _pack.balance.DEFAULTS.clubEnergy if state.phase in ["morning", "club"] else _pack.balance.DEFAULTS.outsideEnergy
 	return {"date": _text.text("migration.hud.date", {"weekday": _text.text(weekdays[(int(state.day) - 1) % weekdays.size()]), "day": state.day}),
-		"phase": _text.text(phase_key), "energy": _text.text("migration.hud.energy", {"energy": state.energy}),
-		"money": _text.text("migration.hud.money", {"money": {"number": state.money, "format": "vi_integer"}}),
+		"phase": _text.text(phase_key), "energy": _text.text("ui.hud.energy", {"energy": state.energy, "capacity": capacity}),
+		"energy_value": state.energy, "energy_capacity": capacity,
+		"money": _text.text("ui.hud.money", {"money": {"number": state.money, "format": "vi_integer"}}),
 		"location": _text.text("content.gameplay.presentation.clb_hoi_am"),
-		"objective_title": _text.text("migration.hud.objective_title"),
+		"objective_title": _text.text("ui.hud.objective_title"),
 		"objective": _text.text("migration.hud.calendar_objective"),
-		"controls": _text.text("migration.hud.calendar_controls"), "menu": _text.text("migration.ui.back"),
+		"controls": _text.text("migration.hud.calendar_controls"), "menu": _text.text("ui.hud.preview_back"),
+		"menu_key": _text.text("ui.hud.menu_key"), "map": _text.text("ui.hud.map"),
 		"ended": state.ended}
 
 

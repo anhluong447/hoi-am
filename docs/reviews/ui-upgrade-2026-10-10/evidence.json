@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-10",
+  "target_base_commit": "8a770405f59f7f6dc219b9a87684e84ef94fe585",
+  "source_commit": "6ad88df15ac5f082ac323e9d4144094affe01c7b",
+  "source_clean": true,
+  "engine": {
+    "major": 4,
+    "minor": 7,
+    "patch": 2,
+    "hex": 263938,
+    "status": "stable",
+    "build": "steam",
+    "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+    "timestamp": 0,
+    "string": "4.7.2-stable (steam)"
+  },
+  "renderer": "forward_plus",
+  "api": "d3d12",
+  "adapter": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+  "headless_checks": 655,
+  "headless_failures": 0,
+  "native_checks": 53,
+  "native_failures": 0,
+  "native_window_sizes": [
+    [
+      1672,
+      941
+    ],
+    [
+      1280,
+      720
+    ],
+    [
+      1920,
+      1080
+    ],
+    [
+      1024,
+      768
+    ],
+    [
+      2560,
+      1080
+    ]
+  ],
+  "capture_count_final": 22,
+  "capture_version_final": "captures-v3",
+  "physical_controller_tested": false,
+  "active_art_manifest": "content/ui/art_manifest_v3.json",
+  "textures": 20,
+  "baseline_policy": "Unchanged original baselines, imported art/font/reference inputs and historical review bytes",
+  "clean_import": {
+    "status": "passed architecture/reference/content, fresh engine import, 655 contracts and bootstrap",
+    "first_attempt": "Stopped at architecture documentation link checks before evidence/inventory/profile summary existed; no engine import or contracts ran in that attempt",
+    "snapshot": "artifacts/clean-ui-upgrade-20261010-v2",
+    "canonical_files_compared": 379,
+    "cache_before_import": false
+  },
+  "performance": {
+    "runs": 14,
+    "measured_frames": 4200,
+    "warmup_per_run": 120,
+    "real_clock": true,
+    "fixed_fps": false,
+    "vsync": "disabled",
+    "max_fps": 120,
+    "frame_p95_ms_range": [
+      8.691,
+      8.761
+    ],
+    "gpu_p95_max_ms": 2.947999954223633,
+    "limits": "One laptop; short real-clock sample; capped 120 fps; user editor/play left running. Final run sequential after exports; no weak-GPU or long-soak claim."
+  },
+  "native_exports": [
+    {
+      "kind": "debug",
+      "execution": "Clean temporary folder; no project.godot/source checkout; packaged self-check passed",
+      "files": [
+        {
+          "path": "build/windows/debug/hoi-am.console.exe",
+          "bytes": 188928,
+          "sha256": "5514c7645ee897a01f540d3cf22ede5badf92394521a08bfab66a54d7369e6e6"
+        },
+        {
+          "path": "build/windows/debug/hoi-am.exe",
+          "bytes": 103176704,
+          "sha256": "51498b72b3a237f882ebd7d1787f06a4bc1eaf0572daab93837adcfd3cfdc107"
+        },
+        {
+          "path": "build/windows/debug/hoi-am.pck",
+          "bytes": 3652096,
+          "sha256": "e7b6bc497529b2c539b8a467c37c23af47e0f8b28f0f647d1f0a69c6409628ae"
+        },
+        {
+          "path": "build/windows/debug/licenses/cormorantgaramond-OFL.txt",
+          "bytes": 4387,
+          "sha256": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956"
+        },
+        {
+          "path": "build/windows/debug/licenses/dancingscript-OFL.txt",
+          "bytes": 4443,
+          "sha256": "6f090277c00af96651ce6dbcc38ff1591047a3bffef486e80b6a32e8276a8201"
+        },
+        {
+          "path": "build/windows/debug/licenses/godot-COPYRIGHT.txt",
+          "bytes": 100108,
+          "sha256": "cb1980c88089573bcacd7221d777c689bb8bbd778799f24c27fca0fe5f774d6d"
+        },
+        {
+          "path": "build/windows/debug/licenses/godot-LICENSE.txt",
+          "bytes": 1149,
+          "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80"
+        },
+        {
+          "path": "build/windows/debug/licenses/source_serif_4-OFL.txt",
+          "bytes": 4400,
+          "sha256": "5f94c3fd3a23131a417ab5a0c8452de57e70c3cfb9f604d88241f7065ebf9fd9"
+        }
+      ]
+    },
+    {
+      "kind": "release",
+      "execution": "Clean temporary folder; no project.godot/source checkout; packaged self-check passed",
+      "files": [
+        {
+          "path": "build/windows/release/hoi-am.exe",
+          "bytes": 109268480,
+          "sha256": "d34d36f3be1a6c49c56525ae86469b92e4f417ddf0b43cf00dd80c385c4b0562"
+        },
+        {
+          "path": "build/windows/release/hoi-am.pck",
+          "bytes": 3652096,
+          "sha256": "e7b6bc497529b2c539b8a467c37c23af47e0f8b28f0f647d1f0a69c6409628ae"
+        },
+        {
+          "path": "build/windows/release/licenses/cormorantgaramond-OFL.txt",
+          "bytes": 4387,
+          "sha256": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956"
+        },
+        {
+          "path": "build/windows/release/licenses/dancingscript-OFL.txt",
+          "bytes": 4443,
+          "sha256": "6f090277c00af96651ce6dbcc38ff1591047a3bffef486e80b6a32e8276a8201"
+        },
+        {
+          "path": "build/windows/release/licenses/godot-COPYRIGHT.txt",
+          "bytes": 100108,
+          "sha256": "cb1980c88089573bcacd7221d777c689bb8bbd778799f24c27fca0fe5f774d6d"
+        },
+        {
+          "path": "build/windows/release/licenses/godot-LICENSE.txt",
+          "bytes": 1149,
+          "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80"
+        },
+        {
+          "path": "build/windows/release/licenses/source_serif_4-OFL.txt",
+          "bytes": 4400,
+          "sha256": "5f94c3fd3a23131a417ab5a0c8452de57e70c3cfb9f604d88241f7065ebf9fd9"
+        }
+      ]
+    }
+  ],
+  "visual_gate": "C11.05/G2 open; masked dialogue comparison diagnostic only; HUD separate masked acceptance not yet defined",
+  "source_browser_tests_run": false,
+  "reason": "Godot UI only; source JS/HTML unchanged",
+  "art_provenance": "Project-authored text-free SVG from locked concept layout; insignia original master; wash source UI spec. Versioned recipes and all original source/prompts/licenses retained.",
+  "inventory": {
+    "path": "docs/reviews/ui-upgrade-2026-10-10/inventory.json",
+    "bytes": 112749,
+    "sha256": "cd45e9626405f12741e9759ac7f035fea8a7478e2f42680ee5f00c7f66ff556a"
+  },
+  "durable_logs": [
+    {
+      "path": "docs/reviews/ui-upgrade-2026-10-10/logs/bootstrap.log",
+      "bytes": 70,
+      "sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75"
+    },
+    {
+      "path": "docs/reviews/ui-upgrade-2026-10-10/logs/clean-bootstrap.log",
+      "bytes": 70,
+      "sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75"
+    },
+    {
+      "path": "docs/reviews/ui-upgrade-2026-10-10/logs/clean-contracts.log",
+      "bytes": 113,
+      "sha256": "66841c5ad16c2f8c88a550e4ad82ca5b8199d97ee995cd97643b59007d7136e0"
+    },
+    {
+      "path": "docs/reviews/ui-upgrade-2026-10-10/logs/clean-import.log",
+      "bytes": 6978,
+      "sha256": "d45295123d51a344b18b406db2b338eead6c72fd3b74a5f5a6d98c669ad6d9d9"
+    },
+    {
+      "path": "docs/reviews/ui-upgrade-2026-10-10/logs/clean-policies.log",
+      "bytes": 246,
+      "sha256": "f2c6e6c6b5c99c85991740283584909fbd57611428adb0709df469e52ae99c89"
+    },
+    {
+      "path": "docs/reviews/ui-upgrade-2026-10-10/logs/contracts.log",
+      "bytes": 113,
+      "sha256": "66841c5ad16c2f8c88a550e4ad82ca5b8199d97ee995cd97643b59007d7136e0"
+    },
+    {
+      "path": "docs/reviews/ui-upgrade-2026-10-10/logs/export-debug.log",
+      "bytes": 22500,
+      "sha256": "1fdfea74ac229b4ccd926da7c99285f374832f8da3cd7f7bef5ab13748febdee"
+    },
+    {
+      "path": "docs/reviews/ui-upgrade-2026-10-10/logs/export-release.log",
+      "bytes": 22500,
+      "sha256": "1fdfea74ac229b4ccd926da7c99285f374832f8da3cd7f7bef5ab13748febdee"
+    },
+    {
+      "path": "docs/reviews/ui-upgrade-2026-10-10/logs/import.log",
+      "bytes": 1574,
+      "sha256": "a3dd65cf72ecaf0aea57e8378665a9f6eababa22d23aba33d65a7967ae9cd429"
+    },
+    {
+      "path": "docs/reviews/ui-upgrade-2026-10-10/logs/native-export-debug.log",
+      "bytes": 287,
+      "sha256": "33098e13abb44c0787c139378788809055a10d9d5efa4e9a34042f973bc73fad"
+    },
+    {
+      "path": "docs/reviews/ui-upgrade-2026-10-10/logs/native-export-release.log",
+      "bytes": 287,
+      "sha256": "33098e13abb44c0787c139378788809055a10d9d5efa4e9a34042f973bc73fad"
+    },
+    {
+      "path": "docs/reviews/ui-upgrade-2026-10-10/logs/native-interaction.log",
+      "bytes": 200,
+      "sha256": "7b49a653987b13e7e5773891f3de9816dacd952111fcf5b9b4e7260490c814b7"
+    },
+    {
+      "path": "docs/reviews/ui-upgrade-2026-10-10/logs/profile-ui-upgrade-final.log",
+      "bytes": 227,
+      "sha256": "60c334c00434ebd0128ff3d66df18efef1c608b7f3a23817ed3fc98f7be7071f"
+    },
+    {
+      "path": "docs/reviews/ui-upgrade-2026-10-10/logs/profile-ui-upgrade.log",
+      "bytes": 227,
+      "sha256": "60c334c00434ebd0128ff3d66df18efef1c608b7f3a23817ed3fc98f7be7071f"
+    },
+    {
+      "path": "docs/reviews/ui-upgrade-2026-10-10/logs/ui-upgrade-capture-v3.log",
+      "bytes": 270,
+      "sha256": "c8bf1ec8a7e73e69e38572152bfe0bb412265946f99795ab77ddb4da7a7c8814"
+    }
+  ]
+}

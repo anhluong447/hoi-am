@@ -1,0 +1,55 @@
+"""Authored text-free HUD vectors and the captured dialogue lighting prescription."""
+import base64
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+
+
+def documents():
+    spec = json.loads((ROOT / 'docs/reference/art/coastal-dialogue-ui.json').read_text(encoding='utf-8'))
+    mark = ROOT / 'assets/ui/coastal/source/exports/insignia.svg'
+    encoded = base64.b64encode(mark.read_bytes()).decode()
+    defs = '''<linearGradient id="ink" x2=".2" y2="1"><stop stop-color="#043342"/><stop offset="1" stop-color="#0c4654"/></linearGradient>
+<linearGradient id="paper" x2=".8" y2="1"><stop stop-color="#fff9ea"/><stop offset="1" stop-color="#f0e4cb"/></linearGradient>
+<linearGradient id="gold" x2="1" y2=".1"><stop stop-color="#ffdf77"/><stop offset="1" stop-color="#f4c849"/></linearGradient>
+<linearGradient id="footer" x2="0" y2="1"><stop stop-color="#032d38" stop-opacity="0"/><stop offset="1" stop-color="#032d38" stop-opacity=".84"/></linearGradient>
+<filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".42 .6" numOctaves="3" seed="26"/><feColorMatrix type="saturate" values="0"/></filter>
+<clipPath id="date"><path d="M32 32L101 30L178 33L252 30L343 33L339 44L351 45L340 52L349 60L340 66L351 73L342 80L351 84L339 91L347 97L339 104L346 112L338 118L344 125L333 132L32 134L28 124L31 88L28 66L31 46Z"/></clipPath>
+<clipPath id="ribbon"><path d="M1081 83L1095 63L1088 53L1112 38L1129 32L1131 24L1189 29L1266 25L1344 31L1400 29L1491 33L1573 29L1672 39V94L1605 91L1545 100L1460 99L1384 111L1309 104L1226 113L1147 102L1110 91Z"/></clipPath>'''
+    frame = '''<path d="M0 0H466L449 21L459 27L438 41L443 50L425 62L429 76L403 95L416 113L383 135L353 150H0Z" fill="url(#ink)"/>
+<path d="M0 149L319 149L325 200Q332 271 279 317Q245 331 195 343Q145 349 117 344Q79 345 43 362Q20 366 0 358Z" fill="url(#ink)"/>
+<path d="M0 343Q40 338 58 345Q115 327 166 334Q250 339 294 306M0 370Q45 376 80 359Q158 340 210 348Q258 340 288 322M291 147Q359 132 393 95" fill="none" stroke="#63b9bf" stroke-width="1.2" opacity=".65"/>
+<g clip-path="url(#ribbon)"><rect x="1080" y="20" width="592" height="100" fill="url(#ink)"/><rect x="1080" y="20" width="592" height="100" filter="url(#grain)" opacity=".065"/></g>
+<path d="M1092 88Q1161 97 1240 103Q1320 113 1417 99Q1550 94 1672 96M1112 98Q1201 122 1302 113" fill="none" stroke="#64c2c4" stroke-width="1.2" opacity=".65"/>
+<g clip-path="url(#date)"><rect x="28" y="30" width="325" height="106" fill="url(#paper)"/><rect x="28" y="30" width="325" height="106" filter="url(#grain)" opacity=".07"/></g>
+<path d="M36 36V127" stroke="#164955" stroke-width="1"/>
+<path d="M36 37l3 5-3 5-3-5m3 12l3 5-3 5-3-5m3 12l3 5-3 5-3-5m3 12l3 5-3 5-3-5m3 12l3 5-3 5-3-5m3 12l3 5-3 5-3-5" fill="#164955"/>
+<path d="M34 185L276 185L269 190L295 194L277 198L289 203L276 208L300 210L276 215L286 220L274 222L291 226L271 231L34 233Z" fill="url(#gold)"/>
+<path d="M36 174V318" stroke="#65e6e1" stroke-width="1.2"/><circle cx="36" cy="174" r="3" fill="#65e6e1"/><circle cx="36" cy="318" r="3" fill="#65e6e1"/>
+<circle cx="63" cy="262" r="8" fill="none" stroke="#f7f0dd" stroke-width="2"/><circle cx="63" cy="262" r="4.5" fill="#f7f0dd"/>
+<path d="M1180 44L1164 66H1175L1170 84L1188 61H1178Z" fill="#ffd566"/>
+<path d="M1494 45V84" stroke="#72d2d0" stroke-width="1"/>
+<g fill="#fbf4e5"><ellipse cx="1540" cy="53" rx="11" ry="5"/><path d="M1529 57Q1540 65 1551 57V61Q1540 69 1529 61ZM1529 65Q1540 73 1551 65V69Q1540 77 1529 69ZM1529 73Q1540 81 1551 73V77Q1540 85 1529 77Z"/></g>
+<rect x="0" y="827" width="1672" height="114" fill="url(#footer)"/>
+<path d="M58 870C42 870 41 887 48 897L58 910L68 897C76 886 73 870 58 870ZM58 876A6 6 0 1 1 58 888A6 6 0 1 1 58 876Z" fill="#f8f0dc" fill-rule="evenodd"/>
+<path d="M41 914H292M298 914H303" stroke="#f8f0dc" stroke-width="1"/>
+<path d="M1344 879L1353 876L1364 881L1373 877V897L1364 901L1353 896L1344 900ZM1353 876V896M1364 881V901" fill="none" stroke="#fff4dc" stroke-width="1.5"/>
+<path d="M1498 880V902" stroke="#61c6c9"/><rect x="1525" y="872" width="44" height="35" rx="4" fill="#113742" fill-opacity=".45" stroke="#f6edd7" stroke-width="1.5"/>'''
+    frame += f'<image href="data:image/svg+xml;base64,{encoded}" x="65" y="63" width="49" height="38"/>'
+    lighting = spec['lighting']
+    wash = lighting['paperWash']
+    stops = ''.join(f'<stop offset="{p}" stop-color="{c}" stop-opacity="{a}"/>' for p, c, a in wash['stops'])
+    contour = json.loads((ROOT / 'assets/ui/coastal/source/manifest.json').read_text(encoding='utf-8'))['paperContour']
+    paper = f'<defs><linearGradient id="wash" x2="1" y2=".1">{stops}</linearGradient><clipPath id="cut"><path d="{contour}" transform="translate(0 599)"/></clipPath></defs><rect x="0" y="599" width="1672" height="342" fill="url(#wash)" opacity="{wash["opacity"]}" clip-path="url(#cut)"/>'
+    wash = lighting['noteWash']
+    stops = ''.join(f'<stop offset="{p}" stop-color="{c}" stop-opacity="{a}"/>' for p, c, a in wash['stops'])
+    note = f'<defs><linearGradient id="wash" x2="1" y2="1">{stops}</linearGradient></defs><path d="{wash["path"]}" fill="url(#wash)" opacity="{wash["opacity"]}"/>'
+    prompt = '<rect x="1" y="1" width="164" height="43" rx="4" fill="url(#gold)" stroke="#ffe48b" stroke-width="1"/>'
+    outputs = {}
+    for name, body, size in [('hud-frame', frame, (1672, 941)), ('dialogue-wash', paper, (1672, 941)), ('note-wash', note, (1672, 941)), ('hud-prompt', prompt, (166, 45))]:
+        w, h = size
+        svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}"><defs>{defs}</defs>{body}</svg>'
+        assert '<text' not in svg
+        outputs[name] = (svg, size)
+    return outputs

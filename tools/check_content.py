@@ -89,13 +89,17 @@ def main():
         assert all(npc['actor_id'] in actors for npc in authored['npcs'])
     for item in imports['files']:
         assert hashlib.sha256((ROOT / item['target']).read_bytes()).hexdigest() == item['sha256'], item['target']
-    art = read('content/ui/art_manifest.json')
-    for item in art['assets']:
-        target = ROOT / item['texture_path'][6:]
-        authored = ROOT / 'assets/ui/coastal/generated_sources' / (item['id'] + '.svg')
-        assert hashlib.sha256(target.read_bytes()).hexdigest() == item['sha256']
-        assert hashlib.sha256(authored.read_bytes()).hexdigest() == item['source_sha256']
-        assert '<text' not in authored.read_text(encoding='utf-8')
+    active_art = read('content/manifest.json')['ui_art_path'][6:]
+    art_paths = [p.relative_to(ROOT).as_posix() for p in sorted((ROOT / 'content/ui').glob('art_manifest*.json'))]
+    for art_path in [p for p in art_paths if p != active_art] + [active_art]:
+        art = read(art_path)
+        ids(art['assets'])
+        for item in art['assets']:
+            target = ROOT / item['texture_path'][6:]
+            authored = ROOT / item['source_path'][6:] if 'source_path' in item else ROOT / 'assets/ui/coastal/generated_sources' / (item['id'] + '.svg')
+            assert hashlib.sha256(target.read_bytes()).hexdigest() == item['sha256']
+            assert hashlib.sha256(authored.read_bytes()).hexdigest() == item['source_sha256']
+            assert '<text' not in authored.read_text(encoding='utf-8')
     actors3d = read('content/world/actors.json')['actors']
     for id, actor in actors3d.items():
         assert id in actors and actor['pivot'] == {'x': 16, 'y': 46}

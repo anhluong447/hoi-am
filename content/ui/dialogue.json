@@ -170,9 +170,21 @@
     }
   },
   "note_copy": {
-    "x": 1495,
-    "y": 783,
-    "rotation": 10
+    "basis": [
+      1,
+      0.04,
+      -0.18,
+      1
+    ],
+    "origin": [
+      127.8,
+      -50
+    ],
+    "anchor": [
+      1505,
+      758
+    ],
+    "rotation": 8
   },
   "stage": [
     1672,
@@ -180,5 +192,11 @@
   ],
   "motion": {
     "enter_duration": 0.18
+  },
+  "choice_copy": {
+    "right_margin": 46,
+    "padding": 7,
+    "max_lines": 2,
+    "min_size": 18
   }
 }

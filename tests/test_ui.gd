@@ -34,6 +34,26 @@ func run() -> void:
 	expect(not preview.view._prompt.visible, "Occluded/offscreen prompt hidden")
 	preview.view.show_prompt("resolved fixture", {"visible": true, "position": Vector2(500, 300)})
 	expect(preview.view._prompt.visible, "Visible world anchor prompt")
+	preview.view.show_prompt("resolved fixture", {"visible": true, "position": Vector2(2, 2)})
+	await tree.process_frame
+	expect(preview.view._prompt_box.position.x >= 12 and preview.view._prompt_box.position.y >= 12, "Prompt stays inside viewport at extreme anchor")
+	model = preview.view._model.duplicate(true)
+	model.money = preview._setup.text.text("ui.hud.money", {"money": {"number": 1000000000, "format": "vi_integer"}})
+	model.energy_value = 1
+	model.energy_capacity = 2
+	preview.view.render(model)
+	await tree.process_frame
+	var money: Label = preview.view._labels.money
+	var font_size := money.get_theme_font_size("font_size")
+	expect(money.get_theme_font("font").get_string_size(money.text, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size).x <= preview.view._layout.text[3].width, "Large Vietnamese currency fits resource ribbon without truncation")
+	expect(preview.view._gauge._value == 1 and preview.view._gauge._capacity == 2, "Energy dots update from current view model")
+	preview.show_case("dialogue", "ui-dark", true)
+	model = preview.view._model.duplicate(true)
+	model.choices[0].text = preview._setup.text.text("ui.review.long_choice")
+	preview.view.configure(model, preview.view._layout, preview.view._resources)
+	await tree.process_frame
+	expect(preview.view._buttons[0].get_rect().encloses(preview.view._choice_labels[0].get_rect()), "Wrapped Vietnamese choice copy stays within original hit target")
+	expect(preview.view._choice_labels[0].text == model.choices[0].text, "Long choice keeps full source copy and stable ID")
 	preview.queue_free()
 	await tree.process_frame
 	var calendar := CALENDAR.instantiate()

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "plane": [
+    1672,
+    941
+  ],
+  "mask_kind": "conservative source interior; fringe/occluded alpha unresolved",
+  "reference_sha256": "68c076b9d013523b745e61e1af35a8251742bbf7b774c02245f89dacf3d2a5a2",
+  "candidate_sha256": "73f9aa6bdb4b27031f6514ee810333c56983ade5202adafa19413dcf89ac94a2",
+  "mask_sha256": "632282b86c3a0a9829798de841c7e8f3f725933975f7e6effcdd8ee8a422d932",
+  "included_pixels": 444170,
+  "rgb_mae_0_255": 23.42171991204569,
+  "max_channel_error": 249,
+  "acceptance": "diagnostic only; G2 remains open; no full-frame or zero-diff claim"
+}

@@ -43,3 +43,11 @@ Mở rộng room/character cần budget và pipeline đã khóa. Những hướn
 Room kit/effects/motion sample and native A/B/profile completed. C11.05 exact static visual parity remains open; no production-art acceptance claim.
 
 [Review, parity, native captures/video/profile](../../reviews/chapters-06-12/README.md).
+
+UI correction pass tiếp theo đã thay HUD panel bằng khung mực/ngày tháng/nhiệm vụ,
+gauge năng lượng thật, typography theo weight, notebook affine và paper wash;
+sửa glyph/icon khi dựng lại view, text dài và prompt sát mép. 655 headless checks,
+53 native checks ở năm window sizes và 22 captures mới có trong
+[review UI upgrade](../../reviews/ui-upgrade-2026-10-10/README.md).
+C11.05/G2 vẫn mở: dialogue comparison là diagnostic trên mask bảo thủ,
+chưa có ngưỡng nghiệm thu hoặc xử lý toàn bộ fringe/occluded alpha.

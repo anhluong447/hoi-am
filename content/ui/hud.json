@@ -3,137 +3,186 @@
     1672,
     941
   ],
-  "date_paper": [
-    35,
-    30,
-    290,
-    130
-  ],
-  "sun_seal": [
-    48,
-    40,
-    87,
-    127
-  ],
-  "panels": [
-    {
-      "bounds": [
-        1000,
-        35,
-        620,
-        84
-      ],
-      "color": "#f3eddedb",
-      "border": "#b6aa8a"
-    },
-    {
-      "bounds": [
-        36,
-        783,
-        490,
-        114
-      ],
-      "color": "#f3eddedb",
-      "border": "#b6aa8a"
-    },
-    {
-      "bounds": [
-        560,
-        868,
-        560,
-        43
-      ],
-      "color": "#172535db",
-      "border": "#527985"
-    },
-    {
-      "bounds": [
-        1420,
-        866,
-        200,
-        46
-      ],
-      "color": "#f3eddedb",
-      "border": "#b6aa8a"
-    }
-  ],
   "text": [
     {
       "id": "date",
-      "x": 133,
-      "y": 80,
-      "size": 26,
-      "fill": "#172535"
+      "x": 120,
+      "y": 88,
+      "size": 43,
+      "fill": "#102f3f",
+      "uppercase": true,
+      "weight": 600,
+      "width": 225,
+      "height": 54,
+      "nowrap": true,
+      "fit": true,
+      "min_size": 25
     },
     {
       "id": "phase",
-      "x": 133,
-      "y": 119,
-      "size": 22,
-      "fill": "#126477"
+      "x": 130,
+      "y": 117,
+      "size": 23,
+      "fill": "#172535",
+      "weight": 400,
+      "width": 220,
+      "height": 31,
+      "nowrap": true,
+      "fit": true,
+      "min_size": 16
     },
     {
       "id": "energy",
-      "x": 1025,
-      "y": 69,
-      "size": 25,
-      "fill": "#172535"
+      "x": 1195,
+      "y": 74,
+      "size": 23,
+      "fill": "#fff7e6",
+      "weight": 400,
+      "width": 168,
+      "height": 30,
+      "nowrap": true,
+      "fit": true,
+      "min_size": 18
     },
     {
       "id": "money",
-      "x": 1275,
-      "y": 69,
+      "x": 1564,
+      "y": 74,
       "size": 25,
-      "fill": "#172535"
-    },
-    {
-      "id": "location",
-      "x": 1025,
-      "y": 103,
-      "size": 21,
-      "fill": "#126477"
+      "fill": "#fff7e6",
+      "weight": 400,
+      "width": 100,
+      "height": 30,
+      "nowrap": true,
+      "fit": true,
+      "min_size": 15
     },
     {
       "id": "objective_title",
-      "x": 57,
-      "y": 817,
-      "size": 24,
-      "fill": "#126477"
+      "x": 68,
+      "y": 217,
+      "size": 23,
+      "fill": "#12303e",
+      "uppercase": true,
+      "weight": 500,
+      "width": 220,
+      "height": 30,
+      "nowrap": true,
+      "fit": true,
+      "min_size": 19
     },
     {
       "id": "objective",
-      "x": 57,
-      "y": 853,
-      "size": 20,
-      "width": 446,
-      "height": 56,
-      "fill": "#172535"
+      "x": 88,
+      "y": 271,
+      "size": 23,
+      "fill": "#fff7e6",
+      "weight": 400,
+      "width": 221,
+      "height": 98,
+      "lineHeight": 29
     },
     {
-      "id": "controls",
-      "x": 580,
+      "id": "location",
+      "x": 81,
+      "y": 896,
+      "size": 23,
+      "fill": "#fff7e6",
+      "uppercase": true,
+      "weight": 400,
+      "width": 350,
+      "height": 34,
+      "nowrap": true,
+      "fit": true,
+      "min_size": 17
+    },
+    {
+      "id": "map",
+      "x": 1380,
+      "y": 896,
+      "size": 21,
+      "fill": "#fff7e6",
+      "weight": 400,
+      "width": 115,
+      "height": 31,
+      "nowrap": true,
+      "fit": true,
+      "min_size": 17
+    },
+    {
+      "id": "menu_key",
+      "x": 1530,
       "y": 897,
       "size": 22,
-      "fill": "#f6eed9"
+      "fill": "#fff7e6",
+      "weight": 400,
+      "width": 37,
+      "height": 28,
+      "nowrap": true
     },
     {
       "id": "menu",
-      "x": 1445,
+      "x": 1578,
       "y": 896,
-      "size": 22,
-      "fill": "#172535"
+      "size": 21,
+      "fill": "#fff7e6",
+      "weight": 400,
+      "width": 90,
+      "height": 30,
+      "nowrap": true,
+      "fit": true,
+      "min_size": 17
     }
   ],
   "menu_bounds": [
-    1420,
-    866,
-    200,
-    46
+    1516,
+    863,
+    154,
+    52
   ],
+  "map_bounds": [
+    1335,
+    863,
+    163,
+    52
+  ],
+  "pips": {
+    "centers": [
+      [
+        1380,
+        65
+      ],
+      [
+        1406,
+        65
+      ],
+      [
+        1430,
+        65
+      ],
+      [
+        1455,
+        65
+      ]
+    ],
+    "radius": 8,
+    "width": 1.2,
+    "filled": "#64e8e3",
+    "empty": "#124652",
+    "outline": "#6cc8c9"
+  },
   "prompt": {
     "x": 0,
     "y": 0,
-    "size": 23,
-    "fill": "#fff6db"
+    "size": 21,
+    "weight": 600,
+    "fill": "#0d3341",
+    "texture_margin": 7,
+    "padding": [
+      15,
+      8
+    ],
+    "offset": 12,
+    "margin": 12
   }
 }

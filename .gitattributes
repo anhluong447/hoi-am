@@ -109,3 +109,8 @@ docs/reviews/chapters-06-12/logs/** -text whitespace=-trailing-space,cr-at-eol
 docs/reviews/chapters-06-12/captures-*/** -text whitespace=-trailing-space,cr-at-eol
 docs/reviews/chapters-06-12/native-profile*.json -text whitespace=-trailing-space,cr-at-eol
 docs/reviews/chapters-06-12/profile-summary*.json -text whitespace=-trailing-space,cr-at-eol
+
+# Versioned UI sources and review evidence retain their recorded bytes.
+assets/ui/coastal/authored_v*/** -text whitespace=-trailing-space,cr-at-eol
+content/ui/art_manifest_v*.json -text whitespace=-trailing-space,cr-at-eol
+docs/reviews/ui-upgrade-2026-10-10/** -text whitespace=-trailing-space,cr-at-eol

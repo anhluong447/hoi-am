@@ -41,6 +41,9 @@ func _ready() -> void:
 	_hud = HUD.instantiate()
 	_hud.configure(controller.hud(), setup.data.hud_ui, _resources)
 	_hud.menu_requested.connect(open_workspace)
+	_hud.map_requested.connect(func() -> void:
+		controller.section = "travel"
+		open_workspace())
 	$Interface.add_child(_hud)
 	_saves = SAVE_DIALOGS.new()
 	_saves.configure(setup, world_snapshot)
@@ -73,11 +76,7 @@ func _process(_delta: float) -> void:
 	if not controller.modal.is_empty():
 		_hud.show_prompt("", {"visible": false})
 		return
-	var label := ""
-	var key: String = room.target_label_key(_nearby)
-	if not key.is_empty():
-		label = setup.text.text("migration.world.prompt", {"target": setup.text.text(key)})
-	_hud.show_prompt(label, room.anchor_for(_nearby))
+	_hud.show_prompt(controller.prompt(room.target_label_key(_nearby)), room.anchor_for(_nearby))
 
 
 func _unhandled_input(event: InputEvent) -> void:

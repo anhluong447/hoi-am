@@ -39,14 +39,24 @@
   },
   "hud": {
     "date_key": "ui.replica.dialogue.date.1",
-    "phase_key": "migration.world.preview",
-    "energy_key": "migration.world.energy",
-    "money_key": "migration.world.money",
-    "location_key": "content.gameplay.presentation.clb_hoi_am",
-    "objective_title_key": "migration.hud.objective_title",
-    "objective_key": "migration.world.objective",
-    "controls_key": "migration.world.controls",
-    "menu_key": "migration.ui.back"
+    "phase_key": "ui.hud.fixture.phase",
+    "energy_key": "ui.hud.energy",
+    "energy_parameters": {
+      "energy": 3,
+      "capacity": 4
+    },
+    "energy_value": 3,
+    "energy_capacity": 4,
+    "money_key": "ui.hud.money",
+    "money_parameters": {
+      "money": 450
+    },
+    "location_key": "ui.hud.fixture.location",
+    "objective_title_key": "ui.hud.objective_title",
+    "objective_key": "ui.hud.fixture.objective",
+    "map_key": "ui.hud.fixture.map",
+    "menu_key": "ui.hud.fixture.menu",
+    "menu_key_key": "ui.hud.menu_key"
   },
   "calendar_commands": [
     {

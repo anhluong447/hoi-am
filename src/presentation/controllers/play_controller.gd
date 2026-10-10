@@ -38,9 +38,14 @@ func hud() -> Dictionary:
 		if place.id == location_id:
 			model.location = _text.text(place.name_key)
 	model.menu = _text.text("play.menu")
-	model.controls = _text.text("play.controls")
-	model.objective = _text.text("play.objective")
+	model.menu = _text.text("ui.hud.menu")
+	model.map = _text.text("ui.hud.map")
+	model.objective = _text.text("ui.hud.objective.ended" if s.ended else "ui.hud.objective." + s.phase)
 	return model
+
+
+func prompt(label_key: String) -> String:
+	return "" if label_key.is_empty() else _text.text("migration.world.prompt", {"target": _text.text(label_key)})
 
 
 func execute(command: Dictionary) -> Dictionary:

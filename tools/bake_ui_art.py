@@ -77,10 +77,22 @@ def documents():
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--browser',default=r'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe')
+    parser.add_argument('--version', type=int, choices=[1, 2, 3], default=1)
     args=parser.parse_args()
-    OUT.mkdir(parents=True,exist_ok=True)
-    authored=ROOT / 'assets/ui/coastal/generated_sources'; authored.mkdir(exist_ok=True)
+    out = OUT if args.version == 1 else ROOT / f'assets/ui/coastal/runtime_v{args.version}'
+    authored=ROOT / ('assets/ui/coastal/generated_sources' if args.version == 1 else f'assets/ui/coastal/authored_v{args.version}')
+    if args.version > 1 and (out.exists() or authored.exists()):
+        raise SystemExit('Preserve versioned art; choose a new authored version instead of overwriting')
+    out.mkdir(parents=True,exist_ok=True)
+    authored.mkdir(exist_ok=True)
     (authored / '.gdignore').write_text('',encoding='utf-8')
+    docs = documents()
+    if args.version == 2:
+        from coastal_v2_art import documents as version_two
+        docs = version_two()
+    elif args.version == 3:
+        from coastal_v3_art import documents as version_three
+        docs = version_three()
     with tempfile.TemporaryDirectory(prefix='hoi-am-ui-bake-',ignore_cleanup_errors=True) as profile:
         process=subprocess.Popen([args.browser,'--headless=new','--disable-gpu','--no-first-run',
                                   '--remote-debugging-port=0',f'--user-data-dir={profile}','about:blank'],
@@ -97,18 +109,24 @@ def main():
             client.call('Page.enable')
             client.call('Emulation.setDefaultBackgroundColorOverride',{'color':{'r':0,'g':0,'b':0,'a':0}})
             outputs=[]
-            for name,(svg,(w,h)) in documents().items():
+            for name,(svg,(w,h)) in docs.items():
                 source=authored/f'{name}.svg'; source.write_text(svg,encoding='utf-8')
                 client.call('Emulation.setDeviceMetricsOverride',{'width':w,'height':h,'deviceScaleFactor':1,'mobile':False})
                 markup='<style>html,body{margin:0;background:transparent;overflow:hidden}</style>'+svg
                 client.call('Page.setDocumentContent',{'frameId':client.call('Page.getFrameTree')['frameTree']['frame']['id'],'html':markup})
                 client.evaluate('Promise.all(Array.from(document.querySelectorAll("image")).map(i=>new Promise((resolve,reject)=>{let v=new Image();v.onload=resolve;v.onerror=reject;v.src=i.getAttribute("href")})))',True)
                 image=client.call('Page.captureScreenshot',{'format':'png','clip':{'x':0,'y':0,'width':w,'height':h,'scale':1},'captureBeyondViewport':True})
-                target=OUT/f'{name}.png'; target.write_bytes(base64.b64decode(image['data']))
+                target=out/f'{name}.png'; target.write_bytes(base64.b64decode(image['data']))
                 outputs.append({'id':name,'texture_path':'res://'+target.relative_to(ROOT).as_posix(),
                                 'size':[w,h],'sha256':hashlib.sha256(target.read_bytes()).hexdigest(),
+                                'source_path':'res://'+source.relative_to(ROOT).as_posix(),
                                 'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest()})
-            (ROOT/'content/ui/art_manifest.json').write_text(json.dumps({'version':1,'text_policy':'art-only; live catalog text','assets':outputs},indent=2)+'\n',encoding='utf-8')
+            manifest = 'art_manifest.json' if args.version == 1 else f'art_manifest_v{args.version}.json'
+            if args.version > 1:
+                previous = 'art_manifest.json' if args.version == 2 else f'art_manifest_v{args.version - 1}.json'
+                replaced = {item['id'] for item in outputs}
+                outputs = [item for item in read(ROOT/'content/ui'/previous)['assets'] if item['id'] not in replaced] + outputs
+            (ROOT/'content/ui'/manifest).write_text(json.dumps({'version':args.version,'text_policy':'art-only; live catalog text','assets':outputs},indent=2)+'\n',encoding='utf-8')
             print(f'Baked {len(outputs)} independent text-free UI assets')
         finally:
             if client: client.socket.close()

@@ -45,7 +45,7 @@ nguyên; reference baselines đã copy có hash lock. Khi cần oracle mới, c�
 `verify_native.py --capture` chạy input checks rồi capture tuần tự; output thử ở
 `artifacts/native-review/`. Lưu evidence lịch sử bằng `capture_review.gd --
 --output res://docs/reviews/<review>/<new-version>`; tool từ chối thư mục docs
-đã tồn tại. Xem [review hiện tại](reviews/chapters-01-05/README.md).
+đã tồn tại. Xem [review UI hiện tại](reviews/ui-upgrade-2026-10-10/README.md).
 Logs native không được dùng để suy ra FPS từ `--fixed-fps` hoặc headless cadence.
 
 ## Viết một feature
@@ -80,6 +80,19 @@ Production assets phải có source/licensing; file PNG có chữ từ concept k
 
 World và UI có gate riêng. Chụp UI ở 1672×941/DPR-equivalent, fixture/clock cố định;
 chụp world ở camera/light preset ghi rõ. Tests pass không đóng visual gate.
+
+Manifest UI đang dùng là `content/ui/art_manifest_v3.json`: 16 textures gốc,
+ba lớp wash/prompt từ v2 và HUD frame v3. Giữ cả source SVG, recipe Python và
+PNG từng phiên bản; `check_content.py` kiểm hash của mọi manifest lịch sử.
+`bake_ui_art.py --version 2`/`--version 3` từ chối ghi đè phiên bản đã tồn tại.
+Muốn thay art tiếp, thêm recipe/version mới rồi đổi manifest trong content.
+Không bake chữ vào art. Font variation theo weight được tạo mới từ base font;
+kiểm native render cần xác nhận cả glyph/icon sau khi configure lại view.
+
+`tests/capture_ui_upgrade.gd -- --output res://docs/reviews/<review>/<new-version>`
+chụp 22 frames của dialogue/HUD, text dài và playable. Với 4:3/ultrawide,
+screenshot viewport là vùng nội dung; letterbox bên ngoài được kiểm bằng pointer
+qua window transform trong native suite. File ảnh không tự chứng minh toàn bộ window.
 
 ## Export
 

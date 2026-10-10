@@ -19,7 +19,7 @@ func _run() -> void:
 	root.content_scale_aspect = Window.CONTENT_SCALE_ASPECT_KEEP
 	var preview := PREVIEW.instantiate()
 	root.add_child(preview)
-	for dimensions: Vector2i in [Vector2i(1672, 941), Vector2i(1280, 720), Vector2i(1920, 1080)]:
+	for dimensions: Vector2i in [Vector2i(1672, 941), Vector2i(1280, 720), Vector2i(1920, 1080), Vector2i(1024, 768), Vector2i(2560, 1080)]:
 		root.size = dimensions
 		preview.show_case("dialogue", "ui-dark", true)
 		await _settle()
@@ -52,6 +52,49 @@ func _run() -> void:
 		await process_frame
 		_suite.expect(preview.view._buttons[1].has_focus(), "Native Tab focus at " + str(dimensions))
 		_suite.expect(preview.view._buttons[1].size == Vector2(413, 60), "Native plane hit target remains fixed")
+		preview.show_case("hud", "ui-light", true)
+		await _settle()
+		var mapped: Array = []
+		var returned: Array = []
+		preview.view.map_requested.connect(func() -> void: mapped.append(true))
+		preview.back_requested.connect(func() -> void: returned.append(true), CONNECT_ONE_SHOT)
+		await _click(preview.view._map)
+		_suite.expect(mapped.size() == 1, "HUD map pointer through letterbox at " + str(dimensions))
+		await _click(preview.view._menu)
+		_suite.expect(returned.size() == 1, "HUD menu pointer through letterbox at " + str(dimensions))
+		var map_key := InputEventKey.new()
+		map_key.physical_keycode = KEY_M
+		map_key.keycode = KEY_M
+		map_key.pressed = true
+		root.push_input(map_key)
+		await _settle()
+		_suite.expect(mapped.size() == 2, "Native M action emits local map request")
+		map_key.pressed = false
+		root.push_input(map_key)
+		preview.view._map.grab_focus()
+		root.push_input(tab)
+		await _settle()
+		_suite.expect(preview.view._menu.has_focus(), "HUD Tab follows map then menu")
+		var accepted: Array = []
+		preview.back_requested.connect(func() -> void: accepted.append(true), CONNECT_ONE_SHOT)
+		var accept_key := InputEventKey.new()
+		accept_key.keycode = KEY_ENTER
+		accept_key.pressed = true
+		root.push_input(accept_key)
+		await process_frame
+		accept_key.pressed = false
+		root.push_input(accept_key)
+		await _settle()
+		_suite.expect(accepted.size() == 1, "HUD Enter activates focused menu")
+		if dimensions == Vector2i(1672, 941):
+			preview.show_case("dialogue", "ui-dark", true)
+			var model: Dictionary = preview.view._model.duplicate(true)
+			model.choices[0].text = preview._setup.text.text("ui.review.long_choice")
+			preview.view.configure(model, preview.view._layout, preview.view._resources)
+			await _settle()
+			var bitmap := root.get_texture().get_image()
+			_suite.expect(_ink_pixels(bitmap, Rect2i(559, 471, 310, 45), false) > 100, "Native glyphs remain drawn after reconfigure")
+			_suite.expect(_ink_pixels(bitmap, Rect2i(511, 478, 28, 28), true) > 30, "Native choice icon remains drawn after font resources change")
 	preview.queue_free()
 	await process_frame
 	root.size = Vector2i(1672, 941)
@@ -112,6 +155,15 @@ func _playable_checks() -> void:
 		root.push_input(cancel)
 		await _settle()
 		_suite.expect(play.controller.modal.is_empty() and play.room._input_enabled, "Gamepad menu restores world input")
+		var map_key := InputEventKey.new()
+		map_key.physical_keycode = KEY_M
+		map_key.pressed = true
+		root.push_input(map_key)
+		await _settle()
+		_suite.expect(play.controller.section == "travel" and play.controller.modal == "workspace" and not play.room._input_enabled, "M opens actual location workspace and locks movement")
+		play.close_modal()
+		map_key.pressed = false
+		root.push_input(map_key)
 		cancel = cancel.duplicate()
 		cancel.pressed = false
 		root.push_input(cancel)
@@ -123,3 +175,28 @@ func _settle() -> void:
 	for _frame: int in 5:
 		await process_frame
 	await RenderingServer.frame_post_draw
+
+
+func _click(button: Button) -> void:
+	var point: Vector2 = root.get_final_transform() * (button.get_global_transform_with_canvas() * (button.size / 2.0))
+	var event := InputEventMouseButton.new()
+	event.position = point
+	event.global_position = point
+	event.button_index = MOUSE_BUTTON_LEFT
+	event.pressed = true
+	root.push_input(event)
+	await process_frame
+	event = event.duplicate()
+	event.pressed = false
+	root.push_input(event)
+	await _settle()
+
+
+func _ink_pixels(bitmap: Image, region: Rect2i, teal: bool) -> int:
+	var count := 0
+	for y: int in range(region.position.y, region.end.y):
+		for x: int in range(region.position.x, region.end.x):
+			var pixel := bitmap.get_pixel(x, y)
+			if pixel.r < 0.3 and ((pixel.g > 0.3 and pixel.b > 0.3) if teal else (pixel.g < 0.3 and pixel.b < 0.4)):
+				count += 1
+	return count
