@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "repository": "https://github.com/google/fonts",
+  "revision": "2eb0b48d5f760f62e286216f0859a8c540dbc1bd",
+  "fonts": [
+    {
+      "family": "Source Serif 4",
+      "role": "editorial/body/numbers",
+      "license": "SIL Open Font License 1.1",
+      "files": [
+        {
+          "path": "assets/fonts/coastal-replica/sourceserif4/source-serif-4.ttf",
+          "url": "https://raw.githubusercontent.com/google/fonts/2eb0b48d5f760f62e286216f0859a8c540dbc1bd/ofl/sourceserif4/SourceSerif4%5Bopsz%2Cwght%5D.ttf",
+          "sha256": "97B2D4DA6E3CB494B5A1E66AE176914D852CCABEF49E0C02C0DF25F3E39ACA0B"
+        },
+        {
+          "path": "assets/fonts/coastal-replica/sourceserif4/OFL.txt",
+          "url": "https://raw.githubusercontent.com/google/fonts/2eb0b48d5f760f62e286216f0859a8c540dbc1bd/ofl/sourceserif4/OFL.txt",
+          "sha256": "5F94C3FD3A23131A417AB5A0C8452DE57E70C3CFB9F604D88241F7065EBF9FD9"
+        },
+        {
+          "path": "assets/fonts/coastal-replica/sourceserif4/METADATA.pb",
+          "url": "https://raw.githubusercontent.com/google/fonts/2eb0b48d5f760f62e286216f0859a8c540dbc1bd/ofl/sourceserif4/METADATA.pb",
+          "sha256": "F7B88902C1D2F41839A3F7BF6723D1E64044C7C183B82871CE770A95F24B84E3"
+        }
+      ]
+    },
+    {
+      "family": "Cormorant Garamond",
+      "role": "wordmark/display",
+      "license": "SIL Open Font License 1.1",
+      "files": [
+        {
+          "path": "assets/fonts/coastal-replica/cormorantgaramond/cormorant-garamond.ttf",
+          "url": "https://raw.githubusercontent.com/google/fonts/2eb0b48d5f760f62e286216f0859a8c540dbc1bd/ofl/cormorantgaramond/CormorantGaramond%5Bwght%5D.ttf",
+          "sha256": "B20B7D9626DD956B2C5E558692AD328B1F19E3275E2782DB4FA07670D83F35E0"
+        },
+        {
+          "path": "assets/fonts/coastal-replica/cormorantgaramond/OFL.txt",
+          "url": "https://raw.githubusercontent.com/google/fonts/2eb0b48d5f760f62e286216f0859a8c540dbc1bd/ofl/cormorantgaramond/OFL.txt",
+          "sha256": "60700D351CAC4650C51F3F9DB318D2A420F8B45052DBA2715EB5FEC41F0F6956"
+        },
+        {
+          "path": "assets/fonts/coastal-replica/cormorantgaramond/METADATA.pb",
+          "url": "https://raw.githubusercontent.com/google/fonts/2eb0b48d5f760f62e286216f0859a8c540dbc1bd/ofl/cormorantgaramond/METADATA.pb",
+          "sha256": "FAA16A5E79613CA7CADD599ADA1F4CF6891F3CB6731631FBED2A0B18A342E556"
+        }
+      ]
+    },
+    {
+      "family": "Dancing Script",
+      "role": "handwriting",
+      "license": "SIL Open Font License 1.1",
+      "files": [
+        {
+          "path": "assets/fonts/coastal-replica/dancingscript/dancing-script.ttf",
+          "url": "https://raw.githubusercontent.com/google/fonts/2eb0b48d5f760f62e286216f0859a8c540dbc1bd/ofl/dancingscript/DancingScript%5Bwght%5D.ttf",
+          "sha256": "21808625578FE8D8CD10CB684BE546DCA077B27CD03A53A2F1EC11DC743C924C"
+        },
+        {
+          "path": "assets/fonts/coastal-replica/dancingscript/OFL.txt",
+          "url": "https://raw.githubusercontent.com/google/fonts/2eb0b48d5f760f62e286216f0859a8c540dbc1bd/ofl/dancingscript/OFL.txt",
+          "sha256": "6F090277C00AF96651CE6DBCC38FF1591047A3BFFEF486E80B6A32E8276A8201"
+        },
+        {
+          "path": "assets/fonts/coastal-replica/dancingscript/METADATA.pb",
+          "url": "https://raw.githubusercontent.com/google/fonts/2eb0b48d5f760f62e286216f0859a8c540dbc1bd/ofl/dancingscript/METADATA.pb",
+          "sha256": "02340C7F8CD71FC22A4A54466F4BF45FF699DB9E43FC0A0DC8E448F7C60756DF"
+        }
+      ]
+    }
+  ]
+}

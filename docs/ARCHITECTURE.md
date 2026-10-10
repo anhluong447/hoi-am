@@ -1,6 +1,7 @@
 # Kiến trúc Hồi Âm — Godot
 
-Ngày: 2026-10-10. Trạng thái: skeleton; gameplay/world chưa port.
+Ngày: 2026-10-10. Trạng thái: Chapter 01–05 có implementation; gameplay subset,
+world greybox và coastal preview; production visual và full-policy parity còn mở.
 Định hướng Godot 4.7.2, GDScript, PC Forward+, world 3D + sprite + UI 2D.
 
 ## Mục tiêu
@@ -33,7 +34,8 @@ tools/                          Python checks và migration authoring
 docs/                           kiến trúc, chapter, reference và review
 ```
 
-Các thư mục ghi “sẽ thêm” là vị trí quy định, chưa tạo implementation rỗng.
+Các nhánh gameplay/world/controllers/previews nay đã có implementation cụ thể;
+domain formula_sandbox và save adapter vẫn chưa tạo. Không tạo implementation rỗng.
 Đặt scene cùng script của nó. Art dùng chung ở assets; material/scene riêng của
 một room đặt cạnh room đó. Không có thư mục scripts/scenes khổng lồ tách đôi.
 
@@ -72,10 +74,15 @@ không tuyên bố GDScript có thể chạy bên ngoài Godot.
 
 ## Composition và scene ownership
 
-Main tạo content loader, text service và view. WorldRoot là điểm mount world;
-Interface là CanvasLayer riêng. Sau Chapter 2, Main tạo GameSession với transition
-và validator của đúng ruleset, rồi inject vào controller. Chưa tạo session giả
-trong boot để tránh lẫn skeleton state với gameplay schema.
+`project_startup.gd` đọc manifest, validate pack, tạo catalog/rules/validator và
+GameSession thật. Main giữ dependencies để callback owners sống cùng session.
+Callable của RefCounted không được xem là thay thế cho việc giữ owner trong
+composition. Preview calendar giữ dependencies riêng và inject session/text
+vào controller; room/UI preview dùng fixture có nhãn rõ và chạy độc lập.
+
+Ba scene preview là entry cụ thể, không phải scene-transition framework. Main
+mount/unmount một entry; scene local signals yêu cầu quay lại. Session preview
+khởi tạo lại mỗi lần vào. World-dialogue-command integration tiếp tục Chapter 06.
 
 View nhận model chỉ gồm dữ liệu hiển thị và emit intent bằng local signal.
 Controller chuyển intent thành command, nhận snapshot rồi dựng model mới.
@@ -120,6 +127,11 @@ gameplay progression. Walking/animation không đổi ngày/energy. Gameplay lư
 location ID; world restore xử lý tọa độ và safe spawn ở adapter khi Chapter 9 làm.
 Sprite nhận/đổ bóng cần review riêng; có thể dùng shadow proxy để giữ silhouette.
 
+Newsroom nhận room/actor definitions và Texture2D được inject. Geometry boxes,
+camera presets, ánh sáng, tốc độ, collider, target/spawn/portal metadata ở content.
+CharacterBody3D đi trên XZ; rig giữ foot pivot, distance-based walk, idle/talk timing.
+Room nhận NPC presentation model mà không tính lịch hoặc availability gameplay.
+
 UI giữ plane 1672×941, uniform fit/letterbox. DOF, fog và world exposure không
 được làm mờ chữ UI. View/room có preview fixture riêng; fixture không thay save thật.
 
@@ -133,6 +145,13 @@ Visual review và Forward+ device performance có evidence riêng.
 Khi có feature mới: content/schema → pure domain → session/use case → controller
 → scene/view → parity và UI/world review. File runtime tối đa 200 dòng không rỗng;
 chia theo trách nhiệm, không chia cơ học thành base classes.
+
+Hiện có [source mapping](migration/source-mapping.md),
+[behavior ledger](migration/behavior-ledger.md) và
+[state schema v3](decisions/002-gameplay-state-v3.md). `content_validation.gd`
+validate pack trước tạo rules; `state_migration.gd` thuần chuyển legacy fields,
+rồi state validator kiểm tra trước replacement. Text refs/number descriptors
+được resolve trong `presentation/controllers/gameplay_text.gd`.
 
 Tham khảo Godot chính thức:
 [scene organization](https://docs.godotengine.org/en/stable/tutorials/best_practices/scene_organization.html),

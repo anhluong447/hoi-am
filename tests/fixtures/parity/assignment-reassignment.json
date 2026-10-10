@@ -1,0 +1,2932 @@
+{
+  "id": "assignment-reassignment",
+  "scope": "chapter02",
+  "initial": {
+    "version": 2,
+    "config": {
+      "days": 14,
+      "clubEnergy": 4,
+      "outsideEnergy": 2,
+      "openCost": 1,
+      "assignCost": 1,
+      "researchDays": 2,
+      "editorialCapacity": 3,
+      "packaging": 0.04,
+      "romancePenalty": 0.25,
+      "fatiguePerWork": 10,
+      "recovery": 12,
+      "jobPay": 150,
+      "trainingCost": 80,
+      "toolCost": 220,
+      "giftCost": 60
+    },
+    "day": 1,
+    "phase": "club",
+    "energy": 4,
+    "money": 300,
+    "reputation": 0,
+    "pressure": 0,
+    "grants": 0,
+    "people": [
+      {
+        "id": "khue",
+        "name": "Diệp Khuê",
+        "female": false,
+        "joinDay": 1,
+        "stats": {
+          "interview": 7,
+          "investigation": 7,
+          "photo": 4,
+          "documents": 5,
+          "empathy": 5,
+          "courage": 6
+        },
+        "fatigue": 0,
+        "bond": 0,
+        "events": 0,
+        "romance": false,
+        "weekendSkill": false,
+        "tools": [],
+        "skills": []
+      },
+      {
+        "id": "van",
+        "name": "Lục Thanh Vân",
+        "female": true,
+        "joinDay": 1,
+        "stats": {
+          "interview": 5,
+          "investigation": 4,
+          "photo": 4,
+          "documents": 7,
+          "empathy": 6,
+          "courage": 7
+        },
+        "fatigue": 0,
+        "bond": 0,
+        "events": 0,
+        "romance": false,
+        "weekendSkill": false,
+        "tools": [],
+        "skills": []
+      },
+      {
+        "id": "long",
+        "name": "Đoàn Bảo Long",
+        "female": false,
+        "joinDay": 1,
+        "stats": {
+          "interview": 6,
+          "investigation": 5,
+          "photo": 4,
+          "documents": 4,
+          "empathy": 8,
+          "courage": 5
+        },
+        "fatigue": 0,
+        "bond": 0,
+        "events": 0,
+        "romance": false,
+        "weekendSkill": false,
+        "tools": [],
+        "skills": []
+      },
+      {
+        "id": "nhi",
+        "name": "Hạ Tuyết Nhi",
+        "female": true,
+        "joinDay": 1,
+        "stats": {
+          "interview": 5,
+          "investigation": 6,
+          "photo": 4,
+          "documents": 8,
+          "empathy": 4,
+          "courage": 5
+        },
+        "fatigue": 0,
+        "bond": 0,
+        "events": 0,
+        "romance": false,
+        "weekendSkill": false,
+        "tools": [],
+        "skills": []
+      },
+      {
+        "id": "ngoc",
+        "name": "Tạ Như Ngọc",
+        "female": true,
+        "joinDay": 8,
+        "stats": {
+          "interview": 5,
+          "investigation": 5,
+          "photo": 8,
+          "documents": 4,
+          "empathy": 6,
+          "courage": 5
+        },
+        "fatigue": 0,
+        "bond": 0,
+        "events": 0,
+        "romance": false,
+        "weekendSkill": false,
+        "tools": [],
+        "skills": []
+      },
+      {
+        "id": "an",
+        "name": "Ngô Thiên Ân",
+        "female": false,
+        "joinDay": 10,
+        "stats": {
+          "interview": 5,
+          "investigation": 7,
+          "photo": 4,
+          "documents": 8,
+          "empathy": 4,
+          "courage": 6
+        },
+        "fatigue": 0,
+        "bond": 0,
+        "events": 0,
+        "romance": false,
+        "weekendSkill": false,
+        "tools": [],
+        "skills": []
+      }
+    ],
+    "cases": [
+      {
+        "key": "community",
+        "title": "Sân bóng đóng cửa",
+        "teaser": "Học sinh phải tập ngoài cổng trường.",
+        "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện.",
+        "need": "empathy",
+        "difficulty": 7,
+        "attraction": 7,
+        "id": "W1-community",
+        "week": 1,
+        "expires": 11,
+        "opened": false,
+        "status": "available",
+        "owner": null,
+        "progress": 0,
+        "attempts": 0,
+        "quality": 0
+      },
+      {
+        "key": "documents",
+        "title": "Khoản thu câu lạc bộ",
+        "teaser": "Một khoản thu mới xuất hiện trên bảng thông báo.",
+        "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm.",
+        "need": "documents",
+        "difficulty": 7,
+        "attraction": 8,
+        "id": "W1-documents",
+        "week": 1,
+        "expires": 11,
+        "opened": false,
+        "status": "available",
+        "owner": null,
+        "progress": 0,
+        "attempts": 0,
+        "quality": 0
+      },
+      {
+        "key": "photo",
+        "title": "Bến cảng lúc bình minh",
+        "teaser": "Những người làm việc trước khi thành phố thức giấc.",
+        "story": "Nhân vật muốn kể chuyện qua những khoảnh khắc lao động thực tế. Một cuộc phỏng vấn dài không thay thế được tư liệu hình ảnh đúng lúc.",
+        "need": "photo",
+        "difficulty": 7,
+        "attraction": 6,
+        "id": "W1-photo",
+        "week": 1,
+        "expires": 11,
+        "opened": false,
+        "status": "available",
+        "owner": null,
+        "progress": 0,
+        "attempts": 0,
+        "quality": 0
+      }
+    ],
+    "quests": [
+      {
+        "id": "Q1",
+        "title": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc",
+        "steps": [],
+        "quality": [],
+        "written": false
+      }
+    ],
+    "drafts": [],
+    "articles": [],
+    "reports": [],
+    "messages": [],
+    "log": [
+      {
+        "day": 1,
+        "phase": "morning",
+        "textKey": "src.gameplay.engine.bat_dau_lat_cat_co_che_nhi_duoc_mo_som_de_thu_phan_cong_noi_dung",
+        "params": {}
+      }
+    ],
+    "metrics": {
+      "opened": 0,
+      "assigned": 0,
+      "restarts": 0,
+      "approvals": 0,
+      "energySpent": 0,
+      "unusedEnergy": 0,
+      "hangouts": 0,
+      "jobs": 0
+    },
+    "sleepPrepared": false,
+    "ended": false,
+    "betrayal": false
+  },
+  "steps": [
+    {
+      "command": {
+        "type": "open",
+        "id": "W1-community"
+      },
+      "ok": true,
+      "state": {
+        "version": 2,
+        "config": {
+          "days": 14,
+          "clubEnergy": 4,
+          "outsideEnergy": 2,
+          "openCost": 1,
+          "assignCost": 1,
+          "researchDays": 2,
+          "editorialCapacity": 3,
+          "packaging": 0.04,
+          "romancePenalty": 0.25,
+          "fatiguePerWork": 10,
+          "recovery": 12,
+          "jobPay": 150,
+          "trainingCost": 80,
+          "toolCost": 220,
+          "giftCost": 60
+        },
+        "day": 1,
+        "phase": "club",
+        "energy": 3,
+        "money": 300,
+        "reputation": 0,
+        "pressure": 0,
+        "grants": 0,
+        "people": [
+          {
+            "id": "khue",
+            "name": "Diệp Khuê",
+            "female": false,
+            "joinDay": 1,
+            "stats": {
+              "interview": 7,
+              "investigation": 7,
+              "photo": 4,
+              "documents": 5,
+              "empathy": 5,
+              "courage": 6
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "van",
+            "name": "Lục Thanh Vân",
+            "female": true,
+            "joinDay": 1,
+            "stats": {
+              "interview": 5,
+              "investigation": 4,
+              "photo": 4,
+              "documents": 7,
+              "empathy": 6,
+              "courage": 7
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "long",
+            "name": "Đoàn Bảo Long",
+            "female": false,
+            "joinDay": 1,
+            "stats": {
+              "interview": 6,
+              "investigation": 5,
+              "photo": 4,
+              "documents": 4,
+              "empathy": 8,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "nhi",
+            "name": "Hạ Tuyết Nhi",
+            "female": true,
+            "joinDay": 1,
+            "stats": {
+              "interview": 5,
+              "investigation": 6,
+              "photo": 4,
+              "documents": 8,
+              "empathy": 4,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "ngoc",
+            "name": "Tạ Như Ngọc",
+            "female": true,
+            "joinDay": 8,
+            "stats": {
+              "interview": 5,
+              "investigation": 5,
+              "photo": 8,
+              "documents": 4,
+              "empathy": 6,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "an",
+            "name": "Ngô Thiên Ân",
+            "female": false,
+            "joinDay": 10,
+            "stats": {
+              "interview": 5,
+              "investigation": 7,
+              "photo": 4,
+              "documents": 8,
+              "empathy": 4,
+              "courage": 6
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          }
+        ],
+        "cases": [
+          {
+            "key": "community",
+            "title": "Sân bóng đóng cửa",
+            "teaser": "Học sinh phải tập ngoài cổng trường.",
+            "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện.",
+            "need": "empathy",
+            "difficulty": 7,
+            "attraction": 7,
+            "id": "W1-community",
+            "week": 1,
+            "expires": 11,
+            "opened": true,
+            "status": "available",
+            "owner": null,
+            "progress": 0,
+            "attempts": 0,
+            "quality": 0
+          },
+          {
+            "key": "documents",
+            "title": "Khoản thu câu lạc bộ",
+            "teaser": "Một khoản thu mới xuất hiện trên bảng thông báo.",
+            "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm.",
+            "need": "documents",
+            "difficulty": 7,
+            "attraction": 8,
+            "id": "W1-documents",
+            "week": 1,
+            "expires": 11,
+            "opened": false,
+            "status": "available",
+            "owner": null,
+            "progress": 0,
+            "attempts": 0,
+            "quality": 0
+          },
+          {
+            "key": "photo",
+            "title": "Bến cảng lúc bình minh",
+            "teaser": "Những người làm việc trước khi thành phố thức giấc.",
+            "story": "Nhân vật muốn kể chuyện qua những khoảnh khắc lao động thực tế. Một cuộc phỏng vấn dài không thay thế được tư liệu hình ảnh đúng lúc.",
+            "need": "photo",
+            "difficulty": 7,
+            "attraction": 6,
+            "id": "W1-photo",
+            "week": 1,
+            "expires": 11,
+            "opened": false,
+            "status": "available",
+            "owner": null,
+            "progress": 0,
+            "attempts": 0,
+            "quality": 0
+          }
+        ],
+        "quests": [
+          {
+            "id": "Q1",
+            "title": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc",
+            "steps": [],
+            "quality": [],
+            "written": false
+          }
+        ],
+        "drafts": [],
+        "articles": [],
+        "reports": [],
+        "messages": [],
+        "log": [
+          {
+            "day": 1,
+            "phase": "morning",
+            "textKey": "src.gameplay.engine.bat_dau_lat_cat_co_che_nhi_duoc_mo_som_de_thu_phan_cong_noi_dung",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "club",
+            "textKey": "src.gameplay.engine.phong_van_mo_ho_so_value0",
+            "params": {
+              "value0": "Sân bóng đóng cửa"
+            }
+          }
+        ],
+        "metrics": {
+          "opened": 1,
+          "assigned": 0,
+          "restarts": 0,
+          "approvals": 0,
+          "energySpent": 1,
+          "unusedEnergy": 0,
+          "hangouts": 0,
+          "jobs": 0
+        },
+        "sleepPrepared": false,
+        "ended": false,
+        "betrayal": false
+      },
+      "events": [
+        {
+          "day": 1,
+          "phase": "club",
+          "textKey": "src.gameplay.engine.phong_van_mo_ho_so_value0",
+          "params": {
+            "value0": "Sân bóng đóng cửa"
+          }
+        }
+      ]
+    },
+    {
+      "command": {
+        "type": "assign",
+        "id": "W1-community",
+        "person": "nhi"
+      },
+      "ok": true,
+      "state": {
+        "version": 2,
+        "config": {
+          "days": 14,
+          "clubEnergy": 4,
+          "outsideEnergy": 2,
+          "openCost": 1,
+          "assignCost": 1,
+          "researchDays": 2,
+          "editorialCapacity": 3,
+          "packaging": 0.04,
+          "romancePenalty": 0.25,
+          "fatiguePerWork": 10,
+          "recovery": 12,
+          "jobPay": 150,
+          "trainingCost": 80,
+          "toolCost": 220,
+          "giftCost": 60
+        },
+        "day": 1,
+        "phase": "club",
+        "energy": 2,
+        "money": 300,
+        "reputation": 0,
+        "pressure": 0,
+        "grants": 0,
+        "people": [
+          {
+            "id": "khue",
+            "name": "Diệp Khuê",
+            "female": false,
+            "joinDay": 1,
+            "stats": {
+              "interview": 7,
+              "investigation": 7,
+              "photo": 4,
+              "documents": 5,
+              "empathy": 5,
+              "courage": 6
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "van",
+            "name": "Lục Thanh Vân",
+            "female": true,
+            "joinDay": 1,
+            "stats": {
+              "interview": 5,
+              "investigation": 4,
+              "photo": 4,
+              "documents": 7,
+              "empathy": 6,
+              "courage": 7
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "long",
+            "name": "Đoàn Bảo Long",
+            "female": false,
+            "joinDay": 1,
+            "stats": {
+              "interview": 6,
+              "investigation": 5,
+              "photo": 4,
+              "documents": 4,
+              "empathy": 8,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "nhi",
+            "name": "Hạ Tuyết Nhi",
+            "female": true,
+            "joinDay": 1,
+            "stats": {
+              "interview": 5,
+              "investigation": 6,
+              "photo": 4,
+              "documents": 8,
+              "empathy": 4,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "ngoc",
+            "name": "Tạ Như Ngọc",
+            "female": true,
+            "joinDay": 8,
+            "stats": {
+              "interview": 5,
+              "investigation": 5,
+              "photo": 8,
+              "documents": 4,
+              "empathy": 6,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "an",
+            "name": "Ngô Thiên Ân",
+            "female": false,
+            "joinDay": 10,
+            "stats": {
+              "interview": 5,
+              "investigation": 7,
+              "photo": 4,
+              "documents": 8,
+              "empathy": 4,
+              "courage": 6
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          }
+        ],
+        "cases": [
+          {
+            "key": "community",
+            "title": "Sân bóng đóng cửa",
+            "teaser": "Học sinh phải tập ngoài cổng trường.",
+            "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện.",
+            "need": "empathy",
+            "difficulty": 7,
+            "attraction": 7,
+            "id": "W1-community",
+            "week": 1,
+            "expires": 11,
+            "opened": true,
+            "status": "working",
+            "owner": "nhi",
+            "progress": 0,
+            "attempts": 1,
+            "quality": 0
+          },
+          {
+            "key": "documents",
+            "title": "Khoản thu câu lạc bộ",
+            "teaser": "Một khoản thu mới xuất hiện trên bảng thông báo.",
+            "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm.",
+            "need": "documents",
+            "difficulty": 7,
+            "attraction": 8,
+            "id": "W1-documents",
+            "week": 1,
+            "expires": 11,
+            "opened": false,
+            "status": "available",
+            "owner": null,
+            "progress": 0,
+            "attempts": 0,
+            "quality": 0
+          },
+          {
+            "key": "photo",
+            "title": "Bến cảng lúc bình minh",
+            "teaser": "Những người làm việc trước khi thành phố thức giấc.",
+            "story": "Nhân vật muốn kể chuyện qua những khoảnh khắc lao động thực tế. Một cuộc phỏng vấn dài không thay thế được tư liệu hình ảnh đúng lúc.",
+            "need": "photo",
+            "difficulty": 7,
+            "attraction": 6,
+            "id": "W1-photo",
+            "week": 1,
+            "expires": 11,
+            "opened": false,
+            "status": "available",
+            "owner": null,
+            "progress": 0,
+            "attempts": 0,
+            "quality": 0
+          }
+        ],
+        "quests": [
+          {
+            "id": "Q1",
+            "title": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc",
+            "steps": [],
+            "quality": [],
+            "written": false
+          }
+        ],
+        "drafts": [],
+        "articles": [],
+        "reports": [],
+        "messages": [],
+        "log": [
+          {
+            "day": 1,
+            "phase": "morning",
+            "textKey": "src.gameplay.engine.bat_dau_lat_cat_co_che_nhi_duoc_mo_som_de_thu_phan_cong_noi_dung",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "club",
+            "textKey": "src.gameplay.engine.phong_van_mo_ho_so_value0",
+            "params": {
+              "value0": "Sân bóng đóng cửa"
+            }
+          },
+          {
+            "day": 1,
+            "phase": "club",
+            "textKey": "journal.assignment",
+            "params": {
+              "title": "Sân bóng đóng cửa",
+              "name": "Hạ Tuyết Nhi"
+            }
+          }
+        ],
+        "metrics": {
+          "opened": 1,
+          "assigned": 1,
+          "restarts": 0,
+          "approvals": 0,
+          "energySpent": 2,
+          "unusedEnergy": 0,
+          "hangouts": 0,
+          "jobs": 0
+        },
+        "sleepPrepared": false,
+        "ended": false,
+        "betrayal": false
+      },
+      "events": [
+        {
+          "day": 1,
+          "phase": "club",
+          "textKey": "journal.assignment",
+          "params": {
+            "title": "Sân bóng đóng cửa",
+            "name": "Hạ Tuyết Nhi"
+          }
+        }
+      ]
+    },
+    {
+      "command": {
+        "type": "endClub"
+      },
+      "ok": true,
+      "state": {
+        "version": 2,
+        "config": {
+          "days": 14,
+          "clubEnergy": 4,
+          "outsideEnergy": 2,
+          "openCost": 1,
+          "assignCost": 1,
+          "researchDays": 2,
+          "editorialCapacity": 3,
+          "packaging": 0.04,
+          "romancePenalty": 0.25,
+          "fatiguePerWork": 10,
+          "recovery": 12,
+          "jobPay": 150,
+          "trainingCost": 80,
+          "toolCost": 220,
+          "giftCost": 60
+        },
+        "day": 1,
+        "phase": "personal",
+        "energy": 0,
+        "money": 300,
+        "reputation": 0,
+        "pressure": 0,
+        "grants": 0,
+        "people": [
+          {
+            "id": "khue",
+            "name": "Diệp Khuê",
+            "female": false,
+            "joinDay": 1,
+            "stats": {
+              "interview": 7,
+              "investigation": 7,
+              "photo": 4,
+              "documents": 5,
+              "empathy": 5,
+              "courage": 6
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "van",
+            "name": "Lục Thanh Vân",
+            "female": true,
+            "joinDay": 1,
+            "stats": {
+              "interview": 5,
+              "investigation": 4,
+              "photo": 4,
+              "documents": 7,
+              "empathy": 6,
+              "courage": 7
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "long",
+            "name": "Đoàn Bảo Long",
+            "female": false,
+            "joinDay": 1,
+            "stats": {
+              "interview": 6,
+              "investigation": 5,
+              "photo": 4,
+              "documents": 4,
+              "empathy": 8,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "nhi",
+            "name": "Hạ Tuyết Nhi",
+            "female": true,
+            "joinDay": 1,
+            "stats": {
+              "interview": 5,
+              "investigation": 6,
+              "photo": 4,
+              "documents": 8,
+              "empathy": 4,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "ngoc",
+            "name": "Tạ Như Ngọc",
+            "female": true,
+            "joinDay": 8,
+            "stats": {
+              "interview": 5,
+              "investigation": 5,
+              "photo": 8,
+              "documents": 4,
+              "empathy": 6,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "an",
+            "name": "Ngô Thiên Ân",
+            "female": false,
+            "joinDay": 10,
+            "stats": {
+              "interview": 5,
+              "investigation": 7,
+              "photo": 4,
+              "documents": 8,
+              "empathy": 4,
+              "courage": 6
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          }
+        ],
+        "cases": [
+          {
+            "key": "community",
+            "title": "Sân bóng đóng cửa",
+            "teaser": "Học sinh phải tập ngoài cổng trường.",
+            "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện.",
+            "need": "empathy",
+            "difficulty": 7,
+            "attraction": 7,
+            "id": "W1-community",
+            "week": 1,
+            "expires": 11,
+            "opened": true,
+            "status": "working",
+            "owner": "nhi",
+            "progress": 0,
+            "attempts": 1,
+            "quality": 0
+          },
+          {
+            "key": "documents",
+            "title": "Khoản thu câu lạc bộ",
+            "teaser": "Một khoản thu mới xuất hiện trên bảng thông báo.",
+            "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm.",
+            "need": "documents",
+            "difficulty": 7,
+            "attraction": 8,
+            "id": "W1-documents",
+            "week": 1,
+            "expires": 11,
+            "opened": false,
+            "status": "available",
+            "owner": null,
+            "progress": 0,
+            "attempts": 0,
+            "quality": 0
+          },
+          {
+            "key": "photo",
+            "title": "Bến cảng lúc bình minh",
+            "teaser": "Những người làm việc trước khi thành phố thức giấc.",
+            "story": "Nhân vật muốn kể chuyện qua những khoảnh khắc lao động thực tế. Một cuộc phỏng vấn dài không thay thế được tư liệu hình ảnh đúng lúc.",
+            "need": "photo",
+            "difficulty": 7,
+            "attraction": 6,
+            "id": "W1-photo",
+            "week": 1,
+            "expires": 11,
+            "opened": false,
+            "status": "available",
+            "owner": null,
+            "progress": 0,
+            "attempts": 0,
+            "quality": 0
+          }
+        ],
+        "quests": [
+          {
+            "id": "Q1",
+            "title": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc",
+            "steps": [],
+            "quality": [],
+            "written": false
+          }
+        ],
+        "drafts": [],
+        "articles": [],
+        "reports": [],
+        "messages": [],
+        "log": [
+          {
+            "day": 1,
+            "phase": "morning",
+            "textKey": "src.gameplay.engine.bat_dau_lat_cat_co_che_nhi_duoc_mo_som_de_thu_phan_cong_noi_dung",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "club",
+            "textKey": "src.gameplay.engine.phong_van_mo_ho_so_value0",
+            "params": {
+              "value0": "Sân bóng đóng cửa"
+            }
+          },
+          {
+            "day": 1,
+            "phase": "club",
+            "textKey": "journal.assignment",
+            "params": {
+              "title": "Sân bóng đóng cửa",
+              "name": "Hạ Tuyết Nhi"
+            }
+          }
+        ],
+        "metrics": {
+          "opened": 1,
+          "assigned": 1,
+          "restarts": 0,
+          "approvals": 0,
+          "energySpent": 2,
+          "unusedEnergy": 2,
+          "hangouts": 0,
+          "jobs": 0
+        },
+        "sleepPrepared": false,
+        "ended": false,
+        "betrayal": false
+      },
+      "events": []
+    },
+    {
+      "command": {
+        "type": "activity",
+        "kind": "rest"
+      },
+      "ok": true,
+      "state": {
+        "version": 2,
+        "config": {
+          "days": 14,
+          "clubEnergy": 4,
+          "outsideEnergy": 2,
+          "openCost": 1,
+          "assignCost": 1,
+          "researchDays": 2,
+          "editorialCapacity": 3,
+          "packaging": 0.04,
+          "romancePenalty": 0.25,
+          "fatiguePerWork": 10,
+          "recovery": 12,
+          "jobPay": 150,
+          "trainingCost": 80,
+          "toolCost": 220,
+          "giftCost": 60
+        },
+        "day": 1,
+        "phase": "evening",
+        "energy": 0,
+        "money": 300,
+        "reputation": 0,
+        "pressure": 0,
+        "grants": 0,
+        "people": [
+          {
+            "id": "khue",
+            "name": "Diệp Khuê",
+            "female": false,
+            "joinDay": 1,
+            "stats": {
+              "interview": 7,
+              "investigation": 7,
+              "photo": 4,
+              "documents": 5,
+              "empathy": 5,
+              "courage": 6
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "van",
+            "name": "Lục Thanh Vân",
+            "female": true,
+            "joinDay": 1,
+            "stats": {
+              "interview": 5,
+              "investigation": 4,
+              "photo": 4,
+              "documents": 7,
+              "empathy": 6,
+              "courage": 7
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "long",
+            "name": "Đoàn Bảo Long",
+            "female": false,
+            "joinDay": 1,
+            "stats": {
+              "interview": 6,
+              "investigation": 5,
+              "photo": 4,
+              "documents": 4,
+              "empathy": 8,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "nhi",
+            "name": "Hạ Tuyết Nhi",
+            "female": true,
+            "joinDay": 1,
+            "stats": {
+              "interview": 5,
+              "investigation": 6,
+              "photo": 4,
+              "documents": 8,
+              "empathy": 4,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "ngoc",
+            "name": "Tạ Như Ngọc",
+            "female": true,
+            "joinDay": 8,
+            "stats": {
+              "interview": 5,
+              "investigation": 5,
+              "photo": 8,
+              "documents": 4,
+              "empathy": 6,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "an",
+            "name": "Ngô Thiên Ân",
+            "female": false,
+            "joinDay": 10,
+            "stats": {
+              "interview": 5,
+              "investigation": 7,
+              "photo": 4,
+              "documents": 8,
+              "empathy": 4,
+              "courage": 6
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          }
+        ],
+        "cases": [
+          {
+            "key": "community",
+            "title": "Sân bóng đóng cửa",
+            "teaser": "Học sinh phải tập ngoài cổng trường.",
+            "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện.",
+            "need": "empathy",
+            "difficulty": 7,
+            "attraction": 7,
+            "id": "W1-community",
+            "week": 1,
+            "expires": 11,
+            "opened": true,
+            "status": "working",
+            "owner": "nhi",
+            "progress": 0,
+            "attempts": 1,
+            "quality": 0
+          },
+          {
+            "key": "documents",
+            "title": "Khoản thu câu lạc bộ",
+            "teaser": "Một khoản thu mới xuất hiện trên bảng thông báo.",
+            "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm.",
+            "need": "documents",
+            "difficulty": 7,
+            "attraction": 8,
+            "id": "W1-documents",
+            "week": 1,
+            "expires": 11,
+            "opened": false,
+            "status": "available",
+            "owner": null,
+            "progress": 0,
+            "attempts": 0,
+            "quality": 0
+          },
+          {
+            "key": "photo",
+            "title": "Bến cảng lúc bình minh",
+            "teaser": "Những người làm việc trước khi thành phố thức giấc.",
+            "story": "Nhân vật muốn kể chuyện qua những khoảnh khắc lao động thực tế. Một cuộc phỏng vấn dài không thay thế được tư liệu hình ảnh đúng lúc.",
+            "need": "photo",
+            "difficulty": 7,
+            "attraction": 6,
+            "id": "W1-photo",
+            "week": 1,
+            "expires": 11,
+            "opened": false,
+            "status": "available",
+            "owner": null,
+            "progress": 0,
+            "attempts": 0,
+            "quality": 0
+          }
+        ],
+        "quests": [
+          {
+            "id": "Q1",
+            "title": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc",
+            "steps": [],
+            "quality": [],
+            "written": false
+          }
+        ],
+        "drafts": [],
+        "articles": [],
+        "reports": [],
+        "messages": [],
+        "log": [
+          {
+            "day": 1,
+            "phase": "morning",
+            "textKey": "src.gameplay.engine.bat_dau_lat_cat_co_che_nhi_duoc_mo_som_de_thu_phan_cong_noi_dung",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "club",
+            "textKey": "src.gameplay.engine.phong_van_mo_ho_so_value0",
+            "params": {
+              "value0": "Sân bóng đóng cửa"
+            }
+          },
+          {
+            "day": 1,
+            "phase": "club",
+            "textKey": "journal.assignment",
+            "params": {
+              "title": "Sân bóng đóng cửa",
+              "name": "Hạ Tuyết Nhi"
+            }
+          },
+          {
+            "day": 1,
+            "phase": "personal",
+            "textKey": "src.gameplay.engine.nghi_ngoi_giam_20_met",
+            "params": {}
+          }
+        ],
+        "metrics": {
+          "opened": 1,
+          "assigned": 1,
+          "restarts": 0,
+          "approvals": 0,
+          "energySpent": 2,
+          "unusedEnergy": 2,
+          "hangouts": 0,
+          "jobs": 0
+        },
+        "sleepPrepared": false,
+        "ended": false,
+        "betrayal": false
+      },
+      "events": [
+        {
+          "day": 1,
+          "phase": "personal",
+          "textKey": "src.gameplay.engine.nghi_ngoi_giam_20_met",
+          "params": {}
+        }
+      ]
+    },
+    {
+      "command": {
+        "type": "activity",
+        "kind": "rest"
+      },
+      "ok": true,
+      "state": {
+        "version": 2,
+        "config": {
+          "days": 14,
+          "clubEnergy": 4,
+          "outsideEnergy": 2,
+          "openCost": 1,
+          "assignCost": 1,
+          "researchDays": 2,
+          "editorialCapacity": 3,
+          "packaging": 0.04,
+          "romancePenalty": 0.25,
+          "fatiguePerWork": 10,
+          "recovery": 12,
+          "jobPay": 150,
+          "trainingCost": 80,
+          "toolCost": 220,
+          "giftCost": 60
+        },
+        "day": 1,
+        "phase": "bed",
+        "energy": 0,
+        "money": 300,
+        "reputation": 0,
+        "pressure": 0,
+        "grants": 0,
+        "people": [
+          {
+            "id": "khue",
+            "name": "Diệp Khuê",
+            "female": false,
+            "joinDay": 1,
+            "stats": {
+              "interview": 7,
+              "investigation": 7,
+              "photo": 4,
+              "documents": 5,
+              "empathy": 5,
+              "courage": 6
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "van",
+            "name": "Lục Thanh Vân",
+            "female": true,
+            "joinDay": 1,
+            "stats": {
+              "interview": 5,
+              "investigation": 4,
+              "photo": 4,
+              "documents": 7,
+              "empathy": 6,
+              "courage": 7
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "long",
+            "name": "Đoàn Bảo Long",
+            "female": false,
+            "joinDay": 1,
+            "stats": {
+              "interview": 6,
+              "investigation": 5,
+              "photo": 4,
+              "documents": 4,
+              "empathy": 8,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "nhi",
+            "name": "Hạ Tuyết Nhi",
+            "female": true,
+            "joinDay": 1,
+            "stats": {
+              "interview": 5,
+              "investigation": 6,
+              "photo": 4,
+              "documents": 8,
+              "empathy": 4,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "ngoc",
+            "name": "Tạ Như Ngọc",
+            "female": true,
+            "joinDay": 8,
+            "stats": {
+              "interview": 5,
+              "investigation": 5,
+              "photo": 8,
+              "documents": 4,
+              "empathy": 6,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "an",
+            "name": "Ngô Thiên Ân",
+            "female": false,
+            "joinDay": 10,
+            "stats": {
+              "interview": 5,
+              "investigation": 7,
+              "photo": 4,
+              "documents": 8,
+              "empathy": 4,
+              "courage": 6
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          }
+        ],
+        "cases": [
+          {
+            "key": "community",
+            "title": "Sân bóng đóng cửa",
+            "teaser": "Học sinh phải tập ngoài cổng trường.",
+            "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện.",
+            "need": "empathy",
+            "difficulty": 7,
+            "attraction": 7,
+            "id": "W1-community",
+            "week": 1,
+            "expires": 11,
+            "opened": true,
+            "status": "working",
+            "owner": "nhi",
+            "progress": 0,
+            "attempts": 1,
+            "quality": 0
+          },
+          {
+            "key": "documents",
+            "title": "Khoản thu câu lạc bộ",
+            "teaser": "Một khoản thu mới xuất hiện trên bảng thông báo.",
+            "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm.",
+            "need": "documents",
+            "difficulty": 7,
+            "attraction": 8,
+            "id": "W1-documents",
+            "week": 1,
+            "expires": 11,
+            "opened": false,
+            "status": "available",
+            "owner": null,
+            "progress": 0,
+            "attempts": 0,
+            "quality": 0
+          },
+          {
+            "key": "photo",
+            "title": "Bến cảng lúc bình minh",
+            "teaser": "Những người làm việc trước khi thành phố thức giấc.",
+            "story": "Nhân vật muốn kể chuyện qua những khoảnh khắc lao động thực tế. Một cuộc phỏng vấn dài không thay thế được tư liệu hình ảnh đúng lúc.",
+            "need": "photo",
+            "difficulty": 7,
+            "attraction": 6,
+            "id": "W1-photo",
+            "week": 1,
+            "expires": 11,
+            "opened": false,
+            "status": "available",
+            "owner": null,
+            "progress": 0,
+            "attempts": 0,
+            "quality": 0
+          }
+        ],
+        "quests": [
+          {
+            "id": "Q1",
+            "title": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc",
+            "steps": [],
+            "quality": [],
+            "written": false
+          }
+        ],
+        "drafts": [],
+        "articles": [],
+        "reports": [],
+        "messages": [],
+        "log": [
+          {
+            "day": 1,
+            "phase": "morning",
+            "textKey": "src.gameplay.engine.bat_dau_lat_cat_co_che_nhi_duoc_mo_som_de_thu_phan_cong_noi_dung",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "club",
+            "textKey": "src.gameplay.engine.phong_van_mo_ho_so_value0",
+            "params": {
+              "value0": "Sân bóng đóng cửa"
+            }
+          },
+          {
+            "day": 1,
+            "phase": "club",
+            "textKey": "journal.assignment",
+            "params": {
+              "title": "Sân bóng đóng cửa",
+              "name": "Hạ Tuyết Nhi"
+            }
+          },
+          {
+            "day": 1,
+            "phase": "personal",
+            "textKey": "src.gameplay.engine.nghi_ngoi_giam_20_met",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "evening",
+            "textKey": "src.gameplay.engine.nghi_ngoi_giam_20_met",
+            "params": {}
+          }
+        ],
+        "metrics": {
+          "opened": 1,
+          "assigned": 1,
+          "restarts": 0,
+          "approvals": 0,
+          "energySpent": 2,
+          "unusedEnergy": 2,
+          "hangouts": 0,
+          "jobs": 0
+        },
+        "sleepPrepared": false,
+        "ended": false,
+        "betrayal": false
+      },
+      "events": [
+        {
+          "day": 1,
+          "phase": "evening",
+          "textKey": "src.gameplay.engine.nghi_ngoi_giam_20_met",
+          "params": {}
+        }
+      ]
+    },
+    {
+      "command": {
+        "type": "sleep"
+      },
+      "ok": true,
+      "state": {
+        "version": 2,
+        "config": {
+          "days": 14,
+          "clubEnergy": 4,
+          "outsideEnergy": 2,
+          "openCost": 1,
+          "assignCost": 1,
+          "researchDays": 2,
+          "editorialCapacity": 3,
+          "packaging": 0.04,
+          "romancePenalty": 0.25,
+          "fatiguePerWork": 10,
+          "recovery": 12,
+          "jobPay": 150,
+          "trainingCost": 80,
+          "toolCost": 220,
+          "giftCost": 60
+        },
+        "day": 1,
+        "phase": "bed",
+        "energy": 0,
+        "money": 300,
+        "reputation": 0,
+        "pressure": 0,
+        "grants": 0,
+        "people": [
+          {
+            "id": "khue",
+            "name": "Diệp Khuê",
+            "female": false,
+            "joinDay": 1,
+            "stats": {
+              "interview": 7,
+              "investigation": 7,
+              "photo": 4,
+              "documents": 5,
+              "empathy": 5,
+              "courage": 6
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "van",
+            "name": "Lục Thanh Vân",
+            "female": true,
+            "joinDay": 1,
+            "stats": {
+              "interview": 5,
+              "investigation": 4,
+              "photo": 4,
+              "documents": 7,
+              "empathy": 6,
+              "courage": 7
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "long",
+            "name": "Đoàn Bảo Long",
+            "female": false,
+            "joinDay": 1,
+            "stats": {
+              "interview": 6,
+              "investigation": 5,
+              "photo": 4,
+              "documents": 4,
+              "empathy": 8,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "nhi",
+            "name": "Hạ Tuyết Nhi",
+            "female": true,
+            "joinDay": 1,
+            "stats": {
+              "interview": 5,
+              "investigation": 6,
+              "photo": 4,
+              "documents": 8,
+              "empathy": 4,
+              "courage": 5
+            },
+            "fatigue": 10,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "ngoc",
+            "name": "Tạ Như Ngọc",
+            "female": true,
+            "joinDay": 8,
+            "stats": {
+              "interview": 5,
+              "investigation": 5,
+              "photo": 8,
+              "documents": 4,
+              "empathy": 6,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "an",
+            "name": "Ngô Thiên Ân",
+            "female": false,
+            "joinDay": 10,
+            "stats": {
+              "interview": 5,
+              "investigation": 7,
+              "photo": 4,
+              "documents": 8,
+              "empathy": 4,
+              "courage": 6
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          }
+        ],
+        "cases": [
+          {
+            "key": "community",
+            "title": "Sân bóng đóng cửa",
+            "teaser": "Học sinh phải tập ngoài cổng trường.",
+            "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện.",
+            "need": "empathy",
+            "difficulty": 7,
+            "attraction": 7,
+            "id": "W1-community",
+            "week": 1,
+            "expires": 11,
+            "opened": true,
+            "status": "blocked",
+            "owner": "nhi",
+            "progress": 1,
+            "attempts": 1,
+            "quality": 0
+          },
+          {
+            "key": "documents",
+            "title": "Khoản thu câu lạc bộ",
+            "teaser": "Một khoản thu mới xuất hiện trên bảng thông báo.",
+            "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm.",
+            "need": "documents",
+            "difficulty": 7,
+            "attraction": 8,
+            "id": "W1-documents",
+            "week": 1,
+            "expires": 11,
+            "opened": false,
+            "status": "available",
+            "owner": null,
+            "progress": 0,
+            "attempts": 0,
+            "quality": 0
+          },
+          {
+            "key": "photo",
+            "title": "Bến cảng lúc bình minh",
+            "teaser": "Những người làm việc trước khi thành phố thức giấc.",
+            "story": "Nhân vật muốn kể chuyện qua những khoảnh khắc lao động thực tế. Một cuộc phỏng vấn dài không thay thế được tư liệu hình ảnh đúng lúc.",
+            "need": "photo",
+            "difficulty": 7,
+            "attraction": 6,
+            "id": "W1-photo",
+            "week": 1,
+            "expires": 11,
+            "opened": false,
+            "status": "available",
+            "owner": null,
+            "progress": 0,
+            "attempts": 0,
+            "quality": 0
+          }
+        ],
+        "quests": [
+          {
+            "id": "Q1",
+            "title": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc",
+            "steps": [],
+            "quality": [],
+            "written": false
+          }
+        ],
+        "drafts": [],
+        "articles": [],
+        "reports": [],
+        "messages": [
+          {
+            "id": "W1-community-1-1",
+            "caseId": "W1-community",
+            "kind": "mismatch",
+            "resolved": false,
+            "day": 1
+          }
+        ],
+        "log": [
+          {
+            "day": 1,
+            "phase": "morning",
+            "textKey": "src.gameplay.engine.bat_dau_lat_cat_co_che_nhi_duoc_mo_som_de_thu_phan_cong_noi_dung",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "club",
+            "textKey": "src.gameplay.engine.phong_van_mo_ho_so_value0",
+            "params": {
+              "value0": "Sân bóng đóng cửa"
+            }
+          },
+          {
+            "day": 1,
+            "phase": "club",
+            "textKey": "journal.assignment",
+            "params": {
+              "title": "Sân bóng đóng cửa",
+              "name": "Hạ Tuyết Nhi"
+            }
+          },
+          {
+            "day": 1,
+            "phase": "personal",
+            "textKey": "src.gameplay.engine.nghi_ngoi_giam_20_met",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "evening",
+            "textKey": "src.gameplay.engine.nghi_ngoi_giam_20_met",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "bed",
+            "textKey": "src.gameplay.engine.value0_bao_khong_phu_hop_value1",
+            "params": {
+              "value0": "Hạ Tuyết Nhi",
+              "value1": "Sân bóng đóng cửa"
+            }
+          },
+          {
+            "day": 1,
+            "phase": "bed",
+            "textKey": "src.gameplay.engine.con_tin_nhan_dong_doi_can_duyet_ngay_truoc_khi_ngu",
+            "params": {}
+          }
+        ],
+        "metrics": {
+          "opened": 1,
+          "assigned": 1,
+          "restarts": 0,
+          "approvals": 0,
+          "energySpent": 2,
+          "unusedEnergy": 2,
+          "hangouts": 0,
+          "jobs": 0
+        },
+        "sleepPrepared": true,
+        "ended": false,
+        "betrayal": false
+      },
+      "events": [
+        {
+          "day": 1,
+          "phase": "bed",
+          "textKey": "src.gameplay.engine.value0_bao_khong_phu_hop_value1",
+          "params": {
+            "value0": "Hạ Tuyết Nhi",
+            "value1": "Sân bóng đóng cửa"
+          }
+        },
+        {
+          "day": 1,
+          "phase": "bed",
+          "textKey": "src.gameplay.engine.con_tin_nhan_dong_doi_can_duyet_ngay_truoc_khi_ngu",
+          "params": {}
+        }
+      ]
+    },
+    {
+      "command": {
+        "type": "sleep"
+      },
+      "ok": true,
+      "state": {
+        "version": 2,
+        "config": {
+          "days": 14,
+          "clubEnergy": 4,
+          "outsideEnergy": 2,
+          "openCost": 1,
+          "assignCost": 1,
+          "researchDays": 2,
+          "editorialCapacity": 3,
+          "packaging": 0.04,
+          "romancePenalty": 0.25,
+          "fatiguePerWork": 10,
+          "recovery": 12,
+          "jobPay": 150,
+          "trainingCost": 80,
+          "toolCost": 220,
+          "giftCost": 60
+        },
+        "day": 1,
+        "phase": "bed",
+        "energy": 0,
+        "money": 300,
+        "reputation": 0,
+        "pressure": 0,
+        "grants": 0,
+        "people": [
+          {
+            "id": "khue",
+            "name": "Diệp Khuê",
+            "female": false,
+            "joinDay": 1,
+            "stats": {
+              "interview": 7,
+              "investigation": 7,
+              "photo": 4,
+              "documents": 5,
+              "empathy": 5,
+              "courage": 6
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "van",
+            "name": "Lục Thanh Vân",
+            "female": true,
+            "joinDay": 1,
+            "stats": {
+              "interview": 5,
+              "investigation": 4,
+              "photo": 4,
+              "documents": 7,
+              "empathy": 6,
+              "courage": 7
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "long",
+            "name": "Đoàn Bảo Long",
+            "female": false,
+            "joinDay": 1,
+            "stats": {
+              "interview": 6,
+              "investigation": 5,
+              "photo": 4,
+              "documents": 4,
+              "empathy": 8,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "nhi",
+            "name": "Hạ Tuyết Nhi",
+            "female": true,
+            "joinDay": 1,
+            "stats": {
+              "interview": 5,
+              "investigation": 6,
+              "photo": 4,
+              "documents": 8,
+              "empathy": 4,
+              "courage": 5
+            },
+            "fatigue": 10,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "ngoc",
+            "name": "Tạ Như Ngọc",
+            "female": true,
+            "joinDay": 8,
+            "stats": {
+              "interview": 5,
+              "investigation": 5,
+              "photo": 8,
+              "documents": 4,
+              "empathy": 6,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "an",
+            "name": "Ngô Thiên Ân",
+            "female": false,
+            "joinDay": 10,
+            "stats": {
+              "interview": 5,
+              "investigation": 7,
+              "photo": 4,
+              "documents": 8,
+              "empathy": 4,
+              "courage": 6
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          }
+        ],
+        "cases": [
+          {
+            "key": "community",
+            "title": "Sân bóng đóng cửa",
+            "teaser": "Học sinh phải tập ngoài cổng trường.",
+            "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện.",
+            "need": "empathy",
+            "difficulty": 7,
+            "attraction": 7,
+            "id": "W1-community",
+            "week": 1,
+            "expires": 11,
+            "opened": true,
+            "status": "blocked",
+            "owner": "nhi",
+            "progress": 1,
+            "attempts": 1,
+            "quality": 0
+          },
+          {
+            "key": "documents",
+            "title": "Khoản thu câu lạc bộ",
+            "teaser": "Một khoản thu mới xuất hiện trên bảng thông báo.",
+            "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm.",
+            "need": "documents",
+            "difficulty": 7,
+            "attraction": 8,
+            "id": "W1-documents",
+            "week": 1,
+            "expires": 11,
+            "opened": false,
+            "status": "available",
+            "owner": null,
+            "progress": 0,
+            "attempts": 0,
+            "quality": 0
+          },
+          {
+            "key": "photo",
+            "title": "Bến cảng lúc bình minh",
+            "teaser": "Những người làm việc trước khi thành phố thức giấc.",
+            "story": "Nhân vật muốn kể chuyện qua những khoảnh khắc lao động thực tế. Một cuộc phỏng vấn dài không thay thế được tư liệu hình ảnh đúng lúc.",
+            "need": "photo",
+            "difficulty": 7,
+            "attraction": 6,
+            "id": "W1-photo",
+            "week": 1,
+            "expires": 11,
+            "opened": false,
+            "status": "available",
+            "owner": null,
+            "progress": 0,
+            "attempts": 0,
+            "quality": 0
+          }
+        ],
+        "quests": [
+          {
+            "id": "Q1",
+            "title": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc",
+            "steps": [],
+            "quality": [],
+            "written": false
+          }
+        ],
+        "drafts": [],
+        "articles": [],
+        "reports": [],
+        "messages": [
+          {
+            "id": "W1-community-1-1",
+            "caseId": "W1-community",
+            "kind": "mismatch",
+            "resolved": false,
+            "day": 1
+          }
+        ],
+        "log": [
+          {
+            "day": 1,
+            "phase": "morning",
+            "textKey": "src.gameplay.engine.bat_dau_lat_cat_co_che_nhi_duoc_mo_som_de_thu_phan_cong_noi_dung",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "club",
+            "textKey": "src.gameplay.engine.phong_van_mo_ho_so_value0",
+            "params": {
+              "value0": "Sân bóng đóng cửa"
+            }
+          },
+          {
+            "day": 1,
+            "phase": "club",
+            "textKey": "journal.assignment",
+            "params": {
+              "title": "Sân bóng đóng cửa",
+              "name": "Hạ Tuyết Nhi"
+            }
+          },
+          {
+            "day": 1,
+            "phase": "personal",
+            "textKey": "src.gameplay.engine.nghi_ngoi_giam_20_met",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "evening",
+            "textKey": "src.gameplay.engine.nghi_ngoi_giam_20_met",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "bed",
+            "textKey": "src.gameplay.engine.value0_bao_khong_phu_hop_value1",
+            "params": {
+              "value0": "Hạ Tuyết Nhi",
+              "value1": "Sân bóng đóng cửa"
+            }
+          },
+          {
+            "day": 1,
+            "phase": "bed",
+            "textKey": "src.gameplay.engine.con_tin_nhan_dong_doi_can_duyet_ngay_truoc_khi_ngu",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "bed",
+            "textKey": "src.gameplay.engine.con_tin_nhan_dong_doi_can_duyet_ngay_truoc_khi_ngu",
+            "params": {}
+          }
+        ],
+        "metrics": {
+          "opened": 1,
+          "assigned": 1,
+          "restarts": 0,
+          "approvals": 0,
+          "energySpent": 2,
+          "unusedEnergy": 2,
+          "hangouts": 0,
+          "jobs": 0
+        },
+        "sleepPrepared": true,
+        "ended": false,
+        "betrayal": false
+      },
+      "events": [
+        {
+          "day": 1,
+          "phase": "bed",
+          "textKey": "src.gameplay.engine.con_tin_nhan_dong_doi_can_duyet_ngay_truoc_khi_ngu",
+          "params": {}
+        }
+      ]
+    },
+    {
+      "command": {
+        "type": "approve",
+        "id": "W1-community-1-1",
+        "option": "reassign",
+        "person": "long"
+      },
+      "ok": true,
+      "state": {
+        "version": 2,
+        "config": {
+          "days": 14,
+          "clubEnergy": 4,
+          "outsideEnergy": 2,
+          "openCost": 1,
+          "assignCost": 1,
+          "researchDays": 2,
+          "editorialCapacity": 3,
+          "packaging": 0.04,
+          "romancePenalty": 0.25,
+          "fatiguePerWork": 10,
+          "recovery": 12,
+          "jobPay": 150,
+          "trainingCost": 80,
+          "toolCost": 220,
+          "giftCost": 60
+        },
+        "day": 1,
+        "phase": "bed",
+        "energy": 0,
+        "money": 300,
+        "reputation": 0,
+        "pressure": 0,
+        "grants": 0,
+        "people": [
+          {
+            "id": "khue",
+            "name": "Diệp Khuê",
+            "female": false,
+            "joinDay": 1,
+            "stats": {
+              "interview": 7,
+              "investigation": 7,
+              "photo": 4,
+              "documents": 5,
+              "empathy": 5,
+              "courage": 6
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "van",
+            "name": "Lục Thanh Vân",
+            "female": true,
+            "joinDay": 1,
+            "stats": {
+              "interview": 5,
+              "investigation": 4,
+              "photo": 4,
+              "documents": 7,
+              "empathy": 6,
+              "courage": 7
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "long",
+            "name": "Đoàn Bảo Long",
+            "female": false,
+            "joinDay": 1,
+            "stats": {
+              "interview": 6,
+              "investigation": 5,
+              "photo": 4,
+              "documents": 4,
+              "empathy": 8,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "nhi",
+            "name": "Hạ Tuyết Nhi",
+            "female": true,
+            "joinDay": 1,
+            "stats": {
+              "interview": 5,
+              "investigation": 6,
+              "photo": 4,
+              "documents": 8,
+              "empathy": 4,
+              "courage": 5
+            },
+            "fatigue": 10,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "ngoc",
+            "name": "Tạ Như Ngọc",
+            "female": true,
+            "joinDay": 8,
+            "stats": {
+              "interview": 5,
+              "investigation": 5,
+              "photo": 8,
+              "documents": 4,
+              "empathy": 6,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "an",
+            "name": "Ngô Thiên Ân",
+            "female": false,
+            "joinDay": 10,
+            "stats": {
+              "interview": 5,
+              "investigation": 7,
+              "photo": 4,
+              "documents": 8,
+              "empathy": 4,
+              "courage": 6
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          }
+        ],
+        "cases": [
+          {
+            "key": "community",
+            "title": "Sân bóng đóng cửa",
+            "teaser": "Học sinh phải tập ngoài cổng trường.",
+            "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện.",
+            "need": "empathy",
+            "difficulty": 7,
+            "attraction": 7,
+            "id": "W1-community",
+            "week": 1,
+            "expires": 11,
+            "opened": true,
+            "status": "working",
+            "owner": "long",
+            "progress": 0,
+            "attempts": 2,
+            "quality": 0
+          },
+          {
+            "key": "documents",
+            "title": "Khoản thu câu lạc bộ",
+            "teaser": "Một khoản thu mới xuất hiện trên bảng thông báo.",
+            "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm.",
+            "need": "documents",
+            "difficulty": 7,
+            "attraction": 8,
+            "id": "W1-documents",
+            "week": 1,
+            "expires": 11,
+            "opened": false,
+            "status": "available",
+            "owner": null,
+            "progress": 0,
+            "attempts": 0,
+            "quality": 0
+          },
+          {
+            "key": "photo",
+            "title": "Bến cảng lúc bình minh",
+            "teaser": "Những người làm việc trước khi thành phố thức giấc.",
+            "story": "Nhân vật muốn kể chuyện qua những khoảnh khắc lao động thực tế. Một cuộc phỏng vấn dài không thay thế được tư liệu hình ảnh đúng lúc.",
+            "need": "photo",
+            "difficulty": 7,
+            "attraction": 6,
+            "id": "W1-photo",
+            "week": 1,
+            "expires": 11,
+            "opened": false,
+            "status": "available",
+            "owner": null,
+            "progress": 0,
+            "attempts": 0,
+            "quality": 0
+          }
+        ],
+        "quests": [
+          {
+            "id": "Q1",
+            "title": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc",
+            "steps": [],
+            "quality": [],
+            "written": false
+          }
+        ],
+        "drafts": [],
+        "articles": [],
+        "reports": [],
+        "messages": [
+          {
+            "id": "W1-community-1-1",
+            "caseId": "W1-community",
+            "kind": "mismatch",
+            "resolved": true,
+            "day": 1
+          }
+        ],
+        "log": [
+          {
+            "day": 1,
+            "phase": "morning",
+            "textKey": "src.gameplay.engine.bat_dau_lat_cat_co_che_nhi_duoc_mo_som_de_thu_phan_cong_noi_dung",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "club",
+            "textKey": "src.gameplay.engine.phong_van_mo_ho_so_value0",
+            "params": {
+              "value0": "Sân bóng đóng cửa"
+            }
+          },
+          {
+            "day": 1,
+            "phase": "club",
+            "textKey": "journal.assignment",
+            "params": {
+              "title": "Sân bóng đóng cửa",
+              "name": "Hạ Tuyết Nhi"
+            }
+          },
+          {
+            "day": 1,
+            "phase": "personal",
+            "textKey": "src.gameplay.engine.nghi_ngoi_giam_20_met",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "evening",
+            "textKey": "src.gameplay.engine.nghi_ngoi_giam_20_met",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "bed",
+            "textKey": "src.gameplay.engine.value0_bao_khong_phu_hop_value1",
+            "params": {
+              "value0": "Hạ Tuyết Nhi",
+              "value1": "Sân bóng đóng cửa"
+            }
+          },
+          {
+            "day": 1,
+            "phase": "bed",
+            "textKey": "src.gameplay.engine.con_tin_nhan_dong_doi_can_duyet_ngay_truoc_khi_ngu",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "bed",
+            "textKey": "src.gameplay.engine.con_tin_nhan_dong_doi_can_duyet_ngay_truoc_khi_ngu",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "bed",
+            "textKey": "src.gameplay.engine.duyet_value0_value1_0_energy",
+            "params": {
+              "value0": "Sân bóng đóng cửa",
+              "value1": "reassign"
+            }
+          }
+        ],
+        "metrics": {
+          "opened": 1,
+          "assigned": 1,
+          "restarts": 1,
+          "approvals": 1,
+          "energySpent": 2,
+          "unusedEnergy": 2,
+          "hangouts": 0,
+          "jobs": 0
+        },
+        "sleepPrepared": true,
+        "ended": false,
+        "betrayal": false
+      },
+      "events": [
+        {
+          "day": 1,
+          "phase": "bed",
+          "textKey": "src.gameplay.engine.duyet_value0_value1_0_energy",
+          "params": {
+            "value0": "Sân bóng đóng cửa",
+            "value1": "reassign"
+          }
+        }
+      ]
+    },
+    {
+      "command": {
+        "type": "sleep"
+      },
+      "ok": true,
+      "state": {
+        "version": 2,
+        "config": {
+          "days": 14,
+          "clubEnergy": 4,
+          "outsideEnergy": 2,
+          "openCost": 1,
+          "assignCost": 1,
+          "researchDays": 2,
+          "editorialCapacity": 3,
+          "packaging": 0.04,
+          "romancePenalty": 0.25,
+          "fatiguePerWork": 10,
+          "recovery": 12,
+          "jobPay": 150,
+          "trainingCost": 80,
+          "toolCost": 220,
+          "giftCost": 60
+        },
+        "day": 2,
+        "phase": "morning",
+        "energy": 0,
+        "money": 300,
+        "reputation": 0,
+        "pressure": 0,
+        "grants": 0,
+        "people": [
+          {
+            "id": "khue",
+            "name": "Diệp Khuê",
+            "female": false,
+            "joinDay": 1,
+            "stats": {
+              "interview": 7,
+              "investigation": 7,
+              "photo": 4,
+              "documents": 5,
+              "empathy": 5,
+              "courage": 6
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "van",
+            "name": "Lục Thanh Vân",
+            "female": true,
+            "joinDay": 1,
+            "stats": {
+              "interview": 5,
+              "investigation": 4,
+              "photo": 4,
+              "documents": 7,
+              "empathy": 6,
+              "courage": 7
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "long",
+            "name": "Đoàn Bảo Long",
+            "female": false,
+            "joinDay": 1,
+            "stats": {
+              "interview": 6,
+              "investigation": 5,
+              "photo": 4,
+              "documents": 4,
+              "empathy": 8,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "nhi",
+            "name": "Hạ Tuyết Nhi",
+            "female": true,
+            "joinDay": 1,
+            "stats": {
+              "interview": 5,
+              "investigation": 6,
+              "photo": 4,
+              "documents": 8,
+              "empathy": 4,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "ngoc",
+            "name": "Tạ Như Ngọc",
+            "female": true,
+            "joinDay": 8,
+            "stats": {
+              "interview": 5,
+              "investigation": 5,
+              "photo": 8,
+              "documents": 4,
+              "empathy": 6,
+              "courage": 5
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          },
+          {
+            "id": "an",
+            "name": "Ngô Thiên Ân",
+            "female": false,
+            "joinDay": 10,
+            "stats": {
+              "interview": 5,
+              "investigation": 7,
+              "photo": 4,
+              "documents": 8,
+              "empathy": 4,
+              "courage": 6
+            },
+            "fatigue": 0,
+            "bond": 0,
+            "events": 0,
+            "romance": false,
+            "weekendSkill": false,
+            "tools": [],
+            "skills": []
+          }
+        ],
+        "cases": [
+          {
+            "key": "community",
+            "title": "Sân bóng đóng cửa",
+            "teaser": "Học sinh phải tập ngoài cổng trường.",
+            "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện.",
+            "need": "empathy",
+            "difficulty": 7,
+            "attraction": 7,
+            "id": "W1-community",
+            "week": 1,
+            "expires": 11,
+            "opened": true,
+            "status": "working",
+            "owner": "long",
+            "progress": 0,
+            "attempts": 2,
+            "quality": 0
+          },
+          {
+            "key": "documents",
+            "title": "Khoản thu câu lạc bộ",
+            "teaser": "Một khoản thu mới xuất hiện trên bảng thông báo.",
+            "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm.",
+            "need": "documents",
+            "difficulty": 7,
+            "attraction": 8,
+            "id": "W1-documents",
+            "week": 1,
+            "expires": 11,
+            "opened": false,
+            "status": "available",
+            "owner": null,
+            "progress": 0,
+            "attempts": 0,
+            "quality": 0
+          },
+          {
+            "key": "photo",
+            "title": "Bến cảng lúc bình minh",
+            "teaser": "Những người làm việc trước khi thành phố thức giấc.",
+            "story": "Nhân vật muốn kể chuyện qua những khoảnh khắc lao động thực tế. Một cuộc phỏng vấn dài không thay thế được tư liệu hình ảnh đúng lúc.",
+            "need": "photo",
+            "difficulty": 7,
+            "attraction": 6,
+            "id": "W1-photo",
+            "week": 1,
+            "expires": 11,
+            "opened": false,
+            "status": "available",
+            "owner": null,
+            "progress": 0,
+            "attempts": 0,
+            "quality": 0
+          }
+        ],
+        "quests": [
+          {
+            "id": "Q1",
+            "title": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc",
+            "steps": [],
+            "quality": [],
+            "written": false
+          }
+        ],
+        "drafts": [],
+        "articles": [],
+        "reports": [],
+        "messages": [
+          {
+            "id": "W1-community-1-1",
+            "caseId": "W1-community",
+            "kind": "mismatch",
+            "resolved": true,
+            "day": 1
+          }
+        ],
+        "log": [
+          {
+            "day": 1,
+            "phase": "morning",
+            "textKey": "src.gameplay.engine.bat_dau_lat_cat_co_che_nhi_duoc_mo_som_de_thu_phan_cong_noi_dung",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "club",
+            "textKey": "src.gameplay.engine.phong_van_mo_ho_so_value0",
+            "params": {
+              "value0": "Sân bóng đóng cửa"
+            }
+          },
+          {
+            "day": 1,
+            "phase": "club",
+            "textKey": "journal.assignment",
+            "params": {
+              "title": "Sân bóng đóng cửa",
+              "name": "Hạ Tuyết Nhi"
+            }
+          },
+          {
+            "day": 1,
+            "phase": "personal",
+            "textKey": "src.gameplay.engine.nghi_ngoi_giam_20_met",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "evening",
+            "textKey": "src.gameplay.engine.nghi_ngoi_giam_20_met",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "bed",
+            "textKey": "src.gameplay.engine.value0_bao_khong_phu_hop_value1",
+            "params": {
+              "value0": "Hạ Tuyết Nhi",
+              "value1": "Sân bóng đóng cửa"
+            }
+          },
+          {
+            "day": 1,
+            "phase": "bed",
+            "textKey": "src.gameplay.engine.con_tin_nhan_dong_doi_can_duyet_ngay_truoc_khi_ngu",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "bed",
+            "textKey": "src.gameplay.engine.con_tin_nhan_dong_doi_can_duyet_ngay_truoc_khi_ngu",
+            "params": {}
+          },
+          {
+            "day": 1,
+            "phase": "bed",
+            "textKey": "src.gameplay.engine.duyet_value0_value1_0_energy",
+            "params": {
+              "value0": "Sân bóng đóng cửa",
+              "value1": "reassign"
+            }
+          }
+        ],
+        "metrics": {
+          "opened": 1,
+          "assigned": 1,
+          "restarts": 1,
+          "approvals": 1,
+          "energySpent": 2,
+          "unusedEnergy": 2,
+          "hangouts": 0,
+          "jobs": 0
+        },
+        "sleepPrepared": false,
+        "ended": false,
+        "betrayal": false,
+        "boostToday": false
+      },
+      "events": []
+    }
+  ]
+}

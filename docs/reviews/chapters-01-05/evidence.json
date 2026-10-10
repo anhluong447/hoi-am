@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "source_commit": "6ad88df15ac5f082ac323e9d4144094affe01c7b",
+  "target_base_commit": "62f0a377f3d778ec558e22bdf0a42ef9d3e6937f",
+  "godot": "4.7.2.stable.steam.ed1daf0bf",
+  "renderer": "Forward+ / D3D12",
+  "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+  "native_input_checks": 12,
+  "headless_checks": 349,
+  "performance_measured": false,
+  "visual_gate": "G2-open",
+  "files": [
+    {
+      "path": "captures/dialogue-1280x720.png",
+      "sha256": "cb9be68de854bd6baf398823a4aaa7b728d82d44b168569123d91193304cfaeb"
+    },
+    {
+      "path": "captures/dialogue-1920x1080.png",
+      "sha256": "e3b45141d11efc02c6a2d98452db2e8b8f45935d689cc2ff8dcf9f7960dde3db"
+    },
+    {
+      "path": "captures/dialogue-neutral.png",
+      "sha256": "f4f49ee294718d2c903599465767743d51ae32a8cbc5c3e32981e2671820c3c5"
+    },
+    {
+      "path": "captures/dialogue-ui-dark.png",
+      "sha256": "64ede3abf179f4485c9da3be5ee39dc8f3dea95a3606c674c028e05a677209f5"
+    },
+    {
+      "path": "captures/dialogue-ui-detail.png",
+      "sha256": "32893d8b4fca9b5a593e0b9f226e63b061e347a94be852dd7c25d322049f9560"
+    },
+    {
+      "path": "captures/dialogue-ui-light.png",
+      "sha256": "5814c58025d79b6d307958798e81196db56d8f86737d5e8969338d2360dc8585"
+    },
+    {
+      "path": "captures/hud-detail.png",
+      "sha256": "7b831c3c06b20572b7b00894e99c83df9963a26b57856126608b3e437b315bdf"
+    },
+    {
+      "path": "captures/hud-neutral.png",
+      "sha256": "661af261176e9363101cc0f35954f3daa53cd8092f4d71b8125a9988e4c8cbfc"
+    },
+    {
+      "path": "captures/shadow-contact.png",
+      "sha256": "fa23fe2ccd0d6242dc713bdee9812a5f2c28889d28d6badacb37596a0a13ecd8"
+    },
+    {
+      "path": "captures/shadow-proxy.png",
+      "sha256": "920b5cff83c1255f47753241d6dacbae0d152069e0846381f03a5b759c0013d2"
+    },
+    {
+      "path": "captures/shadow-sprite.png",
+      "sha256": "8b0f7e560467fe2d8829d1b67db5315ac2b6beab3f54ac460cc042f4a22c156b"
+    },
+    {
+      "path": "captures/world-desk-behind.png",
+      "sha256": "1373ae1a5bacc07fc7979234e61400e2eeb7a8769ffe2468704c72494afca9ef"
+    },
+    {
+      "path": "captures/world-desk-front.png",
+      "sha256": "920b5cff83c1255f47753241d6dacbae0d152069e0846381f03a5b759c0013d2"
+    },
+    {
+      "path": "captures/world-door.png",
+      "sha256": "b521ee0de7b5016d9643afc269fa1311923c5baed7bb564ab8d7e3c640bea30b"
+    },
+    {
+      "path": "captures/world-orthographic.png",
+      "sha256": "f6c5e095c9e9edf156ac00a692abba7385aba8e823b100cce05fd4398970096a"
+    },
+    {
+      "path": "captures/world-perspective.png",
+      "sha256": "42cf7e786a11f1c6342b75ef1321e5ffe6fa110df4dd698c012ed5e456edbe96"
+    },
+    {
+      "path": "captures/world-window.png",
+      "sha256": "90d201d237aad77687c1797d5c4dd20a3f7aa7c12da6cfedcc325e2d60560879"
+    },
+    {
+      "path": "captures-v2/dialogue-1280x720.png",
+      "sha256": "eed4f13d8a43d0d914dcc8523a1fe4cc0def065fe7762f94acec4c470e658a7c"
+    },
+    {
+      "path": "captures-v2/dialogue-1920x1080.png",
+      "sha256": "a804518d257b5db5247477717fcb680dd88e1832c61f220f13fcbdbe28dff1b9"
+    },
+    {
+      "path": "captures-v2/dialogue-neutral.png",
+      "sha256": "957aad07cf1c676acd9981c450d58f4d15468807b622cd40f3a76c3958b8067c"
+    },
+    {
+      "path": "captures-v2/dialogue-ui-dark.png",
+      "sha256": "27a523f555dc850d929b6c0290d4b97a609a8ed9e203a4991a30eb1319a27f0a"
+    },
+    {
+      "path": "captures-v2/dialogue-ui-detail.png",
+      "sha256": "ab54281c05e2337fd511f3578b2626059146e48d8fa461d6001b0c3a2ba70794"
+    },
+    {
+      "path": "captures-v2/dialogue-ui-light.png",
+      "sha256": "554e3a83f96bafa2e9b74e28f03a33233156b0c4a697a4815e960520dc0557c9"
+    },
+    {
+      "path": "captures-v2/hud-detail.png",
+      "sha256": "1168d636dc2e2c750ebaa18a5195b89801673653cd6a25de07da195f45fe184c"
+    },
+    {
+      "path": "captures-v2/hud-neutral.png",
+      "sha256": "90913b442833323f0938df5a52201ccdbebee0f1f123b0f1ea204e2952df406f"
+    },
+    {
+      "path": "captures-v2/shadow-contact.png",
+      "sha256": "424af563232f9d305f732ce3ef3f1cc237703f777d8bd419d16b60de0478d3f6"
+    },
+    {
+      "path": "captures-v2/shadow-proxy.png",
+      "sha256": "8862778645fa1ad25cd31745164b45c58d090a49f4b7d0dc22bb2f8f6ffce21a"
+    },
+    {
+      "path": "captures-v2/shadow-sprite.png",
+      "sha256": "8862778645fa1ad25cd31745164b45c58d090a49f4b7d0dc22bb2f8f6ffce21a"
+    },
+    {
+      "path": "captures-v2/world-desk-behind.png",
+      "sha256": "b8d485fb0d77a3b964a0a71a25ff9a75fdaf4f8127951b9f9661fd9c31b6ccab"
+    },
+    {
+      "path": "captures-v2/world-desk-front.png",
+      "sha256": "8862778645fa1ad25cd31745164b45c58d090a49f4b7d0dc22bb2f8f6ffce21a"
+    },
+    {
+      "path": "captures-v2/world-door.png",
+      "sha256": "c7088f952e8213b0f7262b089a1d983e8a2fe760f8679df0cc8d50980c8e22c5"
+    },
+    {
+      "path": "captures-v2/world-orthographic.png",
+      "sha256": "80eb4145aaad6ab19a005cf00cb49b67c2c290801385771662d12729bfab6acc"
+    },
+    {
+      "path": "captures-v2/world-perspective.png",
+      "sha256": "56ea2b6d60db78deecaf79c7f152d1dbbef62af0e8bd304a3646df3fb1780cf4"
+    },
+    {
+      "path": "captures-v2/world-window.png",
+      "sha256": "a8084540847b04c485cefa743c55862dd54314817fab7cb966b0c650e44fd3a3"
+    },
+    {
+      "path": "captures-v3/billboard-fixed.png",
+      "sha256": "c3f0b8e34b9d40d594ce942d505c38ad0a52e31c127577357629421b8517cac5"
+    },
+    {
+      "path": "captures-v3/billboard-y.png",
+      "sha256": "017f62a0ed0da773402517349fb25fbc7a99a8d21597dc77183c7af6a02077f0"
+    },
+    {
+      "path": "captures-v3/dialogue-1280x720.png",
+      "sha256": "c0392b1cbe199ef10f9c932a917d3032e5886dd768388b6cc1787bca9a476d2e"
+    },
+    {
+      "path": "captures-v3/dialogue-1920x1080.png",
+      "sha256": "1d28974c048d0981376861538b4ab117146a2ee8165e5e77fe3eca924d81c048"
+    },
+    {
+      "path": "captures-v3/dialogue-neutral.png",
+      "sha256": "f185dd8b9a6c68d089ad4d94a0ce951732bae4933fc558e54e87542709460936"
+    },
+    {
+      "path": "captures-v3/dialogue-ui-dark.png",
+      "sha256": "6bd54ab7964cddc8598770b0e968b59e3d41388bef5f403a5c402a45a56b3682"
+    },
+    {
+      "path": "captures-v3/dialogue-ui-detail.png",
+      "sha256": "aac3226581cbc4fa3afaf691a6901b42db14d374abb200b01294d24580b9f188"
+    },
+    {
+      "path": "captures-v3/dialogue-ui-light.png",
+      "sha256": "71886ee8be7b977d9a5c2dcd4004d377d295702c05420e2bb7e63ac59d58deba"
+    },
+    {
+      "path": "captures-v3/hud-detail.png",
+      "sha256": "1168d636dc2e2c750ebaa18a5195b89801673653cd6a25de07da195f45fe184c"
+    },
+    {
+      "path": "captures-v3/hud-neutral.png",
+      "sha256": "90913b442833323f0938df5a52201ccdbebee0f1f123b0f1ea204e2952df406f"
+    },
+    {
+      "path": "captures-v3/shadow-contact.png",
+      "sha256": "0f7bc8babd8babd3759214d660a738a7007135432132f6e6567de8d6f3f73eb8"
+    },
+    {
+      "path": "captures-v3/shadow-proxy.png",
+      "sha256": "4cd43a10144ba7f21dfadc77287ab3e1da84a23e851b54b1a34587978bea042f"
+    },
+    {
+      "path": "captures-v3/shadow-sprite.png",
+      "sha256": "5cd39f1b1b54ba0272d705e17afdf6eac061cefbbbc135be3c5ccbd97f28d8be"
+    },
+    {
+      "path": "captures-v3/world-desk-behind.png",
+      "sha256": "f9d2520b11649700152ae92b067d41729aa81a9524404f1e3af6196e905e9b5f"
+    },
+    {
+      "path": "captures-v3/world-desk-front.png",
+      "sha256": "4cd43a10144ba7f21dfadc77287ab3e1da84a23e851b54b1a34587978bea042f"
+    },
+    {
+      "path": "captures-v3/world-door.png",
+      "sha256": "7a00aec5c9388e41c7f5cf0d1fc8639f1840ec6fe9a5abed173a84a0ddf246d0"
+    },
+    {
+      "path": "captures-v3/world-orthographic.png",
+      "sha256": "e335aa3884bc478982b5abfd2cff3833ab08fb323e6d7771f3b7904b6dfb0f9f"
+    },
+    {
+      "path": "captures-v3/world-perspective.png",
+      "sha256": "56ea2b6d60db78deecaf79c7f152d1dbbef62af0e8bd304a3646df3fb1780cf4"
+    },
+    {
+      "path": "captures-v3/world-window.png",
+      "sha256": "18abc0c3cf7c6d7557f273ffd2335bb6d2a1cb1f6026a529379aece16c84074b"
+    },
+    {
+      "path": "logs/bootstrap.log",
+      "sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75"
+    },
+    {
+      "path": "logs/capture-reproducibility.log",
+      "sha256": "920d6548008a7f7cd39885d6e1d15120899a38a4af345189c02adf6614e0c008"
+    },
+    {
+      "path": "logs/check_architecture.log",
+      "sha256": "d77460fc54881c9fae6d29f3935df65fbeea4c1f94407d9c45eaa02cd18d18bc"
+    },
+    {
+      "path": "logs/check_content.log",
+      "sha256": "4e7e6462fb78a6471b8d3d9cd7cec585c9edbca313a148b95f0e95e2d2237ee6"
+    },
+    {
+      "path": "logs/check_reference.log",
+      "sha256": "16fafce8e3d57373ff596e2aee71934f254a1fa872a6d8b727ba3e7d8823b36b"
+    },
+    {
+      "path": "logs/contracts.log",
+      "sha256": "4ed9383be48cf849e52550292fd42575a52d9b15841c8d1f294de747b9ebf9b5"
+    },
+    {
+      "path": "logs/native-interaction.log",
+      "sha256": "84ca31b9856d898e2aebdc318187d8d1ce20adf9fef379512f9472e3be1eb8eb"
+    },
+    {
+      "path": "logs/native-review-current.log",
+      "sha256": "d8f84c8c3024cf484472e8dac9171d9c62c0b332772b0f084067fb222e54ca01"
+    },
+    {
+      "path": "logs/native-review-final.log",
+      "sha256": "d8f84c8c3024cf484472e8dac9171d9c62c0b332772b0f084067fb222e54ca01"
+    },
+    {
+      "path": "logs/native-review-v3.log",
+      "sha256": "76ddbb82d7701a45444eabe81cb49b2ae3013a96f699d9d84b4d92557dd92f4f"
+    },
+    {
+      "path": "ui-mask-v3.png",
+      "sha256": "632282b86c3a0a9829798de841c7e8f3f725933975f7e6effcdd8ee8a422d932"
+    }
+  ],
+  "runtime_sources": [
+    {
+      "path": "src/application/game_session.gd",
+      "sha256": "dbd6a1be9d2a9efdbb432818230071ae6778a43324f8321a69685a12cba17786"
+    },
+    {
+      "path": "src/bootstrap/main.gd",
+      "sha256": "861d35b306809e021e6934c6f0d36a4da2d39a1fbf98972c9c742fbd45b98cc1"
+    },
+    {
+      "path": "src/bootstrap/previews/calendar_preview.gd",
+      "sha256": "4162da9d9b3dd09f73449b8ced215924bcd5e51bc4e3467b4f4e2746bfd81436"
+    },
+    {
+      "path": "src/bootstrap/previews/ui_preview.gd",
+      "sha256": "a0b8263b1c23a30df8db11e81b6710d1eb735986b13823b2db2561eab46e2817"
+    },
+    {
+      "path": "src/bootstrap/previews/world_preview.gd",
+      "sha256": "387c49ee934fcf90d1a4aa7ff6ca092ddcff80c2f44d5bdd1c63f0044dc21911"
+    },
+    {
+      "path": "src/bootstrap/project_startup.gd",
+      "sha256": "dbfe714dc0eebe120853e5df378a1ee10a5c9b1b192113cc3fd84b4f464004e7"
+    },
+    {
+      "path": "src/domain/gameplay/content_validation.gd",
+      "sha256": "af29d73f711ad05384691a585500e7a55d6aca5f9177036e582002512aebb2ef"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_calendar.gd",
+      "sha256": "3d88ed31422b7c71b736125bd25aa1b32522a35da96c204ed1b9326a2f640ac3"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_config.gd",
+      "sha256": "1fecf078d0e22ef4dcdd19f2ba64635a161930e46a2510edeaa682a0ed62df7f"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_events.gd",
+      "sha256": "b8cc3c378e9d4b2a6392047f11c928051eab59421a5e498d95b87ca6cbb47655"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_people.gd",
+      "sha256": "f8c62272e1ef82ec564ae79bf28e809e015822641c5f13383fcd22629a1c2f25"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_rules.gd",
+      "sha256": "6c8646f890e1a7eaa531b6e3389ea78e9f245a06b0a5026d3749b3c6ad52db09"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_state.gd",
+      "sha256": "e3763e60ded322fb49a09390d2edd0460c8cb08e9ef00221f52676575af4145b"
+    },
+    {
+      "path": "src/domain/gameplay/nightly_work.gd",
+      "sha256": "4dc0582444fabebbbd312cfedee0895309f7e9d0b152af9a4aacbf49af0794fe"
+    },
+    {
+      "path": "src/domain/gameplay/publication.gd",
+      "sha256": "a6fe41f4e60c77e0e68d84407db4fba6e481ca696f43c307555533663203a101"
+    },
+    {
+      "path": "src/domain/gameplay/record_validation.gd",
+      "sha256": "aa5cd13578e4688275b3e112261f98bd05d2d8e685d50ef696ede72335bc8c1c"
+    },
+    {
+      "path": "src/domain/gameplay/research_actions.gd",
+      "sha256": "ea822d4b9d42ac938aeec539bbb4bd94c7aea711c130dd8eb7473b3a5fb2a067"
+    },
+    {
+      "path": "src/domain/gameplay/state_migration.gd",
+      "sha256": "8e83b1d689b6c2a44830647d0b95b3adfbb75fcb0116b9e26209ee93f333316a"
+    },
+    {
+      "path": "src/domain/gameplay/state_validation.gd",
+      "sha256": "116ca48d08aa22134c9e5cf5ba57e05004de2f98b3aba101e0b09ee43e73afbf"
+    },
+    {
+      "path": "src/infrastructure/content/json_content_loader.gd",
+      "sha256": "6bdb8bd80a136ad88ddd808f5229f795792c5cf3616048546675703794e906bb"
+    },
+    {
+      "path": "src/presentation/bootstrap/bootstrap_view.gd",
+      "sha256": "c7a731c1ccaa6ef34405411cd9f681054ae79957da9256c37edc4dcba519f7e2"
+    },
+    {
+      "path": "src/presentation/coastal/coastal_widgets.gd",
+      "sha256": "3d582fcf2ea0472256334b0d77a85ab3ae9c6e2c76dda1a5eddfe4f2565ae3a1"
+    },
+    {
+      "path": "src/presentation/coastal/dialogue_view.gd",
+      "sha256": "296c6dc13a2f99df840b2b7ffc1dce2cdb571050c1e5f08546f23f15395f7f87"
+    },
+    {
+      "path": "src/presentation/coastal/hud_view.gd",
+      "sha256": "075a4e05cefc16d8487740ab7c9f51aae311ae3c0ebded2ce3677bc01c5f22a1"
+    },
+    {
+      "path": "src/presentation/controllers/calendar_controller.gd",
+      "sha256": "e4517b3cf5a143823680e3a11bc320e877ccc6e621adfbc18f7695a2fe7d24d8"
+    },
+    {
+      "path": "src/presentation/controllers/gameplay_text.gd",
+      "sha256": "65b1e4ee2a460f909f552439ac1997a072b713f7374a821467e0c721ac414e1a"
+    },
+    {
+      "path": "src/presentation/previews/calendar_panel.gd",
+      "sha256": "864e3d1d3908de16a27e34c221a4306b250a0b4ec000edd47d50019ef0f0dfd5"
+    },
+    {
+      "path": "src/presentation/previews/preview_backdrop.gd",
+      "sha256": "3fbce2c13884c4a5e7df91e43e0ab07e695c6775e946fd9af954735f9d0091eb"
+    },
+    {
+      "path": "src/shared/text_catalog.gd",
+      "sha256": "37a4e5af8cdb1cb850141fcb2ebbb23afdb46cb6749eaf6ca8ddcd78b92058eb"
+    },
+    {
+      "path": "src/world/actors/player_body.gd",
+      "sha256": "e1daeb4839779047215bced442a0efc2b042019c7ebbb7547dfcfe3ca4ae5673"
+    },
+    {
+      "path": "src/world/actors/sprite_rig.gd",
+      "sha256": "d3d1b18f01dccb7646d5565a633357bee255005208a728e98c91cad794b4ea70"
+    },
+    {
+      "path": "src/world/rooms/newsroom/interaction_target.gd",
+      "sha256": "5574d4795cad98204ff6b94cb621409d14017c79c23b2e5a856e39c943d802f4"
+    },
+    {
+      "path": "src/world/rooms/newsroom/newsroom.gd",
+      "sha256": "ea99a018a2f92fa60744a508781819c26272c5d20286686910d150959e0b792d"
+    },
+    {
+      "path": "src/world/rooms/newsroom/room_geometry.gd",
+      "sha256": "547a99d70e9e35076deaf809aa75aea321949f6af22cdfdcc3a78563ddec4a47"
+    }
+  ],
+  "runtime_hash_basis": "Git staged blob bytes; canonical repository line endings"
+}

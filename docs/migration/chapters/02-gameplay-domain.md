@@ -1,19 +1,19 @@
 # Chapter 02 — Gameplay domain và session
 
-Trạng thái: chưa bắt đầu. Phụ thuộc: Chapter 01.
+Trạng thái: domain subset verified; full-policy parity deferred. Phụ thuộc: Chapter 01.
 Mục tiêu: domain chạy headless có parity cho vòng ngày và commands đầu tiên.
 
 ## Work packages
 
-- [ ] C02.01: port create_session và schema gameplay vào `src/domain/gameplay/`;
+- [x] C02.01: port create_session và schema gameplay vào `src/domain/gameplay/`;
   definitions được inject, không đọc file trong domain.
-- [ ] C02.02: port calendar/weekend/slot progression; commands school/endClub/sleep
+- [x] C02.02: port calendar/weekend/slot progression; commands school/endClub/sleep
   và guards trước khi nối world. Giữ action-driven clock.
-- [ ] C02.03: port availability/effective stats và các primitive costs/guards;
+- [x] C02.03: port availability/effective stats và các primitive costs/guards;
   error/event codes + catalog key/parameters, không locale formatting trong rules.
-- [ ] C02.04: port validator v1/v2, numeric/reference constraints, invalid save fixtures.
-- [ ] C02.05: nối GameSession thật ở composition; một session chỉ một ruleset.
-- [ ] C02.06: test successful/rejected commands, input immutability, no duplicate
+- [x] C02.04: port validator v1/v2, numeric/reference constraints, invalid save fixtures.
+- [x] C02.05: nối GameSession thật ở composition; một session chỉ một ruleset.
+- [x] C02.06: test successful/rejected commands, input immutability, no duplicate
   nightly processing và exact intermediate parity theo oracle.
 
 ## Đầu ra
@@ -32,3 +32,5 @@ world hoặc UI. Full-policy parity còn chờ Chapters 07/08.
 
 Nghiệp vụ sâu tiếp tục Chapter 07. First playable chỉ dùng subset commands có
 implementation và evidence, không tạo energy/money số giả ở HUD live.
+
+Implementation/evidence: [review Chapter 01–05](../../reviews/chapters-01-05/README.md).

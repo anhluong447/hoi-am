@@ -22,9 +22,12 @@
 - Keep scene and script together. Use snake_case paths and one focused role per
   runtime file. Split runtime files before exceeding 200 nonblank lines.
 - Run `python tools/check_architecture.py` and `python tools/check_reference.py`.
+  Run `python tools/check_content.py` for current packs/art/oracle integrity.
   For runtime/content changes, also run `python tools/verify.py --godot <exe>`.
   Report checks actually run. Headless smoke does not establish visual parity,
   Forward+ GPU performance, or successful native export.
+  World/UI changes also require `tools/verify_native.py --godot <exe>` plus new
+  visual evidence when geometry/art changes; preserve historical capture versions.
 - Keep imported reference bytes and baseline evidence unchanged. Never regenerate
   baselines to make a port pass. Log intentional behavior changes separately.
 - Follow `docs/ART-DIRECTION.md`: fixed coastal UI and its attached flowers,

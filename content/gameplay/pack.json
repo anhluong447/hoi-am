@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "balance": {
+    "CALENDAR": {
+      "daysPerWeek": 7,
+      "schoolDays": 5,
+      "publicationDay": 4,
+      "minDays": 14,
+      "maxDays": 84
+    },
+    "DEFAULTS": {
+      "days": 14,
+      "clubEnergy": 4,
+      "outsideEnergy": 2,
+      "openCost": 1,
+      "assignCost": 1,
+      "researchDays": 2,
+      "editorialCapacity": 3,
+      "packaging": 0.04,
+      "romancePenalty": 0.25,
+      "fatiguePerWork": 10,
+      "recovery": 12,
+      "jobPay": 150,
+      "trainingCost": 80,
+      "toolCost": 220,
+      "giftCost": 60
+    },
+    "FATIGUE": {
+      "minimumEfficiency": 0.65,
+      "divisor": 250,
+      "cap": 100
+    },
+    "LIMITS": {
+      "packaging": 0.08,
+      "minRomancePenalty": 0.2,
+      "maxRomancePenalty": 0.3
+    },
+    "PERSONAL": {
+      "initialMoney": 300,
+      "jobFatigue": 10,
+      "trainingGrowth": 0.5,
+      "trainingFatigue": 4,
+      "restRecovery": 20,
+      "synergyEvents": 2,
+      "dateBond": 3,
+      "dateEvents": 2,
+      "boostCost": 50,
+      "boostEnergy": 1,
+      "upgradeGrowth": 0.5,
+      "betrayalBondLoss": 2
+    },
+    "PUBLICATION": {
+      "maxScore": 100000,
+      "khueMultiplier": 1.5,
+      "slots": 4,
+      "reputationScale": 10000,
+      "emptyLoss": 2,
+      "pressure": 5,
+      "grantFrequency": 2,
+      "baseGrants": 1,
+      "grantThreshold": 30000
+    },
+    "RESEARCH": {
+      "lifetime": 10,
+      "toolBonus": 1,
+      "synergyBonus": 0.5,
+      "statScale": 10,
+      "questDifficulty": 7,
+      "stepCost": 1,
+      "stepGrowth": 0.1,
+      "stepFatigue": 4,
+      "questAttraction": 8
+    },
+    "SUMMARY": {
+      "max": 100,
+      "teamArticlesPerWeek": 2,
+      "khueWeight": 0.4,
+      "teamWeight": 0.6,
+      "branchThreshold": 50,
+      "totalThreshold": 60
+    }
+  },
+  "stats": [
+    {
+      "id": "interview",
+      "name_key": "content.gameplay.definitions.phong_van"
+    },
+    {
+      "id": "investigation",
+      "name_key": "content.gameplay.definitions.dieu_tra"
+    },
+    {
+      "id": "photo",
+      "name_key": "content.gameplay.definitions.anh"
+    },
+    {
+      "id": "documents",
+      "name_key": "content.gameplay.definitions.tai_lieu"
+    },
+    {
+      "id": "empathy",
+      "name_key": "content.gameplay.definitions.hieu_chuyen"
+    },
+    {
+      "id": "courage",
+      "name_key": "content.gameplay.definitions.ban_linh"
+    }
+  ],
+  "roster": [
+    {
+      "id": "khue",
+      "name_key": "content.gameplay.definitions.diep_khue",
+      "female": false,
+      "joinDay": 1,
+      "stats": {
+        "interview": 7,
+        "investigation": 7,
+        "photo": 4,
+        "documents": 5,
+        "empathy": 5,
+        "courage": 6
+      }
+    },
+    {
+      "id": "van",
+      "name_key": "content.gameplay.definitions.luc_thanh_van",
+      "female": true,
+      "joinDay": 1,
+      "stats": {
+        "interview": 5,
+        "investigation": 4,
+        "photo": 4,
+        "documents": 7,
+        "empathy": 6,
+        "courage": 7
+      }
+    },
+    {
+      "id": "long",
+      "name_key": "content.gameplay.definitions.doan_bao_long",
+      "female": false,
+      "joinDay": 1,
+      "stats": {
+        "interview": 6,
+        "investigation": 5,
+        "photo": 4,
+        "documents": 4,
+        "empathy": 8,
+        "courage": 5
+      }
+    },
+    {
+      "id": "nhi",
+      "name_key": "content.gameplay.definitions.ha_tuyet_nhi",
+      "female": true,
+      "joinDay": 1,
+      "stats": {
+        "interview": 5,
+        "investigation": 6,
+        "photo": 4,
+        "documents": 8,
+        "empathy": 4,
+        "courage": 5
+      }
+    },
+    {
+      "id": "ngoc",
+      "name_key": "content.gameplay.definitions.ta_nhu_ngoc",
+      "female": true,
+      "joinDay": 8,
+      "stats": {
+        "interview": 5,
+        "investigation": 5,
+        "photo": 8,
+        "documents": 4,
+        "empathy": 6,
+        "courage": 5
+      }
+    },
+    {
+      "id": "an",
+      "name_key": "content.gameplay.definitions.ngo_thien_an",
+      "female": false,
+      "joinDay": 10,
+      "stats": {
+        "interview": 5,
+        "investigation": 7,
+        "photo": 4,
+        "documents": 8,
+        "empathy": 4,
+        "courage": 6
+      }
+    }
+  ],
+  "cases": [
+    {
+      "key": "community",
+      "title_key": "content.gameplay.definitions.san_bong_dong_cua",
+      "teaser_key": "content.gameplay.definitions.hoc_sinh_phai_tap_ngoai_cong_truong",
+      "story_key": "content.gameplay.definitions.nguoi_quan_ly_khong_muon_trao_doi_qua_van_ban_cac_ban_trong_doi_",
+      "need": "empathy",
+      "difficulty": 7,
+      "attraction": 7
+    },
+    {
+      "key": "documents",
+      "title_key": "content.gameplay.definitions.khoan_thu_cau_lac_bo",
+      "teaser_key": "content.gameplay.definitions.mot_khoan_thu_moi_xuat_hien_tren_bang_thong_bao",
+      "story_key": "content.gameplay.definitions.ba_bang_ke_co_so_lieu_khong_khop_nguon_tin_de_nghi_doi_chieu_tai",
+      "need": "documents",
+      "difficulty": 7,
+      "attraction": 8
+    },
+    {
+      "key": "photo",
+      "title_key": "content.gameplay.definitions.ben_cang_luc_binh_minh",
+      "teaser_key": "content.gameplay.definitions.nhung_nguoi_lam_viec_truoc_khi_thanh_pho_thuc_giac",
+      "story_key": "content.gameplay.definitions.nhan_vat_muon_ke_chuyen_qua_nhung_khoanh_khac_lao_dong_thuc_te_m",
+      "need": "photo",
+      "difficulty": 7,
+      "attraction": 6
+    }
+  ],
+  "quest_steps": [
+    {
+      "id": "interview",
+      "name_key": "content.gameplay.definitions.nghe_hai_phia"
+    },
+    {
+      "id": "photo",
+      "name_key": "content.gameplay.definitions.ghi_nhan_hien_truong"
+    },
+    {
+      "id": "documents",
+      "name_key": "content.gameplay.definitions.doi_chieu_chung_tu"
+    },
+    {
+      "id": "courage",
+      "name_key": "content.gameplay.definitions.lay_phan_hoi_chinh_thuc"
+    }
+  ],
+  "phases": [
+    {
+      "id": "morning",
+      "name_key": "content.gameplay.presentation.sang_di_hoc"
+    },
+    {
+      "id": "club",
+      "name_key": "content.gameplay.presentation.chieu_clb"
+    },
+    {
+      "id": "personal",
+      "name_key": "content.gameplay.presentation.chieu_ca_nhan"
+    },
+    {
+      "id": "evening",
+      "name_key": "content.gameplay.presentation.buoi_toi"
+    },
+    {
+      "id": "weekend1",
+      "name_key": "content.gameplay.presentation.cuoi_tuan_slot_1"
+    },
+    {
+      "id": "weekend2",
+      "name_key": "content.gameplay.presentation.cuoi_tuan_slot_2"
+    },
+    {
+      "id": "investigation",
+      "name_key": "content.gameplay.presentation.dieu_tra_ngoai_gio"
+    },
+    {
+      "id": "bed",
+      "name_key": "content.gameplay.presentation.ve_nha_di_ngu"
+    }
+  ],
+  "places": [
+    {
+      "id": "school",
+      "name_key": "content.gameplay.presentation.truong_tinh_tam",
+      "description_key": "content.gameplay.presentation.hoc_tim_de_tai",
+      "x": 12,
+      "y": 23
+    },
+    {
+      "id": "club",
+      "name_key": "content.gameplay.presentation.clb_hoi_am",
+      "description_key": "content.gameplay.presentation.ho_so_doi_xuat_ban",
+      "x": 25,
+      "y": 42
+    },
+    {
+      "id": "library",
+      "name_key": "content.gameplay.presentation.thu_vien",
+      "description_key": "content.gameplay.presentation.ren_luyen_nhi",
+      "x": 50,
+      "y": 22
+    },
+    {
+      "id": "cafe",
+      "name_key": "content.gameplay.presentation.ca_phe_doi_thoai",
+      "description_key": "content.gameplay.presentation.hangout_hen_ho",
+      "x": 52,
+      "y": 48
+    },
+    {
+      "id": "shop",
+      "name_key": "content.gameplay.presentation.tiem_cong_cu",
+      "description_key": "content.gameplay.presentation.trang_bi_do_uong",
+      "x": 35,
+      "y": 66
+    },
+    {
+      "id": "job",
+      "name_key": "content.gameplay.presentation.pho_an_uong",
+      "description_key": "content.gameplay.presentation.lam_them_kiem_tien",
+      "x": 58,
+      "y": 73
+    },
+    {
+      "id": "waterfront",
+      "name_key": "content.gameplay.presentation.bo_ke",
+      "description_key": "content.gameplay.presentation.nguon_tin_ngoc",
+      "x": 77,
+      "y": 43
+    },
+    {
+      "id": "home",
+      "name_key": "content.gameplay.presentation.nha_khue",
+      "description_key": "content.gameplay.presentation.nghi_ngoi_giuong_ngu",
+      "x": 10,
+      "y": 75
+    }
+  ],
+  "legacy_skills": {
+    "hiệp đồng": "synergy"
+  },
+  "quest_title_key": "src.gameplay.engine.ho_so_khue_value0_cang_tin_va_nguoi_trong_cuoc"
+}

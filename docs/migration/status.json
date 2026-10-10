@@ -1,15 +1,15 @@
 {
   "version": 1,
   "date": "2026-10-10",
-  "current_chapter": "00",
+  "current_chapter": "05",
   "foundation_status": "verified",
   "chapters": {
     "00": "foundation-verified",
-    "01": "not-started",
-    "02": "not-started",
-    "03": "not-started",
-    "04": "not-started",
-    "05": "not-started",
+    "01": "content-oracles-verified",
+    "02": "domain-subset-verified",
+    "03": "greybox-verified",
+    "04": "actor-rig-verified; art-pilot",
+    "05": "ui-behavior-verified; G2-open",
     "06": "not-started",
     "07": "not-started",
     "08": "not-started",
@@ -19,13 +19,15 @@
     "12": "not-started"
   },
   "acceptance": {
-    "gameplay_parity": "not-ported",
+    "gameplay_parity": "six traces / 71 commands verified; full policies deferred",
     "formula_parity": "not-ported",
-    "world_2_5d": "not-built",
-    "coastal_ui_static": "not-ported; source-G2-open",
+    "world_2_5d": "native greybox/input/depth reviewed; production art deferred",
+    "coastal_ui_static": "native behavior/scale verified; G2-open with explicit gaps",
     "coastal_ui_motion": "not-ported; source-G3-open",
-    "saves": "not-ported",
+    "saves": "pure v1/v2-to-v3 schema migration verified; persistence not-ported",
     "native_export": "not-verified",
     "device_performance": "not-measured"
-  }
+  },
+  "next_chapter": "06",
+  "review": "docs/reviews/chapters-01-05/README.md"
 }

@@ -1,0 +1,181 @@
+{
+  "id": "dialogue",
+  "text": [
+    {
+      "id": "date",
+      "key": "ui.replica.dialogue.date.1",
+      "x": 123,
+      "y": 74,
+      "size": 27,
+      "weight": 500,
+      "fill": "#172535"
+    },
+    {
+      "id": "phase",
+      "key": "ui.replica.dialogue.date.2",
+      "x": 134,
+      "y": 109,
+      "size": 21.2,
+      "weight": 500,
+      "fill": "#172535"
+    },
+    {
+      "id": "brand",
+      "key": "ui.replica.dialogue.brand.1",
+      "x": 1484,
+      "y": 73,
+      "size": 41,
+      "weight": 500,
+      "family": "Cormorant Garamond",
+      "fill": "#15182f",
+      "optionalLogo": true
+    },
+    {
+      "id": "speaker",
+      "key": "ui.replica.dialogue.speaker.1",
+      "x": 200,
+      "y": 730,
+      "size": 29.2,
+      "weight": 500,
+      "fill": "#126477",
+      "spacing": 0.25
+    },
+    {
+      "id": "line",
+      "key": "ui.replica.dialogue.line.1",
+      "x": 233,
+      "y": 800,
+      "size": 33.2,
+      "weight": 500,
+      "fill": "#16152f",
+      "width": 1020,
+      "height": 125
+    },
+    {
+      "id": "continue",
+      "key": "ui.replica.dialogue.continue.1",
+      "x": 1222,
+      "y": 897,
+      "size": 20.5,
+      "weight": 400,
+      "fill": "#126477"
+    }
+  ],
+  "choices": [
+    {
+      "id": "verify",
+      "textKey": "ui.replica.dialogue.choices.1",
+      "bounds": [
+        482,
+        462,
+        446,
+        63
+      ],
+      "baseline": [
+        559,
+        499
+      ],
+      "icon": "quill",
+      "font": {
+        "size": 21.2,
+        "weight": 500,
+        "fill": "#15182f"
+      }
+    },
+    {
+      "id": "draft",
+      "textKey": "ui.replica.dialogue.choices.2",
+      "bounds": [
+        483,
+        530,
+        413,
+        60
+      ],
+      "baseline": [
+        559,
+        566
+      ],
+      "icon": "chat",
+      "font": {
+        "size": 21.2,
+        "weight": 500,
+        "fill": "#15182f"
+      }
+    },
+    {
+      "id": "listen",
+      "textKey": "ui.replica.dialogue.choices.3",
+      "bounds": [
+        483,
+        596,
+        413,
+        59
+      ],
+      "baseline": [
+        559,
+        634
+      ],
+      "icon": "proof",
+      "font": {
+        "size": 21.2,
+        "weight": 500,
+        "fill": "#15182f"
+      }
+    }
+  ],
+  "environmentText": [
+    {
+      "id": "foreground-note-copy",
+      "key": "ui.replica.dialogue.foreground_note.1",
+      "layer": "foreground",
+      "x": 0,
+      "y": 0,
+      "transform": "matrix(1 .04 -.18 1 127.8 -50) translate(1505 758) rotate(8)",
+      "size": 17.5,
+      "family": "Dancing Script",
+      "fill": "#41646a",
+      "opacity": 0.75,
+      "lineHeight": 18.5
+    }
+  ],
+  "returnIcon": [
+    1298,
+    876,
+    24,
+    25
+  ],
+  "continueBounds": [
+    1208,
+    866,
+    130,
+    43
+  ],
+  "backdrops": {
+    "ui-light": {
+      "fill": "#dbd9cf"
+    },
+    "ui-dark": {
+      "fill": "#122e39"
+    },
+    "ui-detail": {
+      "fill": "#537d82",
+      "pattern": {
+        "size": 96,
+        "colors": [
+          "#96b1a1",
+          "#324f61"
+        ],
+        "opacity": 0.55
+      }
+    }
+  },
+  "note_copy": {
+    "x": 1495,
+    "y": 783,
+    "rotation": 10
+  },
+  "stage": [
+    1672,
+    941
+  ]
+}

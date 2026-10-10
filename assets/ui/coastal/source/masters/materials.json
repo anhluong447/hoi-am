@@ -1,0 +1,173 @@
+{
+  "version": 3,
+  "reference": "docs/ui-concepts/coastal-editorial-v1/01-dialogue.png",
+  "stage": [
+    1672,
+    941
+  ],
+  "origin": "top-left",
+  "seed": 23,
+  "palette": {
+    "ink": "#092d40",
+    "teal": "#087185",
+    "air": "#8dcbd0",
+    "paper": "#f6f0e3",
+    "sun": "#ffdc73"
+  },
+  "paper": {
+    "size": [
+      1672,
+      342
+    ],
+    "position": [
+      0,
+      599
+    ],
+    "path": "M-8 89 C-6.667 88.333 -13.0 91.167 0 85 C13.0 78.833 40.0 59.167 70 52 C100.0 44.833 136.667 40.667 180 42 C223.333 43.333 275.0 52.833 330 60 C385.0 67.167 443.333 75.833 510 85 C576.667 94.167 657.5 107.167 730 115 C802.5 122.833 873.333 129.333 945 132 C1016.667 134.667 1090.833 128.333 1160 131 C1229.167 133.667 1300.0 142.167 1360 148 C1420.0 153.833 1466.667 156.0 1520 166 C1573.333 176.0 1653.333 201.0 1680 208 L1680 350L-8 350Z",
+    "edge": "M-8 89 C-6.667 88.333 -13.0 91.167 0 85 C13.0 78.833 40.0 59.167 70 52 C100.0 44.833 136.667 40.667 180 42 C223.333 43.333 275.0 52.833 330 60 C385.0 67.167 443.333 75.833 510 85 C576.667 94.167 657.5 107.167 730 115 C802.5 122.833 873.333 129.333 945 132 C1016.667 134.667 1090.833 128.333 1160 131 C1229.167 133.667 1300.0 142.167 1360 148 C1420.0 153.833 1466.667 156.0 1520 166 C1573.333 176.0 1653.333 201.0 1680 208",
+    "grainOpacity": 0.095,
+    "precision": "R12 traced visible native contour; hidden right continuation authored behind foreground",
+    "measuredNativeAnchors": [
+      [
+        -8,
+        688
+      ],
+      [
+        0,
+        684
+      ],
+      [
+        70,
+        651
+      ],
+      [
+        180,
+        641
+      ],
+      [
+        330,
+        659
+      ],
+      [
+        510,
+        684
+      ],
+      [
+        730,
+        714
+      ],
+      [
+        945,
+        731
+      ],
+      [
+        1160,
+        730
+      ],
+      [
+        1360,
+        747
+      ],
+      [
+        1520,
+        765
+      ],
+      [
+        1680,
+        807
+      ]
+    ]
+  },
+  "wave": {
+    "size": [
+      1672,
+      342
+    ],
+    "position": [
+      0,
+      599
+    ],
+    "path": "M-8 20 C68 -9 117 -1 188 29 C350 65 498 88 675 112 C830 134 920 130 1066 131 C1260 124 1418 147 1680 206 L1680 350 L-8 350Z",
+    "foam": [
+      "M-8 22 C68 -7 117 1 188 31 C350 67 498 90 675 114 C830 136 920 132 1066 133 C1260 126 1418 149 1680 208",
+      "M-8 89 C53 57 108 43 180 42 C254 44 302 55 330 60 C418 71 474 77 510 85 C600 99 674 111 730 115 C818 125 879 132 945 132 C1015 132 1088 131 1160 131 C1230 136 1296 141 1360 148 C1423 155 1486 164 1520 166 C1584 174 1628 182 1680 190"
+    ],
+    "grainOpacity": 0.18
+  },
+  "choices": {
+    "gold": {
+      "size": [
+        446,
+        63
+      ],
+      "path": "M6 1 L437 0 Q445 1 445 8 L444 55 Q443 61 437 62 L7 61 Q1 60 1 55 L0 9 Q0 3 6 1 Z"
+    },
+    "plain": {
+      "size": [
+        413,
+        60
+      ],
+      "path": "M7 1 L405 0 Q412 0 412 7 L412 52 Q412 58 405 59 L6 59 Q0 58 0 52 L1 8 Q1 2 7 1 Z"
+    }
+  },
+  "date": {
+    "size": [
+      247,
+      115
+    ],
+    "path": "M2 2L52 1L107 2L164 0L218 2L243 0L246 9L243 25L245 43L242 66L245 80L240 101L231 108L218 111L180 110L128 114L72 112L8 114L1 105L3 76L0 47L3 25Z"
+  },
+  "textPolicy": "all lettering is a separate catalog-backed SVG text plane; no text nodes in art exports",
+  "overrides": {
+    "brand-mark": {
+      "size": [
+        160,
+        40
+      ],
+      "body": "<path d=\"M0 25L52 18M108 15L158 8\" stroke=\"#197988\" stroke-width=\"1.2\"/><g transform=\"translate(50 0) scale(.48)\" fill=\"#087185\"><path d=\"M25 27C16 25 15 15 23 11C32 6 39 11 38 18C37 28 31 34 21 38L20 33C26 31 29 28 30 25C29 27 27 28 25 27Z\"/><path d=\"M49 24C39 22 41 10 48 7C58 3 64 9 62 17C61 26 54 33 44 36L43 31C48 29 53 24 53 21C53 23 50 25 49 24Z\"/><path d=\"M5 50C23 33 37 39 53 43C70 48 79 43 91 34C82 51 69 55 49 49C32 43 20 44 5 50Z\"/><path d=\"M0 58C18 48 32 50 51 56C66 62 80 57 90 49C79 63 62 67 44 60C26 54 16 52 0 58Z\" opacity=\".8\"/></g>"
+    },
+    "shore-ink": {
+      "size": [
+        1672,
+        342
+      ],
+      "defs": "<clipPath id=\"band\"><path d=\"M330 60 C510 87 730 116 945 132 C1100 130 1248 134 1360 148 C1480 162 1565 176 1680 190 L1680 308 C1590 274 1470 217 1360 191 C1200 163 1075 165 945 151 C730 127 510 91 330 60Z\"/></clipPath><linearGradient id=\"pigment\" x2=\"1\" y2=\".2\"><stop stop-color=\"#207d8b\"/><stop offset=\"1\" stop-color=\"#288b92\"/></linearGradient><filter id=\"bleed\" x=\"0\" y=\"0\" width=\"1672\" height=\"342\" filterUnits=\"userSpaceOnUse\"><feTurbulence type=\"fractalNoise\" baseFrequency=\".16 .33\" numOctaves=\"2\" seed=\"39\"/><feColorMatrix type=\"matrix\" values=\"0 0 0 0 .97 0 0 0 0 .96 0 0 0 0 .9 5 0 0 0 -2.3\"/></filter>",
+      "body": "<g clip-path=\"url(#band)\"><path d=\"M330 60 C510 87 730 116 945 132 C1100 130 1248 134 1360 148 C1480 162 1565 176 1680 190 L1680 308 C1590 274 1470 217 1360 191 C1200 163 1075 165 945 151 C730 127 510 91 330 60Z\" fill=\"url(#pigment)\" opacity=\".61\"/><rect width=\"1672\" height=\"342\" filter=\"url(#bleed)\" opacity=\".9\"/></g>"
+    },
+    "note-edge": {
+      "size": [
+        128,
+        196
+      ],
+      "body": "<g clip-path=\"url(#cut)\"><path d=\"M72 0L128 10V196H0Z\" fill=\"url(#wash)\"/><rect width=\"128\" height=\"196\" filter=\"url(#grain)\" opacity=\"0.07\" style=\"mix-blend-mode:multiply\"/></g>",
+      "defs": "<linearGradient id=\"wash\" x2=\"0.8\" y2=\"1\"><stop stop-color=\"#e7d1b3\"/><stop offset=\"1\" stop-color=\"#e8d4bb\"/></linearGradient><clipPath id=\"cut\"><path d=\"M72 0L128 10V196H0Z\"/></clipPath><filter id=\"grain\" x=\"0\" y=\"0\" width=\"128\" height=\"196\" filterUnits=\"userSpaceOnUse\"><feTurbulence type=\"fractalNoise\" baseFrequency=\".48 .64\" numOctaves=\"3\" seed=\"45\"/><feColorMatrix type=\"saturate\" values=\"0\"/></filter>"
+    }
+  },
+  "foamOpacity": 0.27,
+  "comparison": {
+    "scope": "fixed-ui; reference-owned conservative masks",
+    "uncertainty": "Mask interiors and manually bounded decoration polygons; excludes uncertain outer fringes and optional logo. Original raster alpha cannot be recovered from these masks.",
+    "regions": [
+      {
+        "id": "date-card",
+        "path": "M42 35H270V108L220 116L43 128Z"
+      },
+      {
+        "id": "choices",
+        "path": "M487 466H923V518H487Z M487 534H891V585H487Z M487 600H891V650H487Z"
+      },
+      {
+        "id": "wave",
+        "path": "M0 620C80 615 140 628 188 640L250 650C140 638 63 649 0 671Z"
+      },
+      {
+        "id": "dialogue-paper",
+        "path": "M0 689L70 658L180 648L330 666L510 691L730 721L945 738L1160 737L1360 754L1460 770V941H0Z"
+      },
+      {
+        "id": "notebook",
+        "path": "M1510 760L1645 783L1620 890H1460Z"
+      }
+    ]
+  }
+}

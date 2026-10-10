@@ -1,0 +1,23 @@
+{
+  "stage": [1672, 941],
+  "date_paper": [35, 30, 290, 130], "sun_seal": [48, 40, 87, 127],
+  "panels": [
+    {"bounds": [1000, 35, 620, 84], "color": "#f3eddedb", "border": "#b6aa8a"},
+    {"bounds": [36, 783, 490, 114], "color": "#f3eddedb", "border": "#b6aa8a"},
+    {"bounds": [560, 868, 560, 43], "color": "#172535db", "border": "#527985"},
+    {"bounds": [1420, 866, 200, 46], "color": "#f3eddedb", "border": "#b6aa8a"}
+  ],
+  "text": [
+    {"id": "date", "x": 133, "y": 80, "size": 26, "fill": "#172535"},
+    {"id": "phase", "x": 133, "y": 119, "size": 22, "fill": "#126477"},
+    {"id": "energy", "x": 1025, "y": 69, "size": 25, "fill": "#172535"},
+    {"id": "money", "x": 1275, "y": 69, "size": 25, "fill": "#172535"},
+    {"id": "location", "x": 1025, "y": 103, "size": 21, "fill": "#126477"},
+    {"id": "objective_title", "x": 57, "y": 817, "size": 24, "fill": "#126477"},
+    {"id": "objective", "x": 57, "y": 853, "size": 22, "width": 446, "height": 56, "fill": "#172535"},
+    {"id": "controls", "x": 580, "y": 897, "size": 22, "fill": "#f6eed9"},
+    {"id": "menu", "x": 1445, "y": 896, "size": 22, "fill": "#172535"}
+  ],
+  "menu_bounds": [1420, 866, 200, 46],
+  "prompt": {"x": 0, "y": 0, "size": 23, "fill": "#fff6db"}
+}

@@ -1,0 +1,553 @@
+{
+  "id": "dialogue",
+  "version": 3,
+  "selectedChoice": "verify",
+  "layerOrder": [
+    "scene",
+    "portraits",
+    "wave",
+    "paper",
+    "print",
+    "text",
+    "foreground"
+  ],
+  "paperBounds": [
+    0,
+    599,
+    1672,
+    342
+  ],
+  "art": [
+    {
+      "id": "paper-harbor",
+      "asset": "dialogue.harbor-print",
+      "layer": "print",
+      "bounds": [
+        0,
+        735,
+        1204,
+        206
+      ],
+      "opacity": 0.68,
+      "clip": "paper",
+      "transform": "translate(-28 0)"
+    },
+    {
+      "id": "shore-ink",
+      "asset": "material.shore-ink",
+      "layer": "print",
+      "bounds": [
+        0,
+        599,
+        1672,
+        342
+      ]
+    },
+    {
+      "id": "speaker-mark",
+      "asset": "material.insignia",
+      "layer": "print",
+      "bounds": [
+        97,
+        692,
+        68,
+        48
+      ]
+    },
+    {
+      "id": "brand-mark",
+      "asset": "material.brand-mark",
+      "layer": "print",
+      "bounds": [
+        1486,
+        82,
+        143,
+        36
+      ],
+      "optionalLogo": true
+    },
+    {
+      "id": "date-paper",
+      "asset": "material.date-paper",
+      "layer": "print",
+      "bounds": [
+        35,
+        30,
+        247,
+        115
+      ],
+      "shadow": "card"
+    },
+    {
+      "id": "date-ornament",
+      "asset": "material.sun-seal",
+      "layer": "print",
+      "bounds": [
+        48,
+        40,
+        87,
+        127
+      ]
+    },
+    {
+      "id": "foreground-left",
+      "asset": "dialogue.foreground-left",
+      "layer": "foreground",
+      "bounds": [
+        0,
+        703,
+        238,
+        238
+      ],
+      "shadow": "flowers"
+    },
+    {
+      "id": "note-bleed-restoration",
+      "asset": "material.note-edge",
+      "layer": "foreground",
+      "bounds": [
+        1544,
+        745,
+        128,
+        196
+      ],
+      "component": "notebook"
+    },
+    {
+      "id": "foreground-right",
+      "asset": "dialogue.foreground-right",
+      "layer": "foreground",
+      "bounds": [
+        1250,
+        710,
+        422,
+        231
+      ],
+      "sourceRect": [
+        594,
+        328,
+        1078,
+        613
+      ],
+      "fit": "slice",
+      "transform": "matrix(1 .04 -.18 1 127.8 -50)",
+      "component": "notebook"
+    }
+  ],
+  "clips": {
+    "paper": "translate-paper-contour"
+  },
+  "choices": [
+    {
+      "id": "verify",
+      "textKey": "ui.replica.dialogue.choices.1",
+      "bounds": [
+        482,
+        462,
+        446,
+        63
+      ],
+      "baseline": [
+        559,
+        499
+      ],
+      "icon": "quill",
+      "font": {
+        "size": 21.2,
+        "weight": 500,
+        "fill": "#15182f"
+      }
+    },
+    {
+      "id": "draft",
+      "textKey": "ui.replica.dialogue.choices.2",
+      "bounds": [
+        483,
+        530,
+        413,
+        60
+      ],
+      "baseline": [
+        559,
+        566
+      ],
+      "icon": "chat",
+      "font": {
+        "size": 21.2,
+        "weight": 500,
+        "fill": "#15182f"
+      }
+    },
+    {
+      "id": "listen",
+      "textKey": "ui.replica.dialogue.choices.3",
+      "bounds": [
+        483,
+        596,
+        413,
+        59
+      ],
+      "baseline": [
+        559,
+        634
+      ],
+      "icon": "proof",
+      "font": {
+        "size": 21.2,
+        "weight": 500,
+        "fill": "#15182f"
+      }
+    }
+  ],
+  "text": [
+    {
+      "id": "date",
+      "key": "ui.replica.dialogue.date.1",
+      "x": 123,
+      "y": 74,
+      "size": 27,
+      "weight": 500,
+      "fill": "#172535"
+    },
+    {
+      "id": "phase",
+      "key": "ui.replica.dialogue.date.2",
+      "x": 134,
+      "y": 109,
+      "size": 21.2,
+      "weight": 500,
+      "fill": "#172535"
+    },
+    {
+      "id": "brand",
+      "key": "ui.replica.dialogue.brand.1",
+      "x": 1484,
+      "y": 73,
+      "size": 41,
+      "weight": 500,
+      "family": "Cormorant Garamond",
+      "fill": "#15182f",
+      "optionalLogo": true
+    },
+    {
+      "id": "speaker",
+      "key": "ui.replica.dialogue.speaker.1",
+      "x": 200,
+      "y": 730,
+      "size": 29.2,
+      "weight": 500,
+      "fill": "#126477",
+      "spacing": 0.25
+    },
+    {
+      "id": "line",
+      "key": "ui.replica.dialogue.line.1",
+      "x": 233,
+      "y": 800,
+      "size": 33.2,
+      "weight": 500,
+      "fill": "#16152f"
+    },
+    {
+      "id": "continue",
+      "key": "ui.replica.dialogue.continue.1",
+      "x": 1222,
+      "y": 897,
+      "size": 20.5,
+      "weight": 400,
+      "fill": "#126477"
+    }
+  ],
+  "environmentText": [
+    {
+      "id": "foreground-note-copy",
+      "key": "ui.replica.dialogue.foreground_note.1",
+      "layer": "foreground",
+      "x": 0,
+      "y": 0,
+      "transform": "matrix(1 .04 -.18 1 127.8 -50) translate(1505 758) rotate(8)",
+      "size": 17.5,
+      "family": "Dancing Script",
+      "fill": "#41646a",
+      "opacity": 0.75,
+      "lineHeight": 18.5
+    }
+  ],
+  "rules": [
+    {
+      "x1": 201,
+      "y1": 748,
+      "x2": 545,
+      "y2": 748
+    },
+    {
+      "x1": 814,
+      "y1": 890,
+      "x2": 1174,
+      "y2": 890
+    },
+    {
+      "x1": 1196,
+      "y1": 878,
+      "x2": 1196,
+      "y2": 902
+    },
+    {
+      "x1": 110,
+      "y1": 46,
+      "x2": 112,
+      "y2": 115,
+      "stroke": "#9e9b89",
+      "width": 0.7,
+      "layer": "print"
+    },
+    {
+      "x1": 125,
+      "y1": 83,
+      "x2": 276,
+      "y2": 76,
+      "stroke": "#6b6b5e",
+      "width": 0.75,
+      "layer": "print"
+    }
+  ],
+  "speakerArrow": {
+    "x1": 467,
+    "y1": 726,
+    "x2": 529,
+    "y2": 726
+  },
+  "returnIcon": [
+    1298,
+    876,
+    24,
+    25
+  ],
+  "continueBounds": [
+    1208,
+    866,
+    130,
+    43
+  ],
+  "contact": [
+    {
+      "asset": "material.dialogue-paper",
+      "key": "ui.replica.preview.label.paper",
+      "bounds": [
+        40,
+        105,
+        764,
+        198
+      ]
+    },
+    {
+      "asset": "material.dialogue-wave",
+      "key": "ui.replica.preview.label.wave",
+      "bounds": [
+        860,
+        105,
+        764,
+        198
+      ]
+    },
+    {
+      "asset": "material.choice-gold",
+      "key": "ui.replica.preview.label.choice",
+      "bounds": [
+        40,
+        383,
+        446,
+        63
+      ]
+    },
+    {
+      "asset": "material.choice-plain",
+      "key": "ui.replica.preview.label.choice",
+      "bounds": [
+        40,
+        496,
+        413,
+        60
+      ]
+    },
+    {
+      "asset": "material.insignia",
+      "key": "ui.replica.preview.label.insignia",
+      "bounds": [
+        542,
+        383,
+        120,
+        80
+      ]
+    },
+    {
+      "asset": "dialogue.harbor-print",
+      "key": "ui.replica.preview.label.harbor",
+      "bounds": [
+        40,
+        606,
+        770,
+        195
+      ],
+      "visibleRegistration": true
+    }
+  ],
+  "foreground": [],
+  "uiOnly": true,
+  "views": [
+    {
+      "id": "stage",
+      "textKey": "ui.replica.stage3.view.scene"
+    },
+    {
+      "id": "ui-light",
+      "textKey": "ui.replica.stage3.view.light"
+    },
+    {
+      "id": "ui-dark",
+      "textKey": "ui.replica.stage3.view.dark"
+    },
+    {
+      "id": "ui-detail",
+      "textKey": "ui.replica.stage3.view.detail"
+    },
+    {
+      "id": "material-light",
+      "textKey": "ui.replica.preview.materialLight"
+    },
+    {
+      "id": "material-dark",
+      "textKey": "ui.replica.preview.materialDark"
+    },
+    {
+      "id": "typography",
+      "textKey": "ui.replica.preview.typography"
+    }
+  ],
+  "uiComponents": [
+    "date-card",
+    "choices",
+    "dialogue-paper",
+    "harbor-print",
+    "speaker",
+    "continue",
+    "flowers",
+    "notebook",
+    "optional-logo"
+  ],
+  "lighting": {
+    "shadows": {
+      "paper": {
+        "dx": 0,
+        "dy": -2,
+        "blur": 3,
+        "color": "#183f48",
+        "opacity": 0.16
+      },
+      "choice": {
+        "dx": 1,
+        "dy": 4,
+        "blur": 3,
+        "color": "#0c3540",
+        "opacity": 0.22
+      },
+      "card": {
+        "dx": 1,
+        "dy": 3,
+        "blur": 2.5,
+        "color": "#132e36",
+        "opacity": 0.2
+      },
+      "flowers": {
+        "dx": 2,
+        "dy": 4,
+        "blur": 2,
+        "color": "#38635b",
+        "opacity": 0.18
+      },
+      "notebook": {
+        "dx": -2,
+        "dy": 4,
+        "blur": 3,
+        "color": "#233e38",
+        "opacity": 0.2
+      }
+    },
+    "paperWash": {
+      "bounds": [
+        0,
+        599,
+        1672,
+        342
+      ],
+      "opacity": 0.16,
+      "stops": [
+        [
+          0,
+          "#fffbea",
+          0.8
+        ],
+        [
+          0.38,
+          "#fffbea",
+          0
+        ],
+        [
+          1,
+          "#ddb980",
+          0.18
+        ]
+      ]
+    },
+    "paperEdge": {
+      "stroke": "#fffbee",
+      "width": 1.5,
+      "opacity": 0.65
+    },
+    "noteWash": {
+      "path": "M1494 725L1672 754V941H1394Z",
+      "opacity": 0.08,
+      "stops": [
+        [
+          0,
+          "#fff7d9",
+          0.8
+        ],
+        [
+          1,
+          "#ccaa77",
+          0.1
+        ]
+      ]
+    }
+  },
+  "backdrops": {
+    "ui-light": {
+      "fill": "#dbd9cf"
+    },
+    "ui-dark": {
+      "fill": "#122e39"
+    },
+    "ui-detail": {
+      "fill": "#537d82",
+      "pattern": {
+        "size": 96,
+        "colors": [
+          "#96b1a1",
+          "#324f61"
+        ],
+        "opacity": 0.55
+      }
+    }
+  },
+  "context": {
+    "asset": "context.newsroom",
+    "bounds": [
+      0,
+      0,
+      1672,
+      941
+    ],
+    "scope": "replaceable-preview-only"
+  }
+}

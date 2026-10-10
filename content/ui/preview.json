@@ -1,0 +1,97 @@
+{
+  "fonts": {
+    "Source Serif 4": "res://assets/fonts/source_serif_4/source-serif-4.ttf",
+    "Cormorant Garamond": "res://assets/fonts/cormorantgaramond/cormorant-garamond.ttf",
+    "Dancing Script": "res://assets/fonts/dancingscript/dancing-script.ttf"
+  },
+  "weekday_keys": [
+    "src.gameplay.engine.thu_hai",
+    "src.gameplay.engine.thu_ba",
+    "src.gameplay.engine.thu_tu",
+    "src.gameplay.engine.thu_nam",
+    "src.gameplay.engine.thu_sau",
+    "src.gameplay.engine.thu_bay",
+    "src.gameplay.engine.chu_nhat"
+  ],
+  "dialogue": {
+    "date_key": "ui.replica.dialogue.date.1",
+    "phase_key": "ui.replica.dialogue.date.2",
+    "brand_key": "ui.replica.dialogue.brand.1",
+    "speaker_key": "ui.replica.dialogue.speaker.1",
+    "line_key": "ui.replica.dialogue.line.1",
+    "continue_key": "ui.replica.dialogue.continue.1",
+    "foreground-note-copy_key": "ui.replica.dialogue.foreground_note.1",
+    "selected_choice": "verify",
+    "choices": [
+      {
+        "id": "verify",
+        "text_key": "ui.replica.dialogue.choices.1"
+      },
+      {
+        "id": "draft",
+        "text_key": "ui.replica.dialogue.choices.2"
+      },
+      {
+        "id": "listen",
+        "text_key": "ui.replica.dialogue.choices.3"
+      }
+    ]
+  },
+  "hud": {
+    "date_key": "ui.replica.dialogue.date.1",
+    "phase_key": "migration.world.preview",
+    "energy_key": "migration.world.energy",
+    "money_key": "migration.world.money",
+    "location_key": "content.gameplay.presentation.clb_hoi_am",
+    "objective_title_key": "migration.hud.objective_title",
+    "objective_key": "migration.world.objective",
+    "controls_key": "migration.world.controls",
+    "menu_key": "migration.ui.back"
+  },
+  "calendar_commands": [
+    {
+      "id": "school",
+      "text_key": "migration.calendar.school",
+      "command": {
+        "type": "school"
+      }
+    },
+    {
+      "id": "end_club",
+      "text_key": "migration.calendar.end_club",
+      "command": {
+        "type": "endClub"
+      }
+    },
+    {
+      "id": "rest",
+      "text_key": "migration.calendar.rest",
+      "command": {
+        "type": "activity",
+        "kind": "rest"
+      }
+    },
+    {
+      "id": "investigate",
+      "text_key": "migration.calendar.investigate",
+      "command": {
+        "type": "activity",
+        "kind": "investigate"
+      }
+    },
+    {
+      "id": "finish",
+      "text_key": "migration.calendar.finish",
+      "command": {
+        "type": "finishInvestigation"
+      }
+    },
+    {
+      "id": "sleep",
+      "text_key": "migration.calendar.sleep",
+      "command": {
+        "type": "sleep"
+      }
+    }
+  ]
+}

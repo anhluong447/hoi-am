@@ -2,6 +2,9 @@ extends SceneTree
 
 const TEXT_TESTS = preload("res://tests/test_text_catalog.gd")
 const SESSION_TESTS = preload("res://tests/test_game_session.gd")
+const GAMEPLAY_TESTS = preload("res://tests/test_gameplay.gd")
+const WORLD_TESTS = preload("res://tests/test_world.gd")
+const UI_TESTS = preload("res://tests/test_ui.gd")
 const SUITE = preload("res://tests/test_suite.gd")
 const LOADER = preload("res://src/infrastructure/content/json_content_loader.gd")
 const CATALOG = preload("res://src/shared/text_catalog.gd")
@@ -15,8 +18,8 @@ func _initialize() -> void:
 func _run() -> void:
 	var failures: Array[String] = []
 	var count := 0
-	for suite: RefCounted in [TEXT_TESTS.new(), SESSION_TESTS.new()]:
-		suite.run()
+	for suite: RefCounted in [TEXT_TESTS.new(), SESSION_TESTS.new(), GAMEPLAY_TESTS.new(), WORLD_TESTS.new(), UI_TESTS.new()]:
+		await suite.run()
 		count += suite.checks
 		failures.append_array(suite.failures)
 	var smoke := SUITE.new()
@@ -30,6 +33,7 @@ func _run() -> void:
 		await process_frame
 		var view := main.get_node_or_null("Interface/BootstrapView")
 		smoke.expect(view != null, "Bootstrap must mount its view")
+		smoke.expect(main.session.is_ready() and main.session.execute({"type": "school"}).ok, "Composition retains real session callback owners")
 		if view != null:
 			var title: Label = view.get_node("Center/Content/Title")
 			smoke.expect(title.text == catalog.format_text("ui.coastal.title")["text"], "Title from catalog")

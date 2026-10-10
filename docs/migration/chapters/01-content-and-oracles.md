@@ -1,20 +1,20 @@
 # Chapter 01 — Content và oracle inventory
 
-Trạng thái: chưa bắt đầu. Phụ thuộc: Chapter 00.
+Trạng thái: content/oracle verified. Phụ thuộc: Chapter 00.
 Mục tiêu: khóa dữ liệu/hành vi nguồn trước khi đổi ngôn ngữ và renderer.
 
 ## Work packages
 
-- [ ] C01.01: lập bảng source module → target responsibility; đánh dấu port/rebuild/reference/defer.
-- [ ] C01.02: xuất roster, cases, quests, calendar/balance, phase/location và migration IDs
+- [x] C01.01: lập bảng source module → target responsibility; đánh dấu port/rebuild/reference/defer.
+- [x] C01.02: xuất roster, cases, quests, calendar/balance, phase/location và migration IDs
   thành JSON; giữ stable IDs và text keys, không đưa resolved locale labels vào rules.
-- [ ] C01.03: xuất dialogue graphs và schedules; xác định room/interaction IDs cho blockout.
-- [ ] C01.04: validate duplicate IDs, stat/actor/case references, graph edges và tuning ranges.
-- [ ] C01.05: tạo oracle action traces bằng công cụ chỉ đọc source, output vào target;
+- [x] C01.03: xuất dialogue graphs và schedules; xác định room/interaction IDs cho blockout.
+- [x] C01.04: validate duplicate IDs, stat/actor/case references, graph edges và tuning ranges.
+- [x] C01.05: tạo oracle action traces bằng công cụ chỉ đọc source, output vào target;
   lưu initial state, commands, intermediate state, rejection, events và source hashes.
-- [ ] C01.06: giữ baseline hiện có, lập comparator numeric tolerance `1e-8` và semantic
+- [x] C01.06: giữ baseline hiện có, lập comparator numeric tolerance `1e-8` và semantic
   ordering contract. Integer/bool/string/IDs phải đúng chính xác.
-- [ ] C01.07: phân biệt proposal/story canon, mock gameplay và intentional changes trong ledger.
+- [x] C01.07: phân biệt proposal/story canon, mock gameplay và intentional changes trong ledger.
 
 ## Đầu ra
 
@@ -33,3 +33,5 @@ không overwrite baseline. Source tree giữ nguyên, target load pack không c�
 Labels hiện eagerly resolved và embedded trong source saves: giữ compatibility
 fields trước, chuyển sang ID-only có migration riêng. Không tiện tay rename IDs
 để làm JSON đẹp. Room art và camera chưa là điều kiện của chapter này.
+
+Implementation/evidence: [review Chapter 01–05](../../reviews/chapters-01-05/README.md).

@@ -1,7 +1,8 @@
 # World
 
-Scene/script pairs for rooms, actors, movement, camera, and local interaction will
-live here. `Main/WorldRoot` is currently an empty Node3D mounting point.
+Scene/script pairs now live in `rooms/newsroom/` and `actors/`. The independent
+world entry is `src/bootstrap/previews/world_preview.tscn`; it injects room/actor
+content and textures, then mounts the room under its own World node.
 
 Rooms and actors must run without GameSession or persistence. Emit interaction
 intent (technical target/action IDs); a presentation controller bridges it to

@@ -2,5 +2,13 @@
   "content_version": 1,
   "default_locale": "vi-VN",
   "catalog_path": "res://content/locales/vi.json",
-  "bootstrap_path": "res://content/ui/bootstrap.json"
+  "bootstrap_path": "res://content/ui/bootstrap.json",
+  "gameplay_path": "res://content/gameplay/pack.json",
+  "dialogue_path": "res://content/dialogue/graphs.json",
+  "room_path": "res://content/world/newsroom.json",
+  "actors_path": "res://content/world/actors.json",
+  "dialogue_ui_path": "res://content/ui/dialogue.json",
+  "hud_ui_path": "res://content/ui/hud.json",
+  "ui_art_path": "res://content/ui/art_manifest.json",
+  "preview_path": "res://content/ui/preview.json"
 }

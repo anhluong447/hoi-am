@@ -1,0 +1,73 @@
+{
+  "tileSize": 16,
+  "tiles": {
+    "file": "tiles.png",
+    "columns": 8,
+    "count": 16
+  },
+  "characters": {
+    "file": "characters-anime.png",
+    "frameWidth": 24,
+    "frameHeight": 36,
+    "layout": "character-rows",
+    "frames": 3,
+    "overrides": {
+      "khue": {
+        "file": "pilot-v6/khue.png", "frameWidth": 32, "frameHeight": 48,
+        "columns": 8, "rows": 8, "pivot": { "x": 16, "y": 46 },
+        "directions": ["down", "left", "right", "up"],
+        "clips": {
+          "walk": { "rows": [0,1,2,3], "columns": [0,1,2,3,4,5,6,7], "stridePixels": 48 },
+          "idle": { "rows": [4,5,6,7], "columns": [0,1,2,3], "durations": [1200,250,100,250] },
+          "talk": { "rows": [4,5,6,7], "columns": [4,5,6,7], "durations": [250,180,300,180] }
+        }
+      },
+      "van": {
+        "file": "pilot-v2/van.png", "frameWidth": 32, "frameHeight": 48,
+        "columns": 8, "rows": 8, "pivot": { "x": 16, "y": 46 },
+        "directions": ["down", "left", "right", "up"],
+        "clips": {
+          "walk": { "rows": [0,1,2,3], "columns": [0,1,2,3,4,5,6,7], "stridePixels": 48 },
+          "idle": { "rows": [4,5,6,7], "columns": [0,1,2,3], "durations": [1350,250,100,300] },
+          "talk": { "rows": [4,5,6,7], "columns": [4,5,6,7], "durations": [300,180,320,180] }
+        }
+      }
+    },
+    "directions": [
+      "down",
+      "left",
+      "right",
+      "up"
+    ],
+    "ids": [
+      "khue",
+      "van",
+      "long",
+      "nhi",
+      "ngoc",
+      "an",
+      "source"
+    ]
+  },
+  "objects": {
+    "file": "objects.png",
+    "frameWidth": 32,
+    "frameHeight": 48,
+    "columns": 4,
+    "ids": [
+      "tree",
+      "desk",
+      "bookcase",
+      "bed",
+      "planter",
+      "board",
+      "printer",
+      "bench",
+      "shop",
+      "lamp",
+      "camera",
+      "clock"
+    ]
+  },
+  "license": "Tiles and props are project-authored prototypes. Anime character artwork generated with the built-in imagegen tool; see CHARACTER-ART.md."
+}

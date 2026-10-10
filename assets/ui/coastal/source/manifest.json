@@ -1,0 +1,729 @@
+{
+  "version": 3,
+  "pack": "coastal-dialogue-ui-stage3",
+  "stage": [
+    1672,
+    941
+  ],
+  "scopeRevision": 2,
+  "assets": [
+    {
+      "id": "material.dialogue-paper",
+      "file": "assets/ui/coastal-replica/v3/exports/dialogue-paper.svg",
+      "master": "assets/ui/coastal-replica/v3/masters/dialogue-paper.svg",
+      "source": "assets/ui/coastal-replica/v3/masters/materials.json",
+      "size": [
+        1672,
+        342
+      ],
+      "alpha": true,
+      "visibleBounds": [
+        0,
+        0,
+        1672,
+        342
+      ],
+      "sha256": "BB4F4FB481F97C8870F0273050FE6BA611476285712A11176EA9D7BD8B3AC83A",
+      "version": 3,
+      "scope": "ui",
+      "pivot": [
+        0,
+        0
+      ],
+      "textPolicy": "live locale copy; no baked lettering",
+      "instances": []
+    },
+    {
+      "id": "material.dialogue-wave",
+      "file": "assets/ui/coastal-replica/v3/exports/dialogue-wave.svg",
+      "master": "assets/ui/coastal-replica/v3/masters/dialogue-wave.svg",
+      "source": "assets/ui/coastal-replica/v3/masters/materials.json",
+      "size": [
+        1672,
+        342
+      ],
+      "alpha": true,
+      "visibleBounds": [
+        0,
+        0,
+        1672,
+        342
+      ],
+      "sha256": "336DF9C19E10515994C27B371794CD3A448305654C64CDC53ED1B3723B2DE455",
+      "version": 3,
+      "scope": "ui",
+      "pivot": [
+        0,
+        0
+      ],
+      "textPolicy": "live locale copy; no baked lettering",
+      "instances": []
+    },
+    {
+      "id": "material.choice-gold",
+      "file": "assets/ui/coastal-replica/v3/exports/choice-gold.svg",
+      "master": "assets/ui/coastal-replica/v3/masters/choice-gold.svg",
+      "source": "assets/ui/coastal-replica/v3/masters/materials.json",
+      "size": [
+        446,
+        63
+      ],
+      "alpha": true,
+      "visibleBounds": [
+        0,
+        0,
+        446,
+        63
+      ],
+      "sha256": "32B2ECE284FF27AF1E8BD4AD753D704F9BFA880F5B0769B526B4F74F533BD0F5",
+      "version": 3,
+      "scope": "ui",
+      "pivot": [
+        0,
+        0
+      ],
+      "textPolicy": "live locale copy; no baked lettering",
+      "instances": []
+    },
+    {
+      "id": "material.choice-plain",
+      "file": "assets/ui/coastal-replica/v3/exports/choice-plain.svg",
+      "master": "assets/ui/coastal-replica/v3/masters/choice-plain.svg",
+      "source": "assets/ui/coastal-replica/v3/masters/materials.json",
+      "size": [
+        413,
+        60
+      ],
+      "alpha": true,
+      "visibleBounds": [
+        0,
+        0,
+        413,
+        60
+      ],
+      "sha256": "2DC67D67616C4874846C28CAD87840B323E0AF75BFA59F40E6D5D74339237E96",
+      "version": 3,
+      "scope": "ui",
+      "pivot": [
+        0,
+        0
+      ],
+      "textPolicy": "live locale copy; no baked lettering",
+      "instances": []
+    },
+    {
+      "id": "material.date-paper",
+      "file": "assets/ui/coastal-replica/v3/exports/date-paper.svg",
+      "master": "assets/ui/coastal-replica/v3/masters/date-paper.svg",
+      "source": "assets/ui/coastal-replica/v3/masters/materials.json",
+      "size": [
+        247,
+        115
+      ],
+      "alpha": true,
+      "visibleBounds": [
+        0,
+        0,
+        247,
+        115
+      ],
+      "sha256": "79E00A52401A0A0B29F890CC97B9D625B3CFECCCE23F29E3B64F76CD30F3A622",
+      "version": 3,
+      "scope": "ui",
+      "pivot": [
+        0,
+        0
+      ],
+      "textPolicy": "live locale copy; no baked lettering",
+      "instances": [
+        {
+          "id": "date-paper",
+          "asset": "material.date-paper",
+          "layer": "print",
+          "bounds": [
+            35,
+            30,
+            247,
+            115
+          ],
+          "shadow": "card"
+        }
+      ]
+    },
+    {
+      "id": "material.insignia",
+      "file": "assets/ui/coastal-replica/v3/exports/insignia.svg",
+      "master": "assets/ui/coastal-replica/v3/masters/insignia.svg",
+      "source": "assets/ui/coastal-replica/v3/masters/materials.json",
+      "size": [
+        96,
+        64
+      ],
+      "alpha": true,
+      "visibleBounds": [
+        0,
+        0,
+        96,
+        64
+      ],
+      "sha256": "0B8C6EB1363AB8D602193331692AEA0672E454B3849B78CCE6AA29683F42ECC9",
+      "version": 3,
+      "scope": "ui",
+      "pivot": [
+        0,
+        0
+      ],
+      "textPolicy": "live locale copy; no baked lettering",
+      "instances": [
+        {
+          "id": "speaker-mark",
+          "asset": "material.insignia",
+          "layer": "print",
+          "bounds": [
+            97,
+            692,
+            68,
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "id": "material.icons",
+      "file": "assets/ui/coastal-replica/v3/exports/icons.svg",
+      "master": "assets/ui/coastal-replica/v3/masters/icons.svg",
+      "source": "assets/ui/coastal-replica/v3/masters/materials.json",
+      "size": [
+        384,
+        64
+      ],
+      "alpha": true,
+      "visibleBounds": [
+        0,
+        0,
+        384,
+        64
+      ],
+      "sha256": "437154C8749771336ECC76E903BC6516FFD0B03486B681B73C5931AB7A6319A8",
+      "version": 3,
+      "scope": "ui",
+      "pivot": [
+        0,
+        0
+      ],
+      "textPolicy": "live locale copy; no baked lettering",
+      "instances": []
+    },
+    {
+      "id": "material.sun-seal",
+      "file": "assets/ui/coastal-replica/v3/exports/sun-seal.svg",
+      "master": "assets/ui/coastal-replica/v3/masters/sun-seal.svg",
+      "source": "assets/ui/coastal-replica/v3/masters/materials.json",
+      "size": [
+        87,
+        127
+      ],
+      "alpha": true,
+      "visibleBounds": [
+        0,
+        0,
+        87,
+        127
+      ],
+      "sha256": "188DC429B5D78620BAC74D789D6F1D61344CEF8A134612DF43BEF1B7EBC065DE",
+      "version": 3,
+      "scope": "ui",
+      "pivot": [
+        0,
+        0
+      ],
+      "textPolicy": "live locale copy; no baked lettering",
+      "instances": [
+        {
+          "id": "date-ornament",
+          "asset": "material.sun-seal",
+          "layer": "print",
+          "bounds": [
+            48,
+            40,
+            87,
+            127
+          ]
+        }
+      ]
+    },
+    {
+      "id": "material.brand-mark",
+      "file": "assets/ui/coastal-replica/v3/exports/brand-mark.svg",
+      "master": "assets/ui/coastal-replica/v3/masters/brand-mark.svg",
+      "source": "assets/ui/coastal-replica/v3/masters/materials.json",
+      "size": [
+        160,
+        40
+      ],
+      "alpha": true,
+      "visibleBounds": [
+        0,
+        0,
+        160,
+        40
+      ],
+      "sha256": "A66C993123F72A91FE976DCC9861B958B8F56757008A32B8364A868CE3E5167D",
+      "version": 3,
+      "scope": "ui",
+      "pivot": [
+        0,
+        0
+      ],
+      "textPolicy": "live locale copy; no baked lettering",
+      "instances": [
+        {
+          "id": "brand-mark",
+          "asset": "material.brand-mark",
+          "layer": "print",
+          "bounds": [
+            1486,
+            82,
+            143,
+            36
+          ],
+          "optionalLogo": true
+        }
+      ]
+    },
+    {
+      "id": "material.shore-ink",
+      "file": "assets/ui/coastal-replica/v3/exports/shore-ink.svg",
+      "master": "assets/ui/coastal-replica/v3/masters/shore-ink.svg",
+      "source": "assets/ui/coastal-replica/v3/masters/materials.json",
+      "size": [
+        1672,
+        342
+      ],
+      "alpha": true,
+      "visibleBounds": [
+        0,
+        0,
+        1672,
+        342
+      ],
+      "sha256": "2FC7903DCD9283864B4F809A63F696C16527A0996EC7667C86D6C3C6C634A83B",
+      "version": 3,
+      "scope": "ui",
+      "pivot": [
+        0,
+        0
+      ],
+      "textPolicy": "live locale copy; no baked lettering",
+      "instances": [
+        {
+          "id": "shore-ink",
+          "asset": "material.shore-ink",
+          "layer": "print",
+          "bounds": [
+            0,
+            599,
+            1672,
+            342
+          ]
+        }
+      ]
+    },
+    {
+      "id": "material.note-edge",
+      "file": "assets/ui/coastal-replica/v3/exports/note-edge.svg",
+      "master": "assets/ui/coastal-replica/v3/masters/note-edge.svg",
+      "source": "assets/ui/coastal-replica/v3/masters/materials.json",
+      "size": [
+        128,
+        196
+      ],
+      "alpha": true,
+      "visibleBounds": [
+        0,
+        0,
+        128,
+        196
+      ],
+      "sha256": "BF65410437ECB69DF2650F82586709EFEB560179A7451E936E056A15BC174290",
+      "version": 3,
+      "scope": "ui",
+      "pivot": [
+        0,
+        0
+      ],
+      "textPolicy": "live locale copy; no baked lettering",
+      "instances": [
+        {
+          "id": "note-bleed-restoration",
+          "asset": "material.note-edge",
+          "layer": "foreground",
+          "bounds": [
+            1544,
+            745,
+            128,
+            196
+          ],
+          "component": "notebook"
+        }
+      ]
+    },
+    {
+      "id": "dialogue.foreground-left",
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha": true,
+      "visibleBounds": [
+        0,
+        15,
+        1241,
+        1239
+      ],
+      "sha256": "6E43FC83FE16D3EC36C92BD5053D998AE0BAA944B2EFFA6AD63E65BFD1961B82",
+      "file": "assets/ui/coastal-replica/v3/exports/foreground-left-v2.png",
+      "master": "assets/ui/coastal-replica/v3/masters/foreground-left-v2.png",
+      "source": "assets/ui/coastal-replica/v2/masters/foreground-left-v2.png",
+      "provenance": "Stage 2 imagegen prompts retained; native PNG bytes inherited",
+      "version": 3,
+      "scope": "ui",
+      "pivot": [
+        0,
+        0
+      ],
+      "textPolicy": "live locale copy; no baked lettering",
+      "instances": [
+        {
+          "id": "foreground-left",
+          "asset": "dialogue.foreground-left",
+          "layer": "foreground",
+          "bounds": [
+            0,
+            703,
+            238,
+            238
+          ],
+          "shadow": "flowers"
+        }
+      ]
+    },
+    {
+      "id": "dialogue.foreground-right",
+      "size": [
+        1672,
+        941
+      ],
+      "alpha": true,
+      "visibleBounds": [
+        41,
+        28,
+        1631,
+        913
+      ],
+      "sha256": "516080A7256ABFDF3185B12B59A013079E58F0829C153E1FA0A92CF1F69DCD9D",
+      "file": "assets/ui/coastal-replica/v3/exports/foreground-right-v2.png",
+      "master": "assets/ui/coastal-replica/v3/masters/foreground-right-v2.png",
+      "source": "assets/ui/coastal-replica/v2/masters/foreground-right-v2.png",
+      "provenance": "Stage 2 imagegen prompts retained; native PNG bytes inherited",
+      "version": 3,
+      "scope": "ui",
+      "pivot": [
+        0,
+        0
+      ],
+      "textPolicy": "live locale copy; no baked lettering",
+      "instances": [
+        {
+          "id": "foreground-right",
+          "asset": "dialogue.foreground-right",
+          "layer": "foreground",
+          "bounds": [
+            1250,
+            710,
+            422,
+            231
+          ],
+          "sourceRect": [
+            594,
+            328,
+            1078,
+            613
+          ],
+          "fit": "slice",
+          "transform": "matrix(1 .04 -.18 1 127.8 -50)",
+          "component": "notebook"
+        }
+      ]
+    },
+    {
+      "id": "dialogue.harbor-print",
+      "size": [
+        2172,
+        724
+      ],
+      "alpha": true,
+      "visibleBounds": [
+        0,
+        0,
+        2172,
+        724
+      ],
+      "sha256": "5BA7857AFFFF64027626ED6E84DD28E8F45301F69D9407C82CCD2F9053F9D90E",
+      "file": "assets/ui/coastal-replica/v3/exports/harbor-print-v2.png",
+      "master": "assets/ui/coastal-replica/v3/masters/harbor-print-v2.png",
+      "source": "assets/ui/coastal-replica/v2/masters/harbor-print-v2.png",
+      "provenance": "Stage 2 imagegen prompts retained; native PNG bytes inherited",
+      "version": 3,
+      "scope": "ui",
+      "pivot": [
+        0,
+        0
+      ],
+      "textPolicy": "live locale copy; no baked lettering",
+      "instances": [
+        {
+          "id": "paper-harbor",
+          "asset": "dialogue.harbor-print",
+          "layer": "print",
+          "bounds": [
+            0,
+            735,
+            1204,
+            206
+          ],
+          "opacity": 0.68,
+          "clip": "paper",
+          "transform": "translate(-28 0)"
+        }
+      ]
+    }
+  ],
+  "contextAssets": [
+    {
+      "file": "assets/ui/coastal-replica/v2/exports/newsroom-v2.png",
+      "size": [
+        1672,
+        941
+      ],
+      "visibleBounds": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "sha256": "B86B39438BCF19DBED7E3E1A850E6A7114ED30AF209DAE667464A93F45C8C66D",
+      "id": "context.newsroom",
+      "scope": "replaceable-context"
+    }
+  ],
+  "paperContour": "M-8 89 C-6.667 88.333 -13.0 91.167 0 85 C13.0 78.833 40.0 59.167 70 52 C100.0 44.833 136.667 40.667 180 42 C223.333 43.333 275.0 52.833 330 60 C385.0 67.167 443.333 75.833 510 85 C576.667 94.167 657.5 107.167 730 115 C802.5 122.833 873.333 129.333 945 132 C1016.667 134.667 1090.833 128.333 1160 131 C1229.167 133.667 1300.0 142.167 1360 148 C1420.0 153.833 1466.667 156.0 1520 166 C1573.333 176.0 1653.333 201.0 1680 208 L1680 350L-8 350Z",
+  "paperEdge": "M-8 89 C-6.667 88.333 -13.0 91.167 0 85 C13.0 78.833 40.0 59.167 70 52 C100.0 44.833 136.667 40.667 180 42 C223.333 43.333 275.0 52.833 330 60 C385.0 67.167 443.333 75.833 510 85 C576.667 94.167 657.5 107.167 730 115 C802.5 122.833 873.333 129.333 945 132 C1016.667 134.667 1090.833 128.333 1160 131 C1229.167 133.667 1300.0 142.167 1360 148 C1420.0 153.833 1466.667 156.0 1520 166 C1573.333 176.0 1653.333 201.0 1680 208",
+  "fonts": [
+    {
+      "family": "Source Serif 4",
+      "role": "editorial/body/numbers",
+      "license": "SIL Open Font License 1.1",
+      "files": [
+        {
+          "path": "assets/fonts/coastal-replica/sourceserif4/source-serif-4.ttf",
+          "url": "https://raw.githubusercontent.com/google/fonts/2eb0b48d5f760f62e286216f0859a8c540dbc1bd/ofl/sourceserif4/SourceSerif4%5Bopsz%2Cwght%5D.ttf",
+          "sha256": "97B2D4DA6E3CB494B5A1E66AE176914D852CCABEF49E0C02C0DF25F3E39ACA0B"
+        },
+        {
+          "path": "assets/fonts/coastal-replica/sourceserif4/OFL.txt",
+          "url": "https://raw.githubusercontent.com/google/fonts/2eb0b48d5f760f62e286216f0859a8c540dbc1bd/ofl/sourceserif4/OFL.txt",
+          "sha256": "5F94C3FD3A23131A417AB5A0C8452DE57E70C3CFB9F604D88241F7065EBF9FD9"
+        },
+        {
+          "path": "assets/fonts/coastal-replica/sourceserif4/METADATA.pb",
+          "url": "https://raw.githubusercontent.com/google/fonts/2eb0b48d5f760f62e286216f0859a8c540dbc1bd/ofl/sourceserif4/METADATA.pb",
+          "sha256": "F7B88902C1D2F41839A3F7BF6723D1E64044C7C183B82871CE770A95F24B84E3"
+        }
+      ]
+    },
+    {
+      "family": "Cormorant Garamond",
+      "role": "wordmark/display",
+      "license": "SIL Open Font License 1.1",
+      "files": [
+        {
+          "path": "assets/fonts/coastal-replica/cormorantgaramond/cormorant-garamond.ttf",
+          "url": "https://raw.githubusercontent.com/google/fonts/2eb0b48d5f760f62e286216f0859a8c540dbc1bd/ofl/cormorantgaramond/CormorantGaramond%5Bwght%5D.ttf",
+          "sha256": "B20B7D9626DD956B2C5E558692AD328B1F19E3275E2782DB4FA07670D83F35E0"
+        },
+        {
+          "path": "assets/fonts/coastal-replica/cormorantgaramond/OFL.txt",
+          "url": "https://raw.githubusercontent.com/google/fonts/2eb0b48d5f760f62e286216f0859a8c540dbc1bd/ofl/cormorantgaramond/OFL.txt",
+          "sha256": "60700D351CAC4650C51F3F9DB318D2A420F8B45052DBA2715EB5FEC41F0F6956"
+        },
+        {
+          "path": "assets/fonts/coastal-replica/cormorantgaramond/METADATA.pb",
+          "url": "https://raw.githubusercontent.com/google/fonts/2eb0b48d5f760f62e286216f0859a8c540dbc1bd/ofl/cormorantgaramond/METADATA.pb",
+          "sha256": "FAA16A5E79613CA7CADD599ADA1F4CF6891F3CB6731631FBED2A0B18A342E556"
+        }
+      ]
+    },
+    {
+      "family": "Dancing Script",
+      "role": "handwriting",
+      "license": "SIL Open Font License 1.1",
+      "files": [
+        {
+          "path": "assets/fonts/coastal-replica/dancingscript/dancing-script.ttf",
+          "url": "https://raw.githubusercontent.com/google/fonts/2eb0b48d5f760f62e286216f0859a8c540dbc1bd/ofl/dancingscript/DancingScript%5Bwght%5D.ttf",
+          "sha256": "21808625578FE8D8CD10CB684BE546DCA077B27CD03A53A2F1EC11DC743C924C"
+        },
+        {
+          "path": "assets/fonts/coastal-replica/dancingscript/OFL.txt",
+          "url": "https://raw.githubusercontent.com/google/fonts/2eb0b48d5f760f62e286216f0859a8c540dbc1bd/ofl/dancingscript/OFL.txt",
+          "sha256": "6F090277C00AF96651CE6DBCC38FF1591047A3BFFEF486E80B6A32E8276A8201"
+        },
+        {
+          "path": "assets/fonts/coastal-replica/dancingscript/METADATA.pb",
+          "url": "https://raw.githubusercontent.com/google/fonts/2eb0b48d5f760f62e286216f0859a8c540dbc1bd/ofl/dancingscript/METADATA.pb",
+          "sha256": "02340C7F8CD71FC22A4A54466F4BF45FF699DB9E43FC0A0DC8E448F7C60756DF"
+        }
+      ]
+    }
+  ],
+  "fontManifest": "assets/fonts/coastal-replica/manifest.json",
+  "compositionSource": "content/ui/coastal-dialogue-ui.json",
+  "compositionSourceSHA256": "AB85AA4022234C3E5C5D77121A20A577E02002EB2D382E31B8AFA2827A9A4E79",
+  "sourceReference": "docs/ui-concepts/coastal-editorial-v1/01-dialogue.png",
+  "sourceReferenceSHA256": "68C076B9D013523B745E61E1AF35A8251742BBF7B774C02245F89DACF3D2A5A2",
+  "comparisonMask": {
+    "file": "assets/ui/coastal-replica/v3/review/ui-mask.svg",
+    "sha256": "8127701E6DDD73C09E06F464DF8ED6E001029588C86C06003995120327C933E4",
+    "scope": "fixed-ui; reference-owned conservative masks",
+    "uncertainty": "Mask interiors and manually bounded decoration polygons; excludes uncertain outer fringes and optional logo. Original raster alpha cannot be recovered from these masks.",
+    "regions": [
+      {
+        "id": "date-card",
+        "path": "M42 35H270V108L220 116L43 128Z"
+      },
+      {
+        "id": "choices",
+        "path": "M487 466H923V518H487Z M487 534H891V585H487Z M487 600H891V650H487Z"
+      },
+      {
+        "id": "wave",
+        "path": "M0 620C80 615 140 628 188 640L250 650C140 638 63 649 0 671Z"
+      },
+      {
+        "id": "dialogue-paper",
+        "path": "M0 689L70 658L180 648L330 666L510 691L730 721L945 738L1160 737L1360 754L1460 770V941H0Z"
+      },
+      {
+        "id": "notebook",
+        "path": "M1510 760L1645 783L1620 890H1460Z"
+      }
+    ]
+  },
+  "textKeys": [
+    "ui.replica.dialogue.date.1",
+    "ui.replica.dialogue.date.2",
+    "ui.replica.dialogue.brand.1",
+    "ui.replica.dialogue.speaker.1",
+    "ui.replica.dialogue.line.1",
+    "ui.replica.dialogue.continue.1",
+    "ui.replica.dialogue.foreground_note.1",
+    "ui.replica.dialogue.choices.1",
+    "ui.replica.dialogue.choices.2",
+    "ui.replica.dialogue.choices.3",
+    "ui.replica.stage3.view.scene",
+    "ui.replica.stage3.view.light",
+    "ui.replica.stage3.view.dark",
+    "ui.replica.stage3.view.detail",
+    "ui.replica.preview.materialLight",
+    "ui.replica.preview.materialDark",
+    "ui.replica.preview.typography"
+  ],
+  "lighting": {
+    "shadows": {
+      "paper": {
+        "dx": 0,
+        "dy": -2,
+        "blur": 3,
+        "color": "#183f48",
+        "opacity": 0.16
+      },
+      "choice": {
+        "dx": 1,
+        "dy": 4,
+        "blur": 3,
+        "color": "#0c3540",
+        "opacity": 0.22
+      },
+      "card": {
+        "dx": 1,
+        "dy": 3,
+        "blur": 2.5,
+        "color": "#132e36",
+        "opacity": 0.2
+      },
+      "flowers": {
+        "dx": 2,
+        "dy": 4,
+        "blur": 2,
+        "color": "#38635b",
+        "opacity": 0.18
+      },
+      "notebook": {
+        "dx": -2,
+        "dy": 4,
+        "blur": 3,
+        "color": "#233e38",
+        "opacity": 0.2
+      }
+    },
+    "paperWash": {
+      "bounds": [
+        0,
+        599,
+        1672,
+        342
+      ],
+      "opacity": 0.16,
+      "stops": [
+        [
+          0,
+          "#fffbea",
+          0.8
+        ],
+        [
+          0.38,
+          "#fffbea",
+          0
+        ],
+        [
+          1,
+          "#ddb980",
+          0.18
+        ]
+      ]
+    },
+    "paperEdge": {
+      "stroke": "#fffbee",
+      "width": 1.5,
+      "opacity": 0.65
+    },
+    "noteWash": {
+      "path": "M1494 725L1672 754V941H1394Z",
+      "opacity": 0.08,
+      "stops": [
+        [
+          0,
+          "#fff7d9",
+          0.8
+        ],
+        [
+          1,
+          "#ccaa77",
+          0.1
+        ]
+      ]
+    }
+  },
+  "gate": "R15/R16 implementation; R17 scoped review, not automatic G2 certification"
+}

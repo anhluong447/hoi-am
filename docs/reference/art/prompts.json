@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "date": "2026-10-09",
+  "mode": "built-in image_gen",
+  "source": "docs/ui-concepts/coastal-editorial-v1/01-dialogue.png",
+  "outputs": [
+    {
+      "id": "dialogue.newsroom",
+      "file": "masters/newsroom-v2.png",
+      "references": [
+        "docs/ui-concepts/coastal-editorial-v1/01-dialogue.png"
+      ],
+      "prompt": "Use case: precise-object-edit.\nAsset type: clean background plate for a layered game reconstruction.\nInput image is the EDIT TARGET, our original coastal newsroom concept. Strict conservation edit: preserve the EXACT perspective, camera, spatial coordinates, room architecture, harbor window/boats/mountains, book stacks, slate-green chalkboard, warm sunlight and painterly anime rendering. Aim at the same 1672x941 landscape framing.\nRemove the two students completely and reconstruct ONLY the room that they occlude. Remove all interface: date seal upper left, brand upper right, three choice strips center, entire wave/paper/text overlay bottom. Remove bottom-left foreground flowers and bottom-right blurred notebook/foliage. Preserve desks and ordinary newsroom props in their ORIGINAL positions: left foreground newspaper stack near x100,y515, center stacks near x460,y590 and x900,y650, right teal pencil cup near x1440,y660 and laptop right edge.\nKeep the existing wall chalkboard at its exact size and angle, but blank its three lines of handwriting. Keep the off-white wall poster at x800,y100 as a blank poster with no lettering or logo. Make every visible newspaper face, book spine and cup blank with painterly non-letter marks only. Zero readable words, pseudo-letters, numbers, UI, logos, people, or figures. All copy will be separate live SVG layers. Do not brighten, zoom, change camera, enlarge the chalkboard, shift shelves/window or invent new room props.\nReturn one full-bleed wide clean plate, opaque, no border. This is R09 production art for faithful layered reconstruction, not a redesigned concept.",
+      "transparent_background": false
+    },
+    {
+      "id": "dialogue.khue",
+      "file": "masters/khue-seated-v2.png",
+      "references": [
+        "docs/ui-concepts/coastal-editorial-v1/01-dialogue.png"
+      ],
+      "prompt": "Use case: background-extraction / identity-preserve.\nAsset type: accurately registered transparent portrait layer for 1:1 game compositing.\nInput is EDIT TARGET: the original coastal newsroom dialogue concept.\nExtract ONLY the dark-haired male student on the left. Preserve the ORIGINAL pixels' visual appearance as closely as possible: exact upright head, face/expression and eyes, spiky dark slate-blue hair with warm rim light, white short-sleeved shirt, teal tie, brown satchel strap and brass rectangular buckle; his LEFT hand on viewer-right rests against his cheek with the forearm sloping down-left to the desk. Do not change the angle of his head or make him lean forward/down. No new pose, no different face.\nUse a full landscape transparent canvas with the EXACT SAME 1672x941 framing and native registration as the target image. Keep the male in the same place: hair crown near x455,y50; hair silhouette roughly x290..633,y50..339; left shoulder near x183,y338; visible torso/arms roughly x110..676,y575. The rest of the entire frame must be transparent. This is not a centered square portrait and should NOT be enlarged to fill the canvas.\nRemove background, female, all foreground desk/news/flowers, all UI/date/brand/paper/waves/choice strips and ALL lettering. Reconstruct shirt/arm portions occluded by choice strips using the same original anatomy; extend lower torso a little below y575 for desk occlusion, without moving the visible silhouette. Preserve detailed hair strands with clean alpha, no white/dark matte fringe, no floating shadow.\nOutput one native wide RGBA asset, only the male, registered to the original scene. Preserve his exact pose, color, lighting, line thickness and facial identity.",
+      "transparent_background": true
+    },
+    {
+      "id": "dialogue.van",
+      "file": "masters/van-seated-v2.png",
+      "references": [
+        "docs/ui-concepts/coastal-editorial-v1/01-dialogue.png"
+      ],
+      "prompt": "Use case: background-extraction / identity-preserve.\nAsset type: female portrait with held blank newspaper, true transparent game layer.\nInput is EDIT TARGET: the original coastal newsroom dialogue concept. Extract/reconstruct ONLY the female student on the right, Luc Thanh Van. Preserve the ORIGINAL exact face, warm open speaking smile, head tilt, amber eyes, long brown hair strands, yellow five-petal flower on viewer-right, white blouse and teal bow. Do not change facial design or make the head upright.\nHer RIGHT hand on viewer-left supports her jaw/cheek; its elbow and forearm descend straight to desk. Her LEFT hand at viewer-right grips the lower right side of her tilted newspaper. Preserve exact arrangement of both hands and fingers, hair silhouette, shirt folds, sunlight from upper right, line thickness and painterly anime shading.\nKeep the held newspaper outline tilted upward to viewer-right exactly like the target, but make its face clean warm cream BLANK paper: no title, article columns, pictures, numbers, letters or pseudo-text. Newspaper print will be a separate live layer.\nUse the original landscape 1672x941 framing with transparent unused area. Keep female roughly in original location: crown x1060,y40, face around x1080,y270, shoulder/forearm start x928,y370, visible torso to y650, hand holding newspaper near x1450,y576. Transparent rest of canvas. If you must frame a cutout more tightly, preserve the pose and exact body proportions above over native location; do not invent a new pose.\nRemove male, room, desk, pencils/cup, plants, all UI/date/brand/choices/paper/waves and all text. Restore any shirt/hair area hidden by choices or desk as needed. Only one woman plus held blank paper on actual RGBA transparency; preserve fine hair alpha with no white or dark matte, no floating shadow.",
+      "transparent_background": true
+    },
+    {
+      "id": "dialogue.foreground-left",
+      "file": "masters/foreground-left-v2.png",
+      "references": [
+        "docs/ui-concepts/coastal-editorial-v1/01-dialogue.png"
+      ],
+      "prompt": "Use case: background-extraction.\nAsset type: transparent foreground corner for a layered game reconstruction.\nInput is EDIT TARGET our original coastal newsroom UI image. Extract/reconstruct ONLY the lower-left corner cluster of white cream daisies with golden centers and green/teal leaves. Match exactly the detailed painterly petals, some softer near-camera stems, warm daylight and original delicate botanical linework. Reference crop is x0..240,y720..941: large white daisies near x40,y856 and x176,y920, small yellow flowers and leaves along the left edge. Preserve this LEFT/BOTTOM CORNER arrangement: foliage hugs left and bottom, rises mainly on left; right/top area remains mostly transparent. It should look like the original flowers rather than a botanical sticker.\nNo teal wave or paper, no lighthouse/harbor illustration, no characters, no background, no words or logos. Restore clipped petals only where needed for a reusable master, but preserve intentional canvas clipping at left/bottom corner. True transparent RGBA, no white/dark halo. Use a square high-resolution corner asset; crop-to-placement uniform scaling will place it in a roughly 240x230 stage corner.",
+      "transparent_background": true
+    },
+    {
+      "id": "dialogue.foreground-right",
+      "file": "masters/foreground-right-v2.png",
+      "references": [
+        "docs/ui-concepts/coastal-editorial-v1/01-dialogue.png"
+      ],
+      "prompt": "Use case: background-extraction / precise-object-edit.\nAsset type: transparent foreground right note and softly blurred near-camera leaves for a game.\nInput is EDIT TARGET. Extract/reconstruct ONLY the lower-right foreground notebook/paper and out-of-focus leafy yellow flowers, crop matching original x1250..1672,y710..941. The cream lined notebook leans to viewer-right, with its LEFT edge starting near x1500,y719 and sloping down-left toward x1400,y941; top edge angles down-right, right side cropped by stage. Dark teal/olive leaves and yellow-white defocused daisies overlap the lower edge and left of note, exactly like the original depth composition. Preserve warm sunlight, painterly depth blur, softness and the ORIGINAL arrangement; no redesign into a rectangular card.\nThe notebook writing surface must be BLANK except faint paper ruling lines and a small subtle binding-edge texture. No words, letters, pseudo-text, numbers, logos. We will project the handwriting separately in code.\nNo dialogue paper/wave, character, desks, UI, or environment. Return the independent note + foliage as true transparent RGBA with clean soft alpha, no matte border. Wide 16:9 high-resolution crop of this corner, matching the original crop proportions; transparency everywhere not occupied by notebook/foreground leaves.",
+      "transparent_background": true
+    },
+    {
+      "id": "dialogue.harbor-print",
+      "file": "masters/harbor-print-v2.png",
+      "references": [
+        "docs/ui-concepts/coastal-editorial-v1/01-dialogue.png"
+      ],
+      "prompt": "Use case: background-extraction.\nAsset type: transparent antique teal harbor ink illustration printed into a game dialogue paper.\nInput is edit target, the original coastal newsroom concept. Reconstruct ONLY the muted cyan/teal ink illustration along the bottom-left paper, retaining its original composition: lighthouse at far left rises taller, a smaller distant tower near x105, dense little coastal buildings/rooftops across the low left-middle, pale mountain ranges behind, fine etching hatching and broken painted seaside textures. Town and waterfront extend all along the bottom and fade gradually toward the RIGHT into blank paper. Main lighthouse/rooftops must be large and prominent like the target, not a tiny strip at the very bottom. The original printed region spans about x0..1150,y735..941; the lighthouse is near x65,y782 and the principal buildings near x180..430,y850..930.\nReturn the ink layer only, actually transparent with textured semi-transparent pigment. No paper rectangle, white wash/backing, flowers/leaves, characters, words, numbers, logos, UI, modern clip-art or sharp vector strokes. Fine detailed slightly worn editorial engraving, pale desaturated blue-teal, printed/inked texture, not a photo. Wide ~4:1 horizontal asset, tall left tower with room above, continuous coastal foreground meeting bottom edge, natural transparent fade to the right; preserve the reference's ink shape and density.",
+      "transparent_background": true
+    }
+  ]
+}

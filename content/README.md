@@ -8,11 +8,11 @@ tiếp tại đây. Folder theo feature chỉ tạo khi pack thật được por
 | --- | --- |
 | locales/vi.json | Toàn bộ chữ, lời thoại, tên hiển thị, lỗi và accessibility |
 | ui/ | Key mapping, bố cục và motion/light presets của UI |
-| gameplay/ | Roster, cases, quests, balance của gameplay, sau Chapter 1/2 |
+| gameplay/ | Roster, cases, quest steps, phases/places, balance và migration IDs |
 | formula_sandbox/ | Ruleset công thức riêng, sau Chapter 10 |
 | dialogue/ | Graph và điều kiện/intent bằng technical IDs |
 | world/ | Room metadata, spawn, interaction/schedule IDs và preset |
-| manifest.json | Pack version và đường dẫn catalog/boot hiện dùng |
+| manifest.json | Pack version và các đường dẫn content hiện dùng |
 
 Không ép geometry/material nặng thành JSON: mesh, scene, shader, Theme và material
 là Godot resources đặt cạnh world/view hoặc trong assets. Balance/nghiệp vụ không
@@ -20,7 +20,7 @@ nằm trong inspector của scene, trừ thông số thuần presentation/spatia
 
 ## Text
 
-vi.json giữ 798 key gốc và thêm `ui.common.quit`. Keys cũ vẫn ổn định để log/save
+vi.json giữ 798 key gốc và các key UI/preview mới. Keys cũ vẫn ổn định để log/save
 cũ resolve được. Key mới nên mô tả ý nghĩa: `dialogue.van.intro`, `hud.energy`.
 Không dùng tên đã dịch để switch, lookup state hay đặt ID.
 
@@ -37,10 +37,16 @@ phải có template/catalog khi hiển thị; input action IDs vẫn là technic
 ## Pack và validation
 
 Content loader ở infrastructure chỉ đọc Dictionary JSON và báo lỗi parse.
-Domain validator kiểm tra duplicate IDs, references, numeric ranges, graph edges,
-case/stat/quest keys và ruleset compatibility khi mỗi pack được đưa vào.
-Foundation checker mới kiểm tra JSON duplicate keys, *_key và *_path; chưa tuyên
-bố có gameplay content validator trước Chapter 1/2.
+Runtime gameplay content validator kiểm tra IDs/stat references, tuning/config
+và text keys trước tạo rules. `tools/check_content.py` kiểm tra độc lập dialogue
+edges/reachability/speakers, map/portal references, spatial/atlas data và art/oracle
+hashes. Architecture checker kiểm tra duplicate JSON fields, *_key và *_path.
+
+`gameplay/pack.json`, `dialogue/graphs.json` và `world/source_maps.json` là captured
+source packs có hash lock trong oracle manifest. Không overwrite để làm parity
+pass. Nội dung mới/tuning có chủ đích dùng pack phiên bản mới và behavior ledger.
+Room 3D, actor presentation và UI layouts là authored JSON riêng, có thể phát
+triển độc lập. Baselines/policy traces không tự thay đổi theo authored presentation.
 
 Trong export, include các file JSON cần đọc qua FileAccess. Không import review
 fixture vào live pack hoặc tự cập nhật baseline khi tuning thay đổi.

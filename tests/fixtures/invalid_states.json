@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "base": "new-gameplay-session-v3",
+  "mutations": [
+    {"path": ["people", 0, "stats", "photo"], "value": -1},
+    {"path": ["people", 1, "id"], "value": "khue"},
+    {"path": ["people", 0, "tools"], "value": ["photo", "photo"]},
+    {"path": ["cases", 0, "owner"], "value": "unknown"},
+    {"path": ["cases", 0, "status"], "value": "working"},
+    {"path": ["quests", 0, "quality"], "value": [0.5]},
+    {"path": ["phase"], "value": "investigation"},
+    {"path": ["log", 0, "textKey"], "value": "missing"},
+    {"path": ["log", 0, "params"], "value": []},
+    {"path": ["config", "romancePenalty"], "value": 0.9}
+  ]
+}

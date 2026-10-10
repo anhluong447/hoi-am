@@ -42,13 +42,13 @@ def main():
     godot = args.godot or shutil.which("godot") or shutil.which("godot4")
     if not godot or not Path(godot).is_file():
         raise SystemExit("Provide --godot <executable> or set GODOT_PATH")
-    for tool in ["check_architecture.py", "check_reference.py"]:
+    for tool in ["check_architecture.py", "check_reference.py", "check_content.py"]:
         run([sys.executable, "-X", "utf8", str(ROOT / "tools" / tool)])
     logs = ROOT / "artifacts/verification"
     run([godot, "--headless", "--path", str(ROOT), "--editor", "--import"],
         timeout=180, log_path=logs / "import.log")
     run([godot, "--headless", "--path", str(ROOT), "--script", "res://tests/run_tests.gd",
-         "--quit-after", "300"], log_path=logs / "contracts.log",
+         "--fixed-fps", "60", "--quit-after", "600"], log_path=logs / "contracts.log",
         expected=r"Headless contracts: \d+ checks; 0 failures\b")
     run([godot, "--headless", "--path", str(ROOT), "--quit-after", "3"],
         log_path=logs / "bootstrap.log")

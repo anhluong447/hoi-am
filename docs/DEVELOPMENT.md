@@ -7,6 +7,14 @@ Python 3.12 chạy tooling không cần package ngoài. Node chỉ cần cho bư
 ES module ban đầu, không cần để chạy/test Godot sau đó. Export templates được
 kiểm tra riêng ở Chapter 12; không coi editor đã cài là export đã sẵn sàng.
 
+`capture_migration.py`/`export_migration.mjs` chỉ phục vụ import một lần và đọc
+source. Các oracle/captured packs đã khóa hash; tool từ chối overwrite. Khi cần
+thay balance/content có chủ đích, tạo phiên bản pack/evidence mới và ghi ledger.
+Runtime/checks hiện tại không cần Node hay checkout nguồn.
+
+`bake_ui_art.py` cần Chromium ở bước authoring vì SVG filters. Runtime dùng PNG
+đã commit. Giữ masters/prompts/fonts/licenses; validate art hashes sau rebuild.
+
 Mở project trực tiếp; F5 chạy composition chính, F6 chạy preview scene cụ thể.
 MCP hỗ trợ mở/chạy scene và đọc debug, không thay thế visual/device review.
 
@@ -15,7 +23,9 @@ MCP hỗ trợ mở/chạy scene và đọc debug, không thay thế visual/devi
 ```powershell
 python tools/check_architecture.py
 python tools/check_reference.py
+python tools/check_content.py
 python tools/verify.py --godot 'D:/Steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe'
+python tools/verify_native.py --godot 'D:/Steam/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe'
 ```
 
 Có thể đặt `GODOT_PATH` hoặc dùng executable trên PATH. Verify chạy policy checks,
@@ -31,6 +41,12 @@ chạy Godot thật với Forward+, kiểm tra input/focus/resize, rồi lưu ev
 Browser suite của hai-vong không áp dụng cho scene Godot. Source checkout giữ
 nguyên; reference baselines đã copy có hash lock. Khi cần oracle mới, công cụ
 đọc source phải viết output vào project này hoặc thư mục tạm, không vào hai-vong.
+
+`verify_native.py --capture` chạy input checks rồi capture tuần tự; output thử ở
+`artifacts/native-review/`. Lưu evidence lịch sử bằng `capture_review.gd --
+--output res://docs/reviews/<review>/<new-version>`; tool từ chối thư mục docs
+đã tồn tại. Xem [review hiện tại](reviews/chapters-01-05/README.md).
+Logs native không được dùng để suy ra FPS từ `--fixed-fps` hoặc headless cadence.
 
 ## Viết một feature
 

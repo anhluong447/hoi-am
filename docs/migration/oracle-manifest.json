@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "source_commit": "6ad88df15ac5f082ac323e9d4144094affe01c7b",
+  "source_clean": true,
+  "capture_tool": "tools/export_migration.mjs",
+  "numeric_tolerance": 1e-08,
+  "array_order": "exact; including logs and events",
+  "inputs": [
+    {
+      "path": "content/gameplay/balance.js",
+      "sha256": "be5cd9b989fc610bb7b4c2af8b4b402edb0693a5ae4fda72b8a8f2c9ab46cc73"
+    },
+    {
+      "path": "content/gameplay/definitions.js",
+      "sha256": "0acf2d3c1ed15dc4e80d7ab71636dbfdcf43b2e3e7d086c6537b8e832df7dcfc"
+    },
+    {
+      "path": "content/gameplay/migrations.js",
+      "sha256": "59f00f4a408c0f12d0be34fd2f28c689d586b8b993109f8f0885f4cfb73a9f9c"
+    },
+    {
+      "path": "content/gameplay/presentation.js",
+      "sha256": "e81c01506ce92cd7f5973577b0e0bbd5ed06edea73a351c28dd4229cee185d9d"
+    },
+    {
+      "path": "src/domain/actions.js",
+      "sha256": "5a14a64b30cb67d2427bb25af80987f39cae3c22972869d8399ed5b1921e03cd"
+    },
+    {
+      "path": "src/domain/calendar.js",
+      "sha256": "5fb03ec0b23323468064ef28c94c3bc97c3304db5238b08db66360ca21d935bb"
+    },
+    {
+      "path": "src/domain/journalism.js",
+      "sha256": "835270659d74db2d48bedd72c435dbd74e90f67784cbb9125842ae72e7512047"
+    },
+    {
+      "path": "src/domain/people.js",
+      "sha256": "4b4ef9759a75b0aa135da77f67b601ff4fad57b05fc309eaa4f33aa2e255a4af"
+    },
+    {
+      "path": "src/domain/personal.js",
+      "sha256": "511b3e627cd519fd7c9778e5afef0cf6742e5567fb3f858fb5f4a66a6595197d"
+    },
+    {
+      "path": "src/domain/session.js",
+      "sha256": "7e70c58265259f4285fa5bb43fbe1dc73cdfadfe5ba0c0bc3a66668c12295956"
+    },
+    {
+      "path": "src/domain/validateSave.js",
+      "sha256": "0cb57a485ef85948884bc5c9bc17454487c22286937b32df11b3952263a6b95a"
+    },
+    {
+      "path": "content/locales/vi.js",
+      "sha256": "fae8c514c820f4b7822df234253736799dc7227ba3a45a35a940c17e5e4ae363"
+    },
+    {
+      "path": "src/shared/text.js",
+      "sha256": "92c00e43a4b5561ed898fb2b6abb4bc23f0e972ce0d1e291a22105b56fe161aa"
+    },
+    {
+      "path": "content/maps/definitions.js",
+      "sha256": "7f80c8d87c7637c9719ba9c4a945ffe2ec6b129f842e124baef7482e9e601f4b"
+    },
+    {
+      "path": "content/dialogue/interaction-scenes.js",
+      "sha256": "535fc5c51ae9e3cbf4d39a668bf901f4366985edae9484805f488fa3323fa1e0"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "content/gameplay/pack.json",
+      "sha256": "ed9521c354e40477129c071e9e1d7e3508cf549199bda2de4dd21fb4e7e2c3d4"
+    },
+    {
+      "path": "content/dialogue/graphs.json",
+      "sha256": "1b06284ae8b21733ce696851a4cafecaf1e6145ed3054aea94d241aad700761f"
+    },
+    {
+      "path": "content/world/source_maps.json",
+      "sha256": "31a80d49c023d16042fd79862ee5fb19aa3949991b9ce9d4df9113061568bd57"
+    },
+    {
+      "path": "tests/fixtures/parity/calendar-weekend.json",
+      "sha256": "b942e7089ce2537292d86b5c777b25c7f8c1cd8bd7685b1d6a6017c3abec9b3d"
+    },
+    {
+      "path": "tests/fixtures/parity/guards.json",
+      "sha256": "5d9580bf28d9080fd1bf476406118456d6299189a10c75100599f8d8a3fda128"
+    },
+    {
+      "path": "tests/fixtures/parity/final-day.json",
+      "sha256": "61cfffd2df19aca577cb45432bbcb40c13cf89902594b46f611a618eba12d6b8"
+    },
+    {
+      "path": "tests/fixtures/parity/assignment-reassignment.json",
+      "sha256": "86d6d1d1f9d9146d2cb08c45ebc4491f84b46cd498209878284f1896db207710"
+    },
+    {
+      "path": "tests/fixtures/parity/publication-once.json",
+      "sha256": "73f7e0a97628f09312fed6ab6c9fd88da93ae05ae9130e66db2f6276e57c1f74"
+    },
+    {
+      "path": "tests/fixtures/parity/editorial-next-day.json",
+      "sha256": "b1863c6cab71a36022fe0a360f6b6de1b8d4ddf402bef7bb3a80849470e87f5b"
+    },
+    {
+      "path": "tests/fixtures/parity/quest-and-write.json",
+      "sha256": "15f04e74ddf118e3aa959608c9d5b6ebac25293f077940dc42e0e11ac6794a5f"
+    }
+  ],
+  "traces": [
+    {
+      "id": "calendar-weekend",
+      "scope": "chapter02",
+      "steps": 35
+    },
+    {
+      "id": "guards",
+      "scope": "chapter02",
+      "steps": 6
+    },
+    {
+      "id": "final-day",
+      "scope": "chapter02",
+      "steps": 2
+    },
+    {
+      "id": "assignment-reassignment",
+      "scope": "chapter02",
+      "steps": 9
+    },
+    {
+      "id": "publication-once",
+      "scope": "chapter02",
+      "steps": 4
+    },
+    {
+      "id": "editorial-next-day",
+      "scope": "chapter02",
+      "steps": 15
+    },
+    {
+      "id": "quest-and-write",
+      "scope": "chapter07",
+      "steps": 6
+    }
+  ]
+}

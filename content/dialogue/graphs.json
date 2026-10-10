@@ -1,0 +1,434 @@
+{
+  "schema_version": 1,
+  "scenes": {
+    "van": {
+      "title_key": "content.dialogue.interaction-scenes.duyet_ban_thao_cung_van",
+      "nodes": {
+        "start": {
+          "speaker": "khue",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.chao_cau_buoi_giao_luu_hom_nay_co_gi_moi_khong",
+          "next": "greeting"
+        },
+        "greeting": {
+          "speaker": "van",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.cu_dat_tu_lieu_o_day_minh_dang_xem_ban_thao_cua_ca_nhom",
+          "next": "problem"
+        },
+        "problem": {
+          "speaker": "van",
+          "expression": "serious",
+          "text_key": "content.dialogue.interaction-scenes.ban_nay_ket_luan_qua_som_chua_co_phan_hoi_cua_nguoi_duoc_nhac_to",
+          "next": "decision"
+        },
+        "decision": {
+          "speaker": "khue",
+          "expression": "serious",
+          "text_key": "content.dialogue.interaction-scenes.minh_hieu_roi_cung_chon_cach_xu_ly_nhe",
+          "choices": [
+            {
+              "label_key": "content.dialogue.interaction-scenes.bo_sung_phan_hoi_truoc_khi_dang",
+              "next": "support"
+            },
+            {
+              "label_key": "content.dialogue.interaction-scenes.de_minh_xem_lai_tu_lieu_truoc",
+              "next": "review"
+            }
+          ]
+        },
+        "support": {
+          "speaker": "van",
+          "expression": "happy",
+          "text_key": "content.dialogue.interaction-scenes.dung_y_minh_day_co_du_nguon_roi_thi_so_bao_nay_se_rat_dang_doc",
+          "next": "end"
+        },
+        "review": {
+          "speaker": "khue",
+          "expression": "investigate",
+          "text_key": "content.dialogue.interaction-scenes.minh_se_ghi_lai_va_doi_chieu_tung_chi_tiet_roi_moi_dua_ra_ket_lu",
+          "next": "followup"
+        },
+        "followup": {
+          "speaker": "van",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.u_minh_giu_ban_thao_lai_cho_cau_xac_minh_xong",
+          "next": "end"
+        },
+        "end": {
+          "speaker": "khue",
+          "expression": "happy",
+          "text_key": "content.dialogue.interaction-scenes.cam_on_cau_lat_nua_minh_cung_quay_lai_chuyen_nay_nhe"
+        }
+      }
+    },
+    "long": {
+      "title_key": "content.dialogue.interaction-scenes.chuyen_tac_nghiep_cua_long",
+      "nodes": {
+        "start": {
+          "speaker": "khue",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.chao_cau_buoi_giao_luu_hom_nay_co_gi_moi_khong",
+          "next": "greeting"
+        },
+        "greeting": {
+          "speaker": "long",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.minh_vua_nghe_bac_o_san_bong_ke_mot_cau_chuyen_hay_lam",
+          "next": "problem"
+        },
+        "problem": {
+          "speaker": "long",
+          "expression": "serious",
+          "text_key": "content.dialogue.interaction-scenes.nhung_co_nguoi_muon_minh_chi_viet_phan_co_loi_cho_ho_lam_the_thi",
+          "next": "decision"
+        },
+        "decision": {
+          "speaker": "khue",
+          "expression": "serious",
+          "text_key": "content.dialogue.interaction-scenes.minh_hieu_roi_cung_chon_cach_xu_ly_nhe",
+          "choices": [
+            {
+              "label_key": "content.dialogue.interaction-scenes.lang_nghe_day_du_ca_hai_phia",
+              "next": "support"
+            },
+            {
+              "label_key": "content.dialogue.interaction-scenes.de_minh_xem_lai_tu_lieu_truoc",
+              "next": "review"
+            }
+          ]
+        },
+        "support": {
+          "speaker": "long",
+          "expression": "happy",
+          "text_key": "content.dialogue.interaction-scenes.ha_ha_vay_moi_la_dong_doi_chu_de_minh_di_hoi_them_roi_ke_cau_ngh",
+          "next": "end"
+        },
+        "review": {
+          "speaker": "khue",
+          "expression": "investigate",
+          "text_key": "content.dialogue.interaction-scenes.minh_se_ghi_lai_va_doi_chieu_tung_chi_tiet_roi_moi_dua_ra_ket_lu",
+          "next": "followup"
+        },
+        "followup": {
+          "speaker": "long",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.duoc_minh_se_khong_hua_dang_bai_truoc_khi_kiem_chung",
+          "next": "end"
+        },
+        "end": {
+          "speaker": "khue",
+          "expression": "happy",
+          "text_key": "content.dialogue.interaction-scenes.cam_on_cau_lat_nua_minh_cung_quay_lai_chuyen_nay_nhe"
+        }
+      }
+    },
+    "nhi": {
+      "title_key": "content.dialogue.interaction-scenes.cung_nhi_kiem_tra_so_lieu",
+      "nodes": {
+        "start": {
+          "speaker": "khue",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.chao_cau_buoi_giao_luu_hom_nay_co_gi_moi_khong",
+          "next": "greeting"
+        },
+        "greeting": {
+          "speaker": "nhi",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.a_minh_co_doi_chieu_hai_ban_ke_cau_co_muon_xem_cung_khong",
+          "next": "problem"
+        },
+        "problem": {
+          "speaker": "nhi",
+          "expression": "serious",
+          "text_key": "content.dialogue.interaction-scenes.o_hai_tong_nay_khac_nhau_neu_dua_so_nay_vao_bai_thi_se_sai_mat",
+          "next": "decision"
+        },
+        "decision": {
+          "speaker": "khue",
+          "expression": "serious",
+          "text_key": "content.dialogue.interaction-scenes.minh_hieu_roi_cung_chon_cach_xu_ly_nhe",
+          "choices": [
+            {
+              "label_key": "content.dialogue.interaction-scenes.cung_kiem_tra_lai_tung_dong_voi_nhi",
+              "next": "support"
+            },
+            {
+              "label_key": "content.dialogue.interaction-scenes.de_minh_xem_lai_tu_lieu_truoc",
+              "next": "review"
+            }
+          ]
+        },
+        "support": {
+          "speaker": "nhi",
+          "expression": "happy",
+          "text_key": "content.dialogue.interaction-scenes.cau_chiu_ngoi_xem_cung_that_a_minh_thay_yen_tam_hon_roi",
+          "next": "end"
+        },
+        "review": {
+          "speaker": "khue",
+          "expression": "investigate",
+          "text_key": "content.dialogue.interaction-scenes.minh_se_ghi_lai_va_doi_chieu_tung_chi_tiet_roi_moi_dua_ra_ket_lu",
+          "next": "followup"
+        },
+        "followup": {
+          "speaker": "nhi",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.um_minh_se_danh_dau_cho_chua_khop_de_cau_de_kiem_tra",
+          "next": "end"
+        },
+        "end": {
+          "speaker": "khue",
+          "expression": "happy",
+          "text_key": "content.dialogue.interaction-scenes.cam_on_cau_lat_nua_minh_cung_quay_lai_chuyen_nay_nhe"
+        }
+      }
+    },
+    "ngoc": {
+      "title_key": "content.dialogue.interaction-scenes.chon_anh_cung_ngoc",
+      "nodes": {
+        "start": {
+          "speaker": "khue",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.chao_cau_buoi_giao_luu_hom_nay_co_gi_moi_khong",
+          "next": "greeting"
+        },
+        "greeting": {
+          "speaker": "ngoc",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.nhin_tam_nay_nay_minh_bat_duoc_khoanh_khac_moi_nguoi_dang_cung_s",
+          "next": "problem"
+        },
+        "problem": {
+          "speaker": "ngoc",
+          "expression": "serious",
+          "text_key": "content.dialogue.interaction-scenes.nhung_neu_cat_mat_phan_ben_canh_thi_anh_se_khien_nguoi_doc_hieu_",
+          "next": "decision"
+        },
+        "decision": {
+          "speaker": "khue",
+          "expression": "serious",
+          "text_key": "content.dialogue.interaction-scenes.minh_hieu_roi_cung_chon_cach_xu_ly_nhe",
+          "choices": [
+            {
+              "label_key": "content.dialogue.interaction-scenes.giu_anh_day_du_va_viet_chu_thich_ro",
+              "next": "support"
+            },
+            {
+              "label_key": "content.dialogue.interaction-scenes.de_minh_xem_lai_tu_lieu_truoc",
+              "next": "review"
+            }
+          ]
+        },
+        "support": {
+          "speaker": "ngoc",
+          "expression": "happy",
+          "text_key": "content.dialogue.interaction-scenes.chot_nhe_mot_tam_anh_dep_con_phai_ke_dung_chuyen_nua_nhin_may_an",
+          "next": "end"
+        },
+        "review": {
+          "speaker": "khue",
+          "expression": "investigate",
+          "text_key": "content.dialogue.interaction-scenes.minh_se_ghi_lai_va_doi_chieu_tung_chi_tiet_roi_moi_dua_ra_ket_lu",
+          "next": "followup"
+        },
+        "followup": {
+          "speaker": "ngoc",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.duoc_minh_giu_ca_anh_goc_de_cau_kiem_tra_boi_canh",
+          "next": "end"
+        },
+        "end": {
+          "speaker": "khue",
+          "expression": "happy",
+          "text_key": "content.dialogue.interaction-scenes.cam_on_cau_lat_nua_minh_cung_quay_lai_chuyen_nay_nhe"
+        }
+      }
+    },
+    "an": {
+      "title_key": "content.dialogue.interaction-scenes.tim_quy_luat_cung_an",
+      "nodes": {
+        "start": {
+          "speaker": "khue",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.chao_cau_buoi_giao_luu_hom_nay_co_gi_moi_khong",
+          "next": "greeting"
+        },
+        "greeting": {
+          "speaker": "an",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.hai_bang_nay_dung_cung_mot_ten_cot_nhung_cach_tinh_co_ve_khac_nh",
+          "next": "problem"
+        },
+        "problem": {
+          "speaker": "an",
+          "expression": "serious",
+          "text_key": "content.dialogue.interaction-scenes.neu_so_truc_tiep_ket_luan_se_lech_minh_chua_tin_con_so_tong_nay",
+          "next": "decision"
+        },
+        "decision": {
+          "speaker": "khue",
+          "expression": "serious",
+          "text_key": "content.dialogue.interaction-scenes.minh_hieu_roi_cung_chon_cach_xu_ly_nhe",
+          "choices": [
+            {
+              "label_key": "content.dialogue.interaction-scenes.thong_nhat_dinh_nghia_truoc_khi_so_sanh",
+              "next": "support"
+            },
+            {
+              "label_key": "content.dialogue.interaction-scenes.de_minh_xem_lai_tu_lieu_truoc",
+              "next": "review"
+            }
+          ]
+        },
+        "support": {
+          "speaker": "an",
+          "expression": "happy",
+          "text_key": "content.dialogue.interaction-scenes.um_nhu_vay_moi_khop_minh_da_tim_duoc_cach_giai_thich_de_hieu_hon",
+          "next": "end"
+        },
+        "review": {
+          "speaker": "khue",
+          "expression": "investigate",
+          "text_key": "content.dialogue.interaction-scenes.minh_se_ghi_lai_va_doi_chieu_tung_chi_tiet_roi_moi_dua_ra_ket_lu",
+          "next": "followup"
+        },
+        "followup": {
+          "speaker": "an",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.minh_se_ghi_ro_gia_dinh_va_phan_con_chua_biet_de_cau_doi_chieu",
+          "next": "end"
+        },
+        "end": {
+          "speaker": "khue",
+          "expression": "happy",
+          "text_key": "content.dialogue.interaction-scenes.cam_on_cau_lat_nua_minh_cung_quay_lai_chuyen_nay_nhe"
+        }
+      }
+    },
+    "khue": {
+      "title_key": "content.dialogue.interaction-scenes.khue_xem_lai_ghi_chep",
+      "nodes": {
+        "start": {
+          "speaker": "khue",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.hom_nay_co_du_moi_nguoi_o_day_minh_nen_danh_thoi_gian_nghe_tung_",
+          "next": "listen"
+        },
+        "listen": {
+          "speaker": "khue",
+          "expression": "serious",
+          "text_key": "content.dialogue.interaction-scenes.co_vai_chi_tiet_minh_chua_hieu_hoi_lai_se_tot_hon_doan_thay_ho",
+          "next": "notes"
+        },
+        "notes": {
+          "speaker": "khue",
+          "expression": "investigate",
+          "text_key": "content.dialogue.interaction-scenes.loi_ke_o_san_bong_va_bang_ke_nay_minh_can_ghi_chung_canh_nhau",
+          "next": "lead"
+        },
+        "lead": {
+          "speaker": "khue",
+          "expression": "lead_found",
+          "text_key": "content.dialogue.interaction-scenes.tim_thay_roi_hai_ban_ke_dang_tinh_theo_hai_khoang_thoi_gian_khac",
+          "next": "question"
+        },
+        "question": {
+          "speaker": "khue",
+          "expression": "questioning",
+          "text_key": "content.dialogue.interaction-scenes.nhung_ai_da_doi_moc_thoi_gian_minh_can_hoi_nguoi_lap_bang",
+          "next": "finish"
+        },
+        "finish": {
+          "speaker": "khue",
+          "expression": "happy",
+          "text_key": "content.dialogue.interaction-scenes.co_huong_di_roi_minh_se_nho_ca_nhom_cung_kiem_chung_roi_nghi_mot"
+        }
+      }
+    },
+    "groundskeeper": {
+      "title_key": "content.dialogue.interaction-scenes.nghe_bac_bao_ve_ke_chuyen",
+      "nodes": {
+        "start": {
+          "speaker": "khue",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.bac_co_the_ke_cho_chau_chuyen_san_bong_khong_a",
+          "next": "account"
+        },
+        "account": {
+          "speaker": "groundskeeper",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.tu_luc_san_dong_cua_cac_em_phai_tap_ngoai_cong_bac_lo_nhat_la_xe",
+          "next": "ask"
+        },
+        "ask": {
+          "speaker": "khue",
+          "expression": "serious",
+          "text_key": "content.dialogue.interaction-scenes.chau_muon_nghe_ca_nguoi_quan_ly_san_nua_bac_chi_giup_chau_duoc_k",
+          "next": "reply"
+        },
+        "reply": {
+          "speaker": "groundskeeper",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.duoc_chu_cu_hoi_cho_ro_dung_de_mot_loi_ke_thanh_ca_cau_chuyen"
+        }
+      }
+    },
+    "teacher": {
+      "title_key": "content.dialogue.interaction-scenes.xin_phan_hoi_tu_thay",
+      "nodes": {
+        "start": {
+          "speaker": "khue",
+          "expression": "investigate",
+          "text_key": "content.dialogue.interaction-scenes.thua_thay_hai_bang_ke_dung_moc_thoi_gian_khac_nhau_phai_khong_a",
+          "next": "reply"
+        },
+        "reply": {
+          "speaker": "teacher",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.dung_mot_bang_tinh_ca_hoc_ky_bang_con_lai_chi_tinh_thang_nay_cac",
+          "next": "found"
+        },
+        "found": {
+          "speaker": "khue",
+          "expression": "lead_found",
+          "text_key": "content.dialogue.interaction-scenes.vay_la_co_the_giai_thich_chenh_lech_roi_em_se_sua_phan_doi_chieu",
+          "next": "end"
+        },
+        "end": {
+          "speaker": "teacher",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.hay_gui_ban_da_sua_de_nguoi_phu_trach_kiem_tra_lai_truoc_khi_dan"
+        }
+      }
+    },
+    "harbor-source": {
+      "title_key": "content.dialogue.interaction-scenes.mot_buoi_sang_o_cang",
+      "nodes": {
+        "start": {
+          "speaker": "khue",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.chau_muon_viet_ve_buoi_sang_lam_viec_o_cang_chu_thay_can_ke_dieu",
+          "next": "reply"
+        },
+        "reply": {
+          "speaker": "harbor-source",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.luc_moi_nguoi_con_ngu_thi_chung_toi_da_bat_dau_ca_roi_dung_chi_c",
+          "next": "ask"
+        },
+        "ask": {
+          "speaker": "khue",
+          "expression": "serious",
+          "text_key": "content.dialogue.interaction-scenes.chau_co_the_den_quan_sat_mot_ca_that_sau_khi_xin_phep_duoc_khong",
+          "next": "end"
+        },
+        "end": {
+          "speaker": "harbor-source",
+          "expression": "neutral",
+          "text_key": "content.dialogue.interaction-scenes.duoc_hoi_nguoi_dieu_phoi_truoc_roi_dung_o_khu_an_toan_muon_viet_"
+        }
+      }
+    }
+  }
+}

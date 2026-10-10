@@ -1,0 +1,395 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "source": "assets/pixel/pilot-v2/khue-prompt.txt",
+      "target": "assets/actors/source/pilot-v2/khue-prompt.txt",
+      "sha256": "f27bb45a5d4371acd19f7c12d2cfd29a27ad33962b0f661b76dc78497e09db0f"
+    },
+    {
+      "source": "assets/pixel/pilot-v2/khue-source.png",
+      "target": "assets/actors/source/pilot-v2/khue-source.png",
+      "sha256": "c10c0a6d907a3c5d431e72b300d0c53636a85e0a7ee7cf2b7f7214fc4631150d"
+    },
+    {
+      "source": "assets/pixel/pilot-v2/khue.png",
+      "target": "assets/actors/source/pilot-v2/khue.png",
+      "sha256": "8637c887f9b9ef3a03c191dbf1231ca732b2c8207386b35de949f900e2bba703"
+    },
+    {
+      "source": "assets/pixel/pilot-v2/README.md",
+      "target": "assets/actors/source/pilot-v2/README.md",
+      "sha256": "e1edec61ab404e5b089a9946c19cd8f1de4ae694daa685985e864885dd7fd733"
+    },
+    {
+      "source": "assets/pixel/pilot-v2/van-prompt.txt",
+      "target": "assets/actors/source/pilot-v2/van-prompt.txt",
+      "sha256": "1738507ef096f4165961ff71ca0d8d3d9d95fa1265b91b558b6fcb82bce1e61a"
+    },
+    {
+      "source": "assets/pixel/pilot-v2/van-source.png",
+      "target": "assets/actors/source/pilot-v2/van-source.png",
+      "sha256": "9be3b1a725cee5af6273645183cdd645a5c5d43ad87a9f980374137fff565d66"
+    },
+    {
+      "source": "assets/pixel/pilot-v2/van.png",
+      "target": "assets/actors/source/pilot-v2/van.png",
+      "sha256": "d109f5814e0905b030c64f9fa22dcb9ad4116c42c10d7dcb6cf40e2282bf13a1"
+    },
+    {
+      "source": "assets/pixel/pilot-v5/arm-correction-prompts.json",
+      "target": "assets/actors/source/pilot-v5/arm-correction-prompts.json",
+      "sha256": "c49413d72c57581410042cb35f8482f0bb33c349b26ca1dcd5c8decc94bc6c2d"
+    },
+    {
+      "source": "assets/pixel/pilot-v5/down-attempt1-source.png",
+      "target": "assets/actors/source/pilot-v5/down-attempt1-source.png",
+      "sha256": "33ab483713ca84bbcc2b7c8648f8a3dbfc6d7b8e209e36042469c718322ab865"
+    },
+    {
+      "source": "assets/pixel/pilot-v5/down-source.png",
+      "target": "assets/actors/source/pilot-v5/down-source.png",
+      "sha256": "d04003673e71f6d9c360b3105bfd6b784b29230024012c991b1276755379fed7"
+    },
+    {
+      "source": "assets/pixel/pilot-v5/down-walk.png",
+      "target": "assets/actors/source/pilot-v5/down-walk.png",
+      "sha256": "82aa5147215f1c6fbc5514cc671baa668816fa3f5d23418d297b0230e16d25be"
+    },
+    {
+      "source": "assets/pixel/pilot-v5/generations.json",
+      "target": "assets/actors/source/pilot-v5/generations.json",
+      "sha256": "dd745809c105427655a02460f26cbaaa94b7b6f694d35d58d6a3419a2457e956"
+    },
+    {
+      "source": "assets/pixel/pilot-v5/khue.png",
+      "target": "assets/actors/source/pilot-v5/khue.png",
+      "sha256": "234239b4a82521d829f4aad1e19cebcd197ba83d08ef63d106913f3800aa125a"
+    },
+    {
+      "source": "assets/pixel/pilot-v5/metrics.json",
+      "target": "assets/actors/source/pilot-v5/metrics.json",
+      "sha256": "e5515540754844a333af044a397b4ceb7ba4e76db98e9a850dcc50cb4b4267ea"
+    },
+    {
+      "source": "assets/pixel/pilot-v5/prompts.json",
+      "target": "assets/actors/source/pilot-v5/prompts.json",
+      "sha256": "6ed3b577f4a69f2f392857b6e85266ce621cf49432dce5e86d3b0e43081dc0ff"
+    },
+    {
+      "source": "assets/pixel/pilot-v5/README.md",
+      "target": "assets/actors/source/pilot-v5/README.md",
+      "sha256": "2d97ad77a1f0f10c3eea0fd43d0c4f800881b3efd9a51374a565f1f33c1b67e5"
+    },
+    {
+      "source": "assets/pixel/pilot-v5/right-attempt1-source.png",
+      "target": "assets/actors/source/pilot-v5/right-attempt1-source.png",
+      "sha256": "2ef30f1dce12d0ebaed8e30a0b4a6bd38ce9360b4afce29043390c2186ecb7ff"
+    },
+    {
+      "source": "assets/pixel/pilot-v5/right-source.png",
+      "target": "assets/actors/source/pilot-v5/right-source.png",
+      "sha256": "92d7dc26b1ba72a1d91445a2e1adfecb901b64eab75cd89a9d822bdad6ea44a8"
+    },
+    {
+      "source": "assets/pixel/pilot-v5/right-walk.png",
+      "target": "assets/actors/source/pilot-v5/right-walk.png",
+      "sha256": "f13653ec77a3ec987bd28ef63400246fe7174366415c5a1578d066d009e52c10"
+    },
+    {
+      "source": "assets/pixel/pilot-v5/up-source.png",
+      "target": "assets/actors/source/pilot-v5/up-source.png",
+      "sha256": "4fd2770115e72c722e7d3aa11a30ff0275a088b1f73bffc02c4327028170875d"
+    },
+    {
+      "source": "assets/pixel/pilot-v5/up-walk.png",
+      "target": "assets/actors/source/pilot-v5/up-walk.png",
+      "sha256": "28617f14c7ce63011b538ec4e736ea4ee66e4a1c4882b746eef56e142381c9c6"
+    },
+    {
+      "source": "assets/pixel/pilot-v6/down-body-guide.png",
+      "target": "assets/actors/source/pilot-v6/down-body-guide.png",
+      "sha256": "3493c193b1b8f3909bc49baa8255f2c4642047e4b1bc8c900f0361b7058dbd39"
+    },
+    {
+      "source": "assets/pixel/pilot-v6/down-idle-template.png",
+      "target": "assets/actors/source/pilot-v6/down-idle-template.png",
+      "sha256": "9e8c00b967a406f38dbb3a37f8c252bcb7014d21266987d15864af8e8656cdeb"
+    },
+    {
+      "source": "assets/pixel/pilot-v6/down-source.png",
+      "target": "assets/actors/source/pilot-v6/down-source.png",
+      "sha256": "5bfa0938c5e47b1d4bf51ff9bdb5ace6893f10f16f56063ce7ce000394ba548b"
+    },
+    {
+      "source": "assets/pixel/pilot-v6/down-walk.png",
+      "target": "assets/actors/source/pilot-v6/down-walk.png",
+      "sha256": "b4749a6eafc8a64288d9257b93ad1e78c19c06130f3a6cb6c410dbb03502befd"
+    },
+    {
+      "source": "assets/pixel/pilot-v6/khue.png",
+      "target": "assets/actors/source/pilot-v6/khue.png",
+      "sha256": "4483e5116ace64da144bee789d82a99cc49a365b27e7ff95cc9348d97c79de88"
+    },
+    {
+      "source": "assets/pixel/pilot-v6/metrics.json",
+      "target": "assets/actors/source/pilot-v6/metrics.json",
+      "sha256": "52050ff23fa6e14edde861022db76caa912ef7e794edd63ed60d138608c299d9"
+    },
+    {
+      "source": "assets/pixel/pilot-v6/prompts.json",
+      "target": "assets/actors/source/pilot-v6/prompts.json",
+      "sha256": "09fe7fca8557c2d516dbb96c2b159aa761a0a849b14d3dbad0e0a3926b671c23"
+    },
+    {
+      "source": "assets/pixel/pilot-v6/README.md",
+      "target": "assets/actors/source/pilot-v6/README.md",
+      "sha256": "e8c76adaad3073ef4244e6f25222864482ab7f90099422ca0273d59ffb44a275"
+    },
+    {
+      "source": "assets/pixel/pilot-v6/up-body-guide.png",
+      "target": "assets/actors/source/pilot-v6/up-body-guide.png",
+      "sha256": "2ce0ef28569749584368b488255fb76e6d809d047b25434edd6d816ab2571812"
+    },
+    {
+      "source": "assets/pixel/pilot-v6/up-idle-template.png",
+      "target": "assets/actors/source/pilot-v6/up-idle-template.png",
+      "sha256": "ab895b39f590629f904ce6ed95c5dc40ee3c2e751211cfcf224e96ff938fabe4"
+    },
+    {
+      "source": "assets/pixel/pilot-v6/up-source.png",
+      "target": "assets/actors/source/pilot-v6/up-source.png",
+      "sha256": "6fc2c1c436f934d169d5d7c084cc23f135d8842611ea9c886b16291b90d95ff2"
+    },
+    {
+      "source": "assets/pixel/pilot-v6/up-walk.png",
+      "target": "assets/actors/source/pilot-v6/up-walk.png",
+      "sha256": "3219a5aa722b40a5ae017935f6cfa7594fd7e008bc18500ca37812c50048eb0f"
+    },
+    {
+      "source": "assets/pixel/pilot-v6/khue.png",
+      "target": "assets/actors/khue.png",
+      "sha256": "4483e5116ace64da144bee789d82a99cc49a365b27e7ff95cc9348d97c79de88"
+    },
+    {
+      "source": "assets/pixel/pilot-v2/van.png",
+      "target": "assets/actors/van.png",
+      "sha256": "d109f5814e0905b030c64f9fa22dcb9ad4116c42c10d7dcb6cf40e2282bf13a1"
+    },
+    {
+      "source": "assets/pixel/atlas.json",
+      "target": "docs/reference/actors/atlas.source.json",
+      "sha256": "6aa2a727e4071973f653aa737a84790f4896a47e5b586b34bf88f7e4eec4b795"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/manifest.json",
+      "target": "assets/ui/coastal/source/manifest.json",
+      "sha256": "dce69950648f81c595aa120c4ff136b174fa6e0bbdac9d0580c73075ecc121ea"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/README.md",
+      "target": "assets/ui/coastal/source/README.md",
+      "sha256": "378a21ce74ff592f3eed220919da99cab9fa19298582f4eb4a710d3b4d007a0b"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/exports/brand-mark.svg",
+      "target": "assets/ui/coastal/source/exports/brand-mark.svg",
+      "sha256": "a66c993123f72a91fe976dcc9861b958b8f56757008a32b8364a868ce3e5167d"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/exports/choice-gold.svg",
+      "target": "assets/ui/coastal/source/exports/choice-gold.svg",
+      "sha256": "32b2ece284ff27af1e8bd4ad753d704f9bfa880f5b0769b526b4f74f533bd0f5"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/exports/choice-plain.svg",
+      "target": "assets/ui/coastal/source/exports/choice-plain.svg",
+      "sha256": "2dc67d67616c4874846c28cad87840b323e0af75bfa59f40e6d5d74339237e96"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/exports/date-paper.svg",
+      "target": "assets/ui/coastal/source/exports/date-paper.svg",
+      "sha256": "79e00a52401a0a0b29f890cc97b9d625b3cfeccce23f29e3b64f76cd30f3a622"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/exports/dialogue-paper.svg",
+      "target": "assets/ui/coastal/source/exports/dialogue-paper.svg",
+      "sha256": "bb4f4fb481f97c8870f0273050fe6ba611476285712a11176ea9d7bd8b3ac83a"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/exports/dialogue-wave.svg",
+      "target": "assets/ui/coastal/source/exports/dialogue-wave.svg",
+      "sha256": "336df9c19e10515994c27b371794cd3a448305654c64cdc53ed1b3723b2de455"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/exports/foreground-left-v2.png",
+      "target": "assets/ui/coastal/source/exports/foreground-left-v2.png",
+      "sha256": "6e43fc83fe16d3ec36c92bd5053d998ae0baa944b2effa6ad63e65bfd1961b82"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/exports/foreground-right-v2.png",
+      "target": "assets/ui/coastal/source/exports/foreground-right-v2.png",
+      "sha256": "516080a7256abfdf3185b12b59a013079e58f0829c153e1fa0a92cf1f69dcd9d"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/exports/harbor-print-v2.png",
+      "target": "assets/ui/coastal/source/exports/harbor-print-v2.png",
+      "sha256": "5ba7857affff64027626ed6e84dd28e8f45301f69d9407c82ccd2f9053f9d90e"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/exports/icons.svg",
+      "target": "assets/ui/coastal/source/exports/icons.svg",
+      "sha256": "437154c8749771336ecc76e903bc6516ffd0b03486b681b73c5931ab7a6319a8"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/exports/insignia.svg",
+      "target": "assets/ui/coastal/source/exports/insignia.svg",
+      "sha256": "0b8c6eb1363ab8d602193331692aea0672e454b3849b78cce6aa29683f42ecc9"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/exports/note-edge.svg",
+      "target": "assets/ui/coastal/source/exports/note-edge.svg",
+      "sha256": "bf65410437ecb69df2650f82586709efeb560179a7451e936e056a15bc174290"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/exports/shore-ink.svg",
+      "target": "assets/ui/coastal/source/exports/shore-ink.svg",
+      "sha256": "2fc7903dcd9283864b4f809a63f696c16527a0996ec7667c86d6c3c6c634a83b"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/exports/sun-seal.svg",
+      "target": "assets/ui/coastal/source/exports/sun-seal.svg",
+      "sha256": "188dc429b5d78620bac74d789d6f1d61344cef8a134612df43bef1b7ebc065de"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/masters/brand-mark.svg",
+      "target": "assets/ui/coastal/source/masters/brand-mark.svg",
+      "sha256": "a66c993123f72a91fe976dcc9861b958b8f56757008a32b8364a868ce3e5167d"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/masters/choice-gold.svg",
+      "target": "assets/ui/coastal/source/masters/choice-gold.svg",
+      "sha256": "32b2ece284ff27af1e8bd4ad753d704f9bfa880f5b0769b526b4f74f533bd0f5"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/masters/choice-plain.svg",
+      "target": "assets/ui/coastal/source/masters/choice-plain.svg",
+      "sha256": "2dc67d67616c4874846c28cad87840b323e0af75bfa59f40e6d5d74339237e96"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/masters/date-paper.svg",
+      "target": "assets/ui/coastal/source/masters/date-paper.svg",
+      "sha256": "79e00a52401a0a0b29f890cc97b9d625b3cfeccce23f29e3b64f76cd30f3a622"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/masters/dialogue-paper.svg",
+      "target": "assets/ui/coastal/source/masters/dialogue-paper.svg",
+      "sha256": "bb4f4fb481f97c8870f0273050fe6ba611476285712a11176ea9d7bd8b3ac83a"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/masters/dialogue-wave.svg",
+      "target": "assets/ui/coastal/source/masters/dialogue-wave.svg",
+      "sha256": "336df9c19e10515994c27b371794cd3a448305654c64cdc53ed1b3723b2de455"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/masters/foreground-left-v2.png",
+      "target": "assets/ui/coastal/source/masters/foreground-left-v2.png",
+      "sha256": "6e43fc83fe16d3ec36c92bd5053d998ae0baa944b2effa6ad63e65bfd1961b82"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/masters/foreground-right-v2.png",
+      "target": "assets/ui/coastal/source/masters/foreground-right-v2.png",
+      "sha256": "516080a7256abfdf3185b12b59a013079e58f0829c153e1fa0a92cf1f69dcd9d"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/masters/harbor-print-v2.png",
+      "target": "assets/ui/coastal/source/masters/harbor-print-v2.png",
+      "sha256": "5ba7857affff64027626ed6e84dd28e8f45301f69d9407c82ccd2f9053f9d90e"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/masters/icons.svg",
+      "target": "assets/ui/coastal/source/masters/icons.svg",
+      "sha256": "437154c8749771336ecc76e903bc6516ffd0b03486b681b73c5931ab7a6319a8"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/masters/insignia.svg",
+      "target": "assets/ui/coastal/source/masters/insignia.svg",
+      "sha256": "0b8c6eb1363ab8d602193331692aea0672e454b3849b78cce6aa29683f42ecc9"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/masters/materials.json",
+      "target": "assets/ui/coastal/source/masters/materials.json",
+      "sha256": "938ead0fc557c4d92b78eaa33182f1761d25f98d975c479ebc4740469b070f9e"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/masters/note-edge.svg",
+      "target": "assets/ui/coastal/source/masters/note-edge.svg",
+      "sha256": "bf65410437ecb69df2650f82586709efeb560179a7451e936e056a15bc174290"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/masters/shore-ink.svg",
+      "target": "assets/ui/coastal/source/masters/shore-ink.svg",
+      "sha256": "2fc7903dcd9283864b4f809a63f696c16527a0996ec7667c86d6c3c6c634a83b"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/masters/sun-seal.svg",
+      "target": "assets/ui/coastal/source/masters/sun-seal.svg",
+      "sha256": "188dc429b5d78620bac74d789d6f1d61344cef8a134612df43bef1b7ebc065de"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v3/review/ui-mask.svg",
+      "target": "assets/ui/coastal/source/review/ui-mask.svg",
+      "sha256": "8127701e6ddd73c09e06f464df8ed6e001029588c86c06003995120327c933e4"
+    },
+    {
+      "source": "assets/fonts/coastal-replica/cormorantgaramond/cormorant-garamond.ttf",
+      "target": "assets/fonts/cormorantgaramond/cormorant-garamond.ttf",
+      "sha256": "b20b7d9626dd956b2c5e558692ad328b1f19e3275e2782db4fa07670d83f35e0"
+    },
+    {
+      "source": "assets/fonts/coastal-replica/cormorantgaramond/METADATA.pb",
+      "target": "assets/fonts/cormorantgaramond/METADATA.pb",
+      "sha256": "faa16a5e79613ca7cadd599ada1f4cf6891f3cb6731631fbed2a0b18a342e556"
+    },
+    {
+      "source": "assets/fonts/coastal-replica/cormorantgaramond/OFL.txt",
+      "target": "assets/fonts/cormorantgaramond/OFL.txt",
+      "sha256": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956"
+    },
+    {
+      "source": "assets/fonts/coastal-replica/dancingscript/dancing-script.ttf",
+      "target": "assets/fonts/dancingscript/dancing-script.ttf",
+      "sha256": "21808625578fe8d8cd10cb684be546dca077b27cd03a53a2f1ec11dc743c924c"
+    },
+    {
+      "source": "assets/fonts/coastal-replica/dancingscript/METADATA.pb",
+      "target": "assets/fonts/dancingscript/METADATA.pb",
+      "sha256": "02340c7f8cd71fc22a4a54466f4bf45ff699db9e43fc0a0dc8e448f7c60756df"
+    },
+    {
+      "source": "assets/fonts/coastal-replica/dancingscript/OFL.txt",
+      "target": "assets/fonts/dancingscript/OFL.txt",
+      "sha256": "6f090277c00af96651ce6dbcc38ff1591047a3bffef486e80b6a32e8276a8201"
+    },
+    {
+      "source": "assets/pixel/CHARACTER-ART.md",
+      "target": "docs/reference/art/CHARACTER-ART.md",
+      "sha256": "6de108d2ef2538c6a95433cc2b23bed6c82840e0f8c59a459c708d2d2c9453da"
+    },
+    {
+      "source": "assets/fonts/coastal-replica/manifest.json",
+      "target": "docs/reference/art/manifest.json",
+      "sha256": "da860678e9529cfbcdd457eeb30adb8654379c9f8027bc51679d702f2d9fb30c"
+    },
+    {
+      "source": "content/ui/coastal-dialogue-ui.json",
+      "target": "docs/reference/art/coastal-dialogue-ui.json",
+      "sha256": "ab85aa4022234c3e5c5d77121a20a577e02002eb2d382e31b8afa2827a9a4e79"
+    },
+    {
+      "source": "assets/ui/coastal-replica/v2/prompts.json",
+      "target": "docs/reference/art/prompts.json",
+      "sha256": "13b29a5f43d0849035c972ea249d54afb5ac1a3a508d0d9061793c7fb2d1e7ee"
+    }
+  ]
+}
