@@ -1,0 +1,9 @@
+{
+  "title_key": "extension.visitor",
+  "nodes": {
+    "start": {
+      "speaker": "library-visitor",
+      "text_key": "extension.dialogue"
+    }
+  }
+}

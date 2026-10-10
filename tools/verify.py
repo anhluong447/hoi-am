@@ -10,12 +10,14 @@ import sys
 ROOT = Path(__file__).resolve().parent.parent
 
 
-def run(command, timeout=120, log_path=None, expected=None):
+def run(command, timeout=120, log_path=None, expected=None, cwd=ROOT):
     if log_path:
         log_path.parent.mkdir(parents=True, exist_ok=True)
         log_path.write_text("", encoding="utf-8")
-        command += ["--log-file", str(log_path)]
-    process = subprocess.run(command, cwd=ROOT, capture_output=True, text=True,
+        command = command.copy()
+        index = command.index("--") if "--" in command else len(command)
+        command[index:index] = ["--log-file", str(log_path)]
+    process = subprocess.run(command, cwd=cwd, capture_output=True, text=True,
                              encoding="utf-8", errors="replace", timeout=timeout)
     output = process.stdout + process.stderr
     if log_path and log_path.is_file():

@@ -9,7 +9,8 @@ tiếp tại đây. Folder theo feature chỉ tạo khi pack thật được por
 | locales/vi.json | Toàn bộ chữ, lời thoại, tên hiển thị, lỗi và accessibility |
 | ui/ | Key mapping, bố cục và motion/light presets của UI |
 | gameplay/ | Roster, cases, quest steps, phases/places, balance và migration IDs |
-| formula_sandbox/ | Ruleset công thức riêng, sau Chapter 10 |
+| formula_sandbox/ | Config/staff/subjects/policies và debug presets riêng |
+| extensions/reading_room/ | Room/NPC/dialogue/case dùng cho F6 extension rehearsal |
 | dialogue/ | Graph và điều kiện/intent bằng technical IDs |
 | world/ | Room metadata, spawn, interaction/schedule IDs và preset |
 | manifest.json | Pack version và các đường dẫn content hiện dùng |
@@ -47,6 +48,10 @@ source packs có hash lock trong oracle manifest. Không overwrite để làm pa
 pass. Nội dung mới/tuning có chủ đích dùng pack phiên bản mới và behavior ledger.
 Room 3D, actor presentation và UI layouts là authored JSON riêng, có thể phát
 triển độc lập. Baselines/policy traces không tự thay đổi theo authored presentation.
+
+`formula_sandbox/pack.json` và source policy/personal captures có hash lock riêng
+trong `docs/migration/remaining-oracles.json`. Xem workflow đã chạy thử ở
+[authoring guide](../docs/CONTENT-AUTHORING.md).
 
 Trong export, include các file JSON cần đọc qua FileAccess. Không import review
 fixture vào live pack hoặc tự cập nhật baseline khi tuning thay đổi.

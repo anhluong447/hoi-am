@@ -1,7 +1,8 @@
 # Kiến trúc Hồi Âm — Godot
 
-Ngày: 2026-10-10. Trạng thái: Chapter 01–05 có implementation; gameplay subset,
-world greybox và coastal preview; production visual và full-policy parity còn mở.
+Ngày: 2026-10-10. Trạng thái: Chapters 00–12 có implementation kỹ thuật; full
+gameplay/formula parity, native save/export và extension workflow đã kiểm chứng.
+Production visual/pixel parity vẫn có gate riêng ở review cuối.
 Định hướng Godot 4.7.2, GDScript, PC Forward+, world 3D + sprite + UI 2D.
 
 ## Mục tiêu
@@ -25,8 +26,8 @@ src/
   infrastructure/content/        đọc JSON qua FileAccess
   presentation/bootstrap/        view scene/script nhận view model
   presentation/theme/            Theme resources và typography
-  presentation/controllers/     sẽ thêm khi nối UI/world với use cases
-  world/                        sẽ thêm room/actor/camera scene-script pairs
+  presentation/controllers/     gameplay/formula/text/dialogue/management models
+  world/                        room/actor/camera/atmosphere scene-script pairs
   bootstrap/main.*               composition root, startup và lifecycle
 assets/                         art/fonts/audio runtime và nguồn được chọn
 tests/                          headless contracts, sau đó parity/integration
@@ -34,8 +35,8 @@ tools/                          Python checks và migration authoring
 docs/                           kiến trúc, chapter, reference và review
 ```
 
-Các nhánh gameplay/world/controllers/previews nay đã có implementation cụ thể;
-domain formula_sandbox và save adapter vẫn chưa tạo. Không tạo implementation rỗng.
+Gameplay, formula_sandbox, native save adapters, management controllers/views và
+playable composition đã có implementation cụ thể. Không tạo implementation rỗng.
 Đặt scene cùng script của nó. Art dùng chung ở assets; material/scene riêng của
 một room đặt cạnh room đó. Không có thư mục scripts/scenes khổng lồ tách đôi.
 
@@ -80,9 +81,10 @@ Callable của RefCounted không được xem là thay thế cho việc giữ ow
 composition. Preview calendar giữ dependencies riêng và inject session/text
 vào controller; room/UI preview dùng fixture có nhãn rõ và chạy độc lập.
 
-Ba scene preview là entry cụ thể, không phải scene-transition framework. Main
+Ba scene preview cùng playable/sandbox là entry cụ thể. Main
 mount/unmount một entry; scene local signals yêu cầu quay lại. Session preview
-khởi tạo lại mỗi lần vào. World-dialogue-command integration tiếp tục Chapter 06.
+khởi tạo lại mỗi lần vào. Playable root giữ controller/room/UI/save dependencies;
+local modal priority khoá world input. Session chỉ thay khi command/load đã validate.
 
 View nhận model chỉ gồm dữ liệu hiển thị và emit intent bằng local signal.
 Controller chuyển intent thành command, nhận snapshot rồi dựng model mới.
@@ -124,7 +126,8 @@ switching, fallback locale và pluralization chỉ thêm khi có yêu cầu th�
 
 Camera, navigation, collider và ánh sáng ở world. Spatial position không phải
 gameplay progression. Walking/animation không đổi ngày/energy. Gameplay lưu
-location ID; world restore xử lý tọa độ và safe spawn ở adapter khi Chapter 9 làm.
+location ID nằm trong world envelope riêng; composition restore sau physics frame
+và safe-spawn query, không nhét coordinates vào domain gameplay.
 Sprite nhận/đổ bóng cần review riêng; có thể dùng shadow proxy để giữ silhouette.
 
 Newsroom nhận room/actor definitions và Texture2D được inject. Geometry boxes,

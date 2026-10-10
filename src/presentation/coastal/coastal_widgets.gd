@@ -21,17 +21,18 @@ static func art(parent: Control, texture: Texture2D, bounds: Array) -> TextureRe
 static func copy(parent: Control, value: String, spec: Dictionary, font: Font) -> Label:
 	var node := Label.new()
 	node.auto_translate_mode = Node.AUTO_TRANSLATE_MODE_DISABLED
+	if spec.has("width"):
+		node.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	node.text = value
 	var font_size: int = roundi(spec.get("size", 24))
 	node.add_theme_font_override("font", font)
 	node.add_theme_font_size_override("font_size", font_size)
 	node.add_theme_color_override("font_color", Color(spec.get("fill", "#16152f")))
 	node.position = Vector2(spec.x, spec.y - font.get_ascent(font_size))
-	if spec.has("width"):
-		node.size = Vector2(spec.width, spec.get("height", 120))
-		node.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	node.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	parent.add_child(node)
+	if spec.has("width"):
+		node.size = Vector2(spec.width, spec.get("height", 120))
 	return node
 
 

@@ -12,6 +12,8 @@ var _buttons: Array[Button] = []
 var _choice_art: Array[TextureRect] = []
 var _choice_mark: Array[TextureRect] = []
 var _labels: Dictionary = {}
+var _motion: Tween
+var _reduced := false
 
 
 func configure(model: Dictionary, layout: Dictionary, resources: Dictionary) -> void:
@@ -27,6 +29,9 @@ func _ready() -> void:
 
 
 func _build() -> void:
+	if _motion:
+		_motion.kill()
+	modulate.a = 1.0
 	for child: Node in get_children():
 		remove_child(child)
 		child.queue_free()
@@ -86,3 +91,13 @@ func _select(index: int) -> void:
 
 func body_text() -> String:
 	return _labels.line.text if _labels.has("line") else ""
+
+
+func present(reduced: bool) -> void:
+	_reduced = reduced
+	if _motion:
+		_motion.kill()
+	modulate.a = 1.0 if reduced else 0.0
+	if not reduced:
+		_motion = create_tween()
+		_motion.tween_property(self, "modulate:a", 1.0, _layout.motion.enter_duration)

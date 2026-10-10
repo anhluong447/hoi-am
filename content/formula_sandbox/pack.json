@@ -1,0 +1,2125 @@
+{
+  "schema_version": 1,
+  "config": {
+    "weeks": 12,
+    "daysPerWeek": 5,
+    "dailyEnergy": 4,
+    "scoutCost": 1,
+    "slots": 4,
+    "slotWeights": [
+      0.8,
+      0.25,
+      0.12,
+      0.08
+    ],
+    "fatigueTask": 20,
+    "fatigueNight": 10,
+    "fatigueWeekend": 30,
+    "fatigueFactor": 0.5,
+    "reporterWeight": 0.6,
+    "supporterWeight": 0.4,
+    "soloSupport": 0.5,
+    "qualityOffset": 1,
+    "qualityCap": 1.4,
+    "qualityFail": 0.6,
+    "maxScore": 100000,
+    "attractionExponent": 2,
+    "scoreBase": 0.85,
+    "scoreGrit": 0.3,
+    "pressureBase": 0.5,
+    "evidenceBase": 12,
+    "initialReputation": 30,
+    "reputationAlpha": 0.3,
+    "emptyPenalty": 2,
+    "blankPenalty": 5,
+    "equipmentThresholds": [
+      42,
+      55,
+      68
+    ],
+    "vanPenalty": 0.1,
+    "vanPenaltyCap": 0.25,
+    "pressureDecay": 0.85,
+    "actThresholds": [
+      100,
+      130,
+      160
+    ],
+    "scheduledWeeks": [
+      3,
+      7
+    ],
+    "strikeFractions": [
+      0.4,
+      0.8
+    ],
+    "strikeReputation": [
+      3,
+      6,
+      10
+    ],
+    "pressureCarry": 0.3,
+    "suspensionMultiplier": 0.5,
+    "maxDifficultyOffset": 2,
+    "evidenceRequired": 200,
+    "reputationRequired": 55
+  },
+  "staff": [
+    {
+      "id": "khue",
+      "joinWeek": 1,
+      "stats": {
+        "PV": 7,
+        "ANH": 4,
+        "TL": 5,
+        "GD": 6,
+        "HC": 5
+      },
+      "name_key": "content.sandbox.fixtures.khue"
+    },
+    {
+      "id": "van",
+      "joinWeek": 1,
+      "stats": {
+        "PV": 4,
+        "ANH": 3,
+        "TL": 7,
+        "GD": 6,
+        "HC": 6
+      },
+      "name_key": "content.sandbox.fixtures.van"
+    },
+    {
+      "id": "long",
+      "joinWeek": 1,
+      "stats": {
+        "PV": 5,
+        "ANH": 5,
+        "TL": 3,
+        "GD": 4,
+        "HC": 7
+      },
+      "name_key": "content.gameplay.definitions.long"
+    },
+    {
+      "id": "nhi",
+      "joinWeek": 3,
+      "stats": {
+        "PV": 3,
+        "ANH": 2,
+        "TL": 9,
+        "GD": 2,
+        "HC": 6
+      },
+      "name_key": "content.gameplay.definitions.nhi"
+    },
+    {
+      "id": "nv5",
+      "joinWeek": 5,
+      "stats": {
+        "PV": 4,
+        "ANH": 9,
+        "TL": 3,
+        "GD": 5,
+        "HC": 4
+      },
+      "name_key": "content.sandbox.fixtures.cong_tac_vien_anh"
+    },
+    {
+      "id": "nv6",
+      "joinWeek": 7,
+      "stats": {
+        "PV": 8,
+        "ANH": 3,
+        "TL": 4,
+        "GD": 7,
+        "HC": 3
+      },
+      "name_key": "content.sandbox.fixtures.cong_tac_vien_hien_truong"
+    }
+  ],
+  "subjects": [
+    {
+      "id": "W01-S01",
+      "appears": 1,
+      "expires": 5,
+      "attraction": 4,
+      "difficulty": 3,
+      "energy": 2,
+      "need": "HC",
+      "pressure": 1,
+      "main": false,
+      "preview": 4,
+      "previewPressure": 0.8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 1,
+        "value1": 1
+      }
+    },
+    {
+      "id": "W01-S02",
+      "appears": 1,
+      "expires": 5,
+      "attraction": 6,
+      "difficulty": 4,
+      "energy": 3,
+      "need": "TL",
+      "pressure": 6,
+      "main": false,
+      "preview": 7,
+      "previewPressure": 6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 2,
+        "value1": 1
+      }
+    },
+    {
+      "id": "W01-S03",
+      "appears": 1,
+      "expires": 5,
+      "attraction": 5,
+      "difficulty": 5,
+      "energy": 3,
+      "need": "ANH",
+      "pressure": 5,
+      "main": false,
+      "preview": 4,
+      "previewPressure": 6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 3,
+        "value1": 1
+      }
+    },
+    {
+      "id": "W01-S04",
+      "appears": 2,
+      "expires": 6,
+      "attraction": 8,
+      "difficulty": 7,
+      "energy": 4,
+      "need": "TL",
+      "pressure": 18,
+      "main": true,
+      "preview": 8,
+      "previewPressure": 14.4,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 4,
+        "value1": 1
+      }
+    },
+    {
+      "id": "W01-S05",
+      "appears": 2,
+      "expires": 6,
+      "attraction": 5,
+      "difficulty": 4,
+      "energy": 2,
+      "need": "HC",
+      "pressure": 1,
+      "main": false,
+      "preview": 6,
+      "previewPressure": 1,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 5,
+        "value1": 1
+      }
+    },
+    {
+      "id": "W01-S06",
+      "appears": 3,
+      "expires": 7,
+      "attraction": 6,
+      "difficulty": 5,
+      "energy": 3,
+      "need": "ANH",
+      "pressure": 4,
+      "main": false,
+      "preview": 5,
+      "previewPressure": 4.8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 6,
+        "value1": 1
+      }
+    },
+    {
+      "id": "W01-S07",
+      "appears": 3,
+      "expires": 7,
+      "attraction": 7,
+      "difficulty": 6,
+      "energy": 3,
+      "need": "GD",
+      "pressure": 10,
+      "main": false,
+      "preview": 7,
+      "previewPressure": 8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 7,
+        "value1": 1
+      }
+    },
+    {
+      "id": "W01-S08",
+      "appears": 4,
+      "expires": 8,
+      "attraction": 9,
+      "difficulty": 8,
+      "energy": 4,
+      "need": "GD",
+      "pressure": 26,
+      "main": true,
+      "preview": 10,
+      "previewPressure": 26,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 8,
+        "value1": 1
+      }
+    },
+    {
+      "id": "W02-S09",
+      "appears": 6,
+      "expires": 10,
+      "attraction": 8,
+      "difficulty": 6,
+      "energy": 3,
+      "need": "HC",
+      "pressure": 12,
+      "main": true,
+      "preview": 9,
+      "previewPressure": 9.600000000000001,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 9,
+        "value1": 2
+      }
+    },
+    {
+      "id": "W02-S10",
+      "appears": 6,
+      "expires": 10,
+      "attraction": 4,
+      "difficulty": 3,
+      "energy": 2,
+      "need": "ANH",
+      "pressure": 1,
+      "main": false,
+      "preview": 3,
+      "previewPressure": 1,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 10,
+        "value1": 2
+      }
+    },
+    {
+      "id": "W02-S11",
+      "appears": 6,
+      "expires": 10,
+      "attraction": 7,
+      "difficulty": 6,
+      "energy": 3,
+      "need": "HC",
+      "pressure": 10,
+      "main": false,
+      "preview": 7,
+      "previewPressure": 12,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 11,
+        "value1": 2
+      }
+    },
+    {
+      "id": "W02-S12",
+      "appears": 7,
+      "expires": 11,
+      "attraction": 5,
+      "difficulty": 4,
+      "energy": 2,
+      "need": "TL",
+      "pressure": 3,
+      "main": false,
+      "preview": 6,
+      "previewPressure": 2.4000000000000004,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 12,
+        "value1": 2
+      }
+    },
+    {
+      "id": "W02-S13",
+      "appears": 7,
+      "expires": 11,
+      "attraction": 3,
+      "difficulty": 2,
+      "energy": 2,
+      "need": "ANH",
+      "pressure": 1,
+      "main": false,
+      "preview": 2,
+      "previewPressure": 1,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 13,
+        "value1": 2
+      }
+    },
+    {
+      "id": "W02-S14",
+      "appears": 8,
+      "expires": 12,
+      "attraction": 8,
+      "difficulty": 7,
+      "energy": 4,
+      "need": "GD",
+      "pressure": 22,
+      "main": true,
+      "preview": 8,
+      "previewPressure": 26.4,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 14,
+        "value1": 2
+      }
+    },
+    {
+      "id": "W02-S15",
+      "appears": 9,
+      "expires": 13,
+      "attraction": 6,
+      "difficulty": 4,
+      "energy": 3,
+      "need": "TL",
+      "pressure": 2,
+      "main": false,
+      "preview": 7,
+      "previewPressure": 1.6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 15,
+        "value1": 2
+      }
+    },
+    {
+      "id": "W02-S16",
+      "appears": 9,
+      "expires": 13,
+      "attraction": 6,
+      "difficulty": 5,
+      "energy": 3,
+      "need": "HC",
+      "pressure": 6,
+      "main": false,
+      "preview": 5,
+      "previewPressure": 6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 16,
+        "value1": 2
+      }
+    },
+    {
+      "id": "W03-S17",
+      "appears": 11,
+      "expires": 15,
+      "attraction": 9,
+      "difficulty": 8,
+      "energy": 4,
+      "need": "TL",
+      "pressure": 30,
+      "main": true,
+      "preview": 8,
+      "previewPressure": 24,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 17,
+        "value1": 3
+      }
+    },
+    {
+      "id": "W03-S18",
+      "appears": 11,
+      "expires": 15,
+      "attraction": 6,
+      "difficulty": 5,
+      "energy": 3,
+      "need": "TL",
+      "pressure": 6,
+      "main": false,
+      "preview": 6,
+      "previewPressure": 6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 18,
+        "value1": 3
+      }
+    },
+    {
+      "id": "W03-S19",
+      "appears": 11,
+      "expires": 15,
+      "attraction": 7,
+      "difficulty": 6,
+      "energy": 3,
+      "need": "GD",
+      "pressure": 12,
+      "main": false,
+      "preview": 8,
+      "previewPressure": 14.399999999999999,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 19,
+        "value1": 3
+      }
+    },
+    {
+      "id": "W03-S20",
+      "appears": 12,
+      "expires": 16,
+      "attraction": 8,
+      "difficulty": 7,
+      "energy": 4,
+      "need": "HC",
+      "pressure": 16,
+      "main": true,
+      "preview": 7,
+      "previewPressure": 12.8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 20,
+        "value1": 3
+      }
+    },
+    {
+      "id": "W03-S21",
+      "appears": 12,
+      "expires": 16,
+      "attraction": 9,
+      "difficulty": 7,
+      "energy": 4,
+      "need": "HC",
+      "pressure": 22,
+      "main": true,
+      "preview": 9,
+      "previewPressure": 22,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 21,
+        "value1": 3
+      }
+    },
+    {
+      "id": "W03-S22",
+      "appears": 13,
+      "expires": 17,
+      "attraction": 5,
+      "difficulty": 3,
+      "energy": 2,
+      "need": "ANH",
+      "pressure": 3,
+      "main": false,
+      "preview": 6,
+      "previewPressure": 3.5999999999999996,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 22,
+        "value1": 3
+      }
+    },
+    {
+      "id": "W03-S23",
+      "appears": 13,
+      "expires": 17,
+      "attraction": 6,
+      "difficulty": 4,
+      "energy": 2,
+      "need": "ANH",
+      "pressure": 1,
+      "main": false,
+      "preview": 5,
+      "previewPressure": 0.8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 23,
+        "value1": 3
+      }
+    },
+    {
+      "id": "W03-S24",
+      "appears": 14,
+      "expires": 18,
+      "attraction": 8,
+      "difficulty": 8,
+      "energy": 4,
+      "need": "TL",
+      "pressure": 28,
+      "main": true,
+      "preview": 8,
+      "previewPressure": 28,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 24,
+        "value1": 3
+      }
+    },
+    {
+      "id": "W04-S01",
+      "appears": 16,
+      "expires": 20,
+      "attraction": 4,
+      "difficulty": 3,
+      "energy": 2,
+      "need": "HC",
+      "pressure": 1,
+      "main": false,
+      "preview": 4,
+      "previewPressure": 0.8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 1,
+        "value1": 4
+      }
+    },
+    {
+      "id": "W04-S02",
+      "appears": 16,
+      "expires": 20,
+      "attraction": 6,
+      "difficulty": 4,
+      "energy": 3,
+      "need": "TL",
+      "pressure": 6,
+      "main": false,
+      "preview": 7,
+      "previewPressure": 6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 2,
+        "value1": 4
+      }
+    },
+    {
+      "id": "W04-S03",
+      "appears": 16,
+      "expires": 20,
+      "attraction": 5,
+      "difficulty": 5,
+      "energy": 3,
+      "need": "ANH",
+      "pressure": 5,
+      "main": false,
+      "preview": 4,
+      "previewPressure": 6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 3,
+        "value1": 4
+      }
+    },
+    {
+      "id": "W04-S04",
+      "appears": 17,
+      "expires": 21,
+      "attraction": 8,
+      "difficulty": 7,
+      "energy": 4,
+      "need": "TL",
+      "pressure": 18,
+      "main": true,
+      "preview": 8,
+      "previewPressure": 14.4,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 4,
+        "value1": 4
+      }
+    },
+    {
+      "id": "W04-S05",
+      "appears": 17,
+      "expires": 21,
+      "attraction": 5,
+      "difficulty": 4,
+      "energy": 2,
+      "need": "HC",
+      "pressure": 1,
+      "main": false,
+      "preview": 6,
+      "previewPressure": 1,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 5,
+        "value1": 4
+      }
+    },
+    {
+      "id": "W04-S06",
+      "appears": 18,
+      "expires": 22,
+      "attraction": 6,
+      "difficulty": 5,
+      "energy": 3,
+      "need": "ANH",
+      "pressure": 4,
+      "main": false,
+      "preview": 5,
+      "previewPressure": 4.8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 6,
+        "value1": 4
+      }
+    },
+    {
+      "id": "W04-S07",
+      "appears": 18,
+      "expires": 22,
+      "attraction": 7,
+      "difficulty": 6,
+      "energy": 3,
+      "need": "GD",
+      "pressure": 10,
+      "main": false,
+      "preview": 7,
+      "previewPressure": 8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 7,
+        "value1": 4
+      }
+    },
+    {
+      "id": "W04-S08",
+      "appears": 19,
+      "expires": 23,
+      "attraction": 9,
+      "difficulty": 8,
+      "energy": 4,
+      "need": "GD",
+      "pressure": 26,
+      "main": true,
+      "preview": 10,
+      "previewPressure": 26,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 8,
+        "value1": 4
+      }
+    },
+    {
+      "id": "W05-S09",
+      "appears": 21,
+      "expires": 25,
+      "attraction": 8,
+      "difficulty": 6,
+      "energy": 3,
+      "need": "HC",
+      "pressure": 12,
+      "main": true,
+      "preview": 9,
+      "previewPressure": 9.600000000000001,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 9,
+        "value1": 5
+      }
+    },
+    {
+      "id": "W05-S10",
+      "appears": 21,
+      "expires": 25,
+      "attraction": 4,
+      "difficulty": 3,
+      "energy": 2,
+      "need": "ANH",
+      "pressure": 1,
+      "main": false,
+      "preview": 3,
+      "previewPressure": 1,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 10,
+        "value1": 5
+      }
+    },
+    {
+      "id": "W05-S11",
+      "appears": 21,
+      "expires": 25,
+      "attraction": 7,
+      "difficulty": 6,
+      "energy": 3,
+      "need": "HC",
+      "pressure": 10,
+      "main": false,
+      "preview": 7,
+      "previewPressure": 12,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 11,
+        "value1": 5
+      }
+    },
+    {
+      "id": "W05-S12",
+      "appears": 22,
+      "expires": 26,
+      "attraction": 5,
+      "difficulty": 4,
+      "energy": 2,
+      "need": "TL",
+      "pressure": 3,
+      "main": false,
+      "preview": 6,
+      "previewPressure": 2.4000000000000004,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 12,
+        "value1": 5
+      }
+    },
+    {
+      "id": "W05-S13",
+      "appears": 22,
+      "expires": 26,
+      "attraction": 3,
+      "difficulty": 2,
+      "energy": 2,
+      "need": "ANH",
+      "pressure": 1,
+      "main": false,
+      "preview": 2,
+      "previewPressure": 1,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 13,
+        "value1": 5
+      }
+    },
+    {
+      "id": "W05-S14",
+      "appears": 23,
+      "expires": 27,
+      "attraction": 8,
+      "difficulty": 7,
+      "energy": 4,
+      "need": "GD",
+      "pressure": 22,
+      "main": true,
+      "preview": 8,
+      "previewPressure": 26.4,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 14,
+        "value1": 5
+      }
+    },
+    {
+      "id": "W05-S15",
+      "appears": 24,
+      "expires": 28,
+      "attraction": 6,
+      "difficulty": 4,
+      "energy": 3,
+      "need": "TL",
+      "pressure": 2,
+      "main": false,
+      "preview": 7,
+      "previewPressure": 1.6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 15,
+        "value1": 5
+      }
+    },
+    {
+      "id": "W05-S16",
+      "appears": 24,
+      "expires": 28,
+      "attraction": 6,
+      "difficulty": 5,
+      "energy": 3,
+      "need": "HC",
+      "pressure": 6,
+      "main": false,
+      "preview": 5,
+      "previewPressure": 6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 16,
+        "value1": 5
+      }
+    },
+    {
+      "id": "W06-S17",
+      "appears": 26,
+      "expires": 30,
+      "attraction": 9,
+      "difficulty": 8,
+      "energy": 4,
+      "need": "TL",
+      "pressure": 30,
+      "main": true,
+      "preview": 8,
+      "previewPressure": 24,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 17,
+        "value1": 6
+      }
+    },
+    {
+      "id": "W06-S18",
+      "appears": 26,
+      "expires": 30,
+      "attraction": 6,
+      "difficulty": 5,
+      "energy": 3,
+      "need": "TL",
+      "pressure": 6,
+      "main": false,
+      "preview": 6,
+      "previewPressure": 6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 18,
+        "value1": 6
+      }
+    },
+    {
+      "id": "W06-S19",
+      "appears": 26,
+      "expires": 30,
+      "attraction": 7,
+      "difficulty": 6,
+      "energy": 3,
+      "need": "GD",
+      "pressure": 12,
+      "main": false,
+      "preview": 8,
+      "previewPressure": 14.399999999999999,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 19,
+        "value1": 6
+      }
+    },
+    {
+      "id": "W06-S20",
+      "appears": 27,
+      "expires": 31,
+      "attraction": 8,
+      "difficulty": 7,
+      "energy": 4,
+      "need": "HC",
+      "pressure": 16,
+      "main": true,
+      "preview": 7,
+      "previewPressure": 12.8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 20,
+        "value1": 6
+      }
+    },
+    {
+      "id": "W06-S21",
+      "appears": 27,
+      "expires": 31,
+      "attraction": 9,
+      "difficulty": 7,
+      "energy": 4,
+      "need": "HC",
+      "pressure": 22,
+      "main": true,
+      "preview": 9,
+      "previewPressure": 22,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 21,
+        "value1": 6
+      }
+    },
+    {
+      "id": "W06-S22",
+      "appears": 28,
+      "expires": 32,
+      "attraction": 5,
+      "difficulty": 3,
+      "energy": 2,
+      "need": "ANH",
+      "pressure": 3,
+      "main": false,
+      "preview": 6,
+      "previewPressure": 3.5999999999999996,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 22,
+        "value1": 6
+      }
+    },
+    {
+      "id": "W06-S23",
+      "appears": 28,
+      "expires": 32,
+      "attraction": 6,
+      "difficulty": 4,
+      "energy": 2,
+      "need": "ANH",
+      "pressure": 1,
+      "main": false,
+      "preview": 5,
+      "previewPressure": 0.8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 23,
+        "value1": 6
+      }
+    },
+    {
+      "id": "W06-S24",
+      "appears": 29,
+      "expires": 33,
+      "attraction": 8,
+      "difficulty": 8,
+      "energy": 4,
+      "need": "TL",
+      "pressure": 28,
+      "main": true,
+      "preview": 8,
+      "previewPressure": 28,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 24,
+        "value1": 6
+      }
+    },
+    {
+      "id": "W07-S01",
+      "appears": 31,
+      "expires": 35,
+      "attraction": 4,
+      "difficulty": 3,
+      "energy": 2,
+      "need": "HC",
+      "pressure": 1,
+      "main": false,
+      "preview": 4,
+      "previewPressure": 0.8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 1,
+        "value1": 7
+      }
+    },
+    {
+      "id": "W07-S02",
+      "appears": 31,
+      "expires": 35,
+      "attraction": 6,
+      "difficulty": 4,
+      "energy": 3,
+      "need": "TL",
+      "pressure": 6,
+      "main": false,
+      "preview": 7,
+      "previewPressure": 6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 2,
+        "value1": 7
+      }
+    },
+    {
+      "id": "W07-S03",
+      "appears": 31,
+      "expires": 35,
+      "attraction": 5,
+      "difficulty": 5,
+      "energy": 3,
+      "need": "ANH",
+      "pressure": 5,
+      "main": false,
+      "preview": 4,
+      "previewPressure": 6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 3,
+        "value1": 7
+      }
+    },
+    {
+      "id": "W07-S04",
+      "appears": 32,
+      "expires": 36,
+      "attraction": 8,
+      "difficulty": 7,
+      "energy": 4,
+      "need": "TL",
+      "pressure": 18,
+      "main": true,
+      "preview": 8,
+      "previewPressure": 14.4,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 4,
+        "value1": 7
+      }
+    },
+    {
+      "id": "W07-S05",
+      "appears": 32,
+      "expires": 36,
+      "attraction": 5,
+      "difficulty": 4,
+      "energy": 2,
+      "need": "HC",
+      "pressure": 1,
+      "main": false,
+      "preview": 6,
+      "previewPressure": 1,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 5,
+        "value1": 7
+      }
+    },
+    {
+      "id": "W07-S06",
+      "appears": 33,
+      "expires": 37,
+      "attraction": 6,
+      "difficulty": 5,
+      "energy": 3,
+      "need": "ANH",
+      "pressure": 4,
+      "main": false,
+      "preview": 5,
+      "previewPressure": 4.8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 6,
+        "value1": 7
+      }
+    },
+    {
+      "id": "W07-S07",
+      "appears": 33,
+      "expires": 37,
+      "attraction": 7,
+      "difficulty": 6,
+      "energy": 3,
+      "need": "GD",
+      "pressure": 10,
+      "main": false,
+      "preview": 7,
+      "previewPressure": 8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 7,
+        "value1": 7
+      }
+    },
+    {
+      "id": "W07-S08",
+      "appears": 34,
+      "expires": 38,
+      "attraction": 9,
+      "difficulty": 8,
+      "energy": 4,
+      "need": "GD",
+      "pressure": 26,
+      "main": true,
+      "preview": 10,
+      "previewPressure": 26,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 8,
+        "value1": 7
+      }
+    },
+    {
+      "id": "W08-S09",
+      "appears": 36,
+      "expires": 40,
+      "attraction": 8,
+      "difficulty": 6,
+      "energy": 3,
+      "need": "HC",
+      "pressure": 12,
+      "main": true,
+      "preview": 9,
+      "previewPressure": 9.600000000000001,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 9,
+        "value1": 8
+      }
+    },
+    {
+      "id": "W08-S10",
+      "appears": 36,
+      "expires": 40,
+      "attraction": 4,
+      "difficulty": 3,
+      "energy": 2,
+      "need": "ANH",
+      "pressure": 1,
+      "main": false,
+      "preview": 3,
+      "previewPressure": 1,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 10,
+        "value1": 8
+      }
+    },
+    {
+      "id": "W08-S11",
+      "appears": 36,
+      "expires": 40,
+      "attraction": 7,
+      "difficulty": 6,
+      "energy": 3,
+      "need": "HC",
+      "pressure": 10,
+      "main": false,
+      "preview": 7,
+      "previewPressure": 12,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 11,
+        "value1": 8
+      }
+    },
+    {
+      "id": "W08-S12",
+      "appears": 37,
+      "expires": 41,
+      "attraction": 5,
+      "difficulty": 4,
+      "energy": 2,
+      "need": "TL",
+      "pressure": 3,
+      "main": false,
+      "preview": 6,
+      "previewPressure": 2.4000000000000004,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 12,
+        "value1": 8
+      }
+    },
+    {
+      "id": "W08-S13",
+      "appears": 37,
+      "expires": 41,
+      "attraction": 3,
+      "difficulty": 2,
+      "energy": 2,
+      "need": "ANH",
+      "pressure": 1,
+      "main": false,
+      "preview": 2,
+      "previewPressure": 1,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 13,
+        "value1": 8
+      }
+    },
+    {
+      "id": "W08-S14",
+      "appears": 38,
+      "expires": 42,
+      "attraction": 8,
+      "difficulty": 7,
+      "energy": 4,
+      "need": "GD",
+      "pressure": 22,
+      "main": true,
+      "preview": 8,
+      "previewPressure": 26.4,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 14,
+        "value1": 8
+      }
+    },
+    {
+      "id": "W08-S15",
+      "appears": 39,
+      "expires": 43,
+      "attraction": 6,
+      "difficulty": 4,
+      "energy": 3,
+      "need": "TL",
+      "pressure": 2,
+      "main": false,
+      "preview": 7,
+      "previewPressure": 1.6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 15,
+        "value1": 8
+      }
+    },
+    {
+      "id": "W08-S16",
+      "appears": 39,
+      "expires": 43,
+      "attraction": 6,
+      "difficulty": 5,
+      "energy": 3,
+      "need": "HC",
+      "pressure": 6,
+      "main": false,
+      "preview": 5,
+      "previewPressure": 6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 16,
+        "value1": 8
+      }
+    },
+    {
+      "id": "W09-S17",
+      "appears": 41,
+      "expires": 45,
+      "attraction": 9,
+      "difficulty": 8,
+      "energy": 4,
+      "need": "TL",
+      "pressure": 30,
+      "main": true,
+      "preview": 8,
+      "previewPressure": 24,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 17,
+        "value1": 9
+      }
+    },
+    {
+      "id": "W09-S18",
+      "appears": 41,
+      "expires": 45,
+      "attraction": 6,
+      "difficulty": 5,
+      "energy": 3,
+      "need": "TL",
+      "pressure": 6,
+      "main": false,
+      "preview": 6,
+      "previewPressure": 6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 18,
+        "value1": 9
+      }
+    },
+    {
+      "id": "W09-S19",
+      "appears": 41,
+      "expires": 45,
+      "attraction": 7,
+      "difficulty": 6,
+      "energy": 3,
+      "need": "GD",
+      "pressure": 12,
+      "main": false,
+      "preview": 8,
+      "previewPressure": 14.399999999999999,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 19,
+        "value1": 9
+      }
+    },
+    {
+      "id": "W09-S20",
+      "appears": 42,
+      "expires": 46,
+      "attraction": 8,
+      "difficulty": 7,
+      "energy": 4,
+      "need": "HC",
+      "pressure": 16,
+      "main": true,
+      "preview": 7,
+      "previewPressure": 12.8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 20,
+        "value1": 9
+      }
+    },
+    {
+      "id": "W09-S21",
+      "appears": 42,
+      "expires": 46,
+      "attraction": 9,
+      "difficulty": 7,
+      "energy": 4,
+      "need": "HC",
+      "pressure": 22,
+      "main": true,
+      "preview": 9,
+      "previewPressure": 22,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 21,
+        "value1": 9
+      }
+    },
+    {
+      "id": "W09-S22",
+      "appears": 43,
+      "expires": 47,
+      "attraction": 5,
+      "difficulty": 3,
+      "energy": 2,
+      "need": "ANH",
+      "pressure": 3,
+      "main": false,
+      "preview": 6,
+      "previewPressure": 3.5999999999999996,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 22,
+        "value1": 9
+      }
+    },
+    {
+      "id": "W09-S23",
+      "appears": 43,
+      "expires": 47,
+      "attraction": 6,
+      "difficulty": 4,
+      "energy": 2,
+      "need": "ANH",
+      "pressure": 1,
+      "main": false,
+      "preview": 5,
+      "previewPressure": 0.8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 23,
+        "value1": 9
+      }
+    },
+    {
+      "id": "W09-S24",
+      "appears": 44,
+      "expires": 48,
+      "attraction": 8,
+      "difficulty": 8,
+      "energy": 4,
+      "need": "TL",
+      "pressure": 28,
+      "main": true,
+      "preview": 8,
+      "previewPressure": 28,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 24,
+        "value1": 9
+      }
+    },
+    {
+      "id": "W10-S01",
+      "appears": 46,
+      "expires": 50,
+      "attraction": 4,
+      "difficulty": 3,
+      "energy": 2,
+      "need": "HC",
+      "pressure": 1,
+      "main": false,
+      "preview": 4,
+      "previewPressure": 0.8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 1,
+        "value1": 10
+      }
+    },
+    {
+      "id": "W10-S02",
+      "appears": 46,
+      "expires": 50,
+      "attraction": 6,
+      "difficulty": 4,
+      "energy": 3,
+      "need": "TL",
+      "pressure": 6,
+      "main": false,
+      "preview": 7,
+      "previewPressure": 6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 2,
+        "value1": 10
+      }
+    },
+    {
+      "id": "W10-S03",
+      "appears": 46,
+      "expires": 50,
+      "attraction": 5,
+      "difficulty": 5,
+      "energy": 3,
+      "need": "ANH",
+      "pressure": 5,
+      "main": false,
+      "preview": 4,
+      "previewPressure": 6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 3,
+        "value1": 10
+      }
+    },
+    {
+      "id": "W10-S04",
+      "appears": 47,
+      "expires": 51,
+      "attraction": 8,
+      "difficulty": 7,
+      "energy": 4,
+      "need": "TL",
+      "pressure": 18,
+      "main": true,
+      "preview": 8,
+      "previewPressure": 14.4,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 4,
+        "value1": 10
+      }
+    },
+    {
+      "id": "W10-S05",
+      "appears": 47,
+      "expires": 51,
+      "attraction": 5,
+      "difficulty": 4,
+      "energy": 2,
+      "need": "HC",
+      "pressure": 1,
+      "main": false,
+      "preview": 6,
+      "previewPressure": 1,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 5,
+        "value1": 10
+      }
+    },
+    {
+      "id": "W10-S06",
+      "appears": 48,
+      "expires": 52,
+      "attraction": 6,
+      "difficulty": 5,
+      "energy": 3,
+      "need": "ANH",
+      "pressure": 4,
+      "main": false,
+      "preview": 5,
+      "previewPressure": 4.8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 6,
+        "value1": 10
+      }
+    },
+    {
+      "id": "W10-S07",
+      "appears": 48,
+      "expires": 52,
+      "attraction": 7,
+      "difficulty": 6,
+      "energy": 3,
+      "need": "GD",
+      "pressure": 10,
+      "main": false,
+      "preview": 7,
+      "previewPressure": 8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 7,
+        "value1": 10
+      }
+    },
+    {
+      "id": "W10-S08",
+      "appears": 49,
+      "expires": 53,
+      "attraction": 9,
+      "difficulty": 8,
+      "energy": 4,
+      "need": "GD",
+      "pressure": 26,
+      "main": true,
+      "preview": 10,
+      "previewPressure": 26,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 8,
+        "value1": 10
+      }
+    },
+    {
+      "id": "W11-S09",
+      "appears": 51,
+      "expires": 55,
+      "attraction": 8,
+      "difficulty": 6,
+      "energy": 3,
+      "need": "HC",
+      "pressure": 12,
+      "main": true,
+      "preview": 9,
+      "previewPressure": 9.600000000000001,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 9,
+        "value1": 11
+      }
+    },
+    {
+      "id": "W11-S10",
+      "appears": 51,
+      "expires": 55,
+      "attraction": 4,
+      "difficulty": 3,
+      "energy": 2,
+      "need": "ANH",
+      "pressure": 1,
+      "main": false,
+      "preview": 3,
+      "previewPressure": 1,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 10,
+        "value1": 11
+      }
+    },
+    {
+      "id": "W11-S11",
+      "appears": 51,
+      "expires": 55,
+      "attraction": 7,
+      "difficulty": 6,
+      "energy": 3,
+      "need": "HC",
+      "pressure": 10,
+      "main": false,
+      "preview": 7,
+      "previewPressure": 12,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 11,
+        "value1": 11
+      }
+    },
+    {
+      "id": "W11-S12",
+      "appears": 52,
+      "expires": 56,
+      "attraction": 5,
+      "difficulty": 4,
+      "energy": 2,
+      "need": "TL",
+      "pressure": 3,
+      "main": false,
+      "preview": 6,
+      "previewPressure": 2.4000000000000004,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 12,
+        "value1": 11
+      }
+    },
+    {
+      "id": "W11-S13",
+      "appears": 52,
+      "expires": 56,
+      "attraction": 3,
+      "difficulty": 2,
+      "energy": 2,
+      "need": "ANH",
+      "pressure": 1,
+      "main": false,
+      "preview": 2,
+      "previewPressure": 1,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 13,
+        "value1": 11
+      }
+    },
+    {
+      "id": "W11-S14",
+      "appears": 53,
+      "expires": 57,
+      "attraction": 8,
+      "difficulty": 7,
+      "energy": 4,
+      "need": "GD",
+      "pressure": 22,
+      "main": true,
+      "preview": 8,
+      "previewPressure": 26.4,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 14,
+        "value1": 11
+      }
+    },
+    {
+      "id": "W11-S15",
+      "appears": 54,
+      "expires": 58,
+      "attraction": 6,
+      "difficulty": 4,
+      "energy": 3,
+      "need": "TL",
+      "pressure": 2,
+      "main": false,
+      "preview": 7,
+      "previewPressure": 1.6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 15,
+        "value1": 11
+      }
+    },
+    {
+      "id": "W11-S16",
+      "appears": 54,
+      "expires": 58,
+      "attraction": 6,
+      "difficulty": 5,
+      "energy": 3,
+      "need": "HC",
+      "pressure": 6,
+      "main": false,
+      "preview": 5,
+      "previewPressure": 6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 16,
+        "value1": 11
+      }
+    },
+    {
+      "id": "W12-S17",
+      "appears": 56,
+      "expires": 60,
+      "attraction": 9,
+      "difficulty": 8,
+      "energy": 4,
+      "need": "TL",
+      "pressure": 30,
+      "main": true,
+      "preview": 8,
+      "previewPressure": 24,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 17,
+        "value1": 12
+      }
+    },
+    {
+      "id": "W12-S18",
+      "appears": 56,
+      "expires": 60,
+      "attraction": 6,
+      "difficulty": 5,
+      "energy": 3,
+      "need": "TL",
+      "pressure": 6,
+      "main": false,
+      "preview": 6,
+      "previewPressure": 6,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 18,
+        "value1": 12
+      }
+    },
+    {
+      "id": "W12-S19",
+      "appears": 56,
+      "expires": 60,
+      "attraction": 7,
+      "difficulty": 6,
+      "energy": 3,
+      "need": "GD",
+      "pressure": 12,
+      "main": false,
+      "preview": 8,
+      "previewPressure": 14.399999999999999,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 19,
+        "value1": 12
+      }
+    },
+    {
+      "id": "W12-S20",
+      "appears": 57,
+      "expires": 61,
+      "attraction": 8,
+      "difficulty": 7,
+      "energy": 4,
+      "need": "HC",
+      "pressure": 16,
+      "main": true,
+      "preview": 7,
+      "previewPressure": 12.8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 20,
+        "value1": 12
+      }
+    },
+    {
+      "id": "W12-S21",
+      "appears": 57,
+      "expires": 61,
+      "attraction": 9,
+      "difficulty": 7,
+      "energy": 4,
+      "need": "HC",
+      "pressure": 22,
+      "main": true,
+      "preview": 9,
+      "previewPressure": 22,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 21,
+        "value1": 12
+      }
+    },
+    {
+      "id": "W12-S22",
+      "appears": 58,
+      "expires": 62,
+      "attraction": 5,
+      "difficulty": 3,
+      "energy": 2,
+      "need": "ANH",
+      "pressure": 3,
+      "main": false,
+      "preview": 6,
+      "previewPressure": 3.5999999999999996,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 22,
+        "value1": 12
+      }
+    },
+    {
+      "id": "W12-S23",
+      "appears": 58,
+      "expires": 62,
+      "attraction": 6,
+      "difficulty": 4,
+      "energy": 2,
+      "need": "ANH",
+      "pressure": 1,
+      "main": false,
+      "preview": 5,
+      "previewPressure": 0.8,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 23,
+        "value1": 12
+      }
+    },
+    {
+      "id": "W12-S24",
+      "appears": 59,
+      "expires": 63,
+      "attraction": 8,
+      "difficulty": 8,
+      "energy": 4,
+      "need": "TL",
+      "pressure": 28,
+      "main": true,
+      "preview": 8,
+      "previewPressure": 28,
+      "scouted": false,
+      "done": false,
+      "name_key": "content.sandbox.fixtures.de_tai_thu_value0_tuan_value1",
+      "name_parameters": {
+        "value0": 24,
+        "value1": 12
+      }
+    }
+  ],
+  "policies": [
+    {
+      "id": "balanced",
+      "scout": true,
+      "noVan": true,
+      "cap": 4,
+      "name_key": "src.app.Simulation.can_bang"
+    },
+    {
+      "id": "use-van",
+      "scout": true,
+      "cap": 4,
+      "name_key": "src.app.Simulation.dung_van_bat_chap"
+    },
+    {
+      "id": "grit80",
+      "scout": true,
+      "noVan": true,
+      "cap": 4,
+      "grit": 0.8,
+      "name_key": "src.app.Simulation.gai_goc_80"
+    },
+    {
+      "id": "greedy",
+      "noVan": true,
+      "cap": 4,
+      "grit": 1,
+      "greedy": true,
+      "name_key": "src.app.Simulation.tham_diem_100"
+    },
+    {
+      "id": "safe",
+      "noVan": true,
+      "cap": 4,
+      "grit": 0,
+      "safe": true,
+      "name_key": "src.app.Simulation.chi_an_toan"
+    },
+    {
+      "id": "hibernate",
+      "scout": true,
+      "noVan": true,
+      "cap": 1,
+      "name_key": "src.app.Simulation.mot_bai_tuan"
+    },
+    {
+      "id": "solo",
+      "scout": true,
+      "noVan": true,
+      "cap": 4,
+      "solo": true,
+      "name_key": "src.app.Simulation.khue_lam_mot_minh"
+    },
+    {
+      "id": "late",
+      "scout": true,
+      "noVan": true,
+      "cap": 4,
+      "late": true,
+      "name_key": "src.app.Simulation.an_toan_5_tuan_roi_bung"
+    }
+  ]
+}

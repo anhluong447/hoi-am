@@ -1,20 +1,20 @@
 # Chapter 07 — Hồ sơ, đồng đội và xuất bản
 
-Trạng thái: chưa bắt đầu. Phụ thuộc: Chapters 02 và 06.
+Trạng thái: full newsroom parity đã kiểm chứng. Phụ thuộc: Chapters 02 và 06.
 Mục tiêu: port vòng nghiệp vụ hiện có bằng các handler nhỏ với hành vi đúng source.
 
 ## Work packages
 
-- [ ] C07.01: open/assign, availability, progress/quality và mismatch feedback.
-- [ ] C07.02: reassign/cancel/short/continue; reset đúng progress, days, attempts,
+- [x] C07.01: open/assign, availability, progress/quality và mismatch feedback.
+- [x] C07.02: reassign/cancel/short/continue; reset đúng progress, days, attempts,
   metrics và không tính thêm energy khi approve.
-- [ ] C07.03: editorial queue/capacity, working days/weekend, staff absence và deadlines.
-- [ ] C07.04: select/write/publication, trọng số và packaging của gameplay ruleset;
+- [x] C07.03: editorial queue/capacity, working days/weekend, staff absence và deadlines.
+- [x] C07.04: select/write/publication, trọng số và packaging của gameplay ruleset;
   một lần nightly processing, thứ Sáu chốt số và không phát hành lại khi chờ approve.
-- [ ] C07.05: reports/log/message view models; text key/parameters, legacy text
+- [x] C07.05: reports/log/message view models; text key/parameters, legacy text
   compatibility giữ riêng ở adapter nếu cần.
-- [ ] C07.06: UI panels theo feature, không nối outcome logic vào Button/scene.
-- [ ] C07.07: replay policies và routes đã port; so đủ fields với source, chờ
+- [x] C07.06: UI panels theo feature, không nối outcome logic vào Button/scene.
+- [x] C07.07: replay policies và routes đã port; so đủ fields với source, chờ
   personal handlers ở Chapter 08 trước khi tuyên bố toàn bộ policies pass.
 
 ## Đầu ra
@@ -32,3 +32,9 @@ lặp. Không có formula-sandbox scoring/calendar imports. Sai khác float dùn
 
 Giữ mock tuning/lịch source. Rebalance hoặc thay đổi cơ chế để phù hợp story mới
 là proposal riêng, không lẫn vào migration.
+
+## Evidence 2026-10-10
+
+All source newsroom handlers, management models and full-state policies verified.
+
+[Review, parity, native captures/video/profile](../../reviews/chapters-06-12/README.md).

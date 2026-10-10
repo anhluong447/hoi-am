@@ -74,6 +74,11 @@ def main():
         for dependency in re.findall(r'res://src/([a-z_]+)/[^"\s]*', text):
             if dependency not in allowed:
                 issue(path, f"Forbidden dependency: {layer} -> {dependency}")
+        if layer == "domain":
+            ruleset = path.relative_to(ROOT / "src/domain").parts[0]
+            other = "formula_sandbox" if ruleset == "gameplay" else "gameplay" if ruleset == "formula_sandbox" else None
+            if other and f"res://src/domain/{other}/" in text:
+                issue(path, "Cross-ruleset domain import")
         code = code_only(text)
         for name, dependency in classes.items():
             if dependency not in allowed and re.search(rf"\b{re.escape(name)}\b", code):
@@ -97,7 +102,7 @@ def main():
     for extension in ("*.gd", "*.tscn", "*.tres"):
         for path in (ROOT / "src").rglob(extension):
             text = path.read_text(encoding="utf-8")
-            for resource in re.findall(r'res://[^"\s)]+\.(?:gd|tscn|tres|ttf|png|svg)', text):
+            for resource in re.findall(r'res://[^"\s)]+\.(?:gdshader|gd|tscn|tres|ttf|png|svg)(?=["\s)])', text):
                 if not (ROOT / resource[6:]).is_file():
                     issue(path, f"Missing resource: {resource}")
             if path.suffix != ".gd" and re.search(

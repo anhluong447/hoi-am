@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/bootstrap/gameplay/playable.gd" id="1"]
+
+[node name="ReadingRoomExtension" type="Node"]
+script = ExtResource("1")
+reading_room_extension = true
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Interface" type="CanvasLayer" parent="."]

@@ -8,13 +8,21 @@
 | New log params may contain nested text references or numeric format descriptors | Resolve labels and vi grouping only in presentation | Exact rendered event equivalence in six traces; log order preserved |
 | Preserve v1/v2 historical rendered log params/messages during migration | Old evidence must remain readable | Validation accepts keyed legacy events and legacy messages; new rules never author translated strings |
 | Open/assign/approve/select and nightly work were ported with Chapter 02 | Sleep parity needs work, approval and publication hooks | Assignment/reassignment and publication-once traces; no claim of full newsroom policy parity |
-| Unsupported commands reject explicitly | Avoid success without an implementation | Session immutability checks for seven deferred command families |
+| Previously deferred commands now ported | Complete the source gameplay loop without tuning changes | Quest/personal traces and all four policies including 84 days match full source state |
 | World preview has no gameplay clock | Spatial movement is independent of progression | Independent room/session test, native movement/lock checks |
 | Preview portal emits destination but returns to safe spawn | Only the newsroom has 3D geometry in this chapter | Destination/portal ID tests; no yard scene or scene-transition framework |
 | Orthographic camera is the greybox default | Consistent actor scale through the room | Native perspective comparison retained; production camera remains reviewable |
 | Y billboard + capsule shadow proxy is the current actor setup | Maintain standing registration and avoid cardboard shadow silhouette | Fixed/Y and three shadow-mode native captures; art quality remains a pilot |
 | Isolated previews own separate fresh sessions/fixtures | Keep review reproducible before Chapter 06 integration | Calendar uses live state; world/UI previews visibly mark fixture status; returning to calendar starts a new session |
 | Static UI behavior passes; G2 stays open | Porting the renderer does not certify replica art | Native captures, conservative-mask diagnostic and explicit visual backlog |
+| Gameplay native envelope/world versions are separate from state v3 | Keep spatial coordinates out of domain and validate before replace | ADR 003; round-trip, corruption, interruption and legacy import tests |
+| Formula state v2 stores text references | Preserve pure domain and translated journal/labels at view time | Eight policies match source full state through explicit display adapter; source role label omitted |
+| Formula save supports isolated solo roster | Source simulation supports solo but its save validator rejected it | Native validator preserves full fatigue keys, validates the actual roster and keeps separate slots |
+| Prototype travel presents source location IDs without consuming slots | Domain command contract contains no travel cost | Personal action lists follow source location mapping; room geometry is authored sample/prototype |
+| Native portals use authored location destinations | Keep prototype connectivity out of runtime hardcoded routing | Room switches preserve quality settings; prompts read the mounted room and unsafe vertical save positions fall back to spawn |
+| Reading-room extension stays in its F6 scene | Rehearse extension without altering baseline gameplay content | New room/NPC/graph/case work through existing handlers; Vân sprite explicitly used as temporary stand-in |
+| High/Low and effect A/B are renderer-only | Readable sprites/UI and a measurable device budget | Native profile/captures; fog/glow not enabled by default; far DOF stays off UI canvas |
+| Save uses full float precision and semantic JSON equality | Serialization can change integral numeric representation | No float rounding or tolerance is used to hide save changes |
 
 The gameplay packs remain mock mechanics. The story bible remains reference
 material with its existing proposal/canon distinctions. Captured dialogue graphs

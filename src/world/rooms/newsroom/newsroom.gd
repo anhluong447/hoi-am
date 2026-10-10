@@ -9,6 +9,7 @@ const GEOMETRY = preload("res://src/world/rooms/newsroom/room_geometry.gd")
 const TARGET = preload("res://src/world/rooms/newsroom/interaction_target.gd")
 const PLAYER = preload("res://src/world/actors/player_body.tscn")
 const RIG = preload("res://src/world/actors/sprite_rig.tscn")
+const ATMOSPHERE = preload("res://src/world/rooms/newsroom/room_atmosphere.gd")
 
 var player: CharacterBody3D
 var camera: Camera3D
@@ -19,6 +20,7 @@ var _targets: Array = []
 var _npcs: Dictionary = {}
 var _input_enabled := true
 var _nearby := ""
+var _atmosphere: Node3D
 
 
 func configure(config: Dictionary, actors: Dictionary, textures: Dictionary) -> void:
@@ -69,6 +71,16 @@ func _ready() -> void:
 		add_child(body)
 		npc.set_meta("body", body)
 	_build_portal()
+	_atmosphere = ATMOSPHERE.new()
+	_atmosphere.configure(_config.get("atmosphere", {}))
+	add_child(_atmosphere)
+	if _config.get("atmosphere", {}).has("dof"):
+		var dof: Dictionary = _config.atmosphere.dof
+		var attributes := CameraAttributesPractical.new()
+		attributes.dof_blur_far_enabled = true
+		attributes.dof_blur_far_distance = dof.distance
+		attributes.dof_blur_far_transition = dof.transition
+		camera.attributes = attributes
 
 
 func _physics_process(_delta: float) -> void:
@@ -120,8 +132,19 @@ func safe_spawn(candidate: Vector3) -> Vector3:
 	query.shape = player.get_node("Collision").shape
 	query.transform = Transform3D(Basis.IDENTITY, candidate + player.get_node("Collision").position)
 	query.collision_mask = 1
-	var in_room: bool = absf(candidate.x) < _config.spawn_bounds[0] and absf(candidate.z) < _config.spawn_bounds[1] and candidate.y >= 0
+	var in_room: bool = (
+		absf(candidate.x) < _config.spawn_bounds[0]
+		and absf(candidate.z) < _config.spawn_bounds[1]
+		and candidate.y >= 0 and absf(candidate.y - _config.spawn[1]) <= _config.collider.height
+	)
 	return candidate if in_room and get_world_3d().direct_space_state.intersect_shape(query).is_empty() else GEOMETRY.vector(_config.spawn)
+
+
+func target_label_key(id: String) -> String:
+	for target: Dictionary in _config.targets:
+		if target.id == id:
+			return target.label_key
+	return ""
 
 
 func anchor_for(id: String) -> Dictionary:
@@ -143,6 +166,13 @@ func set_actor_talking(id: String, talking: bool) -> void:
 		_npcs[id].present(Vector3.ZERO, camera, talking)
 
 
+func set_quality(id: String) -> void:
+	_atmosphere.set_quality(id)
+	get_node("WindowSun").shadow_enabled = id != "low"
+	if camera.attributes:
+		camera.attributes.dof_blur_far_enabled = id != "low"
+
+
 func apply_npc_presentation(model: Array) -> void:
 	for item: Dictionary in model:
 		if _npcs.has(item.id):
@@ -157,6 +187,7 @@ func apply_npc_presentation(model: Array) -> void:
 
 func _build_light() -> void:
 	var environment := WorldEnvironment.new()
+	environment.name = "WorldEnvironment"
 	var settings := Environment.new()
 	settings.background_mode = Environment.BG_COLOR
 	settings.background_color = Color(_config.ambient.background)

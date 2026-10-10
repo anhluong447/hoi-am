@@ -38,7 +38,7 @@ func run() -> void:
 	expect(created.ok and validator.validate(created.state).ok, "Create valid gameplay state v3")
 	var init_trace := _fixture("calendar-weekend")
 	expect(COMPARE.difference(init_trace.initial, comparator.compatibility(created.state)).is_empty(), "Initial state source parity")
-	for id: String in ["calendar-weekend", "guards", "final-day", "assignment-reassignment", "publication-once", "editorial-next-day"]:
+	for id: String in ["calendar-weekend", "guards", "final-day", "assignment-reassignment", "publication-once", "editorial-next-day", "quest-and-write", "personal-all-v2"]:
 		var trace := _fixture(id)
 		var migrated := MIGRATION.migrate(trace.initial, pack)
 		expect(migrated.ok, id + " migration")
@@ -117,9 +117,6 @@ func _test_corruptions(state: Dictionary, rules: RefCounted, validator: RefCount
 	result.state.money = 999
 	result.events[0].params.injected = true
 	expect(session.snapshot().money == state.money and not session.snapshot().log[-1].params.has("injected"), "Gameplay result/events owned")
-	for command: String in ["quest", "write", "date", "gift", "tool", "boost", "upgrade"]:
-		var prior := session.snapshot()
-		expect(session.execute({"type": command}).error.code == "command_not_ported" and session.snapshot() == prior, "Unported command rejects: " + command)
 	expect(not rules.create_session({"days": 13}).ok, "Reject invalid config days")
 	expect(not MIGRATION.migrate({"version": 4}, pack).ok, "Reject future version")
 

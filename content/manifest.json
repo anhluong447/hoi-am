@@ -10,5 +10,8 @@
   "dialogue_ui_path": "res://content/ui/dialogue.json",
   "hud_ui_path": "res://content/ui/hud.json",
   "ui_art_path": "res://content/ui/art_manifest.json",
-  "preview_path": "res://content/ui/preview.json"
+  "preview_path": "res://content/ui/preview.json",
+  "workspace_path": "res://content/ui/workspace.json",
+  "playable_dialogue_path": "res://content/dialogue/playable.json",
+  "locations_path": "res://content/world/locations.json"
 }

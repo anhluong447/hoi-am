@@ -8,14 +8,15 @@ const VALIDATOR = preload("res://src/domain/gameplay/state_validation.gd")
 const CONTENT_VALIDATOR = preload("res://src/domain/gameplay/content_validation.gd")
 const SESSION = preload("res://src/application/game_session.gd")
 const TEXT = preload("res://src/presentation/controllers/gameplay_text.gd")
+const GRAPH = preload("res://src/domain/dialogue/dialogue_graph.gd")
 
 
-static func prepare() -> Dictionary:
+static func prepare(reading_room_extension: bool = false) -> Dictionary:
 	var manifest := LOADER.read_dictionary("res://content/manifest.json")
 	if not manifest.ok:
 		return manifest
 	var data: Dictionary = {}
-	for id: String in ["catalog", "bootstrap", "gameplay", "dialogue", "room", "actors", "dialogue_ui", "hud_ui", "ui_art", "preview"]:
+	for id: String in ["catalog", "bootstrap", "gameplay", "dialogue", "room", "actors", "dialogue_ui", "hud_ui", "ui_art", "preview", "workspace", "playable_dialogue", "locations"]:
 		var path: Variant = manifest.data.get(id + "_path")
 		if not path is String:
 			return {"ok": false, "error": {"code": "missing_manifest_path", "field": id}}
@@ -23,6 +24,13 @@ static func prepare() -> Dictionary:
 		if not loaded.ok:
 			return loaded
 		data[id] = loaded.data
+	if reading_room_extension:
+		var example := LOADER.read_dictionary("res://content/extensions/reading_room/case.json")
+		var graph := LOADER.read_dictionary("res://content/extensions/reading_room/dialogue.json")
+		if not example.ok or not graph.ok:
+			return {"ok": false, "error": {"code": "extension_content_failed"}}
+		data.gameplay.cases.append(example.data)
+		data.playable_dialogue.scenes["library-visitor"] = graph.data
 	var catalog := CATALOG.new()
 	var registered := catalog.set_catalog(data.catalog)
 	if not registered.ok:
@@ -30,6 +38,9 @@ static func prepare() -> Dictionary:
 	var validated := CONTENT_VALIDATOR.validate(data.gameplay, data.catalog)
 	if not validated.ok:
 		return validated
+	for graph: Dictionary in data.dialogue.scenes.values() + data.playable_dialogue.scenes.values():
+		if not GRAPH.validate(graph, data.catalog):
+			return {"ok": false, "error": {"code": "invalid_dialogue_graph", "text_key": "save.invalid"}}
 	var rules := RULES.new(data.gameplay)
 	var validator := VALIDATOR.new(data.gameplay, data.catalog)
 	var session := SESSION.new(rules.transition, validator.validate)

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "locations": {
+    "school": {
+      "room_id": "school",
+      "room_path": "res://content/world/school.json",
+      "prototype": true
+    },
+    "club": {
+      "room_id": "newsroom_sample",
+      "room_path": "res://content/world/newsroom_sample.json",
+      "prototype": false
+    },
+    "library": {
+      "room_id": "library",
+      "room_path": "res://content/world/library.json",
+      "prototype": true
+    },
+    "cafe": {
+      "room_id": "cafe",
+      "room_path": "res://content/world/cafe.json",
+      "prototype": true
+    },
+    "shop": {
+      "room_id": "shop",
+      "room_path": "res://content/world/shop.json",
+      "prototype": true
+    },
+    "job": {
+      "room_id": "job",
+      "room_path": "res://content/world/job.json",
+      "prototype": true
+    },
+    "waterfront": {
+      "room_id": "waterfront",
+      "room_path": "res://content/world/waterfront.json",
+      "prototype": true
+    },
+    "home": {
+      "room_id": "home",
+      "room_path": "res://content/world/home.json",
+      "prototype": true
+    }
+  },
+  "legacy_maps": {
+    "yard": "school",
+    "newsroom": "club",
+    "club": "club",
+    "library": "library",
+    "harbor": "waterfront",
+    "interaction": "club"
+  }
+}

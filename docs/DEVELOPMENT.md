@@ -15,7 +15,7 @@ Runtime/checks hiện tại không cần Node hay checkout nguồn.
 `bake_ui_art.py` cần Chromium ở bước authoring vì SVG filters. Runtime dùng PNG
 đã commit. Giữ masters/prompts/fonts/licenses; validate art hashes sau rebuild.
 
-Mở project trực tiếp; F5 chạy composition chính, F6 chạy preview scene cụ thể.
+Mở project trực tiếp; F5 có playable/sandbox và ba preview; F6 chạy scene cụ thể.
 MCP hỗ trợ mở/chạy scene và đọc debug, không thay thế visual/device review.
 
 ## Checks thường dùng
@@ -86,7 +86,18 @@ chụp world ở camera/light preset ghi rõ. Tests pass không đóng visual ga
 JSON đọc bằng FileAccess phải được đưa vào PCK qua include filter của export preset
 (`*.json`, cùng font license cần phân phối). Chapter 12 kiểm tra exported executable
 ở thư mục sạch, không có checkout nguồn. Docs/tests/tools không cần ship.
-Foundation chưa có export preset/template validation; không tuyên bố export-ready.
+`export_presets.cfg` có Windows Desktop. `python tools/build_windows.py --godot
+<exe>` export debug/release, copy licenses và chạy self-check từ folder sạch.
+Templates 4.7.2 Steam đã được kiểm tra trên máy evidence. Distribution gồm cả
+folder `build/windows/release/`; binary không cần checkout/Node/Python/editor.
+
+`tests/profile_native.gd` dùng real clock + GPU/CPU measurement, VSync off và cap
+120 FPS; khác hoàn toàn `capture_playable.gd --write-movie` dùng fixed cadence.
+Ghi device/window/preset và sample length. Không suy GPU/FPS từ movie encoding.
+
+Đọc [authoring guide đã thử](CONTENT-AUTHORING.md),
+[save/schema decision](decisions/003-native-saves-and-formula-v2.md),
+[review 06–12](reviews/chapters-06-12/README.md) trước khi mở feature tiếp theo.
 
 ## Version control và bàn giao
 

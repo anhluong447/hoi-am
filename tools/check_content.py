@@ -72,6 +72,21 @@ def main():
         # Captured packs remain frozen during the port; edit by versioned authoring later.
         assert hashlib.sha256((ROOT / item['path']).read_bytes()).hexdigest() == item['sha256'], item['path']
     imports = read('docs/migration/art-import-manifest.json')
+    remaining = read('docs/migration/remaining-oracles.json')
+    for item in remaining['files']:
+        assert hashlib.sha256((ROOT / item['path']).read_bytes()).hexdigest() == item['sha256'], item['path']
+    formula = read('content/formula_sandbox/pack.json')
+    ids(formula['staff']); ids(formula['subjects']); ids(formula['policies'])
+    assert len(formula['policies']) == 8 and len(formula['subjects']) == 96
+    locations = read('content/world/locations.json')['locations']
+    assert set(locations) == ids(pack['places'])
+    for definition in locations.values():
+        authored = read(definition['room_path'][6:])
+        assert authored['id'] == definition['room_id']
+        assert authored['portal']['to'] in locations
+        ids(authored['geometry']); ids(authored['targets']); ids(authored['npcs'])
+        for camera in authored['camera'].values(): assert 0 < camera['near'] < camera['far']
+        assert all(npc['actor_id'] in actors for npc in authored['npcs'])
     for item in imports['files']:
         assert hashlib.sha256((ROOT / item['target']).read_bytes()).hexdigest() == item['sha256'], item['target']
     art = read('content/ui/art_manifest.json')

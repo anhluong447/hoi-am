@@ -1,0 +1,1023 @@
+{
+  "id": "newsroom_sample",
+  "title_key": "content.maps.definitions.hoi_am_phong_cau_lac_bo",
+  "spawn": [
+    0,
+    0.05,
+    2.9
+  ],
+  "speed": 3.0,
+  "gravity": 18.0,
+  "collider": {
+    "radius": 0.26,
+    "height": 1.25
+  },
+  "actor_pixel_size": 0.042,
+  "stride_world": 2.016,
+  "camera": {
+    "orthographic": {
+      "position": [
+        8,
+        10,
+        12
+      ],
+      "target": [
+        0,
+        0.5,
+        0
+      ],
+      "size": 14.4,
+      "near": 0.05,
+      "far": 45
+    },
+    "perspective": {
+      "position": [
+        16,
+        20,
+        24
+      ],
+      "target": [
+        0,
+        0.5,
+        0
+      ],
+      "fov": 25,
+      "near": 0.05,
+      "far": 75
+    }
+  },
+  "sun": {
+    "rotation": [
+      -48,
+      -32,
+      0
+    ],
+    "color": "#ffe4b8",
+    "energy": 1.6,
+    "shadow_distance": 40,
+    "normal_bias": 0.6
+  },
+  "ambient": {
+    "color": "#a8c6d4",
+    "energy": 0.65,
+    "background": "#243c49"
+  },
+  "geometry": [
+    {
+      "id": "floor",
+      "position": [
+        0,
+        -0.15,
+        0
+      ],
+      "size": [
+        12,
+        0.3,
+        9
+      ],
+      "color": "#bdac8b",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": true
+      }
+    },
+    {
+      "id": "back-base",
+      "position": [
+        0,
+        0.6,
+        -4.5
+      ],
+      "size": [
+        12,
+        1.2,
+        0.22
+      ],
+      "color": "#d6d3bc",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "back-top",
+      "position": [
+        0,
+        3.25,
+        -4.5
+      ],
+      "size": [
+        12,
+        0.5,
+        0.22
+      ],
+      "color": "#d6d3bc",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "window-left",
+      "position": [
+        -4.5,
+        2.1,
+        -4.5
+      ],
+      "size": [
+        3,
+        1.8,
+        0.22
+      ],
+      "color": "#d6d3bc",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "window-middle",
+      "position": [
+        0,
+        2.1,
+        -4.5
+      ],
+      "size": [
+        1.2,
+        1.8,
+        0.22
+      ],
+      "color": "#d6d3bc",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "window-right",
+      "position": [
+        4.5,
+        2.1,
+        -4.5
+      ],
+      "size": [
+        3,
+        1.8,
+        0.22
+      ],
+      "color": "#d6d3bc",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "left-wall",
+      "position": [
+        -6,
+        1.75,
+        0
+      ],
+      "size": [
+        0.22,
+        3.5,
+        9
+      ],
+      "color": "#c2c5b4",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "right-cutaway",
+      "position": [
+        6,
+        0.22,
+        0
+      ],
+      "size": [
+        0.22,
+        0.44,
+        9
+      ],
+      "color": "#b1baa9",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "front-left",
+      "position": [
+        -3.6,
+        0.22,
+        4.5
+      ],
+      "size": [
+        4.8,
+        0.44,
+        0.22
+      ],
+      "color": "#b1baa9",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "front-right",
+      "position": [
+        3.6,
+        0.22,
+        4.5
+      ],
+      "size": [
+        4.8,
+        0.44,
+        0.22
+      ],
+      "color": "#b1baa9",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "door-left",
+      "position": [
+        -1.1,
+        1.2,
+        4.5
+      ],
+      "size": [
+        0.16,
+        2.4,
+        0.18
+      ],
+      "color": "#78644e",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "door-right",
+      "position": [
+        1.1,
+        1.2,
+        4.5
+      ],
+      "size": [
+        0.16,
+        2.4,
+        0.18
+      ],
+      "color": "#78644e",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "door-lintel",
+      "position": [
+        0,
+        2.4,
+        4.5
+      ],
+      "size": [
+        2.36,
+        0.16,
+        0.18
+      ],
+      "color": "#78644e",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "writing-desk",
+      "position": [
+        -1,
+        0.72,
+        -0.6
+      ],
+      "size": [
+        3.2,
+        0.16,
+        1.5
+      ],
+      "color": "#8b7054",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "writing-desk-base",
+      "position": [
+        -1,
+        0.32,
+        -0.6
+      ],
+      "size": [
+        0.16,
+        0.64,
+        0.16
+      ],
+      "color": "#596d6b",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "van-desk",
+      "position": [
+        3.1,
+        0.72,
+        -2.4
+      ],
+      "size": [
+        2.1,
+        0.16,
+        1.1
+      ],
+      "color": "#8b7054",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "van-desk-base",
+      "position": [
+        3.1,
+        0.32,
+        -2.4
+      ],
+      "size": [
+        0.16,
+        0.64,
+        0.16
+      ],
+      "color": "#596d6b",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "archive",
+      "position": [
+        -4.7,
+        1.1,
+        -3.6
+      ],
+      "size": [
+        1.6,
+        2.2,
+        0.65
+      ],
+      "color": "#577478",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "assignment-board",
+      "position": [
+        -5.7,
+        1.7,
+        -0.7
+      ],
+      "size": [
+        0.15,
+        1.4,
+        2
+      ],
+      "color": "#967b51",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "printer",
+      "position": [
+        4.5,
+        0.6,
+        -3.5
+      ],
+      "size": [
+        0.9,
+        1.2,
+        0.7
+      ],
+      "color": "#d0d3c4",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "paper-stack",
+      "position": [
+        -0.8,
+        0.85,
+        -0.6
+      ],
+      "size": [
+        0.55,
+        0.12,
+        0.4
+      ],
+      "color": "#f4edd7",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "plant-pot",
+      "position": [
+        5,
+        0.3,
+        2.9
+      ],
+      "size": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "color": "#947852",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "plant-proxy",
+      "position": [
+        5,
+        0.95,
+        2.9
+      ],
+      "size": [
+        0.7,
+        0.8,
+        0.7
+      ],
+      "color": "#617e62",
+      "surface": {
+        "density": 2.4,
+        "grain": 0.025,
+        "seam": 0.12,
+        "floor_surface": false
+      }
+    },
+    {
+      "id": "leg--2.3--1.15",
+      "position": [
+        -2.3,
+        0.32,
+        -1.15
+      ],
+      "size": [
+        0.13,
+        0.64,
+        0.13
+      ],
+      "color": "#6b5842"
+    },
+    {
+      "id": "leg--2.3--0.05",
+      "position": [
+        -2.3,
+        0.32,
+        -0.05
+      ],
+      "size": [
+        0.13,
+        0.64,
+        0.13
+      ],
+      "color": "#6b5842"
+    },
+    {
+      "id": "leg-0.3--1.15",
+      "position": [
+        0.3,
+        0.32,
+        -1.15
+      ],
+      "size": [
+        0.13,
+        0.64,
+        0.13
+      ],
+      "color": "#6b5842"
+    },
+    {
+      "id": "leg-0.3--0.05",
+      "position": [
+        0.3,
+        0.32,
+        -0.05
+      ],
+      "size": [
+        0.13,
+        0.64,
+        0.13
+      ],
+      "color": "#6b5842"
+    },
+    {
+      "id": "archive-shelf-0",
+      "position": [
+        -4.7,
+        0.25,
+        -3.22
+      ],
+      "size": [
+        1.5,
+        0.025,
+        0.1
+      ],
+      "color": "#dfc690",
+      "collision": false
+    },
+    {
+      "id": "books-0",
+      "position": [
+        -4.8,
+        0.35,
+        -3.18
+      ],
+      "size": [
+        0.9,
+        0.15,
+        0.12
+      ],
+      "color": "#364f65",
+      "collision": false
+    },
+    {
+      "id": "archive-shelf-1",
+      "position": [
+        -4.7,
+        0.55,
+        -3.22
+      ],
+      "size": [
+        1.5,
+        0.025,
+        0.1
+      ],
+      "color": "#dfc690",
+      "collision": false
+    },
+    {
+      "id": "books-1",
+      "position": [
+        -4.8,
+        0.6499999999999999,
+        -3.18
+      ],
+      "size": [
+        0.9,
+        0.15,
+        0.12
+      ],
+      "color": "#926348",
+      "collision": false
+    },
+    {
+      "id": "archive-shelf-2",
+      "position": [
+        -4.7,
+        0.85,
+        -3.22
+      ],
+      "size": [
+        1.5,
+        0.025,
+        0.1
+      ],
+      "color": "#dfc690",
+      "collision": false
+    },
+    {
+      "id": "books-2",
+      "position": [
+        -4.8,
+        0.95,
+        -3.18
+      ],
+      "size": [
+        0.9,
+        0.15,
+        0.12
+      ],
+      "color": "#c6b88b",
+      "collision": false
+    },
+    {
+      "id": "archive-shelf-3",
+      "position": [
+        -4.7,
+        1.15,
+        -3.22
+      ],
+      "size": [
+        1.5,
+        0.025,
+        0.1
+      ],
+      "color": "#dfc690",
+      "collision": false
+    },
+    {
+      "id": "books-3",
+      "position": [
+        -4.8,
+        1.25,
+        -3.18
+      ],
+      "size": [
+        0.9,
+        0.15,
+        0.12
+      ],
+      "color": "#364f65",
+      "collision": false
+    },
+    {
+      "id": "archive-shelf-4",
+      "position": [
+        -4.7,
+        1.45,
+        -3.22
+      ],
+      "size": [
+        1.5,
+        0.025,
+        0.1
+      ],
+      "color": "#dfc690",
+      "collision": false
+    },
+    {
+      "id": "books-4",
+      "position": [
+        -4.8,
+        1.5499999999999998,
+        -3.18
+      ],
+      "size": [
+        0.9,
+        0.15,
+        0.12
+      ],
+      "color": "#926348",
+      "collision": false
+    },
+    {
+      "id": "archive-shelf-5",
+      "position": [
+        -4.7,
+        1.75,
+        -3.22
+      ],
+      "size": [
+        1.5,
+        0.025,
+        0.1
+      ],
+      "color": "#dfc690",
+      "collision": false
+    },
+    {
+      "id": "books-5",
+      "position": [
+        -4.8,
+        1.85,
+        -3.18
+      ],
+      "size": [
+        0.9,
+        0.15,
+        0.12
+      ],
+      "color": "#c6b88b",
+      "collision": false
+    },
+    {
+      "id": "archive-shelf-6",
+      "position": [
+        -4.7,
+        2.05,
+        -3.22
+      ],
+      "size": [
+        1.5,
+        0.025,
+        0.1
+      ],
+      "color": "#dfc690",
+      "collision": false
+    },
+    {
+      "id": "books-6",
+      "position": [
+        -4.8,
+        2.15,
+        -3.18
+      ],
+      "size": [
+        0.9,
+        0.15,
+        0.12
+      ],
+      "color": "#364f65",
+      "collision": false
+    }
+  ],
+  "targets": [
+    {
+      "id": "writing-desk",
+      "position": [
+        -1,
+        0,
+        0.7
+      ],
+      "anchor": [
+        -1,
+        1.05,
+        0.7
+      ],
+      "label_key": "content.maps.definitions.ban_lam_viec_khue",
+      "radius": 1.2
+    },
+    {
+      "id": "assignment-board",
+      "position": [
+        -4.7,
+        0,
+        -0.7
+      ],
+      "anchor": [
+        -4.7,
+        1.9,
+        -0.7
+      ],
+      "label_key": "content.maps.definitions.bang_phan_cong",
+      "radius": 1.1
+    },
+    {
+      "id": "archive",
+      "position": [
+        -4.7,
+        0,
+        -2.6
+      ],
+      "anchor": [
+        -4.7,
+        2.4,
+        -2.6
+      ],
+      "label_key": "content.maps.definitions.tu_ho_so",
+      "radius": 1.1
+    },
+    {
+      "id": "van",
+      "position": [
+        2.7,
+        0,
+        -0.7
+      ],
+      "anchor": [
+        2.7,
+        2,
+        -0.7
+      ],
+      "label_key": "content.gameplay.definitions.luc_thanh_van",
+      "radius": 1.15
+    },
+    {
+      "id": "printer",
+      "position": [
+        4.5,
+        0,
+        -2.7
+      ],
+      "anchor": [
+        4.5,
+        1.5,
+        -2.7
+      ],
+      "label_key": "content.maps.definitions.may_in_doi_soan",
+      "radius": 1.0
+    },
+    {
+      "id": "club-clock",
+      "position": [
+        -3.8,
+        0,
+        2.7
+      ],
+      "anchor": [
+        -3.8,
+        1.6,
+        2.7
+      ],
+      "label_key": "content.maps.definitions.dong_ho_clb",
+      "radius": 1.0
+    }
+  ],
+  "portal": {
+    "id": "club-to-school",
+    "to": "school",
+    "position": [
+      0,
+      0.6,
+      4.25
+    ],
+    "size": [
+      1.8,
+      1.2,
+      0.7
+    ]
+  },
+  "npcs": [
+    {
+      "id": "van",
+      "position": [
+        2.7,
+        0.05,
+        -0.7
+      ],
+      "actor_id": "van",
+      "direction": "down"
+    }
+  ],
+  "spawn_bounds": [
+    5.7,
+    4.1
+  ],
+  "atmosphere": {
+    "harbor": [
+      {
+        "position": [
+          -4,
+          -0.7,
+          -10
+        ],
+        "size": [
+          5,
+          1.4,
+          2
+        ],
+        "color": "#698594"
+      },
+      {
+        "position": [
+          3,
+          -0.8,
+          -12
+        ],
+        "size": [
+          6,
+          1.2,
+          2
+        ],
+        "color": "#506e80"
+      },
+      {
+        "position": [
+          0,
+          -0.35,
+          -7
+        ],
+        "size": [
+          10,
+          0.3,
+          1
+        ],
+        "color": "#8b8169"
+      },
+      {
+        "position": [
+          1,
+          1.2,
+          -11
+        ],
+        "size": [
+          0.1,
+          4,
+          0.1
+        ],
+        "color": "#576376"
+      },
+      {
+        "position": [
+          0,
+          0.25,
+          -10
+        ],
+        "size": [
+          1.5,
+          0.4,
+          0.6
+        ],
+        "color": "#b79b76"
+      }
+    ],
+    "water": {
+      "position": [
+        0,
+        -1,
+        -10
+      ],
+      "size": [
+        24,
+        15
+      ],
+      "color": "#4b8994",
+      "strength": 0.06,
+      "speed": 0.35
+    },
+    "dust": {
+      "count": 32,
+      "lifetime": 12,
+      "position": [
+        1,
+        1.8,
+        -2.4
+      ],
+      "radius": 0.008,
+      "color": "#dfccb1",
+      "extents": [
+        3,
+        1,
+        1.8
+      ],
+      "drift": [
+        0.025,
+        0.012,
+        0.01
+      ]
+    },
+    "dof": {
+      "distance": 20,
+      "transition": 8
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "source_commit": "6ad88df15ac5f082ac323e9d4144094affe01c7b",
+  "files": [
+    {
+      "path": "tests/fixtures/parity/gameplay-policies.json",
+      "sha256": "63f7a5c70c304abc1f56f8e19d610dbf13359a21f21b9c8d3cb9ab1038f16b4c"
+    },
+    {
+      "path": "tests/fixtures/parity/formula-policies.json",
+      "sha256": "03688aff56ed349d92ff86736179307a5932316c94161d5b4f07b6b2c63bfe59"
+    },
+    {
+      "path": "tests/fixtures/parity/personal-all.json",
+      "sha256": "be025cd338570967e1ed889dc4d21e21682165931374fbe849ddf480911bee7f"
+    },
+    {
+      "path": "content/formula_sandbox/pack.json",
+      "sha256": "604886e178407cd22c0581c017093f830e5d4811a1d02ad8e5fc345150db4417"
+    },
+    {
+      "path": "tests/fixtures/parity/personal-all-v2.json",
+      "sha256": "4f526726903c4aa73d6c98b9a50e9f36ff3a3b855e417a68f225466a698391c1"
+    }
+  ],
+  "correction": "personal-all first capture evaluated initial state after tagged locale. Preserve v1 evidence; v2 captures initial before registration. Commands and results unchanged.",
+  "source_inputs": [
+    {
+      "path": "src/domain/personal.js",
+      "sha256": "511b3e627cd519fd7c9778e5afef0cf6742e5567fb3f858fb5f4a66a6595197d"
+    },
+    {
+      "path": "src/domain/journalism.js",
+      "sha256": "835270659d74db2d48bedd72c435dbd74e90f67784cbb9125842ae72e7512047"
+    },
+    {
+      "path": "tests/gameplay.test.js",
+      "sha256": "2c65b6b268e9fd88f4b3a8468873a1d90634f6e0dd04c1ab5282221916477d39"
+    },
+    {
+      "path": "src/core/game.js",
+      "sha256": "e9da6bd24d495bcc590d1c0dd8c853e8a9303c3d61860ffc5f7019cf15b72f19"
+    },
+    {
+      "path": "src/core/rules.js",
+      "sha256": "51e1400c45759d593cfa442ddf4e7f23e2e077e522b96a6c997705616f9199f8"
+    },
+    {
+      "path": "src/core/config.js",
+      "sha256": "61edf6886ec27e343e73c956caa7ac1a59b665c1a7ca3f8e627c92172eac687f"
+    },
+    {
+      "path": "src/core/fixtures.js",
+      "sha256": "f2fc1b530228e5ee55f73afbdff31bb1d558c468d4e9c361e56d5627979756ed"
+    },
+    {
+      "path": "src/app/Simulation.js",
+      "sha256": "fb667ee442f9977715dc21917364da5b59af61edc84b5e716e09db7afbab8e3e"
+    },
+    {
+      "path": "content/sandbox/balance.js",
+      "sha256": "a459066bdc827a77cf0657a131676a36c56675273e2655d72acc32a103d37caf"
+    },
+    {
+      "path": "content/sandbox/fixtures.js",
+      "sha256": "5286621e567639108e75d97530a02c82a0afebd571233fda48608b41166ed11d"
+    },
+    {
+      "path": "content/locales/vi.js",
+      "sha256": "fae8c514c820f4b7822df234253736799dc7227ba3a45a35a940c17e5e4ae363"
+    }
+  ]
+}

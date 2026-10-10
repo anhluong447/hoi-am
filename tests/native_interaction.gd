@@ -4,6 +4,7 @@ extends SceneTree
 const PREVIEW = preload("res://src/bootstrap/previews/ui_preview.tscn")
 const WORLD = preload("res://src/bootstrap/previews/world_preview.tscn")
 const SUITE = preload("res://tests/test_suite.gd")
+const PLAY = preload("res://src/bootstrap/gameplay/playable.tscn")
 
 var _suite := SUITE.new()
 
@@ -73,10 +74,49 @@ func _run() -> void:
 	_suite.expect(Vector2(before.x - world.room.player.position.x, before.z - world.room.player.position.z).length() < 0.001, "Native world input lock")
 	world.queue_free()
 	await process_frame
+	await _playable_checks()
 	for failure: String in _suite.failures:
 		push_error(failure)
 	print("Native interaction: %d checks; %d failures" % [_suite.checks, _suite.failures.size()])
 	quit(0 if _suite.failures.is_empty() else 1)
+
+
+func _playable_checks() -> void:
+	var play := PLAY.instantiate()
+	root.add_child(play)
+	await _settle()
+	for dimensions: Vector2i in [Vector2i(1280, 720), Vector2i(1920, 1080)]:
+		root.size = dimensions
+		play.open_workspace()
+		await _settle()
+		var panel: PanelContainer = play._modal.get_child(1)
+		var tabs: HBoxContainer = panel.get_child(0).get_child(1)
+		var target: Button = tabs.get_child(1)
+		var point: Vector2 = root.get_final_transform() * (target.get_global_transform_with_canvas() * (target.size / 2.0))
+		var press := InputEventMouseButton.new()
+		press.position = point
+		press.global_position = point
+		press.button_index = MOUSE_BUTTON_LEFT
+		press.pressed = true
+		root.push_input(press)
+		await process_frame
+		press = press.duplicate()
+		press.pressed = false
+		root.push_input(press)
+		await _settle()
+		_suite.expect(play.controller.section == "cases", "Native workspace tab pointer at " + str(dimensions))
+		_suite.expect(not play.room._input_enabled, "Native modal movement lock")
+		var cancel := InputEventJoypadButton.new()
+		cancel.button_index = JOY_BUTTON_START
+		cancel.pressed = true
+		root.push_input(cancel)
+		await _settle()
+		_suite.expect(play.controller.modal.is_empty() and play.room._input_enabled, "Gamepad menu restores world input")
+		cancel = cancel.duplicate()
+		cancel.pressed = false
+		root.push_input(cancel)
+	play.queue_free()
+	await process_frame
 
 
 func _settle() -> void:

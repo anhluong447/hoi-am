@@ -9,6 +9,8 @@ func _init(catalog: RefCounted) -> void:
 
 
 func resolve(value: Variant) -> Variant:
+	if value is float and value == floorf(value):
+		return int(value)
 	if value is Dictionary:
 		if value.has("text_key"):
 			var parameters: Dictionary = resolve(value.get("parameters", {}))

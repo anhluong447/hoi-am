@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "date": "2026-10-10",
+  "hash_basis": "Git staged canonical blob bytes",
+  "scope": "Authored room/material/effect sample; not accepted production city or concept replica",
+  "provenance": "New room mesh boxes, props, shaders and particles authored in this target project; no third-party mesh/material kit or Octopath asset imported",
+  "source_files": [
+    {
+      "path": "content/world/newsroom_sample.json",
+      "sha256": "8a3ccdbc1346120c21c6bbfd247b6858ea32e7a683c3687407a1ea2e1e3a330c"
+    },
+    {
+      "path": "content/world/actors.json",
+      "sha256": "d2132a22395c07e83bc232b94dd82d6b2f2efb158f360d5246177c37f609cc25"
+    },
+    {
+      "path": "src/world/rooms/newsroom/room_geometry.gd",
+      "sha256": "e8a546dac9cd3531510bf398131176a30ee78885f2f6b63f3b464a8ddf7128af"
+    },
+    {
+      "path": "src/world/rooms/newsroom/room_atmosphere.gd",
+      "sha256": "7dac5a6b51f550c0c60e5d7f72939c4ea1cda0ec2143d3aa02dd78e1a77158ba"
+    },
+    {
+      "path": "src/world/rooms/newsroom/coastal_surface.gdshader",
+      "sha256": "35812f74709181c03b042af66156f328ad1aa4f2eba3f42e21727614aa95106b"
+    },
+    {
+      "path": "src/world/rooms/newsroom/coastal_water.gdshader",
+      "sha256": "b33dd23581fcfbb4e71037c263caaa34e8c0fc4f5795320b9b2c61d78b3887cc"
+    },
+    {
+      "path": "src/world/actors/sprite_rig.gd",
+      "sha256": "d3d1b18f01dccb7646d5565a633357bee255005208a728e98c91cad794b4ea70"
+    }
+  ],
+  "parts": [
+    "plank floor shader",
+    "cutaway walls and window openings",
+    "desks and legs",
+    "shelves and books",
+    "layered harbor boxes",
+    "water shimmer shader",
+    "32 GPU dust particles",
+    "warm dynamic sun and cool ambient",
+    "optional far DOF"
+  ],
+  "import_settings": {
+    "mesh_materials": "Built from authored JSON at runtime; no external binary model import",
+    "sprites": "Existing imported atlases; nearest texture filter, Y billboard, 32x48 frames, foot pivot (16,46), capsule shadow proxy",
+    "fonts_and_ui": "Existing frozen provenance/license/hash manifests unchanged"
+  },
+  "retained_provenance": [
+    "docs/migration/art-import-manifest.json",
+    "content/ui/art_manifest.json",
+    "docs/reference/actors/atlas.source.json"
+  ],
+  "licenses": "Authored target sources follow repository ownership; engine and imported font licenses preserved and copied into Windows distribution. No new external mesh or texture license implied."
+}

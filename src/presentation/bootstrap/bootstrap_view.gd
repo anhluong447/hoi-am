@@ -15,15 +15,15 @@ func configure(model: Dictionary) -> void:
 
 func _ready() -> void:
 	%Quit.pressed.connect(func() -> void: quit_requested.emit())
-	for id: String in ["world", "calendar", "ui"]:
+	for id: String in ["play", "sandbox", "world", "calendar", "ui"]:
 		get_node("Center/Content/" + id).pressed.connect(func() -> void: preview_requested.emit(id))
 	_render()
-	%Quit.grab_focus()
+	get_node("Center/Content/play").grab_focus()
 
 
 func _render() -> void:
 	%Title.text = _model.get("title", "")
 	%Subtitle.text = _model.get("subtitle", "")
 	%Quit.text = _model.get("quit", "")
-	for id: String in ["world", "calendar", "ui"]:
+	for id: String in ["play", "sandbox", "world", "calendar", "ui"]:
 		get_node("Center/Content/" + id).text = _model.get(id, "")

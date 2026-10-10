@@ -177,5 +177,8 @@
   "stage": [
     1672,
     941
-  ]
+  ],
+  "motion": {
+    "enter_duration": 0.18
+  }
 }

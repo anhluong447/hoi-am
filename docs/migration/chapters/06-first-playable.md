@@ -1,20 +1,20 @@
 # Chapter 06 — First playable trong phòng CLB
 
-Trạng thái: chưa bắt đầu. Phụ thuộc: Chapters 02, 04, 05.
+Trạng thái: implementation và integration đã kiểm chứng. Phụ thuộc: Chapters 02, 04, 05.
 Mục tiêu: một lát cắt chạy xuyên domain/world/UI, không mở rộng content trước khi
 command/state/input boundaries đã được kiểm chứng.
 
 ## Work packages
 
-- [ ] C06.01: composition tạo gameplay session, world và controller; inject dependencies,
+- [x] C06.01: composition tạo gameplay session, world và controller; inject dependencies,
   nối local signals, không view/actor gọi global session.
-- [ ] C06.02: flow vào phòng → đi đến NPC → prompt → thoại/lựa chọn → command thật
+- [x] C06.02: flow vào phòng → đi đến NPC → prompt → thoại/lựa chọn → command thật
   đã port → HUD phản ánh snapshot. Dialogue-only intent không tự tiêu energy.
-- [ ] C06.03: controller sở hữu modal/input priority; đóng thoại khôi phục world focus
+- [x] C06.03: controller sở hữu modal/input priority; đóng thoại khôi phục world focus
   và input, không vừa confirm choice vừa di chuyển/trigger lại interaction.
-- [ ] C06.04: thông báo rejection dùng catalog; không optimistic render outcome giả.
-- [ ] C06.05: thay room/đóng view/cancel dialogue giải phóng signals/tweens/input subscriptions.
-- [ ] C06.06: record action trace tích hợp và video; so state với headless replay.
+- [x] C06.04: thông báo rejection dùng catalog; không optimistic render outcome giả.
+- [x] C06.05: thay room/đóng view/cancel dialogue giải phóng signals/tweens/input subscriptions.
+- [x] C06.06: record action trace tích hợp và video; so state với headless replay.
 
 ## Đầu ra
 
@@ -32,3 +32,9 @@ mở/đóng lặp lại; không leaked nodes/resources rõ rệt. M2 đạt dù 
 
 Đây là mẫu để port feature tiếp theo: domain → session → controller → view/world.
 Lưu/load hoàn chỉnh chờ Chapter 09; không fake persistence trong first playable.
+
+## Evidence 2026-10-10
+
+Integration, modal ownership, replay and native video verified. See final review.
+
+[Review, parity, native captures/video/profile](../../reviews/chapters-06-12/README.md).

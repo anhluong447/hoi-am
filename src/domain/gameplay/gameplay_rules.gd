@@ -7,6 +7,8 @@ const EVENTS = preload("res://src/domain/gameplay/gameplay_events.gd")
 const RESEARCH = preload("res://src/domain/gameplay/research_actions.gd")
 const NIGHT = preload("res://src/domain/gameplay/nightly_work.gd")
 const PUBLICATION = preload("res://src/domain/gameplay/publication.gd")
+const QUEST = preload("res://src/domain/gameplay/quest_actions.gd")
+const PERSONAL = preload("res://src/domain/gameplay/personal_actions.gd")
 
 var _pack: Dictionary
 
@@ -44,7 +46,7 @@ func transition(input_state: Dictionary, command: Dictionary) -> Dictionary:
 			else:
 				CALENDAR.consume_slot(state)
 		"activity":
-			outcome = _activity(state, command)
+			outcome = PERSONAL.apply(state, command, _pack)
 		"sleep":
 			outcome = _sleep(state)
 		"open", "assign", "approve":
@@ -56,34 +58,15 @@ func transition(input_state: Dictionary, command: Dictionary) -> Dictionary:
 			if article.is_empty() or article.published:
 				return EVENTS.reject("bai_khong_kha_dung")
 			article.selected = not article.selected
-		"quest", "write", "date", "gift", "tool", "boost", "upgrade":
-			return {"ok": false, "error": {"code": "command_not_ported", "text_key": "migration.command_not_ported", "parameters": {"command": type}}}
+		"quest", "write":
+			outcome = QUEST.apply(state, command, _pack)
+		"date", "gift", "tool", "boost", "upgrade":
+			outcome = PERSONAL.apply(state, command, _pack)
 		_:
 			return EVENTS.reject("lenh_khong_hop_le")
 	if not outcome.ok:
 		return outcome
 	return {"ok": true, "state": state, "events": state.log.slice(start).duplicate(true)}
-
-
-func _activity(state: Dictionary, command: Dictionary) -> Dictionary:
-	if state.phase not in ["personal", "evening", "weekend1", "weekend2"]:
-		return EVENTS.reject("khong_phai_slot_ca_nhan")
-	var kind: Variant = command.get("kind")
-	if kind == "investigate":
-		state.investigationFrom = state.phase
-		state.phase = "investigation"
-		state.energy = state.config.outsideEnergy
-		EVENTS.note(state, "src.gameplay.engine.bat_dau_dieu_tra_ngoai_gio")
-	elif kind == "rest":
-		var khue := PEOPLE.person(state, "khue")
-		khue.fatigue = maxf(0.0, khue.fatigue - _pack.balance.PERSONAL.restRecovery)
-		EVENTS.note(state, "src.gameplay.engine.nghi_ngoi_giam_20_met")
-		CALENDAR.consume_slot(state)
-	elif kind in ["job", "train", "hangout"]:
-		return {"ok": false, "error": {"code": "command_not_ported", "text_key": "migration.command_not_ported", "parameters": {"command": kind}}}
-	else:
-		return EVENTS.reject("hoat_dong_khong_hop_le")
-	return {"ok": true}
 
 
 func _sleep(state: Dictionary) -> Dictionary:

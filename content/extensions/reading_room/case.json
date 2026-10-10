@@ -1,0 +1,9 @@
+{
+  "key": "library-ledger",
+  "title_key": "extension.case.title",
+  "teaser_key": "extension.case.teaser",
+  "story_key": "extension.case.story",
+  "need": "documents",
+  "difficulty": 7,
+  "attraction": 8
+}

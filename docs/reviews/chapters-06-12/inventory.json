@@ -1,0 +1,768 @@
+{
+  "version": 1,
+  "date": "2026-10-10",
+  "operations": "No deletion or relocation; history preserved in place",
+  "active_captures": "captures-v8",
+  "active_video": "playable-v3.mp4",
+  "historical": [
+    {
+      "artifact": "captures-v1",
+      "reason": "Partial capture stopped at missing stable WorldEnvironment node name",
+      "policy": "historical retained in place; bytes preserved",
+      "files": [
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v1/room-high.png",
+          "bytes": 375154,
+          "sha256": "d394039ad4f4281c5a92267133592ecb468ead25b83bc3371ef3c01dfbebedad"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v1/room-low.png",
+          "bytes": 281266,
+          "sha256": "a50703068f758927b49b6d1219b1f1fea73e14fb29403cc69c89dddf40ba292e"
+        }
+      ]
+    },
+    {
+      "artifact": "captures-v2",
+      "reason": "Initial management capture exposed tab wrapping and objective overflow",
+      "policy": "historical retained in place; bytes preserved",
+      "files": [
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v2/dialogue-command.png",
+          "bytes": 719381,
+          "sha256": "bd8f24c59bb5063c923f64172ee08df2ae2f9c9c05cab4afdbb77ca3cc79fcf5"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v2/extension-library.png",
+          "bytes": 100936,
+          "sha256": "c7b1189c00b4c5e4833b220383f2c6edcfdf3e672fd99ac0df38b0786f9e037e"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v2/integrated-state.json",
+          "bytes": 6013,
+          "sha256": "66117fedb1c2e172a66bdf5ff686f3082823d9fe32354504797e0425d116cdc3"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v2/room-dof-ab.png",
+          "bytes": 436361,
+          "sha256": "cdbdd07bd9f50a61bfdbfccdf322adf7cfcce6c281570097e2ae2a7602f8b79c"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v2/room-fog-ab.png",
+          "bytes": 352503,
+          "sha256": "5efa82ec1d6a61c7fc8afb76f26b720f6d5c5201853eda2c7221047b422cc90f"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v2/room-glow-ab.png",
+          "bytes": 373372,
+          "sha256": "6fe43ccebde41540d16be726ff31beca7bd87c156091d991bd1634fd6d7c2285"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v2/room-high.png",
+          "bytes": 372493,
+          "sha256": "c4535e2d4e45ed22abd12c33b3ec18e81d746e631dd01d28d550afff629f69e6"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v2/room-low.png",
+          "bytes": 278585,
+          "sha256": "05603929b1ff774bd2e1d8e1776b2d45cb468db8147fd9aeb75dff56b54775e0"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v2/room-perspective.png",
+          "bytes": 336939,
+          "sha256": "5b39c3717d685ea977a27357d4f58578ecd507af96ca3270c7fea96f2ac61f36"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v2/walk.png",
+          "bytes": 372668,
+          "sha256": "ba2771e1c49484ea76b31a20aa9ca01842d2f0178376554f4a86b845c9bf4d6b"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v2/workspace-calendar.png",
+          "bytes": 101561,
+          "sha256": "1b9862b8d42f0c63932c5e257cebd92353aa50091c191a84a25e3a0c0998163c"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v2/workspace-cases.png",
+          "bytes": 127251,
+          "sha256": "a3a7ae87ec9652fd59efea4b995412a61741fd029afa28f7525a77e6c89252cb"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v2/workspace-editorial.png",
+          "bytes": 98220,
+          "sha256": "2f52fc9418abdd5d13efae2d51f639e03d9f2b4d385912b06447c8659573e949"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v2/workspace-life.png",
+          "bytes": 104019,
+          "sha256": "3deced4bcd41218ad2c24cfb55d8d6308330c504e5eeff689bae51b6d3484fa7"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v2/workspace-quests.png",
+          "bytes": 111136,
+          "sha256": "eb2ae79db6f4184eddcb6d60a47f32d6bf9da6e2ce85607b4d4d896ce779332f"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v2/workspace-reports.png",
+          "bytes": 122579,
+          "sha256": "77aa5dd79b6a342f0bfa8523b537a031852bd1a4746bf1e3a1e8b84a1093f26d"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v2/workspace-saves.png",
+          "bytes": 99607,
+          "sha256": "5634b6e5ba65921d8a7ad613cc9d6204906ba50aa7ecc6286e72ce2b373b5dbc"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v2/workspace-team.png",
+          "bytes": 111695,
+          "sha256": "a96c59d6d41507751e39bb8de50a5c8eee594fce23d78fe4d130d0331feec8dd"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v2/workspace-travel.png",
+          "bytes": 101558,
+          "sha256": "cb60f5d00f7246374700187cb1e22a5dc228151228dc021b9d162cdd85079cf9"
+        }
+      ]
+    },
+    {
+      "artifact": "captures-v3",
+      "reason": "Corrected tab and wrap pass before extension review",
+      "policy": "historical retained in place; bytes preserved",
+      "files": [
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v3/dialogue-command.png",
+          "bytes": 708082,
+          "sha256": "e6889f9f58943ef914685c75543f60abb54cfd18989f1fbfbc6b750126ce8f4f"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v3/extension-library.png",
+          "bytes": 102026,
+          "sha256": "12599cc6b6181702e19ca49b6fbf7e3bf57716aa6cb0d72612263baf9af83a8d"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v3/integrated-state.json",
+          "bytes": 6013,
+          "sha256": "66117fedb1c2e172a66bdf5ff686f3082823d9fe32354504797e0425d116cdc3"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v3/room-dof-ab.png",
+          "bytes": 437582,
+          "sha256": "8f49f35b919289a6274657323fa458554548f6bd87146af5d01c13d66f81c276"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v3/room-fog-ab.png",
+          "bytes": 353688,
+          "sha256": "0a68360c7dd68e83bfc426cdc01dd77ac5879809dc29e7d6f6270f63d7726ae4"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v3/room-glow-ab.png",
+          "bytes": 374512,
+          "sha256": "c7340b3a22fb463319a667e9e63ce5fdfef2dd8f2035b973b0be42f004f5e199"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v3/room-high.png",
+          "bytes": 373649,
+          "sha256": "ae3e0364286ec0093244afde9043b344a70243cfa693750f9b9d9a4624086443"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v3/room-low.png",
+          "bytes": 279741,
+          "sha256": "857b04b0d3e7bf9cf98915a6b4541a08879e728e876bda0d7c33ef9e7e881fa0"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v3/room-perspective.png",
+          "bytes": 338190,
+          "sha256": "43ac126def837122b4b426e8cad70e3577c7e7cc7c201e75d1a9bee0472c4121"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v3/walk.png",
+          "bytes": 373842,
+          "sha256": "d24a5e2c7e4481b9c89ea27763b30ae829741f8a2515c3bcc8104da88a89b9b3"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v3/workspace-calendar.png",
+          "bytes": 128308,
+          "sha256": "ac8b8bccf822c10e343dd9851243adc0c21c123211d8ad6663bde18e65643b1c"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v3/workspace-cases.png",
+          "bytes": 184200,
+          "sha256": "7a33d419012bd6cf55685af1f26f9f4a9f300388f8796129c84c9da4602d13bd"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v3/workspace-editorial.png",
+          "bytes": 113944,
+          "sha256": "4d8a3e7f82139c48353f78ef736121784b06b38fc871867937e05f20250e465f"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v3/workspace-life.png",
+          "bytes": 156135,
+          "sha256": "2cebe4ca7e458f347b11ebf937ef257ce7e088a854e93766c6c68b3d75a8ae0a"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v3/workspace-quests.png",
+          "bytes": 137238,
+          "sha256": "9b4e61d064895aa44d9e19f68f5cfc4edf83b6cb3eeaefb13b6adaab83d9858e"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v3/workspace-reports.png",
+          "bytes": 138214,
+          "sha256": "6afcebadd4a3aa288dbcd7fbad282b9ea785e4719c3ce16daaba6a1331a62a14"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v3/workspace-saves.png",
+          "bytes": 138071,
+          "sha256": "7950a30af26dd7a81154d76863d4b7819243f3b695039ead8bc7507641c4d44f"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v3/workspace-team.png",
+          "bytes": 157131,
+          "sha256": "87fc44c7f6bc1f121593f3e136fc321f818c71b9ca0977c15f38add988fa6b3b"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v3/workspace-travel.png",
+          "bytes": 131639,
+          "sha256": "a905be4f36a609c2b185e6cbd3f697799f9e576ab636d0aedcf3bfc6cc79f1b8"
+        }
+      ]
+    },
+    {
+      "artifact": "captures-v4",
+      "reason": "Extension room and graph before sandbox UI coverage",
+      "policy": "historical retained in place; bytes preserved",
+      "files": [
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/dialogue-command.png",
+          "bytes": 707148,
+          "sha256": "da67b7d7314981f62c6dcbb4ba47cc43af5f39ad65a780ea2d400553ff397eb2"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/extension-library.png",
+          "bytes": 100728,
+          "sha256": "c1bbe7535cabfa221411a2bdc5f5112274d089e8feb684507b67a6e8fe3742a8"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/extension-npc-dialogue.png",
+          "bytes": 424341,
+          "sha256": "90b8d9f781d40734fd8817428ed40e88c53eb4c4ef261c70dd59e71d58b766ad"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/extension-npc-room.png",
+          "bytes": 104260,
+          "sha256": "9a89dff985e92d71a628fdbf8b5fae97a64f240b9d943a1ccf112fc76f813735"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/integrated-state.json",
+          "bytes": 6013,
+          "sha256": "66117fedb1c2e172a66bdf5ff686f3082823d9fe32354504797e0425d116cdc3"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/room-dof-ab.png",
+          "bytes": 435969,
+          "sha256": "d3c5409c43bc7205d6ceae855edefaa2011ee44bddfd9a6053bce1dbbc2256fc"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/room-fog-ab.png",
+          "bytes": 385245,
+          "sha256": "28429531063385a7ee89a2c1112e6bb67af6ef55ea3911282c0bc8ad8f7a4d85"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/room-glow-ab.png",
+          "bytes": 436381,
+          "sha256": "10c9c45856b5a149df4d78d76ca5f4d5dfa29d38d128bfc6d542f52a09dfd706"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/room-high.png",
+          "bytes": 435630,
+          "sha256": "f20d1a023ee9a7f6eaf5cad4e233c8299ba9f9184adbfd10b28d63feb8050933"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/room-low.png",
+          "bytes": 278369,
+          "sha256": "709362aca18710472bc81164276f829ef8b986c11b2ae9d585665c872edc2226"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/room-perspective.png",
+          "bytes": 294952,
+          "sha256": "007a5bd8b3e0bb8f3ac9f35a3263a8522171a59efece5820c467b222612ea1b9"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/walk.png",
+          "bytes": 373344,
+          "sha256": "91c63f9a19a3d2ec8554b944dbc145f6030d12ab6d6b8d63aea4f236d33afc3b"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/workspace-calendar.png",
+          "bytes": 127377,
+          "sha256": "93e0426587023941165d7388e731cfdf93c99a0dbbd45cae5c8421111dff0880"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/workspace-cases.png",
+          "bytes": 183094,
+          "sha256": "f85cc3be572cc1fb75d4aec6c4e651f5900174a023736a9309b33c18aec3a308"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/workspace-editorial.png",
+          "bytes": 112631,
+          "sha256": "32bc24699223db709ce8020b04f3a61ce5f3dc1da36aafdd1032b3652100d004"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/workspace-life.png",
+          "bytes": 155081,
+          "sha256": "d21455949910492018a2211394b3c6f753ae3f1c606bd061e37ea9d8a9555559"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/workspace-quests.png",
+          "bytes": 136232,
+          "sha256": "67acd976217f2ae253d52c6d8c6861857cc75c1cfee861b8e7ff6c653a516d39"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/workspace-reports.png",
+          "bytes": 137340,
+          "sha256": "7a9fa72b20830531aff267a364a2b7c4912768305c7f6da05ea2312295caaf24"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/workspace-saves.png",
+          "bytes": 136339,
+          "sha256": "fb300844246caa46c683d6b0abbff707e56c0e322ce49e0763f46bbd2e325ef3"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/workspace-team.png",
+          "bytes": 155749,
+          "sha256": "dbab1e727be64a648c9fb559dd16c24572e834ebcb3562a8843d658f54cca4e8"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v4/workspace-travel.png",
+          "bytes": 130153,
+          "sha256": "79d08fc4cce7ecea3186375e19fb19a42927491b6eff778e4a22dcb95f5714df"
+        }
+      ]
+    },
+    {
+      "artifact": "captures-v5",
+      "reason": "Sandbox render failure retained; not a passing capture run",
+      "policy": "historical retained in place; bytes preserved",
+      "files": [
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/dialogue-command.png",
+          "bytes": 707209,
+          "sha256": "41adfb14c9fa9a3ce413c4992867c911f372114d663de5a4375655a36a77456a"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/extension-library.png",
+          "bytes": 100728,
+          "sha256": "c1bbe7535cabfa221411a2bdc5f5112274d089e8feb684507b67a6e8fe3742a8"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/extension-npc-dialogue.png",
+          "bytes": 424341,
+          "sha256": "90b8d9f781d40734fd8817428ed40e88c53eb4c4ef261c70dd59e71d58b766ad"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/extension-npc-room.png",
+          "bytes": 104260,
+          "sha256": "9a89dff985e92d71a628fdbf8b5fae97a64f240b9d943a1ccf112fc76f813735"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/formula-benchmark.png",
+          "bytes": 80420,
+          "sha256": "eff01b9739f2e5a8b15ded4c72284a546517876a799a830eaa2677dae60d72ed"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/formula-tool.png",
+          "bytes": 68713,
+          "sha256": "d8de20850185183715a13793b6c2ef7efb4c26711104c1fcd7a5c2e0ea5562c5"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/integrated-state.json",
+          "bytes": 6013,
+          "sha256": "66117fedb1c2e172a66bdf5ff686f3082823d9fe32354504797e0425d116cdc3"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/room-dof-ab.png",
+          "bytes": 436052,
+          "sha256": "0c55ed5740d0fa8d1b3108f3acb6f7b9096c86599777e36dd54ddf4bdfd2177f"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/room-fog-ab.png",
+          "bytes": 385304,
+          "sha256": "73a4b76dac8b8a8d06b1aa26584e6098772e0ffdeeea1ac3afbab9e54f2f4815"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/room-glow-ab.png",
+          "bytes": 436412,
+          "sha256": "1a74086b2a211fd3da9e7311518c83d2bf9a07b9ae5511de7853f550b0b13ec3"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/room-high.png",
+          "bytes": 435694,
+          "sha256": "93e5ff35f560882d1c78e447f255ef3c68d9ce1407d96ec7a22b00478ee4a449"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/room-low.png",
+          "bytes": 278369,
+          "sha256": "709362aca18710472bc81164276f829ef8b986c11b2ae9d585665c872edc2226"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/room-perspective.png",
+          "bytes": 294938,
+          "sha256": "eeb5a9d59cbdfcc5b513acbb5e8e8c10568c96d8f012786ba911a76ec1d4f4f2"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/walk.png",
+          "bytes": 373356,
+          "sha256": "2453a3aaeaf2d4546e47c86c11ea327878f26aebf574bef97939cf24e2f9dea2"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/workspace-calendar.png",
+          "bytes": 127377,
+          "sha256": "93e0426587023941165d7388e731cfdf93c99a0dbbd45cae5c8421111dff0880"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/workspace-cases.png",
+          "bytes": 183094,
+          "sha256": "f85cc3be572cc1fb75d4aec6c4e651f5900174a023736a9309b33c18aec3a308"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/workspace-editorial.png",
+          "bytes": 112631,
+          "sha256": "32bc24699223db709ce8020b04f3a61ce5f3dc1da36aafdd1032b3652100d004"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/workspace-life.png",
+          "bytes": 132291,
+          "sha256": "74ea7c2c90051abac27807e209b8243747d06d4d2028abecaabff79584fcbb90"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/workspace-quests.png",
+          "bytes": 136232,
+          "sha256": "67acd976217f2ae253d52c6d8c6861857cc75c1cfee861b8e7ff6c653a516d39"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/workspace-reports.png",
+          "bytes": 137340,
+          "sha256": "7a9fa72b20830531aff267a364a2b7c4912768305c7f6da05ea2312295caaf24"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/workspace-saves.png",
+          "bytes": 136339,
+          "sha256": "fb300844246caa46c683d6b0abbff707e56c0e322ce49e0763f46bbd2e325ef3"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/workspace-team.png",
+          "bytes": 155749,
+          "sha256": "dbab1e727be64a648c9fb559dd16c24572e834ebcb3562a8843d658f54cca4e8"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v5/workspace-travel.png",
+          "bytes": 130153,
+          "sha256": "79d08fc4cce7ecea3186375e19fb19a42927491b6eff778e4a22dcb95f5714df"
+        }
+      ]
+    },
+    {
+      "artifact": "captures-v6",
+      "reason": "Sandbox render fixed; before final queue, costs and portal changes",
+      "policy": "historical retained in place; bytes preserved",
+      "files": [
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/dialogue-command.png",
+          "bytes": 707110,
+          "sha256": "0f37764604b0202daf405632e19da9642589471964981cc1cd611821ccb72eef"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/extension-library.png",
+          "bytes": 100728,
+          "sha256": "c1bbe7535cabfa221411a2bdc5f5112274d089e8feb684507b67a6e8fe3742a8"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/extension-npc-dialogue.png",
+          "bytes": 424341,
+          "sha256": "90b8d9f781d40734fd8817428ed40e88c53eb4c4ef261c70dd59e71d58b766ad"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/extension-npc-room.png",
+          "bytes": 104260,
+          "sha256": "9a89dff985e92d71a628fdbf8b5fae97a64f240b9d943a1ccf112fc76f813735"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/formula-benchmark.png",
+          "bytes": 76066,
+          "sha256": "0221cf25fcbf47b91b7525321dfadb1f2f84e787f3e0d1a21ae441b09c832356"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/formula-tool.png",
+          "bytes": 68713,
+          "sha256": "d8de20850185183715a13793b6c2ef7efb4c26711104c1fcd7a5c2e0ea5562c5"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/integrated-state.json",
+          "bytes": 6013,
+          "sha256": "66117fedb1c2e172a66bdf5ff686f3082823d9fe32354504797e0425d116cdc3"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/room-dof-ab.png",
+          "bytes": 436005,
+          "sha256": "4cfe25fc9f8ed7a30a45534c8d29c740d9e25e6243fe423c8685883d1489eba2"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/room-fog-ab.png",
+          "bytes": 385214,
+          "sha256": "38d1d31cb1790c286333eaf3adcfb7d55b6a351ffc9f92310a04baac83e1cfe2"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/room-glow-ab.png",
+          "bytes": 436390,
+          "sha256": "192064477839d1cfe30cf0740d9a66c1c4166cb574da177b3968a8acf7382b08"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/room-high.png",
+          "bytes": 435637,
+          "sha256": "20b329a06d6efe60528ea305721d9ab98c480b1c9f0beea97a542b8b63f100f9"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/room-low.png",
+          "bytes": 278369,
+          "sha256": "709362aca18710472bc81164276f829ef8b986c11b2ae9d585665c872edc2226"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/room-perspective.png",
+          "bytes": 294983,
+          "sha256": "1f9a5f21d8c1032f33d108f79d4c647716975fbb69373cf6ac8ecc92563b2684"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/walk.png",
+          "bytes": 373298,
+          "sha256": "72670db4aaec7dfcb1832cc0f063d8bad8bf8fdf8a1e6a942429e5fe9ae14d35"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/workspace-calendar.png",
+          "bytes": 127377,
+          "sha256": "93e0426587023941165d7388e731cfdf93c99a0dbbd45cae5c8421111dff0880"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/workspace-cases.png",
+          "bytes": 183094,
+          "sha256": "f85cc3be572cc1fb75d4aec6c4e651f5900174a023736a9309b33c18aec3a308"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/workspace-editorial.png",
+          "bytes": 112631,
+          "sha256": "32bc24699223db709ce8020b04f3a61ce5f3dc1da36aafdd1032b3652100d004"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/workspace-life.png",
+          "bytes": 132291,
+          "sha256": "74ea7c2c90051abac27807e209b8243747d06d4d2028abecaabff79584fcbb90"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/workspace-quests.png",
+          "bytes": 136232,
+          "sha256": "67acd976217f2ae253d52c6d8c6861857cc75c1cfee861b8e7ff6c653a516d39"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/workspace-reports.png",
+          "bytes": 137340,
+          "sha256": "7a9fa72b20830531aff267a364a2b7c4912768305c7f6da05ea2312295caaf24"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/workspace-saves.png",
+          "bytes": 136339,
+          "sha256": "fb300844246caa46c683d6b0abbff707e56c0e322ce49e0763f46bbd2e325ef3"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/workspace-team.png",
+          "bytes": 155749,
+          "sha256": "dbab1e727be64a648c9fb559dd16c24572e834ebcb3562a8843d658f54cca4e8"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v6/workspace-travel.png",
+          "bytes": 130153,
+          "sha256": "79d08fc4cce7ecea3186375e19fb19a42927491b6eff778e4a22dcb95f5714df"
+        }
+      ]
+    },
+    {
+      "artifact": "captures-v7",
+      "reason": "Queue and labels refined; before portal, mounted prompts and quality persistence fixes",
+      "policy": "historical retained in place; bytes preserved",
+      "files": [
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/dialogue-command.png",
+          "bytes": 707108,
+          "sha256": "72332e050eeb0c8bbafe7e4c34752cae78b885869876d86cc917b8d659b4445f"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/extension-library.png",
+          "bytes": 100728,
+          "sha256": "c1bbe7535cabfa221411a2bdc5f5112274d089e8feb684507b67a6e8fe3742a8"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/extension-npc-dialogue.png",
+          "bytes": 424341,
+          "sha256": "90b8d9f781d40734fd8817428ed40e88c53eb4c4ef261c70dd59e71d58b766ad"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/extension-npc-room.png",
+          "bytes": 104260,
+          "sha256": "9a89dff985e92d71a628fdbf8b5fae97a64f240b9d943a1ccf112fc76f813735"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/formula-benchmark.png",
+          "bytes": 76066,
+          "sha256": "0221cf25fcbf47b91b7525321dfadb1f2f84e787f3e0d1a21ae441b09c832356"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/formula-tool.png",
+          "bytes": 68713,
+          "sha256": "d8de20850185183715a13793b6c2ef7efb4c26711104c1fcd7a5c2e0ea5562c5"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/integrated-state.json",
+          "bytes": 6013,
+          "sha256": "66117fedb1c2e172a66bdf5ff686f3082823d9fe32354504797e0425d116cdc3"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/room-dof-ab.png",
+          "bytes": 435969,
+          "sha256": "a1cfba1d88b8b256c1437c712ad35628a60f03736098d7f18c88c36bf6286398"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/room-fog-ab.png",
+          "bytes": 385238,
+          "sha256": "3df37f096279facded1650bfeee2a6b5c2b2c00f8b7e04c76c062b803c9732ca"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/room-glow-ab.png",
+          "bytes": 436442,
+          "sha256": "dae0964014ac843ba43fb0986bcd12bf93a0d1ea07430c482eb8c2d7029ea916"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/room-high.png",
+          "bytes": 435687,
+          "sha256": "f7d3a21b9edb43ebeaa87e1c02891a4044a700811ac264e34014132358d80cea"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/room-low.png",
+          "bytes": 278369,
+          "sha256": "709362aca18710472bc81164276f829ef8b986c11b2ae9d585665c872edc2226"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/room-perspective.png",
+          "bytes": 294953,
+          "sha256": "b083ca7f12d1f1c3b497d1edb09bfe48d1c2a8b448804113720c098143067b10"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/walk.png",
+          "bytes": 373318,
+          "sha256": "ac06f40521a383527aba7db39ef5eb54312c08359318b6d4de51a13d5408371d"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/workspace-calendar.png",
+          "bytes": 127377,
+          "sha256": "93e0426587023941165d7388e731cfdf93c99a0dbbd45cae5c8421111dff0880"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/workspace-cases.png",
+          "bytes": 183094,
+          "sha256": "f85cc3be572cc1fb75d4aec6c4e651f5900174a023736a9309b33c18aec3a308"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/workspace-editorial.png",
+          "bytes": 122588,
+          "sha256": "778a17a9fd6be7c6edd79fa41596d8dac364312206dc277f3de252a92fe7f3c7"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/workspace-life.png",
+          "bytes": 132291,
+          "sha256": "74ea7c2c90051abac27807e209b8243747d06d4d2028abecaabff79584fcbb90"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/workspace-quests.png",
+          "bytes": 136232,
+          "sha256": "67acd976217f2ae253d52c6d8c6861857cc75c1cfee861b8e7ff6c653a516d39"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/workspace-reports.png",
+          "bytes": 150487,
+          "sha256": "7bede4c70c2612241de0e04bbac92da9a22b775a20183fb55a41f7dc60967b6e"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/workspace-saves.png",
+          "bytes": 136339,
+          "sha256": "fb300844246caa46c683d6b0abbff707e56c0e322ce49e0763f46bbd2e325ef3"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/workspace-team.png",
+          "bytes": 155749,
+          "sha256": "dbab1e727be64a648c9fb559dd16c24572e834ebcb3562a8843d658f54cca4e8"
+        },
+        {
+          "path": "docs/reviews/chapters-06-12/captures-v7/workspace-travel.png",
+          "bytes": 130153,
+          "sha256": "79d08fc4cce7ecea3186375e19fb19a42927491b6eff778e4a22dcb95f5714df"
+        }
+      ]
+    },
+    {
+      "artifact": "playable.mp4",
+      "reason": "Earlier technical review pass; final successor named separately",
+      "policy": "historical retained in place; bytes preserved",
+      "files": [
+        {
+          "path": "docs/reviews/chapters-06-12/playable.mp4",
+          "bytes": 1371967,
+          "sha256": "028f86f6433e52215842139f8ab5b683da0a38d46da1fc578f8d0b6ee9f52b11"
+        }
+      ]
+    },
+    {
+      "artifact": "playable-v2.mp4",
+      "reason": "Earlier technical review pass; final successor named separately",
+      "policy": "historical retained in place; bytes preserved",
+      "files": [
+        {
+          "path": "docs/reviews/chapters-06-12/playable-v2.mp4",
+          "bytes": 1411951,
+          "sha256": "7a2b588abaa95f263cdde35ff999a8621cf8aa5e69f5d9ce6882e2cab7ad2c10"
+        }
+      ]
+    },
+    {
+      "artifact": "native-profile.json",
+      "reason": "Earlier technical review pass; final successor named separately",
+      "policy": "historical retained in place; bytes preserved",
+      "files": [
+        {
+          "path": "docs/reviews/chapters-06-12/native-profile.json",
+          "bytes": 1369491,
+          "sha256": "c3aadfd620011d3b621f20e82de02465e7250c44313cda773da232b8d6ef9394"
+        }
+      ]
+    },
+    {
+      "artifact": "profile-summary.json",
+      "reason": "Earlier technical review pass; final successor named separately",
+      "policy": "historical retained in place; bytes preserved",
+      "files": [
+        {
+          "path": "docs/reviews/chapters-06-12/profile-summary.json",
+          "bytes": 16394,
+          "sha256": "cec411978ce727a2ec7203aa38db1d6f73bfa36069119859f6ef1e5c63fe7ba5"
+        }
+      ]
+    },
+    {
+      "artifact": "tests/fixtures/parity/personal-all.json",
+      "reason": "Initial-state locale registration ordering error; personal-all-v2.json corrects capture, no source behavior changed",
+      "policy": "frozen historical oracle; active suite uses v2",
+      "files": [
+        {
+          "path": "tests/fixtures/parity/personal-all.json",
+          "bytes": 623885,
+          "sha256": "be025cd338570967e1ed889dc4d21e21682165931374fbe849ddf480911bee7f"
+        }
+      ]
+    }
+  ]
+}

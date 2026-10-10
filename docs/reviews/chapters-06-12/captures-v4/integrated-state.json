@@ -1,0 +1,254 @@
+{
+  "version": 3,
+  "config": {
+    "days": 14.0,
+    "clubEnergy": 4.0,
+    "outsideEnergy": 2.0,
+    "openCost": 1.0,
+    "assignCost": 1.0,
+    "researchDays": 2.0,
+    "editorialCapacity": 3.0,
+    "packaging": 0.04,
+    "romancePenalty": 0.25,
+    "fatiguePerWork": 10.0,
+    "recovery": 12.0,
+    "jobPay": 150.0,
+    "trainingCost": 80.0,
+    "toolCost": 220.0,
+    "giftCost": 60.0
+  },
+  "day": 1,
+  "phase": "club",
+  "energy": 4.0,
+  "money": 300.0,
+  "reputation": 0,
+  "pressure": 0,
+  "grants": 0,
+  "people": [
+    {
+      "id": "khue",
+      "name_key": "content.gameplay.definitions.diep_khue",
+      "female": false,
+      "joinDay": 1.0,
+      "stats": {
+        "interview": 7.0,
+        "investigation": 7.0,
+        "photo": 4.0,
+        "documents": 5.0,
+        "empathy": 5.0,
+        "courage": 6.0
+      },
+      "fatigue": 0,
+      "bond": 0,
+      "events": 0,
+      "romance": false,
+      "weekendSkill": false,
+      "tools": [],
+      "skills": []
+    },
+    {
+      "id": "van",
+      "name_key": "content.gameplay.definitions.luc_thanh_van",
+      "female": true,
+      "joinDay": 1.0,
+      "stats": {
+        "interview": 5.0,
+        "investigation": 4.0,
+        "photo": 4.0,
+        "documents": 7.0,
+        "empathy": 6.0,
+        "courage": 7.0
+      },
+      "fatigue": 0,
+      "bond": 0,
+      "events": 0,
+      "romance": false,
+      "weekendSkill": false,
+      "tools": [],
+      "skills": []
+    },
+    {
+      "id": "long",
+      "name_key": "content.gameplay.definitions.doan_bao_long",
+      "female": false,
+      "joinDay": 1.0,
+      "stats": {
+        "interview": 6.0,
+        "investigation": 5.0,
+        "photo": 4.0,
+        "documents": 4.0,
+        "empathy": 8.0,
+        "courage": 5.0
+      },
+      "fatigue": 0,
+      "bond": 0,
+      "events": 0,
+      "romance": false,
+      "weekendSkill": false,
+      "tools": [],
+      "skills": []
+    },
+    {
+      "id": "nhi",
+      "name_key": "content.gameplay.definitions.ha_tuyet_nhi",
+      "female": true,
+      "joinDay": 1.0,
+      "stats": {
+        "interview": 5.0,
+        "investigation": 6.0,
+        "photo": 4.0,
+        "documents": 8.0,
+        "empathy": 4.0,
+        "courage": 5.0
+      },
+      "fatigue": 0,
+      "bond": 0,
+      "events": 0,
+      "romance": false,
+      "weekendSkill": false,
+      "tools": [],
+      "skills": []
+    },
+    {
+      "id": "ngoc",
+      "name_key": "content.gameplay.definitions.ta_nhu_ngoc",
+      "female": true,
+      "joinDay": 8.0,
+      "stats": {
+        "interview": 5.0,
+        "investigation": 5.0,
+        "photo": 8.0,
+        "documents": 4.0,
+        "empathy": 6.0,
+        "courage": 5.0
+      },
+      "fatigue": 0,
+      "bond": 0,
+      "events": 0,
+      "romance": false,
+      "weekendSkill": false,
+      "tools": [],
+      "skills": []
+    },
+    {
+      "id": "an",
+      "name_key": "content.gameplay.definitions.ngo_thien_an",
+      "female": false,
+      "joinDay": 10.0,
+      "stats": {
+        "interview": 5.0,
+        "investigation": 7.0,
+        "photo": 4.0,
+        "documents": 8.0,
+        "empathy": 4.0,
+        "courage": 6.0
+      },
+      "fatigue": 0,
+      "bond": 0,
+      "events": 0,
+      "romance": false,
+      "weekendSkill": false,
+      "tools": [],
+      "skills": []
+    }
+  ],
+  "cases": [
+    {
+      "key": "community",
+      "title_key": "content.gameplay.definitions.san_bong_dong_cua",
+      "teaser_key": "content.gameplay.definitions.hoc_sinh_phai_tap_ngoai_cong_truong",
+      "story_key": "content.gameplay.definitions.nguoi_quan_ly_khong_muon_trao_doi_qua_van_ban_cac_ban_trong_doi_",
+      "need": "empathy",
+      "difficulty": 7.0,
+      "attraction": 7.0,
+      "id": "W1-community",
+      "week": 1,
+      "expires": 11,
+      "opened": false,
+      "status": "available",
+      "owner": null,
+      "progress": 0,
+      "attempts": 0,
+      "quality": 0
+    },
+    {
+      "key": "documents",
+      "title_key": "content.gameplay.definitions.khoan_thu_cau_lac_bo",
+      "teaser_key": "content.gameplay.definitions.mot_khoan_thu_moi_xuat_hien_tren_bang_thong_bao",
+      "story_key": "content.gameplay.definitions.ba_bang_ke_co_so_lieu_khong_khop_nguon_tin_de_nghi_doi_chieu_tai",
+      "need": "documents",
+      "difficulty": 7.0,
+      "attraction": 8.0,
+      "id": "W1-documents",
+      "week": 1,
+      "expires": 11,
+      "opened": false,
+      "status": "available",
+      "owner": null,
+      "progress": 0,
+      "attempts": 0,
+      "quality": 0
+    },
+    {
+      "key": "photo",
+      "title_key": "content.gameplay.definitions.ben_cang_luc_binh_minh",
+      "teaser_key": "content.gameplay.definitions.nhung_nguoi_lam_viec_truoc_khi_thanh_pho_thuc_giac",
+      "story_key": "content.gameplay.definitions.nhan_vat_muon_ke_chuyen_qua_nhung_khoanh_khac_lao_dong_thuc_te_m",
+      "need": "photo",
+      "difficulty": 7.0,
+      "attraction": 6.0,
+      "id": "W1-photo",
+      "week": 1,
+      "expires": 11,
+      "opened": false,
+      "status": "available",
+      "owner": null,
+      "progress": 0,
+      "attempts": 0,
+      "quality": 0
+    }
+  ],
+  "quests": [
+    {
+      "id": "Q1",
+      "title_key": "src.gameplay.engine.ho_so_khue_value0_cang_tin_va_nguoi_trong_cuoc",
+      "title_parameters": {
+        "value0": 1
+      },
+      "steps": [],
+      "quality": [],
+      "written": false
+    }
+  ],
+  "drafts": [],
+  "articles": [],
+  "reports": [],
+  "messages": [],
+  "log": [
+    {
+      "day": 1,
+      "phase": "morning",
+      "textKey": "src.gameplay.engine.bat_dau_lat_cat_co_che_nhi_duoc_mo_som_de_thu_phan_cong_noi_dung",
+      "params": {}
+    },
+    {
+      "day": 1,
+      "phase": "club",
+      "textKey": "src.gameplay.engine.tan_hoc_bat_dau_2_gio_clb",
+      "params": {}
+    }
+  ],
+  "sleepPrepared": false,
+  "ended": false,
+  "betrayal": false,
+  "metrics": {
+    "opened": 0,
+    "assigned": 0,
+    "restarts": 0,
+    "approvals": 0,
+    "energySpent": 0,
+    "unusedEnergy": 0,
+    "hangouts": 0,
+    "jobs": 0
+  }
+}

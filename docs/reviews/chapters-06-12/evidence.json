@@ -1,0 +1,2467 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-10",
+  "source_commit": "6ad88df15ac5f082ac323e9d4144094affe01c7b",
+  "source_status": "unchanged and clean; read-only oracle recapture verified",
+  "target_base_commit": "98bd24a9c15c592614c562db18c5d137000a7421",
+  "engine": {
+    "major": 4,
+    "minor": 7,
+    "patch": 2,
+    "hex": 263938,
+    "status": "stable",
+    "build": "steam",
+    "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+    "timestamp": 0,
+    "string": "4.7.2-stable (steam)"
+  },
+  "renderer": "Forward+ / D3D12",
+  "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+  "headless_checks": 650,
+  "headless_failures": 0,
+  "native_input_checks": 18,
+  "native_failures": 0,
+  "physical_controller_tested": false,
+  "clean_import": "Fresh staged Git checkout-index snapshot; no .godot, .git or external source dependency; policies/reference/content checks, engine import, 650 headless contracts and bootstrap pass",
+  "gameplay_parity": {
+    "policies": 4,
+    "commands": 834,
+    "long_campaign_days": 84,
+    "traces": 8,
+    "compares": "Full state, metrics, reports, logs and source committed baseline"
+  },
+  "formula_parity": {
+    "policies": 8,
+    "compares": "Full state, journal, reports and committed baseline",
+    "schema": "Native formula v2; explicit display adapter only maps text refs and version to source v1"
+  },
+  "baseline_policy": "Original locked baselines unchanged; no regeneration",
+  "save_checks": "Native full-precision JSON semantic round-trip, legacy raw/wrapped/browser migration, schema/content/ruleset/corruption rejection before replacement, temporary write interruption, backup and injected disk failure; world safe spawn",
+  "performance": {
+    "real_clock": true,
+    "fixed_fps": false,
+    "vsync": "disabled",
+    "max_fps": 120,
+    "runs": 14,
+    "warmup_frames_per_run": 120,
+    "measured_frames_per_run": 300,
+    "measured_frames_total": 4200,
+    "frame_p95_ms_range": [
+      8.659,
+      8.704
+    ],
+    "max_gpu_p95_ms": 3.4230000972747803,
+    "all_60fps_budgets_pass": true,
+    "limits": "Short regression sample on one laptop; capped FPS, editor workload and power state affect A/B. No weak-GPU, production crowd or long soak acceptance."
+  },
+  "native_exports": [
+    {
+      "kind": "debug",
+      "run_from": "Fresh temporary directory containing only EXE/PCK/dependencies/licenses; no project.godot or source checkout",
+      "checks": "Packaged gameplay command, eight management panels, user save/load, wrong ruleset rejection, JSON, Vietnamese font glyphs, room travel and real sandbox balanced benchmark",
+      "files": [
+        {
+          "path": "build/windows/debug/hoi-am.console.exe",
+          "bytes": 188928,
+          "sha256": "5514c7645ee897a01f540d3cf22ede5badf92394521a08bfab66a54d7369e6e6"
+        },
+        {
+          "path": "build/windows/debug/hoi-am.exe",
+          "bytes": 103176704,
+          "sha256": "51498b72b3a237f882ebd7d1787f06a4bc1eaf0572daab93837adcfd3cfdc107"
+        },
+        {
+          "path": "build/windows/debug/hoi-am.pck",
+          "bytes": 3235620,
+          "sha256": "eae44b56f9945a5dd458916f029f8f44bc7b6219f280369bab2126d18251dc1b"
+        },
+        {
+          "path": "build/windows/debug/licenses/cormorantgaramond-OFL.txt",
+          "bytes": 4387,
+          "sha256": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956"
+        },
+        {
+          "path": "build/windows/debug/licenses/dancingscript-OFL.txt",
+          "bytes": 4443,
+          "sha256": "6f090277c00af96651ce6dbcc38ff1591047a3bffef486e80b6a32e8276a8201"
+        },
+        {
+          "path": "build/windows/debug/licenses/godot-COPYRIGHT.txt",
+          "bytes": 100108,
+          "sha256": "cb1980c88089573bcacd7221d777c689bb8bbd778799f24c27fca0fe5f774d6d"
+        },
+        {
+          "path": "build/windows/debug/licenses/godot-LICENSE.txt",
+          "bytes": 1149,
+          "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80"
+        },
+        {
+          "path": "build/windows/debug/licenses/source_serif_4-OFL.txt",
+          "bytes": 4400,
+          "sha256": "5f94c3fd3a23131a417ab5a0c8452de57e70c3cfb9f604d88241f7065ebf9fd9"
+        }
+      ]
+    },
+    {
+      "kind": "release",
+      "run_from": "Fresh temporary directory containing only EXE/PCK/dependencies/licenses; no project.godot or source checkout",
+      "checks": "Packaged gameplay command, eight management panels, user save/load, wrong ruleset rejection, JSON, Vietnamese font glyphs, room travel and real sandbox balanced benchmark",
+      "files": [
+        {
+          "path": "build/windows/release/hoi-am.exe",
+          "bytes": 109268480,
+          "sha256": "d34d36f3be1a6c49c56525ae86469b92e4f417ddf0b43cf00dd80c385c4b0562"
+        },
+        {
+          "path": "build/windows/release/hoi-am.pck",
+          "bytes": 3235620,
+          "sha256": "eae44b56f9945a5dd458916f029f8f44bc7b6219f280369bab2126d18251dc1b"
+        },
+        {
+          "path": "build/windows/release/licenses/cormorantgaramond-OFL.txt",
+          "bytes": 4387,
+          "sha256": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956"
+        },
+        {
+          "path": "build/windows/release/licenses/dancingscript-OFL.txt",
+          "bytes": 4443,
+          "sha256": "6f090277c00af96651ce6dbcc38ff1591047a3bffef486e80b6a32e8276a8201"
+        },
+        {
+          "path": "build/windows/release/licenses/godot-COPYRIGHT.txt",
+          "bytes": 100108,
+          "sha256": "cb1980c88089573bcacd7221d777c689bb8bbd778799f24c27fca0fe5f774d6d"
+        },
+        {
+          "path": "build/windows/release/licenses/godot-LICENSE.txt",
+          "bytes": 1149,
+          "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80"
+        },
+        {
+          "path": "build/windows/release/licenses/source_serif_4-OFL.txt",
+          "bytes": 4400,
+          "sha256": "5f94c3fd3a23131a417ab5a0c8452de57e70c3cfb9f604d88241f7065ebf9fd9"
+        }
+      ]
+    }
+  ],
+  "current_visual_evidence": {
+    "captures": "docs/reviews/chapters-06-12/captures-v8",
+    "png_count": 23,
+    "video": "docs/reviews/chapters-06-12/playable-v3.mp4",
+    "video_is_performance_measurement": false
+  },
+  "visual_gate": "G2-open; C11.05 remains unaccepted. Authored room pipeline sample and other location prototypes; no production-art or full G3 motion claim",
+  "remaining_work_packages": [
+    "C11.05"
+  ],
+  "runtime_hash_basis": "Git staged blob bytes; canonical repository line endings except explicit frozen -text paths",
+  "review_hash_basis": "File bytes; capture/profile/log history protected from EOL normalization",
+  "runtime_and_validation_files": [
+    {
+      "path": "assets/actors/README.md",
+      "sha256": "b094524383d9f8693fc76197d9758dcbb427324f5335907df7a7f1859fb0f270"
+    },
+    {
+      "path": "assets/actors/khue.png",
+      "sha256": "4483e5116ace64da144bee789d82a99cc49a365b27e7ff95cc9348d97c79de88"
+    },
+    {
+      "path": "assets/actors/khue.png.import",
+      "sha256": "c53e9131ff449a8d7df37def5645be524163ef447f9ce65d53e7607117d4b89b"
+    },
+    {
+      "path": "assets/actors/source/.gdignore",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "assets/actors/source/pilot-v2/README.md",
+      "sha256": "e1edec61ab404e5b089a9946c19cd8f1de4ae694daa685985e864885dd7fd733"
+    },
+    {
+      "path": "assets/actors/source/pilot-v2/khue-prompt.txt",
+      "sha256": "f27bb45a5d4371acd19f7c12d2cfd29a27ad33962b0f661b76dc78497e09db0f"
+    },
+    {
+      "path": "assets/actors/source/pilot-v2/khue-source.png",
+      "sha256": "c10c0a6d907a3c5d431e72b300d0c53636a85e0a7ee7cf2b7f7214fc4631150d"
+    },
+    {
+      "path": "assets/actors/source/pilot-v2/khue.png",
+      "sha256": "8637c887f9b9ef3a03c191dbf1231ca732b2c8207386b35de949f900e2bba703"
+    },
+    {
+      "path": "assets/actors/source/pilot-v2/van-prompt.txt",
+      "sha256": "1738507ef096f4165961ff71ca0d8d3d9d95fa1265b91b558b6fcb82bce1e61a"
+    },
+    {
+      "path": "assets/actors/source/pilot-v2/van-source.png",
+      "sha256": "9be3b1a725cee5af6273645183cdd645a5c5d43ad87a9f980374137fff565d66"
+    },
+    {
+      "path": "assets/actors/source/pilot-v2/van.png",
+      "sha256": "d109f5814e0905b030c64f9fa22dcb9ad4116c42c10d7dcb6cf40e2282bf13a1"
+    },
+    {
+      "path": "assets/actors/source/pilot-v5/README.md",
+      "sha256": "2d97ad77a1f0f10c3eea0fd43d0c4f800881b3efd9a51374a565f1f33c1b67e5"
+    },
+    {
+      "path": "assets/actors/source/pilot-v5/arm-correction-prompts.json",
+      "sha256": "c49413d72c57581410042cb35f8482f0bb33c349b26ca1dcd5c8decc94bc6c2d"
+    },
+    {
+      "path": "assets/actors/source/pilot-v5/down-attempt1-source.png",
+      "sha256": "33ab483713ca84bbcc2b7c8648f8a3dbfc6d7b8e209e36042469c718322ab865"
+    },
+    {
+      "path": "assets/actors/source/pilot-v5/down-source.png",
+      "sha256": "d04003673e71f6d9c360b3105bfd6b784b29230024012c991b1276755379fed7"
+    },
+    {
+      "path": "assets/actors/source/pilot-v5/down-walk.png",
+      "sha256": "82aa5147215f1c6fbc5514cc671baa668816fa3f5d23418d297b0230e16d25be"
+    },
+    {
+      "path": "assets/actors/source/pilot-v5/generations.json",
+      "sha256": "dd745809c105427655a02460f26cbaaa94b7b6f694d35d58d6a3419a2457e956"
+    },
+    {
+      "path": "assets/actors/source/pilot-v5/khue.png",
+      "sha256": "234239b4a82521d829f4aad1e19cebcd197ba83d08ef63d106913f3800aa125a"
+    },
+    {
+      "path": "assets/actors/source/pilot-v5/metrics.json",
+      "sha256": "e5515540754844a333af044a397b4ceb7ba4e76db98e9a850dcc50cb4b4267ea"
+    },
+    {
+      "path": "assets/actors/source/pilot-v5/prompts.json",
+      "sha256": "6ed3b577f4a69f2f392857b6e85266ce621cf49432dce5e86d3b0e43081dc0ff"
+    },
+    {
+      "path": "assets/actors/source/pilot-v5/right-attempt1-source.png",
+      "sha256": "2ef30f1dce12d0ebaed8e30a0b4a6bd38ce9360b4afce29043390c2186ecb7ff"
+    },
+    {
+      "path": "assets/actors/source/pilot-v5/right-source.png",
+      "sha256": "92d7dc26b1ba72a1d91445a2e1adfecb901b64eab75cd89a9d822bdad6ea44a8"
+    },
+    {
+      "path": "assets/actors/source/pilot-v5/right-walk.png",
+      "sha256": "f13653ec77a3ec987bd28ef63400246fe7174366415c5a1578d066d009e52c10"
+    },
+    {
+      "path": "assets/actors/source/pilot-v5/up-source.png",
+      "sha256": "4fd2770115e72c722e7d3aa11a30ff0275a088b1f73bffc02c4327028170875d"
+    },
+    {
+      "path": "assets/actors/source/pilot-v5/up-walk.png",
+      "sha256": "28617f14c7ce63011b538ec4e736ea4ee66e4a1c4882b746eef56e142381c9c6"
+    },
+    {
+      "path": "assets/actors/source/pilot-v6/README.md",
+      "sha256": "e8c76adaad3073ef4244e6f25222864482ab7f90099422ca0273d59ffb44a275"
+    },
+    {
+      "path": "assets/actors/source/pilot-v6/down-body-guide.png",
+      "sha256": "3493c193b1b8f3909bc49baa8255f2c4642047e4b1bc8c900f0361b7058dbd39"
+    },
+    {
+      "path": "assets/actors/source/pilot-v6/down-idle-template.png",
+      "sha256": "9e8c00b967a406f38dbb3a37f8c252bcb7014d21266987d15864af8e8656cdeb"
+    },
+    {
+      "path": "assets/actors/source/pilot-v6/down-source.png",
+      "sha256": "5bfa0938c5e47b1d4bf51ff9bdb5ace6893f10f16f56063ce7ce000394ba548b"
+    },
+    {
+      "path": "assets/actors/source/pilot-v6/down-walk.png",
+      "sha256": "b4749a6eafc8a64288d9257b93ad1e78c19c06130f3a6cb6c410dbb03502befd"
+    },
+    {
+      "path": "assets/actors/source/pilot-v6/khue.png",
+      "sha256": "4483e5116ace64da144bee789d82a99cc49a365b27e7ff95cc9348d97c79de88"
+    },
+    {
+      "path": "assets/actors/source/pilot-v6/metrics.json",
+      "sha256": "52050ff23fa6e14edde861022db76caa912ef7e794edd63ed60d138608c299d9"
+    },
+    {
+      "path": "assets/actors/source/pilot-v6/prompts.json",
+      "sha256": "09fe7fca8557c2d516dbb96c2b159aa761a0a849b14d3dbad0e0a3926b671c23"
+    },
+    {
+      "path": "assets/actors/source/pilot-v6/up-body-guide.png",
+      "sha256": "2ce0ef28569749584368b488255fb76e6d809d047b25434edd6d816ab2571812"
+    },
+    {
+      "path": "assets/actors/source/pilot-v6/up-idle-template.png",
+      "sha256": "ab895b39f590629f904ce6ed95c5dc40ee3c2e751211cfcf224e96ff938fabe4"
+    },
+    {
+      "path": "assets/actors/source/pilot-v6/up-source.png",
+      "sha256": "6fc2c1c436f934d169d5d7c084cc23f135d8842611ea9c886b16291b90d95ff2"
+    },
+    {
+      "path": "assets/actors/source/pilot-v6/up-walk.png",
+      "sha256": "3219a5aa722b40a5ae017935f6cfa7594fd7e008bc18500ca37812c50048eb0f"
+    },
+    {
+      "path": "assets/actors/van.png",
+      "sha256": "d109f5814e0905b030c64f9fa22dcb9ad4116c42c10d7dcb6cf40e2282bf13a1"
+    },
+    {
+      "path": "assets/actors/van.png.import",
+      "sha256": "4df0a52a28ecf6e8169f0cb6dc51196b56b462eb5695b9bdd1bff98591230a63"
+    },
+    {
+      "path": "assets/fonts/README.md",
+      "sha256": "dd5efbe294a0a8fbd47a3982cf564d90562a8fbd8ec0aac4e1f27ebe61566f75"
+    },
+    {
+      "path": "assets/fonts/cormorantgaramond/METADATA.pb",
+      "sha256": "faa16a5e79613ca7cadd599ada1f4cf6891f3cb6731631fbed2a0b18a342e556"
+    },
+    {
+      "path": "assets/fonts/cormorantgaramond/OFL.txt",
+      "sha256": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956"
+    },
+    {
+      "path": "assets/fonts/cormorantgaramond/cormorant-garamond.ttf",
+      "sha256": "b20b7d9626dd956b2c5e558692ad328b1f19e3275e2782db4fa07670d83f35e0"
+    },
+    {
+      "path": "assets/fonts/cormorantgaramond/cormorant-garamond.ttf.import",
+      "sha256": "79a93e3ed8120212bdb86a0c5e641d2328adc375745c6c64e28a404fca28ad70"
+    },
+    {
+      "path": "assets/fonts/dancingscript/METADATA.pb",
+      "sha256": "02340c7f8cd71fc22a4a54466f4bf45ff699db9e43fc0a0dc8e448f7c60756df"
+    },
+    {
+      "path": "assets/fonts/dancingscript/OFL.txt",
+      "sha256": "6f090277c00af96651ce6dbcc38ff1591047a3bffef486e80b6a32e8276a8201"
+    },
+    {
+      "path": "assets/fonts/dancingscript/dancing-script.ttf",
+      "sha256": "21808625578fe8d8cd10cb684be546dca077b27cd03a53a2f1ec11dc743c924c"
+    },
+    {
+      "path": "assets/fonts/dancingscript/dancing-script.ttf.import",
+      "sha256": "11994ff8a6bade21bbf056606dcde835c9f09598f4d8201993f3b04a54083bf6"
+    },
+    {
+      "path": "assets/fonts/source_serif_4/METADATA.pb",
+      "sha256": "f7b88902c1d2f41839a3f7bf6723d1e64044c7c183b82871ce770a95f24b84e3"
+    },
+    {
+      "path": "assets/fonts/source_serif_4/OFL.txt",
+      "sha256": "5f94c3fd3a23131a417ab5a0c8452de57e70c3cfb9f604d88241f7065ebf9fd9"
+    },
+    {
+      "path": "assets/fonts/source_serif_4/source-serif-4.ttf",
+      "sha256": "97b2d4da6e3cb494b5a1e66ae176914d852ccabef49e0c02c0df25f3e39aca0b"
+    },
+    {
+      "path": "assets/fonts/source_serif_4/source-serif-4.ttf.import",
+      "sha256": "d6de4faf6ebd6a470acbc28349eddfd6bfe71a8e048956f641f75b82801841ee"
+    },
+    {
+      "path": "assets/licenses/godot-COPYRIGHT.txt",
+      "sha256": "cb1980c88089573bcacd7221d777c689bb8bbd778799f24c27fca0fe5f774d6d"
+    },
+    {
+      "path": "assets/licenses/godot-LICENSE.txt",
+      "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80"
+    },
+    {
+      "path": "assets/ui/coastal/README.md",
+      "sha256": "49360251e6fbaa37c6192f18acc007aa0f0eed0f1bc78f02b3fd4d682f117d96"
+    },
+    {
+      "path": "assets/ui/coastal/generated_sources/.gdignore",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "assets/ui/coastal/generated_sources/choice-gold.svg",
+      "sha256": "bbcaac285928355895514f1b80e93d20df0c0ce56c317365fd0ec40f521ed3c9"
+    },
+    {
+      "path": "assets/ui/coastal/generated_sources/choice-plain.svg",
+      "sha256": "33d8c693c184f87fc34544febab677c577f32b029f60b96fa06064f9e9526fcd"
+    },
+    {
+      "path": "assets/ui/coastal/generated_sources/date-paper.svg",
+      "sha256": "9db3f75e9eeb3d3adef33004232136a545f8072c2fd0b4d2fbcb8bae1ba84375"
+    },
+    {
+      "path": "assets/ui/coastal/generated_sources/date.svg",
+      "sha256": "ac74e281d05559da921f2b9824b5c146aa12789725be307423b8c28d8a3c66ce"
+    },
+    {
+      "path": "assets/ui/coastal/generated_sources/flowers.svg",
+      "sha256": "f9d70c72e0399c1f02f05c9c5761d5ee8fa29d42e4ac310559d3956cb1edcc36"
+    },
+    {
+      "path": "assets/ui/coastal/generated_sources/icon-back.svg",
+      "sha256": "f8aab550e1e03866f4b15c9fe7c721005b98313a1d023be53ae4cb6bf16c039c"
+    },
+    {
+      "path": "assets/ui/coastal/generated_sources/icon-chat.svg",
+      "sha256": "bdc3fc63520c916e3c2bc94aba0189582325433a33a990ca63df157bd58c4768"
+    },
+    {
+      "path": "assets/ui/coastal/generated_sources/icon-chevron.svg",
+      "sha256": "c6acdd94c923c0cab1472fbc4ee0c42e38e32ee1694c1c3bc90c10f949df94ea"
+    },
+    {
+      "path": "assets/ui/coastal/generated_sources/icon-proof.svg",
+      "sha256": "89ed85c9f1058b4577c063ffb4f4da64fca5de069c06aa6dd60ab19e097fe46a"
+    },
+    {
+      "path": "assets/ui/coastal/generated_sources/icon-quill.svg",
+      "sha256": "0516f2fd3105729bad95a59804fe552bd2bfc001b050337fee8b4e8ed392b201"
+    },
+    {
+      "path": "assets/ui/coastal/generated_sources/icon-return.svg",
+      "sha256": "e988af9827d437ab5cd60f03eb4d8dca913c1ba99a8423add9f2063069c59129"
+    },
+    {
+      "path": "assets/ui/coastal/generated_sources/notebook.svg",
+      "sha256": "c32e2e929e1c1fd2c0c18c05b1c66b93655e8fa191710e3cb8b3d9de0b102c75"
+    },
+    {
+      "path": "assets/ui/coastal/generated_sources/paper.svg",
+      "sha256": "f4e1110d45a9f903202cb461571850215aecc729b292d0ba6b1b9cdcbcdc0077"
+    },
+    {
+      "path": "assets/ui/coastal/generated_sources/print.svg",
+      "sha256": "8cd194b4b1da1964be01d9ac7bd090c0345ea57a498c71ce10f06394ab34fcff"
+    },
+    {
+      "path": "assets/ui/coastal/generated_sources/sun-seal.svg",
+      "sha256": "11ab4cf65e964ec94bb4dc43caaa9170a1a91d3157cea718d7bc9af3763f309b"
+    },
+    {
+      "path": "assets/ui/coastal/generated_sources/wave.svg",
+      "sha256": "db3e21564f272df80967be4b0c1b76cce7109eaa8febb7225442ce1db9c82a37"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/choice-gold.png",
+      "sha256": "9d7387c3be899723faf6f6aa3f2a6ea16917b7fa5c86576ec06b42dc0131087b"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/choice-gold.png.import",
+      "sha256": "cb35e6af7ccf3102b028c47776efa85522cd4ee835b7e66352ac1ecd4a8aa8c9"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/choice-plain.png",
+      "sha256": "e1ee39a48bb1b7254050cd3acc3c14a00403801b7cd90571941d7276e7af91f8"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/choice-plain.png.import",
+      "sha256": "c163cda82bb89015829efbe72caf15650d02e204f9c6748ba967ae9eefe77eb3"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/date-paper.png",
+      "sha256": "4b79acfc0a836bb3d4d23fd03a19f33b1c24c25de5d9593e9cb31763d03f2338"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/date-paper.png.import",
+      "sha256": "a2ba9fc23690120ee3acc524f296c7dfa9914717627ce8a263154198be38e1cd"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/date.png",
+      "sha256": "fc214b988bf913f65134ebe9a7aa4290f04c10dda8998b46e6499b08a5854029"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/date.png.import",
+      "sha256": "5f00431750c7004061f9ac1c58a9432cdcde7fa77a35987ffaaf7ff606aed576"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/flowers.png",
+      "sha256": "0da2c95e80cb2d7af810469cdbcbb53308d89a0b85502b45a2c3f2747a2d3e82"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/flowers.png.import",
+      "sha256": "b6808f6874dbb5ed2a6b5dd02a855d03f82b447114828896b2eb55df305921cb"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/icon-back.png",
+      "sha256": "c18d0eca4bb19e887c270d5a6d54f71861f6c3be16afbf1664a7b4df489d92e8"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/icon-back.png.import",
+      "sha256": "7abbb08dac2ebfe97656a714b6896afe6aa022462619c545bff25f46817fc845"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/icon-chat.png",
+      "sha256": "bc83336ab3a8c739773388044c069a97f00797723b63ab90e23211e5b4c3cd31"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/icon-chat.png.import",
+      "sha256": "6ce93de3846f98bf2663be9c21c5d8682e7d78775988ea9f860f1c7bbdebfaa2"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/icon-chevron.png",
+      "sha256": "6650a3211d38690e5d25488bbe18406e3a0069a2adc83adbd86b7fe0896c8a8b"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/icon-chevron.png.import",
+      "sha256": "d4d62bae4271fc57c15c368b2342031b11cbb9ce6897c03540ff376114ccc1c9"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/icon-proof.png",
+      "sha256": "fc16f430d65d6ca8ecb89e22430debbc7ef2b1d2ed9044d74a9756c446a510a9"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/icon-proof.png.import",
+      "sha256": "6c897fed3994cf0a4b1d48579d679a7312ad725a5feb025b95f95c77b8251ac7"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/icon-quill.png",
+      "sha256": "4a2f0904aa5e92aea99686e1c5724e0d44268fe07cbb7d49116da1125d13c43e"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/icon-quill.png.import",
+      "sha256": "ac1f8138bdbcc1461c69f0383d60553413f90d9792cf4d1d33ca3d78584f6857"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/icon-return.png",
+      "sha256": "5a113dc5c866c9ceb05d6b030ebe41905110bda959325f601dce78e8a41f6cda"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/icon-return.png.import",
+      "sha256": "da6234cb58c395ed8bb052df69c88c3f7544bcc3ea753b4cb0e9ce7cc48dc93a"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/notebook.png",
+      "sha256": "e02bd940b6fc18200f105c1816e639790c82ee7ce6020dd631df4db43793bab8"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/notebook.png.import",
+      "sha256": "edb91deb37cf1b20a1d69d9cfff63376e78f68bb134dda8a5b718008f60b9a9a"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/paper.png",
+      "sha256": "57883bd3529775338316b76dc82ded4d6101fb096facb807e9aa79b859448dd0"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/paper.png.import",
+      "sha256": "b8988fc4634713a82dff78ab00c3f1e49d721e055726b86c29dcc353081ca78a"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/print.png",
+      "sha256": "1ba2559ee1d3269da31a2045d64831287b1f73ad3521ec839c11625cdb9594c0"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/print.png.import",
+      "sha256": "a8cac054ec72d27ddf77500ae8c8ebc889a67f774b132330e350ce68cbd82951"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/sun-seal.png",
+      "sha256": "a441f2f0dc845baecc96142adac774e81d1ae093a86749635d158ff754a1a081"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/sun-seal.png.import",
+      "sha256": "9affd3989e7fbb1af7246fa2c54828ae51e1fa3d32cffcc1bb10d1bec1f3347b"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/wave.png",
+      "sha256": "23d8360bceb8396f637cdc020e404767640063f6911ec7bb97c1ba8e57c19984"
+    },
+    {
+      "path": "assets/ui/coastal/runtime/wave.png.import",
+      "sha256": "15d40dfe83120de8de9f21b974ea680287082fdb413de7b40a39b889f1d6c5c2"
+    },
+    {
+      "path": "assets/ui/coastal/source/.gdignore",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "assets/ui/coastal/source/README.md",
+      "sha256": "378a21ce74ff592f3eed220919da99cab9fa19298582f4eb4a710d3b4d007a0b"
+    },
+    {
+      "path": "assets/ui/coastal/source/exports/brand-mark.svg",
+      "sha256": "a66c993123f72a91fe976dcc9861b958b8f56757008a32b8364a868ce3e5167d"
+    },
+    {
+      "path": "assets/ui/coastal/source/exports/choice-gold.svg",
+      "sha256": "32b2ece284ff27af1e8bd4ad753d704f9bfa880f5b0769b526b4f74f533bd0f5"
+    },
+    {
+      "path": "assets/ui/coastal/source/exports/choice-plain.svg",
+      "sha256": "2dc67d67616c4874846c28cad87840b323e0af75bfa59f40e6d5d74339237e96"
+    },
+    {
+      "path": "assets/ui/coastal/source/exports/date-paper.svg",
+      "sha256": "79e00a52401a0a0b29f890cc97b9d625b3cfeccce23f29e3b64f76cd30f3a622"
+    },
+    {
+      "path": "assets/ui/coastal/source/exports/dialogue-paper.svg",
+      "sha256": "bb4f4fb481f97c8870f0273050fe6ba611476285712a11176ea9d7bd8b3ac83a"
+    },
+    {
+      "path": "assets/ui/coastal/source/exports/dialogue-wave.svg",
+      "sha256": "336df9c19e10515994c27b371794cd3a448305654c64cdc53ed1b3723b2de455"
+    },
+    {
+      "path": "assets/ui/coastal/source/exports/foreground-left-v2.png",
+      "sha256": "6e43fc83fe16d3ec36c92bd5053d998ae0baa944b2effa6ad63e65bfd1961b82"
+    },
+    {
+      "path": "assets/ui/coastal/source/exports/foreground-right-v2.png",
+      "sha256": "516080a7256abfdf3185b12b59a013079e58f0829c153e1fa0a92cf1f69dcd9d"
+    },
+    {
+      "path": "assets/ui/coastal/source/exports/harbor-print-v2.png",
+      "sha256": "5ba7857affff64027626ed6e84dd28e8f45301f69d9407c82ccd2f9053f9d90e"
+    },
+    {
+      "path": "assets/ui/coastal/source/exports/icons.svg",
+      "sha256": "437154c8749771336ecc76e903bc6516ffd0b03486b681b73c5931ab7a6319a8"
+    },
+    {
+      "path": "assets/ui/coastal/source/exports/insignia.svg",
+      "sha256": "0b8c6eb1363ab8d602193331692aea0672e454b3849b78cce6aa29683f42ecc9"
+    },
+    {
+      "path": "assets/ui/coastal/source/exports/note-edge.svg",
+      "sha256": "bf65410437ecb69df2650f82586709efeb560179a7451e936e056a15bc174290"
+    },
+    {
+      "path": "assets/ui/coastal/source/exports/shore-ink.svg",
+      "sha256": "2fc7903dcd9283864b4f809a63f696c16527a0996ec7667c86d6c3c6c634a83b"
+    },
+    {
+      "path": "assets/ui/coastal/source/exports/sun-seal.svg",
+      "sha256": "188dc429b5d78620bac74d789d6f1d61344cef8a134612df43bef1b7ebc065de"
+    },
+    {
+      "path": "assets/ui/coastal/source/manifest.json",
+      "sha256": "dce69950648f81c595aa120c4ff136b174fa6e0bbdac9d0580c73075ecc121ea"
+    },
+    {
+      "path": "assets/ui/coastal/source/masters/brand-mark.svg",
+      "sha256": "a66c993123f72a91fe976dcc9861b958b8f56757008a32b8364a868ce3e5167d"
+    },
+    {
+      "path": "assets/ui/coastal/source/masters/choice-gold.svg",
+      "sha256": "32b2ece284ff27af1e8bd4ad753d704f9bfa880f5b0769b526b4f74f533bd0f5"
+    },
+    {
+      "path": "assets/ui/coastal/source/masters/choice-plain.svg",
+      "sha256": "2dc67d67616c4874846c28cad87840b323e0af75bfa59f40e6d5d74339237e96"
+    },
+    {
+      "path": "assets/ui/coastal/source/masters/date-paper.svg",
+      "sha256": "79e00a52401a0a0b29f890cc97b9d625b3cfeccce23f29e3b64f76cd30f3a622"
+    },
+    {
+      "path": "assets/ui/coastal/source/masters/dialogue-paper.svg",
+      "sha256": "bb4f4fb481f97c8870f0273050fe6ba611476285712a11176ea9d7bd8b3ac83a"
+    },
+    {
+      "path": "assets/ui/coastal/source/masters/dialogue-wave.svg",
+      "sha256": "336df9c19e10515994c27b371794cd3a448305654c64cdc53ed1b3723b2de455"
+    },
+    {
+      "path": "assets/ui/coastal/source/masters/foreground-left-v2.png",
+      "sha256": "6e43fc83fe16d3ec36c92bd5053d998ae0baa944b2effa6ad63e65bfd1961b82"
+    },
+    {
+      "path": "assets/ui/coastal/source/masters/foreground-right-v2.png",
+      "sha256": "516080a7256abfdf3185b12b59a013079e58f0829c153e1fa0a92cf1f69dcd9d"
+    },
+    {
+      "path": "assets/ui/coastal/source/masters/harbor-print-v2.png",
+      "sha256": "5ba7857affff64027626ed6e84dd28e8f45301f69d9407c82ccd2f9053f9d90e"
+    },
+    {
+      "path": "assets/ui/coastal/source/masters/icons.svg",
+      "sha256": "437154c8749771336ecc76e903bc6516ffd0b03486b681b73c5931ab7a6319a8"
+    },
+    {
+      "path": "assets/ui/coastal/source/masters/insignia.svg",
+      "sha256": "0b8c6eb1363ab8d602193331692aea0672e454b3849b78cce6aa29683f42ecc9"
+    },
+    {
+      "path": "assets/ui/coastal/source/masters/materials.json",
+      "sha256": "938ead0fc557c4d92b78eaa33182f1761d25f98d975c479ebc4740469b070f9e"
+    },
+    {
+      "path": "assets/ui/coastal/source/masters/note-edge.svg",
+      "sha256": "bf65410437ecb69df2650f82586709efeb560179a7451e936e056a15bc174290"
+    },
+    {
+      "path": "assets/ui/coastal/source/masters/shore-ink.svg",
+      "sha256": "2fc7903dcd9283864b4f809a63f696c16527a0996ec7667c86d6c3c6c634a83b"
+    },
+    {
+      "path": "assets/ui/coastal/source/masters/sun-seal.svg",
+      "sha256": "188dc429b5d78620bac74d789d6f1d61344cef8a134612df43bef1b7ebc065de"
+    },
+    {
+      "path": "assets/ui/coastal/source/review/ui-mask.svg",
+      "sha256": "8127701e6ddd73c09e06f464df8ed6e001029588c86c06003995120327c933e4"
+    },
+    {
+      "path": "content/README.md",
+      "sha256": "6dd0826262b5bc66e3cfb53abe8e936f56f584408c5d38c81a9237036ad98e3c"
+    },
+    {
+      "path": "content/dialogue/graphs.json",
+      "sha256": "1b06284ae8b21733ce696851a4cafecaf1e6145ed3054aea94d241aad700761f"
+    },
+    {
+      "path": "content/dialogue/playable.json",
+      "sha256": "912b99277b0fc3104f998227093bad2ca1a2c36fa26642267600e717dc6a1585"
+    },
+    {
+      "path": "content/extensions/reading_room/case.json",
+      "sha256": "a6694e23e10b25bf282e8a85444423004f11dbd209d7a2ad8769fb85f76aebb9"
+    },
+    {
+      "path": "content/extensions/reading_room/dialogue.json",
+      "sha256": "15012e6e0c1e6c16c99b3cd49ea79f1870e4f1b205ac71b3264be51e261544a5"
+    },
+    {
+      "path": "content/extensions/reading_room/room.json",
+      "sha256": "14409775d12293d1a5bc3d8aaa380dc53de5ce0635e6d12089ca16407a325b10"
+    },
+    {
+      "path": "content/formula_sandbox/debug_presets.json",
+      "sha256": "3fb52930ed39d0236791f92ce2a8642ac918f1f6f58adfb1c62d4e9e71da0060"
+    },
+    {
+      "path": "content/formula_sandbox/pack.json",
+      "sha256": "604886e178407cd22c0581c017093f830e5d4811a1d02ad8e5fc345150db4417"
+    },
+    {
+      "path": "content/gameplay/pack.json",
+      "sha256": "ed9521c354e40477129c071e9e1d7e3508cf549199bda2de4dd21fb4e7e2c3d4"
+    },
+    {
+      "path": "content/locales/vi.json",
+      "sha256": "86ffbc6b2fbc686057b5366b8a84462c4016799a0ba8d1938394efb34f956bbc"
+    },
+    {
+      "path": "content/manifest.json",
+      "sha256": "ea064b8a779af5ea60c773e934db67ee4e09c9446a1770238c57bcf22fba3e4c"
+    },
+    {
+      "path": "content/ui/art_manifest.json",
+      "sha256": "1e678fa7fa37b0154246f0a68e3e98280f7b7f139ea9770258c5ab96d98b8033"
+    },
+    {
+      "path": "content/ui/bootstrap.json",
+      "sha256": "ca30d6ead6af2a004ec2883eaf5bb15d1cd221a444e977e26d4b576ff2d4d6cc"
+    },
+    {
+      "path": "content/ui/dialogue.json",
+      "sha256": "52e6222aa8fec857f202e43fc64ee878f5b2ad27c8a6ccfe6e4bb8700c37c88f"
+    },
+    {
+      "path": "content/ui/hud.json",
+      "sha256": "468a99e94be75c02ac85f16e420164e00475d27c1edd4a61f6673b75035487a6"
+    },
+    {
+      "path": "content/ui/preview.json",
+      "sha256": "f2b4484c744836c63ba040b7a83de13496f828c09e5a996223607e9736eb02a8"
+    },
+    {
+      "path": "content/ui/workspace.json",
+      "sha256": "2f305627817c2a03028840ffa5e6bbebd3be1413d6ad2e5020a2e992218f347e"
+    },
+    {
+      "path": "content/world/actors.json",
+      "sha256": "d2132a22395c07e83bc232b94dd82d6b2f2efb158f360d5246177c37f609cc25"
+    },
+    {
+      "path": "content/world/cafe.json",
+      "sha256": "b1750ef4fffa406645a0cd484da5f35999264d6ff7ca668bed7fe057110f3e67"
+    },
+    {
+      "path": "content/world/home.json",
+      "sha256": "bfcd756e99f75935e0b01c4848b4d4da94645efdc4129f4a834118addd8760d3"
+    },
+    {
+      "path": "content/world/job.json",
+      "sha256": "ced69ce840dea702c5b3f69b141b8b06bfc9760add8ad084b0e623f95b0745e0"
+    },
+    {
+      "path": "content/world/library.json",
+      "sha256": "79ec52126c5497b005f4fd118d382b9f6e460bf2f2b81873391f2ec0058658ae"
+    },
+    {
+      "path": "content/world/locations.json",
+      "sha256": "73545de1e0a49a9113551331ea3aa01e48b65b35f8e8c27d1ebe317e55fc1aca"
+    },
+    {
+      "path": "content/world/newsroom.json",
+      "sha256": "457768813c719c77b33ebc4f181893fea29c8f852958a37c8b249ca506a28f7f"
+    },
+    {
+      "path": "content/world/newsroom_sample.json",
+      "sha256": "8a3ccdbc1346120c21c6bbfd247b6858ea32e7a683c3687407a1ea2e1e3a330c"
+    },
+    {
+      "path": "content/world/school.json",
+      "sha256": "6504fbf8e2f195e1cbe3564ee2da89485985dc8dee822146ff6824766f474937"
+    },
+    {
+      "path": "content/world/shop.json",
+      "sha256": "cf7740b932448995a4e7cbc4fb05e1c920c781ad899a0a12d3cd4d5d4456c157"
+    },
+    {
+      "path": "content/world/source_maps.json",
+      "sha256": "31a80d49c023d16042fd79862ee5fb19aa3949991b9ce9d4df9113061568bd57"
+    },
+    {
+      "path": "content/world/waterfront.json",
+      "sha256": "7e856194af934f6961a8841be99d070a662db69736287a9d13d226941e94ec4b"
+    },
+    {
+      "path": "export_presets.cfg",
+      "sha256": "dbc694a391e4ab4c70403db58e4f487216c135da60066e7b6116f1138d6074c5"
+    },
+    {
+      "path": "project.godot",
+      "sha256": "ad2116a97fa7e093df392417b140732dacf2d0f330ab10867e8a9a6860a52ef7"
+    },
+    {
+      "path": "src/application/formula_saves.gd",
+      "sha256": "67578802cf626bd3b5430e3ad9b3c7ccf9e1e1f3eaa4bafdc0179ecc76b0280b"
+    },
+    {
+      "path": "src/application/formula_saves.gd.uid",
+      "sha256": "109026e3e113ddabb1d39ea655053799fd12eb39335ef5e9d777d8ab98f6b661"
+    },
+    {
+      "path": "src/application/game_session.gd",
+      "sha256": "dbd6a1be9d2a9efdbb432818230071ae6778a43324f8321a69685a12cba17786"
+    },
+    {
+      "path": "src/application/game_session.gd.uid",
+      "sha256": "46a116ae9bdde98c32d66f081cba10b512d43317e3231bdd1b5e3d0794f4b6d2"
+    },
+    {
+      "path": "src/application/gameplay_saves.gd",
+      "sha256": "832dc3e235344a86f52a8f08ebd234b4c755352862a65ad660d729a3cbeb4b4f"
+    },
+    {
+      "path": "src/application/gameplay_saves.gd.uid",
+      "sha256": "4779bbcc9e5bfacfa36dc9e600204a18010b176485d6fcf09bd6c0e5548d17b9"
+    },
+    {
+      "path": "src/bootstrap/gameplay/extension_preview.tscn",
+      "sha256": "9755714387376adbf8f436d27f3338503e099552ac18b8724b045a2c82a18874"
+    },
+    {
+      "path": "src/bootstrap/gameplay/playable.gd",
+      "sha256": "28e5cd5bf5713b8fc859e344931a48419cd3ad5f230b9944b068603f4a480bce"
+    },
+    {
+      "path": "src/bootstrap/gameplay/playable.gd.uid",
+      "sha256": "7b1cb5cc31954b56f47d6cb2e2da98a894d5292113f3ef4c9f2b1e1aa0c11789"
+    },
+    {
+      "path": "src/bootstrap/gameplay/playable.tscn",
+      "sha256": "21f9cf7b20c916e724981edfdda25ede95aa7f7206e32a1891c923a3f0405dae"
+    },
+    {
+      "path": "src/bootstrap/gameplay/save_dialogs.gd",
+      "sha256": "06e8ac9090a6c49a1b121d663e3a106c6de7cd48fe616aafe152678b08f03f01"
+    },
+    {
+      "path": "src/bootstrap/gameplay/save_dialogs.gd.uid",
+      "sha256": "8ebf5325f75cda6f28be9cdebc9e5f886ad419780e424b2f784faea98f7f91df"
+    },
+    {
+      "path": "src/bootstrap/main.gd",
+      "sha256": "33af8311ff727cd3d4aafa08816c37582b343342b244b45a7e0f763c4d94e332"
+    },
+    {
+      "path": "src/bootstrap/main.gd.uid",
+      "sha256": "dc1cf5b8395649a24c036b54672cd0bb0f9ba3c33cf45dead5fc8a598c0467b1"
+    },
+    {
+      "path": "src/bootstrap/main.tscn",
+      "sha256": "ac62e9fdc7cf9502302839658b4ef9236fc8703f368b5193d422d4cef833ae72"
+    },
+    {
+      "path": "src/bootstrap/previews/calendar_preview.gd",
+      "sha256": "4162da9d9b3dd09f73449b8ced215924bcd5e51bc4e3467b4f4e2746bfd81436"
+    },
+    {
+      "path": "src/bootstrap/previews/calendar_preview.gd.uid",
+      "sha256": "2fee1ed41a97d049cd764e7de4f64e19ce0985c8ad43d4cfca7af754d4e1e056"
+    },
+    {
+      "path": "src/bootstrap/previews/calendar_preview.tscn",
+      "sha256": "789ccead8d293ce6d6dbd2b07f47785a258ee7eca462fa0f4d1ef6cf090a2bb7"
+    },
+    {
+      "path": "src/bootstrap/previews/ui_preview.gd",
+      "sha256": "a0b8263b1c23a30df8db11e81b6710d1eb735986b13823b2db2561eab46e2817"
+    },
+    {
+      "path": "src/bootstrap/previews/ui_preview.gd.uid",
+      "sha256": "fa8c6df10bcde73b33f6dc8d6545d4483a4eeead6cfacf26e3a900386c3cd72d"
+    },
+    {
+      "path": "src/bootstrap/previews/ui_preview.tscn",
+      "sha256": "0b1f288975c1f6295708adb50a6b25a742199a04c7080749b9ae28b904989d2d"
+    },
+    {
+      "path": "src/bootstrap/previews/world_preview.gd",
+      "sha256": "387c49ee934fcf90d1a4aa7ff6ca092ddcff80c2f44d5bdd1c63f0044dc21911"
+    },
+    {
+      "path": "src/bootstrap/previews/world_preview.gd.uid",
+      "sha256": "433138200a8c51d84bf2391646aead39427bd9d0572235a13564f50e2044d1bf"
+    },
+    {
+      "path": "src/bootstrap/previews/world_preview.tscn",
+      "sha256": "0b5baa4cf76b574fa4a792badd5c7e2b8d75a6b326f8b1fc6603b468ff0e75f2"
+    },
+    {
+      "path": "src/bootstrap/project_startup.gd",
+      "sha256": "710afe2bf795594d79594c93ffa1053d69369329e636691261708b5da1bd30a2"
+    },
+    {
+      "path": "src/bootstrap/project_startup.gd.uid",
+      "sha256": "1651ce02b4387ec1258296aef571d28e4578395365174bdc494f76c7b5467901"
+    },
+    {
+      "path": "src/bootstrap/release_check.gd",
+      "sha256": "ebd3d3b0cb60da48c7c61e8b4607e6c0b28b6333fe30eb92937ece1a4171a444"
+    },
+    {
+      "path": "src/bootstrap/release_check.gd.uid",
+      "sha256": "a59e9e46cbb73d7fad8d16ff958933615621794e5406c30129645bda59e2c5c3"
+    },
+    {
+      "path": "src/bootstrap/sandbox/sandbox.gd",
+      "sha256": "af7abc91e5e3f740df046603d250714ad07ad97920beea1838e2cb5557be756f"
+    },
+    {
+      "path": "src/bootstrap/sandbox/sandbox.gd.uid",
+      "sha256": "9aee18dbee1c553d2729b9c4dc9c9eb66562a47bb5d656f4082c9f9828ee9c53"
+    },
+    {
+      "path": "src/bootstrap/sandbox/sandbox.tscn",
+      "sha256": "f957dac1de76fd37ea122d36f866acbb024c0d37bd09e914c7a03be2b87c5946"
+    },
+    {
+      "path": "src/domain/README.md",
+      "sha256": "2f32cb4b69d1eb0e6b7cc88398dba6b738c320ef0e9dec2ab9b8131abb4e6153"
+    },
+    {
+      "path": "src/domain/dialogue/dialogue_graph.gd",
+      "sha256": "50376e055355e389c2cdc9860c13426cb1b46ba2bab77d2855fafb87e9703008"
+    },
+    {
+      "path": "src/domain/dialogue/dialogue_graph.gd.uid",
+      "sha256": "a17c9c91ecae3dd1b9618b6bae438f7f67eb85fde01e850e3d0536c94fe07301"
+    },
+    {
+      "path": "src/domain/formula_sandbox/formula_calendar.gd",
+      "sha256": "85d490cb263275ad0fde3b30c996cc210c3916b05cd6b21a3403e0cf393c6b3f"
+    },
+    {
+      "path": "src/domain/formula_sandbox/formula_calendar.gd.uid",
+      "sha256": "26f7b7b14e6fa18406a64f286ff79a01f732586fdf6347059fb0fe373572b28c"
+    },
+    {
+      "path": "src/domain/formula_sandbox/formula_config.gd",
+      "sha256": "a881d89c3331393ce7ddb70d7605687ae2464c691bae2db68f8f2abc1e7a4355"
+    },
+    {
+      "path": "src/domain/formula_sandbox/formula_config.gd.uid",
+      "sha256": "425ac8a9576bb6278b4aec7d5e287d242bbb83f630a4de43588a963c5c9e3d8e"
+    },
+    {
+      "path": "src/domain/formula_sandbox/formula_debug.gd",
+      "sha256": "61b04610f63ab89a875273ca9280b321e3ba381451774ed3f55323fcd1e7f3a0"
+    },
+    {
+      "path": "src/domain/formula_sandbox/formula_debug.gd.uid",
+      "sha256": "16ec0fa1de0822f77427f1754f92067f6b0c1748572ac614a2138684963372ee"
+    },
+    {
+      "path": "src/domain/formula_sandbox/formula_math.gd",
+      "sha256": "dd5411fbd45385e190eb9f6ec8f3d2c0b3cb3982ccbabe354c93909cb31a83e1"
+    },
+    {
+      "path": "src/domain/formula_sandbox/formula_math.gd.uid",
+      "sha256": "e260626d36dfdcfea9a5300417594d06e300b09465c103ff2265286dda72a138"
+    },
+    {
+      "path": "src/domain/formula_sandbox/formula_policy.gd",
+      "sha256": "eaf77f9701ce7a2c2266bf8d15c15bf87e8fc61fb0f857890a8a3f30070855aa"
+    },
+    {
+      "path": "src/domain/formula_sandbox/formula_policy.gd.uid",
+      "sha256": "0c37cd2df06f81aea97543c5899cf2927fed8a5b661ee8689142416d2d2941af"
+    },
+    {
+      "path": "src/domain/formula_sandbox/formula_rules.gd",
+      "sha256": "0f9c903cc4dbc47c3d1030c0e7ed127a61b21dafc1387955602b118c602046ca"
+    },
+    {
+      "path": "src/domain/formula_sandbox/formula_rules.gd.uid",
+      "sha256": "c9957e080e761e6f0d8969a6ad418113240581fe217e6f465e056aacf49ce6f3"
+    },
+    {
+      "path": "src/domain/formula_sandbox/formula_validation.gd",
+      "sha256": "9df3dcbea474780e6e943a70ab963762fc2701483dc3552a0d099c89a9e048a8"
+    },
+    {
+      "path": "src/domain/formula_sandbox/formula_validation.gd.uid",
+      "sha256": "5aa27e3f57d8d35eeb82458e0c0f2b6523e455d3a24e451c6ff814ee8f5e56c7"
+    },
+    {
+      "path": "src/domain/gameplay/content_validation.gd",
+      "sha256": "af29d73f711ad05384691a585500e7a55d6aca5f9177036e582002512aebb2ef"
+    },
+    {
+      "path": "src/domain/gameplay/content_validation.gd.uid",
+      "sha256": "27022faec3b7864ea162080a4f2fadc06c941367c492b00fbd9c21e6bc07130f"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_calendar.gd",
+      "sha256": "3d88ed31422b7c71b736125bd25aa1b32522a35da96c204ed1b9326a2f640ac3"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_calendar.gd.uid",
+      "sha256": "0534bc8ff36978eeec99f3d083a169c54b7bfb1973ce9c8fdf01646dbd8389a1"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_config.gd",
+      "sha256": "1fecf078d0e22ef4dcdd19f2ba64635a161930e46a2510edeaa682a0ed62df7f"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_config.gd.uid",
+      "sha256": "53aeae8c282fb774cad954ed426195f8a2c30e921a436e9272f38ae79ef7c371"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_events.gd",
+      "sha256": "b8cc3c378e9d4b2a6392047f11c928051eab59421a5e498d95b87ca6cbb47655"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_events.gd.uid",
+      "sha256": "0a2f281a7db275bf6020288685684730c58d8744b867bad92fe8652c103ec822"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_people.gd",
+      "sha256": "f8c62272e1ef82ec564ae79bf28e809e015822641c5f13383fcd22629a1c2f25"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_people.gd.uid",
+      "sha256": "f2688a3acf2b29b2035bfdf95cf0de1566f4c02b776d377651b6bf4cfb85fbcc"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_rules.gd",
+      "sha256": "0378ebfbfec09f00a10b614a32aceb75dd6b3e537d6e39e5bb21f29e4104c6cc"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_rules.gd.uid",
+      "sha256": "8624a54d11d856bca7cabab532d9a8fb425025a1a23b82429a8065736eac700c"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_state.gd",
+      "sha256": "e3763e60ded322fb49a09390d2edd0460c8cb08e9ef00221f52676575af4145b"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_state.gd.uid",
+      "sha256": "a4c2df17e08123c845268d234f42ed3dff84d78e3c1c99d01ff0042e584f7008"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_summary.gd",
+      "sha256": "5aa5ea3b71982b7459f9ab698985521f43327655949ddad87472ae0a1c04a98f"
+    },
+    {
+      "path": "src/domain/gameplay/gameplay_summary.gd.uid",
+      "sha256": "3d00336b56569ce514f78814fb434174448f5f518d85292c44db854f948be4ff"
+    },
+    {
+      "path": "src/domain/gameplay/nightly_work.gd",
+      "sha256": "4dc0582444fabebbbd312cfedee0895309f7e9d0b152af9a4aacbf49af0794fe"
+    },
+    {
+      "path": "src/domain/gameplay/nightly_work.gd.uid",
+      "sha256": "a2ed944e9eb5f7f540443dfee17b1a946619a31c5ef45365faa6ff3f3d23b84f"
+    },
+    {
+      "path": "src/domain/gameplay/personal_actions.gd",
+      "sha256": "85779ccec23da8b15a1f0780def13581442333b0a269c4b507a0972e4dbb7d93"
+    },
+    {
+      "path": "src/domain/gameplay/personal_actions.gd.uid",
+      "sha256": "0c9684a9c9b8d907ff1a1a83384287ac9a05614dcb6e38a5c78c4ba8dcd46d85"
+    },
+    {
+      "path": "src/domain/gameplay/publication.gd",
+      "sha256": "a6fe41f4e60c77e0e68d84407db4fba6e481ca696f43c307555533663203a101"
+    },
+    {
+      "path": "src/domain/gameplay/publication.gd.uid",
+      "sha256": "ec4de3d22500807e8787aa05e7ddd21083204d0e94748dff4ec39d1f861e8b62"
+    },
+    {
+      "path": "src/domain/gameplay/quest_actions.gd",
+      "sha256": "8345c63e1b604ff82a9ad4300edab3999b412346c806eca0f656ea6ff144498c"
+    },
+    {
+      "path": "src/domain/gameplay/quest_actions.gd.uid",
+      "sha256": "7345950839c7a3759a422f29d443c17d4ab46c73ccb71bc4b4d1713ee181a82e"
+    },
+    {
+      "path": "src/domain/gameplay/record_validation.gd",
+      "sha256": "aa5cd13578e4688275b3e112261f98bd05d2d8e685d50ef696ede72335bc8c1c"
+    },
+    {
+      "path": "src/domain/gameplay/record_validation.gd.uid",
+      "sha256": "39463db46e69270f79ba1d4d624e8076062d9813aab878373f4a5e61e82517cd"
+    },
+    {
+      "path": "src/domain/gameplay/research_actions.gd",
+      "sha256": "ea822d4b9d42ac938aeec539bbb4bd94c7aea711c130dd8eb7473b3a5fb2a067"
+    },
+    {
+      "path": "src/domain/gameplay/research_actions.gd.uid",
+      "sha256": "02f1188514fd56cc751ca6d1212f6b65ed1e8a8d3ad80b3d5b04cd482723dd53"
+    },
+    {
+      "path": "src/domain/gameplay/save_contract.gd",
+      "sha256": "d00d78a14cd3e09deea3507b98511566ace0cc1a8b12136758712d24deb6adfe"
+    },
+    {
+      "path": "src/domain/gameplay/save_contract.gd.uid",
+      "sha256": "f062d7cbe71ebd2fda4b5c3fa11cec5829c95239a700c4c23f22b1610b226c99"
+    },
+    {
+      "path": "src/domain/gameplay/state_migration.gd",
+      "sha256": "8e83b1d689b6c2a44830647d0b95b3adfbb75fcb0116b9e26209ee93f333316a"
+    },
+    {
+      "path": "src/domain/gameplay/state_migration.gd.uid",
+      "sha256": "acc373eaf5491d92b3494dc6fabe79f439361e7d74a4f902b3354beb5e95b637"
+    },
+    {
+      "path": "src/domain/gameplay/state_validation.gd",
+      "sha256": "116ca48d08aa22134c9e5cf5ba57e05004de2f98b3aba101e0b09ee43e73afbf"
+    },
+    {
+      "path": "src/domain/gameplay/state_validation.gd.uid",
+      "sha256": "06de3228e15907dff3c7ae11b7bb41ad47935d9be86a0034b5917fcd9b132833"
+    },
+    {
+      "path": "src/infrastructure/content/json_content_loader.gd",
+      "sha256": "6bdb8bd80a136ad88ddd808f5229f795792c5cf3616048546675703794e906bb"
+    },
+    {
+      "path": "src/infrastructure/content/json_content_loader.gd.uid",
+      "sha256": "b3a0147b3e1abe57ca63ab7025e2cf72cef179bef2ff08ea02f71ff8a83a49da"
+    },
+    {
+      "path": "src/infrastructure/saves/file_save_store.gd",
+      "sha256": "0e3481f245766f9df718547bba15cd445fbc1857596231d4499724f5d2c6eef4"
+    },
+    {
+      "path": "src/infrastructure/saves/file_save_store.gd.uid",
+      "sha256": "dc8ec2fe85258a2be482ce0c7169f82b796658f701af33af5ca8c5d1f092e169"
+    },
+    {
+      "path": "src/presentation/bootstrap/bootstrap_view.gd",
+      "sha256": "2e703e734417b1f4b1f7b1fbfea413f124a75568600baec935ddd7c35ae21ce4"
+    },
+    {
+      "path": "src/presentation/bootstrap/bootstrap_view.gd.uid",
+      "sha256": "3a0c8eeb83bc51fab6562e5e3cfc1c79fe8ccbf7b4f6b826795d2a1d3a644af1"
+    },
+    {
+      "path": "src/presentation/bootstrap/bootstrap_view.tscn",
+      "sha256": "039bd8e82b5f138099c8828796285a2d08247b0f991e7ff7fb889b3c82da6a94"
+    },
+    {
+      "path": "src/presentation/coastal/coastal_widgets.gd",
+      "sha256": "f28e9eb0d571cffb134feda206221e176d8128aa5413a2c65bff7c06f91dd9c8"
+    },
+    {
+      "path": "src/presentation/coastal/coastal_widgets.gd.uid",
+      "sha256": "078933fa299f3ff571c04462aaf7456bf7d0312e290bfea1ee65df5f6c27d587"
+    },
+    {
+      "path": "src/presentation/coastal/dialogue_view.gd",
+      "sha256": "dfe9764fa7714ece84556b7759a4003942bf9389eedac062239d2042884b559d"
+    },
+    {
+      "path": "src/presentation/coastal/dialogue_view.gd.uid",
+      "sha256": "3897530a9859af497302d6fbc6dde813eaa9cc06e1784d538763edf6647a799c"
+    },
+    {
+      "path": "src/presentation/coastal/dialogue_view.tscn",
+      "sha256": "97227f3d38951271425c40d0a3ca8f1cbb98a85c7cb0a6f0b8d26335f3245cf9"
+    },
+    {
+      "path": "src/presentation/coastal/hud_view.gd",
+      "sha256": "075a4e05cefc16d8487740ab7c9f51aae311ae3c0ebded2ce3677bc01c5f22a1"
+    },
+    {
+      "path": "src/presentation/coastal/hud_view.gd.uid",
+      "sha256": "ca0b65b0c14c9c055f9f5360bcdc8e7f45d784c7e620006c99055d36acade7ae"
+    },
+    {
+      "path": "src/presentation/coastal/hud_view.tscn",
+      "sha256": "29041596cf39329454d9531edb305616422e0abbc28dd8696b315754d1fe3f58"
+    },
+    {
+      "path": "src/presentation/controllers/calendar_controller.gd",
+      "sha256": "e4517b3cf5a143823680e3a11bc320e877ccc6e621adfbc18f7695a2fe7d24d8"
+    },
+    {
+      "path": "src/presentation/controllers/calendar_controller.gd.uid",
+      "sha256": "5584e1f0f5f0238634c8997683d33a2cecbb652054a6d407319bd12300f20aa8"
+    },
+    {
+      "path": "src/presentation/controllers/gameplay_text.gd",
+      "sha256": "ca30bb84093257751b4fa78bedf56f8fde2ec38acc5e6f19f8ba6b0d42f4167f"
+    },
+    {
+      "path": "src/presentation/controllers/gameplay_text.gd.uid",
+      "sha256": "dda13475e274ed4fcba6584c92d78b0430a7c3c79d0482ffc25d16ee2cc35674"
+    },
+    {
+      "path": "src/presentation/controllers/newsroom_models.gd",
+      "sha256": "627c63417c8159232c166ac2c1511d5683f0025931e08c10354f223351f9688d"
+    },
+    {
+      "path": "src/presentation/controllers/newsroom_models.gd.uid",
+      "sha256": "a98ce32df34df490cfc92993ee6117396cf39d7ee617c715881e40e863ba6889"
+    },
+    {
+      "path": "src/presentation/controllers/personal_models.gd",
+      "sha256": "cb6d5dcd9f6764c68c05a0713571c8989f18fc6a59df09416a551b71d70f5076"
+    },
+    {
+      "path": "src/presentation/controllers/personal_models.gd.uid",
+      "sha256": "c241759f56c7b49c7f0aa63757e73724a0de9bca8d0cd0648f2d22a0f399b889"
+    },
+    {
+      "path": "src/presentation/controllers/play_controller.gd",
+      "sha256": "dae319fddab75bafea1e48e8dd8bdcc561286a252e83e36ce8c9eada991f5683"
+    },
+    {
+      "path": "src/presentation/controllers/play_controller.gd.uid",
+      "sha256": "93319511ae36abbea6d6cc888b366dbff08350f3d725aa9e4c5806f83498b917"
+    },
+    {
+      "path": "src/presentation/previews/calendar_panel.gd",
+      "sha256": "864e3d1d3908de16a27e34c221a4306b250a0b4ec000edd47d50019ef0f0dfd5"
+    },
+    {
+      "path": "src/presentation/previews/calendar_panel.gd.uid",
+      "sha256": "957e42e97c2d6ff9cb65316a4e86bd04b982bb06540182b9fa2c0eb41e85f021"
+    },
+    {
+      "path": "src/presentation/previews/calendar_panel.tscn",
+      "sha256": "38152febcf58ae75fe14838c738ca3dce6e156a594fac7e5e7b1bf647e67b51a"
+    },
+    {
+      "path": "src/presentation/previews/preview_backdrop.gd",
+      "sha256": "3fbce2c13884c4a5e7df91e43e0ab07e695c6775e946fd9af954735f9d0091eb"
+    },
+    {
+      "path": "src/presentation/previews/preview_backdrop.gd.uid",
+      "sha256": "ad35b9c33d6edb2bafd16b877c95a3cb3c4d0cd448c910992d7fb510ef1d375e"
+    },
+    {
+      "path": "src/presentation/theme/coastal_theme.tres",
+      "sha256": "440a3a0afd4ef52611999e16aaf98e6809d7df86da79ea576716b072b54a2bee"
+    },
+    {
+      "path": "src/presentation/workspace/workspace_view.gd",
+      "sha256": "63cdb33f806792963e9e974943f321b19ce81b803b45e81820af9184fab87cb5"
+    },
+    {
+      "path": "src/presentation/workspace/workspace_view.gd.uid",
+      "sha256": "04a69ec34db3906cc644a3e907c8f894b559865e25fecba5b4165c6aa725faa0"
+    },
+    {
+      "path": "src/presentation/workspace/workspace_view.tscn",
+      "sha256": "ff5862b9eb8a7ad210bf27706768957628ab545c41838c4a5a98ee9846aac0ac"
+    },
+    {
+      "path": "src/shared/json_data.gd",
+      "sha256": "57441edfcb1622aeda70516b98949286a434a476449a9fc582d0f920dc84ef0c"
+    },
+    {
+      "path": "src/shared/json_data.gd.uid",
+      "sha256": "868557e3135f81b778f4a6dc47e7c0c09dde6520d7680715298361067909b6b0"
+    },
+    {
+      "path": "src/shared/text_catalog.gd",
+      "sha256": "37a4e5af8cdb1cb850141fcb2ebbb23afdb46cb6749eaf6ca8ddcd78b92058eb"
+    },
+    {
+      "path": "src/shared/text_catalog.gd.uid",
+      "sha256": "5ee195330d48c4195e8622609885af20bbff546c4695ff78f707fd281cbb95bb"
+    },
+    {
+      "path": "src/world/README.md",
+      "sha256": "37a33e528e31821992cb8454cc95fb7437df2716b7fb94c1f143823961ec122c"
+    },
+    {
+      "path": "src/world/actors/player_body.gd",
+      "sha256": "e1daeb4839779047215bced442a0efc2b042019c7ebbb7547dfcfe3ca4ae5673"
+    },
+    {
+      "path": "src/world/actors/player_body.gd.uid",
+      "sha256": "1b882ab76d75de04b2406517b4162a23778160443e317833a7d668642bcd5577"
+    },
+    {
+      "path": "src/world/actors/player_body.tscn",
+      "sha256": "41b7367e79a8b1fc89a63f38ccfa29cbb4215272f7f77fe6fc9f9f6b925ed615"
+    },
+    {
+      "path": "src/world/actors/sprite_rig.gd",
+      "sha256": "d3d1b18f01dccb7646d5565a633357bee255005208a728e98c91cad794b4ea70"
+    },
+    {
+      "path": "src/world/actors/sprite_rig.gd.uid",
+      "sha256": "ad8ea3b9836be06d4c34e98241066e3192029fd57425fa3028c74dbbd5a4aa89"
+    },
+    {
+      "path": "src/world/actors/sprite_rig.tscn",
+      "sha256": "5d8b5a37ce2a898e1fbd3177916ed5a91b4853782c8864d68f63bda7a32e827d"
+    },
+    {
+      "path": "src/world/rooms/newsroom/coastal_surface.gdshader",
+      "sha256": "35812f74709181c03b042af66156f328ad1aa4f2eba3f42e21727614aa95106b"
+    },
+    {
+      "path": "src/world/rooms/newsroom/coastal_surface.gdshader.uid",
+      "sha256": "4933186fd9b66706eed3df7211e5c32d552bd26e0f9c987989ed81b51feb0fd0"
+    },
+    {
+      "path": "src/world/rooms/newsroom/coastal_water.gdshader",
+      "sha256": "b33dd23581fcfbb4e71037c263caaa34e8c0fc4f5795320b9b2c61d78b3887cc"
+    },
+    {
+      "path": "src/world/rooms/newsroom/coastal_water.gdshader.uid",
+      "sha256": "7537947507350f3d157fe68fa6dfce11b111a01d6db01b417151bf545ce6f975"
+    },
+    {
+      "path": "src/world/rooms/newsroom/interaction_target.gd",
+      "sha256": "5574d4795cad98204ff6b94cb621409d14017c79c23b2e5a856e39c943d802f4"
+    },
+    {
+      "path": "src/world/rooms/newsroom/interaction_target.gd.uid",
+      "sha256": "f81fced0c9333f2e9c56dc715993dfc16a0554daa01a54e901750d6607c3290b"
+    },
+    {
+      "path": "src/world/rooms/newsroom/newsroom.gd",
+      "sha256": "a7d529e1647f2926959de4c4eabc457c3449bc388732230275a143ef2489c937"
+    },
+    {
+      "path": "src/world/rooms/newsroom/newsroom.gd.uid",
+      "sha256": "3af3773b881f5ab3f684ea38c92b922875ed5d1b5c856e284e35fa1009888adf"
+    },
+    {
+      "path": "src/world/rooms/newsroom/newsroom.tscn",
+      "sha256": "d09c4d733cbc337332a2b3f0d1a591f65cd45ffab467903e75f565a2eb66eec8"
+    },
+    {
+      "path": "src/world/rooms/newsroom/room_atmosphere.gd",
+      "sha256": "7dac5a6b51f550c0c60e5d7f72939c4ea1cda0ec2143d3aa02dd78e1a77158ba"
+    },
+    {
+      "path": "src/world/rooms/newsroom/room_atmosphere.gd.uid",
+      "sha256": "95cc8a3b411434b604b499bac50a8df540b9df80a65174f08f922d571b793b3a"
+    },
+    {
+      "path": "src/world/rooms/newsroom/room_geometry.gd",
+      "sha256": "e8a546dac9cd3531510bf398131176a30ee78885f2f6b63f3b464a8ddf7128af"
+    },
+    {
+      "path": "src/world/rooms/newsroom/room_geometry.gd.uid",
+      "sha256": "d5c4d487f9860fbc5f80310c8250d98e7ab2f4e6a27c7968debf06ca5ffb8f8c"
+    },
+    {
+      "path": "tests/.gdignore",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/capture_playable.gd",
+      "sha256": "e74dcca241b69d10a5088b61a4b7ea5377549d671718ffc4fbfe5c8367710f2f"
+    },
+    {
+      "path": "tests/capture_review.gd",
+      "sha256": "c1e487f839bc948c932057e734e58116f028bfcd9828ac1917957abe68d2fff6"
+    },
+    {
+      "path": "tests/fixtures/invalid_states.json",
+      "sha256": "f0823805e10f2371f14ecaabf78672662f2c02671465c243e0fe4af8fa2b0748"
+    },
+    {
+      "path": "tests/fixtures/parity/assignment-reassignment.json",
+      "sha256": "86d6d1d1f9d9146d2cb08c45ebc4491f84b46cd498209878284f1896db207710"
+    },
+    {
+      "path": "tests/fixtures/parity/calendar-weekend.json",
+      "sha256": "b942e7089ce2537292d86b5c777b25c7f8c1cd8bd7685b1d6a6017c3abec9b3d"
+    },
+    {
+      "path": "tests/fixtures/parity/editorial-next-day.json",
+      "sha256": "b1863c6cab71a36022fe0a360f6b6de1b8d4ddf402bef7bb3a80849470e87f5b"
+    },
+    {
+      "path": "tests/fixtures/parity/final-day.json",
+      "sha256": "61cfffd2df19aca577cb45432bbcb40c13cf89902594b46f611a618eba12d6b8"
+    },
+    {
+      "path": "tests/fixtures/parity/formula-policies.json",
+      "sha256": "03688aff56ed349d92ff86736179307a5932316c94161d5b4f07b6b2c63bfe59"
+    },
+    {
+      "path": "tests/fixtures/parity/gameplay-policies.json",
+      "sha256": "63f7a5c70c304abc1f56f8e19d610dbf13359a21f21b9c8d3cb9ab1038f16b4c"
+    },
+    {
+      "path": "tests/fixtures/parity/guards.json",
+      "sha256": "5d9580bf28d9080fd1bf476406118456d6299189a10c75100599f8d8a3fda128"
+    },
+    {
+      "path": "tests/fixtures/parity/personal-all-v2.json",
+      "sha256": "4f526726903c4aa73d6c98b9a50e9f36ff3a3b855e417a68f225466a698391c1"
+    },
+    {
+      "path": "tests/fixtures/parity/personal-all.json",
+      "sha256": "be025cd338570967e1ed889dc4d21e21682165931374fbe849ddf480911bee7f"
+    },
+    {
+      "path": "tests/fixtures/parity/publication-once.json",
+      "sha256": "73f7e0a97628f09312fed6ab6c9fd88da93ae05ae9130e66db2f6276e57c1f74"
+    },
+    {
+      "path": "tests/fixtures/parity/quest-and-write.json",
+      "sha256": "15f04e74ddf118e3aa959608c9d5b6ebac25293f077940dc42e0e11ac6794a5f"
+    },
+    {
+      "path": "tests/native_interaction.gd",
+      "sha256": "84a037068d3f04ac503998ac8db8e19c7229722112387dc76b3cff612dd1ba94"
+    },
+    {
+      "path": "tests/parity_compare.gd",
+      "sha256": "f09ea4b79aa36de43d815223c27d9ac475cd5fd2661c6c31e6ad51046013d3cf"
+    },
+    {
+      "path": "tests/profile_native.gd",
+      "sha256": "7ca64cf594419e45a32cd439203a6121b1caeed24b4282d063abfe1214f3db6f"
+    },
+    {
+      "path": "tests/run_tests.gd",
+      "sha256": "14123cc6c5b88ee2705b0862dca33b326ebff04d8a39723630369581627d4d5a"
+    },
+    {
+      "path": "tests/test_formula_edges.gd",
+      "sha256": "074bec4739f74fdf63eede6b29f5e0167ee3fcefccff35c3dd8db17ecb65feda"
+    },
+    {
+      "path": "tests/test_full_parity.gd",
+      "sha256": "c8af17e1c5ffd97c8c8e6d1ec7bbd91c3187abd8f399b7b74fc7c225c6a645b4"
+    },
+    {
+      "path": "tests/test_game_session.gd",
+      "sha256": "78b294804db5464a98f0bf3e967eb77e0e9b20ee2b62388004f03bb711cb11ec"
+    },
+    {
+      "path": "tests/test_gameplay.gd",
+      "sha256": "1dd21e3705641ee9282afc08dff186278dc36a16b699eae1f18bdd9d716eae73"
+    },
+    {
+      "path": "tests/test_playable.gd",
+      "sha256": "a643cc7a4cd0d21e81e9d27c54c5860f94000523c2ce426dfa33e3ad6bee86a0"
+    },
+    {
+      "path": "tests/test_sandbox_scene.gd",
+      "sha256": "d075213311aa03a621c0d226332a25293ed0db0711081c1e6217f63bed256412"
+    },
+    {
+      "path": "tests/test_saves.gd",
+      "sha256": "3430e903d8cb3f8a37b8aee597c0f7c1d1ab9f6692a2017c08449ebf1ef052ef"
+    },
+    {
+      "path": "tests/test_suite.gd",
+      "sha256": "ab441d2b84e257aca8efa4a51354cd99696c313cefff21dc2984c0d4738dedf5"
+    },
+    {
+      "path": "tests/test_text_catalog.gd",
+      "sha256": "ac7186cece7904cc9658ebae8086118da99329ab1ccc52a1f6f84c34975423d3"
+    },
+    {
+      "path": "tests/test_ui.gd",
+      "sha256": "4a64d022ee5df12c21cad59d493882bbb20ca313d8e4fe27d50692a344590aa3"
+    },
+    {
+      "path": "tests/test_world.gd",
+      "sha256": "1edfd0d10f6aa42c77f0865bed24820cd58e9178d19bb364d7d20efd8d71afd3"
+    },
+    {
+      "path": "tools/.gdignore",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/bake_ui_art.py",
+      "sha256": "9b0b2fb241a84d4a7b840f0c872804648109f6a02f87612217309c00425b8496"
+    },
+    {
+      "path": "tools/browser_cdp.py",
+      "sha256": "3866d75d889146b6c06b4fda2b2beadc7642a75c36543226efa7189692c217a2"
+    },
+    {
+      "path": "tools/build_windows.py",
+      "sha256": "fd8bbe611c4b581a4c822e9f8c035a0551fd57c76571a1053cde1c24f74feb07"
+    },
+    {
+      "path": "tools/capture_migration.py",
+      "sha256": "d9c9565328af2114df5b51a57f88b36d8ae4e657f3eee8db3e52dabb6694754c"
+    },
+    {
+      "path": "tools/check_architecture.py",
+      "sha256": "fca7840ee7c7756846471a00a15a049684f1364fe2155b6d0df1c799d5e54098"
+    },
+    {
+      "path": "tools/check_content.py",
+      "sha256": "b010353f6f9a449cc84d1d6d31c027c5f5421038e6ccb09a2737023a6baf627a"
+    },
+    {
+      "path": "tools/check_reference.py",
+      "sha256": "05d0a217f579af07ec326558591ffb196a33a1e1a3c1120323c577c8f036e7d0"
+    },
+    {
+      "path": "tools/compare_ui.py",
+      "sha256": "f53f994e671f2b5134b2ff52be824c21b9090ebb3848c9c644cf1779c3c9dc2a"
+    },
+    {
+      "path": "tools/export_migration.mjs",
+      "sha256": "95869d321f23a70d8e9a4df8ba354666897ec206ee250da476600df87d0ad27d"
+    },
+    {
+      "path": "tools/export_remaining.mjs",
+      "sha256": "4dc86bee236ced52cb8ae47db7a012f1752304367c81178c6713200e6fabeff5"
+    },
+    {
+      "path": "tools/import_preview_assets.py",
+      "sha256": "c99cddbc8c42dfbc4daa81f354c52bba590b8e43fce5fa2d1d3f47f0e2cb065b"
+    },
+    {
+      "path": "tools/import_reference.py",
+      "sha256": "a2879ecb345dfc8222fe73238fecce0bee26494451e42f59961eb8f83707d00d"
+    },
+    {
+      "path": "tools/raster_review_mask.gd",
+      "sha256": "e1ea7a457841843e964c31ed49a3529b3ca61fce4151b9f1d0c2ea535dc60a9a"
+    },
+    {
+      "path": "tools/verify.py",
+      "sha256": "a7145988230bb5f0d207f328e233ca6fd8c865d1a93624295c9bf99b187cfd36"
+    },
+    {
+      "path": "tools/verify_native.py",
+      "sha256": "96b16910a00d3ed7e085eda550444f2386ec174a7344a4865d8ece7eed4f65c7"
+    }
+  ],
+  "review_files": [
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v1/room-high.png",
+      "sha256": "d394039ad4f4281c5a92267133592ecb468ead25b83bc3371ef3c01dfbebedad",
+      "bytes": 375154
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v1/room-low.png",
+      "sha256": "a50703068f758927b49b6d1219b1f1fea73e14fb29403cc69c89dddf40ba292e",
+      "bytes": 281266
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v2/dialogue-command.png",
+      "sha256": "bd8f24c59bb5063c923f64172ee08df2ae2f9c9c05cab4afdbb77ca3cc79fcf5",
+      "bytes": 719381
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v2/extension-library.png",
+      "sha256": "c7b1189c00b4c5e4833b220383f2c6edcfdf3e672fd99ac0df38b0786f9e037e",
+      "bytes": 100936
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v2/integrated-state.json",
+      "sha256": "66117fedb1c2e172a66bdf5ff686f3082823d9fe32354504797e0425d116cdc3",
+      "bytes": 6013
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v2/room-dof-ab.png",
+      "sha256": "cdbdd07bd9f50a61bfdbfccdf322adf7cfcce6c281570097e2ae2a7602f8b79c",
+      "bytes": 436361
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v2/room-fog-ab.png",
+      "sha256": "5efa82ec1d6a61c7fc8afb76f26b720f6d5c5201853eda2c7221047b422cc90f",
+      "bytes": 352503
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v2/room-glow-ab.png",
+      "sha256": "6fe43ccebde41540d16be726ff31beca7bd87c156091d991bd1634fd6d7c2285",
+      "bytes": 373372
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v2/room-high.png",
+      "sha256": "c4535e2d4e45ed22abd12c33b3ec18e81d746e631dd01d28d550afff629f69e6",
+      "bytes": 372493
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v2/room-low.png",
+      "sha256": "05603929b1ff774bd2e1d8e1776b2d45cb468db8147fd9aeb75dff56b54775e0",
+      "bytes": 278585
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v2/room-perspective.png",
+      "sha256": "5b39c3717d685ea977a27357d4f58578ecd507af96ca3270c7fea96f2ac61f36",
+      "bytes": 336939
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v2/walk.png",
+      "sha256": "ba2771e1c49484ea76b31a20aa9ca01842d2f0178376554f4a86b845c9bf4d6b",
+      "bytes": 372668
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v2/workspace-calendar.png",
+      "sha256": "1b9862b8d42f0c63932c5e257cebd92353aa50091c191a84a25e3a0c0998163c",
+      "bytes": 101561
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v2/workspace-cases.png",
+      "sha256": "a3a7ae87ec9652fd59efea4b995412a61741fd029afa28f7525a77e6c89252cb",
+      "bytes": 127251
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v2/workspace-editorial.png",
+      "sha256": "2f52fc9418abdd5d13efae2d51f639e03d9f2b4d385912b06447c8659573e949",
+      "bytes": 98220
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v2/workspace-life.png",
+      "sha256": "3deced4bcd41218ad2c24cfb55d8d6308330c504e5eeff689bae51b6d3484fa7",
+      "bytes": 104019
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v2/workspace-quests.png",
+      "sha256": "eb2ae79db6f4184eddcb6d60a47f32d6bf9da6e2ce85607b4d4d896ce779332f",
+      "bytes": 111136
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v2/workspace-reports.png",
+      "sha256": "77aa5dd79b6a342f0bfa8523b537a031852bd1a4746bf1e3a1e8b84a1093f26d",
+      "bytes": 122579
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v2/workspace-saves.png",
+      "sha256": "5634b6e5ba65921d8a7ad613cc9d6204906ba50aa7ecc6286e72ce2b373b5dbc",
+      "bytes": 99607
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v2/workspace-team.png",
+      "sha256": "a96c59d6d41507751e39bb8de50a5c8eee594fce23d78fe4d130d0331feec8dd",
+      "bytes": 111695
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v2/workspace-travel.png",
+      "sha256": "cb60f5d00f7246374700187cb1e22a5dc228151228dc021b9d162cdd85079cf9",
+      "bytes": 101558
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v3/dialogue-command.png",
+      "sha256": "e6889f9f58943ef914685c75543f60abb54cfd18989f1fbfbc6b750126ce8f4f",
+      "bytes": 708082
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v3/extension-library.png",
+      "sha256": "12599cc6b6181702e19ca49b6fbf7e3bf57716aa6cb0d72612263baf9af83a8d",
+      "bytes": 102026
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v3/integrated-state.json",
+      "sha256": "66117fedb1c2e172a66bdf5ff686f3082823d9fe32354504797e0425d116cdc3",
+      "bytes": 6013
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v3/room-dof-ab.png",
+      "sha256": "8f49f35b919289a6274657323fa458554548f6bd87146af5d01c13d66f81c276",
+      "bytes": 437582
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v3/room-fog-ab.png",
+      "sha256": "0a68360c7dd68e83bfc426cdc01dd77ac5879809dc29e7d6f6270f63d7726ae4",
+      "bytes": 353688
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v3/room-glow-ab.png",
+      "sha256": "c7340b3a22fb463319a667e9e63ce5fdfef2dd8f2035b973b0be42f004f5e199",
+      "bytes": 374512
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v3/room-high.png",
+      "sha256": "ae3e0364286ec0093244afde9043b344a70243cfa693750f9b9d9a4624086443",
+      "bytes": 373649
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v3/room-low.png",
+      "sha256": "857b04b0d3e7bf9cf98915a6b4541a08879e728e876bda0d7c33ef9e7e881fa0",
+      "bytes": 279741
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v3/room-perspective.png",
+      "sha256": "43ac126def837122b4b426e8cad70e3577c7e7cc7c201e75d1a9bee0472c4121",
+      "bytes": 338190
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v3/walk.png",
+      "sha256": "d24a5e2c7e4481b9c89ea27763b30ae829741f8a2515c3bcc8104da88a89b9b3",
+      "bytes": 373842
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v3/workspace-calendar.png",
+      "sha256": "ac8b8bccf822c10e343dd9851243adc0c21c123211d8ad6663bde18e65643b1c",
+      "bytes": 128308
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v3/workspace-cases.png",
+      "sha256": "7a33d419012bd6cf55685af1f26f9f4a9f300388f8796129c84c9da4602d13bd",
+      "bytes": 184200
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v3/workspace-editorial.png",
+      "sha256": "4d8a3e7f82139c48353f78ef736121784b06b38fc871867937e05f20250e465f",
+      "bytes": 113944
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v3/workspace-life.png",
+      "sha256": "2cebe4ca7e458f347b11ebf937ef257ce7e088a854e93766c6c68b3d75a8ae0a",
+      "bytes": 156135
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v3/workspace-quests.png",
+      "sha256": "9b4e61d064895aa44d9e19f68f5cfc4edf83b6cb3eeaefb13b6adaab83d9858e",
+      "bytes": 137238
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v3/workspace-reports.png",
+      "sha256": "6afcebadd4a3aa288dbcd7fbad282b9ea785e4719c3ce16daaba6a1331a62a14",
+      "bytes": 138214
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v3/workspace-saves.png",
+      "sha256": "7950a30af26dd7a81154d76863d4b7819243f3b695039ead8bc7507641c4d44f",
+      "bytes": 138071
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v3/workspace-team.png",
+      "sha256": "87fc44c7f6bc1f121593f3e136fc321f818c71b9ca0977c15f38add988fa6b3b",
+      "bytes": 157131
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v3/workspace-travel.png",
+      "sha256": "a905be4f36a609c2b185e6cbd3f697799f9e576ab636d0aedcf3bfc6cc79f1b8",
+      "bytes": 131639
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/dialogue-command.png",
+      "sha256": "da67b7d7314981f62c6dcbb4ba47cc43af5f39ad65a780ea2d400553ff397eb2",
+      "bytes": 707148
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/extension-library.png",
+      "sha256": "c1bbe7535cabfa221411a2bdc5f5112274d089e8feb684507b67a6e8fe3742a8",
+      "bytes": 100728
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/extension-npc-dialogue.png",
+      "sha256": "90b8d9f781d40734fd8817428ed40e88c53eb4c4ef261c70dd59e71d58b766ad",
+      "bytes": 424341
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/extension-npc-room.png",
+      "sha256": "9a89dff985e92d71a628fdbf8b5fae97a64f240b9d943a1ccf112fc76f813735",
+      "bytes": 104260
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/integrated-state.json",
+      "sha256": "66117fedb1c2e172a66bdf5ff686f3082823d9fe32354504797e0425d116cdc3",
+      "bytes": 6013
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/room-dof-ab.png",
+      "sha256": "d3c5409c43bc7205d6ceae855edefaa2011ee44bddfd9a6053bce1dbbc2256fc",
+      "bytes": 435969
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/room-fog-ab.png",
+      "sha256": "28429531063385a7ee89a2c1112e6bb67af6ef55ea3911282c0bc8ad8f7a4d85",
+      "bytes": 385245
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/room-glow-ab.png",
+      "sha256": "10c9c45856b5a149df4d78d76ca5f4d5dfa29d38d128bfc6d542f52a09dfd706",
+      "bytes": 436381
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/room-high.png",
+      "sha256": "f20d1a023ee9a7f6eaf5cad4e233c8299ba9f9184adbfd10b28d63feb8050933",
+      "bytes": 435630
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/room-low.png",
+      "sha256": "709362aca18710472bc81164276f829ef8b986c11b2ae9d585665c872edc2226",
+      "bytes": 278369
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/room-perspective.png",
+      "sha256": "007a5bd8b3e0bb8f3ac9f35a3263a8522171a59efece5820c467b222612ea1b9",
+      "bytes": 294952
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/walk.png",
+      "sha256": "91c63f9a19a3d2ec8554b944dbc145f6030d12ab6d6b8d63aea4f236d33afc3b",
+      "bytes": 373344
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/workspace-calendar.png",
+      "sha256": "93e0426587023941165d7388e731cfdf93c99a0dbbd45cae5c8421111dff0880",
+      "bytes": 127377
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/workspace-cases.png",
+      "sha256": "f85cc3be572cc1fb75d4aec6c4e651f5900174a023736a9309b33c18aec3a308",
+      "bytes": 183094
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/workspace-editorial.png",
+      "sha256": "32bc24699223db709ce8020b04f3a61ce5f3dc1da36aafdd1032b3652100d004",
+      "bytes": 112631
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/workspace-life.png",
+      "sha256": "d21455949910492018a2211394b3c6f753ae3f1c606bd061e37ea9d8a9555559",
+      "bytes": 155081
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/workspace-quests.png",
+      "sha256": "67acd976217f2ae253d52c6d8c6861857cc75c1cfee861b8e7ff6c653a516d39",
+      "bytes": 136232
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/workspace-reports.png",
+      "sha256": "7a9fa72b20830531aff267a364a2b7c4912768305c7f6da05ea2312295caaf24",
+      "bytes": 137340
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/workspace-saves.png",
+      "sha256": "fb300844246caa46c683d6b0abbff707e56c0e322ce49e0763f46bbd2e325ef3",
+      "bytes": 136339
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/workspace-team.png",
+      "sha256": "dbab1e727be64a648c9fb559dd16c24572e834ebcb3562a8843d658f54cca4e8",
+      "bytes": 155749
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v4/workspace-travel.png",
+      "sha256": "79d08fc4cce7ecea3186375e19fb19a42927491b6eff778e4a22dcb95f5714df",
+      "bytes": 130153
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/dialogue-command.png",
+      "sha256": "41adfb14c9fa9a3ce413c4992867c911f372114d663de5a4375655a36a77456a",
+      "bytes": 707209
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/extension-library.png",
+      "sha256": "c1bbe7535cabfa221411a2bdc5f5112274d089e8feb684507b67a6e8fe3742a8",
+      "bytes": 100728
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/extension-npc-dialogue.png",
+      "sha256": "90b8d9f781d40734fd8817428ed40e88c53eb4c4ef261c70dd59e71d58b766ad",
+      "bytes": 424341
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/extension-npc-room.png",
+      "sha256": "9a89dff985e92d71a628fdbf8b5fae97a64f240b9d943a1ccf112fc76f813735",
+      "bytes": 104260
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/formula-benchmark.png",
+      "sha256": "eff01b9739f2e5a8b15ded4c72284a546517876a799a830eaa2677dae60d72ed",
+      "bytes": 80420
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/formula-tool.png",
+      "sha256": "d8de20850185183715a13793b6c2ef7efb4c26711104c1fcd7a5c2e0ea5562c5",
+      "bytes": 68713
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/integrated-state.json",
+      "sha256": "66117fedb1c2e172a66bdf5ff686f3082823d9fe32354504797e0425d116cdc3",
+      "bytes": 6013
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/room-dof-ab.png",
+      "sha256": "0c55ed5740d0fa8d1b3108f3acb6f7b9096c86599777e36dd54ddf4bdfd2177f",
+      "bytes": 436052
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/room-fog-ab.png",
+      "sha256": "73a4b76dac8b8a8d06b1aa26584e6098772e0ffdeeea1ac3afbab9e54f2f4815",
+      "bytes": 385304
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/room-glow-ab.png",
+      "sha256": "1a74086b2a211fd3da9e7311518c83d2bf9a07b9ae5511de7853f550b0b13ec3",
+      "bytes": 436412
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/room-high.png",
+      "sha256": "93e5ff35f560882d1c78e447f255ef3c68d9ce1407d96ec7a22b00478ee4a449",
+      "bytes": 435694
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/room-low.png",
+      "sha256": "709362aca18710472bc81164276f829ef8b986c11b2ae9d585665c872edc2226",
+      "bytes": 278369
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/room-perspective.png",
+      "sha256": "eeb5a9d59cbdfcc5b513acbb5e8e8c10568c96d8f012786ba911a76ec1d4f4f2",
+      "bytes": 294938
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/walk.png",
+      "sha256": "2453a3aaeaf2d4546e47c86c11ea327878f26aebf574bef97939cf24e2f9dea2",
+      "bytes": 373356
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/workspace-calendar.png",
+      "sha256": "93e0426587023941165d7388e731cfdf93c99a0dbbd45cae5c8421111dff0880",
+      "bytes": 127377
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/workspace-cases.png",
+      "sha256": "f85cc3be572cc1fb75d4aec6c4e651f5900174a023736a9309b33c18aec3a308",
+      "bytes": 183094
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/workspace-editorial.png",
+      "sha256": "32bc24699223db709ce8020b04f3a61ce5f3dc1da36aafdd1032b3652100d004",
+      "bytes": 112631
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/workspace-life.png",
+      "sha256": "74ea7c2c90051abac27807e209b8243747d06d4d2028abecaabff79584fcbb90",
+      "bytes": 132291
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/workspace-quests.png",
+      "sha256": "67acd976217f2ae253d52c6d8c6861857cc75c1cfee861b8e7ff6c653a516d39",
+      "bytes": 136232
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/workspace-reports.png",
+      "sha256": "7a9fa72b20830531aff267a364a2b7c4912768305c7f6da05ea2312295caaf24",
+      "bytes": 137340
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/workspace-saves.png",
+      "sha256": "fb300844246caa46c683d6b0abbff707e56c0e322ce49e0763f46bbd2e325ef3",
+      "bytes": 136339
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/workspace-team.png",
+      "sha256": "dbab1e727be64a648c9fb559dd16c24572e834ebcb3562a8843d658f54cca4e8",
+      "bytes": 155749
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v5/workspace-travel.png",
+      "sha256": "79d08fc4cce7ecea3186375e19fb19a42927491b6eff778e4a22dcb95f5714df",
+      "bytes": 130153
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/dialogue-command.png",
+      "sha256": "0f37764604b0202daf405632e19da9642589471964981cc1cd611821ccb72eef",
+      "bytes": 707110
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/extension-library.png",
+      "sha256": "c1bbe7535cabfa221411a2bdc5f5112274d089e8feb684507b67a6e8fe3742a8",
+      "bytes": 100728
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/extension-npc-dialogue.png",
+      "sha256": "90b8d9f781d40734fd8817428ed40e88c53eb4c4ef261c70dd59e71d58b766ad",
+      "bytes": 424341
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/extension-npc-room.png",
+      "sha256": "9a89dff985e92d71a628fdbf8b5fae97a64f240b9d943a1ccf112fc76f813735",
+      "bytes": 104260
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/formula-benchmark.png",
+      "sha256": "0221cf25fcbf47b91b7525321dfadb1f2f84e787f3e0d1a21ae441b09c832356",
+      "bytes": 76066
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/formula-tool.png",
+      "sha256": "d8de20850185183715a13793b6c2ef7efb4c26711104c1fcd7a5c2e0ea5562c5",
+      "bytes": 68713
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/integrated-state.json",
+      "sha256": "66117fedb1c2e172a66bdf5ff686f3082823d9fe32354504797e0425d116cdc3",
+      "bytes": 6013
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/room-dof-ab.png",
+      "sha256": "4cfe25fc9f8ed7a30a45534c8d29c740d9e25e6243fe423c8685883d1489eba2",
+      "bytes": 436005
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/room-fog-ab.png",
+      "sha256": "38d1d31cb1790c286333eaf3adcfb7d55b6a351ffc9f92310a04baac83e1cfe2",
+      "bytes": 385214
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/room-glow-ab.png",
+      "sha256": "192064477839d1cfe30cf0740d9a66c1c4166cb574da177b3968a8acf7382b08",
+      "bytes": 436390
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/room-high.png",
+      "sha256": "20b329a06d6efe60528ea305721d9ab98c480b1c9f0beea97a542b8b63f100f9",
+      "bytes": 435637
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/room-low.png",
+      "sha256": "709362aca18710472bc81164276f829ef8b986c11b2ae9d585665c872edc2226",
+      "bytes": 278369
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/room-perspective.png",
+      "sha256": "1f9a5f21d8c1032f33d108f79d4c647716975fbb69373cf6ac8ecc92563b2684",
+      "bytes": 294983
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/walk.png",
+      "sha256": "72670db4aaec7dfcb1832cc0f063d8bad8bf8fdf8a1e6a942429e5fe9ae14d35",
+      "bytes": 373298
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/workspace-calendar.png",
+      "sha256": "93e0426587023941165d7388e731cfdf93c99a0dbbd45cae5c8421111dff0880",
+      "bytes": 127377
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/workspace-cases.png",
+      "sha256": "f85cc3be572cc1fb75d4aec6c4e651f5900174a023736a9309b33c18aec3a308",
+      "bytes": 183094
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/workspace-editorial.png",
+      "sha256": "32bc24699223db709ce8020b04f3a61ce5f3dc1da36aafdd1032b3652100d004",
+      "bytes": 112631
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/workspace-life.png",
+      "sha256": "74ea7c2c90051abac27807e209b8243747d06d4d2028abecaabff79584fcbb90",
+      "bytes": 132291
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/workspace-quests.png",
+      "sha256": "67acd976217f2ae253d52c6d8c6861857cc75c1cfee861b8e7ff6c653a516d39",
+      "bytes": 136232
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/workspace-reports.png",
+      "sha256": "7a9fa72b20830531aff267a364a2b7c4912768305c7f6da05ea2312295caaf24",
+      "bytes": 137340
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/workspace-saves.png",
+      "sha256": "fb300844246caa46c683d6b0abbff707e56c0e322ce49e0763f46bbd2e325ef3",
+      "bytes": 136339
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/workspace-team.png",
+      "sha256": "dbab1e727be64a648c9fb559dd16c24572e834ebcb3562a8843d658f54cca4e8",
+      "bytes": 155749
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v6/workspace-travel.png",
+      "sha256": "79d08fc4cce7ecea3186375e19fb19a42927491b6eff778e4a22dcb95f5714df",
+      "bytes": 130153
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/dialogue-command.png",
+      "sha256": "72332e050eeb0c8bbafe7e4c34752cae78b885869876d86cc917b8d659b4445f",
+      "bytes": 707108
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/extension-library.png",
+      "sha256": "c1bbe7535cabfa221411a2bdc5f5112274d089e8feb684507b67a6e8fe3742a8",
+      "bytes": 100728
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/extension-npc-dialogue.png",
+      "sha256": "90b8d9f781d40734fd8817428ed40e88c53eb4c4ef261c70dd59e71d58b766ad",
+      "bytes": 424341
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/extension-npc-room.png",
+      "sha256": "9a89dff985e92d71a628fdbf8b5fae97a64f240b9d943a1ccf112fc76f813735",
+      "bytes": 104260
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/formula-benchmark.png",
+      "sha256": "0221cf25fcbf47b91b7525321dfadb1f2f84e787f3e0d1a21ae441b09c832356",
+      "bytes": 76066
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/formula-tool.png",
+      "sha256": "d8de20850185183715a13793b6c2ef7efb4c26711104c1fcd7a5c2e0ea5562c5",
+      "bytes": 68713
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/integrated-state.json",
+      "sha256": "66117fedb1c2e172a66bdf5ff686f3082823d9fe32354504797e0425d116cdc3",
+      "bytes": 6013
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/room-dof-ab.png",
+      "sha256": "a1cfba1d88b8b256c1437c712ad35628a60f03736098d7f18c88c36bf6286398",
+      "bytes": 435969
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/room-fog-ab.png",
+      "sha256": "3df37f096279facded1650bfeee2a6b5c2b2c00f8b7e04c76c062b803c9732ca",
+      "bytes": 385238
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/room-glow-ab.png",
+      "sha256": "dae0964014ac843ba43fb0986bcd12bf93a0d1ea07430c482eb8c2d7029ea916",
+      "bytes": 436442
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/room-high.png",
+      "sha256": "f7d3a21b9edb43ebeaa87e1c02891a4044a700811ac264e34014132358d80cea",
+      "bytes": 435687
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/room-low.png",
+      "sha256": "709362aca18710472bc81164276f829ef8b986c11b2ae9d585665c872edc2226",
+      "bytes": 278369
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/room-perspective.png",
+      "sha256": "b083ca7f12d1f1c3b497d1edb09bfe48d1c2a8b448804113720c098143067b10",
+      "bytes": 294953
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/walk.png",
+      "sha256": "ac06f40521a383527aba7db39ef5eb54312c08359318b6d4de51a13d5408371d",
+      "bytes": 373318
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/workspace-calendar.png",
+      "sha256": "93e0426587023941165d7388e731cfdf93c99a0dbbd45cae5c8421111dff0880",
+      "bytes": 127377
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/workspace-cases.png",
+      "sha256": "f85cc3be572cc1fb75d4aec6c4e651f5900174a023736a9309b33c18aec3a308",
+      "bytes": 183094
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/workspace-editorial.png",
+      "sha256": "778a17a9fd6be7c6edd79fa41596d8dac364312206dc277f3de252a92fe7f3c7",
+      "bytes": 122588
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/workspace-life.png",
+      "sha256": "74ea7c2c90051abac27807e209b8243747d06d4d2028abecaabff79584fcbb90",
+      "bytes": 132291
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/workspace-quests.png",
+      "sha256": "67acd976217f2ae253d52c6d8c6861857cc75c1cfee861b8e7ff6c653a516d39",
+      "bytes": 136232
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/workspace-reports.png",
+      "sha256": "7bede4c70c2612241de0e04bbac92da9a22b775a20183fb55a41f7dc60967b6e",
+      "bytes": 150487
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/workspace-saves.png",
+      "sha256": "fb300844246caa46c683d6b0abbff707e56c0e322ce49e0763f46bbd2e325ef3",
+      "bytes": 136339
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/workspace-team.png",
+      "sha256": "dbab1e727be64a648c9fb559dd16c24572e834ebcb3562a8843d658f54cca4e8",
+      "bytes": 155749
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v7/workspace-travel.png",
+      "sha256": "79d08fc4cce7ecea3186375e19fb19a42927491b6eff778e4a22dcb95f5714df",
+      "bytes": 130153
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/dialogue-command.png",
+      "sha256": "da506c195374ac7592dec41db4848049601908ae98d0fb95a26eea20eefff589",
+      "bytes": 707201
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/extension-library.png",
+      "sha256": "c1bbe7535cabfa221411a2bdc5f5112274d089e8feb684507b67a6e8fe3742a8",
+      "bytes": 100728
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/extension-npc-dialogue.png",
+      "sha256": "66cccc3620af0dfc85334394d9905885ac6aef3c71937008979511038ea1e9d6",
+      "bytes": 425286
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/extension-npc-prompt.png",
+      "sha256": "78dff8a411c4d96547763328f07d26247bca54a7274b47a39887229627b22aca",
+      "bytes": 109263
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/extension-npc-room.png",
+      "sha256": "9a89dff985e92d71a628fdbf8b5fae97a64f240b9d943a1ccf112fc76f813735",
+      "bytes": 104260
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/formula-benchmark.png",
+      "sha256": "0221cf25fcbf47b91b7525321dfadb1f2f84e787f3e0d1a21ae441b09c832356",
+      "bytes": 76066
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/formula-tool.png",
+      "sha256": "d8de20850185183715a13793b6c2ef7efb4c26711104c1fcd7a5c2e0ea5562c5",
+      "bytes": 68713
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/integrated-state.json",
+      "sha256": "66117fedb1c2e172a66bdf5ff686f3082823d9fe32354504797e0425d116cdc3",
+      "bytes": 6013
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/room-dof-ab.png",
+      "sha256": "4983a5b3c9a5b406ac5d03ab9b527f4f474484039392a3acf396745924e9f22b",
+      "bytes": 435954
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/room-fog-ab.png",
+      "sha256": "a638bf7c702cc7f846efa399f295492416081c5d7ff167320c0a4795a0ed3137",
+      "bytes": 385266
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/room-glow-ab.png",
+      "sha256": "f84f6a301055fe1d468dfdc583165f7d5723d2537f74266b02c9ada20c5ced1e",
+      "bytes": 436354
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/room-high.png",
+      "sha256": "beae1b6252d0470c47803b9f5684ec37a819b0a14d1e5a9cf253cc1aa03a3e5b",
+      "bytes": 435644
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/room-low.png",
+      "sha256": "709362aca18710472bc81164276f829ef8b986c11b2ae9d585665c872edc2226",
+      "bytes": 278369
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/room-perspective.png",
+      "sha256": "28724d5acf3c8939affcb539aa5d046d71244f25df828f0dcdd09732f9d35c93",
+      "bytes": 294961
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/walk.png",
+      "sha256": "be24e4ef8973d866152756523d5d34d5facf023c164a06f7bcc88d03fce29151",
+      "bytes": 373361
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/workspace-calendar.png",
+      "sha256": "93e0426587023941165d7388e731cfdf93c99a0dbbd45cae5c8421111dff0880",
+      "bytes": 127377
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/workspace-cases.png",
+      "sha256": "f85cc3be572cc1fb75d4aec6c4e651f5900174a023736a9309b33c18aec3a308",
+      "bytes": 183094
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/workspace-editorial.png",
+      "sha256": "778a17a9fd6be7c6edd79fa41596d8dac364312206dc277f3de252a92fe7f3c7",
+      "bytes": 122588
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/workspace-life.png",
+      "sha256": "74ea7c2c90051abac27807e209b8243747d06d4d2028abecaabff79584fcbb90",
+      "bytes": 132291
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/workspace-quests.png",
+      "sha256": "67acd976217f2ae253d52c6d8c6861857cc75c1cfee861b8e7ff6c653a516d39",
+      "bytes": 136232
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/workspace-reports.png",
+      "sha256": "7bede4c70c2612241de0e04bbac92da9a22b775a20183fb55a41f7dc60967b6e",
+      "bytes": 150487
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/workspace-saves.png",
+      "sha256": "fb300844246caa46c683d6b0abbff707e56c0e322ce49e0763f46bbd2e325ef3",
+      "bytes": 136339
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/workspace-team.png",
+      "sha256": "dbab1e727be64a648c9fb559dd16c24572e834ebcb3562a8843d658f54cca4e8",
+      "bytes": 155749
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/captures-v8/workspace-travel.png",
+      "sha256": "79d08fc4cce7ecea3186375e19fb19a42927491b6eff778e4a22dcb95f5714df",
+      "bytes": 130153
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/full-results.json",
+      "sha256": "98bd1d5a7ace8b6f7f6508bf96a5655981c6a933b2455f5e5105541766fbacda",
+      "bytes": 7288
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/inventory.json",
+      "sha256": "b6242b13dca46e32b6e163bc02b5e52899de4eb28e0baf0d254bb0d982538d83",
+      "bytes": 31907
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/logs/clean-bootstrap.log",
+      "sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75",
+      "bytes": 70
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/logs/clean-contracts.log",
+      "sha256": "86079d050aea9744c5516bc763bd88e3e900a1e6199554ca5d8e7a2ab8a17623",
+      "bytes": 113
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/logs/clean-import.log",
+      "sha256": "cbefb570ace6655cd72c69e6a35edfceb9273fad12edf79b57717bbc3106f640",
+      "bytes": 6278
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/logs/export-debug.log",
+      "sha256": "79e10936127f13eb34ca321bd3adbdc9c1e1c49db6a8743ec772d78a15fd74b3",
+      "bytes": 20992
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/logs/export-release.log",
+      "sha256": "79e10936127f13eb34ca321bd3adbdc9c1e1c49db6a8743ec772d78a15fd74b3",
+      "bytes": 20992
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/logs/native-export-debug.log",
+      "sha256": "33098e13abb44c0787c139378788809055a10d9d5efa4e9a34042f973bc73fad",
+      "bytes": 287
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/logs/native-export-release.log",
+      "sha256": "33098e13abb44c0787c139378788809055a10d9d5efa4e9a34042f973bc73fad",
+      "bytes": 287
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/logs/native-interaction.log",
+      "sha256": "286492355343ca086a680fcab74e56b8b19f05bc0af4521cb0d78b50209aaacf",
+      "bytes": 200
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/logs/playable-capture-v5.log",
+      "sha256": "434db1c6e724017adf8c19b26d18939c69d71187cb5f7ddb96fead78907d2313",
+      "bytes": 122702
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/logs/playable-capture-v8.log",
+      "sha256": "e046d127f6fa1e510f530790a391c65054cf3be3e3ca7333380bb7bd81e2c177",
+      "bytes": 257
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/logs/profile-native-final.log",
+      "sha256": "60c334c00434ebd0128ff3d66df18efef1c608b7f3a23817ed3fc98f7be7071f",
+      "bytes": 227
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/logs/source-recapture.log",
+      "sha256": "938751449c68f604091ac7f926bd2c155e1af96f8ba9ead42f6b79dbc3e9d054",
+      "bytes": 153
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/native-profile-final.json",
+      "sha256": "34ab62aac0f4284f96f701528abe6276ff5ea3bbceac6f70f596f1937453c7a5",
+      "bytes": 1368516
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/native-profile.json",
+      "sha256": "c3aadfd620011d3b621f20e82de02465e7250c44313cda773da232b8d6ef9394",
+      "bytes": 1369491
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/playable-v2.mp4",
+      "sha256": "7a2b588abaa95f263cdde35ff999a8621cf8aa5e69f5d9ce6882e2cab7ad2c10",
+      "bytes": 1411951
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/playable-v3.mp4",
+      "sha256": "a459dcfea2f87df13c5473911d0e52f8e2118524c76ec69cd030b17ba978aa69",
+      "bytes": 1421974
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/playable.mp4",
+      "sha256": "028f86f6433e52215842139f8ab5b683da0a38d46da1fc578f8d0b6ee9f52b11",
+      "bytes": 1371967
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/profile-summary-final.json",
+      "sha256": "51cbfc1e868067bc87b3a445db800f4c020276908ebf16bf9345d479ed48379c",
+      "bytes": 15821
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/profile-summary.json",
+      "sha256": "cec411978ce727a2ec7203aa38db1d6f73bfa36069119859f6ef1e5c63fe7ba5",
+      "bytes": 16394
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/README.md",
+      "sha256": "e86eaef92425a3a70c9721c5f933982056b8b8306a041092e394889a3fefc51d",
+      "bytes": 5568
+    },
+    {
+      "path": "docs/reviews/chapters-06-12/world-kit-manifest.json",
+      "sha256": "858971d691a4aa075f44a8bf4b38b34dea07f63dbe894e2ea4cd8f221558d57b",
+      "bytes": 2431
+    }
+  ],
+  "source_browser_tests_run": false,
+  "reason_source_browser_tests_not_run": "The independent Godot target changed; the browser source checkout was read-only and stayed clean. Native/headless Godot checks were run."
+}

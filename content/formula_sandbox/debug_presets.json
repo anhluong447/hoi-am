@@ -1,0 +1,35 @@
+{
+  "presets": [
+    {
+      "text_key": "sandbox.debug_fatigue",
+      "command": {
+        "type": "debug",
+        "patch": {
+          "fatigue": {
+            "khue": 100
+          }
+        }
+      }
+    },
+    {
+      "text_key": "sandbox.debug_pressure",
+      "command": {
+        "type": "debug",
+        "patch": {
+          "pressure": 200
+        }
+      }
+    },
+    {
+      "text_key": "sandbox.debug_recruit",
+      "command": {
+        "type": "debug",
+        "patch": {
+          "joinWeek": {
+            "nhi": 1
+          }
+        }
+      }
+    }
+  ]
+}

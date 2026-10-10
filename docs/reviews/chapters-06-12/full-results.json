@@ -1,0 +1,347 @@
+{
+  "float_tolerance": 0.00000001,
+  "formula": [
+    {
+      "averageScore": 64391.913325,
+      "evidence": 233.3748,
+      "heavyStrikes": 3,
+      "outcome": "win",
+      "policy": "Cân bằng",
+      "reputation": 64.460733834531
+    },
+    {
+      "averageScore": 55151.97751875,
+      "evidence": 218.796,
+      "heavyStrikes": 4,
+      "outcome": "bitter",
+      "policy": "Dùng Vân bất chấp",
+      "reputation": 47.3640415451999
+    },
+    {
+      "averageScore": 66016.246875,
+      "evidence": 351.2652,
+      "heavyStrikes": 5,
+      "outcome": "win",
+      "policy": "Gai góc 80%",
+      "reputation": 61.3105598068389
+    },
+    {
+      "averageScore": 56942.75025,
+      "evidence": 426.78,
+      "heavyStrikes": 8,
+      "outcome": "bitter",
+      "policy": "Tham điểm 100%",
+      "reputation": 32.3494772857362
+    },
+    {
+      "averageScore": 41926.3049666667,
+      "evidence": 0.0,
+      "heavyStrikes": 0,
+      "outcome": "defeat",
+      "policy": "Chỉ an toàn",
+      "reputation": 44.9547099284588
+    },
+    {
+      "averageScore": 43364.72,
+      "evidence": 101.352,
+      "heavyStrikes": 0,
+      "outcome": "defeat",
+      "policy": "Một bài / tuần",
+      "reputation": 19.1724660934471
+    },
+    {
+      "averageScore": 43378.9030416667,
+      "evidence": 111.3048,
+      "heavyStrikes": 2,
+      "outcome": "defeat",
+      "policy": "Khuê làm một mình",
+      "reputation": 22.5093515271819
+    },
+    {
+      "averageScore": 60917.5682583333,
+      "evidence": 169.0032,
+      "heavyStrikes": 2,
+      "outcome": "defeat",
+      "policy": "An toàn 5 tuần rồi bung",
+      "reputation": 64.4278489452202
+    }
+  ],
+  "gameplay": [
+    {
+      "K": 77.2614285714286,
+      "T": 0.0,
+      "good": false,
+      "khueArticles": 2,
+      "metrics": {
+        "approvals": 0,
+        "assigned": 0,
+        "energySpent": 10.0,
+        "hangouts": 0,
+        "jobs": 0,
+        "opened": 0,
+        "restarts": 0,
+        "unusedEnergy": 30.0
+      },
+      "policy": "solo",
+      "reports": [
+        {
+          "day": 5,
+          "ids": [
+            "Q1"
+          ],
+          "reputation": 8.0,
+          "score": 76620,
+          "week": 1
+        },
+        {
+          "day": 12,
+          "ids": [
+            "Q2"
+          ],
+          "reputation": 16.0,
+          "score": 77656,
+          "week": 2
+        }
+      ],
+      "teamArticles": 0,
+      "total": 30.9045714285714
+    },
+    {
+      "K": 0.0,
+      "T": 76.8,
+      "good": false,
+      "khueArticles": 0,
+      "metrics": {
+        "approvals": 8,
+        "assigned": 4,
+        "energySpent": 8.0,
+        "hangouts": 0,
+        "jobs": 0,
+        "opened": 4,
+        "restarts": 0,
+        "unusedEnergy": 32.0
+      },
+      "policy": "team",
+      "reports": [
+        {
+          "day": 5,
+          "ids": [
+            "W1-community",
+            "W1-documents"
+          ],
+          "reputation": 5.0,
+          "score": 45128,
+          "week": 1
+        },
+        {
+          "day": 12,
+          "ids": [
+            "W2-community",
+            "W2-documents"
+          ],
+          "reputation": 10.0,
+          "score": 45128,
+          "week": 2
+        }
+      ],
+      "teamArticles": 4,
+      "total": 46.08
+    },
+    {
+      "K": 77.2614285714286,
+      "T": 76.8,
+      "good": true,
+      "khueArticles": 2,
+      "metrics": {
+        "approvals": 8,
+        "assigned": 4,
+        "energySpent": 18.0,
+        "hangouts": 0,
+        "jobs": 0,
+        "opened": 4,
+        "restarts": 0,
+        "unusedEnergy": 22.0
+      },
+      "policy": "mixed",
+      "reports": [
+        {
+          "day": 5,
+          "ids": [
+            "W1-community",
+            "W1-documents",
+            "Q1"
+          ],
+          "reputation": 6.0,
+          "score": 55625,
+          "week": 1
+        },
+        {
+          "day": 12,
+          "ids": [
+            "W2-community",
+            "W2-documents",
+            "Q2"
+          ],
+          "reputation": 12.0,
+          "score": 55970,
+          "week": 2
+        }
+      ],
+      "teamArticles": 4,
+      "total": 76.9845714285714
+    },
+    {
+      "K": 82.4471428571428,
+      "T": 76.8,
+      "good": true,
+      "khueArticles": 12,
+      "metrics": {
+        "approvals": 48,
+        "assigned": 24,
+        "energySpent": 108.0,
+        "hangouts": 0,
+        "jobs": 0,
+        "opened": 24,
+        "restarts": 0,
+        "unusedEnergy": 132.0
+      },
+      "policy": "mixed-84-days",
+      "reports": [
+        {
+          "day": 5,
+          "ids": [
+            "W1-community",
+            "W1-documents",
+            "Q1"
+          ],
+          "reputation": 6.0,
+          "score": 55625,
+          "week": 1
+        },
+        {
+          "day": 12,
+          "ids": [
+            "W2-community",
+            "W2-documents",
+            "Q2"
+          ],
+          "reputation": 12.0,
+          "score": 55970,
+          "week": 2
+        },
+        {
+          "day": 19,
+          "ids": [
+            "W3-community",
+            "W3-documents",
+            "Q3"
+          ],
+          "reputation": 18.0,
+          "score": 56315,
+          "week": 3
+        },
+        {
+          "day": 26,
+          "ids": [
+            "W4-community",
+            "W4-documents",
+            "Q4"
+          ],
+          "reputation": 24.0,
+          "score": 56661,
+          "week": 4
+        },
+        {
+          "day": 33,
+          "ids": [
+            "W5-community",
+            "W5-documents",
+            "Q5"
+          ],
+          "reputation": 30.0,
+          "score": 57006,
+          "week": 5
+        },
+        {
+          "day": 40,
+          "ids": [
+            "W6-community",
+            "W6-documents",
+            "Q6"
+          ],
+          "reputation": 36.0,
+          "score": 57351,
+          "week": 6
+        },
+        {
+          "day": 47,
+          "ids": [
+            "W7-community",
+            "W7-documents",
+            "Q7"
+          ],
+          "reputation": 42.0,
+          "score": 57696,
+          "week": 7
+        },
+        {
+          "day": 54,
+          "ids": [
+            "W8-community",
+            "W8-documents",
+            "Q8"
+          ],
+          "reputation": 48.0,
+          "score": 58041,
+          "week": 8
+        },
+        {
+          "day": 61,
+          "ids": [
+            "W9-community",
+            "W9-documents",
+            "Q9"
+          ],
+          "reputation": 54.0,
+          "score": 58386,
+          "week": 9
+        },
+        {
+          "day": 68,
+          "ids": [
+            "W10-community",
+            "W10-documents",
+            "Q10"
+          ],
+          "reputation": 60.0,
+          "score": 58731,
+          "week": 10
+        },
+        {
+          "day": 75,
+          "ids": [
+            "W11-community",
+            "W11-documents",
+            "Q11"
+          ],
+          "reputation": 66.0,
+          "score": 59077,
+          "week": 11
+        },
+        {
+          "day": 82,
+          "ids": [
+            "W12-community",
+            "W12-documents",
+            "Q12"
+          ],
+          "reputation": 72.0,
+          "score": 59422,
+          "week": 12
+        }
+      ],
+      "teamArticles": 24,
+      "total": 79.0588571428572
+    }
+  ]
+}

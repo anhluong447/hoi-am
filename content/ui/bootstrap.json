@@ -4,5 +4,7 @@
   "quit_key": "ui.common.quit",
   "world_key": "migration.boot.world",
   "calendar_key": "migration.boot.calendar",
-  "ui_key": "migration.boot.ui"
+  "ui_key": "migration.boot.ui",
+  "play_key": "play.boot",
+  "sandbox_key": "sandbox.boot"
 }

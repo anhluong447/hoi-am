@@ -13,7 +13,7 @@ def main():
     logs = ROOT / 'artifacts/verification'
     run([args.godot, '--path', str(ROOT), '--script', 'res://tests/native_interaction.gd',
          '--fixed-fps', '60', '--quit-after', '900'], log_path=logs / 'native-interaction.log',
-        expected=r'Native interaction: 12 checks; 0 failures\b')
+        expected=r'Native interaction: 18 checks; 0 failures\b')
     if args.capture:
         run([args.godot, '--path', str(ROOT), '--script', 'res://tests/capture_review.gd', '--quit-after', '900'],
             log_path=logs / 'native-review-current.log', expected=r'Native review: 19 captures saved')

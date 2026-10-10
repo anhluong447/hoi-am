@@ -1,24 +1,25 @@
 # Chapter 11 — Production art, atmosphere và motion
 
-Trạng thái: chưa bắt đầu. Phụ thuộc: Chapters 04/05/06; không chờ full logic port
+Trạng thái: asset/effect/motion pipeline sample đã kiểm chứng; C11.05 G2 còn mở.
+Phụ thuộc: Chapters 04/05/06; không chờ full logic port
 để thử một asset/light sample có giá trị. Mục tiêu: khóa pipeline sản xuất bằng
 một phòng và một bộ UI trước khi mở rộng số lượng assets.
 
 ## Work packages
 
-- [ ] C11.01: chọn style texture/mesh/pixel density từ blockout và concept; module room
+- [x] C11.01: chọn style texture/mesh/pixel density từ blockout và concept; module room
   kit cụ thể gồm floor/wall/window/desk, source file, license và import settings.
-- [ ] C11.02: production sample phòng CLB: texture/mats, props chính, harbor backdrop
+- [x] C11.02: production sample phòng CLB: texture/mats, props chính, harbor backdrop
   có chiều sâu phù hợp camera. Không dựng toàn thành phố trong chapter này.
-- [ ] C11.03: nắng cửa sổ, cool ambient/warm local lights, shadow quality/occlusion;
+- [x] C11.03: nắng cửa sổ, cool ambient/warm local lights, shadow quality/occlusion;
   so baked/static với dynamic lights theo nhu cầu gameplay/device budget.
-- [ ] C11.04: dust/sea shimmer/DOF/fog/glow/grade từng effect có A/B và budget;
+- [x] C11.04: dust/sea shimmer/DOF/fog/glow/grade từng effect có A/B và budget;
   đọc sprite và UI ưu tiên hơn effect density. Không blur text UI.
 - [ ] C11.05: UI correction paper/type/icons/flowers/notebook/harbor/light, đóng static
   gaps trước motion của màn đó; masks/uncertain alpha ghi rõ.
-- [ ] C11.06: AnimationPlayer/Tween theo feature: enter/choice/page/ambient transitions,
+- [x] C11.06: AnimationPlayer/Tween theo feature: enter/choice/page/ambient transitions,
   cancel/replay/reduced motion; callback gameplay không chờ animation xong.
-- [ ] C11.07: still/video review và performance capture trên máy thật, world/UI riêng;
+- [x] C11.07: still/video review và performance capture trên máy thật, world/UI riêng;
   giữ screenshot/prompt/source/manifest versions, không overwrite evidence cũ.
 
 ## Đầu ra
@@ -36,3 +37,9 @@ Visual review xác nhận đúng scope; art/licensing nguồn đầy đủ; read
 
 Mở rộng room/character cần budget và pipeline đã khóa. Những hướng chưa chốt
 đưa vào art/design ledger, không coi cảm hứng Octopath là spec kỹ thuật hoàn chỉnh.
+
+## Evidence 2026-10-10
+
+Room kit/effects/motion sample and native A/B/profile completed. C11.05 exact static visual parity remains open; no production-art acceptance claim.
+
+[Review, parity, native captures/video/profile](../../reviews/chapters-06-12/README.md).

@@ -98,3 +98,14 @@ tests/fixtures/parity/publication-once.json -text whitespace=-trailing-space,cr-
 tests/fixtures/parity/quest-and-write.json -text whitespace=-trailing-space,cr-at-eol
 assets/ui/coastal/generated_sources/** -text whitespace=-trailing-space,cr-at-eol
 docs/reviews/chapters-01-05/logs/** -text whitespace=-trailing-space,cr-at-eol
+
+# Remaining captured oracle bytes and immutable review logs
+tests/fixtures/parity/gameplay-policies.json -text whitespace=-trailing-space,cr-at-eol
+tests/fixtures/parity/formula-policies.json -text whitespace=-trailing-space,cr-at-eol
+tests/fixtures/parity/personal-all.json -text whitespace=-trailing-space,cr-at-eol
+content/formula_sandbox/pack.json -text whitespace=-trailing-space,cr-at-eol
+tests/fixtures/parity/personal-all-v2.json -text whitespace=-trailing-space,cr-at-eol
+docs/reviews/chapters-06-12/logs/** -text whitespace=-trailing-space,cr-at-eol
+docs/reviews/chapters-06-12/captures-*/** -text whitespace=-trailing-space,cr-at-eol
+docs/reviews/chapters-06-12/native-profile*.json -text whitespace=-trailing-space,cr-at-eol
+docs/reviews/chapters-06-12/profile-summary*.json -text whitespace=-trailing-space,cr-at-eol

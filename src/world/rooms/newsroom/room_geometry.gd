@@ -1,5 +1,6 @@
 extends Node3D
 ## Concrete greybox geometry from authored room boxes, including physical window gaps.
+const SURFACE = preload("res://src/world/rooms/newsroom/coastal_surface.gdshader")
 
 
 func build(definitions: Array) -> void:
@@ -14,13 +15,24 @@ func build(definitions: Array) -> void:
 		var material := StandardMaterial3D.new()
 		material.albedo_color = Color(item.color)
 		material.roughness = 0.86
-		mesh.material_override = material
+		if item.has("surface"):
+			var authored := ShaderMaterial.new()
+			authored.shader = SURFACE
+			authored.set_shader_parameter("tint", Color(item.color))
+			for key: String in item.surface:
+				authored.set_shader_parameter(key, item.surface[key])
+			mesh.material_override = authored
+		else:
+			mesh.material_override = material
 		body.add_child(mesh)
 		var collision := CollisionShape3D.new()
 		var shape := BoxShape3D.new()
 		shape.size = box.size
 		collision.shape = shape
-		body.add_child(collision)
+		if item.get("collision", true):
+			body.add_child(collision)
+		else:
+			collision.free()
 		add_child(body)
 
 

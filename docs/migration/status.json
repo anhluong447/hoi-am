@@ -1,33 +1,35 @@
 {
   "version": 1,
   "date": "2026-10-10",
-  "current_chapter": "05",
+  "current_chapter": "11",
+  "technical_migration_status": "verified-through-chapter-12",
+  "remaining_work_packages": ["C11.05"],
   "foundation_status": "verified",
   "chapters": {
     "00": "foundation-verified",
     "01": "content-oracles-verified",
-    "02": "domain-subset-verified",
+    "02": "full-gameplay-domain-verified",
     "03": "greybox-verified",
     "04": "actor-rig-verified; art-pilot",
     "05": "ui-behavior-verified; G2-open",
-    "06": "not-started",
-    "07": "not-started",
-    "08": "not-started",
-    "09": "not-started",
-    "10": "not-started",
-    "11": "not-started",
-    "12": "not-started"
+    "06": "integrated-playable-verified",
+    "07": "newsroom-full-state-parity-verified",
+    "08": "personal-quest-dialogue-management-verified",
+    "09": "native-and-legacy-saves-verified",
+    "10": "eight-formula-policies-verified",
+    "11": "asset-atmosphere-motion-sample-verified; G2-production-art-open",
+    "12": "native-debug-release-clean-import-extension-verified"
   },
   "acceptance": {
-    "gameplay_parity": "six traces / 71 commands verified; full policies deferred",
-    "formula_parity": "not-ported",
-    "world_2_5d": "native greybox/input/depth reviewed; production art deferred",
-    "coastal_ui_static": "native behavior/scale verified; G2-open with explicit gaps",
-    "coastal_ui_motion": "not-ported; source-G3-open",
-    "saves": "pure v1/v2-to-v3 schema migration verified; persistence not-ported",
-    "native_export": "not-verified",
-    "device_performance": "not-measured"
+    "gameplay_parity": "4 policies / 834 commands including 84 days; 8 traces; full state and baselines match",
+    "formula_parity": "8 policies; full state/journal/reports and committed baseline match",
+    "world_2_5d": "sample room kit/lighting/dust/far DOF and high/low measured; other locations prototype",
+    "coastal_ui_static": "native behavior/long text/focus/resize verified; G2 pixel parity still open",
+    "coastal_ui_motion": "interruptible workspace/dialogue fades verified; full source G3/art motion review open",
+    "saves": "native round-trip, backup/temp/corrupt/failure/legacy/ruleset isolation verified",
+    "native_export": "Windows debug/release clean-folder execution and packaged self-check verified",
+    "device_performance": "14 native runs / 4200 frames; RTX 3050 Ti, Forward+ D3D12; p95 <=8.704ms at capped120fps; short-sample limits"
   },
-  "next_chapter": "06",
-  "review": "docs/reviews/chapters-01-05/README.md"
+  "next_chapter": null,
+  "review": "docs/reviews/chapters-06-12/README.md"
 }

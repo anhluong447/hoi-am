@@ -6,6 +6,8 @@ const STARTUP = preload("res://src/bootstrap/project_startup.gd")
 const WORLD = preload("res://src/bootstrap/previews/world_preview.tscn")
 const CALENDAR = preload("res://src/bootstrap/previews/calendar_preview.tscn")
 const UI = preload("res://src/bootstrap/previews/ui_preview.tscn")
+const PLAY = preload("res://src/bootstrap/gameplay/playable.tscn")
+const SANDBOX = preload("res://src/bootstrap/sandbox/sandbox.tscn")
 
 var session: RefCounted
 var _boot_model: Dictionary
@@ -24,6 +26,11 @@ func _ready() -> void:
 	_boot_model = STARTUP.fixture_model(loaded.data.bootstrap, loaded.text)
 	get_window().title = _boot_model.title
 	_show_boot()
+	if OS.get_cmdline_user_args().has("--self-check"):
+		_clear_active()
+		var check := preload("res://src/bootstrap/release_check.gd").new()
+		add_child(check)
+		check.run.call_deferred()
 
 
 func _show_boot() -> void:
@@ -38,7 +45,7 @@ func _show_boot() -> void:
 
 func _show_preview(id: String) -> void:
 	_clear_active()
-	var scene: PackedScene = {"world": WORLD, "calendar": CALENDAR, "ui": UI}[id]
+	var scene: PackedScene = {"world": WORLD, "calendar": CALENDAR, "ui": UI, "play": PLAY, "sandbox": SANDBOX}[id]
 	_active = scene.instantiate()
 	_active.back_requested.connect(func() -> void: _show_boot.call_deferred())
 	add_child(_active)

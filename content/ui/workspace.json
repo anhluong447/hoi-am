@@ -1,0 +1,97 @@
+{
+  "bounds": [
+    160,
+    115,
+    1352,
+    780
+  ],
+  "color": "#f1e4c9",
+  "ink": "#172535",
+  "font_size": 22,
+  "row_spacing": 12,
+  "tabs": [
+    {
+      "id": "calendar",
+      "text_key": "play.calendar"
+    },
+    {
+      "id": "cases",
+      "text_key": "play.cases"
+    },
+    {
+      "id": "quests",
+      "text_key": "play.quests"
+    },
+    {
+      "id": "team",
+      "text_key": "play.team"
+    },
+    {
+      "id": "editorial",
+      "text_key": "play.editorial"
+    },
+    {
+      "id": "life",
+      "text_key": "play.life"
+    },
+    {
+      "id": "travel",
+      "text_key": "play.travel"
+    },
+    {
+      "id": "reports",
+      "text_key": "play.reports"
+    },
+    {
+      "id": "saves",
+      "text_key": "play.saves"
+    }
+  ],
+  "enter_duration": 0.18,
+  "tab_size": 19,
+  "tab_padding": 18,
+  "button_color": "#f5ebd4",
+  "highlight_color": "#edcd7f",
+  "accent_color": "#1c7480",
+  "personal_locations": {
+    "job": [
+      "job"
+    ],
+    "rest": [
+      "home"
+    ],
+    "sleep": [
+      "home"
+    ],
+    "hangout": [
+      "cafe",
+      "library",
+      "waterfront"
+    ],
+    "gift": [
+      "cafe",
+      "library",
+      "waterfront"
+    ],
+    "date": [
+      "cafe",
+      "library",
+      "waterfront"
+    ],
+    "train": [
+      "library",
+      "waterfront",
+      "school",
+      "club"
+    ],
+    "tool": [
+      "shop"
+    ],
+    "boost": [
+      "shop"
+    ],
+    "upgrade": [
+      "shop"
+    ]
+  }
+}

@@ -5,6 +5,11 @@ const SESSION_TESTS = preload("res://tests/test_game_session.gd")
 const GAMEPLAY_TESTS = preload("res://tests/test_gameplay.gd")
 const WORLD_TESTS = preload("res://tests/test_world.gd")
 const UI_TESTS = preload("res://tests/test_ui.gd")
+const FULL_PARITY = preload("res://tests/test_full_parity.gd")
+const SAVE_TESTS = preload("res://tests/test_saves.gd")
+const PLAY_TESTS = preload("res://tests/test_playable.gd")
+const FORMULA_EDGES = preload("res://tests/test_formula_edges.gd")
+const SANDBOX_SCENE = preload("res://tests/test_sandbox_scene.gd")
 const SUITE = preload("res://tests/test_suite.gd")
 const LOADER = preload("res://src/infrastructure/content/json_content_loader.gd")
 const CATALOG = preload("res://src/shared/text_catalog.gd")
@@ -18,7 +23,7 @@ func _initialize() -> void:
 func _run() -> void:
 	var failures: Array[String] = []
 	var count := 0
-	for suite: RefCounted in [TEXT_TESTS.new(), SESSION_TESTS.new(), GAMEPLAY_TESTS.new(), WORLD_TESTS.new(), UI_TESTS.new()]:
+	for suite: RefCounted in [TEXT_TESTS.new(), SESSION_TESTS.new(), GAMEPLAY_TESTS.new(), FULL_PARITY.new(), FORMULA_EDGES.new(), SAVE_TESTS.new(), PLAY_TESTS.new(), SANDBOX_SCENE.new(), WORLD_TESTS.new(), UI_TESTS.new()]:
 		await suite.run()
 		count += suite.checks
 		failures.append_array(suite.failures)

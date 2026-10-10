@@ -1,0 +1,370 @@
+{
+  "id": "home",
+  "title_key": "content.gameplay.presentation.nha_khue",
+  "spawn": [
+    0,
+    0.05,
+    2.9
+  ],
+  "speed": 3.0,
+  "gravity": 18.0,
+  "collider": {
+    "radius": 0.26,
+    "height": 1.25
+  },
+  "actor_pixel_size": 0.042,
+  "stride_world": 2.016,
+  "camera": {
+    "orthographic": {
+      "position": [
+        8,
+        10,
+        12
+      ],
+      "target": [
+        0,
+        0.5,
+        0
+      ],
+      "size": 14.4,
+      "near": 0.05,
+      "far": 45
+    },
+    "perspective": {
+      "position": [
+        16,
+        20,
+        24
+      ],
+      "target": [
+        0,
+        0.5,
+        0
+      ],
+      "fov": 25,
+      "near": 0.05,
+      "far": 75
+    }
+  },
+  "sun": {
+    "rotation": [
+      -48,
+      -32,
+      0
+    ],
+    "color": "#ffe4b8",
+    "energy": 1.6,
+    "shadow_distance": 40,
+    "normal_bias": 0.6
+  },
+  "ambient": {
+    "color": "#a8c6d4",
+    "energy": 0.65,
+    "background": "#344b43"
+  },
+  "geometry": [
+    {
+      "id": "floor",
+      "position": [
+        0,
+        -0.15,
+        0
+      ],
+      "size": [
+        12,
+        0.3,
+        9
+      ],
+      "color": "#bdac8b"
+    },
+    {
+      "id": "back-base",
+      "position": [
+        0,
+        0.6,
+        -4.5
+      ],
+      "size": [
+        12,
+        1.2,
+        0.22
+      ],
+      "color": "#d6d3bc"
+    },
+    {
+      "id": "back-top",
+      "position": [
+        0,
+        3.25,
+        -4.5
+      ],
+      "size": [
+        12,
+        0.5,
+        0.22
+      ],
+      "color": "#d6d3bc"
+    },
+    {
+      "id": "window-left",
+      "position": [
+        -4.5,
+        2.1,
+        -4.5
+      ],
+      "size": [
+        3,
+        1.8,
+        0.22
+      ],
+      "color": "#d6d3bc"
+    },
+    {
+      "id": "window-middle",
+      "position": [
+        0,
+        2.1,
+        -4.5
+      ],
+      "size": [
+        1.2,
+        1.8,
+        0.22
+      ],
+      "color": "#d6d3bc"
+    },
+    {
+      "id": "window-right",
+      "position": [
+        4.5,
+        2.1,
+        -4.5
+      ],
+      "size": [
+        3,
+        1.8,
+        0.22
+      ],
+      "color": "#d6d3bc"
+    },
+    {
+      "id": "left-wall",
+      "position": [
+        -6,
+        1.75,
+        0
+      ],
+      "size": [
+        0.22,
+        3.5,
+        9
+      ],
+      "color": "#c2c5b4"
+    },
+    {
+      "id": "right-cutaway",
+      "position": [
+        6,
+        0.22,
+        0
+      ],
+      "size": [
+        0.22,
+        0.44,
+        9
+      ],
+      "color": "#b1baa9"
+    },
+    {
+      "id": "front-left",
+      "position": [
+        -3.6,
+        0.22,
+        4.5
+      ],
+      "size": [
+        4.8,
+        0.44,
+        0.22
+      ],
+      "color": "#b1baa9"
+    },
+    {
+      "id": "front-right",
+      "position": [
+        3.6,
+        0.22,
+        4.5
+      ],
+      "size": [
+        4.8,
+        0.44,
+        0.22
+      ],
+      "color": "#b1baa9"
+    },
+    {
+      "id": "door-left",
+      "position": [
+        -1.1,
+        1.2,
+        4.5
+      ],
+      "size": [
+        0.16,
+        2.4,
+        0.18
+      ],
+      "color": "#78644e"
+    },
+    {
+      "id": "door-right",
+      "position": [
+        1.1,
+        1.2,
+        4.5
+      ],
+      "size": [
+        0.16,
+        2.4,
+        0.18
+      ],
+      "color": "#78644e"
+    },
+    {
+      "id": "door-lintel",
+      "position": [
+        0,
+        2.4,
+        4.5
+      ],
+      "size": [
+        2.36,
+        0.16,
+        0.18
+      ],
+      "color": "#78644e"
+    },
+    {
+      "id": "writing-desk",
+      "position": [
+        -1,
+        0.72,
+        -0.6
+      ],
+      "size": [
+        3.2,
+        0.16,
+        1.5
+      ],
+      "color": "#8b7054"
+    },
+    {
+      "id": "writing-desk-base",
+      "position": [
+        -1,
+        0.32,
+        -0.6
+      ],
+      "size": [
+        2.8,
+        0.64,
+        1.2
+      ],
+      "color": "#596d6b"
+    },
+    {
+      "id": "paper-stack",
+      "position": [
+        -0.8,
+        0.85,
+        -0.6
+      ],
+      "size": [
+        0.55,
+        0.12,
+        0.4
+      ],
+      "color": "#f4edd7"
+    },
+    {
+      "id": "plant-pot",
+      "position": [
+        5,
+        0.3,
+        2.9
+      ],
+      "size": [
+        0.6,
+        0.6,
+        0.6
+      ],
+      "color": "#947852"
+    },
+    {
+      "id": "plant-proxy",
+      "position": [
+        5,
+        0.95,
+        2.9
+      ],
+      "size": [
+        0.7,
+        0.8,
+        0.7
+      ],
+      "color": "#617e62"
+    }
+  ],
+  "targets": [
+    {
+      "id": "writing-desk",
+      "position": [
+        -1,
+        0,
+        0.7
+      ],
+      "anchor": [
+        -1,
+        1.05,
+        0.7
+      ],
+      "label_key": "content.maps.definitions.ban_lam_viec_khue",
+      "radius": 1.2
+    },
+    {
+      "id": "club-clock",
+      "position": [
+        -3.8,
+        0,
+        2.7
+      ],
+      "anchor": [
+        -3.8,
+        1.6,
+        2.7
+      ],
+      "label_key": "content.maps.definitions.dong_ho_clb",
+      "radius": 1.0
+    }
+  ],
+  "portal": {
+    "id": "home-to-club",
+    "to": "club",
+    "position": [
+      0,
+      0.6,
+      4.25
+    ],
+    "size": [
+      1.8,
+      1.2,
+      0.7
+    ]
+  },
+  "npcs": [],
+  "spawn_bounds": [
+    5.7,
+    4.1
+  ]
+}

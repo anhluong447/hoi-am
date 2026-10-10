@@ -1,8 +1,8 @@
 # Domain
 
-Pure GDScript rules/validators now live in `gameplay/`. The calendar subset and
-nighttime hooks have source trace parity. `formula_sandbox/` remains Chapter 10;
-no placeholder implementation exists for it.
+Pure GDScript rules/validators live in separate `gameplay/` and `formula_sandbox/`
+folders. Four gameplay policies (including 84 days), eight formula policies and
+action/edge traces have source parity. `dialogue/` is the concrete graph interpreter.
 
 Inputs and outputs are JSON-compatible dictionaries/arrays and scalar values.
 RefCounted is allowed for lifetime management; scene nodes and engine I/O are not.
@@ -15,3 +15,5 @@ the calendar. Keep the two source rulesets' calendars, scores, and saves separat
 
 See [architecture](../../docs/ARCHITECTURE.md) and
 [Chapter 2](../../docs/migration/chapters/02-gameplay-domain.md).
+See [save/schema decisions](../../docs/decisions/003-native-saves-and-formula-v2.md)
+and [final technical evidence](../../docs/reviews/chapters-06-12/README.md).
