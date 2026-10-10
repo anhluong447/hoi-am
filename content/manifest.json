@@ -1,0 +1,6 @@
+{
+  "content_version": 1,
+  "default_locale": "vi-VN",
+  "catalog_path": "res://content/locales/vi.json",
+  "bootstrap_path": "res://content/ui/bootstrap.json"
+}

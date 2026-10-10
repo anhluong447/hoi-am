@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "source_project": "hai-vong",
+  "source_commit": "6ad88df15ac5f082ac323e9d4144094affe01c7b",
+  "source_was_clean": true,
+  "files": [
+    {
+      "source": "docs/RULES.md",
+      "target": "docs/reference/hai-vong/RULES.md",
+      "sha256": "6a5a9a82ab04aa876b0f3fd8a29b2fb4b3f551f06f9e23616381b36a99f34e3f",
+      "policy": "locked"
+    },
+    {
+      "source": "docs/GAMEPLAY-SANDBOX.md",
+      "target": "docs/reference/hai-vong/GAMEPLAY-SANDBOX.md",
+      "sha256": "8ce7d99b4e0f995a198469988224a4513ec5bd20ad3656cda9a07bbe383255a5",
+      "policy": "locked"
+    },
+    {
+      "source": "docs/game_story_bible.md",
+      "target": "docs/reference/hai-vong/game_story_bible.md",
+      "sha256": "6fc82f978d3a60aff1d5721bb4b7d17d91b1d98f9679c4150c2bc90e6b6fdb24",
+      "policy": "locked"
+    },
+    {
+      "source": "docs/GAMEPLAY-ROUTE-PLAYTEST-2026-10-05.md",
+      "target": "docs/reference/hai-vong/GAMEPLAY-ROUTE-PLAYTEST-2026-10-05.md",
+      "sha256": "9b4e6987000522579fe91a6f2f06eb2af12ecbe0f06fc8462df436f9ce575264",
+      "policy": "locked"
+    },
+    {
+      "source": "docs/gameplay-route-playtest-2026-10-05.json",
+      "target": "docs/reference/hai-vong/gameplay-route-playtest-2026-10-05.json",
+      "sha256": "54f01e232021f441f89dd71ab0ec253feb476f0a5bc2fd602897823d2f371a44",
+      "policy": "locked"
+    },
+    {
+      "source": "docs/gameplay-baseline.json",
+      "target": "docs/reference/hai-vong/gameplay-baseline.json",
+      "sha256": "122d17b2cb259cfad5e887ab8317cb25eb1190fd24ba82936b105ff696069dd8",
+      "policy": "locked"
+    },
+    {
+      "source": "docs/sandbox-baseline.json",
+      "target": "docs/reference/hai-vong/sandbox-baseline.json",
+      "sha256": "fd143306ce1c21e71a151c04a40ef92902ef8cc31e9850160100b0b383b0fc13",
+      "policy": "locked"
+    },
+    {
+      "source": "docs/ui-concepts/coastal-editorial-v1/01-dialogue.png",
+      "target": "docs/reference/coastal-editorial-v1/01-dialogue.png",
+      "sha256": "68c076b9d013523b745e61e1af35a8251742bbf7b774c02245f89dacf3d2a5a2",
+      "policy": "locked"
+    },
+    {
+      "source": "docs/ui-concepts/coastal-editorial-v1/02-menu.png",
+      "target": "docs/reference/coastal-editorial-v1/02-menu.png",
+      "sha256": "1dc54992b37a052be60fc0b4dbc543d3e9153036c118038a981b65ec9dd3aa5b",
+      "policy": "locked"
+    },
+    {
+      "source": "docs/ui-concepts/coastal-editorial-v1/03-hud-map.png",
+      "target": "docs/reference/coastal-editorial-v1/03-hud-map.png",
+      "sha256": "fb4ef57d1cbcda2dd87e2083764721052f0e06f4fad7e43065be7750f2bf8618",
+      "policy": "locked"
+    },
+    {
+      "source": "docs/ui-concepts/coastal-editorial-v1/04-dossier.png",
+      "target": "docs/reference/coastal-editorial-v1/04-dossier.png",
+      "sha256": "9269f198bf76cc4ebd117ddee9dd8f0a27e8314a70f17e4a334aa6e9f86be620",
+      "policy": "locked"
+    },
+    {
+      "source": "docs/ui-concepts/coastal-editorial-v1/prompts.json",
+      "target": "docs/reference/coastal-editorial-v1/prompts.json",
+      "sha256": "02209ff6348c4a066c5642f3f6fef1f5c257b2f9155cba277d52090330ed0f18",
+      "policy": "locked"
+    },
+    {
+      "source": "docs/ui-concepts/coastal-editorial-v1/references.json",
+      "target": "docs/reference/coastal-editorial-v1/references.source.json",
+      "sha256": "4308022edcf6eb376e0b72b0e4efe9f29ca21795d0360b9ae6d2b3e6cccda256",
+      "policy": "locked"
+    },
+    {
+      "source": "docs/ui-specs/coastal-replica/ui-scope.json",
+      "target": "docs/reference/specs/ui-scope.source.json",
+      "sha256": "a18c7729afca2bee2156e1f3789dc06e915e0e88346c5cca826f6be778bc84a5",
+      "policy": "locked"
+    },
+    {
+      "source": "docs/ui-specs/coastal-replica/layouts.json",
+      "target": "docs/reference/specs/layouts.source.json",
+      "sha256": "d95b86970a8ebf5b5781dacc33c9df279617f495dc55885006e05c40a090c095",
+      "policy": "locked"
+    },
+    {
+      "source": "assets/fonts/coastal-replica/sourceserif4/source-serif-4.ttf",
+      "target": "assets/fonts/source_serif_4/source-serif-4.ttf",
+      "sha256": "97b2d4da6e3cb494b5a1e66ae176914d852ccabef49e0c02c0df25f3e39aca0b",
+      "policy": "locked"
+    },
+    {
+      "source": "assets/fonts/coastal-replica/sourceserif4/OFL.txt",
+      "target": "assets/fonts/source_serif_4/OFL.txt",
+      "sha256": "5f94c3fd3a23131a417ab5a0c8452de57e70c3cfb9f604d88241f7065ebf9fd9",
+      "policy": "locked"
+    },
+    {
+      "source": "assets/fonts/coastal-replica/sourceserif4/METADATA.pb",
+      "target": "assets/fonts/source_serif_4/METADATA.pb",
+      "sha256": "f7b88902c1d2f41839a3f7bf6723d1e64044c7c183b82871ce770a95f24b84e3",
+      "policy": "locked"
+    },
+    {
+      "source": "content/locales/vi.js",
+      "target": "content/locales/vi.json",
+      "source_sha256": "fae8c514c820f4b7822df234253736799dc7227ba3a45a35a940c17e5e4ae363",
+      "target_sha256_at_import": "67f264ef5dad60c6b483513f34e9f453a4b9c224a06608ce3d1fbe2387069a39",
+      "policy": "editable",
+      "adaptation": "ES module to JSON; add ui.common.quit"
+    }
+  ]
+}

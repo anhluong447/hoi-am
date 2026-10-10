@@ -1,0 +1,288 @@
+{
+  "version": 2,
+  "scopeRevision": 2,
+  "date": "2026-10-09",
+  "authority": "User clarification: replicate fixed UI and attached visual decorations; background/characters may differ or be placeholders.",
+  "target": "ui-replica",
+  "stage": [
+    1672,
+    941
+  ],
+  "sourceLayouts": "layouts.json",
+  "historicalFullSceneCommit": "c21e732",
+  "status": "region-classification-complete; dialogue-isolation/interior-comparison-delivered; mixed-fringe-reference-alpha-unresolved",
+  "policy": {
+    "required": "UI shape/layout/type/icon/texture/light/depth/motion and attached flowers/notebook/harbor illustrations",
+    "context": "Replaceable scene/characters/world/held props; no camera/pose/identity matching gate",
+    "logo": "Save reusable mark and live-text wordmark; dialogue display optional",
+    "text": "All readable UI/evidence/decoration copy from locale catalog; no baked player-facing lettering",
+    "inventory": "104 Stage 0 assets include context; not a mandatory UI asset count",
+    "gates": "G0-G5 evaluate required UI and included portions of mixed regions; optional assets reviewed when used"
+  },
+  "comparison": {
+    "plane": "native 1672x941 DPR 1",
+    "uiMasks": "Dialogue v3 conservative reference-owned interior mask delivered; not complete extracted alpha. Other screens and mixed fringes still require masks/review.",
+    "mixedBounds": "Do not score whole rectangles that include context; author masks for included UI pixels",
+    "fullFrameMetrics": "Historical diagnostics only; not a UI acceptance measure",
+    "referenceAlpha": "Record uncertainty at extraction edges/occluded UI; no zero-diff claim from bounding boxes",
+    "evidence": "UI-isolated neutral canvas plus bright/dark/detailed context variants, native crops, mask/reference versions/hashes",
+    "dialogueMask": "../../../assets/ui/coastal-replica/v3/review/ui-mask.svg",
+    "dialogueEvidence": "../../ui-reviews/coastal-replica-stage3/README.md"
+  },
+  "screens": [
+    {
+      "id": "dialogue",
+      "reference": "01-dialogue.png",
+      "uiRegions": [
+        "date-paper",
+        "date-ornament",
+        "date-text",
+        "choice-verify",
+        "choice-draft",
+        "choice-listen",
+        "choice-icons",
+        "choice-copy",
+        "dialogue-wave",
+        "dialogue-paper",
+        "paper-harbor",
+        "speaker-mark",
+        "speaker-name",
+        "speaker-rules",
+        "dialogue-line",
+        "continue-rules",
+        "continue-copy",
+        "choice-chevron"
+      ],
+      "optionalUiRegions": [
+        "brand-mark",
+        "brand-text"
+      ],
+      "mixedUiRegions": [
+        {
+          "id": "foreground-left",
+          "include": "Flowers/leaves attached to dialogue paper; required UI decoration",
+          "exclude": "Room plant/desk pixels above or behind the overlay",
+          "maskStatus": "native UI alpha/render isolation implemented; reference fringe alpha unresolved; conservative interior diagnostic only"
+        },
+        {
+          "id": "foreground-right",
+          "include": "Notebook and attached foreground foliage at dialogue corner; required UI decoration",
+          "exclude": "Scene/desk/background visible inside the Stage 0 bounding envelope",
+          "maskStatus": "native UI alpha/render isolation implemented; reference fringe alpha unresolved; conservative interior diagnostic only"
+        }
+      ],
+      "contextRegions": [
+        "room",
+        "harbor",
+        "wall-lettering",
+        "khue",
+        "van",
+        "held-newspaper",
+        "held-news-text",
+        "desk",
+        "desk-cup",
+        "cup-mark"
+      ]
+    },
+    {
+      "id": "menu",
+      "reference": "02-menu.png",
+      "uiRegions": [
+        "teal-mass",
+        "brand-mark",
+        "brand-title",
+        "brand-rule",
+        "week-label",
+        "brand-tagline",
+        "nav-spine",
+        "nav-highlight",
+        "nav-cases-icon",
+        "nav-cases-copy",
+        "nav-team-icon",
+        "nav-team-copy",
+        "nav-calendar-icon",
+        "nav-calendar-copy",
+        "nav-journal-icon",
+        "nav-journal-copy",
+        "nav-settings-icon",
+        "nav-settings-copy",
+        "section-heading",
+        "section-rule",
+        "section-intro",
+        "case-one-paper",
+        "case-one-number",
+        "case-one-rule",
+        "case-one-title",
+        "case-one-teaser",
+        "case-one-thumb",
+        "case-two-paper",
+        "case-two-number",
+        "case-two-rule",
+        "case-two-title",
+        "case-two-teaser",
+        "case-two-thumb",
+        "case-two-sign",
+        "lower-quote",
+        "resources-rules",
+        "energy-icon-dots",
+        "energy-copy",
+        "money-icon",
+        "money-copy",
+        "bottom-wave",
+        "key-hints"
+      ],
+      "optionalUiRegions": [],
+      "mixedUiRegions": [
+        {
+          "id": "foreground-paper",
+          "include": "Paper/newspaper edge decorating the menu footer",
+          "exclude": "Scene pixels inside the rectangular envelope",
+          "maskStatus": "pending-production-mask"
+        },
+        {
+          "id": "foreground-flowers",
+          "include": "Flowers/leaves decorating menu wave/footer",
+          "exclude": "Room plants/background pixels unrelated to the UI border",
+          "maskStatus": "pending-production-mask"
+        }
+      ],
+      "contextRegions": [
+        "harbor-room",
+        "wall-poster",
+        "wall-poster-copy",
+        "khue-notebook",
+        "notebook-lettering"
+      ]
+    },
+    {
+      "id": "hud",
+      "reference": "03-hud-map.png",
+      "uiRegions": [
+        "edge-waves",
+        "date-paper",
+        "date-mark",
+        "date-copy",
+        "resource-ribbon",
+        "resource-icons",
+        "resource-copy",
+        "objective-surface",
+        "objective-highlight",
+        "objective-spine",
+        "objective-copy",
+        "interaction-paper",
+        "interaction-copy",
+        "location-mark-rule",
+        "location-copy",
+        "controls-icons",
+        "controls-copy"
+      ],
+      "optionalUiRegions": [],
+      "mixedUiRegions": [],
+      "contextRegions": [
+        "room-shell",
+        "harbor-windows",
+        "wall-props",
+        "wall-lettering",
+        "floor-sun",
+        "left-storage",
+        "rear-desk",
+        "right-desks",
+        "front-desk",
+        "plants-shelves",
+        "actor-rear-writer",
+        "actor-reader-left",
+        "actor-khue",
+        "actor-van",
+        "actor-right-left",
+        "actor-right-right",
+        "actor-front-writer",
+        "actor-right-front",
+        "scene-small-copy",
+        "foreground-plants"
+      ]
+    },
+    {
+      "id": "dossier",
+      "reference": "04-dossier.png",
+      "uiRegions": [
+        "teal-nav",
+        "brand-copy",
+        "brand-mark",
+        "brand-rule",
+        "section-icon",
+        "section-copy",
+        "nav-spine",
+        "nav-highlight",
+        "nav-overview-icon",
+        "nav-overview-copy",
+        "nav-sources-icon",
+        "nav-sources-copy",
+        "nav-draft-icon",
+        "nav-draft-copy",
+        "side-quote",
+        "folio-under",
+        "folio-main",
+        "folio-clamp",
+        "folio-ornaments",
+        "folio-eyebrow",
+        "folio-heading",
+        "folio-rules",
+        "folio-subtitle",
+        "step-one-number",
+        "step-one-rule",
+        "step-one-copy",
+        "step-two-number",
+        "step-two-rule",
+        "step-two-copy",
+        "step-three-number",
+        "step-three-rule",
+        "step-three-copy",
+        "steps-separators",
+        "evidence-photo",
+        "evidence-lettering",
+        "evidence-tape",
+        "collaborator-tag",
+        "collaborator-copy",
+        "collaborator-arrow",
+        "note-paper",
+        "note-clamp",
+        "note-copy",
+        "bottom-caption",
+        "cta-brush",
+        "cta-icons",
+        "cta-copy",
+        "back-copy"
+      ],
+      "optionalUiRegions": [],
+      "mixedUiRegions": [
+        {
+          "id": "foreground-flowers",
+          "include": "Flowers/leaves decorating the dossier UI corner",
+          "exclude": "Room/harbor/desk pixels in the same envelope",
+          "maskStatus": "pending-production-mask"
+        }
+      ],
+      "contextRegions": [
+        "room-harbor",
+        "van-seated",
+        "foreground-desk"
+      ]
+    }
+  ],
+  "deferredContextWork": [
+    "R09 newsroom/background matching",
+    "R10 portrait pose/identity matching",
+    "Character blink/breath/hair work formerly R21",
+    "Scene sunlight/dust/sea motion formerly R22",
+    "Menu harbor/held-notebook pose formerly R24",
+    "Dossier seated portrait matching formerly R28",
+    "HUD world art/collision/actors formerly R31-R35"
+  ],
+  "next": [
+    "R11 attached dialogue flowers/notebook masks and crops",
+    "R12 dialogue paper/wave/harbor/type materials",
+    "R13 choices/date/logo component",
+    "R14 UI isolation/masks and scoped visual review",
+    "R15-R17 UI light/depth and static acceptance"
+  ]
+}

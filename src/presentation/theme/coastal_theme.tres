@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3]
+
+[ext_resource type="FontFile" path="res://assets/fonts/source_serif_4/source-serif-4.ttf" id="1_font"]
+
+[resource]
+default_font = ExtResource("1_font")
+default_font_size = 26
+Label/colors/font_color = Color(0.957, 0.945, 0.906, 1)
+Button/colors/font_color = Color(0.957, 0.945, 0.906, 1)

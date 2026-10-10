@@ -1,0 +1,282 @@
+{
+  "scope": "Mock engine regression; not final gameplay balance or narrative ending validation.",
+  "browser_tests_passed": 47,
+  "policies": [
+    {
+      "policy": "solo",
+      "K": 77.26142857142857,
+      "T": 0,
+      "total": 30.90457142857143,
+      "good": false,
+      "teamArticles": 0,
+      "khueArticles": 2,
+      "metrics": {
+        "opened": 0,
+        "assigned": 0,
+        "restarts": 0,
+        "approvals": 0,
+        "energySpent": 10,
+        "unusedEnergy": 30,
+        "hangouts": 0,
+        "jobs": 0
+      },
+      "reports": [
+        {
+          "day": 5,
+          "week": 1,
+          "score": 76620,
+          "ids": [
+            "Q1"
+          ],
+          "reputation": 8
+        },
+        {
+          "day": 12,
+          "week": 2,
+          "score": 77656,
+          "ids": [
+            "Q2"
+          ],
+          "reputation": 16
+        }
+      ]
+    },
+    {
+      "policy": "team",
+      "K": 0,
+      "T": 76.8,
+      "total": 46.08,
+      "good": false,
+      "teamArticles": 4,
+      "khueArticles": 0,
+      "metrics": {
+        "opened": 4,
+        "assigned": 4,
+        "restarts": 0,
+        "approvals": 8,
+        "energySpent": 8,
+        "unusedEnergy": 32,
+        "hangouts": 0,
+        "jobs": 0
+      },
+      "reports": [
+        {
+          "day": 5,
+          "week": 1,
+          "score": 45128,
+          "ids": [
+            "W1-community",
+            "W1-documents"
+          ],
+          "reputation": 5
+        },
+        {
+          "day": 12,
+          "week": 2,
+          "score": 45128,
+          "ids": [
+            "W2-community",
+            "W2-documents"
+          ],
+          "reputation": 10
+        }
+      ]
+    },
+    {
+      "policy": "mixed",
+      "K": 77.26142857142857,
+      "T": 76.8,
+      "total": 76.98457142857143,
+      "good": true,
+      "teamArticles": 4,
+      "khueArticles": 2,
+      "metrics": {
+        "opened": 4,
+        "assigned": 4,
+        "restarts": 0,
+        "approvals": 8,
+        "energySpent": 18,
+        "unusedEnergy": 22,
+        "hangouts": 0,
+        "jobs": 0
+      },
+      "reports": [
+        {
+          "day": 5,
+          "week": 1,
+          "score": 55625,
+          "ids": [
+            "W1-community",
+            "W1-documents",
+            "Q1"
+          ],
+          "reputation": 6
+        },
+        {
+          "day": 12,
+          "week": 2,
+          "score": 55970,
+          "ids": [
+            "W2-community",
+            "W2-documents",
+            "Q2"
+          ],
+          "reputation": 12
+        }
+      ]
+    },
+    {
+      "policy": "mixed-84-days",
+      "K": 82.44714285714284,
+      "T": 76.80000000000003,
+      "total": 79.05885714285715,
+      "good": true,
+      "teamArticles": 24,
+      "khueArticles": 12,
+      "metrics": {
+        "opened": 24,
+        "assigned": 24,
+        "restarts": 0,
+        "approvals": 48,
+        "energySpent": 108,
+        "unusedEnergy": 132,
+        "hangouts": 0,
+        "jobs": 0
+      },
+      "reports": [
+        {
+          "day": 5,
+          "week": 1,
+          "score": 55625,
+          "ids": [
+            "W1-community",
+            "W1-documents",
+            "Q1"
+          ],
+          "reputation": 6
+        },
+        {
+          "day": 12,
+          "week": 2,
+          "score": 55970,
+          "ids": [
+            "W2-community",
+            "W2-documents",
+            "Q2"
+          ],
+          "reputation": 12
+        },
+        {
+          "day": 19,
+          "week": 3,
+          "score": 56315,
+          "ids": [
+            "W3-community",
+            "W3-documents",
+            "Q3"
+          ],
+          "reputation": 18
+        },
+        {
+          "day": 26,
+          "week": 4,
+          "score": 56661,
+          "ids": [
+            "W4-community",
+            "W4-documents",
+            "Q4"
+          ],
+          "reputation": 24
+        },
+        {
+          "day": 33,
+          "week": 5,
+          "score": 57006,
+          "ids": [
+            "W5-community",
+            "W5-documents",
+            "Q5"
+          ],
+          "reputation": 30
+        },
+        {
+          "day": 40,
+          "week": 6,
+          "score": 57351,
+          "ids": [
+            "W6-community",
+            "W6-documents",
+            "Q6"
+          ],
+          "reputation": 36
+        },
+        {
+          "day": 47,
+          "week": 7,
+          "score": 57696,
+          "ids": [
+            "W7-community",
+            "W7-documents",
+            "Q7"
+          ],
+          "reputation": 42
+        },
+        {
+          "day": 54,
+          "week": 8,
+          "score": 58041,
+          "ids": [
+            "W8-community",
+            "W8-documents",
+            "Q8"
+          ],
+          "reputation": 48
+        },
+        {
+          "day": 61,
+          "week": 9,
+          "score": 58386,
+          "ids": [
+            "W9-community",
+            "W9-documents",
+            "Q9"
+          ],
+          "reputation": 54
+        },
+        {
+          "day": 68,
+          "week": 10,
+          "score": 58731,
+          "ids": [
+            "W10-community",
+            "W10-documents",
+            "Q10"
+          ],
+          "reputation": 60
+        },
+        {
+          "day": 75,
+          "week": 11,
+          "score": 59077,
+          "ids": [
+            "W11-community",
+            "W11-documents",
+            "Q11"
+          ],
+          "reputation": 66
+        },
+        {
+          "day": 82,
+          "week": 12,
+          "score": 59422,
+          "ids": [
+            "W12-community",
+            "W12-documents",
+            "Q12"
+          ],
+          "reputation": 72
+        }
+      ]
+    }
+  ]
+}

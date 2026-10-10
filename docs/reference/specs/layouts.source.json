@@ -1,0 +1,2999 @@
+{
+  "version": 1,
+  "stage": {
+    "width": 1672,
+    "height": 941,
+    "origin": "top-left",
+    "units": "px",
+    "scalePolicy": "uniform-fit-letterbox",
+    "referenceRoot": "../../ui-concepts/coastal-editorial-v1/"
+  },
+  "measurement": {
+    "method": "manual native-image visual tracing",
+    "boundsMeaning": "visible envelope, not production alpha mask",
+    "rectUncertaintyPx": 4,
+    "organicUncertaintyPx": 12,
+    "acceptanceAnchorReviewThresholdPx": 2,
+    "productionMasksReady": false
+  },
+  "screens": [
+    {
+      "id": "dialogue",
+      "reference": "01-dialogue.png",
+      "title": "Thoại",
+      "fixture": "dialogue",
+      "layers": [
+        {
+          "id": "room",
+          "label": "Tòa soạn, kệ và bảng phía xa",
+          "bounds": [
+            0,
+            0,
+            1140,
+            640
+          ],
+          "z": 10,
+          "method": "reconstruct",
+          "note": "Xóa chữ khỏi plate; bổ sung cảnh sau hai nhân vật.",
+          "restoration": "large-occlusion",
+          "assetId": "dialogue.room"
+        },
+        {
+          "id": "harbor",
+          "label": "Cửa sổ, cảng và núi xa",
+          "bounds": [
+            1120,
+            0,
+            552,
+            620
+          ],
+          "z": 11,
+          "method": "reconstruct",
+          "note": "Giữ khung cửa và màu trời; không đổi camera.",
+          "assetId": "dialogue.harbor"
+        },
+        {
+          "id": "wall-lettering",
+          "label": "Chữ bảng, poster và tên CLB",
+          "bounds": [
+            570,
+            35,
+            562,
+            385
+          ],
+          "z": 12,
+          "method": "text",
+          "note": "Các cụm chữ nghiêng theo bề mặt cảnh.",
+          "textGroup": "dialogue.scene-signs"
+        },
+        {
+          "id": "khue",
+          "label": "Khuê ngồi chống tay, satchel/tie",
+          "bounds": [
+            106,
+            47,
+            662,
+            554
+          ],
+          "z": 30,
+          "method": "new-pose",
+          "note": "Phần thân và bàn bị choice/foreground che; không dùng portrait đứng.",
+          "identityReference": "assets/dialogue/v2/khue-standing-neutral.png",
+          "restoration": "large-occlusion",
+          "pivot": [
+            472,
+            595
+          ],
+          "assetId": "dialogue.khue"
+        },
+        {
+          "id": "van",
+          "label": "Vân ngồi chống tay, cầm báo",
+          "bounds": [
+            806,
+            38,
+            704,
+            632
+          ],
+          "z": 31,
+          "method": "new-pose",
+          "note": "Tách tóc, mắt, tay và báo cho motion sau; giữ pose master.",
+          "identityReference": "assets/dialogue/v2/van-neutral.png",
+          "restoration": "large-occlusion",
+          "pivot": [
+            1160,
+            653
+          ],
+          "assetId": "dialogue.van"
+        },
+        {
+          "id": "held-newspaper",
+          "label": "Tờ báo trong tay Vân",
+          "bounds": [
+            1242,
+            444,
+            309,
+            243
+          ],
+          "z": 32,
+          "method": "reconstruct",
+          "note": "Quan hệ tay/báo cần mask riêng; giấy không chứa chữ bake.",
+          "assetId": "dialogue.held-newspaper"
+        },
+        {
+          "id": "held-news-text",
+          "label": "Nội dung/tên báo cầm tay",
+          "bounds": [
+            1296,
+            458,
+            226,
+            160
+          ],
+          "z": 33,
+          "method": "text",
+          "note": "Nghiêng theo tờ báo; ghi riêng chữ nhỏ cần xác minh.",
+          "textGroup": "dialogue.newspaper"
+        },
+        {
+          "id": "desk",
+          "label": "Bàn, đống báo và props trung cảnh",
+          "bounds": [
+            0,
+            496,
+            1672,
+            253
+          ],
+          "z": 40,
+          "method": "reconstruct",
+          "note": "Không gộp giấy thoại hoặc nhân vật vào plate.",
+          "assetId": "dialogue.desk"
+        },
+        {
+          "id": "desk-cup",
+          "label": "Cốc bút và laptop phía phải",
+          "bounds": [
+            1340,
+            443,
+            332,
+            302
+          ],
+          "z": 41,
+          "method": "reconstruct",
+          "note": "Cốc/bút là occluder trước tờ báo; laptop crop theo mép phải.",
+          "assetId": "dialogue.desk-cup"
+        },
+        {
+          "id": "cup-mark",
+          "label": "Biểu tượng và chữ trên cốc",
+          "bounds": [
+            1406,
+            633,
+            67,
+            80
+          ],
+          "z": 42,
+          "method": "text",
+          "note": "Mark vector và chữ catalog riêng.",
+          "textGroup": "dialogue.cup"
+        },
+        {
+          "id": "date-paper",
+          "label": "Giấy date seal",
+          "bounds": [
+            36,
+            30,
+            247,
+            115
+          ],
+          "z": 60,
+          "method": "vector-mask",
+          "note": "Mép rách và grain phải bám ref.",
+          "assetId": "dialogue.date-paper"
+        },
+        {
+          "id": "date-ornament",
+          "label": "Mặt trời và tem sóng",
+          "bounds": [
+            44,
+            40,
+            87,
+            127
+          ],
+          "z": 61,
+          "method": "vector-mask",
+          "note": "Có vùng tem vượt ra khỏi giấy.",
+          "assetId": "dialogue.date-ornament"
+        },
+        {
+          "id": "date-text",
+          "label": "Ngày và buổi",
+          "bounds": [
+            122,
+            46,
+            147,
+            70
+          ],
+          "z": 62,
+          "method": "text",
+          "note": "Hai baseline; chữ serif đậm.",
+          "textGroup": "dialogue.date"
+        },
+        {
+          "id": "brand-mark",
+          "label": "Mark sóng-trích dẫn góc phải",
+          "bounds": [
+            1481,
+            79,
+            150,
+            33
+          ],
+          "z": 61,
+          "method": "vector-mask",
+          "note": "Giữ silhouette và hai đường kẻ.",
+          "assetId": "shared.brand-mark"
+        },
+        {
+          "id": "brand-text",
+          "label": "HỒI ÂM góc phải",
+          "bounds": [
+            1484,
+            33,
+            146,
+            48
+          ],
+          "z": 62,
+          "method": "text",
+          "note": "Tên thương hiệu là lớp chữ.",
+          "textGroup": "dialogue.brand"
+        },
+        {
+          "id": "choice-verify",
+          "label": "Dải lựa chọn vàng",
+          "bounds": [
+            482,
+            462,
+            446,
+            63
+          ],
+          "z": 65,
+          "method": "vector-mask",
+          "note": "Có grain, mép mềm; hit area cố định.",
+          "assetId": "dialogue.choice-verify"
+        },
+        {
+          "id": "choice-draft",
+          "label": "Dải lựa chọn giấy thứ hai",
+          "bounds": [
+            483,
+            530,
+            413,
+            60
+          ],
+          "z": 65,
+          "method": "vector-mask",
+          "note": "Không đổi thành button viền vuông.",
+          "assetId": "dialogue.choice-draft"
+        },
+        {
+          "id": "choice-listen",
+          "label": "Dải lựa chọn giấy thứ ba",
+          "bounds": [
+            483,
+            596,
+            413,
+            59
+          ],
+          "z": 65,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "dialogue.choice-listen"
+        },
+        {
+          "id": "choice-icons",
+          "label": "Icon bút, thoại, tư liệu và chevron",
+          "bounds": [
+            511,
+            478,
+            30,
+            163
+          ],
+          "z": 66,
+          "method": "vector-mask",
+          "note": "Ba icon riêng; chevron active ở x=900.",
+          "assetId": "dialogue.choice-icons"
+        },
+        {
+          "id": "choice-copy",
+          "label": "Ba dòng lựa chọn",
+          "bounds": [
+            557,
+            477,
+            312,
+            169
+          ],
+          "z": 67,
+          "method": "text",
+          "note": "Xếp dọc; baseline tương ứng 500,565,630.",
+          "textGroup": "dialogue.choices"
+        },
+        {
+          "id": "dialogue-wave",
+          "label": "Dải mực/sóng sau mép giấy",
+          "bounds": [
+            0,
+            602,
+            1520,
+            242
+          ],
+          "z": 70,
+          "method": "vector-mask",
+          "note": "Đường cong bất đối xứng và texture; không sóng sin trơn.",
+          "assetId": "dialogue.dialogue-wave"
+        },
+        {
+          "id": "dialogue-paper",
+          "label": "Giấy thoại toàn đáy",
+          "bounds": [
+            0,
+            640,
+            1520,
+            301
+          ],
+          "z": 71,
+          "method": "vector-mask",
+          "note": "Mép top theo contour; bề mặt chữ không chuyển động.",
+          "assetId": "dialogue.dialogue-paper"
+        },
+        {
+          "id": "paper-harbor",
+          "label": "Minh họa cảng dưới giấy",
+          "bounds": [
+            0,
+            746,
+            770,
+            195
+          ],
+          "z": 72,
+          "method": "reconstruct",
+          "note": "Dạng in cyan, không phải cảnh background thu nhỏ.",
+          "restoration": "foreground-occlusion",
+          "assetId": "dialogue.paper-harbor"
+        },
+        {
+          "id": "speaker-mark",
+          "label": "Mark speaker và ornament",
+          "bounds": [
+            91,
+            689,
+            73,
+            53
+          ],
+          "z": 73,
+          "method": "vector-mask",
+          "note": "Mark có variant/crop riêng cho speaker.",
+          "assetId": "shared.brand-mark"
+        },
+        {
+          "id": "speaker-name",
+          "label": "Tên speaker",
+          "bounds": [
+            201,
+            700,
+            232,
+            37
+          ],
+          "z": 74,
+          "method": "text",
+          "note": "Uppercase teal.",
+          "textGroup": "dialogue.speaker"
+        },
+        {
+          "id": "speaker-rules",
+          "label": "Đường kẻ và mũi tên speaker",
+          "bounds": [
+            201,
+            721,
+            348,
+            29
+          ],
+          "z": 73,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "dialogue.speaker-rules"
+        },
+        {
+          "id": "dialogue-line",
+          "label": "Vùng lời thoại",
+          "bounds": [
+            233,
+            771,
+            940,
+            48
+          ],
+          "z": 74,
+          "method": "text",
+          "note": "Baseline khoảng 800; serif, một dòng trong fixture.",
+          "textGroup": "dialogue.line"
+        },
+        {
+          "id": "continue-rules",
+          "label": "Đường kẻ và phân cách tiếp tục",
+          "bounds": [
+            814,
+            877,
+            384,
+            29
+          ],
+          "z": 73,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "dialogue.continue-rules"
+        },
+        {
+          "id": "continue-copy",
+          "label": "Tiếp tục và enter glyph",
+          "bounds": [
+            1220,
+            877,
+            104,
+            27
+          ],
+          "z": 74,
+          "method": "text",
+          "note": "Glyph phím là thành phần locale/icon riêng.",
+          "textGroup": "dialogue.continue"
+        },
+        {
+          "id": "foreground-left",
+          "label": "Hoa, lá và báo mờ góc trái",
+          "bounds": [
+            0,
+            497,
+            461,
+            444
+          ],
+          "z": 90,
+          "method": "reconstruct",
+          "note": "Mask lên giấy; foreground không che lời thoại.",
+          "restoration": "hidden-edge",
+          "assetId": "dialogue.foreground-left"
+        },
+        {
+          "id": "foreground-right",
+          "label": "Sổ, cây/hoa mờ góc phải",
+          "bounds": [
+            1280,
+            719,
+            392,
+            222
+          ],
+          "z": 91,
+          "method": "reconstruct",
+          "note": "Occlude giấy và mép phải; không che continue.",
+          "restoration": "hidden-edge",
+          "assetId": "dialogue.foreground-right"
+        },
+        {
+          "id": "choice-chevron",
+          "label": "Chevron active",
+          "bounds": [
+            892,
+            481,
+            18,
+            23
+          ],
+          "z": 66,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "dialogue.choice-chevron"
+        }
+      ],
+      "contours": [
+        {
+          "id": "paper-top",
+          "layer": "dialogue-paper",
+          "kind": "visible-sampled-polyline",
+          "points": [
+            [
+              0,
+              684
+            ],
+            [
+              70,
+              651
+            ],
+            [
+              180,
+              641
+            ],
+            [
+              330,
+              659
+            ],
+            [
+              510,
+              684
+            ],
+            [
+              730,
+              714
+            ],
+            [
+              945,
+              731
+            ],
+            [
+              1160,
+              730
+            ],
+            [
+              1360,
+              747
+            ],
+            [
+              1520,
+              765
+            ]
+          ],
+          "note": "Mẫu đường biên nhìn thấy; vùng 1520–1672 bị foreground che, không suy ra alpha."
+        }
+      ],
+      "anchors": [
+        {
+          "id": "khue-eye",
+          "point": [
+            455,
+            277
+          ]
+        },
+        {
+          "id": "van-eye",
+          "point": [
+            1022,
+            274
+          ],
+          "note": "Left visible iris in screen coordinates; manual placement seed"
+        },
+        {
+          "id": "choice-active-chevron",
+          "point": [
+            900,
+            491
+          ]
+        },
+        {
+          "id": "dialogue-baseline",
+          "point": [
+            234,
+            800
+          ]
+        }
+      ],
+      "lighting": {
+        "key": "warm daylight from harbor/right window",
+        "rim": "hair shoulders and paper edges",
+        "shadows": "contact at hands/newspaper/desk",
+        "focus": "faces and choice strips",
+        "protected": [
+          "dialogue-line",
+          "choice-copy"
+        ]
+      },
+      "notes": [
+        "Chữ lớn được chép trong fixtures; chữ nhỏ cảnh nằm ở nhóm transcription chưa canonical.",
+        "Speaker-mark dùng brand mark chung nhưng transform theo vùng riêng."
+      ]
+    },
+    {
+      "id": "menu",
+      "reference": "02-menu.png",
+      "title": "Menu",
+      "fixture": "menu",
+      "layers": [
+        {
+          "id": "harbor-room",
+          "label": "Cảng, cửa sổ, cây và tòa soạn",
+          "bounds": [
+            0,
+            0,
+            1672,
+            941
+          ],
+          "z": 10,
+          "method": "reconstruct",
+          "note": "Plate đầy đủ sau nhân vật và xanh mực.",
+          "restoration": "large-occlusion",
+          "assetId": "menu.harbor-room"
+        },
+        {
+          "id": "wall-poster",
+          "label": "Poster bên phải và mark",
+          "bounds": [
+            1530,
+            91,
+            142,
+            251
+          ],
+          "z": 12,
+          "method": "reconstruct",
+          "note": "Nền giấy không chữ; các chữ dựng riêng.",
+          "assetId": "menu.wall-poster"
+        },
+        {
+          "id": "wall-poster-copy",
+          "label": "Chữ poster",
+          "bounds": [
+            1572,
+            207,
+            96,
+            119
+          ],
+          "z": 13,
+          "method": "text",
+          "note": "Theo perspective bề mặt.",
+          "textGroup": "menu.scene-signs"
+        },
+        {
+          "id": "teal-mass",
+          "label": "Mảng mực xanh toàn trái",
+          "bounds": [
+            0,
+            0,
+            1060,
+            875
+          ],
+          "z": 20,
+          "method": "vector-mask",
+          "note": "Silhouette hữu cơ và texture, không panel chữ nhật.",
+          "assetId": "menu.teal-mass"
+        },
+        {
+          "id": "brand-mark",
+          "label": "Mark title",
+          "bounds": [
+            362,
+            79,
+            83,
+            59
+          ],
+          "z": 25,
+          "method": "vector-mask",
+          "note": "Vector master có variant.",
+          "assetId": "shared.brand-mark"
+        },
+        {
+          "id": "brand-title",
+          "label": "HỒI ÂM",
+          "bounds": [
+            52,
+            43,
+            282,
+            102
+          ],
+          "z": 26,
+          "method": "text",
+          "note": "Serif sáng; baseline khoảng 126.",
+          "textGroup": "menu.brand"
+        },
+        {
+          "id": "brand-rule",
+          "label": "Kẻ dưới thương hiệu",
+          "bounds": [
+            52,
+            133,
+            334,
+            7
+          ],
+          "z": 25,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "menu.brand-rule"
+        },
+        {
+          "id": "week-label",
+          "label": "Thành phố / tuần",
+          "bounds": [
+            54,
+            149,
+            255,
+            23
+          ],
+          "z": 26,
+          "method": "text",
+          "note": "Tracking rộng.",
+          "textGroup": "menu.week"
+        },
+        {
+          "id": "brand-tagline",
+          "label": "Câu viết tay ở phía trên",
+          "bounds": [
+            470,
+            118,
+            224,
+            128
+          ],
+          "z": 26,
+          "method": "text",
+          "note": "Chữ viết tay ba dòng; theo góc giấy/mực.",
+          "textGroup": "menu.tagline"
+        },
+        {
+          "id": "nav-spine",
+          "label": "Trục dọc và chấm navigation",
+          "bounds": [
+            51,
+            243,
+            17,
+            385
+          ],
+          "z": 30,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "menu.nav-spine"
+        },
+        {
+          "id": "nav-highlight",
+          "label": "Vệt cọ vàng mục chọn",
+          "bounds": [
+            35,
+            235,
+            319,
+            75
+          ],
+          "z": 31,
+          "method": "vector-mask",
+          "note": "Sơn vàng có grain và đầu xước.",
+          "assetId": "menu.nav-highlight"
+        },
+        {
+          "id": "nav-cases-icon",
+          "label": "Hồ sơ: icon",
+          "bounds": [
+            80,
+            255,
+            49,
+            44
+          ],
+          "z": 32,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "menu.nav-cases-icon"
+        },
+        {
+          "id": "nav-cases-copy",
+          "label": "Hồ sơ: nhãn",
+          "bounds": [
+            145,
+            254,
+            197,
+            48
+          ],
+          "z": 33,
+          "method": "text",
+          "note": "Chữ uppercase serif.",
+          "textGroup": "menu.nav-cases"
+        },
+        {
+          "id": "nav-team-icon",
+          "label": "Đồng đội: icon",
+          "bounds": [
+            80,
+            338,
+            49,
+            44
+          ],
+          "z": 32,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "menu.nav-team-icon"
+        },
+        {
+          "id": "nav-team-copy",
+          "label": "Đồng đội: nhãn",
+          "bounds": [
+            145,
+            337,
+            197,
+            48
+          ],
+          "z": 33,
+          "method": "text",
+          "note": "Chữ uppercase serif.",
+          "textGroup": "menu.nav-team"
+        },
+        {
+          "id": "nav-calendar-icon",
+          "label": "Lịch: icon",
+          "bounds": [
+            80,
+            423,
+            49,
+            44
+          ],
+          "z": 32,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "menu.nav-calendar-icon"
+        },
+        {
+          "id": "nav-calendar-copy",
+          "label": "Lịch: nhãn",
+          "bounds": [
+            145,
+            422,
+            197,
+            48
+          ],
+          "z": 33,
+          "method": "text",
+          "note": "Chữ uppercase serif.",
+          "textGroup": "menu.nav-calendar"
+        },
+        {
+          "id": "nav-journal-icon",
+          "label": "Nhật ký: icon",
+          "bounds": [
+            80,
+            509,
+            49,
+            44
+          ],
+          "z": 32,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "menu.nav-journal-icon"
+        },
+        {
+          "id": "nav-journal-copy",
+          "label": "Nhật ký: nhãn",
+          "bounds": [
+            145,
+            508,
+            197,
+            48
+          ],
+          "z": 33,
+          "method": "text",
+          "note": "Chữ uppercase serif.",
+          "textGroup": "menu.nav-journal"
+        },
+        {
+          "id": "nav-settings-icon",
+          "label": "Thiết lập: icon",
+          "bounds": [
+            80,
+            595,
+            49,
+            44
+          ],
+          "z": 32,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "menu.nav-settings-icon"
+        },
+        {
+          "id": "nav-settings-copy",
+          "label": "Thiết lập: nhãn",
+          "bounds": [
+            145,
+            594,
+            197,
+            48
+          ],
+          "z": 33,
+          "method": "text",
+          "note": "Chữ uppercase serif.",
+          "textGroup": "menu.nav-settings"
+        },
+        {
+          "id": "section-heading",
+          "label": "Hồ sơ đang mở",
+          "bounds": [
+            405,
+            260,
+            386,
+            57
+          ],
+          "z": 35,
+          "method": "text",
+          "note": "Title riêng giữa screen, không heading menu.",
+          "textGroup": "menu.heading"
+        },
+        {
+          "id": "section-rule",
+          "label": "Kẻ dưới section",
+          "bounds": [
+            405,
+            327,
+            394,
+            7
+          ],
+          "z": 34,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "menu.section-rule"
+        },
+        {
+          "id": "section-intro",
+          "label": "Mô tả section",
+          "bounds": [
+            405,
+            342,
+            369,
+            47
+          ],
+          "z": 35,
+          "method": "text",
+          "note": "Hai dòng.",
+          "textGroup": "menu.intro"
+        },
+        {
+          "id": "case-one-paper",
+          "label": "Mẩu hồ sơ 01",
+          "bounds": [
+            368,
+            391,
+            685,
+            162
+          ],
+          "z": 40,
+          "method": "vector-mask",
+          "note": "Góc giấy theo quad; đục lỗ; không bake thumbnail/chữ.",
+          "assetId": "menu.case-one-paper"
+        },
+        {
+          "id": "case-one-number",
+          "label": "Số 01",
+          "bounds": [
+            397,
+            451,
+            42,
+            42
+          ],
+          "z": 42,
+          "method": "text",
+          "note": "Số italic cyan.",
+          "textGroup": "menu.case-one-number"
+        },
+        {
+          "id": "case-one-rule",
+          "label": "Rule bên số 01",
+          "bounds": [
+            459,
+            428,
+            7,
+            97
+          ],
+          "z": 41,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "menu.case-one-rule"
+        },
+        {
+          "id": "case-one-title",
+          "label": "Title hồ sơ 01",
+          "bounds": [
+            490,
+            430,
+            302,
+            35
+          ],
+          "z": 42,
+          "method": "text",
+          "note": "Upper/lower case theo ref.",
+          "textGroup": "menu.case-one-title"
+        },
+        {
+          "id": "case-one-teaser",
+          "label": "Teaser hồ sơ 01",
+          "bounds": [
+            490,
+            478,
+            281,
+            45
+          ],
+          "z": 42,
+          "method": "text",
+          "note": "Hai dòng.",
+          "textGroup": "menu.case-one-teaser"
+        },
+        {
+          "id": "case-one-thumb",
+          "label": "Ảnh báo/tư liệu",
+          "bounds": [
+            797,
+            396,
+            250,
+            135
+          ],
+          "z": 41,
+          "method": "reconstruct",
+          "note": "Băng dính và phần text trong ảnh phải tách; không crop rồi giữ chữ.",
+          "restoration": "embedded-text",
+          "assetId": "menu.case-one-thumb"
+        },
+        {
+          "id": "case-two-paper",
+          "label": "Mẩu hồ sơ 02",
+          "bounds": [
+            369,
+            532,
+            676,
+            164
+          ],
+          "z": 40,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "menu.case-two-paper"
+        },
+        {
+          "id": "case-two-number",
+          "label": "Số 02",
+          "bounds": [
+            397,
+            599,
+            43,
+            39
+          ],
+          "z": 42,
+          "method": "text",
+          "note": "Số italic cyan.",
+          "textGroup": "menu.case-two-number"
+        },
+        {
+          "id": "case-two-rule",
+          "label": "Rule bên số 02",
+          "bounds": [
+            461,
+            576,
+            6,
+            95
+          ],
+          "z": 41,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "menu.case-two-rule"
+        },
+        {
+          "id": "case-two-title",
+          "label": "Title hồ sơ 02",
+          "bounds": [
+            491,
+            576,
+            277,
+            40
+          ],
+          "z": 42,
+          "method": "text",
+          "note": "Theo góc strip.",
+          "textGroup": "menu.case-two-title"
+        },
+        {
+          "id": "case-two-teaser",
+          "label": "Teaser hồ sơ 02",
+          "bounds": [
+            490,
+            625,
+            280,
+            47
+          ],
+          "z": 42,
+          "method": "text",
+          "note": "Hai dòng.",
+          "textGroup": "menu.case-two-teaser"
+        },
+        {
+          "id": "case-two-thumb",
+          "label": "Ảnh cổng sân bóng",
+          "bounds": [
+            791,
+            540,
+            255,
+            146
+          ],
+          "z": 41,
+          "method": "reconstruct",
+          "note": "Nhãn cổng tách chữ riêng.",
+          "restoration": "embedded-text",
+          "assetId": "menu.case-two-thumb"
+        },
+        {
+          "id": "case-two-sign",
+          "label": "Nhãn tạm đóng cửa",
+          "bounds": [
+            877,
+            607,
+            148,
+            45
+          ],
+          "z": 42,
+          "method": "text",
+          "note": "Text trong thumbnail; transform theo phối cảnh.",
+          "textGroup": "menu.case-two-sign"
+        },
+        {
+          "id": "lower-quote",
+          "label": "Lời trích viết tay",
+          "bounds": [
+            405,
+            716,
+            294,
+            110
+          ],
+          "z": 43,
+          "method": "text",
+          "note": "Ba dòng và marks.",
+          "textGroup": "menu.quote"
+        },
+        {
+          "id": "resources-rules",
+          "label": "Đường kẻ resource",
+          "bounds": [
+            55,
+            678,
+            254,
+            107
+          ],
+          "z": 45,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "menu.resources-rules"
+        },
+        {
+          "id": "energy-icon-dots",
+          "label": "Lightning và energy dots",
+          "bounds": [
+            82,
+            707,
+            194,
+            56
+          ],
+          "z": 46,
+          "method": "vector-mask",
+          "note": "4 chấm: ba filled, một empty; fixture, không cap domain.",
+          "assetId": "menu.energy-icon-dots"
+        },
+        {
+          "id": "energy-copy",
+          "label": "Label và số năng lượng",
+          "bounds": [
+            134,
+            708,
+            166,
+            60
+          ],
+          "z": 47,
+          "method": "text",
+          "note": "Label nhỏ, số lớn.",
+          "textGroup": "menu.energy"
+        },
+        {
+          "id": "money-icon",
+          "label": "Icon tiền",
+          "bounds": [
+            86,
+            794,
+            32,
+            39
+          ],
+          "z": 46,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "menu.money-icon"
+        },
+        {
+          "id": "money-copy",
+          "label": "450đ",
+          "bounds": [
+            134,
+            796,
+            118,
+            34
+          ],
+          "z": 47,
+          "method": "text",
+          "note": "Fixture tài nguyên.",
+          "textGroup": "menu.money"
+        },
+        {
+          "id": "khue-notebook",
+          "label": "Khuê cầm sổ, satchel",
+          "bounds": [
+            1009,
+            28,
+            663,
+            832
+          ],
+          "z": 50,
+          "method": "new-pose",
+          "note": "Tay/sổ phải khớp; phần thân sau wave cần phục dựng.",
+          "identityReference": "assets/dialogue/v2/khue-standing-neutral.png",
+          "pivot": [
+            1340,
+            846
+          ],
+          "restoration": "large-occlusion",
+          "assetId": "menu.khue-notebook"
+        },
+        {
+          "id": "notebook-lettering",
+          "label": "Chữ/mark trên sổ",
+          "bounds": [
+            1342,
+            575,
+            215,
+            145
+          ],
+          "z": 51,
+          "method": "text",
+          "note": "Nghiêng theo sổ; mark graphic riêng.",
+          "textGroup": "menu.notebook"
+        },
+        {
+          "id": "bottom-wave",
+          "label": "Viền sóng/mực và giấy đáy",
+          "bounds": [
+            0,
+            763,
+            1672,
+            178
+          ],
+          "z": 65,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "menu.bottom-wave"
+        },
+        {
+          "id": "foreground-paper",
+          "label": "Báo tiền cảnh đáy giữa",
+          "bounds": [
+            439,
+            761,
+            836,
+            180
+          ],
+          "z": 70,
+          "method": "reconstruct",
+          "note": "Blur tiền cảnh theo ref, không che controls.",
+          "restoration": "hidden-edge",
+          "assetId": "menu.foreground-paper"
+        },
+        {
+          "id": "foreground-flowers",
+          "label": "Hoa/lá hai góc",
+          "bounds": [
+            0,
+            700,
+            408,
+            241
+          ],
+          "z": 71,
+          "method": "reconstruct",
+          "note": "Tiền cảnh bên trái; góc phải nằm chung plate cảng/props.",
+          "assetId": "menu.foreground-flowers"
+        },
+        {
+          "id": "key-hints",
+          "label": "Chọn / Esc trở lại",
+          "bounds": [
+            1366,
+            872,
+            284,
+            43
+          ],
+          "z": 75,
+          "method": "text",
+          "note": "Glyph enter và keycap riêng.",
+          "textGroup": "menu.controls"
+        }
+      ],
+      "contours": [
+        {
+          "id": "teal-right-edge",
+          "layer": "teal-mass",
+          "kind": "visible-sampled-polyline",
+          "points": [
+            [
+              480,
+              0
+            ],
+            [
+              580,
+              104
+            ],
+            [
+              660,
+              181
+            ],
+            [
+              796,
+              256
+            ],
+            [
+              928,
+              302
+            ],
+            [
+              1040,
+              357
+            ],
+            [
+              1058,
+              390
+            ],
+            [
+              1012,
+              488
+            ],
+            [
+              1028,
+              592
+            ],
+            [
+              922,
+              696
+            ],
+            [
+              870,
+              761
+            ],
+            [
+              760,
+              810
+            ],
+            [
+              663,
+              864
+            ]
+          ],
+          "note": "Mép một phần bị strip/portrait che; không alpha polygon hoàn chỉnh."
+        },
+        {
+          "id": "case-one-quad",
+          "layer": "case-one-paper",
+          "kind": "quad",
+          "points": [
+            [
+              368,
+              416
+            ],
+            [
+              1027,
+              391
+            ],
+            [
+              1052,
+              528
+            ],
+            [
+              369,
+              550
+            ]
+          ]
+        },
+        {
+          "id": "case-two-quad",
+          "layer": "case-two-paper",
+          "kind": "quad",
+          "points": [
+            [
+              369,
+              566
+            ],
+            [
+              1028,
+              532
+            ],
+            [
+              1045,
+              665
+            ],
+            [
+              370,
+              695
+            ]
+          ]
+        }
+      ],
+      "anchors": [
+        {
+          "id": "khue-eye",
+          "point": [
+            1238,
+            266
+          ],
+          "note": "Left visible iris in screen coordinates; manual placement seed"
+        },
+        {
+          "id": "nav-selected",
+          "point": [
+            191,
+            273
+          ]
+        },
+        {
+          "id": "case-one-title-baseline",
+          "point": [
+            490,
+            457
+          ]
+        },
+        {
+          "id": "case-two-title-baseline",
+          "point": [
+            491,
+            607
+          ]
+        }
+      ],
+      "lighting": {
+        "key": "warm sun from upper-right harbor window",
+        "rim": "hair/tie/notebook and shoulder",
+        "shadows": "notebook hands/satchel, foreground newspaper",
+        "protected": [
+          "section-heading",
+          "case-one-title",
+          "case-two-title",
+          "key-hints"
+        ]
+      },
+      "notes": [
+        "Nền xanh là mask hữu cơ có grain; navigation không nằm trong tờ giấy.",
+        "Text nhỏ trên notebook/thumbnail cần riêng layer plane và catalog."
+      ]
+    },
+    {
+      "id": "hud",
+      "reference": "03-hud-map.png",
+      "title": "World và HUD",
+      "fixture": "hud",
+      "layers": [
+        {
+          "id": "room-shell",
+          "label": "Tường, sàn, cửa sổ và bố cục phòng",
+          "bounds": [
+            0,
+            0,
+            1672,
+            941
+          ],
+          "z": 10,
+          "method": "reconstruct",
+          "note": "Cần geometry/world mapping; không ghép tất cả actor/props vào nền.",
+          "restoration": "large-occlusion",
+          "assetId": "hud.room-shell"
+        },
+        {
+          "id": "harbor-windows",
+          "label": "Cảnh cảng qua ba cửa sổ",
+          "bounds": [
+            333,
+            0,
+            1307,
+            350
+          ],
+          "z": 11,
+          "method": "reconstruct",
+          "note": "Phục dựng phía sau khung/props; ánh sáng biển.",
+          "assetId": "hud.harbor-windows"
+        },
+        {
+          "id": "wall-props",
+          "label": "Bảng, đồng hồ, tranh báo và poster",
+          "bounds": [
+            0,
+            104,
+            1672,
+            412
+          ],
+          "z": 20,
+          "method": "reconstruct",
+          "note": "Tách các mặt chứa chữ khỏi plate.",
+          "assetId": "hud.wall-props"
+        },
+        {
+          "id": "wall-lettering",
+          "label": "Tên CLB và slogan trên tường",
+          "bounds": [
+            783,
+            150,
+            362,
+            214
+          ],
+          "z": 21,
+          "method": "text",
+          "note": "Nội dung bảng/áp phích; thêm planes nhỏ từ inventory.",
+          "textGroup": "hud.scene-signs"
+        },
+        {
+          "id": "floor-sun",
+          "label": "Ánh nắng và bóng trên sàn",
+          "bounds": [
+            396,
+            407,
+            997,
+            465
+          ],
+          "z": 25,
+          "method": "reconstruct",
+          "note": "Mask lighting theo props; không bake actor shadows.",
+          "assetId": "hud.floor-sun"
+        },
+        {
+          "id": "left-storage",
+          "label": "Tủ, hộp, máy in và báo phía trái",
+          "bounds": [
+            0,
+            287,
+            539,
+            510
+          ],
+          "z": 30,
+          "method": "reconstruct",
+          "note": "Phân occluders ở x=0–539.",
+          "assetId": "hud.left-storage"
+        },
+        {
+          "id": "rear-desk",
+          "label": "Bàn phía sau và props",
+          "bounds": [
+            428,
+            329,
+            563,
+            205
+          ],
+          "z": 31,
+          "method": "reconstruct",
+          "note": "Actor ngồi sau bàn; props che thân dưới.",
+          "assetId": "hud.rear-desk"
+        },
+        {
+          "id": "right-desks",
+          "label": "Cụm bàn phía phải",
+          "bounds": [
+            1027,
+            325,
+            645,
+            461
+          ],
+          "z": 32,
+          "method": "reconstruct",
+          "note": "Có hai depth bands, không flat background.",
+          "assetId": "hud.right-desks"
+        },
+        {
+          "id": "front-desk",
+          "label": "Bàn tiền cảnh giữa",
+          "bounds": [
+            378,
+            625,
+            680,
+            316
+          ],
+          "z": 60,
+          "method": "reconstruct",
+          "note": "Occlude actor phía sau; cần phân chân/mặt bàn.",
+          "assetId": "hud.front-desk"
+        },
+        {
+          "id": "plants-shelves",
+          "label": "Cây, sách, kệ và quả địa cầu",
+          "bounds": [
+            999,
+            144,
+            673,
+            452
+          ],
+          "z": 33,
+          "method": "reconstruct",
+          "note": "Props nhóm theo depth; giữ từng cây quan trọng để motion sau.",
+          "assetId": "hud.plants-shelves"
+        },
+        {
+          "id": "actor-rear-writer",
+          "label": "Actor rear-writer",
+          "bounds": [
+            528,
+            268,
+            77,
+            91
+          ],
+          "z": 29,
+          "method": "new-pose",
+          "note": "Reference sprite/chibi style; actor source in R32, scene pose/depth in R33, idle/talk/walk in R35.",
+          "pivot": [
+            568,
+            358
+          ],
+          "restoration": "desk-occlusion",
+          "assetId": "hud.actor-rear-writer",
+          "pivotRole": "provisional visible lower-body/contact anchor; feet hidden, production pivot pending"
+        },
+        {
+          "id": "actor-reader-left",
+          "label": "Actor reader-left",
+          "bounds": [
+            630,
+            459,
+            78,
+            141
+          ],
+          "z": 42,
+          "method": "new-pose",
+          "note": "Reference sprite/chibi style; actor source in R32, scene pose/depth in R33, idle/talk/walk in R35.",
+          "pivot": [
+            668,
+            593
+          ],
+          "restoration": "desk-occlusion",
+          "assetId": "hud.actor-reader-left",
+          "pivotRole": "visible foot placement seed"
+        },
+        {
+          "id": "actor-khue",
+          "label": "Actor khue",
+          "bounds": [
+            802,
+            439,
+            67,
+            139
+          ],
+          "z": 43,
+          "method": "new-pose",
+          "note": "Reference sprite/chibi style; actor source in R32, scene pose/depth in R33, idle/talk/walk in R35.",
+          "pivot": [
+            840,
+            577
+          ],
+          "restoration": "desk-occlusion",
+          "assetId": "hud.actor-khue",
+          "pivotRole": "visible foot placement seed"
+        },
+        {
+          "id": "actor-van",
+          "label": "Actor van",
+          "bounds": [
+            875,
+            418,
+            80,
+            150
+          ],
+          "z": 44,
+          "method": "new-pose",
+          "note": "Reference sprite/chibi style; actor source in R32, scene pose/depth in R33, idle/talk/walk in R35.",
+          "pivot": [
+            915,
+            563
+          ],
+          "restoration": "desk-occlusion",
+          "assetId": "hud.actor-van",
+          "pivotRole": "visible foot placement seed"
+        },
+        {
+          "id": "actor-right-left",
+          "label": "Actor right-left",
+          "bounds": [
+            1270,
+            365,
+            100,
+            90
+          ],
+          "z": 31,
+          "method": "new-pose",
+          "note": "Reference sprite/chibi style; actor source in R32, scene pose/depth in R33, idle/talk/walk in R35.",
+          "pivot": [
+            1325,
+            451
+          ],
+          "restoration": "desk-occlusion",
+          "assetId": "hud.actor-right-left",
+          "pivotRole": "provisional visible lower-body/contact anchor; feet hidden, production pivot pending"
+        },
+        {
+          "id": "actor-right-right",
+          "label": "Actor right-right",
+          "bounds": [
+            1377,
+            378,
+            96,
+            85
+          ],
+          "z": 31,
+          "method": "new-pose",
+          "note": "Reference sprite/chibi style; actor source in R32, scene pose/depth in R33, idle/talk/walk in R35.",
+          "pivot": [
+            1428,
+            459
+          ],
+          "restoration": "desk-occlusion",
+          "assetId": "hud.actor-right-right",
+          "pivotRole": "provisional visible lower-body/contact anchor; feet hidden, production pivot pending"
+        },
+        {
+          "id": "actor-front-writer",
+          "label": "Actor front-writer",
+          "bounds": [
+            495,
+            596,
+            119,
+            120
+          ],
+          "z": 55,
+          "method": "new-pose",
+          "note": "Reference sprite/chibi style; actor source in R32, scene pose/depth in R33, idle/talk/walk in R35.",
+          "pivot": [
+            553,
+            706
+          ],
+          "restoration": "desk-occlusion",
+          "assetId": "hud.actor-front-writer",
+          "pivotRole": "provisional visible lower-body/contact anchor; feet hidden, production pivot pending"
+        },
+        {
+          "id": "actor-right-front",
+          "label": "Actor right-front",
+          "bounds": [
+            1480,
+            571,
+            93,
+            145
+          ],
+          "z": 48,
+          "method": "new-pose",
+          "note": "Reference sprite/chibi style; actor source in R32, scene pose/depth in R33, idle/talk/walk in R35.",
+          "pivot": [
+            1527,
+            706
+          ],
+          "restoration": "desk-occlusion",
+          "assetId": "hud.actor-right-front",
+          "pivotRole": "provisional visible lower-body/contact anchor; feet hidden, production pivot pending"
+        },
+        {
+          "id": "scene-small-copy",
+          "label": "Nhãn tòa soạn, bản thảo, báo/sổ nhỏ",
+          "bounds": [
+            88,
+            466,
+            1584,
+            322
+          ],
+          "z": 49,
+          "method": "text",
+          "note": "Nhiều plane; chỉ chữ xác minh được là canonical.",
+          "textGroup": "hud.small-signs"
+        },
+        {
+          "id": "edge-waves",
+          "label": "Mực viền góc trái/phải và đáy",
+          "bounds": [
+            0,
+            0,
+            1672,
+            941
+          ],
+          "z": 70,
+          "method": "vector-mask",
+          "note": "Chỉ edge masks, không fill toàn màn.",
+          "assetId": "hud.edge-waves"
+        },
+        {
+          "id": "date-paper",
+          "label": "Date seal giấy",
+          "bounds": [
+            29,
+            31,
+            325,
+            105
+          ],
+          "z": 75,
+          "method": "vector-mask",
+          "note": "Lỗ/mép giấy; không card chuẩn.",
+          "assetId": "hud.date-paper"
+        },
+        {
+          "id": "date-mark",
+          "label": "Mark date",
+          "bounds": [
+            66,
+            62,
+            49,
+            38
+          ],
+          "z": 76,
+          "method": "vector-mask",
+          "note": "Mark biến thể trên date seal.",
+          "assetId": "shared.brand-mark"
+        },
+        {
+          "id": "date-copy",
+          "label": "Ngày và phase",
+          "bounds": [
+            125,
+            44,
+            205,
+            79
+          ],
+          "z": 77,
+          "method": "text",
+          "note": "Hai baseline.",
+          "textGroup": "hud.date"
+        },
+        {
+          "id": "resource-ribbon",
+          "label": "Dải tài nguyên phải trên",
+          "bounds": [
+            1081,
+            21,
+            591,
+            83
+          ],
+          "z": 75,
+          "method": "vector-mask",
+          "note": "Brush silhouette, không thanh ở ngoài world.",
+          "assetId": "hud.resource-ribbon"
+        },
+        {
+          "id": "resource-icons",
+          "label": "Lightning, coin, 4 chấm và rule",
+          "bounds": [
+            1162,
+            43,
+            403,
+            41
+          ],
+          "z": 76,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "hud.resource-icons"
+        },
+        {
+          "id": "resource-copy",
+          "label": "Năng lượng 3/4 và 450đ",
+          "bounds": [
+            1194,
+            49,
+            426,
+            34
+          ],
+          "z": 77,
+          "method": "text",
+          "note": "Hai nhóm text.",
+          "textGroup": "hud.resources"
+        },
+        {
+          "id": "objective-surface",
+          "label": "Mực mục tiêu bên trái",
+          "bounds": [
+            0,
+            148,
+            342,
+            238
+          ],
+          "z": 75,
+          "method": "vector-mask",
+          "note": "Mép lượn và vệt vàng; ôm cạnh trái.",
+          "assetId": "hud.objective-surface"
+        },
+        {
+          "id": "objective-highlight",
+          "label": "Vệt vàng title",
+          "bounds": [
+            33,
+            185,
+            266,
+            48
+          ],
+          "z": 76,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "hud.objective-highlight"
+        },
+        {
+          "id": "objective-spine",
+          "label": "Trục/chấm và bullet",
+          "bounds": [
+            31,
+            168,
+            42,
+            155
+          ],
+          "z": 77,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "hud.objective-spine"
+        },
+        {
+          "id": "objective-copy",
+          "label": "Đang theo dõi + nội dung",
+          "bounds": [
+            68,
+            197,
+            241,
+            110
+          ],
+          "z": 78,
+          "method": "text",
+          "note": "Headline và hai dòng mô tả.",
+          "textGroup": "hud.objective"
+        },
+        {
+          "id": "interaction-paper",
+          "label": "Prompt vàng trên actor",
+          "bounds": [
+            853,
+            370,
+            166,
+            45
+          ],
+          "z": 80,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "hud.interaction-paper"
+        },
+        {
+          "id": "interaction-copy",
+          "label": "E · Trò chuyện",
+          "bounds": [
+            874,
+            381,
+            129,
+            27
+          ],
+          "z": 81,
+          "method": "text",
+          "note": "Đặt ở vị trí relative actor trong world tương lai.",
+          "textGroup": "hud.interaction"
+        },
+        {
+          "id": "foreground-plants",
+          "label": "Cây mờ và báo mép đáy",
+          "bounds": [
+            0,
+            748,
+            1672,
+            193
+          ],
+          "z": 85,
+          "method": "reconstruct",
+          "note": "Foreground depth và blur riêng.",
+          "assetId": "hud.foreground-plants"
+        },
+        {
+          "id": "location-mark-rule",
+          "label": "Pin và rule location",
+          "bounds": [
+            41,
+            870,
+            262,
+            47
+          ],
+          "z": 90,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "hud.location-mark-rule"
+        },
+        {
+          "id": "location-copy",
+          "label": "Tòa soạn Hồi Âm",
+          "bounds": [
+            81,
+            873,
+            226,
+            28
+          ],
+          "z": 91,
+          "method": "text",
+          "note": "Chữ sáng.",
+          "textGroup": "hud.location"
+        },
+        {
+          "id": "controls-icons",
+          "label": "Map icon, separator và Esc keycap",
+          "bounds": [
+            1342,
+            869,
+            229,
+            45
+          ],
+          "z": 90,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "hud.controls-icons"
+        },
+        {
+          "id": "controls-copy",
+          "label": "M · Bản đồ / Esc · Menu",
+          "bounds": [
+            1370,
+            871,
+            276,
+            37
+          ],
+          "z": 91,
+          "method": "text",
+          "note": "Không dấu hướng dẫn WASD dài giữa scene.",
+          "textGroup": "hud.controls"
+        }
+      ],
+      "contours": [
+        {
+          "id": "objective-edge",
+          "layer": "objective-surface",
+          "kind": "visible-sampled-polyline",
+          "points": [
+            [
+              0,
+              150
+            ],
+            [
+              320,
+              150
+            ],
+            [
+              324,
+              213
+            ],
+            [
+              304,
+              284
+            ],
+            [
+              280,
+              316
+            ],
+            [
+              195,
+              342
+            ],
+            [
+              117,
+              343
+            ],
+            [
+              42,
+              362
+            ],
+            [
+              0,
+              359
+            ]
+          ]
+        }
+      ],
+      "anchors": [
+        {
+          "id": "player-feet",
+          "point": [
+            840,
+            577
+          ]
+        },
+        {
+          "id": "van-feet",
+          "point": [
+            915,
+            563
+          ]
+        },
+        {
+          "id": "prompt-center",
+          "point": [
+            936,
+            392
+          ]
+        },
+        {
+          "id": "energy-dot-centers",
+          "points": [
+            [
+              1380,
+              65
+            ],
+            [
+              1406,
+              65
+            ],
+            [
+              1430,
+              65
+            ],
+            [
+              1455,
+              65
+            ]
+          ]
+        }
+      ],
+      "lighting": {
+        "key": "daylight through windows toward lower-right floor",
+        "rim": "window-side actor edges",
+        "shadows": "diagonal cast shadows and desk contact",
+        "focus": "walkable foreground middle with HUD framing",
+        "protected": [
+          "objective-copy",
+          "resource-copy",
+          "interaction-copy"
+        ]
+      },
+      "notes": [
+        "Không đồng nhất screen pixels với tile collision; R31 cần world mapping riêng.",
+        "Bảng chữ nhỏ có generated microtext; cần canonical transcription/content ở production."
+      ]
+    },
+    {
+      "id": "dossier",
+      "reference": "04-dossier.png",
+      "title": "Hồ sơ",
+      "fixture": "dossier",
+      "layers": [
+        {
+          "id": "room-harbor",
+          "label": "Tòa soạn/cảng, cửa sổ và cây",
+          "bounds": [
+            0,
+            0,
+            1672,
+            941
+          ],
+          "z": 10,
+          "method": "reconstruct",
+          "note": "Phục dựng dưới folio/actor; camera riêng.",
+          "restoration": "large-occlusion",
+          "assetId": "dossier.room-harbor"
+        },
+        {
+          "id": "teal-nav",
+          "label": "Mảng mực xanh bên trái",
+          "bounds": [
+            0,
+            0,
+            392,
+            694
+          ],
+          "z": 20,
+          "method": "vector-mask",
+          "note": "Mép hữu cơ có grain, không sidebar card.",
+          "assetId": "dossier.teal-nav"
+        },
+        {
+          "id": "brand-copy",
+          "label": "HỒI ÂM và tuần",
+          "bounds": [
+            53,
+            43,
+            244,
+            116
+          ],
+          "z": 25,
+          "method": "text",
+          "note": "Hai nhóm chữ.",
+          "textGroup": "dossier.brand"
+        },
+        {
+          "id": "brand-mark",
+          "label": "Mark thương hiệu",
+          "bounds": [
+            307,
+            78,
+            67,
+            44
+          ],
+          "z": 24,
+          "method": "vector-mask",
+          "note": "Biến thể mark.",
+          "assetId": "shared.brand-mark"
+        },
+        {
+          "id": "brand-rule",
+          "label": "Rule thương hiệu",
+          "bounds": [
+            53,
+            168,
+            238,
+            5
+          ],
+          "z": 24,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "dossier.brand-rule"
+        },
+        {
+          "id": "section-icon",
+          "label": "Mark section hồ sơ",
+          "bounds": [
+            76,
+            211,
+            61,
+            49
+          ],
+          "z": 25,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "dossier.section-icon"
+        },
+        {
+          "id": "section-copy",
+          "label": "HỒ SƠ",
+          "bounds": [
+            159,
+            211,
+            160,
+            49
+          ],
+          "z": 26,
+          "method": "text",
+          "note": "Large uppercase.",
+          "textGroup": "dossier.section"
+        },
+        {
+          "id": "nav-spine",
+          "label": "Trục/chấm sidebar",
+          "bounds": [
+            49,
+            209,
+            14,
+            282
+          ],
+          "z": 27,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "dossier.nav-spine"
+        },
+        {
+          "id": "nav-highlight",
+          "label": "Vệt vàng Tổng quan",
+          "bounds": [
+            43,
+            288,
+            281,
+            81
+          ],
+          "z": 28,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "dossier.nav-highlight"
+        },
+        {
+          "id": "nav-overview-icon",
+          "label": "Tổng quan: icon",
+          "bounds": [
+            80,
+            305,
+            45,
+            42
+          ],
+          "z": 29,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "dossier.nav-overview-icon"
+        },
+        {
+          "id": "nav-overview-copy",
+          "label": "Tổng quan: chữ",
+          "bounds": [
+            147,
+            309,
+            172,
+            41
+          ],
+          "z": 30,
+          "method": "text",
+          "note": "Upper/lower theo ref.",
+          "textGroup": "dossier.nav-overview"
+        },
+        {
+          "id": "nav-sources-icon",
+          "label": "Nguồn tin: icon",
+          "bounds": [
+            80,
+            399,
+            45,
+            42
+          ],
+          "z": 29,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "dossier.nav-sources-icon"
+        },
+        {
+          "id": "nav-sources-copy",
+          "label": "Nguồn tin: chữ",
+          "bounds": [
+            147,
+            403,
+            172,
+            41
+          ],
+          "z": 30,
+          "method": "text",
+          "note": "Upper/lower theo ref.",
+          "textGroup": "dossier.nav-sources"
+        },
+        {
+          "id": "nav-draft-icon",
+          "label": "Bản thảo: icon",
+          "bounds": [
+            80,
+            485,
+            45,
+            42
+          ],
+          "z": 29,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "dossier.nav-draft-icon"
+        },
+        {
+          "id": "nav-draft-copy",
+          "label": "Bản thảo: chữ",
+          "bounds": [
+            147,
+            489,
+            172,
+            41
+          ],
+          "z": 30,
+          "method": "text",
+          "note": "Upper/lower theo ref.",
+          "textGroup": "dossier.nav-draft"
+        },
+        {
+          "id": "side-quote",
+          "label": "Lời viết tay dưới navigation",
+          "bounds": [
+            139,
+            552,
+            204,
+            89
+          ],
+          "z": 30,
+          "method": "text",
+          "note": "Ba dòng nghiêng.",
+          "textGroup": "dossier.side-quote"
+        },
+        {
+          "id": "folio-under",
+          "label": "Các tờ giấy phía sau",
+          "bounds": [
+            297,
+            68,
+            842,
+            841
+          ],
+          "z": 35,
+          "method": "vector-mask",
+          "note": "Giữ số lớp và shadows riêng.",
+          "assetId": "dossier.folio-under"
+        },
+        {
+          "id": "folio-main",
+          "label": "Mặt giấy hồ sơ",
+          "bounds": [
+            325,
+            43,
+            829,
+            867
+          ],
+          "z": 36,
+          "method": "vector-mask",
+          "note": "Quad nghiêng; plane text phẳng đúng góc.",
+          "assetId": "dossier.folio-main"
+        },
+        {
+          "id": "folio-clamp",
+          "label": "Kẹp kim loại trên giấy",
+          "bounds": [
+            393,
+            33,
+            70,
+            95
+          ],
+          "z": 37,
+          "method": "reconstruct",
+          "note": "Highlights kim loại và shadow chạm giấy; tách để motion.",
+          "assetId": "dossier.folio-clamp"
+        },
+        {
+          "id": "folio-ornaments",
+          "label": "Tem, harbour print và mark title",
+          "bounds": [
+            392,
+            116,
+            732,
+            770
+          ],
+          "z": 37,
+          "method": "reconstruct",
+          "note": "Nhiều cụm không liên tục; không texture chữ.",
+          "restoration": "embedded-text",
+          "assetId": "dossier.folio-ornaments"
+        },
+        {
+          "id": "folio-eyebrow",
+          "label": "Hồ sơ 01 · Đang xác minh",
+          "bounds": [
+            393,
+            168,
+            407,
+            28
+          ],
+          "z": 40,
+          "method": "text",
+          "note": "Tracking rộng.",
+          "textGroup": "dossier.eyebrow"
+        },
+        {
+          "id": "folio-heading",
+          "label": "Khoản thu câu lạc bộ",
+          "bounds": [
+            392,
+            214,
+            591,
+            68
+          ],
+          "z": 40,
+          "method": "text",
+          "note": "Điểm nhìn chính, serif bold.",
+          "textGroup": "dossier.heading"
+        },
+        {
+          "id": "folio-rules",
+          "label": "Kẻ dưới eyebrow và heading",
+          "bounds": [
+            392,
+            195,
+            636,
+            108
+          ],
+          "z": 39,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "dossier.folio-rules"
+        },
+        {
+          "id": "folio-subtitle",
+          "label": "Làm rõ khoản thu...",
+          "bounds": [
+            393,
+            313,
+            626,
+            35
+          ],
+          "z": 40,
+          "method": "text",
+          "note": "Một dòng.",
+          "textGroup": "dossier.subtitle"
+        },
+        {
+          "id": "step-one-number",
+          "label": "one: số",
+          "bounds": [
+            385,
+            398,
+            47,
+            49
+          ],
+          "z": 40,
+          "method": "text",
+          "note": "Italic cyan.",
+          "textGroup": "dossier.step-one-number"
+        },
+        {
+          "id": "step-one-rule",
+          "label": "one: trục/chấm",
+          "bounds": [
+            447,
+            385,
+            10,
+            85
+          ],
+          "z": 39,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "dossier.step-one-rule"
+        },
+        {
+          "id": "step-one-copy",
+          "label": "one: title/body",
+          "bounds": [
+            475,
+            389,
+            234,
+            98
+          ],
+          "z": 40,
+          "method": "text",
+          "note": "Title và body separate style.",
+          "textGroup": "dossier.step-one"
+        },
+        {
+          "id": "step-two-number",
+          "label": "two: số",
+          "bounds": [
+            385,
+            526,
+            47,
+            49
+          ],
+          "z": 40,
+          "method": "text",
+          "note": "Italic cyan.",
+          "textGroup": "dossier.step-two-number"
+        },
+        {
+          "id": "step-two-rule",
+          "label": "two: trục/chấm",
+          "bounds": [
+            447,
+            513,
+            10,
+            85
+          ],
+          "z": 39,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "dossier.step-two-rule"
+        },
+        {
+          "id": "step-two-copy",
+          "label": "two: title/body",
+          "bounds": [
+            475,
+            517,
+            234,
+            97
+          ],
+          "z": 40,
+          "method": "text",
+          "note": "Title và body separate style.",
+          "textGroup": "dossier.step-two"
+        },
+        {
+          "id": "step-three-number",
+          "label": "three: số",
+          "bounds": [
+            385,
+            654,
+            47,
+            49
+          ],
+          "z": 40,
+          "method": "text",
+          "note": "Italic cyan.",
+          "textGroup": "dossier.step-three-number"
+        },
+        {
+          "id": "step-three-rule",
+          "label": "three: trục/chấm",
+          "bounds": [
+            447,
+            641,
+            10,
+            85
+          ],
+          "z": 39,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "dossier.step-three-rule"
+        },
+        {
+          "id": "step-three-copy",
+          "label": "three: title/body",
+          "bounds": [
+            475,
+            645,
+            234,
+            98
+          ],
+          "z": 40,
+          "method": "text",
+          "note": "Title và body separate style.",
+          "textGroup": "dossier.step-three"
+        },
+        {
+          "id": "steps-separators",
+          "label": "Hai đường phân bước",
+          "bounds": [
+            474,
+            486,
+            235,
+            134
+          ],
+          "z": 39,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "dossier.steps-separators"
+        },
+        {
+          "id": "evidence-photo",
+          "label": "Ảnh chứng từ và sổ",
+          "bounds": [
+            726,
+            331,
+            470,
+            402
+          ],
+          "z": 41,
+          "method": "reconstruct",
+          "note": "Perspective quad; xóa chữ baked, băng dính riêng.",
+          "restoration": "actor-occlusion",
+          "assetId": "dossier.evidence-photo"
+        },
+        {
+          "id": "evidence-lettering",
+          "label": "Chữ hóa đơn/sổ trong ảnh",
+          "bounds": [
+            763,
+            429,
+            432,
+            249
+          ],
+          "z": 42,
+          "method": "text",
+          "note": "Nhiều text planes; numeric microtext cần xác minh.",
+          "textGroup": "dossier.evidence"
+        },
+        {
+          "id": "evidence-tape",
+          "label": "Băng dính trên ảnh",
+          "bounds": [
+            853,
+            340,
+            122,
+            51
+          ],
+          "z": 43,
+          "method": "reconstruct",
+          "note": "Translucent warm strip và bóng.",
+          "assetId": "dossier.evidence-tape"
+        },
+        {
+          "id": "van-seated",
+          "label": "Vân ngồi chống tay/cầm bút",
+          "bounds": [
+            1083,
+            34,
+            589,
+            689
+          ],
+          "z": 50,
+          "method": "new-pose",
+          "note": "Giữ hoa, tóc và expression; tách phần tay/pen khi cần.",
+          "identityReference": "assets/dialogue/v2/van-neutral.png",
+          "pivot": [
+            1392,
+            693
+          ],
+          "restoration": "folio-occlusion",
+          "assetId": "dossier.van-seated"
+        },
+        {
+          "id": "collaborator-tag",
+          "label": "Giấy nhãn cộng tác viên",
+          "bounds": [
+            1482,
+            174,
+            190,
+            113
+          ],
+          "z": 55,
+          "method": "vector-mask",
+          "note": "Góc giấy nghiêng và shadow riêng.",
+          "assetId": "dossier.collaborator-tag"
+        },
+        {
+          "id": "collaborator-copy",
+          "label": "Tên Vân / Biên tập",
+          "bounds": [
+            1511,
+            197,
+            146,
+            56
+          ],
+          "z": 56,
+          "method": "text",
+          "note": "Nghiêng theo tag.",
+          "textGroup": "dossier.collaborator"
+        },
+        {
+          "id": "collaborator-arrow",
+          "label": "Mark và mũi tên cạnh tag",
+          "bounds": [
+            1560,
+            216,
+            87,
+            74
+          ],
+          "z": 57,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "dossier.collaborator-arrow"
+        },
+        {
+          "id": "note-paper",
+          "label": "Giấy ghi chú",
+          "bounds": [
+            1158,
+            567,
+            217,
+            205
+          ],
+          "z": 60,
+          "method": "vector-mask",
+          "note": "Paper stack, clip top-left; che photo/actor lower arm.",
+          "assetId": "dossier.note-paper"
+        },
+        {
+          "id": "note-clamp",
+          "label": "Kẹp giấy ghi chú",
+          "bounds": [
+            1192,
+            577,
+            29,
+            48
+          ],
+          "z": 61,
+          "method": "reconstruct",
+          "note": "",
+          "assetId": "dossier.note-clamp"
+        },
+        {
+          "id": "note-copy",
+          "label": "GHI CHÚ và câu viết tay",
+          "bounds": [
+            1189,
+            624,
+            171,
+            104
+          ],
+          "z": 62,
+          "method": "text",
+          "note": "Hai style.",
+          "textGroup": "dossier.note"
+        },
+        {
+          "id": "bottom-caption",
+          "label": "Câu viết tay dưới chứng từ",
+          "bounds": [
+            790,
+            741,
+            237,
+            66
+          ],
+          "z": 44,
+          "method": "text",
+          "note": "Hai dòng nghiêng.",
+          "textGroup": "dossier.caption"
+        },
+        {
+          "id": "foreground-desk",
+          "label": "Bàn, sổ, camera và props tiền cảnh",
+          "bounds": [
+            281,
+            702,
+            1391,
+            239
+          ],
+          "z": 70,
+          "method": "reconstruct",
+          "note": "Cho CTA layer lên trên; giữ foreground blur.",
+          "assetId": "dossier.foreground-desk"
+        },
+        {
+          "id": "foreground-flowers",
+          "label": "Hoa/cây góc trái",
+          "bounds": [
+            0,
+            692,
+            367,
+            249
+          ],
+          "z": 71,
+          "method": "reconstruct",
+          "note": "",
+          "assetId": "dossier.foreground-flowers"
+        },
+        {
+          "id": "cta-brush",
+          "label": "Dải vàng CTA",
+          "bounds": [
+            1322,
+            751,
+            341,
+            80
+          ],
+          "z": 80,
+          "method": "vector-mask",
+          "note": "Stroke texture; mép xước.",
+          "assetId": "dossier.cta-brush"
+        },
+        {
+          "id": "cta-icons",
+          "label": "Bút và mũi tên",
+          "bounds": [
+            1364,
+            762,
+            237,
+            51
+          ],
+          "z": 81,
+          "method": "vector-mask",
+          "note": "",
+          "assetId": "dossier.cta-icons"
+        },
+        {
+          "id": "cta-copy",
+          "label": "Giao hồ sơ",
+          "bounds": [
+            1425,
+            772,
+            147,
+            36
+          ],
+          "z": 82,
+          "method": "text",
+          "note": "Serif lớn.",
+          "textGroup": "dossier.action"
+        },
+        {
+          "id": "back-copy",
+          "label": "Quay lại và arrow",
+          "bounds": [
+            1453,
+            848,
+            144,
+            31
+          ],
+          "z": 82,
+          "method": "text",
+          "note": "Dựng keyboard/pointer target đúng vùng.",
+          "textGroup": "dossier.back"
+        }
+      ],
+      "contours": [
+        {
+          "id": "folio-main-quad",
+          "layer": "folio-main",
+          "kind": "quad",
+          "points": [
+            [
+              325,
+              129
+            ],
+            [
+              1121,
+              43
+            ],
+            [
+              1154,
+              812
+            ],
+            [
+              392,
+              909
+            ]
+          ],
+          "note": "Góc phải/dưới bị props/actor che; hai điểm cuối ước lượng vùng giấy nhìn thấy."
+        },
+        {
+          "id": "folio-under-quad",
+          "layer": "folio-under",
+          "kind": "quad",
+          "points": [
+            [
+              297,
+              169
+            ],
+            [
+              1064,
+              68
+            ],
+            [
+              1139,
+              840
+            ],
+            [
+              366,
+              909
+            ]
+          ]
+        },
+        {
+          "id": "evidence-quad",
+          "layer": "evidence-photo",
+          "kind": "quad",
+          "points": [
+            [
+              726,
+              376
+            ],
+            [
+              1166,
+              331
+            ],
+            [
+              1196,
+              687
+            ],
+            [
+              747,
+              733
+            ]
+          ]
+        },
+        {
+          "id": "note-quad",
+          "layer": "note-paper",
+          "kind": "quad",
+          "points": [
+            [
+              1158,
+              612
+            ],
+            [
+              1336,
+              567
+            ],
+            [
+              1375,
+              734
+            ],
+            [
+              1179,
+              772
+            ]
+          ]
+        }
+      ],
+      "anchors": [
+        {
+          "id": "van-eye",
+          "point": [
+            1280,
+            274
+          ],
+          "note": "Left visible iris in screen coordinates; manual placement seed"
+        },
+        {
+          "id": "heading-baseline",
+          "point": [
+            394,
+            271
+          ]
+        },
+        {
+          "id": "evidence-top-left",
+          "point": [
+            726,
+            376
+          ]
+        },
+        {
+          "id": "cta-center",
+          "point": [
+            1492,
+            790
+          ]
+        }
+      ],
+      "lighting": {
+        "key": "upper-right daylight on face, paper and desk",
+        "rim": "hair and flower",
+        "shadows": "clamps/tape/paper stack contact; foreground softness",
+        "protected": [
+          "folio-heading",
+          "step-one-copy",
+          "step-two-copy",
+          "step-three-copy",
+          "note-copy",
+          "cta-copy"
+        ]
+      },
+      "notes": [
+        "Khác menu: main folio chồng nghiêng và evidence; không dùng lại screen composition menu.",
+        "Microcopy trên hóa đơn/sổ và props cần canonical content trong bước art; không giữ chữ AI baked."
+      ]
+    }
+  ]
+}

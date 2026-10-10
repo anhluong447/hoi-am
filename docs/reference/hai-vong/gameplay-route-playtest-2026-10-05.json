@@ -1,0 +1,6060 @@
+{
+  "scope": "Five 14-day routes through actual UI; no save injection, no engine actions, no configuration edits.",
+  "results": [
+    {
+      "id": "balanced",
+      "name": "Phối hợp, không nâng cấp",
+      "ok": true,
+      "clicks": 168,
+      "K": 77.90142857142857,
+      "T": 96,
+      "total": 88.76057142857142,
+      "good": true,
+      "teamArticles": 5,
+      "khueArticles": 2,
+      "money": 300,
+      "metrics": {
+        "opened": 5,
+        "assigned": 5,
+        "restarts": 0,
+        "approvals": 10,
+        "energySpent": 20,
+        "unusedEnergy": 20,
+        "hangouts": 0,
+        "jobs": 0
+      },
+      "romances": [],
+      "betrayal": false,
+      "reputation": 11,
+      "pressure": 10,
+      "averageIssueScore": 52555.5,
+      "people": [
+        {
+          "id": "khue",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 7.199999999999999,
+            "investigation": 7,
+            "photo": 4.199999999999999,
+            "documents": 5.199999999999999,
+            "empathy": 5,
+            "courage": 6.199999999999999
+          },
+          "skills": [],
+          "tools": []
+        },
+        {
+          "id": "van",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 4,
+            "photo": 4,
+            "documents": 7,
+            "empathy": 6,
+            "courage": 7
+          },
+          "skills": [],
+          "tools": []
+        },
+        {
+          "id": "long",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 6,
+            "investigation": 5,
+            "photo": 4,
+            "documents": 4,
+            "empathy": 8,
+            "courage": 5
+          },
+          "skills": [],
+          "tools": []
+        },
+        {
+          "id": "nhi",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 6,
+            "photo": 4,
+            "documents": 8,
+            "empathy": 4,
+            "courage": 5
+          },
+          "skills": [],
+          "tools": []
+        },
+        {
+          "id": "ngoc",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 5,
+            "photo": 8,
+            "documents": 4,
+            "empathy": 6,
+            "courage": 5
+          },
+          "skills": [],
+          "tools": []
+        },
+        {
+          "id": "an",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 7,
+            "photo": 4,
+            "documents": 8,
+            "empathy": 4,
+            "courage": 6
+          },
+          "skills": [],
+          "tools": []
+        }
+      ],
+      "reports": [
+        {
+          "day": 5,
+          "week": 1,
+          "score": 55625,
+          "ids": [
+            "W1-community",
+            "W1-documents",
+            "Q1"
+          ],
+          "reputation": 6
+        },
+        {
+          "day": 12,
+          "week": 2,
+          "score": 49486,
+          "ids": [
+            "W2-community",
+            "W2-documents",
+            "Q2",
+            "W2-photo"
+          ],
+          "reputation": 11
+        }
+      ],
+      "articles": [
+        {
+          "id": "W1-community",
+          "title": "Sân bóng đóng cửa",
+          "branch": "team",
+          "author": "long",
+          "quality": 0.768,
+          "attraction": 7,
+          "readyDay": 2,
+          "processed": true,
+          "score": 39137,
+          "selected": true,
+          "published": true,
+          "publishedDay": 5
+        },
+        {
+          "id": "W1-documents",
+          "title": "Khoản thu câu lạc bộ",
+          "branch": "team",
+          "author": "nhi",
+          "quality": 0.768,
+          "attraction": 8,
+          "readyDay": 2,
+          "processed": true,
+          "score": 51118,
+          "selected": true,
+          "published": true,
+          "publishedDay": 5
+        },
+        {
+          "id": "Q1",
+          "title": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc",
+          "branch": "khue",
+          "author": "khue",
+          "quality": 0.7674285714285713,
+          "attraction": 8,
+          "readyDay": 3,
+          "processed": true,
+          "score": 76620,
+          "selected": true,
+          "published": true,
+          "publishedDay": 5
+        },
+        {
+          "id": "W2-community",
+          "title": "Sân bóng đóng cửa",
+          "branch": "team",
+          "author": "long",
+          "quality": 0.768,
+          "attraction": 7,
+          "readyDay": 9,
+          "processed": true,
+          "score": 39137,
+          "selected": true,
+          "published": true,
+          "publishedDay": 12
+        },
+        {
+          "id": "W2-documents",
+          "title": "Khoản thu câu lạc bộ",
+          "branch": "team",
+          "author": "nhi",
+          "quality": 0.768,
+          "attraction": 8,
+          "readyDay": 9,
+          "processed": true,
+          "score": 51118,
+          "selected": true,
+          "published": true,
+          "publishedDay": 12
+        },
+        {
+          "id": "Q2",
+          "title": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc",
+          "branch": "khue",
+          "author": "khue",
+          "quality": 0.7906,
+          "attraction": 8,
+          "readyDay": 10,
+          "processed": true,
+          "score": 78934,
+          "selected": true,
+          "published": true,
+          "publishedDay": 12
+        },
+        {
+          "id": "W2-photo",
+          "title": "Bến cảng lúc bình minh",
+          "branch": "team",
+          "author": "ngoc",
+          "quality": 0.768,
+          "attraction": 6,
+          "readyDay": 10,
+          "processed": true,
+          "score": 28754,
+          "selected": true,
+          "published": true,
+          "publishedDay": 12
+        }
+      ],
+      "decisions": [
+        {
+          "day": 1,
+          "kind": "interview",
+          "case": "W1-community",
+          "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện."
+        },
+        {
+          "day": 1,
+          "kind": "assign",
+          "case": "W1-community",
+          "person": "long"
+        },
+        {
+          "day": 1,
+          "kind": "interview",
+          "case": "W1-documents",
+          "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm."
+        },
+        {
+          "day": 1,
+          "kind": "assign",
+          "case": "W1-documents",
+          "person": "nhi"
+        },
+        {
+          "day": 8,
+          "kind": "interview",
+          "case": "W2-community",
+          "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện."
+        },
+        {
+          "day": 8,
+          "kind": "assign",
+          "case": "W2-community",
+          "person": "long"
+        },
+        {
+          "day": 8,
+          "kind": "interview",
+          "case": "W2-documents",
+          "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm."
+        },
+        {
+          "day": 8,
+          "kind": "assign",
+          "case": "W2-documents",
+          "person": "nhi"
+        },
+        {
+          "day": 9,
+          "kind": "interview",
+          "case": "W2-photo",
+          "story": "Nhân vật muốn kể chuyện qua những khoảnh khắc lao động thực tế. Một cuộc phỏng vấn dài không thay thế được tư liệu hình ảnh đúng lúc."
+        },
+        {
+          "day": 9,
+          "kind": "assign",
+          "case": "W2-photo",
+          "person": "ngoc"
+        }
+      ],
+      "days": [
+        {
+          "day": 1,
+          "feedback": 2,
+          "blockedAtBed": true,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "working",
+              "progress": 1,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "working",
+              "progress": 1,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 2,
+          "feedback": 2,
+          "blockedAtBed": true,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 2,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 3,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 1,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 4,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 5,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": [
+            {
+              "day": 5,
+              "week": 1,
+              "score": 55625,
+              "ids": [
+                "W1-community",
+                "W1-documents",
+                "Q1"
+              ],
+              "reputation": 6
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 7,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 8,
+          "feedback": 2,
+          "blockedAtBed": true,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "working",
+              "progress": 1,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "working",
+              "progress": 1,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 9,
+          "feedback": 3,
+          "blockedAtBed": true,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 2,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-photo",
+              "status": "working",
+              "progress": 1,
+              "owner": "ngoc"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 10,
+          "feedback": 1,
+          "blockedAtBed": true,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 2,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-photo",
+              "status": "draft",
+              "progress": 2,
+              "owner": "ngoc"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 11,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-photo",
+              "status": "draft",
+              "progress": 2,
+              "owner": "ngoc"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 12,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-photo",
+              "status": "draft",
+              "progress": 2,
+              "owner": "ngoc"
+            }
+          ],
+          "publications": [
+            {
+              "day": 12,
+              "week": 2,
+              "score": 49486,
+              "ids": [
+                "W2-community",
+                "W2-documents",
+                "Q2",
+                "W2-photo"
+              ],
+              "reputation": 11
+            }
+          ]
+        },
+        {
+          "day": 13,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-photo",
+              "status": "draft",
+              "progress": 2,
+              "owner": "ngoc"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 14,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-photo",
+              "status": "draft",
+              "progress": 2,
+              "owner": "ngoc"
+            }
+          ],
+          "publications": []
+        }
+      ],
+      "log": [
+        {
+          "day": 1,
+          "phase": "morning",
+          "message": "Bắt đầu lát cắt cơ chế. Nhi được mở sớm để thử phân công; nội dung là mock."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Sân bóng đóng cửa."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Giao Sân bóng đóng cửa cho Đoàn Bảo Long."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Giao Khoản thu câu lạc bộ cho Hạ Tuyết Nhi."
+        },
+        {
+          "day": 1,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 1,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 1,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 1,
+          "phase": "bed",
+          "message": "Duyệt Sân bóng đóng cửa: continue · 0 energy."
+        },
+        {
+          "day": 1,
+          "phase": "bed",
+          "message": "Duyệt Khoản thu câu lạc bộ: continue · 0 energy."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Nghe hai phía."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Ghi nhận hiện trường."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Đối chiếu chứng từ."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Lấy phản hồi chính thức."
+        },
+        {
+          "day": 2,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 2,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 2,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 2,
+          "phase": "bed",
+          "message": "Duyệt Sân bóng đóng cửa: continue · 0 energy."
+        },
+        {
+          "day": 2,
+          "phase": "bed",
+          "message": "Duyệt Khoản thu câu lạc bộ: continue · 0 energy."
+        },
+        {
+          "day": 3,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 3,
+          "phase": "club",
+          "message": "Khuê chấp bút; bài vào hàng đợi đội soạn."
+        },
+        {
+          "day": 3,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 3,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 3,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Sân bóng đóng cửa."
+        },
+        {
+          "day": 3,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 4,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 4,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 4,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 4,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Hồ sơ Khuê 1 · Căng tin và người trong cuộc."
+        },
+        {
+          "day": 5,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 5,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 5,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 5,
+          "phase": "bed",
+          "message": "Phát hành số 1: 3 bài, sức hút 55.625."
+        },
+        {
+          "day": 6,
+          "phase": "weekend1",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 6,
+          "phase": "weekend2",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 6,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 7,
+          "phase": "weekend1",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 7,
+          "phase": "weekend2",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 7,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Sân bóng đóng cửa."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Giao Sân bóng đóng cửa cho Đoàn Bảo Long."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Giao Khoản thu câu lạc bộ cho Hạ Tuyết Nhi."
+        },
+        {
+          "day": 8,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 8,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 8,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 8,
+          "phase": "bed",
+          "message": "Duyệt Sân bóng đóng cửa: continue · 0 energy."
+        },
+        {
+          "day": 8,
+          "phase": "bed",
+          "message": "Duyệt Khoản thu câu lạc bộ: continue · 0 energy."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Bến cảng lúc bình minh."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Giao Bến cảng lúc bình minh cho Tạ Như Ngọc."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Nghe hai phía."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Ghi nhận hiện trường."
+        },
+        {
+          "day": 9,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 9,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 9,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 9,
+          "phase": "bed",
+          "message": "Duyệt Sân bóng đóng cửa: continue · 0 energy."
+        },
+        {
+          "day": 9,
+          "phase": "bed",
+          "message": "Duyệt Khoản thu câu lạc bộ: continue · 0 energy."
+        },
+        {
+          "day": 9,
+          "phase": "bed",
+          "message": "Duyệt Bến cảng lúc bình minh: continue · 0 energy."
+        },
+        {
+          "day": 10,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 10,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Đối chiếu chứng từ."
+        },
+        {
+          "day": 10,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Lấy phản hồi chính thức."
+        },
+        {
+          "day": 10,
+          "phase": "club",
+          "message": "Khuê chấp bút; bài vào hàng đợi đội soạn."
+        },
+        {
+          "day": 10,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 10,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 10,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Sân bóng đóng cửa."
+        },
+        {
+          "day": 10,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 10,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 10,
+          "phase": "bed",
+          "message": "Duyệt Bến cảng lúc bình minh: continue · 0 energy."
+        },
+        {
+          "day": 11,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 11,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 11,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 11,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Hồ sơ Khuê 2 · Căng tin và người trong cuộc."
+        },
+        {
+          "day": 11,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Bến cảng lúc bình minh."
+        },
+        {
+          "day": 12,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 12,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 12,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 12,
+          "phase": "bed",
+          "message": "Phát hành số 2: 4 bài, sức hút 49.486."
+        },
+        {
+          "day": 12,
+          "phase": "bed",
+          "message": "Nhận suất hỗ trợ CLB; đang có 2 suất (mock)."
+        },
+        {
+          "day": 13,
+          "phase": "weekend1",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 13,
+          "phase": "weekend2",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 13,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 14,
+          "phase": "weekend1",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 14,
+          "phase": "weekend2",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 14,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 14,
+          "phase": "bed",
+          "message": "Kết thúc lát cắt; kết quả là chỉ báo cơ chế mock."
+        }
+      ]
+    },
+    {
+      "id": "social",
+      "name": "Sự nghiệp + hẹn hò Vân",
+      "ok": true,
+      "clicks": 174,
+      "K": 84.98714285714286,
+      "T": 99.75,
+      "total": 93.84485714285714,
+      "good": true,
+      "teamArticles": 5,
+      "khueArticles": 2,
+      "money": 510,
+      "metrics": {
+        "opened": 5,
+        "assigned": 5,
+        "restarts": 0,
+        "approvals": 10,
+        "energySpent": 20,
+        "unusedEnergy": 20,
+        "hangouts": 16,
+        "jobs": 7
+      },
+      "romances": [
+        "van"
+      ],
+      "betrayal": false,
+      "reputation": 11,
+      "pressure": 10,
+      "averageIssueScore": 55365.5,
+      "people": [
+        {
+          "id": "khue",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 7.199999999999999,
+            "investigation": 7,
+            "photo": 6.699999999999999,
+            "documents": 6.199999999999999,
+            "empathy": 5,
+            "courage": 6.199999999999999
+          },
+          "skills": [],
+          "tools": [
+            "photo"
+          ]
+        },
+        {
+          "id": "van",
+          "bond": 4,
+          "events": 3,
+          "romance": true,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 4,
+            "photo": 4,
+            "documents": 7,
+            "empathy": 6,
+            "courage": 7
+          },
+          "skills": [
+            "hiệp đồng"
+          ],
+          "tools": []
+        },
+        {
+          "id": "long",
+          "bond": 2,
+          "events": 2,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 6,
+            "investigation": 5,
+            "photo": 4,
+            "documents": 4,
+            "empathy": 8,
+            "courage": 5
+          },
+          "skills": [
+            "hiệp đồng"
+          ],
+          "tools": []
+        },
+        {
+          "id": "nhi",
+          "bond": 3,
+          "events": 2,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 6,
+            "photo": 4,
+            "documents": 9,
+            "empathy": 4,
+            "courage": 5
+          },
+          "skills": [
+            "hiệp đồng"
+          ],
+          "tools": []
+        },
+        {
+          "id": "ngoc",
+          "bond": 9,
+          "events": 9,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 5,
+            "photo": 8,
+            "documents": 4,
+            "empathy": 6,
+            "courage": 5
+          },
+          "skills": [
+            "hiệp đồng"
+          ],
+          "tools": []
+        },
+        {
+          "id": "an",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 7,
+            "photo": 4,
+            "documents": 8,
+            "empathy": 4,
+            "courage": 6
+          },
+          "skills": [],
+          "tools": []
+        }
+      ],
+      "reports": [
+        {
+          "day": 5,
+          "week": 1,
+          "score": 56210,
+          "ids": [
+            "W1-community",
+            "W1-documents",
+            "Q1"
+          ],
+          "reputation": 6
+        },
+        {
+          "day": 12,
+          "week": 2,
+          "score": 54521,
+          "ids": [
+            "W2-community",
+            "W2-documents",
+            "Q2",
+            "W2-photo"
+          ],
+          "reputation": 11
+        }
+      ],
+      "articles": [
+        {
+          "id": "W1-community",
+          "title": "Sân bóng đóng cửa",
+          "branch": "team",
+          "author": "long",
+          "quality": 0.768,
+          "attraction": 7,
+          "readyDay": 2,
+          "processed": true,
+          "score": 39137,
+          "selected": true,
+          "published": true,
+          "publishedDay": 5
+        },
+        {
+          "id": "W1-documents",
+          "title": "Khoản thu câu lạc bộ",
+          "branch": "team",
+          "author": "nhi",
+          "quality": 0.768,
+          "attraction": 8,
+          "readyDay": 2,
+          "processed": true,
+          "score": 51118,
+          "selected": true,
+          "published": true,
+          "publishedDay": 5
+        },
+        {
+          "id": "Q1",
+          "title": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc",
+          "branch": "khue",
+          "author": "khue",
+          "quality": 0.7849999999999999,
+          "attraction": 8,
+          "readyDay": 3,
+          "processed": true,
+          "score": 78374,
+          "selected": true,
+          "published": true,
+          "publishedDay": 5
+        },
+        {
+          "id": "W2-community",
+          "title": "Sân bóng đóng cửa",
+          "branch": "team",
+          "author": "long",
+          "quality": 0.818,
+          "attraction": 7,
+          "readyDay": 9,
+          "processed": true,
+          "score": 41685,
+          "selected": true,
+          "published": true,
+          "publishedDay": 12
+        },
+        {
+          "id": "W2-documents",
+          "title": "Khoản thu câu lạc bộ",
+          "branch": "team",
+          "author": "nhi",
+          "quality": 0.818,
+          "attraction": 8,
+          "readyDay": 9,
+          "processed": true,
+          "score": 54446,
+          "selected": true,
+          "published": true,
+          "publishedDay": 12
+        },
+        {
+          "id": "Q2",
+          "title": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc",
+          "branch": "khue",
+          "author": "khue",
+          "quality": 0.9147428571428571,
+          "attraction": 8,
+          "readyDay": 10,
+          "processed": true,
+          "score": 91328,
+          "selected": true,
+          "published": true,
+          "publishedDay": 12
+        },
+        {
+          "id": "W2-photo",
+          "title": "Bến cảng lúc bình minh",
+          "branch": "team",
+          "author": "ngoc",
+          "quality": 0.818,
+          "attraction": 6,
+          "readyDay": 10,
+          "processed": true,
+          "score": 30626,
+          "selected": true,
+          "published": true,
+          "publishedDay": 12
+        }
+      ],
+      "decisions": [
+        {
+          "day": 1,
+          "kind": "interview",
+          "case": "W1-community",
+          "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện."
+        },
+        {
+          "day": 1,
+          "kind": "assign",
+          "case": "W1-community",
+          "person": "long"
+        },
+        {
+          "day": 1,
+          "kind": "interview",
+          "case": "W1-documents",
+          "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm."
+        },
+        {
+          "day": 1,
+          "kind": "assign",
+          "case": "W1-documents",
+          "person": "nhi"
+        },
+        {
+          "day": 6,
+          "kind": "romance",
+          "person": "van"
+        },
+        {
+          "day": 8,
+          "kind": "interview",
+          "case": "W2-community",
+          "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện."
+        },
+        {
+          "day": 8,
+          "kind": "assign",
+          "case": "W2-community",
+          "person": "long"
+        },
+        {
+          "day": 8,
+          "kind": "interview",
+          "case": "W2-documents",
+          "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm."
+        },
+        {
+          "day": 8,
+          "kind": "assign",
+          "case": "W2-documents",
+          "person": "nhi"
+        },
+        {
+          "day": 9,
+          "kind": "interview",
+          "case": "W2-photo",
+          "story": "Nhân vật muốn kể chuyện qua những khoảnh khắc lao động thực tế. Một cuộc phỏng vấn dài không thay thế được tư liệu hình ảnh đúng lúc."
+        },
+        {
+          "day": 9,
+          "kind": "assign",
+          "case": "W2-photo",
+          "person": "ngoc"
+        }
+      ],
+      "days": [
+        {
+          "day": 1,
+          "feedback": 2,
+          "blockedAtBed": true,
+          "money": 220,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "working",
+              "progress": 1,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "working",
+              "progress": 1,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 2,
+          "feedback": 2,
+          "blockedAtBed": true,
+          "money": 370,
+          "khueFatigue": 14,
+          "romances": [],
+          "draftsWaiting": 2,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 3,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 290,
+          "khueFatigue": 6,
+          "romances": [],
+          "draftsWaiting": 1,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 4,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 220,
+          "khueFatigue": 4,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 5,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 140,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": [
+            {
+              "day": 5,
+              "week": 1,
+              "score": 56210,
+              "ids": [
+                "W1-community",
+                "W1-documents",
+                "Q1"
+              ],
+              "reputation": 6
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 290,
+          "khueFatigue": 0,
+          "romances": [
+            "van"
+          ],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 7,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 150,
+          "khueFatigue": 0,
+          "romances": [
+            "van"
+          ],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 8,
+          "feedback": 2,
+          "blockedAtBed": true,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [
+            "van"
+          ],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "working",
+              "progress": 1,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "working",
+              "progress": 1,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 9,
+          "feedback": 3,
+          "blockedAtBed": true,
+          "money": 220,
+          "khueFatigue": 0,
+          "romances": [
+            "van"
+          ],
+          "draftsWaiting": 2,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-photo",
+              "status": "working",
+              "progress": 1,
+              "owner": "ngoc"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 10,
+          "feedback": 1,
+          "blockedAtBed": true,
+          "money": 370,
+          "khueFatigue": 6,
+          "romances": [
+            "van"
+          ],
+          "draftsWaiting": 2,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-photo",
+              "status": "draft",
+              "progress": 2,
+              "owner": "ngoc"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 11,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 290,
+          "khueFatigue": 0,
+          "romances": [
+            "van"
+          ],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-photo",
+              "status": "draft",
+              "progress": 2,
+              "owner": "ngoc"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 12,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 440,
+          "khueFatigue": 0,
+          "romances": [
+            "van"
+          ],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-photo",
+              "status": "draft",
+              "progress": 2,
+              "owner": "ngoc"
+            }
+          ],
+          "publications": [
+            {
+              "day": 12,
+              "week": 2,
+              "score": 54521,
+              "ids": [
+                "W2-community",
+                "W2-documents",
+                "Q2",
+                "W2-photo"
+              ],
+              "reputation": 11
+            }
+          ]
+        },
+        {
+          "day": 13,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 360,
+          "khueFatigue": 0,
+          "romances": [
+            "van"
+          ],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-photo",
+              "status": "draft",
+              "progress": 2,
+              "owner": "ngoc"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 14,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 510,
+          "khueFatigue": 0,
+          "romances": [
+            "van"
+          ],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-photo",
+              "status": "draft",
+              "progress": 2,
+              "owner": "ngoc"
+            }
+          ],
+          "publications": []
+        }
+      ],
+      "log": [
+        {
+          "day": 1,
+          "phase": "morning",
+          "message": "Bắt đầu lát cắt cơ chế. Nhi được mở sớm để thử phân công; nội dung là mock."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Sân bóng đóng cửa."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Giao Sân bóng đóng cửa cho Đoàn Bảo Long."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Giao Khoản thu câu lạc bộ cho Hạ Tuyết Nhi."
+        },
+        {
+          "day": 1,
+          "phase": "personal",
+          "message": "Hangout với Lục Thanh Vân: bond 1, mốc 1."
+        },
+        {
+          "day": 1,
+          "phase": "evening",
+          "message": "Rèn Ảnh +0,5."
+        },
+        {
+          "day": 1,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 1,
+          "phase": "bed",
+          "message": "Duyệt Sân bóng đóng cửa: continue · 0 energy."
+        },
+        {
+          "day": 1,
+          "phase": "bed",
+          "message": "Duyệt Khoản thu câu lạc bộ: continue · 0 energy."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Nghe hai phía."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Ghi nhận hiện trường."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Đối chiếu chứng từ."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Lấy phản hồi chính thức."
+        },
+        {
+          "day": 2,
+          "phase": "personal",
+          "message": "Lục Thanh Vân mở kỹ năng hiệp đồng (mock)."
+        },
+        {
+          "day": 2,
+          "phase": "personal",
+          "message": "Hangout với Lục Thanh Vân: bond 2, mốc 2."
+        },
+        {
+          "day": 2,
+          "phase": "evening",
+          "message": "Làm thêm +150đ."
+        },
+        {
+          "day": 2,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 2,
+          "phase": "bed",
+          "message": "Duyệt Sân bóng đóng cửa: continue · 0 energy."
+        },
+        {
+          "day": 2,
+          "phase": "bed",
+          "message": "Duyệt Khoản thu câu lạc bộ: continue · 0 energy."
+        },
+        {
+          "day": 3,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 3,
+          "phase": "club",
+          "message": "Khuê chấp bút; bài vào hàng đợi đội soạn."
+        },
+        {
+          "day": 3,
+          "phase": "personal",
+          "message": "Hangout với Đoàn Bảo Long: bond 1, mốc 1."
+        },
+        {
+          "day": 3,
+          "phase": "evening",
+          "message": "Rèn Tài liệu +0,5."
+        },
+        {
+          "day": 3,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Sân bóng đóng cửa."
+        },
+        {
+          "day": 3,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 4,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 4,
+          "phase": "club",
+          "message": "Mua công cụ Ảnh cho Diệp Khuê."
+        },
+        {
+          "day": 4,
+          "phase": "personal",
+          "message": "Đoàn Bảo Long mở kỹ năng hiệp đồng (mock)."
+        },
+        {
+          "day": 4,
+          "phase": "personal",
+          "message": "Hangout với Đoàn Bảo Long: bond 2, mốc 2."
+        },
+        {
+          "day": 4,
+          "phase": "evening",
+          "message": "Làm thêm +150đ."
+        },
+        {
+          "day": 4,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Hồ sơ Khuê 1 · Căng tin và người trong cuộc."
+        },
+        {
+          "day": 5,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 5,
+          "phase": "personal",
+          "message": "Hangout với Lục Thanh Vân: bond 3, mốc 3."
+        },
+        {
+          "day": 5,
+          "phase": "evening",
+          "message": "Rèn Ảnh +0,5."
+        },
+        {
+          "day": 5,
+          "phase": "bed",
+          "message": "Phát hành số 1: 3 bài, sức hút 56.210."
+        },
+        {
+          "day": 6,
+          "phase": "weekend1",
+          "message": "Khuê và Lục Thanh Vân bắt đầu hẹn hò. Quyết định không thể rút lại."
+        },
+        {
+          "day": 6,
+          "phase": "weekend2",
+          "message": "Hangout với Hạ Tuyết Nhi: bond 1, mốc 1."
+        },
+        {
+          "day": 6,
+          "phase": "evening",
+          "message": "Làm thêm +150đ."
+        },
+        {
+          "day": 7,
+          "phase": "weekend1",
+          "message": "Tặng quà tăng bond, không tăng mốc sự kiện."
+        },
+        {
+          "day": 7,
+          "phase": "weekend2",
+          "message": "Hạ Tuyết Nhi mở kỹ năng hiệp đồng (mock)."
+        },
+        {
+          "day": 7,
+          "phase": "weekend2",
+          "message": "Hangout với Hạ Tuyết Nhi: bond 3, mốc 2."
+        },
+        {
+          "day": 7,
+          "phase": "evening",
+          "message": "Rèn Ảnh +0,5."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Sân bóng đóng cửa."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Giao Sân bóng đóng cửa cho Đoàn Bảo Long."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Giao Khoản thu câu lạc bộ cho Hạ Tuyết Nhi."
+        },
+        {
+          "day": 8,
+          "phase": "personal",
+          "message": "Hangout với Tạ Như Ngọc: bond 1, mốc 1."
+        },
+        {
+          "day": 8,
+          "phase": "evening",
+          "message": "Làm thêm +150đ."
+        },
+        {
+          "day": 8,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 8,
+          "phase": "bed",
+          "message": "Duyệt Sân bóng đóng cửa: continue · 0 energy."
+        },
+        {
+          "day": 8,
+          "phase": "bed",
+          "message": "Duyệt Khoản thu câu lạc bộ: continue · 0 energy."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Bến cảng lúc bình minh."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Giao Bến cảng lúc bình minh cho Tạ Như Ngọc."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Nghe hai phía."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Ghi nhận hiện trường."
+        },
+        {
+          "day": 9,
+          "phase": "personal",
+          "message": "Tạ Như Ngọc mở kỹ năng hiệp đồng (mock)."
+        },
+        {
+          "day": 9,
+          "phase": "personal",
+          "message": "Hangout với Tạ Như Ngọc: bond 2, mốc 2."
+        },
+        {
+          "day": 9,
+          "phase": "evening",
+          "message": "Rèn Tài liệu +0,5."
+        },
+        {
+          "day": 9,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 9,
+          "phase": "bed",
+          "message": "Duyệt Sân bóng đóng cửa: continue · 0 energy."
+        },
+        {
+          "day": 9,
+          "phase": "bed",
+          "message": "Duyệt Khoản thu câu lạc bộ: continue · 0 energy."
+        },
+        {
+          "day": 9,
+          "phase": "bed",
+          "message": "Duyệt Bến cảng lúc bình minh: continue · 0 energy."
+        },
+        {
+          "day": 10,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 10,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Đối chiếu chứng từ."
+        },
+        {
+          "day": 10,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Lấy phản hồi chính thức."
+        },
+        {
+          "day": 10,
+          "phase": "club",
+          "message": "Khuê chấp bút; bài vào hàng đợi đội soạn."
+        },
+        {
+          "day": 10,
+          "phase": "personal",
+          "message": "Hangout với Tạ Như Ngọc: bond 3, mốc 3."
+        },
+        {
+          "day": 10,
+          "phase": "evening",
+          "message": "Làm thêm +150đ."
+        },
+        {
+          "day": 10,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Sân bóng đóng cửa."
+        },
+        {
+          "day": 10,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 10,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 10,
+          "phase": "bed",
+          "message": "Duyệt Bến cảng lúc bình minh: continue · 0 energy."
+        },
+        {
+          "day": 11,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 11,
+          "phase": "personal",
+          "message": "Hangout với Tạ Như Ngọc: bond 4, mốc 4."
+        },
+        {
+          "day": 11,
+          "phase": "evening",
+          "message": "Rèn Ảnh +0,5."
+        },
+        {
+          "day": 11,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Hồ sơ Khuê 2 · Căng tin và người trong cuộc."
+        },
+        {
+          "day": 11,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Bến cảng lúc bình minh."
+        },
+        {
+          "day": 12,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 12,
+          "phase": "personal",
+          "message": "Hangout với Tạ Như Ngọc: bond 5, mốc 5."
+        },
+        {
+          "day": 12,
+          "phase": "evening",
+          "message": "Làm thêm +150đ."
+        },
+        {
+          "day": 12,
+          "phase": "bed",
+          "message": "Phát hành số 2: 4 bài, sức hút 54.521."
+        },
+        {
+          "day": 12,
+          "phase": "bed",
+          "message": "Nhận suất hỗ trợ CLB; đang có 2 suất (mock)."
+        },
+        {
+          "day": 13,
+          "phase": "weekend1",
+          "message": "Hangout với Tạ Như Ngọc: bond 6, mốc 6."
+        },
+        {
+          "day": 13,
+          "phase": "weekend2",
+          "message": "Dùng suất CLB: Hạ Tuyết Nhi, Tài liệu +0,5."
+        },
+        {
+          "day": 13,
+          "phase": "weekend2",
+          "message": "Hangout với Tạ Như Ngọc: bond 7, mốc 7."
+        },
+        {
+          "day": 13,
+          "phase": "evening",
+          "message": "Dùng suất CLB: Hạ Tuyết Nhi, Tài liệu +0,5."
+        },
+        {
+          "day": 13,
+          "phase": "evening",
+          "message": "Rèn Ảnh +0,5."
+        },
+        {
+          "day": 14,
+          "phase": "weekend1",
+          "message": "Hangout với Tạ Như Ngọc: bond 8, mốc 8."
+        },
+        {
+          "day": 14,
+          "phase": "weekend2",
+          "message": "Hangout với Tạ Như Ngọc: bond 9, mốc 9."
+        },
+        {
+          "day": 14,
+          "phase": "evening",
+          "message": "Làm thêm +150đ."
+        },
+        {
+          "day": 14,
+          "phase": "bed",
+          "message": "Kết thúc lát cắt; kết quả là chỉ báo cơ chế mock."
+        }
+      ]
+    },
+    {
+      "id": "rescue",
+      "name": "Giao sai rồi cứu hồ sơ",
+      "ok": true,
+      "clicks": 159,
+      "K": 77.89,
+      "T": 76.8,
+      "total": 77.236,
+      "good": true,
+      "teamArticles": 4,
+      "khueArticles": 2,
+      "money": 300,
+      "metrics": {
+        "opened": 4,
+        "assigned": 4,
+        "restarts": 1,
+        "approvals": 9,
+        "energySpent": 18,
+        "unusedEnergy": 22,
+        "hangouts": 0,
+        "jobs": 0
+      },
+      "romances": [],
+      "betrayal": false,
+      "reputation": 12,
+      "pressure": 10,
+      "averageIssueScore": 56006.5,
+      "people": [
+        {
+          "id": "khue",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 7.199999999999999,
+            "investigation": 7,
+            "photo": 4.199999999999999,
+            "documents": 5.199999999999999,
+            "empathy": 5,
+            "courage": 6.199999999999999
+          },
+          "skills": [],
+          "tools": []
+        },
+        {
+          "id": "van",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 4,
+            "photo": 4,
+            "documents": 7,
+            "empathy": 6,
+            "courage": 7
+          },
+          "skills": [],
+          "tools": []
+        },
+        {
+          "id": "long",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 6,
+            "investigation": 5,
+            "photo": 4,
+            "documents": 4,
+            "empathy": 8,
+            "courage": 5
+          },
+          "skills": [],
+          "tools": []
+        },
+        {
+          "id": "nhi",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 6,
+            "photo": 4,
+            "documents": 8,
+            "empathy": 4,
+            "courage": 5
+          },
+          "skills": [],
+          "tools": []
+        },
+        {
+          "id": "ngoc",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 5,
+            "photo": 8,
+            "documents": 4,
+            "empathy": 6,
+            "courage": 5
+          },
+          "skills": [],
+          "tools": []
+        },
+        {
+          "id": "an",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 7,
+            "photo": 4,
+            "documents": 8,
+            "empathy": 4,
+            "courage": 6
+          },
+          "skills": [],
+          "tools": []
+        }
+      ],
+      "reports": [
+        {
+          "day": 5,
+          "week": 1,
+          "score": 56043,
+          "ids": [
+            "Q1",
+            "W1-community",
+            "W1-documents"
+          ],
+          "reputation": 6
+        },
+        {
+          "day": 12,
+          "week": 2,
+          "score": 55970,
+          "ids": [
+            "W2-community",
+            "W2-documents",
+            "Q2"
+          ],
+          "reputation": 12
+        }
+      ],
+      "articles": [
+        {
+          "id": "Q1",
+          "title": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc",
+          "branch": "khue",
+          "author": "khue",
+          "quality": 0.78,
+          "attraction": 8,
+          "readyDay": 3,
+          "processed": true,
+          "score": 77875,
+          "selected": true,
+          "published": true,
+          "publishedDay": 5
+        },
+        {
+          "id": "W1-community",
+          "title": "Sân bóng đóng cửa",
+          "branch": "team",
+          "author": "long",
+          "quality": 0.768,
+          "attraction": 7,
+          "readyDay": 3,
+          "processed": true,
+          "score": 39137,
+          "selected": true,
+          "published": true,
+          "publishedDay": 5
+        },
+        {
+          "id": "W1-documents",
+          "title": "Khoản thu câu lạc bộ",
+          "branch": "team",
+          "author": "nhi",
+          "quality": 0.768,
+          "attraction": 8,
+          "readyDay": 3,
+          "processed": true,
+          "score": 51118,
+          "selected": true,
+          "published": true,
+          "publishedDay": 5
+        },
+        {
+          "id": "W2-community",
+          "title": "Sân bóng đóng cửa",
+          "branch": "team",
+          "author": "long",
+          "quality": 0.768,
+          "attraction": 7,
+          "readyDay": 9,
+          "processed": true,
+          "score": 39137,
+          "selected": true,
+          "published": true,
+          "publishedDay": 12
+        },
+        {
+          "id": "W2-documents",
+          "title": "Khoản thu câu lạc bộ",
+          "branch": "team",
+          "author": "nhi",
+          "quality": 0.768,
+          "attraction": 8,
+          "readyDay": 9,
+          "processed": true,
+          "score": 51118,
+          "selected": true,
+          "published": true,
+          "publishedDay": 12
+        },
+        {
+          "id": "Q2",
+          "title": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc",
+          "branch": "khue",
+          "author": "khue",
+          "quality": 0.7778,
+          "attraction": 8,
+          "readyDay": 10,
+          "processed": true,
+          "score": 77656,
+          "selected": true,
+          "published": true,
+          "publishedDay": 12
+        }
+      ],
+      "decisions": [
+        {
+          "day": 1,
+          "kind": "interview",
+          "case": "W1-documents",
+          "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm."
+        },
+        {
+          "day": 1,
+          "kind": "assign",
+          "case": "W1-documents",
+          "person": "long"
+        },
+        {
+          "day": 1,
+          "kind": "rescue",
+          "case": "W1-documents",
+          "replacement": "nhi"
+        },
+        {
+          "day": 2,
+          "kind": "interview",
+          "case": "W1-community",
+          "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện."
+        },
+        {
+          "day": 2,
+          "kind": "assign",
+          "case": "W1-community",
+          "person": "long"
+        },
+        {
+          "day": 8,
+          "kind": "interview",
+          "case": "W2-community",
+          "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện."
+        },
+        {
+          "day": 8,
+          "kind": "assign",
+          "case": "W2-community",
+          "person": "long"
+        },
+        {
+          "day": 8,
+          "kind": "interview",
+          "case": "W2-documents",
+          "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm."
+        },
+        {
+          "day": 8,
+          "kind": "assign",
+          "case": "W2-documents",
+          "person": "nhi"
+        }
+      ],
+      "days": [
+        {
+          "day": 1,
+          "feedback": 1,
+          "blockedAtBed": true,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-documents",
+              "status": "working",
+              "progress": 0,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 2,
+          "feedback": 2,
+          "blockedAtBed": true,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "working",
+              "progress": 1,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "working",
+              "progress": 1,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 3,
+          "feedback": 2,
+          "blockedAtBed": true,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 3,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 4,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 5,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": [
+            {
+              "day": 5,
+              "week": 1,
+              "score": 56043,
+              "ids": [
+                "Q1",
+                "W1-community",
+                "W1-documents"
+              ],
+              "reputation": 6
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 7,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 8,
+          "feedback": 2,
+          "blockedAtBed": true,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "working",
+              "progress": 1,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "working",
+              "progress": 1,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 9,
+          "feedback": 2,
+          "blockedAtBed": true,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 2,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 10,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 1,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 11,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 12,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": [
+            {
+              "day": 12,
+              "week": 2,
+              "score": 55970,
+              "ids": [
+                "W2-community",
+                "W2-documents",
+                "Q2"
+              ],
+              "reputation": 12
+            }
+          ]
+        },
+        {
+          "day": 13,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 14,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        }
+      ],
+      "log": [
+        {
+          "day": 1,
+          "phase": "morning",
+          "message": "Bắt đầu lát cắt cơ chế. Nhi được mở sớm để thử phân công; nội dung là mock."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Giao Khoản thu câu lạc bộ cho Đoàn Bảo Long."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Nghe hai phía."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Ghi nhận hiện trường."
+        },
+        {
+          "day": 1,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 1,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 1,
+          "phase": "bed",
+          "message": "Đoàn Bảo Long báo không phù hợp: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 1,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 1,
+          "phase": "bed",
+          "message": "Duyệt Khoản thu câu lạc bộ: reassign · 0 energy."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Sân bóng đóng cửa."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Giao Sân bóng đóng cửa cho Đoàn Bảo Long."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Đối chiếu chứng từ."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Lấy phản hồi chính thức."
+        },
+        {
+          "day": 2,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 2,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 2,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 2,
+          "phase": "bed",
+          "message": "Duyệt Sân bóng đóng cửa: continue · 0 energy."
+        },
+        {
+          "day": 2,
+          "phase": "bed",
+          "message": "Duyệt Khoản thu câu lạc bộ: continue · 0 energy."
+        },
+        {
+          "day": 3,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 3,
+          "phase": "club",
+          "message": "Khuê chấp bút; bài vào hàng đợi đội soạn."
+        },
+        {
+          "day": 3,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 3,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 3,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 3,
+          "phase": "bed",
+          "message": "Duyệt Sân bóng đóng cửa: continue · 0 energy."
+        },
+        {
+          "day": 3,
+          "phase": "bed",
+          "message": "Duyệt Khoản thu câu lạc bộ: continue · 0 energy."
+        },
+        {
+          "day": 4,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 4,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 4,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 4,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Hồ sơ Khuê 1 · Căng tin và người trong cuộc."
+        },
+        {
+          "day": 4,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Sân bóng đóng cửa."
+        },
+        {
+          "day": 4,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 5,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 5,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 5,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 5,
+          "phase": "bed",
+          "message": "Phát hành số 1: 3 bài, sức hút 56.043."
+        },
+        {
+          "day": 6,
+          "phase": "weekend1",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 6,
+          "phase": "weekend2",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 6,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 7,
+          "phase": "weekend1",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 7,
+          "phase": "weekend2",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 7,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Sân bóng đóng cửa."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Giao Sân bóng đóng cửa cho Đoàn Bảo Long."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Giao Khoản thu câu lạc bộ cho Hạ Tuyết Nhi."
+        },
+        {
+          "day": 8,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 8,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 8,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 8,
+          "phase": "bed",
+          "message": "Duyệt Sân bóng đóng cửa: continue · 0 energy."
+        },
+        {
+          "day": 8,
+          "phase": "bed",
+          "message": "Duyệt Khoản thu câu lạc bộ: continue · 0 energy."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Nghe hai phía."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Ghi nhận hiện trường."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Đối chiếu chứng từ."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Lấy phản hồi chính thức."
+        },
+        {
+          "day": 9,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 9,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 9,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 9,
+          "phase": "bed",
+          "message": "Duyệt Sân bóng đóng cửa: continue · 0 energy."
+        },
+        {
+          "day": 9,
+          "phase": "bed",
+          "message": "Duyệt Khoản thu câu lạc bộ: continue · 0 energy."
+        },
+        {
+          "day": 10,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 10,
+          "phase": "club",
+          "message": "Khuê chấp bút; bài vào hàng đợi đội soạn."
+        },
+        {
+          "day": 10,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 10,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 10,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Sân bóng đóng cửa."
+        },
+        {
+          "day": 10,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 11,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 11,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 11,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 11,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Hồ sơ Khuê 2 · Căng tin và người trong cuộc."
+        },
+        {
+          "day": 12,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 12,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 12,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 12,
+          "phase": "bed",
+          "message": "Phát hành số 2: 3 bài, sức hút 55.970."
+        },
+        {
+          "day": 12,
+          "phase": "bed",
+          "message": "Nhận suất hỗ trợ CLB; đang có 2 suất (mock)."
+        },
+        {
+          "day": 13,
+          "phase": "weekend1",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 13,
+          "phase": "weekend2",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 13,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 14,
+          "phase": "weekend1",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 14,
+          "phase": "weekend2",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 14,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 14,
+          "phase": "bed",
+          "message": "Kết thúc lát cắt; kết quả là chỉ báo cơ chế mock."
+        }
+      ]
+    },
+    {
+      "id": "affair",
+      "name": "Hẹn hò Vân và Nhi",
+      "ok": true,
+      "clicks": 167,
+      "K": 77.90142857142857,
+      "T": 84.3,
+      "total": 81.74057142857143,
+      "good": true,
+      "teamArticles": 5,
+      "khueArticles": 2,
+      "money": 2100,
+      "metrics": {
+        "opened": 5,
+        "assigned": 5,
+        "restarts": 0,
+        "approvals": 9,
+        "energySpent": 20,
+        "unusedEnergy": 20,
+        "hangouts": 7,
+        "jobs": 12
+      },
+      "romances": [
+        "van",
+        "nhi"
+      ],
+      "betrayal": true,
+      "reputation": 10,
+      "pressure": 10,
+      "averageIssueScore": 48661.5,
+      "people": [
+        {
+          "id": "khue",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 7.199999999999999,
+            "investigation": 7,
+            "photo": 4.199999999999999,
+            "documents": 5.199999999999999,
+            "empathy": 5,
+            "courage": 6.199999999999999
+          },
+          "skills": [],
+          "tools": []
+        },
+        {
+          "id": "van",
+          "bond": 2,
+          "events": 3,
+          "romance": true,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 4,
+            "photo": 4,
+            "documents": 7,
+            "empathy": 6,
+            "courage": 7
+          },
+          "skills": [
+            "hiệp đồng"
+          ],
+          "tools": []
+        },
+        {
+          "id": "long",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 6,
+            "investigation": 5,
+            "photo": 4,
+            "documents": 4,
+            "empathy": 8,
+            "courage": 5
+          },
+          "skills": [],
+          "tools": []
+        },
+        {
+          "id": "nhi",
+          "bond": 3,
+          "events": 4,
+          "romance": true,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 6,
+            "photo": 4,
+            "documents": 8,
+            "empathy": 4,
+            "courage": 5
+          },
+          "skills": [
+            "hiệp đồng"
+          ],
+          "tools": []
+        },
+        {
+          "id": "ngoc",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 5,
+            "photo": 8,
+            "documents": 4,
+            "empathy": 6,
+            "courage": 5
+          },
+          "skills": [],
+          "tools": []
+        },
+        {
+          "id": "an",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 7,
+            "photo": 4,
+            "documents": 8,
+            "empathy": 4,
+            "courage": 6
+          },
+          "skills": [],
+          "tools": []
+        }
+      ],
+      "reports": [
+        {
+          "day": 5,
+          "week": 1,
+          "score": 55625,
+          "ids": [
+            "W1-community",
+            "W1-documents",
+            "Q1"
+          ],
+          "reputation": 6
+        },
+        {
+          "day": 12,
+          "week": 2,
+          "score": 41698,
+          "ids": [
+            "W2-documents",
+            "W2-community",
+            "Q2",
+            "W2-photo"
+          ],
+          "reputation": 10
+        }
+      ],
+      "articles": [
+        {
+          "id": "W1-community",
+          "title": "Sân bóng đóng cửa",
+          "branch": "team",
+          "author": "long",
+          "quality": 0.768,
+          "attraction": 7,
+          "readyDay": 2,
+          "processed": true,
+          "score": 39137,
+          "selected": true,
+          "published": true,
+          "publishedDay": 5
+        },
+        {
+          "id": "W1-documents",
+          "title": "Khoản thu câu lạc bộ",
+          "branch": "team",
+          "author": "nhi",
+          "quality": 0.768,
+          "attraction": 8,
+          "readyDay": 2,
+          "processed": true,
+          "score": 51118,
+          "selected": true,
+          "published": true,
+          "publishedDay": 5
+        },
+        {
+          "id": "Q1",
+          "title": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc",
+          "branch": "khue",
+          "author": "khue",
+          "quality": 0.7674285714285713,
+          "attraction": 8,
+          "readyDay": 3,
+          "processed": true,
+          "score": 76620,
+          "selected": true,
+          "published": true,
+          "publishedDay": 5
+        },
+        {
+          "id": "W2-documents",
+          "title": "Khoản thu câu lạc bộ",
+          "branch": "team",
+          "author": "nhi",
+          "quality": 0.3,
+          "attraction": 8,
+          "readyDay": 8,
+          "processed": true,
+          "score": 19968,
+          "selected": true,
+          "published": true,
+          "publishedDay": 12
+        },
+        {
+          "id": "W2-community",
+          "title": "Sân bóng đóng cửa",
+          "branch": "team",
+          "author": "long",
+          "quality": 0.768,
+          "attraction": 7,
+          "readyDay": 9,
+          "processed": true,
+          "score": 39137,
+          "selected": true,
+          "published": true,
+          "publishedDay": 12
+        },
+        {
+          "id": "Q2",
+          "title": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc",
+          "branch": "khue",
+          "author": "khue",
+          "quality": 0.7906,
+          "attraction": 8,
+          "readyDay": 10,
+          "processed": true,
+          "score": 78934,
+          "selected": true,
+          "published": true,
+          "publishedDay": 12
+        },
+        {
+          "id": "W2-photo",
+          "title": "Bến cảng lúc bình minh",
+          "branch": "team",
+          "author": "ngoc",
+          "quality": 0.768,
+          "attraction": 6,
+          "readyDay": 10,
+          "processed": true,
+          "score": 28754,
+          "selected": true,
+          "published": true,
+          "publishedDay": 12
+        }
+      ],
+      "decisions": [
+        {
+          "day": 1,
+          "kind": "interview",
+          "case": "W1-community",
+          "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện."
+        },
+        {
+          "day": 1,
+          "kind": "assign",
+          "case": "W1-community",
+          "person": "long"
+        },
+        {
+          "day": 1,
+          "kind": "interview",
+          "case": "W1-documents",
+          "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm."
+        },
+        {
+          "day": 1,
+          "kind": "assign",
+          "case": "W1-documents",
+          "person": "nhi"
+        },
+        {
+          "day": 3,
+          "kind": "romance",
+          "person": "van"
+        },
+        {
+          "day": 6,
+          "kind": "romance",
+          "person": "nhi"
+        },
+        {
+          "day": 8,
+          "kind": "interview",
+          "case": "W2-community",
+          "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện."
+        },
+        {
+          "day": 8,
+          "kind": "assign",
+          "case": "W2-community",
+          "person": "long"
+        },
+        {
+          "day": 8,
+          "kind": "interview",
+          "case": "W2-documents",
+          "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm."
+        },
+        {
+          "day": 8,
+          "kind": "assign",
+          "case": "W2-documents",
+          "person": "nhi"
+        },
+        {
+          "day": 8,
+          "kind": "short",
+          "case": "W2-documents"
+        },
+        {
+          "day": 9,
+          "kind": "interview",
+          "case": "W2-photo",
+          "story": "Nhân vật muốn kể chuyện qua những khoảnh khắc lao động thực tế. Một cuộc phỏng vấn dài không thay thế được tư liệu hình ảnh đúng lúc."
+        },
+        {
+          "day": 9,
+          "kind": "assign",
+          "case": "W2-photo",
+          "person": "ngoc"
+        }
+      ],
+      "days": [
+        {
+          "day": 1,
+          "feedback": 2,
+          "blockedAtBed": true,
+          "money": 450,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "working",
+              "progress": 1,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "working",
+              "progress": 1,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 2,
+          "feedback": 2,
+          "blockedAtBed": true,
+          "money": 600,
+          "khueFatigue": 14,
+          "romances": [],
+          "draftsWaiting": 2,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 3,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 600,
+          "khueFatigue": 2,
+          "romances": [
+            "van"
+          ],
+          "draftsWaiting": 1,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 4,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 750,
+          "khueFatigue": 0,
+          "romances": [
+            "van"
+          ],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 5,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 900,
+          "khueFatigue": 0,
+          "romances": [
+            "van"
+          ],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": [
+            {
+              "day": 5,
+              "week": 1,
+              "score": 55625,
+              "ids": [
+                "W1-community",
+                "W1-documents",
+                "Q1"
+              ],
+              "reputation": 6
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 900,
+          "khueFatigue": 0,
+          "romances": [
+            "van",
+            "nhi"
+          ],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 7,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 1050,
+          "khueFatigue": 0,
+          "romances": [
+            "van",
+            "nhi"
+          ],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 8,
+          "feedback": 2,
+          "blockedAtBed": true,
+          "money": 1200,
+          "khueFatigue": 0,
+          "romances": [
+            "van",
+            "nhi"
+          ],
+          "draftsWaiting": 1,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "working",
+              "progress": 1,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 1,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 9,
+          "feedback": 2,
+          "blockedAtBed": true,
+          "money": 1350,
+          "khueFatigue": 0,
+          "romances": [
+            "van",
+            "nhi"
+          ],
+          "draftsWaiting": 1,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 1,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-photo",
+              "status": "working",
+              "progress": 1,
+              "owner": "ngoc"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 10,
+          "feedback": 1,
+          "blockedAtBed": true,
+          "money": 1500,
+          "khueFatigue": 0,
+          "romances": [
+            "van",
+            "nhi"
+          ],
+          "draftsWaiting": 2,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 1,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-photo",
+              "status": "draft",
+              "progress": 2,
+              "owner": "ngoc"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 11,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 1650,
+          "khueFatigue": 0,
+          "romances": [
+            "van",
+            "nhi"
+          ],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 1,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-photo",
+              "status": "draft",
+              "progress": 2,
+              "owner": "ngoc"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 12,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 1800,
+          "khueFatigue": 0,
+          "romances": [
+            "van",
+            "nhi"
+          ],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 1,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-photo",
+              "status": "draft",
+              "progress": 2,
+              "owner": "ngoc"
+            }
+          ],
+          "publications": [
+            {
+              "day": 12,
+              "week": 2,
+              "score": 41698,
+              "ids": [
+                "W2-documents",
+                "W2-community",
+                "Q2",
+                "W2-photo"
+              ],
+              "reputation": 10
+            }
+          ]
+        },
+        {
+          "day": 13,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 1950,
+          "khueFatigue": 0,
+          "romances": [
+            "van",
+            "nhi"
+          ],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 1,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-photo",
+              "status": "draft",
+              "progress": 2,
+              "owner": "ngoc"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 14,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 2100,
+          "khueFatigue": 0,
+          "romances": [
+            "van",
+            "nhi"
+          ],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "draft",
+              "progress": 1,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-photo",
+              "status": "draft",
+              "progress": 2,
+              "owner": "ngoc"
+            }
+          ],
+          "publications": []
+        }
+      ],
+      "log": [
+        {
+          "day": 1,
+          "phase": "morning",
+          "message": "Bắt đầu lát cắt cơ chế. Nhi được mở sớm để thử phân công; nội dung là mock."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Sân bóng đóng cửa."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Giao Sân bóng đóng cửa cho Đoàn Bảo Long."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Giao Khoản thu câu lạc bộ cho Hạ Tuyết Nhi."
+        },
+        {
+          "day": 1,
+          "phase": "personal",
+          "message": "Hangout với Lục Thanh Vân: bond 1, mốc 1."
+        },
+        {
+          "day": 1,
+          "phase": "evening",
+          "message": "Làm thêm +150đ."
+        },
+        {
+          "day": 1,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 1,
+          "phase": "bed",
+          "message": "Duyệt Sân bóng đóng cửa: continue · 0 energy."
+        },
+        {
+          "day": 1,
+          "phase": "bed",
+          "message": "Duyệt Khoản thu câu lạc bộ: continue · 0 energy."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Nghe hai phía."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Ghi nhận hiện trường."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Đối chiếu chứng từ."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Lấy phản hồi chính thức."
+        },
+        {
+          "day": 2,
+          "phase": "personal",
+          "message": "Lục Thanh Vân mở kỹ năng hiệp đồng (mock)."
+        },
+        {
+          "day": 2,
+          "phase": "personal",
+          "message": "Hangout với Lục Thanh Vân: bond 2, mốc 2."
+        },
+        {
+          "day": 2,
+          "phase": "evening",
+          "message": "Làm thêm +150đ."
+        },
+        {
+          "day": 2,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 2,
+          "phase": "bed",
+          "message": "Duyệt Sân bóng đóng cửa: continue · 0 energy."
+        },
+        {
+          "day": 2,
+          "phase": "bed",
+          "message": "Duyệt Khoản thu câu lạc bộ: continue · 0 energy."
+        },
+        {
+          "day": 3,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 3,
+          "phase": "club",
+          "message": "Khuê chấp bút; bài vào hàng đợi đội soạn."
+        },
+        {
+          "day": 3,
+          "phase": "personal",
+          "message": "Hangout với Lục Thanh Vân: bond 3, mốc 3."
+        },
+        {
+          "day": 3,
+          "phase": "evening",
+          "message": "Khuê và Lục Thanh Vân bắt đầu hẹn hò. Quyết định không thể rút lại."
+        },
+        {
+          "day": 3,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Sân bóng đóng cửa."
+        },
+        {
+          "day": 3,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 4,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 4,
+          "phase": "personal",
+          "message": "Hangout với Hạ Tuyết Nhi: bond 1, mốc 1."
+        },
+        {
+          "day": 4,
+          "phase": "evening",
+          "message": "Làm thêm +150đ."
+        },
+        {
+          "day": 4,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Hồ sơ Khuê 1 · Căng tin và người trong cuộc."
+        },
+        {
+          "day": 5,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 5,
+          "phase": "personal",
+          "message": "Hạ Tuyết Nhi mở kỹ năng hiệp đồng (mock)."
+        },
+        {
+          "day": 5,
+          "phase": "personal",
+          "message": "Hangout với Hạ Tuyết Nhi: bond 2, mốc 2."
+        },
+        {
+          "day": 5,
+          "phase": "evening",
+          "message": "Làm thêm +150đ."
+        },
+        {
+          "day": 5,
+          "phase": "bed",
+          "message": "Phát hành số 1: 3 bài, sức hút 55.625."
+        },
+        {
+          "day": 6,
+          "phase": "weekend1",
+          "message": "Hangout với Hạ Tuyết Nhi: bond 3, mốc 3."
+        },
+        {
+          "day": 6,
+          "phase": "weekend2",
+          "message": "Hangout với Hạ Tuyết Nhi: bond 4, mốc 4."
+        },
+        {
+          "day": 6,
+          "phase": "evening",
+          "message": "Khuê và Hạ Tuyết Nhi bắt đầu hẹn hò. Quyết định không thể rút lại."
+        },
+        {
+          "day": 6,
+          "phase": "bed",
+          "message": "Bị phát hiện bắt cá hai tay: các bạn gái giảm bond và hiệu suất. Thời hạn hồi phục chưa mô phỏng."
+        },
+        {
+          "day": 7,
+          "phase": "weekend1",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 7,
+          "phase": "weekend2",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 7,
+          "phase": "evening",
+          "message": "Làm thêm +150đ."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Sân bóng đóng cửa."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Giao Sân bóng đóng cửa cho Đoàn Bảo Long."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Giao Khoản thu câu lạc bộ cho Hạ Tuyết Nhi."
+        },
+        {
+          "day": 8,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 8,
+          "phase": "evening",
+          "message": "Làm thêm +150đ."
+        },
+        {
+          "day": 8,
+          "phase": "bed",
+          "message": "Hạ Tuyết Nhi báo không phù hợp: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 8,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 8,
+          "phase": "bed",
+          "message": "Duyệt Sân bóng đóng cửa: continue · 0 energy."
+        },
+        {
+          "day": 8,
+          "phase": "bed",
+          "message": "Duyệt Khoản thu câu lạc bộ: short · 0 energy."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Bến cảng lúc bình minh."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Giao Bến cảng lúc bình minh cho Tạ Như Ngọc."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Nghe hai phía."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Ghi nhận hiện trường."
+        },
+        {
+          "day": 9,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 9,
+          "phase": "evening",
+          "message": "Làm thêm +150đ."
+        },
+        {
+          "day": 9,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 9,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 9,
+          "phase": "bed",
+          "message": "Duyệt Sân bóng đóng cửa: continue · 0 energy."
+        },
+        {
+          "day": 9,
+          "phase": "bed",
+          "message": "Duyệt Bến cảng lúc bình minh: continue · 0 energy."
+        },
+        {
+          "day": 10,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 10,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Đối chiếu chứng từ."
+        },
+        {
+          "day": 10,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Lấy phản hồi chính thức."
+        },
+        {
+          "day": 10,
+          "phase": "club",
+          "message": "Khuê chấp bút; bài vào hàng đợi đội soạn."
+        },
+        {
+          "day": 10,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 10,
+          "phase": "evening",
+          "message": "Làm thêm +150đ."
+        },
+        {
+          "day": 10,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Sân bóng đóng cửa."
+        },
+        {
+          "day": 10,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 10,
+          "phase": "bed",
+          "message": "Duyệt Bến cảng lúc bình minh: continue · 0 energy."
+        },
+        {
+          "day": 11,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 11,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 11,
+          "phase": "evening",
+          "message": "Làm thêm +150đ."
+        },
+        {
+          "day": 11,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Hồ sơ Khuê 2 · Căng tin và người trong cuộc."
+        },
+        {
+          "day": 11,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Bến cảng lúc bình minh."
+        },
+        {
+          "day": 12,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 12,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 12,
+          "phase": "evening",
+          "message": "Làm thêm +150đ."
+        },
+        {
+          "day": 12,
+          "phase": "bed",
+          "message": "Phát hành số 2: 4 bài, sức hút 41.698."
+        },
+        {
+          "day": 12,
+          "phase": "bed",
+          "message": "Nhận suất hỗ trợ CLB; đang có 2 suất (mock)."
+        },
+        {
+          "day": 13,
+          "phase": "weekend1",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 13,
+          "phase": "weekend2",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 13,
+          "phase": "evening",
+          "message": "Làm thêm +150đ."
+        },
+        {
+          "day": 14,
+          "phase": "weekend1",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 14,
+          "phase": "weekend2",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 14,
+          "phase": "evening",
+          "message": "Làm thêm +150đ."
+        },
+        {
+          "day": 14,
+          "phase": "bed",
+          "message": "Kết thúc lát cắt; kết quả là chỉ báo cơ chế mock."
+        }
+      ]
+    },
+    {
+      "id": "late",
+      "name": "Trì hoãn phân công đến thứ Sáu",
+      "ok": true,
+      "clicks": 139,
+      "K": 77.26142857142857,
+      "T": 38.4,
+      "total": 53.94457142857143,
+      "good": false,
+      "teamArticles": 2,
+      "khueArticles": 2,
+      "money": 300,
+      "metrics": {
+        "opened": 4,
+        "assigned": 4,
+        "restarts": 0,
+        "approvals": 6,
+        "energySpent": 18,
+        "unusedEnergy": 22,
+        "hangouts": 0,
+        "jobs": 0
+      },
+      "romances": [],
+      "betrayal": false,
+      "reputation": 14,
+      "pressure": 10,
+      "averageIssueScore": 66295,
+      "people": [
+        {
+          "id": "khue",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 7.199999999999999,
+            "investigation": 7,
+            "photo": 4.199999999999999,
+            "documents": 5.199999999999999,
+            "empathy": 5,
+            "courage": 6.199999999999999
+          },
+          "skills": [],
+          "tools": []
+        },
+        {
+          "id": "van",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 4,
+            "photo": 4,
+            "documents": 7,
+            "empathy": 6,
+            "courage": 7
+          },
+          "skills": [],
+          "tools": []
+        },
+        {
+          "id": "long",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 6,
+            "investigation": 5,
+            "photo": 4,
+            "documents": 4,
+            "empathy": 8,
+            "courage": 5
+          },
+          "skills": [],
+          "tools": []
+        },
+        {
+          "id": "nhi",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 6,
+            "photo": 4,
+            "documents": 8,
+            "empathy": 4,
+            "courage": 5
+          },
+          "skills": [],
+          "tools": []
+        },
+        {
+          "id": "ngoc",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 5,
+            "photo": 8,
+            "documents": 4,
+            "empathy": 6,
+            "courage": 5
+          },
+          "skills": [],
+          "tools": []
+        },
+        {
+          "id": "an",
+          "bond": 0,
+          "events": 0,
+          "romance": false,
+          "fatigue": 0,
+          "stats": {
+            "interview": 5,
+            "investigation": 7,
+            "photo": 4,
+            "documents": 8,
+            "empathy": 4,
+            "courage": 6
+          },
+          "skills": [],
+          "tools": []
+        }
+      ],
+      "reports": [
+        {
+          "day": 5,
+          "week": 1,
+          "score": 76620,
+          "ids": [
+            "Q1"
+          ],
+          "reputation": 8
+        },
+        {
+          "day": 12,
+          "week": 2,
+          "score": 55970,
+          "ids": [
+            "W1-community",
+            "W1-documents",
+            "Q2"
+          ],
+          "reputation": 14
+        }
+      ],
+      "articles": [
+        {
+          "id": "Q1",
+          "title": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc",
+          "branch": "khue",
+          "author": "khue",
+          "quality": 0.7674285714285713,
+          "attraction": 8,
+          "readyDay": 2,
+          "processed": true,
+          "score": 76620,
+          "selected": true,
+          "published": true,
+          "publishedDay": 5
+        },
+        {
+          "id": "W1-community",
+          "title": "Sân bóng đóng cửa",
+          "branch": "team",
+          "author": "long",
+          "quality": 0.768,
+          "attraction": 7,
+          "readyDay": 8,
+          "processed": true,
+          "score": 39137,
+          "selected": true,
+          "published": true,
+          "publishedDay": 12
+        },
+        {
+          "id": "W1-documents",
+          "title": "Khoản thu câu lạc bộ",
+          "branch": "team",
+          "author": "nhi",
+          "quality": 0.768,
+          "attraction": 8,
+          "readyDay": 8,
+          "processed": true,
+          "score": 51118,
+          "selected": true,
+          "published": true,
+          "publishedDay": 12
+        },
+        {
+          "id": "Q2",
+          "title": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc",
+          "branch": "khue",
+          "author": "khue",
+          "quality": 0.7778,
+          "attraction": 8,
+          "readyDay": 9,
+          "processed": true,
+          "score": 77656,
+          "selected": true,
+          "published": true,
+          "publishedDay": 12
+        }
+      ],
+      "decisions": [
+        {
+          "day": 5,
+          "kind": "interview",
+          "case": "W1-community",
+          "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện."
+        },
+        {
+          "day": 5,
+          "kind": "assign",
+          "case": "W1-community",
+          "person": "long"
+        },
+        {
+          "day": 5,
+          "kind": "interview",
+          "case": "W1-documents",
+          "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm."
+        },
+        {
+          "day": 5,
+          "kind": "assign",
+          "case": "W1-documents",
+          "person": "nhi"
+        },
+        {
+          "day": 12,
+          "kind": "interview",
+          "case": "W2-community",
+          "story": "Người quản lý không muốn trao đổi qua văn bản. Các bạn trong đội cần người chịu ngồi nghe và tạo lòng tin trước khi hỏi chuyện."
+        },
+        {
+          "day": 12,
+          "kind": "assign",
+          "case": "W2-community",
+          "person": "long"
+        },
+        {
+          "day": 12,
+          "kind": "interview",
+          "case": "W2-documents",
+          "story": "Ba bảng kê có số liệu không khớp. Nguồn tin đề nghị đối chiếu tài liệu trước khi viết, vì lời kể ban đầu có thể nhầm."
+        },
+        {
+          "day": 12,
+          "kind": "assign",
+          "case": "W2-documents",
+          "person": "nhi"
+        }
+      ],
+      "days": [
+        {
+          "day": 1,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [],
+          "publications": []
+        },
+        {
+          "day": 2,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 1,
+          "cases": [],
+          "publications": []
+        },
+        {
+          "day": 3,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [],
+          "publications": []
+        },
+        {
+          "day": 4,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [],
+          "publications": []
+        },
+        {
+          "day": 5,
+          "feedback": 2,
+          "blockedAtBed": true,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "working",
+              "progress": 1,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "working",
+              "progress": 1,
+              "owner": "nhi"
+            }
+          ],
+          "publications": [
+            {
+              "day": 5,
+              "week": 1,
+              "score": 76620,
+              "ids": [
+                "Q1"
+              ],
+              "reputation": 8
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "working",
+              "progress": 1,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "working",
+              "progress": 1,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 7,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "working",
+              "progress": 1,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "working",
+              "progress": 1,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 8,
+          "feedback": 2,
+          "blockedAtBed": true,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 2,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 9,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 1,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 10,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 11,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 12,
+          "feedback": 2,
+          "blockedAtBed": true,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "working",
+              "progress": 1,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "working",
+              "progress": 1,
+              "owner": "nhi"
+            }
+          ],
+          "publications": [
+            {
+              "day": 12,
+              "week": 2,
+              "score": 55970,
+              "ids": [
+                "W1-community",
+                "W1-documents",
+                "Q2"
+              ],
+              "reputation": 14
+            }
+          ]
+        },
+        {
+          "day": 13,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "working",
+              "progress": 1,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "working",
+              "progress": 1,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        },
+        {
+          "day": 14,
+          "feedback": 0,
+          "blockedAtBed": false,
+          "money": 300,
+          "khueFatigue": 0,
+          "romances": [],
+          "draftsWaiting": 0,
+          "cases": [
+            {
+              "id": "W1-community",
+              "status": "draft",
+              "progress": 2,
+              "owner": "long"
+            },
+            {
+              "id": "W1-documents",
+              "status": "draft",
+              "progress": 2,
+              "owner": "nhi"
+            },
+            {
+              "id": "W2-community",
+              "status": "working",
+              "progress": 1,
+              "owner": "long"
+            },
+            {
+              "id": "W2-documents",
+              "status": "working",
+              "progress": 1,
+              "owner": "nhi"
+            }
+          ],
+          "publications": []
+        }
+      ],
+      "log": [
+        {
+          "day": 1,
+          "phase": "morning",
+          "message": "Bắt đầu lát cắt cơ chế. Nhi được mở sớm để thử phân công; nội dung là mock."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Nghe hai phía."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Ghi nhận hiện trường."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Đối chiếu chứng từ."
+        },
+        {
+          "day": 1,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 1 · Căng tin và người trong cuộc: Lấy phản hồi chính thức."
+        },
+        {
+          "day": 1,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 1,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 2,
+          "phase": "club",
+          "message": "Khuê chấp bút; bài vào hàng đợi đội soạn."
+        },
+        {
+          "day": 2,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 2,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 3,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 3,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 3,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 3,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Hồ sơ Khuê 1 · Căng tin và người trong cuộc."
+        },
+        {
+          "day": 4,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 4,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 4,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 5,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 5,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Sân bóng đóng cửa."
+        },
+        {
+          "day": 5,
+          "phase": "club",
+          "message": "Giao Sân bóng đóng cửa cho Đoàn Bảo Long."
+        },
+        {
+          "day": 5,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 5,
+          "phase": "club",
+          "message": "Giao Khoản thu câu lạc bộ cho Hạ Tuyết Nhi."
+        },
+        {
+          "day": 5,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 5,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 5,
+          "phase": "bed",
+          "message": "Phát hành số 1: 1 bài, sức hút 76.620."
+        },
+        {
+          "day": 5,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 5,
+          "phase": "bed",
+          "message": "Duyệt Sân bóng đóng cửa: continue · 0 energy."
+        },
+        {
+          "day": 5,
+          "phase": "bed",
+          "message": "Duyệt Khoản thu câu lạc bộ: continue · 0 energy."
+        },
+        {
+          "day": 6,
+          "phase": "weekend1",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 6,
+          "phase": "weekend2",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 6,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 7,
+          "phase": "weekend1",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 7,
+          "phase": "weekend2",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 7,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Nghe hai phía."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Ghi nhận hiện trường."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Đối chiếu chứng từ."
+        },
+        {
+          "day": 8,
+          "phase": "club",
+          "message": "Hồ sơ Khuê 2 · Căng tin và người trong cuộc: Lấy phản hồi chính thức."
+        },
+        {
+          "day": 8,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 8,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 8,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 8,
+          "phase": "bed",
+          "message": "Duyệt Sân bóng đóng cửa: continue · 0 energy."
+        },
+        {
+          "day": 8,
+          "phase": "bed",
+          "message": "Duyệt Khoản thu câu lạc bộ: continue · 0 energy."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 9,
+          "phase": "club",
+          "message": "Khuê chấp bút; bài vào hàng đợi đội soạn."
+        },
+        {
+          "day": 9,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 9,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 9,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Sân bóng đóng cửa."
+        },
+        {
+          "day": 9,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 10,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 10,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 10,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 10,
+          "phase": "bed",
+          "message": "Vân hoàn tất viết/biên tập: Hồ sơ Khuê 2 · Căng tin và người trong cuộc."
+        },
+        {
+          "day": 11,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 11,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 11,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 12,
+          "phase": "club",
+          "message": "Tan học. Bắt đầu 2 giờ CLB."
+        },
+        {
+          "day": 12,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Sân bóng đóng cửa."
+        },
+        {
+          "day": 12,
+          "phase": "club",
+          "message": "Giao Sân bóng đóng cửa cho Đoàn Bảo Long."
+        },
+        {
+          "day": 12,
+          "phase": "club",
+          "message": "Phỏng vấn mở hồ sơ: Khoản thu câu lạc bộ."
+        },
+        {
+          "day": 12,
+          "phase": "club",
+          "message": "Giao Khoản thu câu lạc bộ cho Hạ Tuyết Nhi."
+        },
+        {
+          "day": 12,
+          "phase": "personal",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 12,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 12,
+          "phase": "bed",
+          "message": "Phát hành số 2: 3 bài, sức hút 55.970."
+        },
+        {
+          "day": 12,
+          "phase": "bed",
+          "message": "Nhận suất hỗ trợ CLB; đang có 2 suất (mock)."
+        },
+        {
+          "day": 12,
+          "phase": "bed",
+          "message": "Còn tin nhắn đồng đội. Cần duyệt ngay trước khi ngủ."
+        },
+        {
+          "day": 12,
+          "phase": "bed",
+          "message": "Duyệt Sân bóng đóng cửa: continue · 0 energy."
+        },
+        {
+          "day": 12,
+          "phase": "bed",
+          "message": "Duyệt Khoản thu câu lạc bộ: continue · 0 energy."
+        },
+        {
+          "day": 13,
+          "phase": "weekend1",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 13,
+          "phase": "weekend2",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 13,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 14,
+          "phase": "weekend1",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 14,
+          "phase": "weekend2",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 14,
+          "phase": "evening",
+          "message": "Nghỉ ngơi, giảm 20 mệt."
+        },
+        {
+          "day": 14,
+          "phase": "bed",
+          "message": "Kết thúc lát cắt; kết quả là chỉ báo cơ chế mock."
+        }
+      ]
+    }
+  ]
+}

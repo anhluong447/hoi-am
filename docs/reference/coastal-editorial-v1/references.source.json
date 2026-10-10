@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "date": "2026-10-09",
+  "status": "User-selected target for a 1:1 replica of these four original concept screens",
+  "direction": "Original coastal editorial UI for Hồi Âm. Match these concepts in composition, art, layers, lighting and materials before adding motion; no recreation of external game IP.",
+  "policy": "Preserve this version, its images and prompts. Create a new version for later visual explorations.",
+  "files": [
+    {
+      "path": "01-dialogue.png",
+      "role": "Dialogue and response selection",
+      "sha256": "68C076B9D013523B745E61E1AF35A8251742BBF7B774C02245F89DACF3D2A5A2"
+    },
+    {
+      "path": "02-menu.png",
+      "role": "Main menu",
+      "sha256": "1DC54992B37A052BE60FC0B4DBC543D3E9153036C118038A981B65EC9DD3AA5B"
+    },
+    {
+      "path": "03-hud-map.png",
+      "role": "Exploration HUD; background is illustrative",
+      "sha256": "FB4EF57D1CBCDA2DD87E2083764721052F0E06F4FAD7E43065BE7750F2BF8618"
+    },
+    {
+      "path": "04-dossier.png",
+      "role": "Editorial case dossier; content is illustrative",
+      "sha256": "9269F198BF76CC4EBD117DDEE9DD8F0A27E8314A70F17E4A334AA6E9F86BE620"
+    }
+  ],
+  "promptRecord": "prompts.json",
+  "implementationPlan": "../../UI-REPLICA-ROADMAP.md",
+  "historicalImplementationPlan": "../../UI-COMPONENTS-PLAN.md"
+}

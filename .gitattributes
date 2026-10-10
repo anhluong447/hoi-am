@@ -1,0 +1,8 @@
+# Normalize EOL for all files that Git considers text files.
+* text=auto eol=lf
+# Preserve the imported reference bytes across checkout on every platform.
+docs/reference/hai-vong/** -text whitespace=-trailing-space,cr-at-eol
+docs/reference/specs/*.source.json -text whitespace=-trailing-space,cr-at-eol
+docs/reference/coastal-editorial-v1/references.source.json -text whitespace=-trailing-space,cr-at-eol
+docs/reference/coastal-editorial-v1/prompts.json -text whitespace=-trailing-space,cr-at-eol
+assets/fonts/source_serif_4/** -text whitespace=-trailing-space,cr-at-eol

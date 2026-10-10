@@ -1,0 +1,66 @@
+﻿[
+  {
+    "policy": "Cân bằng",
+    "outcome": "win",
+    "evidence": 233.37480000000002,
+    "reputation": 64.46073383453096,
+    "averageScore": 64391.913324999994,
+    "heavyStrikes": 3
+  },
+  {
+    "policy": "Dùng Vân bất chấp",
+    "outcome": "bitter",
+    "evidence": 218.79600000000005,
+    "reputation": 47.36404154519989,
+    "averageScore": 55151.977518750005,
+    "heavyStrikes": 4
+  },
+  {
+    "policy": "Gai góc 80%",
+    "outcome": "win",
+    "evidence": 351.2652,
+    "reputation": 61.31055980683888,
+    "averageScore": 66016.246875,
+    "heavyStrikes": 5
+  },
+  {
+    "policy": "Tham điểm 100%",
+    "outcome": "bitter",
+    "evidence": 426.78000000000003,
+    "reputation": 32.34947728573623,
+    "averageScore": 56942.750250000005,
+    "heavyStrikes": 8
+  },
+  {
+    "policy": "Chỉ an toàn",
+    "outcome": "defeat",
+    "evidence": 0,
+    "reputation": 44.954709928458776,
+    "averageScore": 41926.30496666667,
+    "heavyStrikes": 0
+  },
+  {
+    "policy": "Một bài / tuần",
+    "outcome": "defeat",
+    "evidence": 101.35200000000002,
+    "reputation": 19.172466093447063,
+    "averageScore": 43364.72000000001,
+    "heavyStrikes": 0
+  },
+  {
+    "policy": "Khuê làm một mình",
+    "outcome": "defeat",
+    "evidence": 111.30480000000001,
+    "reputation": 22.509351527181902,
+    "averageScore": 43378.903041666665,
+    "heavyStrikes": 2
+  },
+  {
+    "policy": "An toàn 5 tuần rồi bung",
+    "outcome": "defeat",
+    "evidence": 169.0032,
+    "reputation": 64.42784894522022,
+    "averageScore": 60917.56825833334,
+    "heavyStrikes": 2
+  }
+]

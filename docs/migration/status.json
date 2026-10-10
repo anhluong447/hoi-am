@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "date": "2026-10-10",
+  "current_chapter": "00",
+  "foundation_status": "verified",
+  "chapters": {
+    "00": "foundation-verified",
+    "01": "not-started",
+    "02": "not-started",
+    "03": "not-started",
+    "04": "not-started",
+    "05": "not-started",
+    "06": "not-started",
+    "07": "not-started",
+    "08": "not-started",
+    "09": "not-started",
+    "10": "not-started",
+    "11": "not-started",
+    "12": "not-started"
+  },
+  "acceptance": {
+    "gameplay_parity": "not-ported",
+    "formula_parity": "not-ported",
+    "world_2_5d": "not-built",
+    "coastal_ui_static": "not-ported; source-G2-open",
+    "coastal_ui_motion": "not-ported; source-G3-open",
+    "saves": "not-ported",
+    "native_export": "not-verified",
+    "device_performance": "not-measured"
+  }
+}
