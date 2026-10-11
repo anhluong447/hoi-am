@@ -11,8 +11,13 @@
       ]
     },
     "HD01": {
-      "status": "pending",
-      "evidence": []
+      "status": "complete",
+      "selected_camera": "orthographic; frontal controlled angle; perspective retained as comparison",
+      "checks": "689 headless, 83 native; architecture/reference/content passed",
+      "evidence": [
+        "docs/world-hd2d/evidence/hd01-camera-v1/orthographic.png",
+        "docs/world-hd2d/evidence/hd01-camera-v1/perspective.png"
+      ]
     },
     "HD02": {
       "status": "pending",
