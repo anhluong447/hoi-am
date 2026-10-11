@@ -1,7 +1,9 @@
 # Kế hoạch world HD-2D cho Hồi Âm
 
-Trạng thái: **bản đề xuất chờ người dùng duyệt**. Chưa thay runtime, asset đang dùng,
-manifest, save schema hoặc các quyết định kiến trúc hiện hành.
+Trạng thái: **đã được người dùng duyệt triển khai HD00–HD09**. Người dùng cho phép
+tự đánh giá các mốc hình ảnh trung gian và tiếp tục toàn bộ chapters, commit từng
+chapter. Theo dõi implementation ở [status](../world-hd2d/status.json); nghiệm thu
+hình ảnh cuối của người dùng vẫn riêng với kiểm tra kỹ thuật.
 Mốc nền: commit `5301b93`; định hướng được làm rõ ngày 2026-10-11.
 
 ## 1. Kết quả cần đạt
@@ -319,8 +321,9 @@ phân biệt code đã chạy, art tạm và hình ảnh đã được người 
 5. Mục tiêu performance đề xuất: 1080p/60 FPS High trên máy hiện có, xác nhận bằng
    profile; điều chỉnh chất lượng từ số đo, không biến mục tiêu thành cam kết.
 
-Sau khi plan được duyệt, bắt đầu HD00–HD03. Chưa sửa world runtime hoặc sản xuất
-asset trong lượt lập kế hoạch này. Duyệt plan không tự đóng hai visual checkpoints.
+Plan được duyệt để triển khai tất cả HD00–HD09 trong một run. Hai visual checkpoints
+được agent đánh giá bằng evidence để tiếp tục, theo chỉ đạo mới của người dùng;
+không ghi kết quả đó thành người dùng đã nghiệm thu art cuối.
 
 ## 18. Cơ sở kỹ thuật đã đối chiếu
 

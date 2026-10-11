@@ -1,0 +1,779 @@
+{
+  "surfaces": [
+    {
+      "id": "floor-art",
+      "asset": "oak",
+      "position": [
+        0,
+        0.012,
+        0
+      ],
+      "size": [
+        15,
+        12
+      ],
+      "rotation": [
+        -90,
+        0,
+        0
+      ],
+      "repeat": [
+        4,
+        3
+      ],
+      "swap_axes": true
+    },
+    {
+      "id": "wall-base",
+      "asset": "plaster",
+      "position": [
+        0,
+        0.6,
+        -4.37
+      ],
+      "size": [
+        15,
+        1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "repeat": [
+        7.5,
+        0.6
+      ],
+      "tint": "#e0d5be",
+      "ink_strength": 0.45
+    },
+    {
+      "id": "wall-top",
+      "asset": "plaster",
+      "position": [
+        0,
+        3.55,
+        -4.37
+      ],
+      "size": [
+        15,
+        1.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "repeat": [
+        7.5,
+        0.55
+      ],
+      "tint": "#e0d5be",
+      "ink_strength": 0.45
+    },
+    {
+      "id": "wall-left",
+      "asset": "plaster",
+      "position": [
+        -6.25,
+        2.1,
+        -4.37
+      ],
+      "size": [
+        2.5,
+        1.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "repeat": [
+        1.25,
+        0.9
+      ],
+      "tint": "#e0d5be",
+      "ink_strength": 0.45
+    },
+    {
+      "id": "wall-middle",
+      "asset": "plaster",
+      "position": [
+        0,
+        2.1,
+        -4.37
+      ],
+      "size": [
+        4,
+        1.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "repeat": [
+        2.0,
+        0.9
+      ],
+      "tint": "#e0d5be",
+      "ink_strength": 0.45
+    },
+    {
+      "id": "wall-right",
+      "asset": "plaster",
+      "position": [
+        6.25,
+        2.1,
+        -4.37
+      ],
+      "size": [
+        2.5,
+        1.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "repeat": [
+        1.25,
+        0.9
+      ],
+      "tint": "#e0d5be",
+      "ink_strength": 0.45
+    },
+    {
+      "id": "wainscot",
+      "asset": "teal-wood",
+      "position": [
+        0,
+        0.48,
+        -4.32
+      ],
+      "size": [
+        15,
+        0.96
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "repeat": [
+        5,
+        1
+      ],
+      "ink_strength": 0.8
+    }
+  ],
+  "props": [
+    {
+      "id": "writing-desk-art",
+      "position": [
+        -1,
+        0,
+        -0.3
+      ],
+      "layers": [
+        {
+          "asset": "desk",
+          "size": [
+            3.2,
+            1.15
+          ]
+        }
+      ]
+    },
+    {
+      "id": "writing-papers-art",
+      "position": [
+        -0.55,
+        0.9,
+        -0.35
+      ],
+      "layers": [
+        {
+          "asset": "papers",
+          "size": [
+            0.52,
+            0.32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "writing-lamp-art",
+      "position": [
+        -1.928,
+        0.88,
+        -0.42
+      ],
+      "layers": [
+        {
+          "asset": "lamp",
+          "size": [
+            0.42,
+            0.52
+          ]
+        }
+      ]
+    },
+    {
+      "id": "writing-books-art",
+      "position": [
+        -0.9,
+        0.9,
+        -0.32999999999999996
+      ],
+      "layers": [
+        {
+          "asset": "books",
+          "size": [
+            0.52,
+            0.35
+          ]
+        }
+      ]
+    },
+    {
+      "id": "van-desk-art",
+      "position": [
+        3.1,
+        0,
+        -2.1
+      ],
+      "layers": [
+        {
+          "asset": "desk",
+          "size": [
+            2.1,
+            1.15
+          ]
+        }
+      ]
+    },
+    {
+      "id": "van-papers-art",
+      "position": [
+        3.5500000000000003,
+        0.9,
+        -2.15
+      ],
+      "layers": [
+        {
+          "asset": "papers",
+          "size": [
+            0.52,
+            0.32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "van-lamp-art",
+      "position": [
+        2.491,
+        0.88,
+        -2.2199999999999998
+      ],
+      "layers": [
+        {
+          "asset": "lamp",
+          "size": [
+            0.42,
+            0.52
+          ]
+        }
+      ]
+    },
+    {
+      "id": "van-books-art",
+      "position": [
+        3.2,
+        0.9,
+        -2.13
+      ],
+      "layers": [
+        {
+          "asset": "books",
+          "size": [
+            0.52,
+            0.35
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rear-desk-art",
+      "position": [
+        -1.5,
+        0,
+        -2.8000000000000003
+      ],
+      "layers": [
+        {
+          "asset": "desk",
+          "size": [
+            2.2,
+            1.15
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rear-papers-art",
+      "position": [
+        -1.05,
+        0.9,
+        -2.85
+      ],
+      "layers": [
+        {
+          "asset": "papers",
+          "size": [
+            0.52,
+            0.32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rear-lamp-art",
+      "position": [
+        -2.138,
+        0.88,
+        -2.92
+      ],
+      "layers": [
+        {
+          "asset": "lamp",
+          "size": [
+            0.42,
+            0.52
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rear-books-art",
+      "position": [
+        -1.4,
+        0.9,
+        -2.83
+      ],
+      "layers": [
+        {
+          "asset": "books",
+          "size": [
+            0.52,
+            0.35
+          ]
+        }
+      ]
+    },
+    {
+      "id": "front-desk-art",
+      "position": [
+        -3.1,
+        0,
+        2.65
+      ],
+      "layers": [
+        {
+          "asset": "desk",
+          "size": [
+            3.0,
+            1.15
+          ]
+        }
+      ]
+    },
+    {
+      "id": "front-papers-art",
+      "position": [
+        -2.65,
+        0.9,
+        2.6
+      ],
+      "layers": [
+        {
+          "asset": "papers",
+          "size": [
+            0.52,
+            0.32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "front-lamp-art",
+      "position": [
+        -3.9699999999999998,
+        0.88,
+        2.5300000000000002
+      ],
+      "layers": [
+        {
+          "asset": "lamp",
+          "size": [
+            0.42,
+            0.52
+          ]
+        }
+      ]
+    },
+    {
+      "id": "front-books-art",
+      "position": [
+        -3.0,
+        0.9,
+        2.62
+      ],
+      "layers": [
+        {
+          "asset": "books",
+          "size": [
+            0.52,
+            0.35
+          ]
+        }
+      ]
+    },
+    {
+      "id": "archive-art",
+      "position": [
+        -4.7,
+        0,
+        -3.5
+      ],
+      "layers": [
+        {
+          "asset": "cabinet",
+          "size": [
+            1.6,
+            2.2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "archive-shelf-art",
+      "position": [
+        -3.15,
+        0,
+        -3.7
+      ],
+      "layers": [
+        {
+          "asset": "bookshelf",
+          "size": [
+            1.5,
+            2.3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "right-shelf-art",
+      "position": [
+        5.05,
+        0,
+        -3.7
+      ],
+      "layers": [
+        {
+          "asset": "bookshelf",
+          "size": [
+            1.6,
+            2.4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "printer-art",
+      "position": [
+        4.5,
+        0.7,
+        -3.4
+      ],
+      "layers": [
+        {
+          "asset": "printer",
+          "size": [
+            0.9,
+            0.7
+          ]
+        }
+      ]
+    },
+    {
+      "id": "board-art",
+      "position": [
+        -4.7,
+        1.15,
+        -3.2
+      ],
+      "layers": [
+        {
+          "asset": "board",
+          "size": [
+            1.45,
+            0.85
+          ]
+        }
+      ]
+    },
+    {
+      "id": "brand-board-art",
+      "position": [
+        0,
+        1.35,
+        -4.2
+      ],
+      "layers": [
+        {
+          "asset": "board",
+          "size": [
+            2.7,
+            1.45
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clock-art",
+      "position": [
+        1.65,
+        2.55,
+        -4.1
+      ],
+      "layers": [
+        {
+          "asset": "clock",
+          "size": [
+            0.62,
+            0.62
+          ]
+        }
+      ]
+    },
+    {
+      "id": "window-left-art",
+      "position": [
+        -3.5,
+        1.03,
+        -4.17
+      ],
+      "layers": [
+        {
+          "asset": "window",
+          "size": [
+            3.2,
+            2.25
+          ]
+        }
+      ]
+    },
+    {
+      "id": "window-right-art",
+      "position": [
+        3.5,
+        1.03,
+        -4.17
+      ],
+      "layers": [
+        {
+          "asset": "window",
+          "size": [
+            3.2,
+            2.25
+          ]
+        }
+      ]
+    },
+    {
+      "id": "left-plant-art",
+      "position": [
+        -5.3,
+        0,
+        0.6
+      ],
+      "layers": [
+        {
+          "asset": "plant",
+          "size": [
+            1.2,
+            1.65
+          ]
+        }
+      ]
+    },
+    {
+      "id": "right-plant-art",
+      "position": [
+        5,
+        0,
+        2.9
+      ],
+      "layers": [
+        {
+          "asset": "plant",
+          "size": [
+            1.3,
+            1.7
+          ]
+        }
+      ]
+    },
+    {
+      "id": "window-flowers-left",
+      "position": [
+        -3.5,
+        1.0,
+        -4.05
+      ],
+      "layers": [
+        {
+          "asset": "flowers",
+          "size": [
+            0.75,
+            0.8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "window-flowers-right",
+      "position": [
+        3.5,
+        1.0,
+        -4.05
+      ],
+      "layers": [
+        {
+          "asset": "plant",
+          "size": [
+            0.8,
+            0.8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "front-flowers",
+      "position": [
+        -5.8,
+        0,
+        4.6
+      ],
+      "layers": [
+        {
+          "asset": "flowers",
+          "size": [
+            2.1,
+            2.3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "front-plant",
+      "position": [
+        5.8,
+        0,
+        4.65
+      ],
+      "layers": [
+        {
+          "asset": "plant",
+          "size": [
+            2.5,
+            2.6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harbor-mountains",
+      "position": [
+        0,
+        -7,
+        -17
+      ],
+      "layers": [
+        {
+          "asset": "mountains",
+          "size": [
+            22,
+            3.9
+          ],
+          "shaded": false
+        }
+      ]
+    },
+    {
+      "id": "harbor-town",
+      "position": [
+        0,
+        -3.6,
+        -11
+      ],
+      "layers": [
+        {
+          "asset": "town",
+          "size": [
+            20,
+            3.6
+          ],
+          "shaded": false
+        }
+      ]
+    },
+    {
+      "id": "harbor-quay",
+      "position": [
+        0,
+        -2.5,
+        -8
+      ],
+      "layers": [
+        {
+          "asset": "quay",
+          "size": [
+            18,
+            2.8
+          ],
+          "shaded": false
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "id": "club-sign",
+      "text_key": "world.newsroom.sign",
+      "position": [
+        0,
+        2.35,
+        -4.12
+      ],
+      "font_size": 52,
+      "pixel_size": 0.0048,
+      "color": "#153d47"
+    },
+    {
+      "id": "club-motto",
+      "text_key": "world.newsroom.motto",
+      "position": [
+        0,
+        1.8,
+        -4.11
+      ],
+      "font_size": 28,
+      "pixel_size": 0.0065,
+      "color": "#245766"
+    }
+  ]
+}

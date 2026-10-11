@@ -40,8 +40,13 @@
       "user_visual_acceptance": "pending"
     },
     "HD04": {
-      "status": "pending",
-      "evidence": []
+      "status": "complete",
+      "checks": "699 headless; 83 native pass on rerun; first 1920 pointer assertion failure preserved",
+      "evidence": [
+        "docs/world-hd2d/evidence/hd04-newsroom-v2",
+        "docs/world-hd2d/hd04-review.md"
+      ],
+      "room": "34 prop groups, 7 surfaces, catalog world signs; selected pack not yet mounted in playable"
     },
     "HD05": {
       "status": "pending",

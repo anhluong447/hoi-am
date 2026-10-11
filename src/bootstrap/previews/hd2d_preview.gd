@@ -16,7 +16,7 @@ func _ready() -> void:
 	var config := LOADER.read_dictionary(room_path)
 	assert(setup.ok and config.ok, "HD-2D preview content must load")
 	room = ROOM.instantiate()
-	var prepared := RESOURCES.prepare(config.data, STARTUP.actor_textures(setup.data))
+	var prepared := RESOURCES.prepare(config.data, STARTUP.actor_textures(setup.data), setup.text)
 	assert(prepared.ok, "HD-2D resources must validate before mount")
 	room.configure(prepared.config, setup.data.actors.actors, prepared.textures)
 	add_child(room)

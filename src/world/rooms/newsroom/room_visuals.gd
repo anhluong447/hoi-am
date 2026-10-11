@@ -12,6 +12,17 @@ func build(definition: Dictionary, resources: Dictionary) -> void:
 		var prop := PROP.instantiate()
 		prop.configure(item, resources)
 		add_child(prop)
+	for item: Dictionary in definition.get("labels", []):
+		var label := Label3D.new()
+		label.name = item.id
+		label.text = item.text
+		label.font = resources.font
+		label.font_size = item.font_size
+		label.pixel_size = item.pixel_size
+		label.modulate = Color(item.color)
+		label.outline_size = 0
+		label.position = Vector3(item.position[0], item.position[1], item.position[2])
+		add_child(label)
 
 
 func _surface(item: Dictionary, resources: Dictionary) -> void:
@@ -32,5 +43,7 @@ func _surface(item: Dictionary, resources: Dictionary) -> void:
 	var repeat_count: Array = item.get("repeat", [1, 1])
 	material.set_shader_parameter("repeat_count", Vector2(repeat_count[0], repeat_count[1]))
 	material.set_shader_parameter("tint", Color(item.get("tint", "#ffffff")))
+	material.set_shader_parameter("ink_strength", item.get("ink_strength", 1.0))
+	material.set_shader_parameter("swap_axes", item.get("swap_axes", false))
 	node.material_override = material
 	add_child(node)

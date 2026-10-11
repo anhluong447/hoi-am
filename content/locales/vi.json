@@ -947,5 +947,7 @@
   "ui.hud.fixture.location": "Tòa soạn Hồi Âm",
   "ui.hud.fixture.menu": "· Menu",
   "ui.hud.fixture.map": "M · Bản đồ",
-  "ui.review.long_choice": "Cùng kiểm chứng đầy đủ nguồn tin trước khi xuất bản."
+  "ui.review.long_choice": "Cùng kiểm chứng đầy đủ nguồn tin trước khi xuất bản.",
+  "world.newsroom.sign": "CLB BÁO CHÍ\nHỒI ÂM",
+  "world.newsroom.motto": "Viết · Quan sát\nLắng nghe · Kết nối"
 }
