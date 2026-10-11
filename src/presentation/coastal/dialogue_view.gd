@@ -13,6 +13,7 @@ var _choice_art: Array[TextureRect] = []
 var _choice_mark: Array[TextureRect] = []
 var _labels: Dictionary = {}
 var _choice_labels: Array[Label] = []
+var _choice_specs: Array[Dictionary] = []
 var _motion: Tween
 var _reduced := false
 
@@ -41,6 +42,7 @@ func _build() -> void:
 	_choice_mark.clear()
 	_labels.clear()
 	_choice_labels.clear()
+	_choice_specs.clear()
 	if _model.is_empty():
 		return
 	for layer: String in ["wave", "paper", "dialogue-wash", "print", "date"]:
@@ -48,7 +50,8 @@ func _build() -> void:
 	for spec: Dictionary in _layout.text:
 		if spec.get("optionalLogo", false):
 			continue
-		_labels[spec.id] = WIDGETS.copy(self, _model.get(spec.id, ""), spec, _resources[spec.get("family", "Source Serif 4")])
+		var family: String = spec.get("family", "Source Serif 4")
+		_labels[spec.id] = WIDGETS.copy(self, _model.get(spec.id, ""), spec, _resources[family], _resources.coastal_weights[family])
 	for index: int in _model.choices.size():
 		if index >= _layout.choices.size():
 			break
@@ -65,17 +68,12 @@ func _build() -> void:
 		copy_spec.merge({"x": spec.baseline[0], "y": spec.baseline[1]})
 		copy_spec.width = spec.bounds[2] - (spec.baseline[0] - spec.bounds[0]) - _layout.choice_copy.right_margin
 		copy_spec.height = spec.bounds[3] - 2 * _layout.choice_copy.padding
-		var copy := WIDGETS.copy(self, choice.text, copy_spec, _resources["Source Serif 4"])
+		var copy := WIDGETS.copy(self, choice.text, copy_spec, _resources["Source Serif 4"], _resources.coastal_weights["Source Serif 4"])
 		copy.max_lines_visible = _layout.choice_copy.max_lines
 		copy.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
-		var font_size := roundi(copy_spec.size)
-		while copy.get_minimum_size().y > copy_spec.height and font_size > _layout.choice_copy.min_size:
-			font_size -= 1
-			copy.add_theme_font_size_override("font_size", font_size)
-		if copy.get_line_count() > 1:
-			copy.position.y = spec.bounds[1] + (spec.bounds[3] - copy.get_minimum_size().y) / 2.0
-			copy.size.y = copy.get_minimum_size().y
 		_choice_labels.append(copy)
+		_choice_specs.append(copy_spec)
+		_fit_choice(index)
 		var button := WIDGETS.target(self, spec.bounds, choice.text)
 		button.tooltip_text = choice.text
 		button.pressed.connect(func() -> void: choice_requested.emit(choice.id))
@@ -100,15 +98,40 @@ func _build() -> void:
 		var surface := Control.new()
 		surface.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		rig.add_child(surface)
-		WIDGETS.copy(surface, _model.get(spec.id, ""), adjusted, _resources[spec.family])
+		WIDGETS.copy(surface, _model.get(spec.id, ""), adjusted, _resources[spec.family], _resources.coastal_weights[spec.family])
+	var focus_index := 0
+	for index: int in _choice_art.size():
+		if _model.choices[index].id == _model.get("selected_choice", ""):
+			focus_index = index
 	if _model.get("focus", true):
-		_buttons[0].grab_focus()
+		_buttons[focus_index].grab_focus()
+	else:
+		_select(focus_index)
 
 
 func _select(index: int) -> void:
 	for candidate: int in _choice_art.size():
 		_choice_art[candidate].texture = _resources["choice-gold" if candidate == index else "choice-plain"]
 		_choice_mark[candidate].visible = candidate == index
+		var style: Dictionary = _layout.choice_copy.selected if candidate == index else _layout.choices[candidate].font
+		var copy := _choice_labels[candidate]
+		copy.add_theme_color_override("font_color", Color(style.fill))
+		copy.add_theme_font_override("font", WIDGETS.styled_font(_resources["Source Serif 4"], style, _resources.coastal_weights["Source Serif 4"]))
+		_fit_choice(candidate)
+
+
+func _fit_choice(index: int) -> void:
+	var copy := _choice_labels[index]
+	var spec: Dictionary = _choice_specs[index]
+	WIDGETS.refresh_copy(copy, copy.text, spec)
+	var font_size := roundi(spec.size)
+	while copy.get_minimum_size().y > spec.height and font_size > _layout.choice_copy.min_size:
+		font_size -= 1
+		copy.add_theme_font_size_override("font_size", font_size)
+	if copy.get_line_count() > 1:
+		var bounds: Array = _layout.choices[index].bounds
+		copy.position.y = bounds[1] + (bounds[3] - copy.get_minimum_size().y) / 2.0
+		copy.size.y = copy.get_minimum_size().y
 
 
 func body_text() -> String:

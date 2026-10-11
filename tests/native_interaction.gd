@@ -5,6 +5,7 @@ const PREVIEW = preload("res://src/bootstrap/previews/ui_preview.tscn")
 const WORLD = preload("res://src/bootstrap/previews/world_preview.tscn")
 const SUITE = preload("res://tests/test_suite.gd")
 const PLAY = preload("res://src/bootstrap/gameplay/playable.tscn")
+const PROBE = preload("res://tests/coastal_render_probe.gd")
 
 var _suite := SUITE.new()
 
@@ -19,6 +20,11 @@ func _run() -> void:
 	root.content_scale_aspect = Window.CONTENT_SCALE_ASPECT_KEEP
 	var preview := PREVIEW.instantiate()
 	root.add_child(preview)
+	root.size = Vector2i(1672, 941)
+	for background: String in ["neutral", "ui-light", "ui-dark", "ui-detail"]:
+		preview.show_case("dialogue", background, true)
+		await _settle()
+		_suite.expect(PROBE.choices_visible(root.get_texture().get_image(), preview.view), "Native initial selected/idle glyphs and all icons: " + background)
 	for dimensions: Vector2i in [Vector2i(1672, 941), Vector2i(1280, 720), Vector2i(1920, 1080), Vector2i(1024, 768), Vector2i(2560, 1080)]:
 		root.size = dimensions
 		preview.show_case("dialogue", "ui-dark", true)
@@ -44,6 +50,7 @@ func _run() -> void:
 		root.push_input(press)
 		await _settle()
 		_suite.expect(choices == ["draft"], "Native pointer resolves same choice at " + str(dimensions))
+		_suite.expect(preview.view._buttons[1].has_focus() and preview.view._choice_mark[1].visible, "Native pointer selection preserves rebuilt focus at " + str(dimensions))
 		preview.view._buttons[0].grab_focus()
 		var tab := InputEventKey.new()
 		tab.keycode = KEY_TAB
@@ -93,8 +100,13 @@ func _run() -> void:
 			preview.view.configure(model, preview.view._layout, preview.view._resources)
 			await _settle()
 			var bitmap := root.get_texture().get_image()
-			_suite.expect(_ink_pixels(bitmap, Rect2i(559, 471, 310, 45), false) > 100, "Native glyphs remain drawn after reconfigure")
+			_suite.expect(_ink_pixels(bitmap, Rect2i(559, 471, 310, 45), true) > 100, "Native selected teal glyphs remain drawn after reconfigure")
 			_suite.expect(_ink_pixels(bitmap, Rect2i(511, 478, 28, 28), true) > 30, "Native choice icon remains drawn after font resources change")
+			_suite.expect(_ink_pixels(bitmap, Rect2i(559, 543, 310, 40), false) > 100 and _ink_pixels(bitmap, Rect2i(559, 609, 310, 40), false) > 100 and _ink_pixels(bitmap, Rect2i(511, 546, 28, 28), true) > 30, "Native idle glyphs and icon remain drawn alongside selected weight")
+			preview.view._buttons[1].grab_focus()
+			await _settle()
+			bitmap = root.get_texture().get_image()
+			_suite.expect(_ink_pixels(bitmap, Rect2i(559, 543, 310, 40), true) > 100 and _ink_pixels(bitmap, Rect2i(511, 546, 28, 28), true) > 30, "Native selected glyphs and icon survive keyboard weight change")
 	preview.queue_free()
 	await process_frame
 	root.size = Vector2i(1672, 941)

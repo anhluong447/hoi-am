@@ -37,7 +37,6 @@ func hud() -> Dictionary:
 	for place: Dictionary in _data.gameplay.places:
 		if place.id == location_id:
 			model.location = _text.text(place.name_key)
-	model.menu = _text.text("play.menu")
 	model.menu = _text.text("ui.hud.menu")
 	model.map = _text.text("ui.hud.map")
 	model.objective = _text.text("ui.hud.objective.ended" if s.ended else "ui.hud.objective." + s.phase)

@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-11",
+  "target_base_commit": "aaa527ec7dd40bd8c6b854f239d9980f2e4195f0",
+  "source_commit": "6ad88df15ac5f082ac323e9d4144094affe01c7b",
+  "source_clean": true,
+  "headless_checks": 661,
+  "native_checks": 64,
+  "failures_final": 0,
+  "engine": {
+    "major": 4,
+    "minor": 7,
+    "patch": 2,
+    "hex": 263938,
+    "status": "stable",
+    "build": "steam",
+    "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+    "timestamp": 0,
+    "string": "4.7.2-stable (steam)"
+  },
+  "api": "d3d12",
+  "adapter": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+  "active_art_manifest": "content/ui/art_manifest_v5.json",
+  "runtime_textures": 20,
+  "current_captures": "captures-v7",
+  "current_capture_count": 24,
+  "current_video": "ui-correction-v7.mp4",
+  "physical_controller_tested": false,
+  "clean_import": {
+    "status": "passed policies/reference/content, import, 661 contracts, bootstrap",
+    "snapshot": "artifacts/clean-ui-correction-20261011",
+    "initially_no_git_or_godot_cache": true,
+    "canonical_files_compared": 402
+  },
+  "visual": {
+    "before_mae": 23.422,
+    "candidate_mae": 22.303,
+    "mask_pixels": 444170,
+    "original_mask_unchanged": true,
+    "acceptance": "diagnostic only; C11.05/G2 open; regional regressions recorded",
+    "current_diagnostics": [
+      "ui-comparison-v7.json",
+      "dialogue-regions-v7.json",
+      "hud-regions-v7.json"
+    ]
+  },
+  "performance": {
+    "runs": 14,
+    "frames": 4200,
+    "real_clock": true,
+    "fixed_fps": false,
+    "max_fps": 120,
+    "vsync": "disabled",
+    "frame_p95_max_ms": 8.829,
+    "gpu_p95_max_ms": 3.3959999084472656,
+    "limits": "Short sample on one laptop; editor left running; no other agent GPU workload during profile; capped120; no low-end or long-soak claim."
+  },
+  "exports": [
+    {
+      "kind": "debug",
+      "execution": "Clean temporary distribution folder, packaged self-check passed; no project.godot/source dependency",
+      "files": [
+        {
+          "path": "build/windows/debug/hoi-am.console.exe",
+          "bytes": 188928,
+          "sha256": "5514c7645ee897a01f540d3cf22ede5badf92394521a08bfab66a54d7369e6e6"
+        },
+        {
+          "path": "build/windows/debug/hoi-am.exe",
+          "bytes": 103176704,
+          "sha256": "51498b72b3a237f882ebd7d1787f06a4bc1eaf0572daab93837adcfd3cfdc107"
+        },
+        {
+          "path": "build/windows/debug/hoi-am.pck",
+          "bytes": 4427856,
+          "sha256": "322d368fd6cb92ede2587938757c8f322768045158efc739dcb17ab419e60134"
+        },
+        {
+          "path": "build/windows/debug/licenses/cormorantgaramond-OFL.txt",
+          "bytes": 4387,
+          "sha256": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956"
+        },
+        {
+          "path": "build/windows/debug/licenses/dancingscript-OFL.txt",
+          "bytes": 4443,
+          "sha256": "6f090277c00af96651ce6dbcc38ff1591047a3bffef486e80b6a32e8276a8201"
+        },
+        {
+          "path": "build/windows/debug/licenses/godot-COPYRIGHT.txt",
+          "bytes": 100108,
+          "sha256": "cb1980c88089573bcacd7221d777c689bb8bbd778799f24c27fca0fe5f774d6d"
+        },
+        {
+          "path": "build/windows/debug/licenses/godot-LICENSE.txt",
+          "bytes": 1149,
+          "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80"
+        },
+        {
+          "path": "build/windows/debug/licenses/source_serif_4-OFL.txt",
+          "bytes": 4400,
+          "sha256": "5f94c3fd3a23131a417ab5a0c8452de57e70c3cfb9f604d88241f7065ebf9fd9"
+        }
+      ]
+    },
+    {
+      "kind": "release",
+      "execution": "Clean temporary distribution folder, packaged self-check passed; no project.godot/source dependency",
+      "files": [
+        {
+          "path": "build/windows/release/hoi-am.exe",
+          "bytes": 109268480,
+          "sha256": "d34d36f3be1a6c49c56525ae86469b92e4f417ddf0b43cf00dd80c385c4b0562"
+        },
+        {
+          "path": "build/windows/release/hoi-am.pck",
+          "bytes": 4427856,
+          "sha256": "322d368fd6cb92ede2587938757c8f322768045158efc739dcb17ab419e60134"
+        },
+        {
+          "path": "build/windows/release/licenses/cormorantgaramond-OFL.txt",
+          "bytes": 4387,
+          "sha256": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956"
+        },
+        {
+          "path": "build/windows/release/licenses/dancingscript-OFL.txt",
+          "bytes": 4443,
+          "sha256": "6f090277c00af96651ce6dbcc38ff1591047a3bffef486e80b6a32e8276a8201"
+        },
+        {
+          "path": "build/windows/release/licenses/godot-COPYRIGHT.txt",
+          "bytes": 100108,
+          "sha256": "cb1980c88089573bcacd7221d777c689bb8bbd778799f24c27fca0fe5f774d6d"
+        },
+        {
+          "path": "build/windows/release/licenses/godot-LICENSE.txt",
+          "bytes": 1149,
+          "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80"
+        },
+        {
+          "path": "build/windows/release/licenses/source_serif_4-OFL.txt",
+          "bytes": 4400,
+          "sha256": "5f94c3fd3a23131a417ab5a0c8452de57e70c3cfb9f604d88241f7065ebf9fd9"
+        }
+      ]
+    }
+  ],
+  "baseline_policy": "Original source oracle/baseline/reference/font/art inputs unchanged",
+  "source_browser_tests_run": false,
+  "reason": "Only independent Godot target changed; source JS/HTML unchanged",
+  "history_notes": [
+    "First native probe failures were navy predicates after selected style changed to teal; corrected class, unchanged pixel thresholds.",
+    "Reduced image-tool display was misread as missing glyphs. PNG bytes had glyphs/icons; no renderer bug claim from that interpretation.",
+    "Prototype async preview replacement discarded; final show_case remains synchronous. Capture v5 incomplete, v6 retained history, v7 current."
+  ],
+  "neutral_sha256": "f0490bb1955ba8854559ceb02be2beb91bb586efe8a3dabe569c7c06d7fba168",
+  "inventory": {
+    "path": "docs/reviews/ui-correction-2026-10-11/inventory.json",
+    "bytes": 141518,
+    "sha256": "f8378645ebf98286f8e353ce29134ad89d1b4b7e421153810fb6b17ff896d880"
+  }
+}

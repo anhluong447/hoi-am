@@ -55,13 +55,30 @@ static func prepare(reading_room_extension: bool = false) -> Dictionary:
 
 
 static func ui_resources(data: Dictionary) -> Dictionary:
-	var resources: Dictionary = {}
+	var resources: Dictionary = {"coastal_weights": {}}
+	var specs: Array = data.dialogue_ui.text + data.dialogue_ui.environmentText + data.hud_ui.text
+	specs.append(data.hud_ui.prompt)
+	specs.append(data.dialogue_ui.choice_copy.selected)
+	for choice: Dictionary in data.dialogue_ui.choices:
+		specs.append(choice.font)
 	for asset: Dictionary in data.ui_art.assets:
 		resources[asset.id] = load(asset.texture_path)
 	for family: String in data.preview.fonts:
 		var font := FontVariation.new()
 		font.base_font = load(data.preview.fonts[family])
 		font.variation_opentype = {"wght": 500.0}
+		# Composition retains immutable weights across view rebuilds and focus changes.
+		var weights: Dictionary = {500.0: font}
+		for spec: Dictionary in specs:
+			if spec.get("family", "Source Serif 4") != family or not spec.has("weight"):
+				continue
+			var weight := float(spec.weight)
+			if not weights.has(weight):
+				var variation := FontVariation.new()
+				variation.base_font = font.base_font
+				variation.variation_opentype = {"wght": weight}
+				weights[weight] = variation
+		resources.coastal_weights[family] = weights
 		resources[family] = font
 	return resources
 

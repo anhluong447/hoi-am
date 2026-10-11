@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "screen": "dialogue",
+  "plane": [
+    1672,
+    941
+  ],
+  "policy": "Diagnostic subdivisions of original conservative dialogue mask; overlap is allowed, values are not an aggregate or acceptance threshold. HUD uses only conservative opaque date-paper interior; ink/footer/fringe reference alpha unresolved.",
+  "reference_sha256": "68c076b9d013523b745e61e1af35a8251742bbf7b774c02245f89dacf3d2a5a2",
+  "before_sha256": "73f9aa6bdb4b27031f6514ee810333c56983ade5202adafa19413dcf89ac94a2",
+  "candidate_sha256": "f0490bb1955ba8854559ceb02be2beb91bb586efe8a3dabe569c7c06d7fba168",
+  "regions_sha256": "7f8feef046e675e49a652e7b90ab4f762a798ac14922e95f15c91ea45b773cd7",
+  "mask_sha256": "632282b86c3a0a9829798de841c7e8f3f725933975f7e6effcdd8ee8a422d932",
+  "regions": [
+    {
+      "id": "date-paper-type-ornament",
+      "bounds": [
+        35,
+        30,
+        247,
+        137
+      ],
+      "pixels": 19296,
+      "before_mae": 29.828980099502488,
+      "candidate_mae": 29.61447968490879,
+      "delta_mae": -0.2145004145936973
+    },
+    {
+      "id": "choice-material-copy-icons",
+      "bounds": [
+        482,
+        462,
+        446,
+        193
+      ],
+      "pixels": 63476,
+      "before_mae": 19.33290272438927,
+      "candidate_mae": 19.120328943222635,
+      "delta_mae": -0.21257378116663617
+    },
+    {
+      "id": "speaker-copy-rule-mark",
+      "bounds": [
+        97,
+        692,
+        451,
+        59
+      ],
+      "pixels": 26545,
+      "before_mae": 18.817705782633265,
+      "candidate_mae": 22.87612230803039,
+      "delta_mae": 4.058416525397124
+    },
+    {
+      "id": "dialogue-line",
+      "bounds": [
+        228,
+        760,
+        1000,
+        55
+      ],
+      "pixels": 55000,
+      "before_mae": 20.225860606060607,
+      "candidate_mae": 17.437745454545453,
+      "delta_mae": -2.7881151515151537
+    },
+    {
+      "id": "paper-interior",
+      "bounds": [
+        230,
+        820,
+        950,
+        63
+      ],
+      "pixels": 59850,
+      "before_mae": 8.562333611807295,
+      "candidate_mae": 5.882328042328043,
+      "delta_mae": -2.6800055694792526
+    },
+    {
+      "id": "paper-harbor-bottom",
+      "bounds": [
+        190,
+        884,
+        1050,
+        57
+      ],
+      "pixels": 59850,
+      "before_mae": 30.92955165692008,
+      "candidate_mae": 26.82514619883041,
+      "delta_mae": -4.104405458089669
+    },
+    {
+      "id": "attached-flowers",
+      "bounds": [
+        0,
+        711,
+        215,
+        230
+      ],
+      "pixels": 49450,
+      "before_mae": 36.848102460397705,
+      "candidate_mae": 37.329544994944385,
+      "delta_mae": 0.4814425345466802
+    },
+    {
+      "id": "attached-notebook",
+      "bounds": [
+        1390,
+        722,
+        282,
+        219
+      ],
+      "pixels": 30278,
+      "before_mae": 33.37845960763591,
+      "candidate_mae": 33.64307417927208,
+      "delta_mae": 0.26461457163616586
+    }
+  ],
+  "acceptance": "Diagnostic only; original reference and mask unchanged; no G2 pass threshold"
+}

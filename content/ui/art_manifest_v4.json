@@ -1,0 +1,213 @@
+{
+  "version": 4,
+  "text_policy": "art-only; live catalog text",
+  "assets": [
+    {
+      "id": "wave",
+      "texture_path": "res://assets/ui/coastal/runtime/wave.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "23d8360bceb8396f637cdc020e404767640063f6911ec7bb97c1ba8e57c19984",
+      "source_sha256": "db3e21564f272df80967be4b0c1b76cce7109eaa8febb7225442ce1db9c82a37"
+    },
+    {
+      "id": "flowers",
+      "texture_path": "res://assets/ui/coastal/runtime/flowers.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "0da2c95e80cb2d7af810469cdbcbb53308d89a0b85502b45a2c3f2747a2d3e82",
+      "source_sha256": "f9d70c72e0399c1f02f05c9c5761d5ee8fa29d42e4ac310559d3956cb1edcc36"
+    },
+    {
+      "id": "notebook",
+      "texture_path": "res://assets/ui/coastal/runtime/notebook.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "e02bd940b6fc18200f105c1816e639790c82ee7ce6020dd631df4db43793bab8",
+      "source_sha256": "c32e2e929e1c1fd2c0c18c05b1c66b93655e8fa191710e3cb8b3d9de0b102c75"
+    },
+    {
+      "id": "choice-gold",
+      "texture_path": "res://assets/ui/coastal/runtime/choice-gold.png",
+      "size": [
+        446,
+        63
+      ],
+      "sha256": "9d7387c3be899723faf6f6aa3f2a6ea16917b7fa5c86576ec06b42dc0131087b",
+      "source_sha256": "bbcaac285928355895514f1b80e93d20df0c0ce56c317365fd0ec40f521ed3c9"
+    },
+    {
+      "id": "choice-plain",
+      "texture_path": "res://assets/ui/coastal/runtime/choice-plain.png",
+      "size": [
+        413,
+        60
+      ],
+      "sha256": "e1ee39a48bb1b7254050cd3acc3c14a00403801b7cd90571941d7276e7af91f8",
+      "source_sha256": "33d8c693c184f87fc34544febab677c577f32b029f60b96fa06064f9e9526fcd"
+    },
+    {
+      "id": "date-paper",
+      "texture_path": "res://assets/ui/coastal/runtime/date-paper.png",
+      "size": [
+        247,
+        115
+      ],
+      "sha256": "4b79acfc0a836bb3d4d23fd03a19f33b1c24c25de5d9593e9cb31763d03f2338",
+      "source_sha256": "9db3f75e9eeb3d3adef33004232136a545f8072c2fd0b4d2fbcb8bae1ba84375"
+    },
+    {
+      "id": "sun-seal",
+      "texture_path": "res://assets/ui/coastal/runtime/sun-seal.png",
+      "size": [
+        87,
+        127
+      ],
+      "sha256": "a441f2f0dc845baecc96142adac774e81d1ae093a86749635d158ff754a1a081",
+      "source_sha256": "11ab4cf65e964ec94bb4dc43caaa9170a1a91d3157cea718d7bc9af3763f309b"
+    },
+    {
+      "id": "icon-quill",
+      "texture_path": "res://assets/ui/coastal/runtime/icon-quill.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "4a2f0904aa5e92aea99686e1c5724e0d44268fe07cbb7d49116da1125d13c43e",
+      "source_sha256": "0516f2fd3105729bad95a59804fe552bd2bfc001b050337fee8b4e8ed392b201"
+    },
+    {
+      "id": "icon-chat",
+      "texture_path": "res://assets/ui/coastal/runtime/icon-chat.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "bc83336ab3a8c739773388044c069a97f00797723b63ab90e23211e5b4c3cd31",
+      "source_sha256": "bdc3fc63520c916e3c2bc94aba0189582325433a33a990ca63df157bd58c4768"
+    },
+    {
+      "id": "icon-proof",
+      "texture_path": "res://assets/ui/coastal/runtime/icon-proof.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "fc16f430d65d6ca8ecb89e22430debbc7ef2b1d2ed9044d74a9756c446a510a9",
+      "source_sha256": "89ed85c9f1058b4577c063ffb4f4da64fca5de069c06aa6dd60ab19e097fe46a"
+    },
+    {
+      "id": "icon-chevron",
+      "texture_path": "res://assets/ui/coastal/runtime/icon-chevron.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "6650a3211d38690e5d25488bbe18406e3a0069a2adc83adbd86b7fe0896c8a8b",
+      "source_sha256": "c6acdd94c923c0cab1472fbc4ee0c42e38e32ee1694c1c3bc90c10f949df94ea"
+    },
+    {
+      "id": "icon-return",
+      "texture_path": "res://assets/ui/coastal/runtime/icon-return.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "5a113dc5c866c9ceb05d6b030ebe41905110bda959325f601dce78e8a41f6cda",
+      "source_sha256": "e988af9827d437ab5cd60f03eb4d8dca913c1ba99a8423add9f2063069c59129"
+    },
+    {
+      "id": "icon-back",
+      "texture_path": "res://assets/ui/coastal/runtime/icon-back.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "c18d0eca4bb19e887c270d5a6d54f71861f6c3be16afbf1664a7b4df489d92e8",
+      "source_sha256": "f8aab550e1e03866f4b15c9fe7c721005b98313a1d023be53ae4cb6bf16c039c"
+    },
+    {
+      "id": "dialogue-wash",
+      "texture_path": "res://assets/ui/coastal/runtime_v2/dialogue-wash.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "f76de609d177a85dfebfb96a2308da4aeea1f41b9c44a38c1daef33480dde7cf",
+      "source_path": "res://assets/ui/coastal/authored_v2/dialogue-wash.svg",
+      "source_sha256": "55d9ce080a2ada7e2793705290a7ab6af4293810cd75053a8af5ccb5b4308936"
+    },
+    {
+      "id": "note-wash",
+      "texture_path": "res://assets/ui/coastal/runtime_v2/note-wash.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "833d9f1663defcc3d8ceda4553b8e144968c64ed03950b64f12e2526b000ef3f",
+      "source_path": "res://assets/ui/coastal/authored_v2/note-wash.svg",
+      "source_sha256": "53f278a05701bcb7b4f7aca8a6856efc8d2163da70de9a1489a87e3706e2ec36"
+    },
+    {
+      "id": "hud-prompt",
+      "texture_path": "res://assets/ui/coastal/runtime_v2/hud-prompt.png",
+      "size": [
+        166,
+        45
+      ],
+      "sha256": "bf7fbefef7748fca0e2578f5259a63de8defe444b7d9c35f52b21a8ba0e0467a",
+      "source_path": "res://assets/ui/coastal/authored_v2/hud-prompt.svg",
+      "source_sha256": "abda6ca91dbe9513acd023880f5694fa6758ac5b76113532747614e21ca9a205"
+    },
+    {
+      "id": "paper",
+      "texture_path": "res://assets/ui/coastal/runtime_v4/paper.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "8e5caff241b60c7f94519942cc7c27679a051a8073dcaa4cefd05dc66ddd40f4",
+      "source_path": "res://assets/ui/coastal/authored_v4/paper.svg",
+      "source_sha256": "cf223f742d0e6f0c9b861ac26e4afcb4141695591e4a5ba829a169abf651ab4a"
+    },
+    {
+      "id": "print",
+      "texture_path": "res://assets/ui/coastal/runtime_v4/print.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "d28b33bfa494862806e88c8d9a4610307fe2a7aaebf6af2e797e56bc02713aec",
+      "source_path": "res://assets/ui/coastal/authored_v4/print.svg",
+      "source_sha256": "decc6b51a13fc62247cd4b0aec95351b8343a99369b331c49bdd3513373e4b01"
+    },
+    {
+      "id": "date",
+      "texture_path": "res://assets/ui/coastal/runtime_v4/date.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "c3829376b9a27e9f5206d6c1793aa1f303c1e4bef9f7a18a721e7b804aacf8a7",
+      "source_path": "res://assets/ui/coastal/authored_v4/date.svg",
+      "source_sha256": "ef2bbf3c3943df24319cbcdf2cc3d7a7b27f9d12722fbb302171d3c9fb0e57ad"
+    },
+    {
+      "id": "hud-frame",
+      "texture_path": "res://assets/ui/coastal/runtime_v4/hud-frame.png",
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "b6aec0a6044508f590e9d07211ac3435debe78352a353cc894e1431e8e1319eb",
+      "source_path": "res://assets/ui/coastal/authored_v4/hud-frame.svg",
+      "source_sha256": "58fb89da5ed016439bc7eb9fd614c3c8be6a9cf316f739e515aa11ecb380c517"
+    }
+  ]
+}

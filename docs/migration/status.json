@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "date": "2026-10-10",
+  "date": "2026-10-11",
   "current_chapter": "11",
   "technical_migration_status": "verified-through-chapter-12",
   "remaining_work_packages": [
@@ -26,7 +26,7 @@
     "gameplay_parity": "4 policies / 834 commands including 84 days; 8 traces; full state and baselines match",
     "formula_parity": "8 policies; full state/journal/reports and committed baseline match",
     "world_2_5d": "sample room kit/lighting/dust/far DOF and high/low measured; other locations prototype",
-    "coastal_ui_static": "HUD authored coastal frame/live gauge, dialogue weight/wash/affine, long text/prompt; 655 headless and 53 native checks at 5 window sizes; G2 pixel parity open",
+    "coastal_ui_static": "Choice selected ink/weight/focus by ID, stable font resources, paper/harbor correction; 661 headless/64 native, 24 captures; original mask MAE22.303; C11.05/G2 open with regional regressions recorded",
     "coastal_ui_motion": "interruptible workspace/dialogue fades verified; full source G3/art motion review open",
     "saves": "native round-trip, backup/temp/corrupt/failure/legacy/ruleset isolation verified",
     "native_export": "Windows debug/release clean-folder execution and packaged self-check verified",
@@ -34,5 +34,6 @@
   },
   "next_chapter": null,
   "review": "docs/reviews/chapters-06-12/README.md",
-  "ui_upgrade_review": "docs/reviews/ui-upgrade-2026-10-10/README.md"
+  "ui_upgrade_review": "docs/reviews/ui-upgrade-2026-10-10/README.md",
+  "ui_correction_review": "docs/reviews/ui-correction-2026-10-11/README.md"
 }

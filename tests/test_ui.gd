@@ -54,6 +54,19 @@ func run() -> void:
 	await tree.process_frame
 	expect(preview.view._buttons[0].get_rect().encloses(preview.view._choice_labels[0].get_rect()), "Wrapped Vietnamese choice copy stays within original hit target")
 	expect(preview.view._choice_labels[0].text == model.choices[0].text, "Long choice keeps full source copy and stable ID")
+	var selected_font: FontVariation = preview.view._choice_labels[0].get_theme_font("font")
+	expect(selected_font.variation_opentype.wght == preview.view._layout.choice_copy.selected.weight, "Initial selected choice uses authored weight")
+	preview.view._buttons[1].grab_focus()
+	await tree.process_frame
+	expect(preview.view._choice_labels[1].get_theme_color("font_color") == Color(preview.view._layout.choice_copy.selected.fill), "Keyboard focus applies selected ink to current choice")
+	expect(preview.view._choice_labels[0].get_theme_font("font").variation_opentype.wght == preview.view._layout.choices[0].font.weight, "Previous choice returns to authored idle weight")
+	expect(selected_font.variation_opentype.wght == preview.view._layout.choice_copy.selected.weight, "Focus switches stable font resources without mutating selected variation")
+	expect(preview.view._buttons[0].get_rect().encloses(preview.view._choice_labels[0].get_rect()), "Long copy stays in target after selection changes weight")
+	model.selected_choice = "draft"
+	model.focus = true
+	preview.view.configure(model, preview.view._layout, preview.view._resources)
+	await tree.process_frame
+	expect(preview.view._buttons[1].has_focus() and preview.view._choice_mark[1].visible, "Reconfiguration focuses the authored selected choice instead of resetting to first")
 	preview.queue_free()
 	await tree.process_frame
 	var calendar := CALENDAR.instantiate()

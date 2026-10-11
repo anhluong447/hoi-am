@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "plane": [1672, 941],
+  "policy": "Diagnostic subdivisions of original conservative dialogue mask; overlap is allowed, values are not an aggregate or acceptance threshold. HUD uses only conservative opaque date-paper interior; ink/footer/fringe reference alpha unresolved.",
+  "dialogue": {
+    "date-paper-type-ornament": [35, 30, 247, 137],
+    "choice-material-copy-icons": [482, 462, 446, 193],
+    "speaker-copy-rule-mark": [97, 692, 451, 59],
+    "dialogue-line": [228, 760, 1000, 55],
+    "paper-interior": [230, 820, 950, 63],
+    "paper-harbor-bottom": [190, 884, 1050, 57],
+    "attached-flowers": [0, 711, 215, 230],
+    "attached-notebook": [1390, 722, 282, 219]
+  },
+  "hud": {
+    "date-paper-interior": [43, 44, 281, 80]
+  }
+}

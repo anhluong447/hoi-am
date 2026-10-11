@@ -1,0 +1,187 @@
+Godot Engine v4.7.2.stable.steam.ed1daf0bf - https://godotengine.org
+
+[   0% ] first_scan_filesystem | Started Project initialization (5 steps)
+[   0% ] first_scan_filesystem | Scanning file structure...
+[  16% ] first_scan_filesystem | Loading global class names...
+[  33% ] first_scan_filesystem | Verifying GDExtensions...
+[  50% ] first_scan_filesystem | Creating autoload scripts...
+[  66% ] first_scan_filesystem | Initializing plugins...
+[  83% ] first_scan_filesystem | Starting file scan...
+[ DONE ] first_scan_filesystem
+
+[   0% ] update_scripts_classes | Started Registering global classes... (60 steps)
+[   0% ] update_scripts_classes | 
+[   1% ] update_scripts_classes | 
+[   3% ] update_scripts_classes | GameSession
+[   4% ] update_scripts_classes | 
+[   6% ] update_scripts_classes | 
+[   8% ] update_scripts_classes | 
+[   9% ] update_scripts_classes | 
+[  11% ] update_scripts_classes | 
+[  13% ] update_scripts_classes | 
+[  14% ] update_scripts_classes | 
+[  16% ] update_scripts_classes | 
+[  18% ] update_scripts_classes | 
+[  19% ] update_scripts_classes | 
+[  21% ] update_scripts_classes | 
+[  22% ] update_scripts_classes | 
+[  24% ] update_scripts_classes | 
+[  26% ] update_scripts_classes | 
+[  27% ] update_scripts_classes | 
+[  29% ] update_scripts_classes | 
+[  31% ] update_scripts_classes | 
+[  32% ] update_scripts_classes | 
+[  34% ] update_scripts_classes | 
+[  36% ] update_scripts_classes | 
+[  37% ] update_scripts_classes | 
+[  39% ] update_scripts_classes | 
+[  40% ] update_scripts_classes | 
+[  42% ] update_scripts_classes | 
+[  44% ] update_scripts_classes | 
+[  45% ] update_scripts_classes | 
+[  47% ] update_scripts_classes | 
+[  49% ] update_scripts_classes | 
+[  50% ] update_scripts_classes | 
+[  52% ] update_scripts_classes | 
+[  54% ] update_scripts_classes | 
+[  55% ] update_scripts_classes | 
+[  57% ] update_scripts_classes | 
+[  59% ] update_scripts_classes | 
+[  60% ] update_scripts_classes | JsonContentLoader
+[  62% ] update_scripts_classes | 
+[  63% ] update_scripts_classes | 
+[  65% ] update_scripts_classes | 
+[  67% ] update_scripts_classes | 
+[  68% ] update_scripts_classes | 
+[  70% ] update_scripts_classes | 
+[  72% ] update_scripts_classes | 
+[  73% ] update_scripts_classes | 
+[  75% ] update_scripts_classes | 
+[  77% ] update_scripts_classes | 
+[  78% ] update_scripts_classes | 
+[  80% ] update_scripts_classes | 
+[  81% ] update_scripts_classes | 
+[  83% ] update_scripts_classes | 
+[  85% ] update_scripts_classes | 
+[  86% ] update_scripts_classes | TextCatalog
+[  88% ] update_scripts_classes | 
+[  90% ] update_scripts_classes | 
+[  91% ] update_scripts_classes | 
+[  93% ] update_scripts_classes | 
+[  95% ] update_scripts_classes | 
+[  96% ] update_scripts_classes | 
+[ DONE ] update_scripts_classes
+
+[   0% ] _update_scan_actions | Started Scanning actions... (32 steps)
+[   0% ] _update_scan_actions | khue.png
+[   3% ] _update_scan_actions | van.png
+[   6% ] _update_scan_actions | cormorant-garamond.ttf
+[   9% ] _update_scan_actions | dancing-script.ttf
+[  12% ] _update_scan_actions | source-serif-4.ttf
+[  15% ] _update_scan_actions | choice-gold.png
+[  18% ] _update_scan_actions | choice-plain.png
+[  21% ] _update_scan_actions | date-paper.png
+[  24% ] _update_scan_actions | date.png
+[  27% ] _update_scan_actions | flowers.png
+[  30% ] _update_scan_actions | icon-back.png
+[  33% ] _update_scan_actions | icon-chat.png
+[  36% ] _update_scan_actions | icon-chevron.png
+[  39% ] _update_scan_actions | icon-proof.png
+[  42% ] _update_scan_actions | icon-quill.png
+[  45% ] _update_scan_actions | icon-return.png
+[  48% ] _update_scan_actions | notebook.png
+[  51% ] _update_scan_actions | paper.png
+[  54% ] _update_scan_actions | print.png
+[  57% ] _update_scan_actions | sun-seal.png
+[  60% ] _update_scan_actions | wave.png
+[  63% ] _update_scan_actions | dialogue-wash.png
+[  66% ] _update_scan_actions | hud-frame.png
+[  69% ] _update_scan_actions | hud-prompt.png
+[  72% ] _update_scan_actions | note-wash.png
+[  75% ] _update_scan_actions | hud-frame.png
+[  78% ] _update_scan_actions | date.png
+[  81% ] _update_scan_actions | hud-frame.png
+[  84% ] _update_scan_actions | paper.png
+[  87% ] _update_scan_actions | print.png
+[  90% ] _update_scan_actions | date.png
+[  93% ] _update_scan_actions | icon.svg
+[ DONE ] _update_scan_actions
+
+[   0% ] reimport | Started (Re)Importing Assets (32 steps)
+[   0% ] reimport | Preparing files to reimport...
+[   3% ] reimport | Preparing files to reimport...
+[   6% ] reimport | Preparing files to reimport...
+[   9% ] reimport | Preparing files to reimport...
+[  12% ] reimport | Preparing files to reimport...
+[  15% ] reimport | Preparing files to reimport...
+[  18% ] reimport | Preparing files to reimport...
+[  21% ] reimport | Preparing files to reimport...
+[  24% ] reimport | Preparing files to reimport...
+[  27% ] reimport | Preparing files to reimport...
+[  30% ] reimport | Preparing files to reimport...
+[  33% ] reimport | Preparing files to reimport...
+[  36% ] reimport | Preparing files to reimport...
+[  39% ] reimport | Preparing files to reimport...
+[  42% ] reimport | Preparing files to reimport...
+[  45% ] reimport | Preparing files to reimport...
+[  48% ] reimport | Preparing files to reimport...
+[  51% ] reimport | Preparing files to reimport...
+[  54% ] reimport | Preparing files to reimport...
+[  57% ] reimport | Preparing files to reimport...
+[  60% ] reimport | Preparing files to reimport...
+[  63% ] reimport | Preparing files to reimport...
+[  66% ] reimport | Preparing files to reimport...
+[  69% ] reimport | Preparing files to reimport...
+[  72% ] reimport | Preparing files to reimport...
+[  75% ] reimport | Preparing files to reimport...
+[  78% ] reimport | Preparing files to reimport...
+[  81% ] reimport | Preparing files to reimport...
+[  84% ] reimport | Preparing files to reimport...
+[  87% ] reimport | Preparing files to reimport...
+[  90% ] reimport | Preparing files to reimport...
+[  93% ] reimport | Preparing files to reimport...
+[   0% ] reimport | Executing pre-reimport operations...
+[   0% ] reimport | cormorant-garamond.ttf
+[   3% ] reimport | dancing-script.ttf
+[   6% ] reimport | source-serif-4.ttf
+[   9% ] reimport | cormorant-garamond.ttf
+[  12% ] reimport | dancing-script.ttf
+[  15% ] reimport | source-serif-4.ttf
+[  18% ] reimport | print.png
+[  21% ] reimport | sun-seal.png
+[  24% ] reimport | wave.png
+[  27% ] reimport | dialogue-wash.png
+[  30% ] reimport | hud-frame.png
+[  33% ] reimport | hud-prompt.png
+[  36% ] reimport | note-wash.png
+[  39% ] reimport | hud-frame.png
+[  42% ] reimport | date.png
+[  45% ] reimport | hud-frame.png
+[  48% ] reimport | paper.png
+[  51% ] reimport | print.png
+[  54% ] reimport | date.png
+[  57% ] reimport | icon.svg
+[  60% ] reimport | paper.png
+[  63% ] reimport | notebook.png
+[  66% ] reimport | icon-return.png
+[  69% ] reimport | icon-quill.png
+[  72% ] reimport | icon-proof.png
+[  75% ] reimport | icon-chevron.png
+[  78% ] reimport | icon-chat.png
+[  81% ] reimport | icon-back.png
+[  84% ] reimport | flowers.png
+[  87% ] reimport | date.png
+[  90% ] reimport | date-paper.png
+[  93% ] reimport | choice-plain.png
+[  96% ] reimport | Finalizing Asset Import...
+[ DONE ] reimport
+
+[   0% ] reimport | Started (Re)Importing Assets (32 steps)
+[   0% ] reimport | Executing post-reimport operations...
+[ DONE ] reimport
+
+[   0% ] loading_editor_layout | Started Loading editor (5 steps)
+[   0% ] loading_editor_layout | Loading editor layout...
+[  16% ] loading_editor_layout | Loading docks...
+[ DONE ] loading_editor_layout
+

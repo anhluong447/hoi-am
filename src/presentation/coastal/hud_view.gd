@@ -69,7 +69,8 @@ func _build() -> void:
 	_gauge.configure(_layout.pips, _model.energy_value, _model.energy_capacity)
 	add_child(_gauge)
 	for spec: Dictionary in _layout.text:
-		_labels[spec.id] = WIDGETS.copy(self, _model.get(spec.id, ""), spec, _resources[spec.get("family", "Source Serif 4")])
+		var family: String = spec.get("family", "Source Serif 4")
+		_labels[spec.id] = WIDGETS.copy(self, _model.get(spec.id, ""), spec, _resources[family], _resources.coastal_weights[family])
 	_map = WIDGETS.target(self, _layout.map_bounds, _model.map)
 	_map.pressed.connect(func() -> void: map_requested.emit())
 	_menu = WIDGETS.target(self, _layout.menu_bounds, _model.menu)
@@ -85,6 +86,6 @@ func _build() -> void:
 	style.content_margin_bottom = _layout.prompt.padding[1]
 	_prompt_box.add_theme_stylebox_override("panel", style)
 	add_child(_prompt_box)
-	_prompt = WIDGETS.copy(_prompt_box, "", _layout.prompt, _resources["Source Serif 4"])
+	_prompt = WIDGETS.copy(_prompt_box, "", _layout.prompt, _resources["Source Serif 4"], _resources.coastal_weights["Source Serif 4"])
 	_prompt_box.visible = false
 	_prompt.visible = false

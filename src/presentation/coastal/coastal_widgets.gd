@@ -18,16 +18,12 @@ static func art(parent: Control, texture: Texture2D, bounds: Array) -> TextureRe
 	return node
 
 
-static func copy(parent: Control, value: String, spec: Dictionary, font: Font) -> Label:
+static func copy(parent: Control, value: String, spec: Dictionary, font: Font, weights: Dictionary = {}) -> Label:
 	var node := Label.new()
 	node.auto_translate_mode = Node.AUTO_TRANSLATE_MODE_DISABLED
 	if spec.has("width") and not spec.get("nowrap", false):
 		node.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	if font is FontVariation and spec.has("weight"):
-		var variation := FontVariation.new()
-		variation.base_font = font.base_font
-		variation.variation_opentype = {"wght": float(spec.weight)}
-		font = variation
+	font = styled_font(font, spec, weights)
 	node.add_theme_font_override("font", font)
 	node.add_theme_color_override("font_color", Color(spec.get("fill", "#16152f")))
 	node.uppercase = spec.get("uppercase", false)
@@ -36,6 +32,13 @@ static func copy(parent: Control, value: String, spec: Dictionary, font: Font) -
 	parent.add_child(node)
 	refresh_copy(node, value, spec)
 	return node
+
+
+static func styled_font(font: Font, spec: Dictionary, weights: Dictionary) -> Font:
+	if not weights.is_empty() and spec.has("weight"):
+		assert(weights.has(float(spec.weight)), "Authored font weight missing from coastal resources")
+		return weights[float(spec.weight)]
+	return font
 
 
 static func refresh_copy(node: Label, value: String, spec: Dictionary) -> void:

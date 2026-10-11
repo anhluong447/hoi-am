@@ -64,6 +64,7 @@ dependencies và licenses. Người chơi chạy bản export không cần edito
 - [Review Chapter 01–05 và hình native](docs/reviews/chapters-01-05/README.md)
 - [Review Chapter 06–12, video và profile](docs/reviews/chapters-06-12/README.md)
 - [UI nâng cấp: HUD, hội thoại, resize và kiểm thử native](docs/reviews/ui-upgrade-2026-10-10/README.md)
+- [UI correction: choice focus, paper và đối chiếu theo vùng](docs/reviews/ui-correction-2026-10-11/README.md)
 - [Workflow thêm room/NPC/dialogue/case đã chạy thử](docs/CONTENT-AUTHORING.md)
 - [Save native và formula schema v2](docs/decisions/003-native-saves-and-formula-v2.md)
 - [Source mapping](docs/migration/source-mapping.md)

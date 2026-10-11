@@ -197,6 +197,10 @@
     "right_margin": 46,
     "padding": 7,
     "max_lines": 2,
-    "min_size": 18
+    "min_size": 18,
+    "selected": {
+      "weight": 600,
+      "fill": "#07526d"
+    }
   }
 }

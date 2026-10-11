@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "screen": "hud",
+  "plane": [
+    1672,
+    941
+  ],
+  "policy": "Diagnostic subdivisions of original conservative dialogue mask; overlap is allowed, values are not an aggregate or acceptance threshold. HUD uses only conservative opaque date-paper interior; ink/footer/fringe reference alpha unresolved.",
+  "reference_sha256": "fb4ef57d1cbcda2dd87e2083764721052f0e06f4fad7e43065be7750f2bf8618",
+  "before_sha256": "2c0de0b81e8dc8d8e729b68e0499f3d54bd5835f78791bc07020f2b2aa1d7d4a",
+  "candidate_sha256": "7507aa064e0d360b50cb60d3004262fba9b8b5f13edd1b70329859a0b5a0f858",
+  "regions_sha256": "7f8feef046e675e49a652e7b90ab4f762a798ac14922e95f15c91ea45b773cd7",
+  "mask_sha256": null,
+  "regions": [
+    {
+      "id": "date-paper-interior",
+      "bounds": [
+        43,
+        44,
+        281,
+        80
+      ],
+      "pixels": 22480,
+      "before_mae": 31.48747034400949,
+      "candidate_mae": 31.48747034400949,
+      "delta_mae": 0.0
+    }
+  ],
+  "acceptance": "Diagnostic only; original reference and mask unchanged; no G2 pass threshold"
+}

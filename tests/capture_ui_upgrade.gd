@@ -3,6 +3,7 @@ extends SceneTree
 
 const PREVIEW = preload("res://src/bootstrap/previews/ui_preview.tscn")
 const PLAY = preload("res://src/bootstrap/gameplay/playable.tscn")
+const PROBE = preload("res://tests/coastal_render_probe.gd")
 
 var _output := "res://artifacts/ui-upgrade"
 var _count := 0
@@ -34,6 +35,11 @@ func _run() -> void:
 			preview.show_case(screen, "ui-dark", true)
 			await _capture(screen + "-" + str(dimensions.x) + "x" + str(dimensions.y))
 	root.size = Vector2i(1672, 941)
+	preview.show_case("dialogue", "neutral", true)
+	preview.view._buttons[1].grab_focus()
+	await _capture("dialogue-selected-draft")
+	preview.view._buttons[0].grab_focus()
+	await _capture("dialogue-selection-return")
 	preview.show_case("dialogue", "ui-dark", true)
 	var model: Dictionary = preview.view._model.duplicate(true)
 	model.choices[0].text = preview._setup.text.text("ui.review.long_choice")
@@ -70,5 +76,12 @@ func _capture(id: String) -> void:
 	for _frame: int in 16:
 		await process_frame
 	await RenderingServer.frame_post_draw
-	assert(root.get_texture().get_image().save_png(_output.path_join(id + ".png")) == OK, "Native PNG capture")
+	var bitmap := root.get_texture().get_image()
+	assert(bitmap.save_png(_output.path_join(id + ".png")) == OK, "Native PNG capture")
+	if id.begins_with("dialogue-") and bitmap.get_size() == Vector2i(1672, 941):
+		var preview: Node = root.get_child(root.get_child_count() - 1)
+		if not PROBE.choices_visible(bitmap, preview.view):
+			push_error("Missing dialogue glyph/icon in capture: " + id)
+			quit(1)
+			return
 	_count += 1

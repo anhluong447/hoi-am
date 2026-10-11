@@ -51,3 +51,13 @@ sửa glyph/icon khi dựng lại view, text dài và prompt sát mép. 655 head
 [review UI upgrade](../../reviews/ui-upgrade-2026-10-10/README.md).
 C11.05/G2 vẫn mở: dialogue comparison là diagnostic trên mask bảo thủ,
 chưa có ngưỡng nghiệm thu hoặc xử lý toàn bộ fringe/occluded alpha.
+
+## UI correction 2026-10-11
+
+Selected choice có ink/weight riêng, focus giữ đúng choice ID khi configure lại;
+composition giữ font weights bất biến theo layout. Paper/harbor wash và cạnh HUD
+có source/PNG v4–v5, mask và baseline cũ không đổi. 661 headless checks và
+64 native checks, 24 captures có kiểm pixel cho glyph/icon ở cả selected/idle.
+Dialogue diagnostic giảm từ 23.422 xuống 22.303/255 trên mask gốc; từng vùng
+có cải thiện hoặc regression được ghi riêng, không dùng MAE làm gate tự đặt.
+[Review và các static gaps còn mở](../../reviews/ui-correction-2026-10-11/README.md).

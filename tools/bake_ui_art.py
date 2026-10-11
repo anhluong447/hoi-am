@@ -77,7 +77,7 @@ def documents():
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--browser',default=r'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe')
-    parser.add_argument('--version', type=int, choices=[1, 2, 3], default=1)
+    parser.add_argument('--version', type=int, choices=[1, 2, 3, 4, 5], default=1)
     args=parser.parse_args()
     out = OUT if args.version == 1 else ROOT / f'assets/ui/coastal/runtime_v{args.version}'
     authored=ROOT / ('assets/ui/coastal/generated_sources' if args.version == 1 else f'assets/ui/coastal/authored_v{args.version}')
@@ -93,6 +93,12 @@ def main():
     elif args.version == 3:
         from coastal_v3_art import documents as version_three
         docs = version_three()
+    elif args.version == 4:
+        from coastal_v4_art import documents as version_four
+        docs = version_four()
+    elif args.version == 5:
+        from coastal_v5_art import documents as version_five
+        docs = version_five()
     with tempfile.TemporaryDirectory(prefix='hoi-am-ui-bake-',ignore_cleanup_errors=True) as profile:
         process=subprocess.Popen([args.browser,'--headless=new','--disable-gpu','--no-first-run',
                                   '--remote-debugging-port=0',f'--user-data-dir={profile}','about:blank'],
