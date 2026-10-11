@@ -20,8 +20,13 @@
       ]
     },
     "HD02": {
-      "status": "pending",
-      "evidence": []
+      "status": "complete",
+      "checks": "699 headless, 83 native, prop native capture passed",
+      "evidence": [
+        "docs/world-hd2d/evidence/hd02-props-v1",
+        "content/world/art_manifest_v1.json"
+      ],
+      "notes": "Cutout prop depth, retained collider/shadow-only geometry, pure validation and injected atlas resources"
     },
     "HD03": {
       "status": "pending",

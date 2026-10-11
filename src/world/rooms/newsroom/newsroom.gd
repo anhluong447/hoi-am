@@ -10,6 +10,8 @@ const TARGET = preload("res://src/world/rooms/newsroom/interaction_target.gd")
 const PLAYER = preload("res://src/world/actors/player_body.tscn")
 const RIG = preload("res://src/world/actors/sprite_rig.tscn")
 const ATMOSPHERE = preload("res://src/world/rooms/newsroom/room_atmosphere.gd")
+const LIGHTING = preload("res://src/world/rooms/newsroom/room_lighting.gd")
+const VISUALS = preload("res://src/world/rooms/newsroom/room_visuals.gd")
 
 var player: CharacterBody3D
 var camera: Camera3D
@@ -35,12 +37,17 @@ func _ready() -> void:
 	geometry.name = "Geometry"
 	add_child(geometry)
 	geometry.build(_config.geometry)
+	if _config.has("visuals"):
+		var visuals := VISUALS.new()
+		visuals.name = "Visuals"
+		add_child(visuals)
+		visuals.build(_config.visuals, _textures.world)
 	camera = Camera3D.new()
 	camera.name = "Camera"
 	add_child(camera)
 	set_camera_preset("orthographic")
 	camera.current = true
-	_build_light()
+	LIGHTING.build(self, _config)
 	player = PLAYER.instantiate()
 	player.configure(_config, _actors.khue, _textures.khue, camera)
 	player.position = GEOMETRY.vector(_config.spawn)
@@ -183,30 +190,6 @@ func apply_npc_presentation(model: Array) -> void:
 				npc.position = GEOMETRY.vector(item.position)
 				npc.get_meta("body").position = npc.position
 			npc.set_direction(item.get("direction", "down"))
-
-
-func _build_light() -> void:
-	var environment := WorldEnvironment.new()
-	environment.name = "WorldEnvironment"
-	var settings := Environment.new()
-	settings.background_mode = Environment.BG_COLOR
-	settings.background_color = Color(_config.ambient.background)
-	settings.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-	settings.ambient_light_color = Color(_config.ambient.color)
-	settings.ambient_light_energy = _config.ambient.energy
-	settings.tonemap_mode = Environment.TONE_MAPPER_FILMIC
-	environment.environment = settings
-	add_child(environment)
-	var sun := DirectionalLight3D.new()
-	sun.name = "WindowSun"
-	sun.rotation_degrees = GEOMETRY.vector(_config.sun.rotation)
-	sun.light_color = Color(_config.sun.color)
-	sun.light_energy = _config.sun.energy
-	sun.shadow_enabled = true
-	sun.directional_shadow_mode = DirectionalLight3D.SHADOW_ORTHOGONAL
-	sun.directional_shadow_max_distance = _config.sun.shadow_distance
-	sun.shadow_normal_bias = _config.sun.normal_bias
-	add_child(sun)
 
 
 func _build_portal() -> void:

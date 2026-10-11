@@ -1,0 +1,55 @@
+{
+  "props": [
+    {
+      "id": "desk-visual",
+      "position": [
+        -1,
+        0,
+        -0.6
+      ],
+      "layers": [
+        {
+          "asset": "desk",
+          "size": [
+            3.2,
+            1.1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cabinet-visual",
+      "position": [
+        -4.7,
+        0,
+        -3.6
+      ],
+      "layers": [
+        {
+          "asset": "cabinet",
+          "size": [
+            1.6,
+            2.2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plant-visual",
+      "position": [
+        5,
+        0,
+        2.9
+      ],
+      "layers": [
+        {
+          "asset": "plant",
+          "size": [
+            1.2,
+            1.5
+          ]
+        }
+      ]
+    }
+  ]
+}

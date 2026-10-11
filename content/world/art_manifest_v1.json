@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "atlases": [
+    {
+      "id": "props",
+      "texture_path": "res://assets/world/coastal/v1/runtime/props.png",
+      "source_path": "res://assets/world/coastal/v1/source/props.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "sha256": "4782bb53cb0b0885bba94c1f3f80b020cacd89bb3d17976461184ff48eb37aa3",
+      "source_sha256": "4782bb53cb0b0885bba94c1f3f80b020cacd89bb3d17976461184ff48eb37aa3",
+      "provenance": "built-in imagegen; original art; prompt archived with source"
+    }
+  ],
+  "assets": [
+    {
+      "id": "desk",
+      "atlas": "props",
+      "region": [
+        0,
+        36,
+        313,
+        277
+      ]
+    },
+    {
+      "id": "cabinet",
+      "atlas": "props",
+      "region": [
+        313,
+        28,
+        308,
+        285
+      ]
+    },
+    {
+      "id": "bookshelf",
+      "atlas": "props",
+      "region": [
+        636,
+        0,
+        303,
+        313
+      ]
+    },
+    {
+      "id": "chair",
+      "atlas": "props",
+      "region": [
+        945,
+        46,
+        233,
+        267
+      ]
+    },
+    {
+      "id": "printer",
+      "atlas": "props",
+      "region": [
+        31,
+        313,
+        273,
+        308
+      ]
+    },
+    {
+      "id": "lamp",
+      "atlas": "props",
+      "region": [
+        333,
+        313,
+        260,
+        308
+      ]
+    },
+    {
+      "id": "papers",
+      "atlas": "props",
+      "region": [
+        628,
+        313,
+        299,
+        302
+      ]
+    },
+    {
+      "id": "books",
+      "atlas": "props",
+      "region": [
+        939,
+        313,
+        300,
+        312
+      ]
+    },
+    {
+      "id": "plant",
+      "atlas": "props",
+      "region": [
+        0,
+        640,
+        308,
+        299
+      ]
+    },
+    {
+      "id": "flowers",
+      "atlas": "props",
+      "region": [
+        347,
+        626,
+        277,
+        313
+      ]
+    },
+    {
+      "id": "clock",
+      "atlas": "props",
+      "region": [
+        632,
+        632,
+        306,
+        307
+      ]
+    },
+    {
+      "id": "board",
+      "atlas": "props",
+      "region": [
+        939,
+        626,
+        304,
+        313
+      ]
+    },
+    {
+      "id": "window",
+      "atlas": "props",
+      "region": [
+        0,
+        939,
+        304,
+        302
+      ]
+    },
+    {
+      "id": "door",
+      "atlas": "props",
+      "region": [
+        322,
+        939,
+        304,
+        289
+      ]
+    },
+    {
+      "id": "counter",
+      "atlas": "props",
+      "region": [
+        626,
+        939,
+        312,
+        285
+      ]
+    },
+    {
+      "id": "boat",
+      "atlas": "props",
+      "region": [
+        939,
+        939,
+        299,
+        289
+      ]
+    }
+  ]
+}

@@ -12,6 +12,9 @@ func build(definitions: Array) -> void:
 		var box := BoxMesh.new()
 		box.size = vector(item.size)
 		mesh.mesh = box
+		if not item.get("visible", true):
+			mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_SHADOWS_ONLY if item.get("shadow", true) else GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+			mesh.visible = item.get("shadow", true)
 		var material := StandardMaterial3D.new()
 		material.albedo_color = Color(item.color)
 		material.roughness = 0.86
