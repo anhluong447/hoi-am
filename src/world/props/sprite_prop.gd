@@ -8,6 +8,8 @@ const ART = preload("res://src/world/props/cutout_art.gdshader")
 func configure(definition: Dictionary, resources: Dictionary) -> void:
 	name = definition.id
 	position = Vector3(definition.position[0], definition.position[1], definition.position[2])
+	if definition.has("idle"):
+		set_meta("idle", definition.idle.duplicate(true))
 	for item: Dictionary in definition.layers:
 		var asset: Dictionary = resources.assets[item.asset]
 		var region := AtlasTexture.new()

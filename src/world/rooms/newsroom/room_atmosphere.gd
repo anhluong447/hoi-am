@@ -9,6 +9,8 @@ var _dust: GPUParticles3D
 var _water: MeshInstance3D
 var _config: Dictionary
 var _resources: Dictionary
+var _quality := "high"
+var _reduced := false
 
 
 func configure(config: Dictionary, resources: Dictionary = {}) -> void:
@@ -71,8 +73,14 @@ func _ready() -> void:
 
 
 func set_quality(id: String) -> void:
+	_quality = id
 	if _dust:
-		_dust.emitting = id != "low"
-		_dust.visible = id != "low"
+		_dust.emitting = id != "low" and not _reduced
+		_dust.visible = id != "low" and not _reduced
 	if _water:
-		_water.material_override.set_shader_parameter("strength", 0.0 if id == "low" else _config.water.strength)
+		_water.material_override.set_shader_parameter("strength", 0.0 if id == "low" or _reduced else _config.water.strength)
+
+
+func set_reduced_motion(reduced: bool) -> void:
+	_reduced = reduced
+	set_quality(_quality)

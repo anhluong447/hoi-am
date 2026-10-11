@@ -35,6 +35,10 @@ static func validate(manifest: Dictionary, visual: Dictionary) -> bool:
 		if ids.has(prop.id) or prop.layers.is_empty():
 			return false
 		ids[prop.id] = true
+		if prop.has("idle"):
+			var idle: Variant = prop.idle
+			if not idle is Dictionary or not _scalar(idle.get("degrees")) or not _scalar(idle.get("period")) or not _scalar(idle.get("phase")) or idle.period <= 0:
+				return false
 		for layer: Variant in prop.layers:
 			if not layer is Dictionary or not assets.has(layer.get("asset")) or not _numbers(layer.get("size"), 2):
 				return false
@@ -55,7 +59,7 @@ static func validate(manifest: Dictionary, visual: Dictionary) -> bool:
 			return false
 		if not _numbers(label.get("position"), 3) or not label.get("font_size") is float and not label.get("font_size") is int:
 			return false
-		if float(label.get("pixel_size", 0)) <= 0 or label.font_size <= 0:
+		if not _scalar(label.get("pixel_size")) or not _scalar(label.font_size) or label.pixel_size <= 0 or label.font_size <= 0:
 			return false
 		ids[label.id] = true
 	return true
@@ -67,3 +71,7 @@ static func _numbers(values: Variant, count: int) -> bool:
 
 static func _id(value: Variant) -> bool:
 	return value is String and not value.is_empty()
+
+
+static func _scalar(value: Variant) -> bool:
+	return (value is float or value is int) and is_finite(float(value))

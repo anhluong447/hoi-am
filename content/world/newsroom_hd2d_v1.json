@@ -678,5 +678,18 @@
       "near_transition": 2,
       "amount": 0.025
     }
+  },
+  "motion": {
+    "follow": {
+      "strength": [
+        0.045,
+        0.035
+      ],
+      "maximum": [
+        0.25,
+        0.15
+      ],
+      "response": 0.24
+    }
   }
 }

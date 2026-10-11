@@ -22,5 +22,6 @@ static func mount(play: Node, config: Dictionary) -> void:
 	play.room.menu_requested.connect(play.open_workspace)
 	play.get_node("World").add_child(play.room)
 	play.room.set_quality(play._quality)
+	play.room.set_reduced_motion(play._reduced)
 	play.room.set_input_enabled(play.controller.modal.is_empty())
 	play._nearby = ""

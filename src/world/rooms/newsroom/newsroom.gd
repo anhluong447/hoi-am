@@ -12,6 +12,7 @@ const RIG = preload("res://src/world/actors/sprite_rig.tscn")
 const ATMOSPHERE = preload("res://src/world/rooms/newsroom/room_atmosphere.gd")
 const LIGHTING = preload("res://src/world/rooms/newsroom/room_lighting.gd")
 const VISUALS = preload("res://src/world/rooms/newsroom/room_visuals.gd")
+const MOTION = preload("res://src/world/rooms/newsroom/room_motion.gd")
 
 var player: CharacterBody3D
 var camera: Camera3D
@@ -23,6 +24,7 @@ var _npcs: Dictionary = {}
 var _input_enabled := true
 var _nearby := ""
 var _atmosphere: Node3D
+var _motion: Node
 
 
 func configure(config: Dictionary, actors: Dictionary, textures: Dictionary) -> void:
@@ -82,6 +84,9 @@ func _ready() -> void:
 	_atmosphere.configure(_config.get("atmosphere", {}), _textures.get("world", {}))
 	add_child(_atmosphere)
 	LIGHTING.camera_attributes(camera, _config)
+	_motion = MOTION.new()
+	add_child(_motion)
+	_motion.configure(self, _config.get("motion", {}))
 
 
 func _physics_process(_delta: float) -> void:
@@ -126,6 +131,8 @@ func set_camera_preset(id: String) -> void:
 		camera.size = preset.size
 	else:
 		camera.fov = preset.fov
+	if _motion:
+		_motion.reset_camera()
 
 
 func safe_spawn(candidate: Vector3) -> Vector3:
@@ -177,6 +184,11 @@ func set_quality(id: String) -> void:
 	if camera.attributes:
 		camera.attributes.dof_blur_far_enabled = id != "low"
 		camera.attributes.dof_blur_near_enabled = id != "low" and _config.atmosphere.dof.has("near_distance")
+
+
+func set_reduced_motion(reduced: bool) -> void:
+	_motion.set_reduced(reduced)
+	_atmosphere.set_reduced_motion(reduced)
 
 
 func apply_npc_presentation(model: Array) -> void:

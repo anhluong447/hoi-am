@@ -66,8 +66,24 @@ func _run() -> void:
 	play.travel("club")
 	await _frames(10)
 	_suite.expect(play.room.has_node("Visuals") and play.controller.location_id == "club", "Travel remounts injected world art without losing location ID")
+	var motion: Node = play.room._motion
+	play.room.player.set_physics_process(false)
+	play.room.player.position.x += 2.0
+	motion._process(1.0)
+	_suite.expect(motion._offset.length() > 0.0 and absf(motion._offset.x) <= 0.25, "Camera follow is active and bounded")
+	_suite.expect(motion._props.any(func(prop: Node3D) -> bool: return absf(prop.rotation.z) > 0.0), "Foliage uses independent authored idle phases")
+	play.room.set_reduced_motion(true)
+	_suite.expect(not motion.is_processing() and motion._offset == Vector3.ZERO, "Reduced motion disables camera follow")
+	_suite.expect(motion._props.all(func(prop: Node3D) -> bool: return prop.rotation.z == 0.0), "Reduced motion restores foliage")
+	_suite.expect(not play.room._atmosphere._dust.visible and play.room._atmosphere._water.material_override.get_shader_parameter("strength") == 0.0, "Reduced motion disables decorative particles and water displacement")
+	play.room.set_quality("high")
+	_suite.expect(not play.room._atmosphere._dust.visible, "Quality change preserves reduced motion")
+	play.room.set_reduced_motion(false)
+	_suite.expect(motion.is_processing() and play.room._atmosphere._dust.visible, "Full motion resumes after preference change")
+	var old_motion: WeakRef = weakref(motion)
 	play.queue_free()
 	await process_frame
+	_suite.expect(old_motion.get_ref() == null, "Unmount releases local motion owner")
 	for failure: String in _suite.failures:
 		push_error(failure)
 	print("Native HD-2D: %d checks; %d failures" % [_suite.checks, _suite.failures.size()])

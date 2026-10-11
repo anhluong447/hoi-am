@@ -608,7 +608,12 @@
             1.65
           ]
         }
-      ]
+      ],
+      "idle": {
+        "degrees": 0.4,
+        "period": 6.5,
+        "phase": 0.0
+      }
     },
     {
       "id": "right-plant-art",
@@ -625,7 +630,12 @@
             1.7
           ]
         }
-      ]
+      ],
+      "idle": {
+        "degrees": 0.4,
+        "period": 6.93,
+        "phase": 0.9
+      }
     },
     {
       "id": "window-flowers-left",
@@ -642,7 +652,12 @@
             0.8
           ]
         }
-      ]
+      ],
+      "idle": {
+        "degrees": 0.28,
+        "period": 7.36,
+        "phase": 1.8
+      }
     },
     {
       "id": "window-flowers-right",
@@ -659,7 +674,12 @@
             0.8
           ]
         }
-      ]
+      ],
+      "idle": {
+        "degrees": 0.28,
+        "period": 7.79,
+        "phase": 2.7
+      }
     },
     {
       "id": "front-flowers",
@@ -676,7 +696,12 @@
             2.3
           ]
         }
-      ]
+      ],
+      "idle": {
+        "degrees": 0.4,
+        "period": 8.22,
+        "phase": 3.6
+      }
     },
     {
       "id": "front-plant",
@@ -693,7 +718,12 @@
             2.6
           ]
         }
-      ]
+      ],
+      "idle": {
+        "degrees": 0.4,
+        "period": 8.65,
+        "phase": 4.5
+      }
     },
     {
       "id": "harbor-mountains",

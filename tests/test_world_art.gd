@@ -24,6 +24,9 @@ func run() -> void:
 	malformed = visual.duplicate(true)
 	malformed.props[0].layers[0].asset = "missing"
 	expect(not VALIDATION.validate(manifest, malformed), "Unresolved prop art rejected")
+	malformed = visual.duplicate(true)
+	malformed.props[0].idle = {"degrees": 0.4, "period": 0.0, "phase": 0.0}
+	expect(not VALIDATION.validate(manifest, malformed), "Zero idle period is rejected before motion setup")
 	var config: Dictionary = LOADER.read_dictionary("res://content/world/newsroom_hd2d_prop_slice.json").data
 	var original: Dictionary = config.duplicate(true)
 	var setup := STARTUP.prepare()

@@ -67,8 +67,13 @@
       "notes": "Sun direction corrected, painted water, calibrated near/far DOF, quality A/B; input fixture race fixed without UI behavior changes"
     },
     "HD07": {
-      "status": "pending",
-      "evidence": []
+      "status": "complete",
+      "checks": "700 headless; 103 native; 40-second native movie reviewed",
+      "evidence": [
+        "docs/world-hd2d/evidence/hd07-motion-v1",
+        "docs/world-hd2d/hd07-review.md"
+      ],
+      "notes": "Bounded local camera follow, independently phased foliage, reduced-motion/quality interoperability; UI unchanged"
     },
     "HD08": {
       "status": "pending",

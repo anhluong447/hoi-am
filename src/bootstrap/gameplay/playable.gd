@@ -118,6 +118,7 @@ func _intent(command: Dictionary) -> void:
 			back_requested.emit()
 		"motion":
 			_reduced = not _reduced
+			room.set_reduced_motion(_reduced)
 			controller.option("reduced_motion", _reduced)
 			open_workspace()
 		"quality":
