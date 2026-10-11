@@ -40,6 +40,14 @@ static func validate(manifest: Dictionary, visual: Dictionary) -> bool:
 				return false
 			if layer.size[0] <= 0 or layer.size[1] <= 0 or not _numbers(layer.get("offset", [0, 0, 0]), 3):
 				return false
+	for surface: Variant in visual.get("surfaces", []):
+		if not surface is Dictionary or not _id(surface.get("id")) or ids.has(surface.id):
+			return false
+		ids[surface.id] = true
+		if not assets.has(surface.get("asset")) or not _numbers(surface.get("position"), 3) or not _numbers(surface.get("size"), 2):
+			return false
+		if minf(surface.size[0], surface.size[1]) <= 0 or not _numbers(surface.get("rotation", [0, 0, 0]), 3):
+			return false
 	return true
 
 

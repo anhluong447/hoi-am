@@ -2,6 +2,7 @@ extends Node3D
 ## A cutout prop owns visual layers; physics and interaction belong to the room.
 
 var layers: Array[Sprite3D] = []
+const ART = preload("res://src/world/props/cutout_art.gdshader")
 
 
 func configure(definition: Dictionary, resources: Dictionary) -> void:
@@ -23,5 +24,13 @@ func configure(definition: Dictionary, resources: Dictionary) -> void:
 		sprite.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST_WITH_MIPMAPS
 		sprite.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 		sprite.modulate = Color(item.get("tint", "#ffffff"))
+		if resources.get("texel_step", 1.0) > 1.0:
+			var material := ShaderMaterial.new()
+			material.shader = ART
+			material.set_shader_parameter("atlas", region.atlas)
+			material.set_shader_parameter("atlas_size", Vector2(region.atlas.get_width(), region.atlas.get_height()))
+			material.set_shader_parameter("texel_step", resources.texel_step)
+			material.set_shader_parameter("tint", sprite.modulate)
+			sprite.material_override = material
 		add_child(sprite)
 		layers.append(sprite)

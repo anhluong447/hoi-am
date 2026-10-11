@@ -1,0 +1,269 @@
+{
+  "props": [
+    {
+      "id": "desk-visual",
+      "position": [
+        -1,
+        0,
+        -0.6
+      ],
+      "layers": [
+        {
+          "asset": "desk",
+          "size": [
+            3.2,
+            1.1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cabinet-visual",
+      "position": [
+        -4.7,
+        0,
+        -3.6
+      ],
+      "layers": [
+        {
+          "asset": "cabinet",
+          "size": [
+            1.6,
+            2.2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plant-visual",
+      "position": [
+        5,
+        0,
+        2.9
+      ],
+      "layers": [
+        {
+          "asset": "plant",
+          "size": [
+            1.2,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bookshelf-visual",
+      "position": [
+        -3.2,
+        0,
+        -3.7
+      ],
+      "layers": [
+        {
+          "asset": "bookshelf",
+          "size": [
+            1.7,
+            2.5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "window-left-art",
+      "position": [
+        -2.6,
+        1.05,
+        -4.2
+      ],
+      "layers": [
+        {
+          "asset": "window",
+          "size": [
+            3.5,
+            2.1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "window-right-art",
+      "position": [
+        2.6,
+        1.05,
+        -4.2
+      ],
+      "layers": [
+        {
+          "asset": "window",
+          "size": [
+            3.5,
+            2.1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harbor-mountains",
+      "position": [
+        0,
+        -7.0,
+        -17
+      ],
+      "layers": [
+        {
+          "asset": "mountains",
+          "size": [
+            19,
+            3.9
+          ],
+          "shaded": false
+        }
+      ]
+    },
+    {
+      "id": "harbor-town",
+      "position": [
+        0,
+        -3.6,
+        -11
+      ],
+      "layers": [
+        {
+          "asset": "town",
+          "size": [
+            18,
+            3.6
+          ],
+          "shaded": false
+        }
+      ]
+    },
+    {
+      "id": "harbor-quay",
+      "position": [
+        0,
+        -2.5,
+        -8
+      ],
+      "layers": [
+        {
+          "asset": "quay",
+          "size": [
+            16,
+            2.8
+          ],
+          "shaded": false
+        }
+      ]
+    }
+  ],
+  "surfaces": [
+    {
+      "id": "painted-floor",
+      "asset": "oak",
+      "position": [
+        0,
+        0.012,
+        0
+      ],
+      "size": [
+        12,
+        9
+      ],
+      "rotation": [
+        -90,
+        0,
+        0
+      ],
+      "repeat": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "surface-back-base",
+      "asset": "plaster",
+      "position": [
+        0,
+        0.6,
+        -4.375
+      ],
+      "size": [
+        12,
+        1.2
+      ],
+      "repeat": [
+        4.0,
+        0.39999999999999997
+      ]
+    },
+    {
+      "id": "surface-back-top",
+      "asset": "plaster",
+      "position": [
+        0,
+        3.25,
+        -4.375
+      ],
+      "size": [
+        12,
+        0.5
+      ],
+      "repeat": [
+        4.0,
+        0.16666666666666666
+      ]
+    },
+    {
+      "id": "surface-window-left",
+      "asset": "plaster",
+      "position": [
+        -4.5,
+        2.1,
+        -4.375
+      ],
+      "size": [
+        3,
+        1.8
+      ],
+      "repeat": [
+        1.0,
+        0.6
+      ]
+    },
+    {
+      "id": "surface-window-middle",
+      "asset": "plaster",
+      "position": [
+        0,
+        2.1,
+        -4.375
+      ],
+      "size": [
+        1.2,
+        1.8
+      ],
+      "repeat": [
+        0.39999999999999997,
+        0.6
+      ]
+    },
+    {
+      "id": "surface-window-right",
+      "asset": "plaster",
+      "position": [
+        4.5,
+        2.1,
+        -4.375
+      ],
+      "size": [
+        3,
+        1.8
+      ],
+      "repeat": [
+        1.0,
+        0.6
+      ]
+    }
+  ]
+}

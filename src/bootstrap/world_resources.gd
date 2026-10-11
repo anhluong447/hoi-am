@@ -13,7 +13,7 @@ static func prepare(config: Dictionary, actor_textures: Dictionary) -> Dictionar
 	var visual := LOADER.read_dictionary(config.visuals_path)
 	if not manifest.ok or not visual.ok or not VALIDATION.validate(manifest.data, visual.data):
 		return {"ok": false, "error": {"code": "invalid_world_art"}}
-	var resources := {"assets": {}, "textures": {}}
+	var resources := {"assets": {}, "textures": {}, "texel_step": config.get("texel_step", 1.0)}
 	for atlas: Dictionary in manifest.data.atlases:
 		var texture := load(atlas.texture_path) as Texture2D
 		if not texture:

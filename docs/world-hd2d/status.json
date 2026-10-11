@@ -29,8 +29,15 @@
       "notes": "Cutout prop depth, retained collider/shadow-only geometry, pure validation and injected atlas resources"
     },
     "HD03": {
-      "status": "pending",
-      "evidence": []
+      "status": "complete",
+      "style": "painted raster clusters selected by agent under authorization; coarse 3-texel comparison retained",
+      "checks": "699 headless, 83 native, four native style/camera captures",
+      "evidence": [
+        "docs/world-hd2d/evidence/hd03-painted-v1",
+        "docs/world-hd2d/evidence/hd03-pixel-v1",
+        "assets/world/coastal/v1/source/prompts.json"
+      ],
+      "user_visual_acceptance": "pending"
     },
     "HD04": {
       "status": "pending",
