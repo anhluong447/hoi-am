@@ -18,7 +18,9 @@ static func mount(play: Node, config: Dictionary) -> void:
 	play.room.configure(prepared.config, play.setup.data.actors.actors, prepared.textures)
 	play.room.interaction_requested.connect(play.interact)
 	play.room.nearby_changed.connect(func(id: String) -> void: play._nearby = id)
-	play.room.portal_requested.connect(func(destination: String, _portal: String) -> void: play.travel(destination))
+	play.room.portal_requested.connect(func(destination: String, _portal: String) -> void:
+		play.room.set_input_enabled(false)
+		play.travel.call_deferred(destination))
 	play.room.menu_requested.connect(play.open_workspace)
 	play.get_node("World").add_child(play.room)
 	play.room.set_quality(play._quality)

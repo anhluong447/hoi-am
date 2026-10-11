@@ -58,6 +58,8 @@ func run() -> void:
 	expect(not play.room.get_node("WindowSun").shadow_enabled, "Selected quality persists after room transition")
 	expect(play.room.safe_spawn(Vector3(0, 999, 0)).y < 1, "Save positions above the room use safe authored spawn")
 	play.room.portal_requested.emit("club", "library-to-club")
+	await tree.physics_frame
+	await tree.physics_frame
 	expect(play.controller.location_id == "club", "Portal follows authored destination")
 	play.travel("library")
 	await tree.physics_frame

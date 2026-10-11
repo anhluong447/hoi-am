@@ -14,3 +14,8 @@ is separate and retains its accepted layout and dialogue motion.
 
 See [asset inventory](asset-inventory.json), [chapter status](status.json), and
 [ADR 004](../decisions/004-hd2d-world.md).
+
+All eight locations select painted HD-2D packs. See [room compositions](room-compositions.md),
+[authoring](authoring.md) and [final review](hd09-review.md). Final captures are in
+evidence/hd09-locations-v4; the 46-second tour is in evidence/hd09-tour-v1.
+Earlier captures remain as iteration evidence, not competing selected variants.

@@ -80,6 +80,14 @@ func _run() -> void:
 	_suite.expect(not play.room._atmosphere._dust.visible, "Quality change preserves reduced motion")
 	play.room.set_reduced_motion(false)
 	_suite.expect(motion.is_processing() and play.room._atmosphere._dust.visible, "Full motion resumes after preference change")
+	var phase: float = motion._phase
+	var wave_time: float = play.room._atmosphere._elapsed
+	paused = true
+	await _frames(5)
+	_suite.expect(motion._phase == phase and play.room._atmosphere._elapsed == wave_time, "Scene pause freezes foliage/camera and painted water clocks")
+	_suite.expect(play.room._atmosphere._dust.speed_scale == 0.0, "Scene pause freezes GPU dust")
+	paused = false
+	_suite.expect(play.room._atmosphere._dust.speed_scale == 1.0, "Scene resume restores particle rate")
 	var old_motion: WeakRef = weakref(motion)
 	play.queue_free()
 	await process_frame

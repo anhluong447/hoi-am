@@ -1,0 +1,239 @@
+{
+  "version": 1,
+  "surfaces": [
+    {
+      "id": "courtyard",
+      "asset": "cobble",
+      "position": [
+        0,
+        0.012,
+        0
+      ],
+      "size": [
+        24,
+        18
+      ],
+      "rotation": [
+        -90,
+        0,
+        0
+      ],
+      "repeat": [
+        5,
+        4
+      ],
+      "tint": "#d9d4bc",
+      "ink_strength": 0.8
+    }
+  ],
+  "props": [
+    {
+      "id": "school-facade-art",
+      "position": [
+        0,
+        0,
+        -5
+      ],
+      "layers": [
+        {
+          "asset": "school-house",
+          "size": [
+            8.6,
+            5.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "school-clock",
+      "position": [
+        2.6,
+        2.2,
+        -4.92
+      ],
+      "layers": [
+        {
+          "asset": "clock",
+          "size": [
+            0.6,
+            0.6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "notice-stand-art",
+      "position": [
+        -3.2,
+        0,
+        -1.8
+      ],
+      "layers": [
+        {
+          "asset": "bulletin",
+          "size": [
+            1.5,
+            2.2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "courtyard-bench-art",
+      "position": [
+        3.2,
+        0,
+        1.4
+      ],
+      "layers": [
+        {
+          "asset": "bench",
+          "size": [
+            2.6,
+            1.2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "courtyard-tree-0-art",
+      "position": [
+        -6.7,
+        0,
+        -0.8
+      ],
+      "layers": [
+        {
+          "asset": "tree",
+          "size": [
+            3.4,
+            4.4
+          ],
+          "shadow": true
+        }
+      ],
+      "idle": {
+        "degrees": 0.35,
+        "period": 7.3,
+        "phase": 1
+      }
+    },
+    {
+      "id": "courtyard-tree-1-art",
+      "position": [
+        6.7,
+        0,
+        -0.8
+      ],
+      "layers": [
+        {
+          "asset": "tree",
+          "size": [
+            3.4,
+            4.4
+          ],
+          "shadow": true
+        }
+      ],
+      "idle": {
+        "degrees": 0.35,
+        "period": 7.5,
+        "phase": 2
+      }
+    },
+    {
+      "id": "front-shrub-0-art",
+      "position": [
+        -6.1,
+        0,
+        5.2
+      ],
+      "layers": [
+        {
+          "asset": "shrub",
+          "size": [
+            2.3,
+            1.0
+          ]
+        }
+      ],
+      "idle": {
+        "degrees": 0.35,
+        "period": 7.699999999999999,
+        "phase": 3
+      }
+    },
+    {
+      "id": "front-shrub-1-art",
+      "position": [
+        6.1,
+        0,
+        5.2
+      ],
+      "layers": [
+        {
+          "asset": "shrub",
+          "size": [
+            2.3,
+            1.0
+          ]
+        }
+      ],
+      "idle": {
+        "degrees": 0.35,
+        "period": 7.8999999999999995,
+        "phase": 4
+      }
+    },
+    {
+      "id": "school-streetlamp",
+      "position": [
+        5.1,
+        0,
+        -2.9
+      ],
+      "layers": [
+        {
+          "asset": "streetlamp",
+          "size": [
+            0.7,
+            3.3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "distant-town",
+      "position": [
+        0,
+        -6.3,
+        -15
+      ],
+      "layers": [
+        {
+          "asset": "town",
+          "size": [
+            30,
+            4
+          ],
+          "shaded": false,
+          "mipmaps": false
+        }
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "id": "school-sign",
+      "text_key": "content.gameplay.presentation.truong_tinh_tam",
+      "position": [
+        0,
+        3,
+        -4.88
+      ],
+      "font_size": 36,
+      "pixel_size": 0.005,
+      "color": "#153d47"
+    }
+  ]
+}

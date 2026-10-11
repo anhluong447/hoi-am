@@ -1,0 +1,333 @@
+{
+  "version": 1,
+  "surfaces": [
+    {
+      "id": "quay-stone",
+      "asset": "stone",
+      "position": [
+        0,
+        0.012,
+        4
+      ],
+      "size": [
+        26,
+        11
+      ],
+      "rotation": [
+        -90,
+        0,
+        0
+      ],
+      "repeat": [
+        5,
+        3
+      ],
+      "tint": "#e0dac4",
+      "ink_strength": 0.8
+    }
+  ],
+  "props": [
+    {
+      "id": "harbor-mountains",
+      "position": [
+        0,
+        -12.5,
+        -24
+      ],
+      "layers": [
+        {
+          "asset": "mountains",
+          "size": [
+            35,
+            5.3
+          ],
+          "shaded": false,
+          "mipmaps": false
+        }
+      ]
+    },
+    {
+      "id": "harbor-town",
+      "position": [
+        0,
+        -7,
+        -17
+      ],
+      "layers": [
+        {
+          "asset": "town",
+          "size": [
+            30,
+            4.0
+          ],
+          "shaded": false,
+          "mipmaps": false
+        }
+      ]
+    },
+    {
+      "id": "harbor-quay",
+      "position": [
+        0,
+        -2.4,
+        -10
+      ],
+      "layers": [
+        {
+          "asset": "quay",
+          "size": [
+            27,
+            3.2
+          ],
+          "shaded": false,
+          "mipmaps": false
+        }
+      ]
+    },
+    {
+      "id": "quay-rail-0",
+      "position": [
+        -6,
+        0,
+        -1.28
+      ],
+      "layers": [
+        {
+          "asset": "balustrade",
+          "size": [
+            3.1,
+            1.1
+          ],
+          "shadow": true
+        }
+      ]
+    },
+    {
+      "id": "quay-rail-1",
+      "position": [
+        -3,
+        0,
+        -1.28
+      ],
+      "layers": [
+        {
+          "asset": "balustrade",
+          "size": [
+            3.1,
+            1.1
+          ],
+          "shadow": true
+        }
+      ]
+    },
+    {
+      "id": "quay-rail-2",
+      "position": [
+        0,
+        0,
+        -1.28
+      ],
+      "layers": [
+        {
+          "asset": "balustrade",
+          "size": [
+            3.1,
+            1.1
+          ],
+          "shadow": true
+        }
+      ]
+    },
+    {
+      "id": "quay-rail-3",
+      "position": [
+        3,
+        0,
+        -1.28
+      ],
+      "layers": [
+        {
+          "asset": "balustrade",
+          "size": [
+            3.1,
+            1.1
+          ],
+          "shadow": true
+        }
+      ]
+    },
+    {
+      "id": "quay-rail-4",
+      "position": [
+        6,
+        0,
+        -1.28
+      ],
+      "layers": [
+        {
+          "asset": "balustrade",
+          "size": [
+            3.1,
+            1.1
+          ],
+          "shadow": true
+        }
+      ]
+    },
+    {
+      "id": "quay-bench-art",
+      "position": [
+        -3,
+        0,
+        1.2
+      ],
+      "layers": [
+        {
+          "asset": "bench",
+          "size": [
+            2.8,
+            1.2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moored-boat",
+      "position": [
+        -4,
+        -0.15,
+        -3.8
+      ],
+      "layers": [
+        {
+          "asset": "boat",
+          "size": [
+            3.7,
+            1.3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pier",
+      "position": [
+        4,
+        -0.08,
+        -3.3
+      ],
+      "layers": [
+        {
+          "asset": "pier",
+          "size": [
+            4,
+            1.7
+          ],
+          "shadow": true
+        }
+      ]
+    },
+    {
+      "id": "quay-streetlamp",
+      "position": [
+        4.8,
+        0,
+        -0.5
+      ],
+      "layers": [
+        {
+          "asset": "streetlamp",
+          "size": [
+            0.8,
+            3.7
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quay-clock",
+      "position": [
+        4.8,
+        1.75,
+        -0.43
+      ],
+      "layers": [
+        {
+          "asset": "clock",
+          "size": [
+            0.55,
+            0.55
+          ]
+        }
+      ]
+    },
+    {
+      "id": "left-palm-art",
+      "position": [
+        -7.3,
+        0,
+        1.8
+      ],
+      "layers": [
+        {
+          "asset": "palm",
+          "size": [
+            3.0,
+            4.7
+          ],
+          "shadow": true
+        }
+      ],
+      "idle": {
+        "degrees": 0.35,
+        "period": 7.3,
+        "phase": 1
+      }
+    },
+    {
+      "id": "right-palm-art",
+      "position": [
+        7.3,
+        0,
+        4.8
+      ],
+      "layers": [
+        {
+          "asset": "palm",
+          "size": [
+            3.5,
+            5.0
+          ],
+          "shadow": true
+        }
+      ],
+      "idle": {
+        "degrees": 0.35,
+        "period": 7.699999999999999,
+        "phase": 3
+      }
+    },
+    {
+      "id": "front-shrub-art",
+      "position": [
+        -6.5,
+        0,
+        5.3
+      ],
+      "layers": [
+        {
+          "asset": "shrub",
+          "size": [
+            2.5,
+            1.2
+          ]
+        }
+      ],
+      "idle": {
+        "degrees": 0.35,
+        "period": 8.1,
+        "phase": 5
+      }
+    }
+  ],
+  "labels": []
+}

@@ -1,7 +1,8 @@
 # Hồi Âm — Godot
 
 Project Godot độc lập cho game tòa soạn học đường ở Hải Vọng. Định hướng:
-môi trường 3D, nhân vật sprite 2D, UI coastal 2D; PC/Forward+ là mục tiêu ban đầu.
+HD-2D: không gian/ánh sáng/collision 3D, nhân vật và cảnh vật bằng texture 2D,
+UI coastal 2D; PC/Forward+ là mục tiêu ban đầu.
 
 `../hai-vong/` giữ nguyên làm nguồn đối chứng. Project này có thể phát triển kiến
 trúc riêng, không phụ thuộc JavaScript, HTML hay checkout cũ khi chạy game.
@@ -20,9 +21,9 @@ Mở `project.godot` bằng Godot 4.7.2 và nhấn F5. Màn đầu có vòng ch�
 
 Ba lối preview vẫn giữ để kiểm tra renderer:
 
-- **Khám phá phòng CLB**: greybox 3D, sprite Khuê/Vân, WASD/mũi tên để đi,
+- **Khám phá phòng CLB**: cảnh HD-2D, sprite Khuê/Vân, WASD/mũi tên để đi,
   E để xem target, Esc để quay lại. Cửa phát portal ID rồi trả về spawn an toàn;
-  chưa có phòng sân trường 3D. Di chuyển không đổi gameplay time.
+  bản chơi tích hợp có tám địa điểm riêng. Di chuyển không đổi gameplay time.
 - **Vòng ngày và công việc**: session thật; đi học → kết thúc CLB → các slot
   nghỉ/điều tra → ngủ. HUD lấy state thật, lệnh sai bị từ chối. Mỗi lần vào
   preview tạo session mới; bản tích hợp nằm ở **Bắt đầu chơi**.
@@ -30,10 +31,12 @@ Ba lối preview vẫn giữ để kiểm tra renderer:
   focus bằng Tab, chọn bằng Enter hoặc chuột. Text/choice/notebook copy từ catalog.
 
 Chapters 00–12 có implementation và evidence kỹ thuật: full gameplay/formula
-parity, save compatibility, native export và extension rehearsal. Static visual
-G2 và nghiệm thu production art/motion đầy đủ còn mở; đây là migration của mock
-gameplay, chưa phải nội dung/cân bằng game cuối. Phòng CLB là asset pipeline sample,
-các địa điểm khác có prototype geometry.
+parity, save compatibility, native export và extension rehearsal. UI đã được người
+dùng chấp nhận; giữ bố cục và motion thoại đã duyệt. Workstream
+[HD00–HD09](docs/world-hd2d/README.md) thay world bằng tám room packs dùng art 2D
+trong không gian 3D, kèm kiểm thử native, review ảnh/video và profile thực tế.
+Art world cuối còn chờ người dùng nghiệm thu; nội dung/cân bằng vẫn là gameplay
+mock hiện có. Source/prototype và evidence cũ được giữ nguyên.
 F6 chạy riêng các scene trong `src/bootstrap/previews/`.
 
 ```powershell

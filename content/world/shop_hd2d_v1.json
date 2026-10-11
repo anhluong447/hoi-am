@@ -1,0 +1,517 @@
+{
+  "id": "shop_hd2d_v1",
+  "title_key": "content.gameplay.presentation.tiem_cong_cu",
+  "spawn": [
+    0,
+    0.05,
+    2.9
+  ],
+  "speed": 3.0,
+  "gravity": 18.0,
+  "collider": {
+    "radius": 0.26,
+    "height": 1.25
+  },
+  "actor_pixel_size": 0.042,
+  "stride_world": 2.016,
+  "camera": {
+    "orthographic": {
+      "position": [
+        0,
+        11,
+        16
+      ],
+      "target": [
+        0,
+        0.8,
+        0
+      ],
+      "size": 8.0,
+      "near": 0.05,
+      "far": 65
+    },
+    "perspective": {
+      "position": [
+        0,
+        15,
+        22
+      ],
+      "target": [
+        0,
+        0.8,
+        0
+      ],
+      "fov": 20,
+      "near": 0.05,
+      "far": 85
+    }
+  },
+  "sun": {
+    "rotation": [
+      -38,
+      -155,
+      0
+    ],
+    "color": "#ffe4b8",
+    "energy": 1.65,
+    "shadow_distance": 40,
+    "normal_bias": 0.08
+  },
+  "ambient": {
+    "color": "#b8d0d7",
+    "energy": 0.6,
+    "background": "#243c49",
+    "exposure": 1.05
+  },
+  "geometry": [
+    {
+      "id": "floor",
+      "position": [
+        0,
+        -0.15,
+        0
+      ],
+      "size": [
+        12,
+        0.3,
+        9
+      ],
+      "color": "#bdac8b",
+      "visible": false,
+      "shadow": false
+    },
+    {
+      "id": "back-base",
+      "position": [
+        0,
+        0.6,
+        -4.5
+      ],
+      "size": [
+        12,
+        1.2,
+        0.22
+      ],
+      "color": "#d6d3bc",
+      "visible": false
+    },
+    {
+      "id": "back-top",
+      "position": [
+        0,
+        3.25,
+        -4.5
+      ],
+      "size": [
+        12,
+        0.5,
+        0.22
+      ],
+      "color": "#d6d3bc",
+      "visible": false
+    },
+    {
+      "id": "window-left",
+      "position": [
+        -5.5,
+        2.1,
+        -4.5
+      ],
+      "size": [
+        1,
+        1.8,
+        0.22
+      ],
+      "color": "#d6d3bc",
+      "visible": false
+    },
+    {
+      "id": "window-middle",
+      "position": [
+        0,
+        2.1,
+        -4.5
+      ],
+      "size": [
+        4,
+        1.8,
+        0.22
+      ],
+      "color": "#d6d3bc",
+      "visible": false
+    },
+    {
+      "id": "window-right",
+      "position": [
+        5.5,
+        2.1,
+        -4.5
+      ],
+      "size": [
+        1,
+        1.8,
+        0.22
+      ],
+      "color": "#d6d3bc",
+      "visible": false
+    },
+    {
+      "id": "left-wall",
+      "position": [
+        -6,
+        1.75,
+        0
+      ],
+      "size": [
+        0.22,
+        3.5,
+        9
+      ],
+      "color": "#c2c5b4",
+      "visible": false
+    },
+    {
+      "id": "right-cutaway",
+      "position": [
+        6,
+        0.22,
+        0
+      ],
+      "size": [
+        0.22,
+        0.44,
+        9
+      ],
+      "color": "#b1baa9",
+      "visible": false
+    },
+    {
+      "id": "front-left",
+      "position": [
+        -3.6,
+        0.22,
+        4.5
+      ],
+      "size": [
+        4.8,
+        0.44,
+        0.22
+      ],
+      "color": "#b1baa9",
+      "visible": false,
+      "shadow": false
+    },
+    {
+      "id": "front-right",
+      "position": [
+        3.6,
+        0.22,
+        4.5
+      ],
+      "size": [
+        4.8,
+        0.44,
+        0.22
+      ],
+      "color": "#b1baa9",
+      "visible": false,
+      "shadow": false
+    },
+    {
+      "id": "door-left",
+      "position": [
+        -1.1,
+        1.2,
+        4.5
+      ],
+      "size": [
+        0.16,
+        2.4,
+        0.18
+      ],
+      "color": "#78644e",
+      "visible": false,
+      "shadow": false
+    },
+    {
+      "id": "door-right",
+      "position": [
+        1.1,
+        1.2,
+        4.5
+      ],
+      "size": [
+        0.16,
+        2.4,
+        0.18
+      ],
+      "color": "#78644e",
+      "visible": false,
+      "shadow": false
+    },
+    {
+      "id": "door-lintel",
+      "position": [
+        0,
+        2.4,
+        4.5
+      ],
+      "size": [
+        2.36,
+        0.16,
+        0.18
+      ],
+      "color": "#78644e",
+      "visible": false,
+      "shadow": false
+    },
+    {
+      "id": "foreground-left",
+      "position": [
+        -5.6,
+        0.25,
+        4.449999999999999
+      ],
+      "size": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "color": "#bda078",
+      "visible": false,
+      "shadow": false,
+      "collision": true
+    },
+    {
+      "id": "foreground-right",
+      "position": [
+        5.7,
+        0.25,
+        4.5
+      ],
+      "size": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "color": "#bda078",
+      "visible": false,
+      "shadow": false,
+      "collision": true
+    },
+    {
+      "id": "shop-counter",
+      "position": [
+        -0.5,
+        0.6,
+        -1.0
+      ],
+      "size": [
+        3.28,
+        1.2,
+        1.0
+      ],
+      "color": "#bda078",
+      "visible": false,
+      "shadow": true,
+      "collision": true
+    },
+    {
+      "id": "goods-shelf-0",
+      "position": [
+        -4.7,
+        0.6,
+        -4.0
+      ],
+      "size": [
+        1.32,
+        1.2,
+        0.8
+      ],
+      "color": "#bda078",
+      "visible": false,
+      "shadow": true,
+      "collision": true
+    },
+    {
+      "id": "goods-shelf-1",
+      "position": [
+        0,
+        0.6,
+        -4.0
+      ],
+      "size": [
+        1.32,
+        1.2,
+        0.8
+      ],
+      "color": "#bda078",
+      "visible": false,
+      "shadow": true,
+      "collision": true
+    },
+    {
+      "id": "goods-shelf-2",
+      "position": [
+        4.7,
+        0.6,
+        -4.0
+      ],
+      "size": [
+        1.32,
+        1.2,
+        0.8
+      ],
+      "color": "#bda078",
+      "visible": false,
+      "shadow": true,
+      "collision": true
+    },
+    {
+      "id": "shop-plant",
+      "position": [
+        4.8,
+        0.25,
+        2.5500000000000003
+      ],
+      "size": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "color": "#bda078",
+      "visible": false,
+      "shadow": false,
+      "collision": true
+    }
+  ],
+  "targets": [
+    {
+      "id": "writing-desk",
+      "position": [
+        -0.5,
+        0,
+        0.65
+      ],
+      "anchor": [
+        -0.5,
+        1.5,
+        -0.42
+      ],
+      "label_key": "world.target.notes",
+      "radius": 1.2
+    },
+    {
+      "id": "club-clock",
+      "position": [
+        2.2,
+        0,
+        -2.2
+      ],
+      "anchor": [
+        2.2,
+        2.6,
+        -4.02
+      ],
+      "label_key": "world.target.calendar",
+      "radius": 1.2
+    }
+  ],
+  "portal": {
+    "id": "shop-to-club",
+    "to": "club",
+    "position": [
+      0,
+      0.6,
+      4.25
+    ],
+    "size": [
+      1.8,
+      1.2,
+      0.7
+    ]
+  },
+  "npcs": [],
+  "spawn_bounds": [
+    5.7,
+    4.1
+  ],
+  "default_camera": "orthographic",
+  "world_art_path": "res://content/world/art_manifest_v3.json",
+  "visuals_path": "res://content/world/visuals/shop_v1.json",
+  "world_font_path": "res://assets/fonts/source_serif_4/source-serif-4.ttf",
+  "legacy_room_ids": [
+    "shop"
+  ],
+  "local_lights": [
+    {
+      "position": [
+        -1.5,
+        1.8,
+        -2.7
+      ],
+      "color": "#ffd6a4",
+      "energy": 0.25,
+      "range": 3.0
+    }
+  ],
+  "atmosphere": {
+    "harbor": [],
+    "water": {
+      "asset": "sea",
+      "position": [
+        0,
+        -2.6,
+        -9
+      ],
+      "size": [
+        24,
+        14
+      ],
+      "color": "#ffffff",
+      "strength": 0.003,
+      "speed": 0.45
+    },
+    "dust": {
+      "count": 24,
+      "lifetime": 12,
+      "position": [
+        0,
+        1.6,
+        -2.5
+      ],
+      "radius": 0.009,
+      "color": "#ebd4a5",
+      "extents": [
+        4,
+        1,
+        1.6
+      ],
+      "drift": [
+        0.015,
+        0.012,
+        0.008
+      ]
+    },
+    "dof": {
+      "far_distance": 27,
+      "far_transition": 5,
+      "near_distance": 15,
+      "near_transition": 2,
+      "amount": 0.025
+    }
+  },
+  "motion": {
+    "follow": {
+      "strength": [
+        0.045,
+        0.035
+      ],
+      "maximum": [
+        0.25,
+        0.15
+      ],
+      "response": 0.24
+    }
+  }
+}

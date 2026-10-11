@@ -43,9 +43,13 @@ func run() -> void:
 	var font: Font = load("res://assets/fonts/source_serif_4/source-serif-4.ttf")
 	for codepoint: int in [0x1ed3, 0x1ec1, 0x1ea3, 0x1ef9, 0x0111]:
 		_expect(font.has_char(codepoint), "Vietnamese glyph packaged")
+	for location: String in ["school", "library", "cafe", "shop", "job", "waterfront", "home", "club"]:
+		play.travel(location)
+		await get_tree().physics_frame
+		await get_tree().physics_frame
+		_expect(play.controller.location_id == location and play.room.has_node("Visuals"), "Packaged selected HD-2D location")
 	play.travel("library")
 	await get_tree().physics_frame
-	_expect(play.controller.location_id == "library", "Packaged extension room")
 	var capture: PackedStringArray = OS.get_cmdline_user_args()
 	if capture.has("--capture"):
 		await RenderingServer.frame_post_draw

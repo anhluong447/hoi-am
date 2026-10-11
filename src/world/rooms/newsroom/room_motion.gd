@@ -21,7 +21,7 @@ func configure(room: Node3D, config: Dictionary) -> void:
 		for child: Node in room.get_node("Visuals").get_children():
 			if child.has_meta("idle"):
 				_props.append(child)
-	set_process(not _config.is_empty())
+	set_process(not _config.is_empty() or not _props.is_empty())
 
 
 func reset_camera() -> void:
@@ -44,7 +44,7 @@ func _process(delta: float) -> void:
 
 
 func set_reduced(reduced: bool) -> void:
-	set_process(not reduced and not _config.is_empty())
+	set_process(not reduced and (not _config.is_empty() or not _props.is_empty()))
 	if reduced:
 		for prop: Node3D in _props:
 			prop.rotation.z = 0.0

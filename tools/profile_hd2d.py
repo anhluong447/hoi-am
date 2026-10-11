@@ -40,10 +40,10 @@ def summarize(raw, output):
     lines = ['# Real-clock HD-2D profile', '',
         'VSync disabled; 120 FPS cap; 10-second warm-up and at least 30 seconds measured, three repetitions.',
         'All runs retained. Editor remains open. These are device/session measurements, not exported-build certification.', '',
-        '| Resolution | Case | Repeat | Median ms | p95 ms | p99 ms | >33 ms |',
-        '| --- | --- | ---: | ---: | ---: | ---: | ---: |']
+        '| Location | Resolution | Case | Repeat | Median ms | p95 ms | p99 ms | >33 ms |',
+        '| --- | --- | --- | ---: | ---: | ---: | ---: | ---: |']
     for row in rows:
-        lines.append(f"| {row['resolution'][0]}x{row['resolution'][1]} | {row['mode']} | {row['repetition']} | "
+        lines.append(f"| {row.get('location', 'club')} | {row['resolution'][0]}x{row['resolution'][1]} | {row['mode']} | {row['repetition']} | "
             f"{row['median_ms']:.2f} | {row['p95_ms']:.2f} | {row['p99_ms']:.2f} | {row['over_33ms']} |")
     lines.extend(['', 'Root GPU timestamps exclude dialogue SubViewport passes; wall frame time includes them.',
         'Draw/object counters are total counters. No separate transparent-pass timing is claimed.',
@@ -55,15 +55,20 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--godot', required=True)
     parser.add_argument('--output', required=True)
+    parser.add_argument('--rooms', nargs='+', help='1080p walking High/Low regression; three repeats per room')
     args = parser.parse_args()
     output = Path(args.output).resolve()
     assert output.is_relative_to(ROOT) and not output.exists(), 'Use a new project evidence directory'
     output.mkdir(parents=True)
     inputs = {}
     for folder in ['src/world', 'src/bootstrap/gameplay']:
-        for path in (ROOT / folder).rglob('*.gd'):
+        for path in (ROOT / folder).rglob('*'):
+            if path.suffix not in ['.gd', '.gdshader']:
+                continue
             inputs[path.relative_to(ROOT).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
-    for path in [ROOT / 'content/world/locations.json', ROOT / 'content/world/newsroom_hd2d_v1.json']:
+    for path in (ROOT / 'content/world').rglob('*.json'):
+        inputs[path.relative_to(ROOT).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
+    for path in (ROOT / 'assets/world').rglob('*.import'):
         inputs[path.relative_to(ROOT).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
     (output / 'inputs.json').write_text(json.dumps(inputs, indent=2) + '\n', encoding='utf-8')
     machine = subprocess.check_output(['powershell', '-NoProfile', '-Command',
@@ -71,9 +76,16 @@ def main():
     (output / 'machine.json').write_text(machine, encoding='utf-8')
     raw = ROOT / 'artifacts/profile' / (output.name + '.json')
     assert not raw.exists(), 'Preserve raw measurements'
-    run([args.godot, '--path', str(ROOT), '--script', 'res://tests/profile_hd2d.gd',
-         '--', '--output', 'res://' + raw.relative_to(ROOT).as_posix()], timeout=2200,
-        log_path=output / 'profile.log', expected=r'HD-2D profile: 42 runs; real clock; completed')
+    command = [args.godot, '--path', str(ROOT), '--script', 'res://tests/profile_hd2d.gd',
+               '--', '--output', 'res://' + raw.relative_to(ROOT).as_posix()]
+    count = 42
+    if args.rooms:
+        assert all(room in json.loads((ROOT / 'content/world/locations.json').read_text())['locations'] for room in args.rooms)
+        command.extend(['--rooms', ','.join(args.rooms)])
+        count = len(args.rooms) * 6
+    run(command, timeout=max(2200, count * 50), log_path=output / 'profile.log',
+        expected=rf'HD-2D profile: {count} runs; real clock; completed')
+    assert all(hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == digest for path, digest in inputs.items()), 'Profile inputs changed during measurement'
     summarize(raw, output)
     print('HD-2D profile evidence saved; inspect all repetitions before accepting performance')
 

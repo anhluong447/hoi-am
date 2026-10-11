@@ -517,7 +517,7 @@
       "anchor": [
         -4.7,
         1.8,
-        -3.1
+        -3.02
       ],
       "label_key": "content.maps.definitions.bang_phan_cong",
       "radius": 1.1
@@ -525,9 +525,9 @@
     {
       "id": "archive",
       "position": [
-        -4.7,
+        -5.35,
         0,
-        -2.6
+        -2.7
       ],
       "anchor": [
         -4.7,
@@ -561,8 +561,8 @@
       ],
       "anchor": [
         4.5,
-        1.5,
-        -2.7
+        1.45,
+        -3.25
       ],
       "label_key": "content.maps.definitions.may_in_doi_soan",
       "radius": 1.0
@@ -570,17 +570,17 @@
     {
       "id": "club-clock",
       "position": [
-        -3.8,
+        1.65,
         0,
-        2.7
+        -2.65
       ],
       "anchor": [
-        -3.8,
-        1.6,
-        2.7
+        1.65,
+        2.9,
+        -4.02
       ],
       "label_key": "content.maps.definitions.dong_ho_clb",
-      "radius": 1.0
+      "radius": 1.2
     }
   ],
   "portal": {
@@ -614,7 +614,7 @@
     4.1
   ],
   "default_camera": "orthographic",
-  "world_art_path": "res://content/world/art_manifest_v2.json",
+  "world_art_path": "res://content/world/art_manifest_v3.json",
   "visuals_path": "res://content/world/visuals/newsroom_v1.json",
   "world_font_path": "res://assets/fonts/source_serif_4/source-serif-4.ttf",
   "legacy_room_ids": [

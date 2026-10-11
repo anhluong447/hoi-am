@@ -11,6 +11,7 @@ var _config: Dictionary
 var _resources: Dictionary
 var _quality := "high"
 var _reduced := false
+var _elapsed := 0.0
 
 
 func configure(config: Dictionary, resources: Dictionary = {}) -> void:
@@ -19,6 +20,7 @@ func configure(config: Dictionary, resources: Dictionary = {}) -> void:
 
 
 func _ready() -> void:
+	set_process(false)
 	if _config.is_empty():
 		return
 	for item: Dictionary in _config.get("harbor", []):
@@ -32,23 +34,7 @@ func _ready() -> void:
 		material.roughness = 0.95
 		instance.material_override = material
 		add_child(instance)
-	_water = MeshInstance3D.new()
-	var plane := PlaneMesh.new()
-	plane.size = Vector2(_config.water.size[0], _config.water.size[1])
-	_water.mesh = plane
-	_water.position = GEOMETRY.vector(_config.water.position)
-	var water_material := ShaderMaterial.new()
-	water_material.shader = PAINT if _config.water.has("asset") else SURFACE
-	if _config.water.has("asset"):
-		var asset: Dictionary = _resources.assets[_config.water.asset]
-		var texture: Texture2D = _resources.textures[asset.atlas]
-		water_material.set_shader_parameter("atlas", texture)
-		water_material.set_shader_parameter("atlas_region", Vector4(asset.region[0]/float(texture.get_width()), asset.region[1]/float(texture.get_height()), asset.region[2]/float(texture.get_width()), asset.region[3]/float(texture.get_height())))
-	water_material.set_shader_parameter("tint", Color(_config.water.color))
-	water_material.set_shader_parameter("strength", _config.water.strength)
-	water_material.set_shader_parameter("speed", _config.water.speed)
-	_water.material_override = water_material
-	add_child(_water)
+	_build_water()
 	_dust = GPUParticles3D.new()
 	_dust.amount = _config.dust.count
 	_dust.lifetime = _config.dust.lifetime
@@ -70,10 +56,44 @@ func _ready() -> void:
 	process.initial_velocity_max = 0.08
 	_dust.process_material = process
 	add_child(_dust)
+	set_process(_water != null and _config.water.has("asset"))
+
+
+func _build_water() -> void:
+	if not _config.water.get("visible", true):
+		return
+	_water = MeshInstance3D.new()
+	var plane := PlaneMesh.new()
+	plane.size = Vector2(_config.water.size[0], _config.water.size[1])
+	_water.mesh = plane
+	_water.position = GEOMETRY.vector(_config.water.position)
+	var water_material := ShaderMaterial.new()
+	water_material.shader = PAINT if _config.water.has("asset") else SURFACE
+	if _config.water.has("asset"):
+		var asset: Dictionary = _resources.assets[_config.water.asset]
+		var texture: Texture2D = _resources.textures[asset.atlas]
+		water_material.set_shader_parameter("atlas", texture)
+		water_material.set_shader_parameter("atlas_region", Vector4(asset.region[0]/float(texture.get_width()), asset.region[1]/float(texture.get_height()), asset.region[2]/float(texture.get_width()), asset.region[3]/float(texture.get_height())))
+	water_material.set_shader_parameter("tint", Color(_config.water.color))
+	water_material.set_shader_parameter("strength", _config.water.strength)
+	water_material.set_shader_parameter("speed", _config.water.speed)
+	_water.material_override = water_material
+	add_child(_water)
+
+
+func _process(delta: float) -> void:
+	_elapsed += delta
+	_water.material_override.set_shader_parameter("wave_time", _elapsed)
+
+
+func _notification(what: int) -> void:
+	if _dust and what in [NOTIFICATION_PAUSED, NOTIFICATION_UNPAUSED]:
+		_dust.speed_scale = 0.0 if what == NOTIFICATION_PAUSED else 1.0
 
 
 func set_quality(id: String) -> void:
 	_quality = id
+	set_process(_water != null and id != "low" and not _reduced and _config.water.has("asset"))
 	if _dust:
 		_dust.emitting = id != "low" and not _reduced
 		_dust.visible = id != "low" and not _reduced

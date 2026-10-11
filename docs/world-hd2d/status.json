@@ -88,8 +88,29 @@
       "user_visual_acceptance": "pending"
     },
     "HD09": {
-      "status": "pending",
-      "evidence": []
+      "status": "complete",
+      "selected_locations": [
+        "club",
+        "library",
+        "cafe",
+        "home",
+        "shop",
+        "job",
+        "school",
+        "waterfront"
+      ],
+      "checks": "705 headless; 247 native; debug/release standalone clean-folder exports passed; final 141-check capture suite passed",
+      "performance": "18 real-clock 1080p walking High/Low runs for club/school/waterfront; 64818 samples; max p95 8.732ms; max p99 8.826ms; zero frames above 33.333ms; device/session only",
+      "evidence": [
+        "docs/world-hd2d/evidence/hd09-locations-v4",
+        "docs/world-hd2d/evidence/hd09-tour-v1",
+        "docs/world-hd2d/evidence/hd09-profile-v1",
+        "docs/world-hd2d/evidence/hd09-build-v1",
+        "docs/world-hd2d/hd09-review.md",
+        "docs/world-hd2d/room-compositions.md"
+      ],
+      "notes": "All eight authored compositions selected; original prototypes and generated masters preserved; accepted UI, gameplay/domain/application and save schema unchanged",
+      "user_visual_acceptance": "pending"
     }
   }
 }

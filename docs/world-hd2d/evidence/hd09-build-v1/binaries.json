@@ -1,0 +1,62 @@
+{
+  "build/windows/debug/hoi-am.console.exe": {
+    "bytes": 188928,
+    "sha256": "5514c7645ee897a01f540d3cf22ede5badf92394521a08bfab66a54d7369e6e6"
+  },
+  "build/windows/debug/hoi-am.exe": {
+    "bytes": 103176704,
+    "sha256": "51498b72b3a237f882ebd7d1787f06a4bc1eaf0572daab93837adcfd3cfdc107"
+  },
+  "build/windows/debug/hoi-am.pck": {
+    "bytes": 15202020,
+    "sha256": "a2c5efb2c553932d01985a958cb61fdd2a47857de78223c2b09060c4c0f4e3c7"
+  },
+  "build/windows/release/hoi-am.exe": {
+    "bytes": 109268480,
+    "sha256": "d34d36f3be1a6c49c56525ae86469b92e4f417ddf0b43cf00dd80c385c4b0562"
+  },
+  "build/windows/release/hoi-am.pck": {
+    "bytes": 15202020,
+    "sha256": "a2c5efb2c553932d01985a958cb61fdd2a47857de78223c2b09060c4c0f4e3c7"
+  },
+  "build/windows/debug/licenses/cormorantgaramond-OFL.txt": {
+    "bytes": 4387,
+    "sha256": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956"
+  },
+  "build/windows/debug/licenses/dancingscript-OFL.txt": {
+    "bytes": 4443,
+    "sha256": "6f090277c00af96651ce6dbcc38ff1591047a3bffef486e80b6a32e8276a8201"
+  },
+  "build/windows/debug/licenses/godot-COPYRIGHT.txt": {
+    "bytes": 100108,
+    "sha256": "cb1980c88089573bcacd7221d777c689bb8bbd778799f24c27fca0fe5f774d6d"
+  },
+  "build/windows/debug/licenses/godot-LICENSE.txt": {
+    "bytes": 1149,
+    "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80"
+  },
+  "build/windows/debug/licenses/source_serif_4-OFL.txt": {
+    "bytes": 4400,
+    "sha256": "5f94c3fd3a23131a417ab5a0c8452de57e70c3cfb9f604d88241f7065ebf9fd9"
+  },
+  "build/windows/release/licenses/cormorantgaramond-OFL.txt": {
+    "bytes": 4387,
+    "sha256": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956"
+  },
+  "build/windows/release/licenses/dancingscript-OFL.txt": {
+    "bytes": 4443,
+    "sha256": "6f090277c00af96651ce6dbcc38ff1591047a3bffef486e80b6a32e8276a8201"
+  },
+  "build/windows/release/licenses/godot-COPYRIGHT.txt": {
+    "bytes": 100108,
+    "sha256": "cb1980c88089573bcacd7221d777c689bb8bbd778799f24c27fca0fe5f774d6d"
+  },
+  "build/windows/release/licenses/godot-LICENSE.txt": {
+    "bytes": 1149,
+    "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80"
+  },
+  "build/windows/release/licenses/source_serif_4-OFL.txt": {
+    "bytes": 4400,
+    "sha256": "5f94c3fd3a23131a417ab5a0c8452de57e70c3cfb9f604d88241f7065ebf9fd9"
+  }
+}

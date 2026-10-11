@@ -27,11 +27,23 @@ func run() -> void:
 	malformed = visual.duplicate(true)
 	malformed.props[0].idle = {"degrees": 0.4, "period": 0.0, "phase": 0.0}
 	expect(not VALIDATION.validate(manifest, malformed), "Zero idle period is rejected before motion setup")
+	expect(not VALIDATION.motion({"follow":{"strength":[.1,.1],"maximum":[.2,.2],"response":0}}), "Zero camera response is rejected before division")
 	var config: Dictionary = LOADER.read_dictionary("res://content/world/newsroom_hd2d_prop_slice.json").data
 	var original: Dictionary = config.duplicate(true)
 	var setup := STARTUP.prepare()
 	var prepared := RESOURCES.prepare(config, STARTUP.actor_textures(setup.data))
 	expect(prepared.ok and config == original and not config.has("visuals"), "Resource composition does not mutate authored room input")
+	var invalid: Dictionary = config.duplicate(true)
+	invalid.texel_step = NAN
+	expect(not RESOURCES.prepare(invalid, STARTUP.actor_textures(setup.data)).ok, "Nonfinite art pixel step fails safely")
+	invalid = config.duplicate(true)
+	invalid["atmosphere"] = {"water":{"asset":"missing"}}
+	expect(not RESOURCES.prepare(invalid, STARTUP.actor_textures(setup.data)).ok, "Missing painted water asset fails before room replacement")
+	var library: Dictionary = LOADER.read_dictionary("res://content/world/library_hd2d_v1.json").data
+	var selected := RESOURCES.prepare(library, STARTUP.actor_textures(setup.data), setup.text)
+	expect(selected.ok and not selected.textures.world.textures.has("outdoor"), "Interior only loads referenced atlases")
+	library.erase("world_font_path")
+	expect(not RESOURCES.prepare(library, STARTUP.actor_textures(setup.data), setup.text).ok, "Missing world font fails with an authored-content result")
 	var room := ROOM.instantiate()
 	room.configure(prepared.config, setup.data.actors.actors, prepared.textures)
 	Engine.get_main_loop().root.add_child(room)

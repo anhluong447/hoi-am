@@ -2,9 +2,10 @@
   "schema_version": 1,
   "locations": {
     "school": {
-      "room_id": "school",
-      "room_path": "res://content/world/school.json",
-      "prototype": true
+      "room_id": "school_hd2d_v1",
+      "room_path": "res://content/world/school_hd2d_v1.json",
+      "prototype": false,
+      "art_acceptance": "user_pending"
     },
     "club": {
       "room_id": "newsroom_hd2d_v1",
@@ -12,34 +13,40 @@
       "prototype": false
     },
     "library": {
-      "room_id": "library",
-      "room_path": "res://content/world/library.json",
-      "prototype": true
+      "room_id": "library_hd2d_v1",
+      "room_path": "res://content/world/library_hd2d_v1.json",
+      "prototype": false,
+      "art_acceptance": "user_pending"
     },
     "cafe": {
-      "room_id": "cafe",
-      "room_path": "res://content/world/cafe.json",
-      "prototype": true
+      "room_id": "cafe_hd2d_v1",
+      "room_path": "res://content/world/cafe_hd2d_v1.json",
+      "prototype": false,
+      "art_acceptance": "user_pending"
     },
     "shop": {
-      "room_id": "shop",
-      "room_path": "res://content/world/shop.json",
-      "prototype": true
+      "room_id": "shop_hd2d_v1",
+      "room_path": "res://content/world/shop_hd2d_v1.json",
+      "prototype": false,
+      "art_acceptance": "user_pending"
     },
     "job": {
-      "room_id": "job",
-      "room_path": "res://content/world/job.json",
-      "prototype": true
+      "room_id": "job_hd2d_v1",
+      "room_path": "res://content/world/job_hd2d_v1.json",
+      "prototype": false,
+      "art_acceptance": "user_pending"
     },
     "waterfront": {
-      "room_id": "waterfront",
-      "room_path": "res://content/world/waterfront.json",
-      "prototype": true
+      "room_id": "waterfront_hd2d_v1",
+      "room_path": "res://content/world/waterfront_hd2d_v1.json",
+      "prototype": false,
+      "art_acceptance": "user_pending"
     },
     "home": {
-      "room_id": "home",
-      "room_path": "res://content/world/home.json",
-      "prototype": true
+      "room_id": "home_hd2d_v1",
+      "room_path": "res://content/world/home_hd2d_v1.json",
+      "prototype": false,
+      "art_acceptance": "user_pending"
     }
   },
   "legacy_maps": {

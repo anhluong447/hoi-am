@@ -534,10 +534,10 @@
       ],
       "layers": [
         {
-          "asset": "board",
+          "asset": "chalkboard",
           "size": [
             2.7,
-            1.45
+            1.5
           ]
         }
       ]
@@ -739,7 +739,8 @@
             22,
             3.9
           ],
-          "shaded": false
+          "shaded": false,
+          "mipmaps": false
         }
       ]
     },
@@ -757,7 +758,8 @@
             20,
             3.6
           ],
-          "shaded": false
+          "shaded": false,
+          "mipmaps": false
         }
       ]
     },
@@ -775,7 +777,8 @@
             18,
             2.8
           ],
-          "shaded": false
+          "shaded": false,
+          "mipmaps": false
         }
       ]
     }
@@ -786,24 +789,24 @@
       "text_key": "world.newsroom.sign",
       "position": [
         0,
-        2.35,
-        -4.12
+        2.36,
+        -4.1
       ],
-      "font_size": 52,
+      "font_size": 42,
       "pixel_size": 0.0048,
-      "color": "#153d47"
+      "color": "#f3e8d1"
     },
     {
       "id": "club-motto",
       "text_key": "world.newsroom.motto",
       "position": [
         0,
-        1.8,
-        -4.11
+        1.84,
+        -4.08
       ],
-      "font_size": 28,
-      "pixel_size": 0.0065,
-      "color": "#245766"
+      "font_size": 24,
+      "pixel_size": 0.0045,
+      "color": "#e1dbc0"
     }
   ]
 }

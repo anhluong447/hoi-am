@@ -23,8 +23,8 @@ func configure(definition: Dictionary, resources: Dictionary) -> void:
 		sprite.position = Vector3(item.get("offset", [0, 0, 0])[0], item.get("offset", [0, 0, 0])[1], item.get("offset", [0, 0, 0])[2])
 		sprite.shaded = item.get("shaded", true)
 		sprite.alpha_cut = SpriteBase3D.ALPHA_CUT_DISCARD
-		sprite.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST_WITH_MIPMAPS
-		sprite.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+		sprite.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST_WITH_MIPMAPS if item.get("mipmaps", true) else BaseMaterial3D.TEXTURE_FILTER_NEAREST
+		sprite.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON if item.get("shadow", false) else GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 		sprite.modulate = Color(item.get("tint", "#ffffff"))
 		if resources.get("texel_step", 1.0) > 1.0:
 			var material := ShaderMaterial.new()

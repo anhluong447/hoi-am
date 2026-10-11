@@ -1,0 +1,458 @@
+{
+  "docs/world-hd2d/evidence/hd09-build-v1/binaries.json": {
+    "bytes": 2454,
+    "sha256": "1b30561497b63816ef3884d6676e7174ed970f834ad3c7a1a1479e601c4c1d0e"
+  },
+  "docs/world-hd2d/evidence/hd09-build-v1/bootstrap.log": {
+    "bytes": 70,
+    "sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75"
+  },
+  "docs/world-hd2d/evidence/hd09-build-v1/contracts.log": {
+    "bytes": 113,
+    "sha256": "b1379c19f4b926c035d877616d5c1839b8938e532757491b93baf7224e1a67f5"
+  },
+  "docs/world-hd2d/evidence/hd09-build-v1/diagnostic-empty-atmosphere.log": {
+    "bytes": 40139,
+    "sha256": "9ea6e5ef9aa09465bc035d3de0d1cbafde14e4363aeb32eead26affc137b820c"
+  },
+  "docs/world-hd2d/evidence/hd09-build-v1/diagnostic-profile-startup.log": {
+    "bytes": 397,
+    "sha256": "0902a24be3f62fb62a2eb98da2d9495988ad6d4384619eed12adba9b914cb0cc"
+  },
+  "docs/world-hd2d/evidence/hd09-build-v1/export-debug.log": {
+    "bytes": 30112,
+    "sha256": "ee8b31fdfc9b919205a07114c0210213a3461b7f135afef3df9ccd48e9d8eb45"
+  },
+  "docs/world-hd2d/evidence/hd09-build-v1/export-release.log": {
+    "bytes": 29704,
+    "sha256": "0792c8b3e245ef3235958f795529af4a547990297e4a075f83f2fb0639352b91"
+  },
+  "docs/world-hd2d/evidence/hd09-build-v1/import.log": {
+    "bytes": 1426,
+    "sha256": "77f7b23828ec3c8d784540d5d7dff4e0a010f11377e0562a5d09364a045bcda3"
+  },
+  "docs/world-hd2d/evidence/hd09-build-v1/inputs.json": {
+    "bytes": 19945,
+    "sha256": "874ec4c0cea3b52104763bd05022041a310dee0f8abc2c09051be2c1609ff121"
+  },
+  "docs/world-hd2d/evidence/hd09-build-v1/native-dialogue-motion.log": {
+    "bytes": 216,
+    "sha256": "d62700445f7a937da801d3fc7e7216e8639e6e3752c3727929672427478af409"
+  },
+  "docs/world-hd2d/evidence/hd09-build-v1/native-export-debug.log": {
+    "bytes": 287,
+    "sha256": "33098e13abb44c0787c139378788809055a10d9d5efa4e9a34042f973bc73fad"
+  },
+  "docs/world-hd2d/evidence/hd09-build-v1/native-export-release.log": {
+    "bytes": 287,
+    "sha256": "33098e13abb44c0787c139378788809055a10d9d5efa4e9a34042f973bc73fad"
+  },
+  "docs/world-hd2d/evidence/hd09-build-v1/native-hd2d-locations.log": {
+    "bytes": 205,
+    "sha256": "9dbf8b81983407d9bee81b5d3b1388354b96503fb04f714e732092b475166bff"
+  },
+  "docs/world-hd2d/evidence/hd09-build-v1/native-hd2d.log": {
+    "bytes": 194,
+    "sha256": "060ac8e21e9a39e08a1db1b1898c16424e1cdb081c40f30a7afedb760ac076b0"
+  },
+  "docs/world-hd2d/evidence/hd09-build-v1/native-interaction.log": {
+    "bytes": 200,
+    "sha256": "de56768d79aa402f720c283f4c8cd33e40da487aa38c676c87e97b5accbb582c"
+  },
+  "docs/world-hd2d/evidence/hd09-build-v1/profile-startup-smoke-passed.log": {
+    "bytes": 158,
+    "sha256": "fb4e8d6649f0a21cf3471f72aa870bc71a14c95ce3b5a1ccc2d6c1b55acb6df5"
+  },
+  "docs/world-hd2d/evidence/hd09-build-v1/README.md": {
+    "bytes": 1408,
+    "sha256": "62f26ee3e1021ddf8df032882291baf5469442b232026b8328500a619e3968ef"
+  },
+  "docs/world-hd2d/evidence/hd09-build-v1/text-inputs.zip": {
+    "bytes": 206227,
+    "sha256": "908d3ff7b6e9f5b1283fcd2377ce25cd03b4dbc85600433f4a5d4a098ea44326"
+  },
+  "docs/world-hd2d/evidence/hd09-job-framing-v2/orthographic.png": {
+    "bytes": 611809,
+    "sha256": "e6197392f02ea51b4b1535371f50ef9f3cd807897b01abe57e709ebdf6260400"
+  },
+  "docs/world-hd2d/evidence/hd09-job-framing-v2/perspective.png": {
+    "bytes": 1105488,
+    "sha256": "b027a2f728cf01175f18ed4c18494987c2af06e3b80ec7df01e8f03fe2b3a85d"
+  },
+  "docs/world-hd2d/evidence/hd09-job-framing-v3/orthographic.png": {
+    "bytes": 532492,
+    "sha256": "a262eb51596a31277ba28e949f88272a848d0d3c8c79741349137c8631171a7f"
+  },
+  "docs/world-hd2d/evidence/hd09-job-framing-v3/perspective.png": {
+    "bytes": 1021246,
+    "sha256": "a3378e9e128daa6be10c5d5fcda5639dd758b669490b83935b3c64fe1894b4e9"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v1/cafe-high.png": {
+    "bytes": 1160401,
+    "sha256": "174e73dc9dd40204cf2bf30bef50fe9228713b0927ae63ae546005297f06f7d5"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v1/cafe-low.png": {
+    "bytes": 1114396,
+    "sha256": "d448e4cef5a532b8ecb3849d9abb4fe93dc87a16de1fce7c8ce2b5368e1caa84"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v1/club-high.png": {
+    "bytes": 967919,
+    "sha256": "248eacfaf70e32686841a2e7bcb87a9ba5364130b3b8eb185b15c495fba62224"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v1/club-low.png": {
+    "bytes": 882169,
+    "sha256": "56f4447f44d7663e9916677e438fc50d96e4fcd618dd4193194d4b354375cae3"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v1/home-high.png": {
+    "bytes": 857819,
+    "sha256": "8122de998ae8f3ed49dcc97c2d921dd0c6f8e8d18218d711383e0969e8da289c"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v1/home-low.png": {
+    "bytes": 784288,
+    "sha256": "f1909224790707bbb0914d1bccb73ba3bb5e3487b574c2de784eaf77138c72a6"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v1/job-high.png": {
+    "bytes": 890845,
+    "sha256": "62a98d383fec19597534faea1970645ee478d83bbd9e25bcd780a5000507aff1"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v1/job-low.png": {
+    "bytes": 809671,
+    "sha256": "441dd3c120ca74b475db62f97349891cb4b026ec33b2e05f3a9ad7a3d33c2cff"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v1/library-high.png": {
+    "bytes": 943676,
+    "sha256": "7c56a9bcb5bf14476e6b5f9b46d6db1bb4615a23f9def252b7d74f6333e7b5ce"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v1/library-low.png": {
+    "bytes": 859304,
+    "sha256": "4b64e26b31f8d252fc5e1b132d6308237b99f9a0474b937d0a7271436c0d87e7"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v1/native.log": {
+    "bytes": 205,
+    "sha256": "ebbba1a834672a1050c15c00610da0c7fa20de78011c424a1c5860661714a702"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v1/school-high.png": {
+    "bytes": 1156122,
+    "sha256": "16dda823e1a34abcaecaf0ac2f443012aa631136a2cd883b8b5826b9f7879050"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v1/school-low.png": {
+    "bytes": 1102960,
+    "sha256": "f921c15bef8244e8f7874d4ae48d1ac5289628bab9932107bea3c7821a555fad"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v1/shop-high.png": {
+    "bytes": 1087975,
+    "sha256": "9b8a4962856f9d0c05afb63217fdc2a6a2e901e340fedf290389626965e789a3"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v1/shop-low.png": {
+    "bytes": 1012096,
+    "sha256": "3d5abaa94db69eaa455d1037bb8882a9845478f4d46e0c8a1ecce0a59d611a83"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v1/waterfront-high.png": {
+    "bytes": 923118,
+    "sha256": "be966e4f885618e8353929d6b63526083b284e0f805afcd32f83d27f15ca6190"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v1/waterfront-low.png": {
+    "bytes": 842498,
+    "sha256": "ccae9ddcedfe9ed576d853ac073120bdc000ee9ee55f643dcfe2b69f8f5a6d21"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v2/cafe-high.png": {
+    "bytes": 1158793,
+    "sha256": "34aff34b05740272c10cccc1f3c786c6da93d926250da97115caebe279354a98"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v2/cafe-low.png": {
+    "bytes": 1110637,
+    "sha256": "fa1c0168d50128836e5e449ead507204ae9d006145585210792c2fd6ca86e3c4"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v2/club-high.png": {
+    "bytes": 964347,
+    "sha256": "487578f0e924594d1ac3231ac251cad7dd1c39304957a959fba4d8d78e330ff3"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v2/club-low.png": {
+    "bytes": 878809,
+    "sha256": "8834a38dd64bc86a3f429d4bad5deeeb73fa23fd5ebf4e2919b547940b421a13"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v2/home-high.png": {
+    "bytes": 856006,
+    "sha256": "29022015aeb6459612d29caf7f5eb8926e409ae44769c043b778f50541141ce3"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v2/home-low.png": {
+    "bytes": 781833,
+    "sha256": "ab41263feffc1c63cb4d1204edca8b90f4904dcc38e248a0ae81710ec96955f4"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v2/job-high.png": {
+    "bytes": 684613,
+    "sha256": "f3124d130193df8b20ae7b74263981b89cf316801007891eaf9ac20ebdc6180a"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v2/job-low.png": {
+    "bytes": 628473,
+    "sha256": "9a82e9b44dab625b856a3083ef2f47c0ce495f396a721e79e5aa28a277b0a621"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v2/library-high.png": {
+    "bytes": 942221,
+    "sha256": "6bd1d532114c2bcfb5b5cdd09142c4ed2d35c3e2ae5b971e838df73446ee0388"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v2/library-low.png": {
+    "bytes": 857392,
+    "sha256": "37fc1aee1e4a251838ed8dbe67b23fee32ed1525986bff2aa14a3c62da0228aa"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v2/native.log": {
+    "bytes": 205,
+    "sha256": "ebbba1a834672a1050c15c00610da0c7fa20de78011c424a1c5860661714a702"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v2/school-high.png": {
+    "bytes": 830302,
+    "sha256": "f1c2d6451d0fe7a0be021ab40e155aefbd4363bf8190ddad646d921b3ef38e1e"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v2/school-low.png": {
+    "bytes": 779479,
+    "sha256": "80d3ca84e40d2a210f4873cbab75e92f294ca5e880ecfe9f2ed0d2a12dfb712d"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v2/shop-high.png": {
+    "bytes": 1092885,
+    "sha256": "7fb365185178c97d3a7b1d65584260c84cf013275d7f3da1fa2615080d0a56c2"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v2/shop-low.png": {
+    "bytes": 1016664,
+    "sha256": "d9991214a97568b9481b4fd1206b5b297937db40b7634cd5af800c1352639869"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v2/waterfront-high.png": {
+    "bytes": 822697,
+    "sha256": "054855d3aadd9ad1b82062890f6f5be5c4f5d4fe0f9a7c52ccfd93ba553396f4"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v2/waterfront-low.png": {
+    "bytes": 754732,
+    "sha256": "44e0cf9c0d278dadc8071b7d6f2ffbba3651c5cc3214aa4f0cc713caaa47e177"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v3/native.log": {
+    "bytes": 380,
+    "sha256": "11d7091229f0ad69768047bbcc60e8fef3cbbc89030622d3686cb39d2df5eace"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/cafe-high.png": {
+    "bytes": 1158813,
+    "sha256": "17f104c2aaa63a7ae7fbc376d85474de83f7b0d86a8e004baff510b5b5388d7a"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/cafe-low.png": {
+    "bytes": 1110637,
+    "sha256": "fa1c0168d50128836e5e449ead507204ae9d006145585210792c2fd6ca86e3c4"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/club-high.png": {
+    "bytes": 964361,
+    "sha256": "4265e55b88267325d12d021f0c638091b88b232365dc3fa5dc03d3a0b21f0e6b"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/club-low.png": {
+    "bytes": 878809,
+    "sha256": "8834a38dd64bc86a3f429d4bad5deeeb73fa23fd5ebf4e2919b547940b421a13"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/home-high.png": {
+    "bytes": 855963,
+    "sha256": "e7bde4ad7869f0e9ceadeca245a53c8712da206926569f9bbb7e84e14adf2f78"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/home-low.png": {
+    "bytes": 781833,
+    "sha256": "ab41263feffc1c63cb4d1204edca8b90f4904dcc38e248a0ae81710ec96955f4"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/job-edge--1.png": {
+    "bytes": 689734,
+    "sha256": "07ccbd8566278433f077bef02b8da83781fccc72fbee5be018f549887d27b8ac"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/job-edge-1.png": {
+    "bytes": 682074,
+    "sha256": "073856635b5a88a5ab3610cb922956ffd85029cda6727f2f613e5138b995a827"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/job-high.png": {
+    "bytes": 684619,
+    "sha256": "8dc903da518ddc4e575f1071a0768ecc2f97f3b02b0c54ecb8edf7105881e535"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/job-low.png": {
+    "bytes": 628473,
+    "sha256": "9a82e9b44dab625b856a3083ef2f47c0ce495f396a721e79e5aa28a277b0a621"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/library-high.png": {
+    "bytes": 942265,
+    "sha256": "6522f6e3b0af13916822133be2c9b082469f5d477ac8c5b372c58c51aacf53ef"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/library-low.png": {
+    "bytes": 857392,
+    "sha256": "37fc1aee1e4a251838ed8dbe67b23fee32ed1525986bff2aa14a3c62da0228aa"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/native.log": {
+    "bytes": 205,
+    "sha256": "9dbf8b81983407d9bee81b5d3b1388354b96503fb04f714e732092b475166bff"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/school-edge--1.png": {
+    "bytes": 836373,
+    "sha256": "b2653d464afa2f158331ead7d1828cdff6d30e308841aae6ecc6e43329b4ee2d"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/school-edge-1.png": {
+    "bytes": 837686,
+    "sha256": "010fefb0f165e6aea3dd0182ccc304df086e47e9ffa84951b39f38ecebc12289"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/school-high.png": {
+    "bytes": 830284,
+    "sha256": "3cff12067fb6818deb1233146999d60840d5a404a79b03ddf752dc5b676c902f"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/school-low.png": {
+    "bytes": 779479,
+    "sha256": "80d3ca84e40d2a210f4873cbab75e92f294ca5e880ecfe9f2ed0d2a12dfb712d"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/shop-high.png": {
+    "bytes": 1092900,
+    "sha256": "33e0b493c38326663baba4c758f806f0f7f1a5401a207e9448f4135f6285fe1c"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/shop-low.png": {
+    "bytes": 1016664,
+    "sha256": "d9991214a97568b9481b4fd1206b5b297937db40b7634cd5af800c1352639869"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/waterfront-edge--1.png": {
+    "bytes": 823840,
+    "sha256": "824a738fb6ca18c1f464b078c4fe150786fb1450b73e790694ba8695101b2a4e"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/waterfront-edge-1.png": {
+    "bytes": 819666,
+    "sha256": "ce2fdbc342248cc2ba529b49a02db3787a42745db33756f3200100fdb0f7f8f0"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/waterfront-high.png": {
+    "bytes": 822635,
+    "sha256": "191e1cd16b8058e070664c88f9bbde9d30a42d17ea20752cf4be26b42ca37694"
+  },
+  "docs/world-hd2d/evidence/hd09-locations-v4/waterfront-low.png": {
+    "bytes": 754732,
+    "sha256": "44e0cf9c0d278dadc8071b7d6f2ffbba3651c5cc3214aa4f0cc713caaa47e177"
+  },
+  "docs/world-hd2d/evidence/hd09-profile-v1/inputs.json": {
+    "bytes": 6927,
+    "sha256": "faa84f782827e57540e76fc779b464bde763ba2be4d70c5102179d2588d6924d"
+  },
+  "docs/world-hd2d/evidence/hd09-profile-v1/machine.json": {
+    "bytes": 915,
+    "sha256": "690856f0473af33d688c72b3479c8543ec3745acc24004415d0b6229d7367ecf"
+  },
+  "docs/world-hd2d/evidence/hd09-profile-v1/measurement-runner.py": {
+    "bytes": 5539,
+    "sha256": "b6f70847f79bc7f049f4d1f49a5bc74f254d5dc1af864eae02be6e7f518ba697"
+  },
+  "docs/world-hd2d/evidence/hd09-profile-v1/measurement-script.gd": {
+    "bytes": 5390,
+    "sha256": "668b40beb45a2fed026287c41b08278cb3f23ea30bf79e695defea8c284b2353"
+  },
+  "docs/world-hd2d/evidence/hd09-profile-v1/profile.log": {
+    "bytes": 1032,
+    "sha256": "b680215c827b5613650b1d452444e739769a19196c717ca3adcc1b0260620d8a"
+  },
+  "docs/world-hd2d/evidence/hd09-profile-v1/README.md": {
+    "bytes": 1408,
+    "sha256": "e55ef124ef4db9e6526d90340cc8a402b393effa2b2482b56d670009b2e8d314"
+  },
+  "docs/world-hd2d/evidence/hd09-profile-v1/report.md": {
+    "bytes": 1829,
+    "sha256": "31f108e5970dcee368d93b9dfdfba2bd16447b4255b1e13e77d88f6748793ef6"
+  },
+  "docs/world-hd2d/evidence/hd09-profile-v1/samples.json.gz": {
+    "bytes": 940294,
+    "sha256": "2231eb4d44418228ff0471f5c3688965cec76ad56be0390cfd40774d3e356b0b"
+  },
+  "docs/world-hd2d/evidence/hd09-profile-v1/summary.json": {
+    "bytes": 15073,
+    "sha256": "51d1ba806b71797b24d60e1d61de76a7654f2bf8b4b5efe5987e0fcb64d61531"
+  },
+  "docs/world-hd2d/evidence/hd09-profile-v1/text-inputs.zip": {
+    "bytes": 71439,
+    "sha256": "55de2acf4186ec0f6e8ff7c080b4ebcce955c4fcb35b4581729050d9feaf1235"
+  },
+  "docs/world-hd2d/evidence/hd09-school-framing-v2/orthographic.png": {
+    "bytes": 768144,
+    "sha256": "1f3d20c89c607faeee510f38161fa4dd52000988d9d43307b3e5ba690fd2f21e"
+  },
+  "docs/world-hd2d/evidence/hd09-school-framing-v2/perspective.png": {
+    "bytes": 1190714,
+    "sha256": "4d16512f0e0e7578f5a845df573cbe564867b8e3182d24d8ce53ceb6ae3f26b5"
+  },
+  "docs/world-hd2d/evidence/hd09-school-framing-v3/orthographic.png": {
+    "bytes": 682835,
+    "sha256": "a8268ebb8869e97b5e999f58e43908c446f24d5d70c984d004f3b22736ac22b2"
+  },
+  "docs/world-hd2d/evidence/hd09-school-framing-v3/perspective.png": {
+    "bytes": 1123932,
+    "sha256": "69b943039ba792d6a47252611b4fc95e011fffbba15e878ecdeb68f03df60dba"
+  },
+  "docs/world-hd2d/evidence/hd09-school-framing-v4/orthographic.png": {
+    "bytes": 678761,
+    "sha256": "846b5a5d3f032e70ac1dc03c0e3418ac3610dbf29abd158f403112cac5d93fa4"
+  },
+  "docs/world-hd2d/evidence/hd09-school-framing-v4/perspective.png": {
+    "bytes": 1120482,
+    "sha256": "b5a2654fc8320c595f1c9fe2a9d5e4cd685b13377eadf917990c77a577b82620"
+  },
+  "docs/world-hd2d/evidence/hd09-tour-v1/movie.log": {
+    "bytes": 273,
+    "sha256": "e313660572c7f159d7d2871603eade11971d2cecc5ac303f70d5c9ff42c2f2df"
+  },
+  "docs/world-hd2d/evidence/hd09-tour-v1/world-tour.mp4": {
+    "bytes": 31701786,
+    "sha256": "19745d1d198a396fae5c35683b85e6dae777e6cac1f25fb98d684671d137b603"
+  },
+  "docs/world-hd2d/evidence/hd09-waterfront-framing-v2/orthographic.png": {
+    "bytes": 516767,
+    "sha256": "5707381b9f8da58bdb7cda35af012840a61a92f439c47268bad3dea60ab43e41"
+  },
+  "docs/world-hd2d/evidence/hd09-waterfront-framing-v2/perspective.png": {
+    "bytes": 797601,
+    "sha256": "28e053857b57db2fd4bd31debf0b97a087c0d6d1d6ddbc859b988c674912cb0a"
+  },
+  "docs/world-hd2d/evidence/hd09-waterfront-framing-v3/orthographic.png": {
+    "bytes": 676469,
+    "sha256": "c640e564ca228f62588722676201a54510705368bf4fcc971a5652ccf2ec4866"
+  },
+  "docs/world-hd2d/evidence/hd09-waterfront-framing-v3/perspective.png": {
+    "bytes": 943671,
+    "sha256": "5b70c3a351540a4920222687635f4759e08134c2126c8eb0813123a239dcfeed"
+  },
+  "docs/world-hd2d/evidence/hd09-waterfront-framing-v4/orthographic.png": {
+    "bytes": 726419,
+    "sha256": "d32b2df483cfdcb15ed56df750e1067e22437c200e703b7fca5aa36a1b1717f9"
+  },
+  "docs/world-hd2d/evidence/hd09-waterfront-framing-v4/perspective.png": {
+    "bytes": 951995,
+    "sha256": "8c5ef626eb765cba4df9b7e5351dac3c89d211a4118c070860a4bb0d43cab43d"
+  },
+  "assets/world/coastal/v2/runtime/companion.png": {
+    "bytes": 1733427,
+    "sha256": "d15c745c63008a319aa52cab29d05b3c4774ee51d689c295fe75ce492adc5935"
+  },
+  "assets/world/coastal/v2/runtime/companion.png.import": {
+    "bytes": 961,
+    "sha256": "90a12ce9e89a675160159e9630be79bc307bc1931a5eae80e595788b7de12a9e"
+  },
+  "assets/world/coastal/v2/runtime/outdoor.png": {
+    "bytes": 1792608,
+    "sha256": "e65c5e8555480a7ea6fc261e5a2b50e9140be703eeaaf6467892277c512a2b82"
+  },
+  "assets/world/coastal/v2/runtime/outdoor.png.import": {
+    "bytes": 956,
+    "sha256": "1fceb45d9b472d5333cd77ebd199d6effe50f4fdfc0c4c407df2df1fca06b2d1"
+  },
+  "assets/world/coastal/v2/source/.gdignore": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "assets/world/coastal/v2/source/.gitignore": {
+    "bytes": 10,
+    "sha256": "5ac9f6c99218f70abea1a682d1501258bd8cbc4761c4a7842c01f0825a93be41"
+  },
+  "assets/world/coastal/v2/source/companion.png": {
+    "bytes": 1733427,
+    "sha256": "d15c745c63008a319aa52cab29d05b3c4774ee51d689c295fe75ce492adc5935"
+  },
+  "assets/world/coastal/v2/source/outdoor.png": {
+    "bytes": 1792608,
+    "sha256": "e65c5e8555480a7ea6fc261e5a2b50e9140be703eeaaf6467892277c512a2b82"
+  },
+  "assets/world/coastal/v2/source/prompts.json": {
+    "bytes": 3250,
+    "sha256": "7c2c3ec46951beddb3fafc3c81641ead5078206ed4325b5b6966d187c78658f6"
+  },
+  "assets/world/coastal/v2/source/README.md": {
+    "bytes": 1145,
+    "sha256": "bf737dc8aa52c6b339aea662caa7bb8a7ac98fac12b97b1d6d28073d1adca76b"
+  }
+}

@@ -44,6 +44,10 @@ static func validate(manifest: Dictionary, visual: Dictionary) -> bool:
 				return false
 			if layer.size[0] <= 0 or layer.size[1] <= 0 or not _numbers(layer.get("offset", [0, 0, 0]), 3):
 				return false
+			if layer.has("shadow") and not layer.shadow is bool:
+				return false
+			if layer.has("mipmaps") and not layer.mipmaps is bool:
+				return false
 	if not visual.get("surfaces", []) is Array or not visual.get("labels", []) is Array:
 		return false
 	for surface: Variant in visual.get("surfaces", []):
@@ -54,6 +58,8 @@ static func validate(manifest: Dictionary, visual: Dictionary) -> bool:
 			return false
 		if minf(surface.size[0], surface.size[1]) <= 0 or not _numbers(surface.get("rotation", [0, 0, 0]), 3):
 			return false
+		if not _numbers(surface.get("repeat", [1, 1]), 2) or minf(surface.get("repeat", [1, 1])[0], surface.get("repeat", [1, 1])[1]) <= 0:
+			return false
 	for label: Variant in visual.get("labels", []):
 		if not label is Dictionary or not _id(label.get("id")) or ids.has(label.id) or not _id(label.get("text_key")):
 			return false
@@ -63,6 +69,17 @@ static func validate(manifest: Dictionary, visual: Dictionary) -> bool:
 			return false
 		ids[label.id] = true
 	return true
+
+
+static func motion(value: Variant) -> bool:
+	if not value is Dictionary:
+		return false
+	if not value.has("follow"):
+		return true
+	var follow: Variant = value.follow
+	if not follow is Dictionary or not _numbers(follow.get("strength"), 2) or not _numbers(follow.get("maximum"), 2):
+		return false
+	return _scalar(follow.get("response")) and follow.response > 0 and follow.strength.min() >= 0 and follow.maximum.min() >= 0
 
 
 static func _numbers(values: Variant, count: int) -> bool:

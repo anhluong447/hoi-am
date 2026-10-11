@@ -118,3 +118,4 @@ docs/reviews/ui-correction-2026-10-11/** -text whitespace=-trailing-space,cr-at-
 docs/reviews/dialogue-motion-2026-10-11/** -text whitespace=-trailing-space,cr-at-eol
 docs/reviews/dialogue-motion-focus-wave-2026-10-11/** -text whitespace=-trailing-space,cr-at-eol
 docs/world-hd2d/evidence/** -text whitespace=-trailing-space,cr-at-eol
+assets/world/coastal/v2/source/** -text whitespace=-trailing-space,cr-at-eol

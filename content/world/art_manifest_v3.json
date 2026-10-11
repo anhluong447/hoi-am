@@ -1,0 +1,547 @@
+{
+  "version": 3,
+  "atlases": [
+    {
+      "id": "props",
+      "texture_path": "res://assets/world/coastal/v1/runtime/props.png",
+      "source_path": "res://assets/world/coastal/v1/source/props.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "sha256": "4782bb53cb0b0885bba94c1f3f80b020cacd89bb3d17976461184ff48eb37aa3",
+      "source_sha256": "4782bb53cb0b0885bba94c1f3f80b020cacd89bb3d17976461184ff48eb37aa3",
+      "provenance": "built-in imagegen; original art; prompt archived with source"
+    },
+    {
+      "id": "surfaces",
+      "texture_path": "res://assets/world/coastal/v1/runtime/surfaces.png",
+      "source_path": "res://assets/world/coastal/v1/source/surfaces.png",
+      "size": [
+        1774,
+        887
+      ],
+      "sha256": "96b7a8d542ca60efcb78dbf38efaca93371fd86ba1fe090247220117a25f1af8",
+      "source_sha256": "96b7a8d542ca60efcb78dbf38efaca93371fd86ba1fe090247220117a25f1af8",
+      "provenance": "built-in imagegen; original raster artwork"
+    },
+    {
+      "id": "harbor",
+      "texture_path": "res://assets/world/coastal/v1/runtime/harbor.png",
+      "source_path": "res://assets/world/coastal/v1/source/harbor.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "sha256": "919de60effbef28c96a1134e7e8af1df47adea5ca850ef6d22e1b7752ec95270",
+      "source_sha256": "919de60effbef28c96a1134e7e8af1df47adea5ca850ef6d22e1b7752ec95270",
+      "provenance": "built-in imagegen; original raster artwork"
+    },
+    {
+      "id": "companion",
+      "texture_path": "res://assets/world/coastal/v2/runtime/companion.png",
+      "source_path": "res://assets/world/coastal/v2/source/companion.png",
+      "size": [
+        1086,
+        1448
+      ],
+      "sha256": "d15c745c63008a319aa52cab29d05b3c4774ee51d689c295fe75ce492adc5935",
+      "source_sha256": "d15c745c63008a319aa52cab29d05b3c4774ee51d689c295fe75ce492adc5935",
+      "provenance": "built-in imagegen; original raster artwork; exact prompt archived"
+    },
+    {
+      "id": "outdoor",
+      "texture_path": "res://assets/world/coastal/v2/runtime/outdoor.png",
+      "source_path": "res://assets/world/coastal/v2/source/outdoor.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "sha256": "e65c5e8555480a7ea6fc261e5a2b50e9140be703eeaaf6467892277c512a2b82",
+      "source_sha256": "e65c5e8555480a7ea6fc261e5a2b50e9140be703eeaaf6467892277c512a2b82",
+      "provenance": "built-in imagegen; original raster artwork; manual atlas-region metadata"
+    }
+  ],
+  "assets": [
+    {
+      "id": "desk",
+      "atlas": "props",
+      "region": [
+        12,
+        69,
+        294,
+        249
+      ]
+    },
+    {
+      "id": "cabinet",
+      "atlas": "props",
+      "region": [
+        376,
+        33,
+        168,
+        283
+      ]
+    },
+    {
+      "id": "bookshelf",
+      "atlas": "props",
+      "region": [
+        655,
+        0,
+        232,
+        319
+      ]
+    },
+    {
+      "id": "chair",
+      "atlas": "props",
+      "region": [
+        981,
+        46,
+        189,
+        271
+      ]
+    },
+    {
+      "id": "printer",
+      "atlas": "props",
+      "region": [
+        28,
+        371,
+        270,
+        232
+      ]
+    },
+    {
+      "id": "lamp",
+      "atlas": "props",
+      "region": [
+        358,
+        363,
+        211,
+        237
+      ]
+    },
+    {
+      "id": "papers",
+      "atlas": "props",
+      "region": [
+        634,
+        391,
+        266,
+        210
+      ]
+    },
+    {
+      "id": "books",
+      "atlas": "props",
+      "region": [
+        940,
+        380,
+        275,
+        224
+      ]
+    },
+    {
+      "id": "plant",
+      "atlas": "props",
+      "region": [
+        21,
+        622,
+        283,
+        274
+      ]
+    },
+    {
+      "id": "flowers",
+      "atlas": "props",
+      "region": [
+        340,
+        611,
+        279,
+        286
+      ]
+    },
+    {
+      "id": "clock",
+      "atlas": "props",
+      "region": [
+        654,
+        655,
+        239,
+        239
+      ]
+    },
+    {
+      "id": "board",
+      "atlas": "props",
+      "region": [
+        929,
+        657,
+        294,
+        235
+      ]
+    },
+    {
+      "id": "window",
+      "atlas": "props",
+      "region": [
+        31,
+        906,
+        267,
+        321
+      ]
+    },
+    {
+      "id": "door",
+      "atlas": "props",
+      "region": [
+        379,
+        906,
+        168,
+        319
+      ]
+    },
+    {
+      "id": "counter",
+      "atlas": "props",
+      "region": [
+        610,
+        940,
+        309,
+        274
+      ]
+    },
+    {
+      "id": "boat",
+      "atlas": "props",
+      "region": [
+        934,
+        962,
+        285,
+        258
+      ]
+    },
+    {
+      "id": "oak",
+      "atlas": "surfaces",
+      "region": [
+        0,
+        0,
+        443,
+        443
+      ]
+    },
+    {
+      "id": "teal-wood",
+      "atlas": "surfaces",
+      "region": [
+        443,
+        0,
+        443,
+        443
+      ]
+    },
+    {
+      "id": "plaster",
+      "atlas": "surfaces",
+      "region": [
+        886,
+        0,
+        443,
+        443
+      ]
+    },
+    {
+      "id": "terracotta",
+      "atlas": "surfaces",
+      "region": [
+        1329,
+        0,
+        443,
+        443
+      ]
+    },
+    {
+      "id": "cobble",
+      "atlas": "surfaces",
+      "region": [
+        0,
+        443,
+        443,
+        443
+      ]
+    },
+    {
+      "id": "sea",
+      "atlas": "surfaces",
+      "region": [
+        443,
+        443,
+        443,
+        443
+      ]
+    },
+    {
+      "id": "stone",
+      "atlas": "surfaces",
+      "region": [
+        886,
+        443,
+        443,
+        443
+      ]
+    },
+    {
+      "id": "cloth",
+      "atlas": "surfaces",
+      "region": [
+        1329,
+        443,
+        443,
+        443
+      ]
+    },
+    {
+      "id": "mountains",
+      "atlas": "harbor",
+      "region": [
+        0,
+        100,
+        1448,
+        295
+      ]
+    },
+    {
+      "id": "town",
+      "atlas": "harbor",
+      "region": [
+        0,
+        398,
+        1448,
+        321
+      ]
+    },
+    {
+      "id": "quay",
+      "atlas": "harbor",
+      "region": [
+        0,
+        751,
+        1448,
+        335
+      ]
+    },
+    {
+      "id": "cafe-table",
+      "atlas": "companion",
+      "region": [
+        35,
+        35,
+        298,
+        327
+      ]
+    },
+    {
+      "id": "sofa",
+      "atlas": "companion",
+      "region": [
+        344,
+        84,
+        407,
+        281
+      ]
+    },
+    {
+      "id": "bed",
+      "atlas": "companion",
+      "region": [
+        789,
+        20,
+        281,
+        347
+      ]
+    },
+    {
+      "id": "chalkboard",
+      "atlas": "companion",
+      "region": [
+        26,
+        418,
+        337,
+        267
+      ]
+    },
+    {
+      "id": "arch",
+      "atlas": "companion",
+      "region": [
+        372,
+        373,
+        359,
+        354
+      ]
+    },
+    {
+      "id": "awning",
+      "atlas": "companion",
+      "region": [
+        738,
+        430,
+        335,
+        270
+      ]
+    },
+    {
+      "id": "jars",
+      "atlas": "companion",
+      "region": [
+        26,
+        734,
+        325,
+        345
+      ]
+    },
+    {
+      "id": "press",
+      "atlas": "companion",
+      "region": [
+        357,
+        765,
+        387,
+        312
+      ]
+    },
+    {
+      "id": "laptop",
+      "atlas": "companion",
+      "region": [
+        760,
+        794,
+        310,
+        252
+      ]
+    },
+    {
+      "id": "pendant",
+      "atlas": "companion",
+      "region": [
+        45,
+        1080,
+        286,
+        345
+      ]
+    },
+    {
+      "id": "painting",
+      "atlas": "companion",
+      "region": [
+        372,
+        1124,
+        338,
+        283
+      ]
+    },
+    {
+      "id": "bench",
+      "atlas": "companion",
+      "region": [
+        728,
+        1150,
+        354,
+        262
+      ]
+    },
+    {
+      "id": "tree",
+      "atlas": "outdoor",
+      "region": [
+        12,
+        26,
+        492,
+        434
+      ]
+    },
+    {
+      "id": "palm",
+      "atlas": "outdoor",
+      "region": [
+        524,
+        22,
+        319,
+        447
+      ]
+    },
+    {
+      "id": "shrub",
+      "atlas": "outdoor",
+      "region": [
+        880,
+        208,
+        361,
+        267
+      ]
+    },
+    {
+      "id": "school-house",
+      "atlas": "outdoor",
+      "region": [
+        11,
+        495,
+        405,
+        350
+      ]
+    },
+    {
+      "id": "warehouse",
+      "atlas": "outdoor",
+      "region": [
+        437,
+        523,
+        438,
+        311
+      ]
+    },
+    {
+      "id": "balustrade",
+      "atlas": "outdoor",
+      "region": [
+        875,
+        620,
+        365,
+        212
+      ]
+    },
+    {
+      "id": "pier",
+      "atlas": "outdoor",
+      "region": [
+        28,
+        946,
+        477,
+        263
+      ]
+    },
+    {
+      "id": "streetlamp",
+      "atlas": "outdoor",
+      "region": [
+        594,
+        837,
+        107,
+        400
+      ]
+    },
+    {
+      "id": "bulletin",
+      "atlas": "outdoor",
+      "region": [
+        916,
+        892,
+        295,
+        344
+      ]
+    }
+  ]
+}

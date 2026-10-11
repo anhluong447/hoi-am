@@ -1,0 +1,682 @@
+{
+  "adapter": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+  "api": "d3d12",
+  "cap_fps": 120,
+  "driver": "See machine.json (Windows adapter driver)",
+  "engine": {
+    "build": "steam",
+    "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+    "hex": 263938,
+    "major": 4,
+    "minor": 7,
+    "patch": 2,
+    "status": "stable",
+    "string": "4.7.2-stable (steam)",
+    "timestamp": 0
+  },
+  "fixed_fps": false,
+  "locations": [
+    "club",
+    "school",
+    "waterfront"
+  ],
+  "note": "Editor remains open. Root GPU counter excludes dialogue child viewport; wall frame time includes all passes.",
+  "renderer": "forward_plus",
+  "repetitions": 3,
+  "sample_seconds": 30,
+  "vsync": "disabled",
+  "warmup_seconds": 10,
+  "machine": "Windows-11-10.0.26200-SP0",
+  "raw_sha256": "1511fbc1a8e4344f25688a436bbcea70436aa8894bc20406221b9aa620818a6b",
+  "raw_gzip_sha256": "2231eb4d44418228ff0471f5c3688965cec76ad56be0390cfd40774d3e356b0b",
+  "runs": [
+    {
+      "camera": {
+        "far": 65.0,
+        "near": 0.05,
+        "position": [
+          0.0,
+          11.0,
+          16.0
+        ],
+        "size": 8.0,
+        "target": [
+          0.0,
+          0.8,
+          0.0
+        ]
+      },
+      "elapsed_seconds": 30.007564,
+      "focused": true,
+      "location": "club",
+      "mode": "walk-high",
+      "repetition": 1,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "room_id": "newsroom_hd2d_v1",
+      "sample_count": 3601,
+      "median_ms": 8.373,
+      "p95_ms": 8.722,
+      "p99_ms": 8.795,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.9300000667572,
+      "median_draw_calls": 107.0,
+      "max_video_bytes": 308768768.0
+    },
+    {
+      "camera": {
+        "far": 65.0,
+        "near": 0.05,
+        "position": [
+          0.0,
+          11.0,
+          16.0
+        ],
+        "size": 8.0,
+        "target": [
+          0.0,
+          0.8,
+          0.0
+        ]
+      },
+      "elapsed_seconds": 30.006851,
+      "focused": true,
+      "location": "club",
+      "mode": "walk-high",
+      "repetition": 2,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "room_id": "newsroom_hd2d_v1",
+      "sample_count": 3601,
+      "median_ms": 8.351,
+      "p95_ms": 8.722,
+      "p99_ms": 8.8,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.92799997329712,
+      "median_draw_calls": 107.0,
+      "max_video_bytes": 308768768.0
+    },
+    {
+      "camera": {
+        "far": 65.0,
+        "near": 0.05,
+        "position": [
+          0.0,
+          11.0,
+          16.0
+        ],
+        "size": 8.0,
+        "target": [
+          0.0,
+          0.8,
+          0.0
+        ]
+      },
+      "elapsed_seconds": 30.007479,
+      "focused": true,
+      "location": "club",
+      "mode": "walk-high",
+      "repetition": 3,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "room_id": "newsroom_hd2d_v1",
+      "sample_count": 3601,
+      "median_ms": 8.316,
+      "p95_ms": 8.726,
+      "p99_ms": 8.807,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.93099999427795,
+      "median_draw_calls": 107.0,
+      "max_video_bytes": 308768768.0
+    },
+    {
+      "camera": {
+        "far": 65.0,
+        "near": 0.05,
+        "position": [
+          0.0,
+          11.0,
+          16.0
+        ],
+        "size": 8.0,
+        "target": [
+          0.0,
+          0.8,
+          0.0
+        ]
+      },
+      "elapsed_seconds": 30.007593,
+      "focused": true,
+      "location": "club",
+      "mode": "walk-low",
+      "repetition": 1,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "room_id": "newsroom_hd2d_v1",
+      "sample_count": 3601,
+      "median_ms": 8.411,
+      "p95_ms": 8.73,
+      "p99_ms": 8.826,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.62199997901917,
+      "median_draw_calls": 73.0,
+      "max_video_bytes": 308768768.0
+    },
+    {
+      "camera": {
+        "far": 65.0,
+        "near": 0.05,
+        "position": [
+          0.0,
+          11.0,
+          16.0
+        ],
+        "size": 8.0,
+        "target": [
+          0.0,
+          0.8,
+          0.0
+        ]
+      },
+      "elapsed_seconds": 30.00682,
+      "focused": true,
+      "location": "club",
+      "mode": "walk-low",
+      "repetition": 2,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "room_id": "newsroom_hd2d_v1",
+      "sample_count": 3601,
+      "median_ms": 8.303,
+      "p95_ms": 8.717,
+      "p99_ms": 8.797,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.62100005149841,
+      "median_draw_calls": 73.0,
+      "max_video_bytes": 308768768.0
+    },
+    {
+      "camera": {
+        "far": 65.0,
+        "near": 0.05,
+        "position": [
+          0.0,
+          11.0,
+          16.0
+        ],
+        "size": 8.0,
+        "target": [
+          0.0,
+          0.8,
+          0.0
+        ]
+      },
+      "elapsed_seconds": 30.007412,
+      "focused": true,
+      "location": "club",
+      "mode": "walk-low",
+      "repetition": 3,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "room_id": "newsroom_hd2d_v1",
+      "sample_count": 3601,
+      "median_ms": 8.332,
+      "p95_ms": 8.732,
+      "p99_ms": 8.816,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.62100005149841,
+      "median_draw_calls": 73.0,
+      "max_video_bytes": 308768768.0
+    },
+    {
+      "camera": {
+        "far": 65.0,
+        "near": 0.05,
+        "position": [
+          0.0,
+          13.0,
+          18.0
+        ],
+        "size": 12.0,
+        "target": [
+          0.0,
+          1.25,
+          -0.65
+        ]
+      },
+      "elapsed_seconds": 30.007551,
+      "focused": true,
+      "location": "school",
+      "mode": "walk-high",
+      "repetition": 1,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "room_id": "school_hd2d_v1",
+      "sample_count": 3601,
+      "median_ms": 8.338,
+      "p95_ms": 8.72,
+      "p99_ms": 8.798,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.88100004196167,
+      "median_draw_calls": 50.0,
+      "max_video_bytes": 305557504.0
+    },
+    {
+      "camera": {
+        "far": 65.0,
+        "near": 0.05,
+        "position": [
+          0.0,
+          13.0,
+          18.0
+        ],
+        "size": 12.0,
+        "target": [
+          0.0,
+          1.25,
+          -0.65
+        ]
+      },
+      "elapsed_seconds": 30.007475,
+      "focused": true,
+      "location": "school",
+      "mode": "walk-high",
+      "repetition": 2,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "room_id": "school_hd2d_v1",
+      "sample_count": 3601,
+      "median_ms": 8.321,
+      "p95_ms": 8.713,
+      "p99_ms": 8.792,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.88199996948242,
+      "median_draw_calls": 50.0,
+      "max_video_bytes": 305557504.0
+    },
+    {
+      "camera": {
+        "far": 65.0,
+        "near": 0.05,
+        "position": [
+          0.0,
+          13.0,
+          18.0
+        ],
+        "size": 12.0,
+        "target": [
+          0.0,
+          1.25,
+          -0.65
+        ]
+      },
+      "elapsed_seconds": 30.007422,
+      "focused": true,
+      "location": "school",
+      "mode": "walk-high",
+      "repetition": 3,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "room_id": "school_hd2d_v1",
+      "sample_count": 3601,
+      "median_ms": 8.328,
+      "p95_ms": 8.719,
+      "p99_ms": 8.8,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.88199996948242,
+      "median_draw_calls": 50.0,
+      "max_video_bytes": 305557504.0
+    },
+    {
+      "camera": {
+        "far": 65.0,
+        "near": 0.05,
+        "position": [
+          0.0,
+          13.0,
+          18.0
+        ],
+        "size": 12.0,
+        "target": [
+          0.0,
+          1.25,
+          -0.65
+        ]
+      },
+      "elapsed_seconds": 30.006904,
+      "focused": true,
+      "location": "school",
+      "mode": "walk-low",
+      "repetition": 1,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "room_id": "school_hd2d_v1",
+      "sample_count": 3601,
+      "median_ms": 8.292,
+      "p95_ms": 8.717,
+      "p99_ms": 8.809,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.4210000038147,
+      "median_draw_calls": 41.0,
+      "max_video_bytes": 305557504.0
+    },
+    {
+      "camera": {
+        "far": 65.0,
+        "near": 0.05,
+        "position": [
+          0.0,
+          13.0,
+          18.0
+        ],
+        "size": 12.0,
+        "target": [
+          0.0,
+          1.25,
+          -0.65
+        ]
+      },
+      "elapsed_seconds": 30.006886,
+      "focused": true,
+      "location": "school",
+      "mode": "walk-low",
+      "repetition": 2,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "room_id": "school_hd2d_v1",
+      "sample_count": 3601,
+      "median_ms": 8.167,
+      "p95_ms": 8.713,
+      "p99_ms": 8.795,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.4210000038147,
+      "median_draw_calls": 41.0,
+      "max_video_bytes": 305557504.0
+    },
+    {
+      "camera": {
+        "far": 65.0,
+        "near": 0.05,
+        "position": [
+          0.0,
+          13.0,
+          18.0
+        ],
+        "size": 12.0,
+        "target": [
+          0.0,
+          1.25,
+          -0.65
+        ]
+      },
+      "elapsed_seconds": 30.006812,
+      "focused": true,
+      "location": "school",
+      "mode": "walk-low",
+      "repetition": 3,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "room_id": "school_hd2d_v1",
+      "sample_count": 3601,
+      "median_ms": 8.304,
+      "p95_ms": 8.719,
+      "p99_ms": 8.786,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.42000007629395,
+      "median_draw_calls": 41.0,
+      "max_video_bytes": 305557504.0
+    },
+    {
+      "camera": {
+        "far": 65.0,
+        "near": 0.05,
+        "position": [
+          0.0,
+          13.0,
+          18.0
+        ],
+        "size": 12.0,
+        "target": [
+          0.0,
+          1.25,
+          -0.65
+        ]
+      },
+      "elapsed_seconds": 30.007428,
+      "focused": true,
+      "location": "waterfront",
+      "mode": "walk-high",
+      "repetition": 1,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "room_id": "waterfront_hd2d_v1",
+      "sample_count": 3601,
+      "median_ms": 8.337,
+      "p95_ms": 8.711,
+      "p99_ms": 8.789,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.84699988365173,
+      "median_draw_calls": 61.0,
+      "max_video_bytes": 306343936.0
+    },
+    {
+      "camera": {
+        "far": 65.0,
+        "near": 0.05,
+        "position": [
+          0.0,
+          13.0,
+          18.0
+        ],
+        "size": 12.0,
+        "target": [
+          0.0,
+          1.25,
+          -0.65
+        ]
+      },
+      "elapsed_seconds": 30.007446,
+      "focused": true,
+      "location": "waterfront",
+      "mode": "walk-high",
+      "repetition": 2,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "room_id": "waterfront_hd2d_v1",
+      "sample_count": 3601,
+      "median_ms": 8.398,
+      "p95_ms": 8.715,
+      "p99_ms": 8.809,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.84599995613098,
+      "median_draw_calls": 61.0,
+      "max_video_bytes": 306343936.0
+    },
+    {
+      "camera": {
+        "far": 65.0,
+        "near": 0.05,
+        "position": [
+          0.0,
+          13.0,
+          18.0
+        ],
+        "size": 12.0,
+        "target": [
+          0.0,
+          1.25,
+          -0.65
+        ]
+      },
+      "elapsed_seconds": 30.006685,
+      "focused": true,
+      "location": "waterfront",
+      "mode": "walk-high",
+      "repetition": 3,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "room_id": "waterfront_hd2d_v1",
+      "sample_count": 3601,
+      "median_ms": 8.32,
+      "p95_ms": 8.705,
+      "p99_ms": 8.781,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.85199999809265,
+      "median_draw_calls": 61.0,
+      "max_video_bytes": 306343936.0
+    },
+    {
+      "camera": {
+        "far": 65.0,
+        "near": 0.05,
+        "position": [
+          0.0,
+          13.0,
+          18.0
+        ],
+        "size": 12.0,
+        "target": [
+          0.0,
+          1.25,
+          -0.65
+        ]
+      },
+      "elapsed_seconds": 30.006911,
+      "focused": true,
+      "location": "waterfront",
+      "mode": "walk-low",
+      "repetition": 1,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "room_id": "waterfront_hd2d_v1",
+      "sample_count": 3601,
+      "median_ms": 8.292,
+      "p95_ms": 8.718,
+      "p99_ms": 8.788,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.33100008964539,
+      "median_draw_calls": 47.0,
+      "max_video_bytes": 306343936.0
+    },
+    {
+      "camera": {
+        "far": 65.0,
+        "near": 0.05,
+        "position": [
+          0.0,
+          13.0,
+          18.0
+        ],
+        "size": 12.0,
+        "target": [
+          0.0,
+          1.25,
+          -0.65
+        ]
+      },
+      "elapsed_seconds": 30.006819,
+      "focused": true,
+      "location": "waterfront",
+      "mode": "walk-low",
+      "repetition": 2,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "room_id": "waterfront_hd2d_v1",
+      "sample_count": 3601,
+      "median_ms": 8.283,
+      "p95_ms": 8.722,
+      "p99_ms": 8.805,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.32800006866455,
+      "median_draw_calls": 47.0,
+      "max_video_bytes": 306343936.0
+    },
+    {
+      "camera": {
+        "far": 65.0,
+        "near": 0.05,
+        "position": [
+          0.0,
+          13.0,
+          18.0
+        ],
+        "size": 12.0,
+        "target": [
+          0.0,
+          1.25,
+          -0.65
+        ]
+      },
+      "elapsed_seconds": 30.006844,
+      "focused": true,
+      "location": "waterfront",
+      "mode": "walk-low",
+      "repetition": 3,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "room_id": "waterfront_hd2d_v1",
+      "sample_count": 3601,
+      "median_ms": 8.274,
+      "p95_ms": 8.724,
+      "p99_ms": 8.788,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.32800006866455,
+      "median_draw_calls": 47.0,
+      "max_video_bytes": 306343936.0
+    }
+  ]
+}

@@ -1,0 +1,539 @@
+{
+  "version": 1,
+  "surfaces": [
+    {
+      "id": "floor-art",
+      "asset": "terracotta",
+      "position": [
+        0,
+        0.012,
+        0
+      ],
+      "size": [
+        15,
+        12
+      ],
+      "rotation": [
+        -90,
+        0,
+        0
+      ],
+      "repeat": [
+        4,
+        3
+      ],
+      "swap_axes": false,
+      "tint": "#ead4b5"
+    },
+    {
+      "id": "wall-base",
+      "asset": "plaster",
+      "position": [
+        0,
+        0.6,
+        -4.37
+      ],
+      "size": [
+        15,
+        1.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "repeat": [
+        7.5,
+        0.6
+      ],
+      "tint": "#e0d5be",
+      "ink_strength": 0.45
+    },
+    {
+      "id": "wall-top",
+      "asset": "plaster",
+      "position": [
+        0,
+        3.55,
+        -4.37
+      ],
+      "size": [
+        15,
+        1.1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "repeat": [
+        7.5,
+        0.55
+      ],
+      "tint": "#e0d5be",
+      "ink_strength": 0.45
+    },
+    {
+      "id": "wall-left",
+      "asset": "plaster",
+      "position": [
+        -6.25,
+        2.1,
+        -4.37
+      ],
+      "size": [
+        2.5,
+        1.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "repeat": [
+        1.25,
+        0.9
+      ],
+      "tint": "#e0d5be",
+      "ink_strength": 0.45
+    },
+    {
+      "id": "wall-middle",
+      "asset": "plaster",
+      "position": [
+        0,
+        2.1,
+        -4.37
+      ],
+      "size": [
+        4,
+        1.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "repeat": [
+        2.0,
+        0.9
+      ],
+      "tint": "#e0d5be",
+      "ink_strength": 0.45
+    },
+    {
+      "id": "wall-right",
+      "asset": "plaster",
+      "position": [
+        6.25,
+        2.1,
+        -4.37
+      ],
+      "size": [
+        2.5,
+        1.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "repeat": [
+        1.25,
+        0.9
+      ],
+      "tint": "#e0d5be",
+      "ink_strength": 0.45
+    },
+    {
+      "id": "wainscot",
+      "asset": "teal-wood",
+      "position": [
+        0,
+        0.48,
+        -4.32
+      ],
+      "size": [
+        15,
+        0.96
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "repeat": [
+        5,
+        1
+      ],
+      "ink_strength": 0.8
+    }
+  ],
+  "props": [
+    {
+      "id": "window-left-art",
+      "position": [
+        -3.5,
+        1.03,
+        -4.17
+      ],
+      "layers": [
+        {
+          "asset": "window",
+          "size": [
+            3.2,
+            2.25
+          ]
+        }
+      ]
+    },
+    {
+      "id": "window-right-art",
+      "position": [
+        3.5,
+        1.03,
+        -4.17
+      ],
+      "layers": [
+        {
+          "asset": "window",
+          "size": [
+            3.2,
+            2.25
+          ]
+        }
+      ]
+    },
+    {
+      "id": "window-flowers-left",
+      "position": [
+        -3.5,
+        1.0,
+        -4.05
+      ],
+      "layers": [
+        {
+          "asset": "flowers",
+          "size": [
+            0.75,
+            0.8
+          ]
+        }
+      ],
+      "idle": {
+        "degrees": 0.28,
+        "period": 7.36,
+        "phase": 1.8
+      }
+    },
+    {
+      "id": "window-flowers-right",
+      "position": [
+        3.5,
+        1.0,
+        -4.05
+      ],
+      "layers": [
+        {
+          "asset": "plant",
+          "size": [
+            0.8,
+            0.8
+          ]
+        }
+      ],
+      "idle": {
+        "degrees": 0.28,
+        "period": 7.79,
+        "phase": 2.7
+      }
+    },
+    {
+      "id": "harbor-mountains",
+      "position": [
+        0,
+        -7,
+        -17
+      ],
+      "layers": [
+        {
+          "asset": "mountains",
+          "size": [
+            24,
+            4
+          ],
+          "shaded": false
+        }
+      ]
+    },
+    {
+      "id": "harbor-town",
+      "position": [
+        0,
+        -3.6,
+        -11
+      ],
+      "layers": [
+        {
+          "asset": "town",
+          "size": [
+            22,
+            3.6
+          ],
+          "shaded": false
+        }
+      ]
+    },
+    {
+      "id": "harbor-quay",
+      "position": [
+        0,
+        -2.5,
+        -8
+      ],
+      "layers": [
+        {
+          "asset": "quay",
+          "size": [
+            20,
+            2.8
+          ],
+          "shaded": false
+        }
+      ]
+    },
+    {
+      "id": "calendar-art",
+      "position": [
+        1.5,
+        2.3,
+        -4.1
+      ],
+      "layers": [
+        {
+          "asset": "clock",
+          "size": [
+            0.6,
+            0.6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "foreground-left-art",
+      "position": [
+        -5.6,
+        0,
+        4.6
+      ],
+      "layers": [
+        {
+          "asset": "flowers",
+          "size": [
+            1.9,
+            2.2
+          ]
+        }
+      ],
+      "idle": {
+        "degrees": 0.35,
+        "period": 7.3,
+        "phase": 1
+      }
+    },
+    {
+      "id": "foreground-right-art",
+      "position": [
+        5.7,
+        0,
+        4.65
+      ],
+      "layers": [
+        {
+          "asset": "plant",
+          "size": [
+            2.1,
+            2.3
+          ]
+        }
+      ],
+      "idle": {
+        "degrees": 0.35,
+        "period": 7.699999999999999,
+        "phase": 3
+      }
+    },
+    {
+      "id": "title-board",
+      "position": [
+        0,
+        1.4,
+        -4.15
+      ],
+      "layers": [
+        {
+          "asset": "board",
+          "size": [
+            2.8,
+            1.35
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cafe-table-0-art",
+      "position": [
+        -3.1,
+        0,
+        -0.9
+      ],
+      "layers": [
+        {
+          "asset": "cafe-table",
+          "size": [
+            2.2,
+            1.6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cafe-chair-0",
+      "position": [
+        -2.2,
+        0,
+        -1.15
+      ],
+      "layers": [
+        {
+          "asset": "chair",
+          "size": [
+            0.7,
+            1.2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cafe-table-1-art",
+      "position": [
+        2.5,
+        0,
+        -0.9
+      ],
+      "layers": [
+        {
+          "asset": "cafe-table",
+          "size": [
+            2.2,
+            1.6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cafe-chair-1",
+      "position": [
+        3.4,
+        0,
+        -1.15
+      ],
+      "layers": [
+        {
+          "asset": "chair",
+          "size": [
+            0.7,
+            1.2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "service-counter-art",
+      "position": [
+        0,
+        0,
+        -3.2
+      ],
+      "layers": [
+        {
+          "asset": "counter",
+          "size": [
+            3.4,
+            1.45
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cafe-sofa-art",
+      "position": [
+        -3.8,
+        0,
+        2.5
+      ],
+      "layers": [
+        {
+          "asset": "sofa",
+          "size": [
+            3.0,
+            1.6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hanging-light",
+      "position": [
+        1.25,
+        2.7,
+        -2.5
+      ],
+      "layers": [
+        {
+          "asset": "pendant",
+          "size": [
+            0.7,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cafe-flowers-art",
+      "position": [
+        4.6,
+        0,
+        2.7
+      ],
+      "layers": [
+        {
+          "asset": "flowers",
+          "size": [
+            1.1,
+            1.5
+          ]
+        }
+      ],
+      "idle": {
+        "degrees": 0.35,
+        "period": 7.5,
+        "phase": 2
+      }
+    }
+  ],
+  "labels": [
+    {
+      "id": "location-sign",
+      "text_key": "content.gameplay.presentation.ca_phe_doi_thoai",
+      "position": [
+        0,
+        2.05,
+        -4.05
+      ],
+      "font_size": 38,
+      "pixel_size": 0.0045,
+      "color": "#153d47"
+    }
+  ]
+}

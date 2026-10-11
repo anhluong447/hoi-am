@@ -20,6 +20,9 @@ def main():
     run([args.godot, '--path', str(ROOT), '--script', 'res://tests/native_hd2d.gd',
          '--fixed-fps', '60', '--quit-after', '1800'], log_path=logs / 'native-hd2d.log',
         expected=r'Native HD-2D: \d+ checks; 0 failures\b')
+    run([args.godot, '--path', str(ROOT), '--script', 'res://tests/native_hd2d_locations.gd',
+         '--fixed-fps', '60', '--quit-after', '5000'], log_path=logs / 'native-hd2d-locations.log',
+        expected=r'Native HD-2D locations: \d+ checks; 0 failures\b')
     if args.capture:
         run([args.godot, '--path', str(ROOT), '--script', 'res://tests/capture_review.gd', '--quit-after', '900'],
             log_path=logs / 'native-review-current.log', expected=r'Native review: 19 captures saved')
