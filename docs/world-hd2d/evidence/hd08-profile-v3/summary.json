@@ -1,0 +1,827 @@
+{
+  "adapter": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+  "api": "d3d12",
+  "cap_fps": 120,
+  "driver": "See machine.json (Windows adapter driver)",
+  "engine": {
+    "build": "steam",
+    "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+    "hex": 263938,
+    "major": 4,
+    "minor": 7,
+    "patch": 2,
+    "status": "stable",
+    "string": "4.7.2-stable (steam)",
+    "timestamp": 0
+  },
+  "fixed_fps": false,
+  "note": "Editor remains open. Root GPU counter excludes dialogue child viewport; wall frame time includes all passes.",
+  "renderer": "forward_plus",
+  "repetitions": 3,
+  "sample_seconds": 30,
+  "vsync": "disabled",
+  "warmup_seconds": 10,
+  "machine": "Windows-11-10.0.26200-SP0",
+  "raw_sha256": "bbc19639241a3b6d0c0b9c115dd6b73c0167669ff37798ae60f51eaedb5be450",
+  "raw_gzip_sha256": "7152f1e64fe2f9648b127fad16fa73ad1cdcddec9884b3c6f4fedeeb8c737fe9",
+  "runs": [
+    {
+      "elapsed_seconds": 30.007341,
+      "focused": true,
+      "mode": "static-high",
+      "repetition": 1,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.365,
+      "p95_ms": 8.658,
+      "p99_ms": 8.723,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.70799994468689,
+      "median_draw_calls": 107.0,
+      "max_video_bytes": 243888128.0
+    },
+    {
+      "elapsed_seconds": 30.006882,
+      "focused": true,
+      "mode": "static-high",
+      "repetition": 2,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.316,
+      "p95_ms": 8.654,
+      "p99_ms": 8.712,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.7039999961853,
+      "median_draw_calls": 107.0,
+      "max_video_bytes": 243888128.0
+    },
+    {
+      "elapsed_seconds": 30.006847,
+      "focused": true,
+      "mode": "static-high",
+      "repetition": 3,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.317,
+      "p95_ms": 8.659,
+      "p99_ms": 8.723,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.70799994468689,
+      "median_draw_calls": 107.0,
+      "max_video_bytes": 243888128.0
+    },
+    {
+      "elapsed_seconds": 30.007352,
+      "focused": true,
+      "mode": "static-low",
+      "repetition": 1,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.438,
+      "p95_ms": 8.653,
+      "p99_ms": 8.729,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.28099989891052,
+      "median_draw_calls": 73.0,
+      "max_video_bytes": 243888128.0
+    },
+    {
+      "elapsed_seconds": 30.00699,
+      "focused": true,
+      "mode": "static-low",
+      "repetition": 2,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.345,
+      "p95_ms": 8.648,
+      "p99_ms": 8.709,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.27699995040894,
+      "median_draw_calls": 73.0,
+      "max_video_bytes": 243888128.0
+    },
+    {
+      "elapsed_seconds": 30.006913,
+      "focused": true,
+      "mode": "static-low",
+      "repetition": 3,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.309,
+      "p95_ms": 8.657,
+      "p99_ms": 8.713,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.27800011634827,
+      "median_draw_calls": 73.0,
+      "max_video_bytes": 243888128.0
+    },
+    {
+      "elapsed_seconds": 30.006783,
+      "focused": true,
+      "mode": "walk-high",
+      "repetition": 1,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.294,
+      "p95_ms": 8.684,
+      "p99_ms": 8.746,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.70700001716614,
+      "median_draw_calls": 107.0,
+      "max_video_bytes": 243888128.0
+    },
+    {
+      "elapsed_seconds": 30.007435,
+      "focused": true,
+      "mode": "walk-high",
+      "repetition": 2,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.314,
+      "p95_ms": 8.684,
+      "p99_ms": 8.762,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.71000003814697,
+      "median_draw_calls": 107.0,
+      "max_video_bytes": 243888128.0
+    },
+    {
+      "elapsed_seconds": 30.006939,
+      "focused": true,
+      "mode": "walk-high",
+      "repetition": 3,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.231,
+      "p95_ms": 8.685,
+      "p99_ms": 8.758,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.71199989318848,
+      "median_draw_calls": 107.0,
+      "max_video_bytes": 243888128.0
+    },
+    {
+      "elapsed_seconds": 30.006787,
+      "focused": true,
+      "mode": "walk-low",
+      "repetition": 1,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.264,
+      "p95_ms": 8.688,
+      "p99_ms": 8.754,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.27800011634827,
+      "median_draw_calls": 73.0,
+      "max_video_bytes": 243888128.0
+    },
+    {
+      "elapsed_seconds": 30.006905,
+      "focused": true,
+      "mode": "walk-low",
+      "repetition": 2,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.303,
+      "p95_ms": 8.69,
+      "p99_ms": 8.76,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.27900004386902,
+      "median_draw_calls": 73.0,
+      "max_video_bytes": 243888128.0
+    },
+    {
+      "elapsed_seconds": 30.006823,
+      "focused": true,
+      "mode": "walk-low",
+      "repetition": 3,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.262,
+      "p95_ms": 8.684,
+      "p99_ms": 8.747,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.28099989891052,
+      "median_draw_calls": 73.0,
+      "max_video_bytes": 243888128.0
+    },
+    {
+      "elapsed_seconds": 30.007384,
+      "focused": true,
+      "mode": "dialogue-high",
+      "repetition": 1,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.362,
+      "p95_ms": 8.645,
+      "p99_ms": 8.717,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.7279999256134,
+      "median_draw_calls": 101.0,
+      "max_video_bytes": 264273920.0
+    },
+    {
+      "elapsed_seconds": 30.007453,
+      "focused": true,
+      "mode": "dialogue-high",
+      "repetition": 2,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.343,
+      "p95_ms": 8.643,
+      "p99_ms": 8.712,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.73099994659424,
+      "median_draw_calls": 101.0,
+      "max_video_bytes": 264273920.0
+    },
+    {
+      "elapsed_seconds": 30.00686,
+      "focused": true,
+      "mode": "dialogue-high",
+      "repetition": 3,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.33,
+      "p95_ms": 8.651,
+      "p99_ms": 8.712,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.70499992370605,
+      "median_draw_calls": 101.0,
+      "max_video_bytes": 264273920.0
+    },
+    {
+      "elapsed_seconds": 30.006844,
+      "focused": true,
+      "mode": "dialogue-low",
+      "repetition": 1,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.298,
+      "p95_ms": 8.633,
+      "p99_ms": 8.692,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.42899990081787,
+      "median_draw_calls": 67.0,
+      "max_video_bytes": 264273920.0
+    },
+    {
+      "elapsed_seconds": 30.007381,
+      "focused": true,
+      "mode": "dialogue-low",
+      "repetition": 2,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.319,
+      "p95_ms": 8.633,
+      "p99_ms": 8.685,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.42799997329712,
+      "median_draw_calls": 67.0,
+      "max_video_bytes": 264273920.0
+    },
+    {
+      "elapsed_seconds": 30.006894,
+      "focused": true,
+      "mode": "dialogue-low",
+      "repetition": 3,
+      "resolution": [
+        1280,
+        720
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.319,
+      "p95_ms": 8.635,
+      "p99_ms": 8.702,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.42700004577637,
+      "median_draw_calls": 67.0,
+      "max_video_bytes": 264273920.0
+    },
+    {
+      "elapsed_seconds": 30.007423,
+      "focused": true,
+      "mode": "static-high",
+      "repetition": 1,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.31,
+      "p95_ms": 8.682,
+      "p99_ms": 8.757,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.93600010871887,
+      "median_draw_calls": 107.0,
+      "max_video_bytes": 308899840.0
+    },
+    {
+      "elapsed_seconds": 30.006867,
+      "focused": true,
+      "mode": "static-high",
+      "repetition": 2,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.265,
+      "p95_ms": 8.696,
+      "p99_ms": 8.798,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.92300009727478,
+      "median_draw_calls": 107.0,
+      "max_video_bytes": 308899840.0
+    },
+    {
+      "elapsed_seconds": 30.006845,
+      "focused": true,
+      "mode": "static-high",
+      "repetition": 3,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.302,
+      "p95_ms": 8.684,
+      "p99_ms": 8.756,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.92199993133545,
+      "median_draw_calls": 107.0,
+      "max_video_bytes": 308899840.0
+    },
+    {
+      "elapsed_seconds": 30.006786,
+      "focused": true,
+      "mode": "static-low",
+      "repetition": 1,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.197,
+      "p95_ms": 8.694,
+      "p99_ms": 8.786,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.64199995994568,
+      "median_draw_calls": 73.0,
+      "max_video_bytes": 308899840.0
+    },
+    {
+      "elapsed_seconds": 30.00689,
+      "focused": true,
+      "mode": "static-low",
+      "repetition": 2,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.267,
+      "p95_ms": 8.695,
+      "p99_ms": 8.784,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.6010000705719,
+      "median_draw_calls": 73.0,
+      "max_video_bytes": 308899840.0
+    },
+    {
+      "elapsed_seconds": 30.006848,
+      "focused": true,
+      "mode": "static-low",
+      "repetition": 3,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.247,
+      "p95_ms": 8.7,
+      "p99_ms": 8.775,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.60400009155273,
+      "median_draw_calls": 73.0,
+      "max_video_bytes": 308899840.0
+    },
+    {
+      "elapsed_seconds": 30.007442,
+      "focused": true,
+      "mode": "walk-high",
+      "repetition": 1,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.414,
+      "p95_ms": 8.715,
+      "p99_ms": 8.808,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.92300009727478,
+      "median_draw_calls": 107.0,
+      "max_video_bytes": 308899840.0
+    },
+    {
+      "elapsed_seconds": 30.006923,
+      "focused": true,
+      "mode": "walk-high",
+      "repetition": 2,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.277,
+      "p95_ms": 8.726,
+      "p99_ms": 8.815,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.9210000038147,
+      "median_draw_calls": 107.0,
+      "max_video_bytes": 308899840.0
+    },
+    {
+      "elapsed_seconds": 30.006949,
+      "focused": true,
+      "mode": "walk-high",
+      "repetition": 3,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.297,
+      "p95_ms": 8.716,
+      "p99_ms": 8.799,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.92799997329712,
+      "median_draw_calls": 107.0,
+      "max_video_bytes": 308899840.0
+    },
+    {
+      "elapsed_seconds": 30.006816,
+      "focused": true,
+      "mode": "walk-low",
+      "repetition": 1,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.309,
+      "p95_ms": 8.722,
+      "p99_ms": 8.802,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.60400009155273,
+      "median_draw_calls": 73.0,
+      "max_video_bytes": 308899840.0
+    },
+    {
+      "elapsed_seconds": 30.007399,
+      "focused": true,
+      "mode": "walk-low",
+      "repetition": 2,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.401,
+      "p95_ms": 8.731,
+      "p99_ms": 8.818,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.59999990463257,
+      "median_draw_calls": 73.0,
+      "max_video_bytes": 308899840.0
+    },
+    {
+      "elapsed_seconds": 30.006923,
+      "focused": true,
+      "mode": "walk-low",
+      "repetition": 3,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.256,
+      "p95_ms": 8.718,
+      "p99_ms": 8.791,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.60400009155273,
+      "median_draw_calls": 73.0,
+      "max_video_bytes": 308899840.0
+    },
+    {
+      "elapsed_seconds": 30.006904,
+      "focused": true,
+      "mode": "dialogue-high",
+      "repetition": 1,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.328,
+      "p95_ms": 8.674,
+      "p99_ms": 8.765,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.95799994468689,
+      "median_draw_calls": 101.0,
+      "max_video_bytes": 324829184.0
+    },
+    {
+      "elapsed_seconds": 30.007372,
+      "focused": true,
+      "mode": "dialogue-high",
+      "repetition": 2,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.315,
+      "p95_ms": 8.695,
+      "p99_ms": 8.812,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.94099998474121,
+      "median_draw_calls": 101.0,
+      "max_video_bytes": 324829184.0
+    },
+    {
+      "elapsed_seconds": 30.00737,
+      "focused": true,
+      "mode": "dialogue-high",
+      "repetition": 3,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.358,
+      "p95_ms": 8.696,
+      "p99_ms": 8.769,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.95300006866455,
+      "median_draw_calls": 101.0,
+      "max_video_bytes": 324829184.0
+    },
+    {
+      "elapsed_seconds": 30.007052,
+      "focused": true,
+      "mode": "dialogue-low",
+      "repetition": 1,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.317,
+      "p95_ms": 8.682,
+      "p99_ms": 8.77,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.67600011825562,
+      "median_draw_calls": 67.0,
+      "max_video_bytes": 324829184.0
+    },
+    {
+      "elapsed_seconds": 30.007475,
+      "focused": true,
+      "mode": "dialogue-low",
+      "repetition": 2,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.343,
+      "p95_ms": 8.727,
+      "p99_ms": 8.849,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.67600011825562,
+      "median_draw_calls": 67.0,
+      "max_video_bytes": 324829184.0
+    },
+    {
+      "elapsed_seconds": 30.006892,
+      "focused": true,
+      "mode": "dialogue-low",
+      "repetition": 3,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.344,
+      "p95_ms": 8.706,
+      "p99_ms": 8.778,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.67700004577637,
+      "median_draw_calls": 67.0,
+      "max_video_bytes": 324829184.0
+    },
+    {
+      "elapsed_seconds": 30.007448,
+      "focused": true,
+      "mode": "hidden",
+      "repetition": 1,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.363,
+      "p95_ms": 8.698,
+      "p99_ms": 8.768,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.61500000953674,
+      "median_draw_calls": 0.0,
+      "max_video_bytes": 312307712.0
+    },
+    {
+      "elapsed_seconds": 30.007443,
+      "focused": true,
+      "mode": "hidden",
+      "repetition": 2,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.393,
+      "p95_ms": 8.685,
+      "p99_ms": 8.768,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.6159999370575,
+      "median_draw_calls": 0.0,
+      "max_video_bytes": 312307712.0
+    },
+    {
+      "elapsed_seconds": 30.006935,
+      "focused": true,
+      "mode": "hidden",
+      "repetition": 3,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.286,
+      "p95_ms": 8.693,
+      "p99_ms": 8.776,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.6159999370575,
+      "median_draw_calls": 0.0,
+      "max_video_bytes": 312307712.0
+    },
+    {
+      "elapsed_seconds": 30.007417,
+      "focused": true,
+      "mode": "effects-off",
+      "repetition": 1,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.417,
+      "p95_ms": 8.686,
+      "p99_ms": 8.756,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.64100003242493,
+      "median_draw_calls": 73.0,
+      "max_video_bytes": 313880576.0
+    },
+    {
+      "elapsed_seconds": 30.007442,
+      "focused": true,
+      "mode": "effects-off",
+      "repetition": 2,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.314,
+      "p95_ms": 8.718,
+      "p99_ms": 8.804,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.60500001907349,
+      "median_draw_calls": 73.0,
+      "max_video_bytes": 313880576.0
+    },
+    {
+      "elapsed_seconds": 30.006856,
+      "focused": true,
+      "mode": "effects-off",
+      "repetition": 3,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "sample_count": 3601,
+      "median_ms": 8.24,
+      "p95_ms": 8.701,
+      "p99_ms": 8.768,
+      "over_33ms": 0,
+      "over_50ms": 0,
+      "median_gpu_ms": 2.6029999256134,
+      "median_draw_calls": 73.0,
+      "max_video_bytes": 313880576.0
+    }
+  ]
+}

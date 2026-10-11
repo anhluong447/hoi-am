@@ -76,8 +76,16 @@
       "notes": "Bounded local camera follow, independently phased foliage, reduced-motion/quality interoperability; UI unchanged"
     },
     "HD08": {
-      "status": "pending",
-      "evidence": []
+      "status": "complete",
+      "checks": "700 headless; 103 native; isolated debug/release clean-folder exports passed",
+      "evidence": [
+        "docs/world-hd2d/evidence/hd08-profile-v3",
+        "docs/world-hd2d/evidence/hd08-build-v1",
+        "docs/world-hd2d/hd08-review.md",
+        "docs/world-hd2d/authoring.md"
+      ],
+      "performance": "42 runs, 151242 real-clock samples; max p95 8.731ms; 1080p High target met in this newsroom/device session; not other-scene or release FPS certification",
+      "user_visual_acceptance": "pending"
     },
     "HD09": {
       "status": "pending",

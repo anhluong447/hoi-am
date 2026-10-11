@@ -1,0 +1,70 @@
+{
+  "base_commit": "349bee6a62c875b629778795077c8e72739704db",
+  "overrides": {
+    "export_presets.cfg": "cf0d8f2f4264245ee6216ceb17ed4b0341f0ba6579029d286c70e85b2e89df64",
+    "src/bootstrap/release_check.gd": "45dd2de7ee0c4ad144374038347128f22beb4fd529c873e8339283ba6a231e0c"
+  },
+  "note": "Tracked runtime snapshot plus HD08 packaging checks. Unselected HD09 draft art/rooms are excluded from this review.",
+  "builds": {
+    "debug/hoi-am.console.exe": {
+      "bytes": 188928,
+      "sha256": "5514c7645ee897a01f540d3cf22ede5badf92394521a08bfab66a54d7369e6e6"
+    },
+    "debug/hoi-am.exe": {
+      "bytes": 103176704,
+      "sha256": "51498b72b3a237f882ebd7d1787f06a4bc1eaf0572daab93837adcfd3cfdc107"
+    },
+    "debug/hoi-am.pck": {
+      "bytes": 11373300,
+      "sha256": "dadda478c6ef4aa7590dd72af8bd07d6e19e4d865ff5031f8fc7d45ccc4c1b67"
+    },
+    "release/hoi-am.exe": {
+      "bytes": 109268480,
+      "sha256": "d34d36f3be1a6c49c56525ae86469b92e4f417ddf0b43cf00dd80c385c4b0562"
+    },
+    "release/hoi-am.pck": {
+      "bytes": 11373300,
+      "sha256": "8e8badeca11ef186d87f221d00cc1845c22132b9aed17ce8ea84cbb76affb896"
+    },
+    "debug/licenses/cormorantgaramond-OFL.txt": {
+      "bytes": 4387,
+      "sha256": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956"
+    },
+    "debug/licenses/dancingscript-OFL.txt": {
+      "bytes": 4443,
+      "sha256": "6f090277c00af96651ce6dbcc38ff1591047a3bffef486e80b6a32e8276a8201"
+    },
+    "debug/licenses/godot-COPYRIGHT.txt": {
+      "bytes": 100108,
+      "sha256": "cb1980c88089573bcacd7221d777c689bb8bbd778799f24c27fca0fe5f774d6d"
+    },
+    "debug/licenses/godot-LICENSE.txt": {
+      "bytes": 1149,
+      "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80"
+    },
+    "debug/licenses/source_serif_4-OFL.txt": {
+      "bytes": 4400,
+      "sha256": "5f94c3fd3a23131a417ab5a0c8452de57e70c3cfb9f604d88241f7065ebf9fd9"
+    },
+    "release/licenses/cormorantgaramond-OFL.txt": {
+      "bytes": 4387,
+      "sha256": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956"
+    },
+    "release/licenses/dancingscript-OFL.txt": {
+      "bytes": 4443,
+      "sha256": "6f090277c00af96651ce6dbcc38ff1591047a3bffef486e80b6a32e8276a8201"
+    },
+    "release/licenses/godot-COPYRIGHT.txt": {
+      "bytes": 100108,
+      "sha256": "cb1980c88089573bcacd7221d777c689bb8bbd778799f24c27fca0fe5f774d6d"
+    },
+    "release/licenses/godot-LICENSE.txt": {
+      "bytes": 1149,
+      "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80"
+    },
+    "release/licenses/source_serif_4-OFL.txt": {
+      "bytes": 4400,
+      "sha256": "5f94c3fd3a23131a417ab5a0c8452de57e70c3cfb9f604d88241f7065ebf9fd9"
+    }
+  }
+}

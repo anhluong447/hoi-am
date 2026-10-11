@@ -1,0 +1,27 @@
+{
+    "gpu":  [
+                {
+                    "Name":  "SuperDisplay Virtual Adapter",
+                    "DriverVersion":  "3.47.17.59"
+                },
+                {
+                    "Name":  "Easy\u0026Light Display HUB Virtual Display",
+                    "DriverVersion":  "4.6.5.0"
+                },
+                {
+                    "Name":  "Intel(R) UHD Graphics",
+                    "DriverVersion":  "30.0.101.1273"
+                },
+                {
+                    "Name":  "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+                    "DriverVersion":  "32.0.16.1714"
+                }
+            ],
+    "cpu":  {
+                "Name":  "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz"
+            },
+    "os":  {
+               "Caption":  "Microsoft Windows 11 Home Single Language",
+               "Version":  "10.0.26200"
+           }
+}

@@ -1,0 +1,23 @@
+{
+  "world_runtime_commit": "349bee6a62c875b629778795077c8e72739704db",
+  "room_id": "newsroom_hd2d_v1",
+  "camera_preset": "orthographic",
+  "camera_position": [
+    0,
+    11,
+    16
+  ],
+  "camera_target": [
+    0,
+    0.8,
+    0
+  ],
+  "camera_size": 8,
+  "motion": "bounded follow; full vs reduced in effects-off",
+  "note": "Compiled world runtime and selected pack remained unchanged throughout this run. Baseline source hashes reconstructed from tracked HD07 commit; measurement script is the exact script executed.",
+  "tracked_source_sha256": {
+    "content/world/newsroom_hd2d_v1.json": "a888901e769e2ac5e1e3ba17da6428c807b8ece497d78ddb13f4dc6187ff6f99",
+    "content/world/visuals/newsroom_v1.json": "6b18354bd06b731de1cb89428ff78cb7e8265cc50087cb3b2be0512aef527f2b",
+    "content/world/art_manifest_v2.json": "053f0586b0d347777118b91ba2d79f98297f5abb1412aa472e1f73142ead32b4"
+  }
+}

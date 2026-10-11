@@ -17,6 +17,12 @@ func run() -> void:
 	await get_tree().physics_frame
 	await get_tree().physics_frame
 	var initial: Dictionary = play.setup.session.snapshot()
+	_expect(play.room.has_node("Visuals"), "Packaged selected HD-2D newsroom art")
+	_expect(play.room.get_node("Visuals/club-sign").text == play.setup.text.text("world.newsroom.sign"), "Packaged live world sign")
+	for version: String in ["v1", "v2"]:
+		_expect(not FileAccess.file_exists("res://assets/world/coastal/" + version + "/source/prompts.json"), "Art source prompts excluded from package")
+		for stem: String in ["props", "surfaces", "harbor", "companion", "outdoor"]:
+			_expect(not FileAccess.file_exists("res://assets/world/coastal/" + version + "/source/" + stem + ".png"), "Raw art masters excluded from package")
 	play.interact("van")
 	play._advance("school")
 	play._advance()
