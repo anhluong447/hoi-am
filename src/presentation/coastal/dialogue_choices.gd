@@ -70,6 +70,7 @@ func configure(model: Dictionary, layout: Dictionary, resources: Dictionary, ani
 		labels.append(copy)
 		_specs.append(copy_spec)
 		var button := WIDGETS.target(self, spec.bounds, choice.text)
+		button.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
 		button.tooltip_text = choice.text
 		button.pressed.connect(func() -> void: requested.emit(choice.id))
 		button.focus_entered.connect(func() -> void: select(index))

@@ -1,0 +1,184 @@
+{
+  "base_commit": "d55255c54dea94f31c782c836085edbbb360db56",
+  "changes": {
+    "choice_focus_border": "StyleBoxEmpty override only for dialogue choice targets",
+    "wave_amplitude": {
+      "before": 3,
+      "after": 5
+    },
+    "wave_period": {
+      "before": 5.6,
+      "after": 3.8
+    },
+    "secondary_period": {
+      "before": 7.3,
+      "after": 5.1
+    }
+  },
+  "verification": {
+    "headless_checks": 689,
+    "native_interaction_checks": 64,
+    "native_motion_checks": 19,
+    "failures": 0,
+    "capture_checks": 19,
+    "capture_png_count": 19,
+    "visual_inspection": [
+      "07-hover-draft.png",
+      "08-keyboard-focus.png"
+    ],
+    "performance_profile_rerun": false,
+    "windows_export_rerun": false
+  },
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1280,
+        "height": 720,
+        "avg_frame_rate": "60/1",
+        "nb_frames": "499"
+      }
+    ],
+    "format": {
+      "duration": "8.316667"
+    }
+  },
+  "files": [
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/captures-v1/01-open-start.png",
+      "bytes": 212933,
+      "sha256": "990e312e2c88375fe9ee4e90a19a002b2d205698d11f687d36eeec384442b5ce"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/captures-v1/02-wave-paper.png",
+      "bytes": 380612,
+      "sha256": "354707908a1ee0c98d67f7f7bec08eeadc653caa4315db0c1a64fc973ec8f4d6"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/captures-v1/03-decorations.png",
+      "bytes": 374323,
+      "sha256": "a4fffd5d0db39f4235dd80084fac7b1d0c99db0cd8c6a7d55b3f068d17bb1f84"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/captures-v1/04-ink-front.png",
+      "bytes": 370952,
+      "sha256": "a8f34bff32f3fd35a0f9fd51a3ad0415b87ba35d8fb64b276a06877db0022445"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/captures-v1/05-typewriter.png",
+      "bytes": 377019,
+      "sha256": "ec0c9a5955163b409312f4fcaafbc8e5c2e59bd53ad6af3b32d2c0146f106f86"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/captures-v1/06-choices.png",
+      "bytes": 438184,
+      "sha256": "209e236c3f5bc8b5a1f3f5c97ab638ffa80b40f5e3ded6cad05593042a549ee2"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/captures-v1/07-hover-draft.png",
+      "bytes": 438102,
+      "sha256": "5dae80dcb30eb2a423dcdad4fcdc496c0ce27019bb748c8922765495472477dc"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/captures-v1/08-keyboard-focus.png",
+      "bytes": 437225,
+      "sha256": "6e58a5ff61734e4bc1a3487c30c7d2de151c74918a7f08d8c752d59421a3d260"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/captures-v1/09-blur-on.png",
+      "bytes": 369981,
+      "sha256": "b22a96b7f1a7738d4da0720b6bd8b6210599c7f99fffc270329c7f246471362e"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/captures-v1/10-blur-off-ab.png",
+      "bytes": 369844,
+      "sha256": "982731cf862d83ebb2a4426197e35b837e9f11aa09377067a0f639f639fbb941"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/captures-v1/11-next-line.png",
+      "bytes": 368978,
+      "sha256": "44447bb7bff6c1c39028ce051ac54fe2bb629a7b17fd900d6ef3d194c3122f72"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/captures-v1/12-idle-a.png",
+      "bytes": 383815,
+      "sha256": "fbe7fdd64e9f26e32a4541994da8e18d98a3d16735bcda3f348c226c6b2c0d62"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/captures-v1/13-idle-b.png",
+      "bytes": 383519,
+      "sha256": "2aca5a7c27b379437df643e348661742e7015ca4cb8ae83b05cc8b126e3df465"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/captures-v1/14-close-content.png",
+      "bytes": 365732,
+      "sha256": "5cd64c273aab3921f91bde210d232b49b5b18a1bc0e5480c224e90fca1558da9"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/captures-v1/15-close-paper.png",
+      "bytes": 356905,
+      "sha256": "ea2562adb9c876cf3f6ef175b3093933baa0427bd95fd88879d1f3eed3b23c35"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/captures-v1/16-closed.png",
+      "bytes": 4334,
+      "sha256": "05499b87861de2c3e573ab989fc8804f0197919ecce96331dd86d49dd3de10d4"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/captures-v1/17-playable-dialogue.png",
+      "bytes": 764826,
+      "sha256": "542b80d91c5f9cefce76afd9863db70f9b66ed88433c4049111a90a1110eb999"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/captures-v1/18-playable-next-line.png",
+      "bytes": 750152,
+      "sha256": "89ccf0321b9c26ad0e683e2955ae0df7c194ee44988fbbda1805141ae4d3b5a9"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/captures-v1/19-reduced-motion.png",
+      "bytes": 745655,
+      "sha256": "cd66df6ebd86bd5670bac4dbbddc75580d7bf698ef0c3b3ace8da1e7ab8068a1"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/dialogue-motion-focus-wave-v1.mp4",
+      "bytes": 1651092,
+      "sha256": "2665766e215400092cdeab98f24b80d375891f04df0b5f77a0aa67c7a5b00225"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/README.md",
+      "bytes": 1622,
+      "sha256": "22d56deb511a84c55fb001b40de239b239cb0cd629c01ee8f50d7f9c359c08da"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/logs/import.log",
+      "bytes": 1171,
+      "sha256": "dbdb010a986a5f9f0e947bf791cb03a06a91d573f0dd64bfd18c3ba720cec39b"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/logs/contracts.log",
+      "bytes": 113,
+      "sha256": "cd88c37a81b3a30d84f9f8d7c54f889047640125e40def13dcaecea04ca37ec5"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/logs/bootstrap.log",
+      "bytes": 70,
+      "sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/logs/native-interaction.log",
+      "bytes": 200,
+      "sha256": "de56768d79aa402f720c283f4c8cd33e40da487aa38c676c87e97b5accbb582c"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/logs/native-dialogue-motion.log",
+      "bytes": 216,
+      "sha256": "d62700445f7a937da801d3fc7e7216e8639e6e3752c3727929672427478af409"
+    },
+    {
+      "path": "docs/reviews/dialogue-motion-focus-wave-2026-10-11/logs/dialogue-motion-focus-wave-v1.log",
+      "bytes": 284,
+      "sha256": "33a56574c0abcd99765606b0185270dd8f5bdaa6c2978c6f4c2f73b11ddbb92d"
+    }
+  ]
+}
