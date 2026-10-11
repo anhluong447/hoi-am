@@ -48,19 +48,20 @@
   },
   "sun": {
     "rotation": [
-      -48,
-      -32,
+      -38,
+      -155,
       0
     ],
     "color": "#ffe4b8",
-    "energy": 1.0,
+    "energy": 1.65,
     "shadow_distance": 40,
-    "normal_bias": 0.6
+    "normal_bias": 0.08
   },
   "ambient": {
-    "color": "#a8c6d4",
-    "energy": 0.9,
-    "background": "#243c49"
+    "color": "#b8d0d7",
+    "energy": 0.6,
+    "background": "#243c49",
+    "exposure": 1.05
   },
   "geometry": [
     {
@@ -619,5 +620,63 @@
   "legacy_room_ids": [
     "newsroom",
     "newsroom_sample"
-  ]
+  ],
+  "local_lights": [
+    {
+      "position": [
+        -1.5,
+        1.8,
+        -2.7
+      ],
+      "color": "#ffd6a4",
+      "energy": 0.25,
+      "range": 3.0
+    }
+  ],
+  "atmosphere": {
+    "harbor": [],
+    "water": {
+      "asset": "sea",
+      "position": [
+        0,
+        -2.6,
+        -9
+      ],
+      "size": [
+        24,
+        14
+      ],
+      "color": "#ffffff",
+      "strength": 0.003,
+      "speed": 0.45
+    },
+    "dust": {
+      "count": 24,
+      "lifetime": 12,
+      "position": [
+        0,
+        1.6,
+        -2.5
+      ],
+      "radius": 0.009,
+      "color": "#ebd4a5",
+      "extents": [
+        4,
+        1,
+        1.6
+      ],
+      "drift": [
+        0.015,
+        0.012,
+        0.008
+      ]
+    },
+    "dof": {
+      "far_distance": 27,
+      "far_transition": 5,
+      "near_distance": 15,
+      "near_transition": 2,
+      "amount": 0.025
+    }
+  }
 }

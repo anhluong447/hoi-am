@@ -12,6 +12,7 @@ static func build(parent: Node3D, config: Dictionary) -> void:
 	settings.ambient_light_color = Color(config.ambient.color)
 	settings.ambient_light_energy = config.ambient.energy
 	settings.tonemap_mode = Environment.TONE_MAPPER_FILMIC
+	settings.tonemap_exposure = config.ambient.get("exposure", 1.0)
 	environment.environment = settings
 	parent.add_child(environment)
 	var sun := DirectionalLight3D.new()
@@ -24,3 +25,26 @@ static func build(parent: Node3D, config: Dictionary) -> void:
 	sun.directional_shadow_max_distance = config.sun.shadow_distance
 	sun.shadow_normal_bias = config.sun.normal_bias
 	parent.add_child(sun)
+	for item: Dictionary in config.get("local_lights", []):
+		var lamp := OmniLight3D.new()
+		lamp.position = Vector3(item.position[0], item.position[1], item.position[2])
+		lamp.light_color = Color(item.color)
+		lamp.light_energy = item.energy
+		lamp.omni_range = item.range
+		lamp.shadow_enabled = false
+		parent.add_child(lamp)
+
+
+static func camera_attributes(camera: Camera3D, config: Dictionary) -> void:
+	if not config.get("atmosphere", {}).has("dof"):
+		return
+	var dof: Dictionary = config.atmosphere.dof
+	var attributes := CameraAttributesPractical.new()
+	attributes.dof_blur_far_enabled = true
+	attributes.dof_blur_far_distance = dof.get("far_distance", dof.get("distance", 27.0))
+	attributes.dof_blur_far_transition = dof.get("far_transition", dof.get("transition", 5.0))
+	attributes.dof_blur_amount = dof.get("amount", 0.1)
+	attributes.dof_blur_near_enabled = dof.has("near_distance")
+	attributes.dof_blur_near_distance = dof.get("near_distance", 0.0)
+	attributes.dof_blur_near_transition = dof.get("near_transition", 2.0)
+	camera.attributes = attributes

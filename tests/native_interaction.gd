@@ -44,12 +44,13 @@ func _run() -> void:
 		press.button_index = MOUSE_BUTTON_LEFT
 		press.pressed = true
 		root.push_input(press)
-		await process_frame
+		# Pair synthetic press/release in one input batch; OS events between frames
+		# must not cancel the fixture's pressed button at large window sizes.
 		press = press.duplicate()
 		press.pressed = false
 		root.push_input(press)
 		await _settle()
-		_suite.expect(choices == ["draft"], "Native pointer resolves same choice at " + str(dimensions))
+		_suite.expect(choices == ["draft"], "Native pointer resolves same choice at " + str(dimensions) + "; received=" + str(choices) + "; point=" + str(point) + "; viewport=" + str(root.get_visible_rect()))
 		_suite.expect(preview.view._buttons[1].has_focus() and preview.view._choice_mark[1].visible, "Native pointer selection preserves rebuilt focus at " + str(dimensions))
 		preview.view._buttons[0].grab_focus()
 		var tab := InputEventKey.new()
@@ -154,7 +155,6 @@ func _playable_checks() -> void:
 		press.button_index = MOUSE_BUTTON_LEFT
 		press.pressed = true
 		root.push_input(press)
-		await process_frame
 		press = press.duplicate()
 		press.pressed = false
 		root.push_input(press)
@@ -197,7 +197,6 @@ func _click(button: Button) -> void:
 	event.button_index = MOUSE_BUTTON_LEFT
 	event.pressed = true
 	root.push_input(event)
-	await process_frame
 	event = event.duplicate()
 	event.pressed = false
 	root.push_input(event)

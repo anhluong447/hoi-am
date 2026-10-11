@@ -58,8 +58,13 @@
       "notes": "Selected pack mounted in playable/preview; legacy valid position and blocked position fallback tested; save schema unchanged"
     },
     "HD06": {
-      "status": "pending",
-      "evidence": []
+      "status": "complete",
+      "checks": "699 headless; 95 native; two additional 64-check pointer confirmation runs passed",
+      "evidence": [
+        "docs/world-hd2d/evidence/hd06-quality-v1",
+        "docs/world-hd2d/hd06-review.md"
+      ],
+      "notes": "Sun direction corrected, painted water, calibrated near/far DOF, quality A/B; input fixture race fixed without UI behavior changes"
     },
     "HD07": {
       "status": "pending",

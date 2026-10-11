@@ -1,22 +1,25 @@
 extends Node3D
 ## Authored harbor layers and restrained window dust; no gameplay dependencies.
 
+const PAINT = preload("res://src/world/rooms/newsroom/painted_water.gdshader")
 const SURFACE = preload("res://src/world/rooms/newsroom/coastal_water.gdshader")
 const GEOMETRY = preload("res://src/world/rooms/newsroom/room_geometry.gd")
 
 var _dust: GPUParticles3D
 var _water: MeshInstance3D
 var _config: Dictionary
+var _resources: Dictionary
 
 
-func configure(config: Dictionary) -> void:
+func configure(config: Dictionary, resources: Dictionary = {}) -> void:
 	_config = config.duplicate(true)
+	_resources = resources
 
 
 func _ready() -> void:
 	if _config.is_empty():
 		return
-	for item: Dictionary in _config.harbor:
+	for item: Dictionary in _config.get("harbor", []):
 		var instance := MeshInstance3D.new()
 		var mesh := BoxMesh.new()
 		mesh.size = GEOMETRY.vector(item.size)
@@ -33,7 +36,12 @@ func _ready() -> void:
 	_water.mesh = plane
 	_water.position = GEOMETRY.vector(_config.water.position)
 	var water_material := ShaderMaterial.new()
-	water_material.shader = SURFACE
+	water_material.shader = PAINT if _config.water.has("asset") else SURFACE
+	if _config.water.has("asset"):
+		var asset: Dictionary = _resources.assets[_config.water.asset]
+		var texture: Texture2D = _resources.textures[asset.atlas]
+		water_material.set_shader_parameter("atlas", texture)
+		water_material.set_shader_parameter("atlas_region", Vector4(asset.region[0]/float(texture.get_width()), asset.region[1]/float(texture.get_height()), asset.region[2]/float(texture.get_width()), asset.region[3]/float(texture.get_height())))
 	water_material.set_shader_parameter("tint", Color(_config.water.color))
 	water_material.set_shader_parameter("strength", _config.water.strength)
 	water_material.set_shader_parameter("speed", _config.water.speed)

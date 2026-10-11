@@ -79,15 +79,9 @@ func _ready() -> void:
 		npc.set_meta("body", body)
 	_build_portal()
 	_atmosphere = ATMOSPHERE.new()
-	_atmosphere.configure(_config.get("atmosphere", {}))
+	_atmosphere.configure(_config.get("atmosphere", {}), _textures.get("world", {}))
 	add_child(_atmosphere)
-	if _config.get("atmosphere", {}).has("dof"):
-		var dof: Dictionary = _config.atmosphere.dof
-		var attributes := CameraAttributesPractical.new()
-		attributes.dof_blur_far_enabled = true
-		attributes.dof_blur_far_distance = dof.distance
-		attributes.dof_blur_far_transition = dof.transition
-		camera.attributes = attributes
+	LIGHTING.camera_attributes(camera, _config)
 
 
 func _physics_process(_delta: float) -> void:
@@ -182,6 +176,7 @@ func set_quality(id: String) -> void:
 	get_node("WindowSun").shadow_enabled = id != "low"
 	if camera.attributes:
 		camera.attributes.dof_blur_far_enabled = id != "low"
+		camera.attributes.dof_blur_near_enabled = id != "low" and _config.atmosphere.dof.has("near_distance")
 
 
 func apply_npc_presentation(model: Array) -> void:
