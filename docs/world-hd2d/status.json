@@ -49,8 +49,13 @@
       "room": "34 prop groups, 7 surfaces, catalog world signs; selected pack not yet mounted in playable"
     },
     "HD05": {
-      "status": "pending",
-      "evidence": []
+      "status": "complete",
+      "checks": "699 headless; 95 native checks passed",
+      "evidence": [
+        "docs/world-hd2d/evidence/hd05-playable-v1",
+        "docs/world-hd2d/hd05-review.md"
+      ],
+      "notes": "Selected pack mounted in playable/preview; legacy valid position and blocked position fallback tested; save schema unchanged"
     },
     "HD06": {
       "status": "pending",

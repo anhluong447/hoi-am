@@ -154,6 +154,10 @@ func target_label_key(id: String) -> String:
 	return ""
 
 
+func accepts_saved_room(id: String) -> bool:
+	return id == _config.id or id in _config.get("legacy_room_ids", [])
+
+
 func anchor_for(id: String) -> Dictionary:
 	for target: Area3D in _targets:
 		if target.target_id == id:

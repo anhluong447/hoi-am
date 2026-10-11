@@ -6,7 +6,7 @@ const STARTUP = preload("res://src/bootstrap/project_startup.gd")
 const ROOM = preload("res://src/world/rooms/newsroom/newsroom.tscn")
 const RESOURCES = preload("res://src/bootstrap/world_resources.gd")
 
-@export_file("*.json") var room_path := "res://content/world/newsroom_hd2d_calibration.json"
+@export_file("*.json") var room_path := "res://content/world/newsroom_hd2d_v1.json"
 @export_enum("orthographic", "perspective") var camera_preset := "orthographic"
 var room: Node3D
 

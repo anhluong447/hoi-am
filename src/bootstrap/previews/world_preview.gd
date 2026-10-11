@@ -5,6 +5,8 @@ signal back_requested
 const STARTUP = preload("res://src/bootstrap/project_startup.gd")
 const ROOM = preload("res://src/world/rooms/newsroom/newsroom.tscn")
 const HUD = preload("res://src/presentation/coastal/hud_view.tscn")
+const RESOURCES = preload("res://src/bootstrap/world_resources.gd")
+const LOADER = preload("res://src/infrastructure/content/json_content_loader.gd")
 
 var room: Node3D
 var _hud: Control
@@ -21,9 +23,11 @@ func _ready() -> void:
 		get_tree().quit(1)
 		return
 	_text = setup.text
-	_config = setup.data.room
+	_config = LOADER.read_dictionary(setup.data.locations.locations.club.room_path).data
 	room = ROOM.instantiate()
-	room.configure(_config, setup.data.actors.actors, STARTUP.actor_textures(setup.data))
+	var prepared := RESOURCES.prepare(_config, STARTUP.actor_textures(setup.data), setup.text)
+	assert(prepared.ok, "World preview resources must validate")
+	room.configure(prepared.config, setup.data.actors.actors, prepared.textures)
 	room.interaction_requested.connect(_interact)
 	room.nearby_changed.connect(func(id: String) -> void: _target = id)
 	room.portal_requested.connect(_portal)

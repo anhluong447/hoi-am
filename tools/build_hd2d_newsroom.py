@@ -24,6 +24,8 @@ def build():
     config = json.loads((ROOT / 'content/world/newsroom_hd2d_corner.json').read_text())
     config.update(id='newsroom_hd2d_v1', visuals_path='res://content/world/visuals/newsroom_v1.json',
                   world_font_path='res://assets/fonts/source_serif_4/source-serif-4.ttf')
+    config['portal']['to'] = 'school'
+    config['legacy_room_ids'] = ['newsroom', 'newsroom_sample']
     config['camera']['orthographic']['size'] = 8.0
     for geometry in config['geometry']:
         geometry['visible'] = False

@@ -584,7 +584,7 @@
   ],
   "portal": {
     "id": "newsroom-to-yard",
-    "to": "yard",
+    "to": "school",
     "position": [
       0,
       0.6,
@@ -615,5 +615,9 @@
   "default_camera": "orthographic",
   "world_art_path": "res://content/world/art_manifest_v2.json",
   "visuals_path": "res://content/world/visuals/newsroom_v1.json",
-  "world_font_path": "res://assets/fonts/source_serif_4/source-serif-4.ttf"
+  "world_font_path": "res://assets/fonts/source_serif_4/source-serif-4.ttf",
+  "legacy_room_ids": [
+    "newsroom",
+    "newsroom_sample"
+  ]
 }

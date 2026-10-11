@@ -7,8 +7,8 @@
       "prototype": true
     },
     "club": {
-      "room_id": "newsroom_sample",
-      "room_path": "res://content/world/newsroom_sample.json",
+      "room_id": "newsroom_hd2d_v1",
+      "room_path": "res://content/world/newsroom_hd2d_v1.json",
       "prototype": false
     },
     "library": {

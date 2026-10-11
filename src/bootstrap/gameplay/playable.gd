@@ -5,7 +5,7 @@ signal back_requested
 
 const STARTUP = preload("res://src/bootstrap/project_startup.gd")
 const CONTROLLER = preload("res://src/presentation/controllers/play_controller.gd")
-const ROOM = preload("res://src/world/rooms/newsroom/newsroom.tscn")
+const ROOMS = preload("res://src/bootstrap/gameplay/playable_rooms.gd")
 const HUD = preload("res://src/presentation/coastal/hud_view.tscn")
 const DIALOGUE = preload("res://src/presentation/coastal/dialogue_view.tscn")
 const WORKSPACE = preload("res://src/presentation/workspace/workspace_view.tscn")
@@ -56,19 +56,7 @@ func _ready() -> void:
 
 
 func _mount_room(config: Dictionary) -> void:
-	if is_instance_valid(room):
-		$World.remove_child(room)
-		room.queue_free()
-	room = ROOM.instantiate()
-	room.configure(config, setup.data.actors.actors, STARTUP.actor_textures(setup.data))
-	room.interaction_requested.connect(interact)
-	room.nearby_changed.connect(func(id: String) -> void: _nearby = id)
-	room.portal_requested.connect(func(destination: String, _portal: String) -> void: travel(destination))
-	room.menu_requested.connect(open_workspace)
-	$World.add_child(room)
-	room.set_quality(_quality)
-	room.set_input_enabled(controller.modal.is_empty())
-	_nearby = ""
+	ROOMS.mount(self, config)
 
 
 func _process(_delta: float) -> void:
@@ -228,7 +216,8 @@ func restore_world(world: Dictionary) -> void:
 	await get_tree().physics_frame
 	if not is_inside_tree():
 		return
-	var position: Array = world.get("position", [INF, INF, INF]) if world.room_id == _room_id else [INF, INF, INF]
+	var compatible: bool = world.room_id == _room_id or room.accepts_saved_room(world.room_id)
+	var position: Array = world.get("position", [INF, INF, INF]) if compatible else [INF, INF, INF]
 	room.player.position = room.safe_spawn(Vector3(position[0], position[1], position[2]))
 	room.player.velocity = Vector3.ZERO
 	room.set_input_enabled(controller.modal.is_empty())
