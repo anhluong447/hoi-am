@@ -30,6 +30,10 @@
   visual evidence when geometry/art changes; preserve historical capture versions.
 - Keep imported reference bytes and baseline evidence unchanged. Never regenerate
   baselines to make a port pass. Log intentional behavior changes separately.
+- The user accepted the current dialogue UI layout/art on 2026-10-11. Dialogue
+  animation work preserves that composition; historical static pixel diagnostics
+  do not block motion work. Keep timing/offset/scale in content and world input
+  locked through the dialogue exit; one reveal click must not dispatch a choice.
 - Follow `docs/ART-DIRECTION.md`: fixed coastal UI and its attached flowers,
   notebook, and harbor art remain in scope. World 2.5D has its own acceptance
   track; scene/portrait similarity must not block isolated UI gates.

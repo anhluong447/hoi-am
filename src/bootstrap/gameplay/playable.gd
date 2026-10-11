@@ -11,6 +11,7 @@ const DIALOGUE = preload("res://src/presentation/coastal/dialogue_view.tscn")
 const WORKSPACE = preload("res://src/presentation/workspace/workspace_view.tscn")
 const SAVE_DIALOGS = preload("res://src/bootstrap/gameplay/save_dialogs.gd")
 const LOADER = preload("res://src/infrastructure/content/json_content_loader.gd")
+const CONFIRM = preload("res://src/bootstrap/gameplay/personal_confirmation.gd")
 
 var setup: Dictionary
 var controller: RefCounted
@@ -138,27 +139,13 @@ func _intent(command: Dictionary) -> void:
 			open_workspace()
 		_:
 			if command.get("type") == "date":
-				_confirm_date(command)
+				CONFIRM.open(self, controller, setup.text, command)
 				return
 			var result: Dictionary = controller.execute(command)
 			var state: Dictionary = setup.session.snapshot()
 			if result.ok and state.phase == "bed" and state.messages.any(func(m: Dictionary) -> bool: return not m.resolved):
 				controller.section = "editorial"
 			open_workspace()
-
-
-func _confirm_date(command: Dictionary) -> void:
-	var confirm := ConfirmationDialog.new()
-	confirm.dialog_text = controller.romance_confirmation(command)
-	confirm.ok_button_text = setup.text.text("play.confirm")
-	confirm.cancel_button_text = setup.text.text("play.close")
-	confirm.confirmed.connect(func() -> void:
-		controller.execute(command)
-		open_workspace()
-		confirm.queue_free())
-	confirm.canceled.connect(func() -> void: confirm.queue_free())
-	add_child(confirm)
-	confirm.popup_centered()
 
 
 func _show_dialogue() -> void:
@@ -172,17 +159,32 @@ func _show_dialogue() -> void:
 	$Interface.add_child(_modal)
 	_hud.visible = false
 	_modal.present(_reduced)
-	_refresh()
 
 
 func _advance(id: String = "") -> void:
+	if not is_instance_valid(_modal) or _modal.is_closing():
+		return
 	if controller.advance(id):
-		_show_dialogue()
+		_modal.transition(controller.dialogue())
 	else:
 		close_modal()
 
 
 func close_modal() -> void:
+	if is_instance_valid(_modal) and _modal.has_method("dismiss"):
+		if _modal.is_closing():
+			return
+		controller.modal = "dialogue"
+		var exiting := _modal
+		exiting.closed.connect(func() -> void:
+			if _modal == exiting:
+				_finish_close(), CONNECT_ONE_SHOT)
+		exiting.dismiss()
+		return
+	_finish_close()
+
+
+func _finish_close() -> void:
 	_clear_modal()
 	controller.modal = ""
 	_hud.visible = true

@@ -15,6 +15,8 @@ var _resources: Dictionary
 var _screen := "dialogue"
 var _backdrops: Array = ["neutral", "ui-light", "ui-dark", "ui-detail"]
 var _backdrop_index := 0
+var _capture := false
+var _replay: Button
 
 
 func _ready() -> void:
@@ -34,6 +36,7 @@ func _ready() -> void:
 
 func show_case(screen: String, background: String, capture: bool = false) -> void:
 	_screen = screen
+	_capture = capture
 	if view:
 		$Interface.remove_child(view)
 		view.queue_free()
@@ -49,8 +52,11 @@ func show_case(screen: String, background: String, capture: bool = false) -> voi
 	else:
 		view.menu_requested.connect(func() -> void: back_requested.emit())
 	$Interface.add_child(view)
+	if screen == "dialogue" and not capture:
+		view.present(false)
 	if toolbar:
 		toolbar.visible = not capture
+		_replay.disabled = screen != "dialogue"
 		$Interface.move_child(toolbar, -1)
 
 
@@ -58,9 +64,11 @@ func _build_toolbar() -> void:
 	toolbar = HBoxContainer.new()
 	toolbar.position = Vector2(365, 35)
 	toolbar.add_theme_constant_override("separation", 12)
-	for id: String in ["screen", "backdrop", "back"]:
+	for id: String in ["screen", "backdrop", "motion", "back"]:
 		var button := Button.new()
-		button.text = _setup.text.text("migration.preview." + id)
+		button.text = _setup.text.text("ui.coastal.preview.motion" if id == "motion" else "migration.preview." + id)
+		if id == "motion":
+			_replay = button
 		if id == "back":
 			button.icon = _resources["icon-back"]
 		button.add_theme_font_override("font", _resources["Source Serif 4"])
@@ -72,6 +80,9 @@ func _build_toolbar() -> void:
 
 
 func _toolbar_action(id: String) -> void:
+	if id == "motion":
+		view.present(false)
+		return
 	if id == "back":
 		back_requested.emit()
 		return
@@ -85,7 +96,11 @@ func _toolbar_action(id: String) -> void:
 func _choice(id: String) -> void:
 	var model := STARTUP.fixture_model(_setup.data.preview.dialogue, _setup.text)
 	model.selected_choice = id
-	view.configure(model, _setup.data.dialogue_ui, _resources)
+	if _capture:
+		view.configure(model, _setup.data.dialogue_ui, _resources)
+	else:
+		model.line = _setup.text.text("ui.coastal.preview.response")
+		view.transition(model)
 
 
 func _unhandled_input(event: InputEvent) -> void:

@@ -1,0 +1,152 @@
+{
+  "scope": "Dialogue motion only; user accepted static UI; no art/layout changes",
+  "base_commit": "c940dd18cd02472001d6a7a54a8265aec97c8640",
+  "current_captures": "captures-v5",
+  "current_video": "dialogue-motion-v3.mp4",
+  "video": {
+    "width": 1280,
+    "height": 720,
+    "fps": 60,
+    "frames": 499,
+    "duration_seconds": 8.316666666666666,
+    "fixed_cadence_not_performance": true
+  },
+  "verification": {
+    "architecture_issues": 0,
+    "reference_locked_files": 18,
+    "reference_concepts": 4,
+    "actors": 6,
+    "graphs": 9,
+    "rooms": 5,
+    "art_imports": 78,
+    "runtime_textures": 20,
+    "headless_checks": 689,
+    "native_interaction_checks": 64,
+    "native_motion_checks": 19,
+    "failures": 0,
+    "windows_debug_and_release_clean_folder": "passed",
+    "source_hai_vong_unchanged": true
+  },
+  "performance": {
+    "current_profile": "profile-v5.json",
+    "real_clock": true,
+    "gpu_counters": false,
+    "runs": 8,
+    "frames": 1920,
+    "adapter": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+    "api": "d3d12",
+    "renderer": "forward_plus",
+    "editor_concurrent": true,
+    "own_tests_export_encoding_concurrent": false,
+    "stable_fps_acceptance": "unresolved; spikes also occur with hidden dialogue UI; no guaranteed FPS claim",
+    "rows": [
+      {
+        "mode": "empty",
+        "resolution": [
+          1280,
+          720
+        ],
+        "median_ms": 8.576,
+        "p95_ms": 22.273,
+        "min_ms": 0.752,
+        "max_ms": 28.593,
+        "samples": 240
+      },
+      {
+        "mode": "static",
+        "resolution": [
+          1280,
+          720
+        ],
+        "median_ms": 9.115,
+        "p95_ms": 18.6,
+        "min_ms": 2.591,
+        "max_ms": 29.261,
+        "samples": 240
+      },
+      {
+        "mode": "idle",
+        "resolution": [
+          1280,
+          720
+        ],
+        "median_ms": 17.8995,
+        "p95_ms": 44.616,
+        "min_ms": 0.674,
+        "max_ms": 64.135,
+        "samples": 240
+      },
+      {
+        "mode": "typewriter",
+        "resolution": [
+          1280,
+          720
+        ],
+        "median_ms": 17.3975,
+        "p95_ms": 66.019,
+        "min_ms": 0.921,
+        "max_ms": 69.493,
+        "samples": 240
+      },
+      {
+        "mode": "empty",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "median_ms": 10.218499999999999,
+        "p95_ms": 44.776,
+        "min_ms": 0.61,
+        "max_ms": 54.008,
+        "samples": 240
+      },
+      {
+        "mode": "static",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "median_ms": 16.366500000000002,
+        "p95_ms": 64.976,
+        "min_ms": 0.654,
+        "max_ms": 85.536,
+        "samples": 240
+      },
+      {
+        "mode": "idle",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "median_ms": 16.825499999999998,
+        "p95_ms": 63.853,
+        "min_ms": 0.788,
+        "max_ms": 73.659,
+        "samples": 240
+      },
+      {
+        "mode": "typewriter",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "median_ms": 8.312,
+        "p95_ms": 8.552,
+        "min_ms": 1.652,
+        "max_ms": 63.991,
+        "samples": 240
+      }
+    ]
+  },
+  "historical_failures": {
+    "captures-v1": "ROI used stage coordinates on device-sized bitmap; pointer skip used OS position instead of event position",
+    "captures-v4": "19 assertions passed but engine ERROR exposed empty-row tween; guard fixed in v5",
+    "profile-v4": "headless verification concurrent at beginning; exploratory only",
+    "large_native_v1_log": {
+      "path": "artifacts/verification/dialogue-motion-native-v1.log",
+      "bytes": 113098400,
+      "sha256": "0fb5d490ac9b3cf041d15b18a0162a6120771323c617393637aa187976b29ed0",
+      "retained_in_ignored_artifacts": true
+    }
+  }
+}

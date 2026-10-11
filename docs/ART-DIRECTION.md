@@ -53,6 +53,12 @@ không phải resource contract mới. Khi port asset pack sẽ có manifest ri�
 
 ## Acceptance
 
+Ngày 2026-10-11, người dùng chấp nhận UI tĩnh và yêu cầu giữ bố cục, chỉ phát triển
+motion hội thoại. Static diagnostics lịch sử giữ làm tham khảo, không chặn motion.
+Blur-in được cho phép trên ký tự mới xuất hiện; phần đã đọc phải sắc nét, và một
+lần bấm hoàn tất câu cùng blur. World DOF/fog vẫn không tác động tới UI. Idle dùng
+sóng nhẹ và hoa đung đưa, giữ giấy và chữ ổn định.
+
 UI: captures neutral/bright/dark/detailed, fixture và thời điểm xác định, mask
 theo UI; uncertain fringe alpha vẫn cần review bằng mắt. World: still/video lúc
 đứng, đi, bị che, đổi light preset, cùng GPU/device ghi rõ. Performance: đo realtime

@@ -191,7 +191,59 @@
     941
   ],
   "motion": {
-    "enter_duration": 0.18
+    "opening": {
+      "wave": {"delay": 0.0, "duration": 0.3, "offset": [0, 12], "rotation": 0},
+      "paper": {"delay": 0.06, "duration": 0.32, "offset": [0, 18], "rotation": 0},
+      "date": {"delay": 0.09, "duration": 0.22, "offset": [0, 4], "rotation": 0},
+      "flowers": {"delay": 0.14, "duration": 0.3, "offset": [-12, 10], "rotation": -0.7},
+      "notebook": {"delay": 0.2, "duration": 0.25, "offset": [14, 8], "rotation": 0.6},
+      "speaker": {"delay": 0.26, "duration": 0.18, "offset": [0, 4], "rotation": 0},
+      "body": {"delay": 0.28, "duration": 0.14, "offset": [0, 0], "rotation": 0}
+    },
+    "pivots": {"flowers": [154, 860], "notebook": [1520, 865]},
+    "text_delay": 0.28,
+    "line_out_duration": 0.08,
+    "line_in_duration": 0.14,
+    "closing": {
+      "choices": {"delay": 0.0, "duration": 0.1},
+      "proceed": {"delay": 0.0, "duration": 0.1},
+      "body": {"delay": 0.03, "duration": 0.1},
+      "speaker": {"delay": 0.05, "duration": 0.1},
+      "notebook": {"delay": 0.08, "duration": 0.14},
+      "flowers": {"delay": 0.11, "duration": 0.14},
+      "date": {"delay": 0.14, "duration": 0.1},
+      "paper": {"delay": 0.16, "duration": 0.14},
+      "wave": {"delay": 0.2, "duration": 0.12}
+    },
+    "typewriter": {
+      "characters_per_second": 40,
+      "soft_duration": 0.12,
+      "blur_radius": 1.8,
+      "blur_padding": 6,
+      "punctuation_pauses": {",": 0.08, ";": 0.1, ":": 0.1, ".": 0.16, "!": 0.16, "?": 0.16, "\n": 0.12}
+    },
+    "choices": {
+      "duration": 0.18,
+      "stagger": 0.05,
+      "offset": [0, 6],
+      "focus_duration": 0.15,
+      "focus_scale": 1.04,
+      "chevron_offset": 3
+    },
+    "idle": {
+      "wave_amplitude": 3,
+      "wave_period": 5.6,
+      "secondary_period": 7.3,
+      "wave_frequency": 2.4,
+      "secondary_amplitude": 0.35,
+      "shimmer_strength": 0.025,
+      "shimmer_width": 0.12,
+      "flowers_degrees": 0.35,
+      "flowers_period": 6.4,
+      "proceed_period": 1.8,
+      "proceed_min_alpha": 0.7
+    },
+    "advance_region": [150, 690, 1160, 251]
   },
   "choice_copy": {
     "right_margin": 46,

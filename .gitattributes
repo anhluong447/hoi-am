@@ -115,3 +115,4 @@ assets/ui/coastal/authored_v*/** -text whitespace=-trailing-space,cr-at-eol
 content/ui/art_manifest_v*.json -text whitespace=-trailing-space,cr-at-eol
 docs/reviews/ui-upgrade-2026-10-10/** -text whitespace=-trailing-space,cr-at-eol
 docs/reviews/ui-correction-2026-10-11/** -text whitespace=-trailing-space,cr-at-eol
+docs/reviews/dialogue-motion-2026-10-11/** -text whitespace=-trailing-space,cr-at-eol

@@ -25,6 +25,8 @@ func run() -> void:
 	play._advance("school")
 	expect(play.setup.session.snapshot().phase == "club" and play.setup.session.snapshot().energy == 4, "Explicit dialogue choice executes real school command")
 	play._advance()
+	for _frame: int in 24:
+		await tree.process_frame
 	expect(play.controller.modal.is_empty() and play.room._input_enabled, "End dialogue restores world input")
 	var replay := SESSION.new(play.setup.rules.transition, play.setup.validator.validate)
 	replay.replace(initial)

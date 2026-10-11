@@ -94,6 +94,16 @@ World emit target/location IDs qua signal; Main nối world với controller, kh
 Không có autoload ở foundation. Chỉ thêm autoload khi có yêu cầu lifecycle cụ thể
 và ADR. Không global event bus, service locator, generic ECS hay plugin framework.
 
+## Motion hội thoại
+
+Dialogue giữ một view trong suốt cuộc thoại. `dialogue_components.gd` dựng các lớp;
+`dialogue_motion.gd` sở hữu enter/exit/idle, `dialogue_choices.gd` sở hữu stagger và
+focus, `dialogue_text.gd` sở hữu typewriter và viewport glyph tạm. View chỉ emit
+choice/continue sau khi đọc xong; bootstrap dispatch domain command ngay khi nhận
+intent. Chuyển câu chỉ thay copy/choices, giữ paper/foreground và phase idle.
+Bootstrap giữ modal priority tới signal `closed`; callback kiểm đúng view đang
+mount để conversation cũ không mở khóa room của modal mới.
+
 ## Contract session và transition
 
 `GameSession.new(transition, validator)` nhận hai Callable. `replace(candidate)`

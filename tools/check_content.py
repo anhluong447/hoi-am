@@ -2,6 +2,7 @@
 import hashlib
 import json
 from pathlib import Path
+from check_dialogue_motion import validate as validate_dialogue_motion
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -23,6 +24,7 @@ def ids(rows, field='id'):
 
 
 def main():
+    validate_dialogue_motion(read('content/ui/dialogue.json'))
     pack = read('content/gameplay/pack.json')
     stats, actors = ids(pack['stats']), ids(pack['roster'])
     ids(pack['cases'], 'key'); ids(pack['quest_steps']); ids(pack['phases']); ids(pack['places'])

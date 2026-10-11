@@ -50,6 +50,16 @@ Logs native không được dùng để suy ra FPS từ `--fixed-fps` hoặc hea
 
 ## Viết một feature
 
+UI preview có nút từ catalog **Mở lại chuyển cảnh** để replay dialogue motion;
+chọn đáp án chuyển sang copy phản hồi trong cùng view. `show_case(..., true)`
+vẫn dựng fixture tĩnh đồng bộ cho các kiểm tra trước đây. Timing/offset/scale nằm
+trong `content/ui/dialogue.json`; không sửa layout để làm motion đẹp hơn.
+`verify_native.py` chạy input/resize và `native_dialogue_motion.gd` tuần tự.
+Script motion nhận `-- --output res://docs/reviews/<review>/<new-version>` để lưu
+PNG; thêm `--write-movie <new.avi>` cho video cadence cố định. Profile riêng bằng
+`tests/profile_dialogue_motion.gd`; không chạy kiểm thử/encoding khác cùng lúc đo.
+Xem [review animation thoại](reviews/dialogue-motion-2026-10-11/README.md).
+
 1. Đọc chapter và scope; phân biệt port parity với thay đổi game design.
 2. Thêm content/key/schema và validation trước; technical IDs không đổi theo chữ.
 3. Viết domain nhỏ và deterministic, test những failure/state boundaries thật.

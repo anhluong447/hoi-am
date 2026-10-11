@@ -35,6 +35,13 @@ Visual review xác nhận đúng scope; art/licensing nguồn đầy đủ; read
 
 ## Handoff
 
+Ngày 2026-10-11, người dùng chấp nhận bố cục/UI hiện tại, yêu cầu tập trung
+animation thoại. Điều kiện "đóng static gaps trước motion" của C11.05 được thay
+bằng chỉ đạo này; pixel diagnostics cũ giữ nguyên, không là pixel-parity pass mới.
+Enter từng lớp, glyph blur-in/typewriter/skip, choice scale/color/focus/stagger,
+exit đảo thứ tự và coastal idle nằm trong presentation, tuning trong content.
+[Review và hướng dẫn xem animation](../../reviews/dialogue-motion-2026-10-11/README.md).
+
 Mở rộng room/character cần budget và pipeline đã khóa. Những hướng chưa chốt
 đưa vào art/design ledger, không coi cảm hứng Octopath là spec kỹ thuật hoàn chỉnh.
 
