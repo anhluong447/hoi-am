@@ -1,0 +1,72 @@
+{
+  "preserved_inputs": [
+    {
+      "path": "assets/actors/khue.png",
+      "bytes": 22814,
+      "sha256": "4483e5116ace64da144bee789d82a99cc49a365b27e7ff95cc9348d97c79de88",
+      "action": "preserve"
+    },
+    {
+      "path": "assets/actors/van.png",
+      "bytes": 29051,
+      "sha256": "d109f5814e0905b030c64f9fa22dcb9ad4116c42c10d7dcb6cf40e2282bf13a1",
+      "action": "preserve"
+    },
+    {
+      "path": "docs/reference/coastal-editorial-v1/03-hud-map.png",
+      "bytes": 2356331,
+      "sha256": "fb4ef57d1cbcda2dd87e2083764721052f0e06f4fad7e43065be7750f2bf8618",
+      "action": "preserve"
+    }
+  ],
+  "new_art_groups": [
+    {
+      "id": "floor",
+      "role": "textured receiving surface",
+      "priority": 1
+    },
+    {
+      "id": "wall",
+      "role": "textured room shell",
+      "priority": 1
+    },
+    {
+      "id": "desk",
+      "role": "split layered furniture",
+      "priority": 1
+    },
+    {
+      "id": "cabinet",
+      "role": "cutout storage furniture",
+      "priority": 1
+    },
+    {
+      "id": "foliage",
+      "role": "cutout plant groups",
+      "priority": 1
+    },
+    {
+      "id": "stationery",
+      "role": "paper books printer and lamp",
+      "priority": 1
+    },
+    {
+      "id": "window",
+      "role": "frame with real opening",
+      "priority": 1
+    },
+    {
+      "id": "harbor",
+      "role": "painted background layers",
+      "priority": 1
+    },
+    {
+      "id": "room_variants",
+      "role": "library cafe home shop job school waterfront",
+      "priority": 2
+    }
+  ],
+  "existing_room_geometry_count": 41,
+  "characters": "existing 32x48 pilot atlases; not regenerated",
+  "text_policy": "No readable player-facing text in image assets; live catalog copy"
+}

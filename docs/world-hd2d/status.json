@@ -1,0 +1,50 @@
+{
+  "branch": "feature/hd2d-world",
+  "user_authorized_all_chapters": true,
+  "user_final_art_acceptance": "pending",
+  "chapters": {
+    "HD00": {
+      "status": "complete",
+      "evidence": [
+        "docs/decisions/004-hd2d-world.md",
+        "docs/world-hd2d/asset-inventory.json"
+      ]
+    },
+    "HD01": {
+      "status": "pending",
+      "evidence": []
+    },
+    "HD02": {
+      "status": "pending",
+      "evidence": []
+    },
+    "HD03": {
+      "status": "pending",
+      "evidence": []
+    },
+    "HD04": {
+      "status": "pending",
+      "evidence": []
+    },
+    "HD05": {
+      "status": "pending",
+      "evidence": []
+    },
+    "HD06": {
+      "status": "pending",
+      "evidence": []
+    },
+    "HD07": {
+      "status": "pending",
+      "evidence": []
+    },
+    "HD08": {
+      "status": "pending",
+      "evidence": []
+    },
+    "HD09": {
+      "status": "pending",
+      "evidence": []
+    }
+  }
+}

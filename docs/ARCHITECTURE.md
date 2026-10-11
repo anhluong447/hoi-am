@@ -134,6 +134,10 @@ switching, fallback locale và pluralization chỉ thêm khi có yêu cầu th�
 
 ## World 2.5D
 
+HD-2D workstream theo [ADR 004](decisions/004-hd2d-world.md): visual texture/layers
+tách khỏi collision/shadow/visibility proxies; composition inject world resources.
+Packs và evidence greybox cũ giữ nguyên. Tiến độ mới ở `docs/world-hd2d/status.json`.
+
 Camera, navigation, collider và ánh sáng ở world. Spatial position không phải
 gameplay progression. Walking/animation không đổi ngày/energy. Gameplay lưu
 location ID nằm trong world envelope riêng; composition restore sau physics frame

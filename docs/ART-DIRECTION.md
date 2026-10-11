@@ -23,7 +23,9 @@ UI tĩnh/motion ở source còn G2/G3 mở; port engine không tự đóng các 
 
 ## World
 
-- Room/props chính là mesh 3D; nhân vật sprite trên plane, di chuyển trên XZ.
+- Theo hướng HD-2D đã được người dùng chốt, room/props lấy chi tiết từ art 2D
+  trên surface/cutout nhiều lớp; geometry đơn giản hỗ trợ collision và bóng.
+  Nhân vật sprite trên plane, di chuyển trên XZ. Xem [ADR 004](decisions/004-hd2d-world.md).
 - Camera góc nghiêng được kiểm soát. So perspective FOV nhỏ với orthographic ở
   blockout trước khi khóa, ghi camera transform/FOV/size trong evidence.
 - PC Forward+ là giả định ban đầu, phù hợp renderer đã chọn trong project.
