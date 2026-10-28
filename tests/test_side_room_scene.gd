@@ -2,6 +2,7 @@ extends "res://tests/test_suite.gd"
 
 const ROOM = preload("res://src/world/side/side_room.tscn")
 const TARGETS = preload("res://src/world/side/side_targets.gd")
+const LAYERS = preload("res://src/world/side/side_layers.gd")
 
 
 func _manifest() -> Dictionary:
@@ -12,6 +13,7 @@ func _manifest() -> Dictionary:
 			"greybox.wall": {"kind": "greybox", "color": "#c9b79a", "size": [3000.0, 900.0]},
 			"greybox.pillar": {"kind": "greybox", "color": "#5a4a3a", "size": [80.0, 700.0]},
 			"greybox.desk": {"kind": "greybox", "color": "#7a5a3a", "size": [200.0, 90.0]},
+			"greybox.fg": {"kind": "greybox", "color": "#202020", "size": [400.0, 300.0]},
 		},
 	}
 
@@ -37,10 +39,13 @@ func _room() -> Dictionary:
 		"layers": [
 			{"id": "sky", "plane": "sky", "scroll_scale": 0.3, "art_ref": "greybox.sky", "position": [0.0, 0.0], "z": -100},
 			{"id": "wall", "plane": "back", "scroll_scale": 1.0, "art_ref": "greybox.wall", "position": [0.0, 0.0], "z": -50},
+			{"id": "fg", "plane": "foreground", "scroll_scale": 1.2, "art_ref": "greybox.fg", "position": [0.0, 780.0], "z": 0},
 		],
 		"props": [
 			{"id": "pillar", "art_ref": "greybox.pillar", "position": [1600.0, 960.0], "sort_y": 960.0, "occludes_actor": true},
 			{"id": "desk", "art_ref": "greybox.desk", "position": [1000.0, 880.0], "sort_y": 880.0, "occludes_actor": false},
+			{"id": "poster", "art_ref": "greybox.desk", "position": [1300.0, 700.0], "sort_y": 700.0, "occludes_actor": false},
+			{"id": "beam", "art_ref": "greybox.pillar", "position": [2000.0, 1100.0], "sort_y": 1100.0, "occludes_actor": true},
 		],
 		"doors": [
 			{"id": "to_hall", "x": 200.0, "width": 120.0, "target_room": "hall_2d", "target_spawn": "from_corridor"},
@@ -58,6 +63,32 @@ func _room() -> Dictionary:
 func _frames(count: int) -> void:
 	for _frame: int in count:
 		await Engine.get_main_loop().physics_frame
+
+
+func _z(node: Node2D) -> int:
+	var parent := node.get_parent()
+	return node.z_index + (parent.z_index if parent is Parallax2D else 0)
+
+
+func _canvas_x(room: Node, id: String) -> float:
+	return room.find_child(id, true, false).get_global_transform_with_canvas().origin.x
+
+
+func _check_parallax(room: Node) -> void:
+	var zoom: float = room.camera.zoom.x
+	expect(not is_equal_approx(zoom, 1.0), "Parallax fixture runs under a non-1 zoom")
+	room.place_player("left", 400.0)
+	await Engine.get_main_loop().process_frame
+	expect(is_equal_approx(room.camera.left_edge(), 0.0), "Camera rests on the left limit")
+	expect(absf(_canvas_x(room, "sky")) < 0.5, "Parallax layer left edge aligns at the left limit")
+	expect(absf(_canvas_x(room, "wall")) < 0.5, "Play-plane layer left edge aligns at the left limit")
+	room.place_player("left", 1500.0)
+	await Engine.get_main_loop().process_frame
+	var left: float = room.camera.left_edge()
+	expect(left > 0.0, "Camera scrolled mid-room")
+	expect(absf(_canvas_x(room, "sky") - (-0.3 * left * zoom)) < 0.5, "Parallax layer scrolls at its scroll_scale mid-room")
+	expect(absf(_canvas_x(room, "fg") - (-1.2 * left * zoom)) < 0.5, "Foreground layer scrolls faster mid-room")
+	expect(absf(_canvas_x(room, "wall") - (-left * zoom)) < 0.5, "Play-plane layer tracks the camera mid-room")
 
 
 func _interact(room: Node) -> void:
@@ -149,6 +180,17 @@ func run() -> void:
 	expect(desk.z_index < room.player.z_index, "Background prop draws behind the actor")
 	expect(room.find_child("sky", true, false).get_parent() is Parallax2D, "Slow layer scrolls through Parallax2D")
 	expect(not room.find_child("wall", true, false).get_parent() is Parallax2D, "Play-plane layer is not parallaxed")
+	var poster: Node2D = room.find_child("poster", true, false)
+	var beam: Node2D = room.find_child("beam", true, false)
+	var wall: Node2D = room.find_child("wall", true, false)
+	var fg: Node2D = room.find_child("fg", true, false)
+	expect(_z(poster) > _z(wall) and _z(poster) < room.player.z_index, "Wall prop draws above the back layer and below the actor")
+	expect(_z(beam) > room.player.z_index and _z(beam) < _z(fg), "Deep occluder stays below the foreground layer")
+	expect(_z(desk) > _z(poster), "Props order by sort_y")
+	expect(_z(room.find_child("sky", true, false)) < _z(wall), "Planes keep their band order")
+	expect(LAYERS.layer_z("back", 99999) < LAYERS.prop_z(0.0, 900.0, false), "Authored layer z cannot enter the actor band")
+	expect(LAYERS.layer_z("foreground", -99999) > LAYERS.prop_z(99999.0, 900.0, true), "Foreground stays above every occluder")
+	await _check_parallax(room)
 
 	var van: Node2D = room.find_child("van", true, false)
 	expect(van.position == Vector2(1200.0, 900.0) and van.facing == -1, "NPC placeholder stands at authored x")

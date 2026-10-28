@@ -30,6 +30,7 @@ var _markers: Dictionary = {}
 var _input_enabled := true
 var _reduced := false
 var _nearby := ""
+var _layers: Node2D
 
 
 func configure(config: Dictionary, actors: Dictionary, textures: Dictionary) -> void:
@@ -44,7 +45,8 @@ func _ready() -> void:
 	var manifest: Dictionary = _config.manifest
 	var floor_y := float(_config.floor_y)
 	var height := float(_config.tuning.actor_height)
-	LAYERS.build(_group("Layers"), _config.layers, _textures, manifest)
+	_layers = _group("Layers")
+	LAYERS.build(_layers, _config.layers, _textures, manifest)
 	LAYERS.build_props(_group("Props"), _config.props, _textures, manifest, floor_y)
 	var actors := _group("Actors")
 	for definition: Dictionary in _config.actors:
@@ -88,6 +90,10 @@ func _physics_process(delta: float) -> void:
 		nearby_changed.emit(nearest)
 
 
+func _process(_delta: float) -> void:
+	_scroll_layers()
+
+
 func _unhandled_input(event: InputEvent) -> void:
 	if not _input_enabled:
 		return
@@ -126,6 +132,7 @@ func place_player(spawn_id: String, x: float = NAN, facing: int = 0) -> void:
 	player.stop()
 	player.face(facing if facing == 1 or facing == -1 else int(spawn.facing))
 	camera.snap(player.position.x)
+	_scroll_layers()
 
 
 func safe_spawn_x(x: float) -> float:
@@ -167,6 +174,10 @@ func set_quality(id: String) -> void:
 
 func set_reduced_motion(reduced: bool) -> void:
 	_reduced = reduced
+
+
+func _scroll_layers() -> void:
+	LAYERS.scroll(_layers, camera.left_edge(), float(_config.bounds.min_x))
 
 
 func _group(group_name: String) -> Node2D:

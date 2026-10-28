@@ -34,3 +34,10 @@ func follow(target_x: float, delta: float, reduced: bool) -> void:
 
 func snap(target_x: float) -> void:
 	position.x = clampf(target_x, _bounds.min_x, _bounds.max_x)
+
+
+## World x of the visible left edge, mirroring Camera2D limit clamping.
+func left_edge() -> float:
+	var half := get_viewport_rect().size.x / (2.0 * zoom.x)
+	var left := minf(position.x - half, float(limit_right) - 2.0 * half)
+	return maxf(left, float(limit_left))
