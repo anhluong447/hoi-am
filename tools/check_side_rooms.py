@@ -113,7 +113,36 @@ def validate_image_bytes(assets, errors):
             errors.append(f"manifest asset {ref}: sha256 mismatch for {asset['path']}")
 
 
+TUNING_KEYS = (
+    "max_speed",
+    "accel_time",
+    "decel_time",
+    "stride",
+    "bob",
+    "camera_dead_zone",
+    "camera_response",
+    "actor_height",
+    "actor_half_width",
+)
+
+
+def validate_tuning(errors):
+    path = ROOT / "content/world2d/tuning.json"
+    if not path.is_file():
+        errors.append("content/world2d/tuning.json is missing")
+        return
+    tuning = read_json(path)
+    for key in TUNING_KEYS:
+        value = tuning.get(key)
+        if not _is_finite(value) or value <= 0:
+            errors.append(f"content/world2d/tuning.json: {key} must be a finite number > 0")
+
+
 def validate():
+    tuning_errors = []
+    validate_tuning(tuning_errors)
+    if tuning_errors:
+        raise AssertionError("; ".join(tuning_errors))
     rooms_dir = ROOT / "content/world2d/rooms"
     room_paths = sorted(rooms_dir.glob("*.json")) if rooms_dir.is_dir() else []
     if not room_paths:
