@@ -39,22 +39,37 @@ static func decode(payload: Variant, pack: Dictionary, legacy_maps: Dictionary =
 	return {"ok": true, "state": migrated.state, "world": world.duplicate(true)}
 
 
+## v1: location/room plus optional HD-2D position. v2: exactly one of side-room
+## x/facing or HD-2D position; carrying both is ambiguous and rejected.
 static func valid_world(world: Variant) -> bool:
-	if not world is Dictionary or world.get("version") != 1 or not world.get("location_id") is String or not world.get("room_id") is String:
+	if not world is Dictionary or not world.get("location_id") is String or not world.get("room_id") is String:
+		return false
+	if world.get("version") == 1:
+		return not world.has("position") or _valid_position(world.position)
+	if world.get("version") != 2 or world.has("x") == world.has("position"):
 		return false
 	if world.has("position"):
-		if not world.position is Array or world.position.size() != 3:
-			return false
-		for value: Variant in world.position:
-			if typeof(value) not in [TYPE_INT, TYPE_FLOAT] or not is_finite(value):
-				return false
-	return true
+		return _valid_position(world.position) and not world.has("facing")
+	return _finite(world.x) and _finite(world.get("facing")) and absf(float(world.facing)) == 1.0
 
 
 static func legacy_world(world: Variant, mappings: Dictionary = {}) -> Dictionary:
 	# Tile coordinates are renderer-specific; migrate location then use authored spawn.
 	var map: String = str(world.get("mapId", world.get("map", "club"))) if world is Dictionary else "club"
 	return {"version": 1, "location_id": mappings.get(map, "club"), "room_id": "legacy_tile"}
+
+
+static func _valid_position(value: Variant) -> bool:
+	if not value is Array or value.size() != 3:
+		return false
+	for item: Variant in value:
+		if not _finite(item):
+			return false
+	return true
+
+
+static func _finite(value: Variant) -> bool:
+	return typeof(value) in [TYPE_INT, TYPE_FLOAT] and is_finite(value)
 
 
 static func _invalid() -> Dictionary:

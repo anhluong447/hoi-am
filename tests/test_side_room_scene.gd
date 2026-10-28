@@ -50,6 +50,7 @@ func _room() -> Dictionary:
 		"doors": [
 			{"id": "to_hall", "x": 200.0, "width": 120.0, "target_room": "hall_2d", "target_spawn": "from_corridor", "label_key": "ui.common.quit"},
 			{"id": "to_club", "x": 2800.0, "width": 120.0, "target_room": "room3_2d", "target_spawn": "from_corridor", "target_location": "club"},
+			{"id": "to_dock", "x": 2300.0, "width": 60.0, "target_spawn": "travel", "target_location": "waterfront"},
 		],
 		"interactions": [
 			{"id": "board", "x": 900.0, "width": 100.0, "label_key": "ui.common.quit", "anchor_y": 700.0},
@@ -159,14 +160,18 @@ func run() -> void:
 	room.place_player("left", 2800.0)
 	await _frames(2)
 	_interact(room)
-	expect(portals == [["club", "from_corridor"]] and doors.size() == 1, "Cross-location door emits portal_requested")
+	expect(doors == [["hall_2d", "from_corridor"], ["room3_2d", "from_corridor"]] and portals.is_empty(), "Cross-location door with a target room emits door_requested")
+	room.place_player("left", 2300.0)
+	await _frames(2)
+	_interact(room)
+	expect(portals == [["waterfront", "travel"]] and doors.size() == 2, "Location-only door emits portal_requested")
 	room.set_input_enabled(false)
 	_interact(room)
 	var menu := InputEventAction.new()
 	menu.action = "menu"
 	menu.pressed = true
 	room._unhandled_input(menu)
-	expect(portals.size() == 1 and doors.size() == 1 and menus.is_empty(), "Locked input emits no door, portal or menu")
+	expect(portals.size() == 1 and doors.size() == 2 and menus.is_empty(), "Locked input emits no door, portal or menu")
 	room.set_input_enabled(true)
 	room._unhandled_input(menu)
 	expect(menus.size() == 1, "Menu action emits menu_requested")

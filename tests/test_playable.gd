@@ -76,10 +76,10 @@ func run() -> void:
 	await tree.physics_frame
 	expect(play.controller.location_id == "club" and play.room._config.id == "room3_2d" and is_equal_approx(play.room.player.position.x, 1600.0), "Unknown room uses the club entry room travel spawn")
 	var world: Dictionary = play.world_snapshot()
-	expect(world == {"version": 1, "location_id": "club", "room_id": "room3_2d"} and CONTRACT.valid_world(world), "Side-room snapshot keeps the v1 location/room shape")
+	expect(world == {"version": 2, "location_id": "club", "room_id": "room3_2d", "x": 1600.0, "facing": 1} and CONTRACT.valid_world(world), "Side-room snapshot writes the v2 x/facing shape")
 	play.restore_world({"version": 1, "location_id": "school", "room_id": "corridor_c_2d"})
 	await tree.physics_frame
-	expect(play.controller.location_id == "school" and play.room._config.id == "school_gate_2d" and play.room._input_enabled, "Side-room restore enters the location entry room")
+	expect(play.controller.location_id == "school" and play.room._config.id == "school_gate_2d" and play.room._input_enabled, "v1 side-room restore enters the location entry room")
 	play.queue_free()
 	await tree.process_frame
 	await tree.process_frame
@@ -112,6 +112,10 @@ func _side_doors(tree: SceneTree, play: Node, state: Dictionary) -> void:
 	await tree.physics_frame
 	expect(play.room._config.id == "corridor_c_2d" and play.controller.location_id == "school", "Cross-location door enters the authored target room")
 	expect(is_equal_approx(play.room.player.position.x, 4500.0), "Door honours the authored target spawn")
+	await _walk_door(tree, play, 4600.0)
+	expect(play.room._config.id == "room3_2d" and play.controller.location_id == "club" and is_equal_approx(play.room.player.position.x, 3000.0), "Corridor door returns to room3_2d in club")
+	await _walk_door(tree, play, 3100.0)
+	expect(play.room._config.id == "corridor_c_2d" and play.controller.location_id == "school", "Room3 door re-enters the corridor")
 	expect(play.setup.session.snapshot() == state, "Walking through doors costs no gameplay time")
 	var old: WeakRef = weakref(play.room)
 	play.room.door_requested.emit("class_11a3_2d", "from_corridor")
@@ -127,3 +131,15 @@ func _side_doors(tree: SceneTree, play: Node, state: Dictionary) -> void:
 	for _frame: int in 24:
 		await tree.process_frame
 	expect(play.room._input_enabled, "Closing dialogue reopens side-room input")
+
+
+func _walk_door(tree: SceneTree, play: Node, x: float) -> void:
+	play.room.place_player("travel", x)
+	await tree.physics_frame
+	await tree.physics_frame
+	var event := InputEventAction.new()
+	event.action = "interact"
+	event.pressed = true
+	play.room._unhandled_input(event)
+	await tree.process_frame
+	await tree.physics_frame

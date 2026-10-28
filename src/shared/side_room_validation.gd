@@ -6,6 +6,8 @@ extends RefCounted
 const FIELDS = preload("res://src/shared/side_room_fields.gd")
 const RULES = preload("res://src/shared/side_room_rules.gd")
 const LIGHTING_PHASES := ["sang", "chieu", "toi", "dem"]
+## Mirrors tools/check_side_rooms.py TUNING_KEYS: every key finite and > 0.
+const TUNING_KEYS := ["max_speed", "accel_time", "decel_time", "stride", "bob", "camera_dead_zone", "camera_response", "actor_height", "actor_half_width"]
 
 
 static func validate_manifest(manifest: Dictionary) -> Dictionary:
@@ -47,6 +49,14 @@ static func validate_lighting(preset: Dictionary) -> Dictionary:
 				errors.append("lighting.phases missing phase: %s" % phase_id)
 				continue
 			RULES.validate_phase(phase_id, phases[phase_id], errors)
+	return FIELDS.result(errors)
+
+
+static func validate_tuning(tuning: Dictionary) -> Dictionary:
+	var errors: Array[String] = []
+	for key: String in TUNING_KEYS:
+		if not FIELDS.is_positive_number(tuning.get(key)):
+			errors.append("tuning.%s must be a finite number > 0" % key)
 	return FIELDS.result(errors)
 
 

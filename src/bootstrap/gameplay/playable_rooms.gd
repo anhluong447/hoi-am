@@ -43,9 +43,10 @@ static func mount(play: Node, config: Dictionary, rooms_path: String = "") -> bo
 				pending[0] = false
 				room.set_input_enabled(play.controller.modal.is_empty())).call_deferred()
 	if side:
+		# Doors naming a room re-derive the location from that room's content;
+		# location-only doors travel to the location entry room.
 		room.portal_requested.connect(func(location_id: String, spawn_id: String) -> void:
-			var target_room := _door_room(prepared.config.doors, location_id, spawn_id)
-			request.call(play.enter_room.bind(target_room, spawn_id) if not target_room.is_empty() else play.travel.bind(location_id, spawn_id)))
+			request.call(play.travel.bind(location_id, spawn_id)))
 		room.door_requested.connect(func(room_id: String, spawn_id: String) -> void:
 			request.call(play.enter_room.bind(room_id, spawn_id)))
 		room.set_lighting_phase(play.setup.session.snapshot().phase)
@@ -58,11 +59,3 @@ static func mount(play: Node, config: Dictionary, rooms_path: String = "") -> bo
 	room.set_input_enabled(play.controller.modal.is_empty())
 	play._nearby = ""
 	return true
-
-
-## Cross-location doors name both a location and a room; enter that room directly.
-static func _door_room(doors: Array, location_id: String, spawn_id: String) -> String:
-	for door: Dictionary in doors:
-		if door.get("target_location") == location_id and door.get("target_spawn") == spawn_id:
-			return str(door.get("target_room", ""))
-	return ""

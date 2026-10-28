@@ -2,6 +2,7 @@ extends "res://tests/test_suite.gd"
 
 const V = preload("res://src/shared/side_room_validation.gd")
 const LOADER = preload("res://src/infrastructure/content/json_content_loader.gd")
+const SIDE_RESOURCES = preload("res://src/bootstrap/side_resources.gd")
 const ROOM_IDS := [
 	"school_gate_2d", "discipline_office_2d", "corridor_c_2d", "class_11a3_2d",
 	"canteen_2d", "room3_2d", "home_room_2d",
@@ -147,6 +148,28 @@ func run() -> void:
 	expect(not V.validate_room(bad, manifest).ok, "Overlapping door/interaction ranges rejected")
 
 	_check_authored_rooms()
+	_check_tuning()
+
+
+## Shared side tuning is required and validated before any room mounts.
+func _check_tuning() -> void:
+	var tuning: Dictionary = LOADER.read_dictionary("res://content/world2d/tuning.json").get("data", {})
+	expect(V.validate_tuning(tuning).ok, "Authored side tuning validates")
+	var parts := {}
+	for name: String in ["art_manifest_v1", "rooms/room3_2d", "phase_lighting", "lighting/room3"]:
+		parts[name] = LOADER.read_dictionary("res://content/world2d/" + name + ".json").get("data", {})
+	var prepare := func(value: Dictionary) -> Dictionary:
+		return SIDE_RESOURCES.prepare(parts["rooms/room3_2d"], parts.art_manifest_v1, parts["lighting/room3"], parts.phase_lighting, value)
+	expect(prepare.call(tuning).ok, "Side resources accept validated tuning")
+	for key: String in tuning:
+		for bad: Variant in [null, 0.0, -1.0, NAN, INF, "1"]:
+			var broken := tuning.duplicate()
+			if typeof(bad) == TYPE_NIL:
+				broken.erase(key)
+			else:
+				broken[key] = bad
+			expect(not V.validate_tuning(broken).ok and not prepare.call(broken).ok, "Tuning %s=%s rejected before mount" % [key, str(bad)])
+	expect(not prepare.call({}).ok, "Empty tuning rejected before mount")
 
 
 ## Task 7: every authored content/world2d/rooms/*.json file must validate, every

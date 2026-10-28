@@ -28,9 +28,10 @@ static func load_room(rooms_path: String, room_id: String) -> Dictionary:
 	return prepare(room.data, manifest.data, lighting.data, phase_map.data, tuning.data)
 
 
-static func prepare(room: Dictionary, manifest: Dictionary, lighting: Dictionary, phase_map: Dictionary, tuning: Dictionary = {}) -> Dictionary:
+## Tuning is required: missing, non-finite or non-positive keys reject before mount.
+static func prepare(room: Dictionary, manifest: Dictionary, lighting: Dictionary, phase_map: Dictionary, tuning: Dictionary) -> Dictionary:
 	var errors: Array = []
-	for checked: Dictionary in [VALIDATION.validate_manifest(manifest), VALIDATION.validate_room(room, manifest), VALIDATION.validate_lighting(lighting)]:
+	for checked: Dictionary in [VALIDATION.validate_manifest(manifest), VALIDATION.validate_room(room, manifest), VALIDATION.validate_lighting(lighting), VALIDATION.validate_tuning(tuning)]:
 		errors.append_array(checked.errors)
 	if not errors.is_empty():
 		return {"ok": false, "error": {"code": "invalid_side_room", "errors": errors}}

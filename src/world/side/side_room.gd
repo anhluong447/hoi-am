@@ -106,10 +106,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		var door := TARGETS.find(_config.doors, _nearby)
 		if door.is_empty():
 			interaction_requested.emit(_nearby)
-		elif door.has("target_location"):
-			portal_requested.emit(str(door.target_location), str(door.target_spawn))
-		else:
+		elif door.has("target_room"):
 			door_requested.emit(str(door.target_room), str(door.target_spawn))
+		else:
+			portal_requested.emit(str(door.get("target_location", "")), str(door.target_spawn))
 		get_viewport().set_input_as_handled()
 	elif event.is_action_pressed("menu"):
 		menu_requested.emit()

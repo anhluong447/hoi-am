@@ -35,3 +35,17 @@ JSON có thể đổi representation int/float sau round-trip. `JsonData.equival
 so scalar numeric theo giá trị và recursively giữ đúng keys/order/types còn lại;
 không dùng tolerance cho migration save. File store dùng full float precision.
 Parity source dùng tolerance 1e-8 cho float, exact cho integer/IDs/events.
+
+## Bổ sung 2026-10-28: world envelope v2
+
+Envelope vẫn là v1; chỉ `world` lên **v2**. Phòng 2D side-scroll ghi
+`{"version":2,"location_id","room_id","x":finite,"facing":-1|1}`, phòng HD-2D ghi
+`{"version":2,"location_id","room_id","position":[3 finite]}`; có cả `x` và
+`position` (hoặc thiếu cả hai) là invalid và bị reject trước replacement.
+`save_contract.valid_world` vẫn thuần (không đọc file world). World v1 và
+legacy tile/press (`legacy_world`) giữ nguyên. Restore: v2 side với room thuộc
+đúng location side → vào room đó, đặt `x`/`facing` (x ngoài bounds dùng default
+spawn của room); v1, room HD-2D cũ của location nay là side, hoặc room không
+khớp → `travel(location, "travel")`. Không chuyển đổi tọa độ 3D sang 2D. Runtime
+cũ không đọc world v2 (không hứa forward compatibility). Fixtures thật và nguồn
+gốc: `tests/fixtures/saves/README.md`.

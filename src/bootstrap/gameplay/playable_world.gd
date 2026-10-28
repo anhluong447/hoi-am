@@ -36,26 +36,30 @@ static func travel(play: Node, location_id: String, spawn_id: String = "travel")
 static func enter_room(play: Node, room_id: String, spawn_id: String) -> void:
 	var locations := _locations()
 	var current: Dictionary = locations.get(play.controller.location_id, {})
-	if current.get("kind") != SIDE_KIND or not room_id.is_valid_identifier():
-		return
-	var room := LOADER.read_dictionary(str(current.rooms_path).path_join(room_id + ".json"))
-	var location_id := str(room.get("data", {}).get("location_id", ""))
-	var target: Dictionary = locations.get(location_id, {})
-	if not room.ok or target.get("kind") != SIDE_KIND or target.rooms_path != current.rooms_path:
-		return
-	_mount_side(play, target.rooms_path, room_id, spawn_id, location_id)
+	var room := _side_room(locations, current, room_id)
+	if not room.is_empty():
+		_mount_side(play, current.rooms_path, room_id, spawn_id, room.location_id)
 
 
+## World envelope v2: side rooms keep x/facing, HD-2D rooms keep position.
 static func snapshot(play: Node) -> Dictionary:
-	var world := {"version": 1, "location_id": play.controller.location_id, "room_id": play._room_id}
-	if not _is_side(play.room):
+	var world := {"version": 2, "location_id": play.controller.location_id, "room_id": play._room_id}
+	if _is_side(play.room):
+		world.x = play.room.player.position.x
+		world.facing = play.room.player.facing
+	else:
 		var p: Vector3 = play.room.player.position
 		world.position = [p.x, p.y, p.z]
 	return world
 
 
-## Side rooms restore to the location entry room travel spawn until envelope v2.
+## v2 side saves re-enter their room at the saved x (out-of-bounds x uses the
+## room default spawn); v1 and old HD-2D rooms of now-side locations use the
+## location travel spawn. HD-2D positions restore through safe_spawn.
 static func restore(play: Node, world: Dictionary) -> void:
+	if world.has("x") and _restore_side(play, world):
+		play.close_modal()
+		return
 	travel(play, world.location_id)
 	if _is_side(play.room):
 		play._refresh()
@@ -72,12 +76,35 @@ static func restore(play: Node, world: Dictionary) -> void:
 	play._refresh()
 
 
-static func _mount_side(play: Node, rooms_path: String, room_id: String, spawn_id: String, location_id: String) -> bool:
+static func _restore_side(play: Node, world: Dictionary) -> bool:
+	var locations := _locations()
+	var location: Dictionary = locations.get(world.location_id, {})
+	var room := _side_room(locations, location, world.room_id)
+	if room.get("location_id") != world.location_id:
+		return false
+	var spawn := str(room.default_spawn)
+	return _mount_side(play, location.rooms_path, world.room_id, spawn, world.location_id, float(world.x), int(world.facing))
+
+
+## Room data for `room_id` when it lives in `from`'s side rooms_path and names a
+## side location sharing that path; empty otherwise.
+static func _side_room(locations: Dictionary, from: Dictionary, room_id: String) -> Dictionary:
+	if from.get("kind") != SIDE_KIND or not room_id.is_valid_identifier():
+		return {}
+	var room := LOADER.read_dictionary(str(from.rooms_path).path_join(room_id + ".json"))
+	var data: Dictionary = room.get("data", {})
+	var target: Dictionary = locations.get(str(data.get("location_id", "")), {})
+	if not room.ok or target.get("kind") != SIDE_KIND or target.rooms_path != from.rooms_path:
+		return {}
+	return data
+
+
+static func _mount_side(play: Node, rooms_path: String, room_id: String, spawn_id: String, location_id: String, x: float = NAN, facing: int = 0) -> bool:
 	if not ROOMS.mount(play, {"kind": ROOMS.SIDE_KIND, "id": room_id}, rooms_path):
 		return false
 	play._room_id = room_id
 	play.controller.location_id = location_id
-	play.room.place_player(spawn_id)
+	play.room.place_player(spawn_id, x, facing)
 	return true
 
 
