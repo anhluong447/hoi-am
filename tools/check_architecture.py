@@ -15,6 +15,14 @@ ALLOWED = {
 }
 LITERAL = re.compile(r'''(?:&|\^)?("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')''')
 TEXT_PROPERTIES = "text|tooltip_text|placeholder_text|title|accessibility_name|accessibility_description"
+# (source doc, link target) pairs that cannot resolve: byte-locked hai-vong
+# imports (docs/design/SOURCES.json) link to source-repo files outside the
+# imported subset. Every other link in docs/design/ is still checked below.
+EXTERNAL_IMPORT_LINKS = {
+    ("docs/design/first3/FIRST-THREE-DAYS.md", "ADDING-CONTENT.md"),
+    ("docs/design/narrative/game_story_bible_v2.md", "../../history/narrative/game_story_bible.md"),
+    ("docs/design/narrative/game_story_bible_v2.md", "../../history/narrative/BIBLE-CLB-BAO-CHI-PROPOSAL.md"),
+}
 
 
 def json_dictionary(path):
@@ -110,13 +118,14 @@ def main():
             ):
                 issue(path, "Player-facing text in scene/resource")
     for path in (ROOT / "docs").rglob("*.md"):
-        if path.is_relative_to(ROOT / "docs/design"):
-            continue  # byte-locked import; see docs/design/SOURCES.json and check_reference.py
         for target in re.findall(r"\]\(([^)]+)\)", path.read_text(encoding="utf-8")):
             target = target.split("#", 1)[0].strip("<>")
             if not target or re.match(r"[a-zA-Z]+://", target):
                 continue
             if not (path.parent / target).exists():
+                key = (path.relative_to(ROOT).as_posix(), target)
+                if key in EXTERNAL_IMPORT_LINKS:
+                    continue  # byte-locked import; target lives outside the imported subset
                 issue(path, f"Broken documentation link: {target}")
     for message in issues:
         print(message)
