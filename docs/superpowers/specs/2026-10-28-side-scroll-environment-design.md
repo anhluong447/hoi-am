@@ -131,6 +131,13 @@ Concept hai-vong là tham chiếu mood/bố cục, không đưa vào build.
 
 ### 7.4 Render, ánh sáng, không khí
 
+**Cập nhật 2026-10-28 (người dùng):** Hồi Âm là game casual, phải chạy trên máy không có
+card rời; hiệu năng tối ưu sau, không đo tiếp ở đợt này. Cấu hình mặc định theo thiết kế
+(không phải số đo): **tắt HDR 2D và glow**, ánh sáng vẽ sẵn vào plate, tối đa 2 light
+runtime, vệt nắng là sprite additive, plate cỡ ~1920×1080 import lossless, renderer giữ
+Forward+ chờ kiểm tra iGPU. Evidence RTX tham khảo: `docs/world-side/evidence/e1-stress-v1/`.
+Các dòng dưới về HDR/glow chỉ là tùy chọn chất lượng cao, mặc định tắt.
+
 - Forward+, `use_hdr_2d` bật, `WorldEnvironment` nền Canvas có glow; UI coastal ở
   `CanvasLayer` trên Canvas Max Layer nên không bị glow/grade.
 - Ánh sáng chính **vẽ sẵn trong art**; runtime thêm tối đa vài light có động cơ (cửa sổ,
@@ -182,7 +189,7 @@ fixture hỏng, giữ đường legacy tile.
 | Mốc | Nội dung | Qua mốc khi |
 | --- | --- | --- |
 | E0 Nền tảng docs | Branch mới, nhập docs, decision 005, cập nhật AGENTS/ARCHITECTURE | Checks architecture/reference/content pass; hash docs nguồn ghi đủ |
-| E1 Prototype rủi ro | Phòng thử worst-case: HDR 2D + glow + 5 lớp + 3 light + 1 blur + bụi | Native trên máy dev (RTX 3050 Ti laptop, như HD08): p95 ≤16,7 ms ở 1080p, VRAM world ≤1 GB; 1440p chỉ đo để ghi. Chọn độ phân giải plate/nén theo kết quả |
+| E1 Prototype rủi ro (đã dừng 2026-10-28: chỉ có số RTX tham khảo, iGPU hoãn) | Phòng thử worst-case: HDR 2D + glow + 5 lớp + 3 light + 1 blur + bụi | Native trên máy dev (RTX 3050 Ti laptop, như HD08): p95 ≤16,7 ms ở 1080p, VRAM world ≤1 GB; 1440p chỉ đo để ghi. Chọn độ phân giải plate/nén theo kết quả |
 | E2 World2D core + greybox | Schema/validator, room loader, actor/camera, cửa, interaction, save v2, 7 phòng hộp xám | `verify.py` + `verify_native.py` pass; đi hết 7 phòng, cửa/travel đúng, save/load v1→v2 |
 | E3 Beauty corner Phòng số 3 | Placeholder AI đủ lớp, lighting 4 buổi, không khí, foreground | Người dùng xem bản chơi native; ảnh greyscale/gameplay size; bảng giờ làm từng asset |
 | E4 Phủ placeholder 6 phòng | Theo kit/quy trình chốt ở E3 | Evidence High/Low mỗi phòng, provenance đủ, hiệu năng native từng phòng |
