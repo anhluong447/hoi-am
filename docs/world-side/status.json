@@ -1,7 +1,9 @@
 {
   "E0": "complete",
-  "E1": "pending",
+  "E1": "complete",
   "E2": "pending",
   "E3": "pending",
-  "E4": "pending"
+  "E4": "pending",
+  "E1_report": "docs/world-side/evidence/e1-stress-v1/report.json",
+  "E1_note": "RTX reference only; Intel UHD measurement deferred by user 2026-10-28; recommendation set by design"
 }

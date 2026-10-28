@@ -1,0 +1,1301 @@
+{
+  "machine": {
+    "gpu": [
+      {
+        "Name": "SuperDisplay Virtual Adapter",
+        "DriverVersion": "3.47.17.59"
+      },
+      {
+        "Name": "Easy&Light Display HUB Virtual Display",
+        "DriverVersion": "4.6.5.0"
+      },
+      {
+        "Name": "Intel(R) UHD Graphics",
+        "DriverVersion": "30.0.101.1273"
+      },
+      {
+        "Name": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+        "DriverVersion": "32.0.16.1714"
+      }
+    ],
+    "cpu": {
+      "Name": "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz"
+    },
+    "os": {
+      "Caption": "Microsoft Windows 11 Home Single Language",
+      "Version": "10.0.26300"
+    },
+    "engine": {
+      "build": "steam",
+      "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+      "hex": 263938,
+      "major": 4,
+      "minor": 7,
+      "patch": 2,
+      "status": "stable",
+      "string": "4.7.2-stable (steam)",
+      "timestamp": 0
+    },
+    "adapter": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+    "adapter_vendor": "NVIDIA",
+    "adapter_api_version": "12_0",
+    "api": "d3d12",
+    "renderer": "forward_plus",
+    "screen": {
+      "index": 0,
+      "scale": 1.0,
+      "size": [
+        2560,
+        1440
+      ]
+    }
+  },
+  "protocol": {
+    "vsync": "disabled",
+    "cap_fps": 120,
+    "fixed_fps": false,
+    "warmup_seconds": 10.0,
+    "sample_seconds": 30.0,
+    "spec_id": "stress_v1",
+    "light_settings": {}
+  },
+  "repetitions": 3,
+  "inputs": {
+    "src/bootstrap/previews/side_stress_preview.gd": "96d848fe8debbf26b184c29f1a4fd44938d0fe57fb77ecae8eca514aa8e1b322",
+    "src/bootstrap/previews/side_stress_preview.tscn": "e0ad0dbe9e3152d1d7577df51a8d68ba3feb0493c0b8665552ab9a29001ac5e9",
+    "src/bootstrap/previews/side_stress_textures.gd": "00d11cde0ce61d25e9111e2238f6fa810d59dbaef27029b0d6a6e6f64f61fcb5",
+    "src/bootstrap/previews/side_stress_blur.gdshader": "65c487c9359c134af4778b742e846b4b85d8ae34559a14fec323bfe910063075",
+    "content/world2d/stress/stress_v1.json": "2d67dc495c4acb2abcb57e71f1bac4286bb62e6af491f07231a586b9d778af42",
+    "tests/profile_side_stress.gd": "41ff53bae6f3910ac7e503f4ece021bd5d97a7ba5f3600259d102f85fd533f01",
+    "tools/profile_side_stress.py": "03d5a9a07709f2c00e1cca5cef242f9267306cb69ce827ab40e669fbce446e98"
+  },
+  "samples_sha256": "e629d40d0f43647d6e456608b6b855e97afa7490302ddc3b995defbd6b1168f0",
+  "runs": [
+    {
+      "variant": "baseline",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "hdr_2d": false,
+      "frames": 3601,
+      "p50_ms": 8.322,
+      "p95_ms": 8.36,
+      "p99_ms": 8.383,
+      "vram_mib": 294.05859375,
+      "texture_mib": 221.30859375,
+      "gpu_p50_ms": 2.92899990081787,
+      "gpu_p95_ms": 3.09200000762939,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 1,
+      "glow": false,
+      "plate_import": "lossless",
+      "light_grid": false,
+      "window_size": [
+        1920,
+        1080
+      ],
+      "window_mode": 0,
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007116
+    },
+    {
+      "variant": "hdr",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.32,
+      "p95_ms": 8.362,
+      "p99_ms": 8.39,
+      "vram_mib": 314.30859375,
+      "texture_mib": 241.55859375,
+      "gpu_p50_ms": 2.68300008773804,
+      "gpu_p95_ms": 3.07399988174438,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 1,
+      "glow": false,
+      "plate_import": "lossless",
+      "light_grid": false,
+      "window_size": [
+        1920,
+        1080
+      ],
+      "window_mode": 0,
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007188
+    },
+    {
+      "variant": "hdr_glow",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.32,
+      "p95_ms": 8.359,
+      "p99_ms": 8.4,
+      "vram_mib": 344.68359375,
+      "texture_mib": 271.93359375,
+      "gpu_p50_ms": 2.88199996948242,
+      "gpu_p95_ms": 3.46900010108948,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 1,
+      "glow": true,
+      "plate_import": "lossless",
+      "light_grid": false,
+      "window_size": [
+        1920,
+        1080
+      ],
+      "window_mode": 0,
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007143
+    },
+    {
+      "variant": "hdr_glow_bptc",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.32,
+      "p95_ms": 8.354,
+      "p99_ms": 8.371,
+      "vram_mib": 232.18359375,
+      "texture_mib": 159.43359375,
+      "gpu_p50_ms": 2.40199995040894,
+      "gpu_p95_ms": 3.01399993896484,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 1,
+      "glow": true,
+      "plate_import": "vram_bptc",
+      "light_grid": false,
+      "window_size": [
+        1920,
+        1080
+      ],
+      "window_mode": 0,
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007104
+    },
+    {
+      "variant": "hdr_glow_lights32",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.321,
+      "p95_ms": 8.354,
+      "p99_ms": 8.377,
+      "vram_mib": 371.30859375,
+      "texture_mib": 298.55859375,
+      "gpu_p50_ms": 6.48999977111816,
+      "gpu_p95_ms": 7.04899978637695,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 1,
+      "glow": true,
+      "plate_import": "lossless",
+      "light_grid": true,
+      "window_size": [
+        1920,
+        1080
+      ],
+      "window_mode": 0,
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007177
+    },
+    {
+      "variant": "baseline",
+      "resolution": [
+        2560,
+        1440
+      ],
+      "hdr_2d": false,
+      "frames": 3601,
+      "p50_ms": 8.321,
+      "p95_ms": 8.355,
+      "p99_ms": 8.377,
+      "vram_mib": 352.37109375,
+      "texture_mib": 262.43359375,
+      "gpu_p50_ms": 3.0460000038147,
+      "gpu_p95_ms": 3.73799991607666,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 1,
+      "glow": false,
+      "plate_import": "lossless",
+      "light_grid": false,
+      "window_size": [
+        2560,
+        1440
+      ],
+      "window_mode": 4,
+      "viewport_size": [
+        2560.0,
+        1440.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007159
+    },
+    {
+      "variant": "hdr",
+      "resolution": [
+        2560,
+        1440
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.321,
+      "p95_ms": 8.356,
+      "p99_ms": 8.384,
+      "vram_mib": 387.49609375,
+      "texture_mib": 297.55859375,
+      "gpu_p50_ms": 3.57500004768372,
+      "gpu_p95_ms": 4.07800006866455,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 1,
+      "glow": false,
+      "plate_import": "lossless",
+      "light_grid": false,
+      "window_size": [
+        2560,
+        1440
+      ],
+      "window_mode": 4,
+      "viewport_size": [
+        2560.0,
+        1440.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007144
+    },
+    {
+      "variant": "hdr_glow",
+      "resolution": [
+        2560,
+        1440
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.323,
+      "p95_ms": 8.355,
+      "p99_ms": 8.379,
+      "vram_mib": 437.99609375,
+      "texture_mib": 348.05859375,
+      "gpu_p50_ms": 4.15500020980835,
+      "gpu_p95_ms": 4.53900003433228,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 1,
+      "glow": true,
+      "plate_import": "lossless",
+      "light_grid": false,
+      "window_size": [
+        2560,
+        1440
+      ],
+      "window_mode": 4,
+      "viewport_size": [
+        2560.0,
+        1440.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007161
+    },
+    {
+      "variant": "hdr_glow_bptc",
+      "resolution": [
+        2560,
+        1440
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.318,
+      "p95_ms": 8.358,
+      "p99_ms": 8.383,
+      "vram_mib": 325.49609375,
+      "texture_mib": 235.55859375,
+      "gpu_p50_ms": 4.46500015258789,
+      "gpu_p95_ms": 4.96500015258789,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 1,
+      "glow": true,
+      "plate_import": "vram_bptc",
+      "light_grid": false,
+      "window_size": [
+        2560,
+        1440
+      ],
+      "window_mode": 4,
+      "viewport_size": [
+        2560.0,
+        1440.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007126
+    },
+    {
+      "variant": "hdr_glow_lights32",
+      "resolution": [
+        2560,
+        1440
+      ],
+      "hdr_2d": true,
+      "frames": 2541,
+      "p50_ms": 11.461,
+      "p95_ms": 12.975,
+      "p99_ms": 13.527,
+      "vram_mib": 464.62109375,
+      "texture_mib": 374.68359375,
+      "gpu_p50_ms": 10.9840002059937,
+      "gpu_p95_ms": 12.5260000228882,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 1,
+      "glow": true,
+      "plate_import": "lossless",
+      "light_grid": true,
+      "window_size": [
+        2560,
+        1440
+      ],
+      "window_mode": 4,
+      "viewport_size": [
+        2560.0,
+        1440.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.010708
+    },
+    {
+      "variant": "baseline",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "hdr_2d": false,
+      "frames": 3601,
+      "p50_ms": 8.321,
+      "p95_ms": 8.356,
+      "p99_ms": 8.377,
+      "vram_mib": 294.05859375,
+      "texture_mib": 221.30859375,
+      "gpu_p50_ms": 2.3659999370575,
+      "gpu_p95_ms": 3.00699996948242,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 2,
+      "glow": false,
+      "plate_import": "lossless",
+      "light_grid": false,
+      "window_size": [
+        1920,
+        1080
+      ],
+      "window_mode": 0,
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.00714
+    },
+    {
+      "variant": "hdr",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.322,
+      "p95_ms": 8.356,
+      "p99_ms": 8.381,
+      "vram_mib": 314.30859375,
+      "texture_mib": 241.55859375,
+      "gpu_p50_ms": 2.42300009727478,
+      "gpu_p95_ms": 3.06599998474121,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 2,
+      "glow": false,
+      "plate_import": "lossless",
+      "light_grid": false,
+      "window_size": [
+        1920,
+        1080
+      ],
+      "window_mode": 0,
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007119
+    },
+    {
+      "variant": "hdr_glow",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.322,
+      "p95_ms": 8.355,
+      "p99_ms": 8.38,
+      "vram_mib": 344.68359375,
+      "texture_mib": 271.93359375,
+      "gpu_p50_ms": 2.66300010681152,
+      "gpu_p95_ms": 3.45700001716614,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 2,
+      "glow": true,
+      "plate_import": "lossless",
+      "light_grid": false,
+      "window_size": [
+        1920,
+        1080
+      ],
+      "window_mode": 0,
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007169
+    },
+    {
+      "variant": "hdr_glow_bptc",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.323,
+      "p95_ms": 8.354,
+      "p99_ms": 8.379,
+      "vram_mib": 232.18359375,
+      "texture_mib": 159.43359375,
+      "gpu_p50_ms": 2.79500007629395,
+      "gpu_p95_ms": 3.08299994468689,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 2,
+      "glow": true,
+      "plate_import": "vram_bptc",
+      "light_grid": false,
+      "window_size": [
+        1920,
+        1080
+      ],
+      "window_mode": 0,
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007124
+    },
+    {
+      "variant": "hdr_glow_lights32",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.322,
+      "p95_ms": 8.357,
+      "p99_ms": 8.382,
+      "vram_mib": 371.30859375,
+      "texture_mib": 298.55859375,
+      "gpu_p50_ms": 5.81300020217896,
+      "gpu_p95_ms": 6.46999979019165,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 2,
+      "glow": true,
+      "plate_import": "lossless",
+      "light_grid": true,
+      "window_size": [
+        1920,
+        1080
+      ],
+      "window_mode": 0,
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007148
+    },
+    {
+      "variant": "baseline",
+      "resolution": [
+        2560,
+        1440
+      ],
+      "hdr_2d": false,
+      "frames": 3601,
+      "p50_ms": 8.325,
+      "p95_ms": 8.379,
+      "p99_ms": 8.59,
+      "vram_mib": 352.37109375,
+      "texture_mib": 262.43359375,
+      "gpu_p50_ms": 2.97699999809265,
+      "gpu_p95_ms": 3.22900009155273,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 2,
+      "glow": false,
+      "plate_import": "lossless",
+      "light_grid": false,
+      "window_size": [
+        2560,
+        1440
+      ],
+      "window_mode": 4,
+      "viewport_size": [
+        2560.0,
+        1440.0
+      ],
+      "focused": false,
+      "elapsed_seconds": 30.007107
+    },
+    {
+      "variant": "hdr",
+      "resolution": [
+        2560,
+        1440
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.324,
+      "p95_ms": 8.359,
+      "p99_ms": 8.386,
+      "vram_mib": 387.49609375,
+      "texture_mib": 297.55859375,
+      "gpu_p50_ms": 3.28200006484985,
+      "gpu_p95_ms": 4.05700016021729,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 2,
+      "glow": false,
+      "plate_import": "lossless",
+      "light_grid": false,
+      "window_size": [
+        2560,
+        1440
+      ],
+      "window_mode": 4,
+      "viewport_size": [
+        2560.0,
+        1440.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007159
+    },
+    {
+      "variant": "hdr_glow",
+      "resolution": [
+        2560,
+        1440
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.325,
+      "p95_ms": 8.358,
+      "p99_ms": 8.381,
+      "vram_mib": 437.99609375,
+      "texture_mib": 348.05859375,
+      "gpu_p50_ms": 4.21299982070923,
+      "gpu_p95_ms": 5.07100009918213,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 2,
+      "glow": true,
+      "plate_import": "lossless",
+      "light_grid": false,
+      "window_size": [
+        2560,
+        1440
+      ],
+      "window_mode": 4,
+      "viewport_size": [
+        2560.0,
+        1440.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007134
+    },
+    {
+      "variant": "hdr_glow_bptc",
+      "resolution": [
+        2560,
+        1440
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.323,
+      "p95_ms": 8.362,
+      "p99_ms": 8.388,
+      "vram_mib": 325.49609375,
+      "texture_mib": 235.55859375,
+      "gpu_p50_ms": 4.46000003814697,
+      "gpu_p95_ms": 4.94199991226196,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 2,
+      "glow": true,
+      "plate_import": "vram_bptc",
+      "light_grid": false,
+      "window_size": [
+        2560,
+        1440
+      ],
+      "window_mode": 4,
+      "viewport_size": [
+        2560.0,
+        1440.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007075
+    },
+    {
+      "variant": "hdr_glow_lights32",
+      "resolution": [
+        2560,
+        1440
+      ],
+      "hdr_2d": true,
+      "frames": 2494,
+      "p50_ms": 12.094,
+      "p95_ms": 12.38,
+      "p99_ms": 12.577,
+      "vram_mib": 464.62109375,
+      "texture_mib": 374.68359375,
+      "gpu_p50_ms": 11.6540002822876,
+      "gpu_p95_ms": 11.9300003051758,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 2,
+      "glow": true,
+      "plate_import": "lossless",
+      "light_grid": true,
+      "window_size": [
+        2560,
+        1440
+      ],
+      "window_mode": 4,
+      "viewport_size": [
+        2560.0,
+        1440.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.004946
+    },
+    {
+      "variant": "baseline",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "hdr_2d": false,
+      "frames": 3601,
+      "p50_ms": 8.323,
+      "p95_ms": 8.353,
+      "p99_ms": 8.371,
+      "vram_mib": 294.05859375,
+      "texture_mib": 221.30859375,
+      "gpu_p50_ms": 2.34899997711182,
+      "gpu_p95_ms": 3.01399993896484,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 3,
+      "glow": false,
+      "plate_import": "lossless",
+      "light_grid": false,
+      "window_size": [
+        1920,
+        1080
+      ],
+      "window_mode": 0,
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.00712
+    },
+    {
+      "variant": "hdr",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.324,
+      "p95_ms": 8.353,
+      "p99_ms": 8.378,
+      "vram_mib": 314.30859375,
+      "texture_mib": 241.55859375,
+      "gpu_p50_ms": 2.53399991989136,
+      "gpu_p95_ms": 3.01999998092651,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 3,
+      "glow": false,
+      "plate_import": "lossless",
+      "light_grid": false,
+      "window_size": [
+        1920,
+        1080
+      ],
+      "window_mode": 0,
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007141
+    },
+    {
+      "variant": "hdr_glow",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.325,
+      "p95_ms": 8.355,
+      "p99_ms": 8.382,
+      "vram_mib": 344.68359375,
+      "texture_mib": 271.93359375,
+      "gpu_p50_ms": 3.01500010490417,
+      "gpu_p95_ms": 3.08200001716614,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 3,
+      "glow": true,
+      "plate_import": "lossless",
+      "light_grid": false,
+      "window_size": [
+        1920,
+        1080
+      ],
+      "window_mode": 0,
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007145
+    },
+    {
+      "variant": "hdr_glow_bptc",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.323,
+      "p95_ms": 8.358,
+      "p99_ms": 8.395,
+      "vram_mib": 232.18359375,
+      "texture_mib": 159.43359375,
+      "gpu_p50_ms": 2.45900011062622,
+      "gpu_p95_ms": 3.00500011444092,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 3,
+      "glow": true,
+      "plate_import": "vram_bptc",
+      "light_grid": false,
+      "window_size": [
+        1920,
+        1080
+      ],
+      "window_mode": 0,
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ],
+      "focused": false,
+      "elapsed_seconds": 30.007116
+    },
+    {
+      "variant": "hdr_glow_lights32",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.322,
+      "p95_ms": 8.357,
+      "p99_ms": 8.379,
+      "vram_mib": 371.30859375,
+      "texture_mib": 298.55859375,
+      "gpu_p50_ms": 5.78499984741211,
+      "gpu_p95_ms": 6.41400003433228,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 3,
+      "glow": true,
+      "plate_import": "lossless",
+      "light_grid": true,
+      "window_size": [
+        1920,
+        1080
+      ],
+      "window_mode": 0,
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007146
+    },
+    {
+      "variant": "baseline",
+      "resolution": [
+        2560,
+        1440
+      ],
+      "hdr_2d": false,
+      "frames": 3601,
+      "p50_ms": 8.321,
+      "p95_ms": 8.357,
+      "p99_ms": 8.382,
+      "vram_mib": 352.37109375,
+      "texture_mib": 262.43359375,
+      "gpu_p50_ms": 2.98399996757507,
+      "gpu_p95_ms": 3.24399995803833,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 3,
+      "glow": false,
+      "plate_import": "lossless",
+      "light_grid": false,
+      "window_size": [
+        2560,
+        1440
+      ],
+      "window_mode": 4,
+      "viewport_size": [
+        2560.0,
+        1440.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007106
+    },
+    {
+      "variant": "hdr",
+      "resolution": [
+        2560,
+        1440
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.321,
+      "p95_ms": 8.358,
+      "p99_ms": 8.389,
+      "vram_mib": 387.49609375,
+      "texture_mib": 297.55859375,
+      "gpu_p50_ms": 3.23600006103516,
+      "gpu_p95_ms": 3.53699994087219,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 3,
+      "glow": false,
+      "plate_import": "lossless",
+      "light_grid": false,
+      "window_size": [
+        2560,
+        1440
+      ],
+      "window_mode": 4,
+      "viewport_size": [
+        2560.0,
+        1440.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007166
+    },
+    {
+      "variant": "hdr_glow",
+      "resolution": [
+        2560,
+        1440
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.319,
+      "p95_ms": 8.36,
+      "p99_ms": 8.392,
+      "vram_mib": 437.99609375,
+      "texture_mib": 348.05859375,
+      "gpu_p50_ms": 4.19600009918213,
+      "gpu_p95_ms": 4.59999990463257,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 3,
+      "glow": true,
+      "plate_import": "lossless",
+      "light_grid": false,
+      "window_size": [
+        2560,
+        1440
+      ],
+      "window_mode": 4,
+      "viewport_size": [
+        2560.0,
+        1440.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007205
+    },
+    {
+      "variant": "hdr_glow_bptc",
+      "resolution": [
+        2560,
+        1440
+      ],
+      "hdr_2d": true,
+      "frames": 3601,
+      "p50_ms": 8.321,
+      "p95_ms": 8.357,
+      "p99_ms": 8.38,
+      "vram_mib": 325.49609375,
+      "texture_mib": 235.55859375,
+      "gpu_p50_ms": 4.01999998092651,
+      "gpu_p95_ms": 4.4210000038147,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 3,
+      "glow": true,
+      "plate_import": "vram_bptc",
+      "light_grid": false,
+      "window_size": [
+        2560,
+        1440
+      ],
+      "window_mode": 4,
+      "viewport_size": [
+        2560.0,
+        1440.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.007117
+    },
+    {
+      "variant": "hdr_glow_lights32",
+      "resolution": [
+        2560,
+        1440
+      ],
+      "hdr_2d": true,
+      "frames": 2444,
+      "p50_ms": 12.261,
+      "p95_ms": 13.155,
+      "p99_ms": 13.558,
+      "vram_mib": 464.62109375,
+      "texture_mib": 374.68359375,
+      "gpu_p50_ms": 11.8299999237061,
+      "gpu_p95_ms": 12.7019996643066,
+      "median_draw_calls": 10.0,
+      "over_16_7ms": 0,
+      "repetition": 3,
+      "glow": true,
+      "plate_import": "lossless",
+      "light_grid": true,
+      "window_size": [
+        2560,
+        1440
+      ],
+      "window_mode": 4,
+      "viewport_size": [
+        2560.0,
+        1440.0
+      ],
+      "focused": true,
+      "elapsed_seconds": 30.002495
+    }
+  ],
+  "recommendation": {
+    "hdr_2d": true,
+    "plate_import": "lossless",
+    "max_runtime_lights": 15
+  },
+  "basis": {
+    "budget_ms": 16.7,
+    "vram_budget_mib": 1024.0,
+    "hdr_worst_p95_1080p_ms": 8.362,
+    "hdr_glow_lossless_vram_1440p_mib": 437.99609375,
+    "hdr_glow_bptc_vram_1440p_mib": 325.49609375,
+    "plate_compare": {
+      "mse": 4.38330012170977e-06,
+      "psnr_db": 53.5819879246715,
+      "stride_px": 2
+    },
+    "lights32_worst_p95_1080p_ms": 8.357,
+    "probe_lights_lit": 15,
+    "probe_lights_total": 32,
+    "rules": {
+      "hdr_2d": "every hdr/hdr_glow repetition at 1920x1080 has p95 <= budget",
+      "plate_import": "lossless when hdr_glow lossless VRAM at 2560x1440 <= budget and its 1080p p95 <= budget, else vram_bptc",
+      "max_runtime_lights": "observed per-item light cap when every 32-light repetition at 1080p meets budget, else the 3 tested baseline lights"
+    }
+  },
+  "observations": {
+    "captures": {
+      "baseline": {
+        "image_size": [
+          1920,
+          1080
+        ],
+        "particles": true,
+        "phase_seconds": 0.5
+      },
+      "compare_lossless": {
+        "image_size": [
+          1920,
+          1080
+        ],
+        "particles": false,
+        "phase_seconds": 0.5
+      },
+      "compare_vram_bptc": {
+        "image_size": [
+          1920,
+          1080
+        ],
+        "particles": false,
+        "phase_seconds": 0.5
+      },
+      "hdr": {
+        "image_size": [
+          1920,
+          1080
+        ],
+        "particles": true,
+        "phase_seconds": 0.5
+      },
+      "hdr_glow": {
+        "image_size": [
+          1920,
+          1080
+        ],
+        "particles": true,
+        "phase_seconds": 0.5
+      },
+      "hdr_glow_bptc": {
+        "image_size": [
+          1920,
+          1080
+        ],
+        "particles": true,
+        "phase_seconds": 0.5
+      },
+      "hdr_glow_lights32": {
+        "image_size": [
+          1920,
+          1080
+        ],
+        "particles": true,
+        "phase_seconds": 0.5
+      },
+      "light_probe": {
+        "actor_luminance": [],
+        "image_size": [
+          1920,
+          1080
+        ],
+        "light_luminance": [
+          0.535866611533695,
+          0.535866611533695,
+          0.535866611533695,
+          0.535866611533695,
+          0.535866611533695,
+          0.535866611533695,
+          0.535866611533695,
+          0.535866611533695,
+          0.535866611533695,
+          0.535866611533695,
+          0.535866611533695,
+          0.535866611533695,
+          0.535866611533695,
+          0.535866611533695,
+          0.535866611533695,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "lights_lit": 15,
+        "lights_total": 32,
+        "particles": false,
+        "phase_seconds": 0.0,
+        "settings": {
+          "base": "hdr",
+          "id": "light_probe",
+          "probe": true
+        }
+      },
+      "night_normal_off": {
+        "actor_luminance": [
+          0.0743462886298119,
+          0.0856972104897693
+        ],
+        "image_size": [
+          1920,
+          1080
+        ],
+        "particles": false,
+        "phase_seconds": 0.0,
+        "settings": {
+          "base": "hdr_glow",
+          "extra_light": {
+            "color": [
+              1.0,
+              0.85,
+              0.65
+            ],
+            "energy": 1.5,
+            "offset": [
+              0.0,
+              300.0
+            ],
+            "texture_scale": 4.0
+          },
+          "id": "night_normal_off",
+          "light_height": 0.0,
+          "night": true,
+          "normal_map": false
+        }
+      },
+      "night_normal_on": {
+        "actor_luminance": [
+          0.0458098932408291,
+          0.0496284791343982
+        ],
+        "image_size": [
+          1920,
+          1080
+        ],
+        "particles": false,
+        "phase_seconds": 0.0,
+        "settings": {
+          "base": "hdr_glow",
+          "extra_light": {
+            "color": [
+              1.0,
+              0.85,
+              0.65
+            ],
+            "energy": 1.5,
+            "offset": [
+              0.0,
+              300.0
+            ],
+            "texture_scale": 4.0
+          },
+          "id": "night_normal_on",
+          "light_height": 0.0,
+          "night": true,
+          "normal_map": true
+        }
+      },
+      "night_normal_on_height": {
+        "actor_luminance": [
+          0.0575357044618556,
+          0.0633794949887374
+        ],
+        "image_size": [
+          1920,
+          1080
+        ],
+        "particles": false,
+        "phase_seconds": 0.0,
+        "settings": {
+          "base": "hdr_glow",
+          "extra_light": {
+            "color": [
+              1.0,
+              0.85,
+              0.65
+            ],
+            "energy": 1.5,
+            "offset": [
+              0.0,
+              300.0
+            ],
+            "texture_scale": 4.0
+          },
+          "id": "night_normal_on_height",
+          "light_height": 160.0,
+          "night": true,
+          "normal_map": true
+        }
+      }
+    },
+    "plate_compare": {
+      "mse": 4.38330012170977e-06,
+      "psnr_db": 53.5819879246715,
+      "stride_px": 2
+    }
+  }
+}

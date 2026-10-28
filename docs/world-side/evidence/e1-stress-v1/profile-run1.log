@@ -1,0 +1,14 @@
+Godot Engine v4.7.2.stable.steam.ed1daf0bf - https://godotengine.org
+D3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Ti Laptop GPU
+
+Side stress progress: 1/10 baseline 1920px
+Side stress progress: 2/10 hdr 1920px
+Side stress progress: 3/10 hdr_glow 1920px
+Side stress progress: 4/10 hdr_glow_bptc 1920px
+Side stress progress: 5/10 hdr_glow_lights32 1920px
+Side stress progress: 6/10 baseline 2560px
+Side stress progress: 7/10 hdr 2560px
+Side stress progress: 8/10 hdr_glow 2560px
+Side stress progress: 9/10 hdr_glow_bptc 2560px
+Side stress progress: 10/10 hdr_glow_lights32 2560px
+Side stress profile: 10 runs; real clock; completed

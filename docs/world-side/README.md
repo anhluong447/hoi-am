@@ -14,6 +14,8 @@ Trạng thái từng mốc ở [status.json](status.json).
   ở `docs/world-hd2d/status.json`.
 - **E1 Prototype rủi ro**: đo render worst-case (HDR 2D + glow + nhiều lớp +
   light + blur + hạt bụi) trên máy dev thật.
+  Evidence: [e1-stress-v1](evidence/e1-stress-v1/README.md) — chỉ tham chiếu RTX; đo iGPU
+  hoãn theo quyết định người dùng 2026-10-28, khuyến nghị đặt theo thiết kế casual.
 - **E2 World2D core + greybox**: schema/validator phòng, room loader, actor/
   camera, cửa, interaction, save envelope v2, bảy phòng hộp xám đi lại được.
 - **E3 Beauty corner**: Phòng số 3 với placeholder AI đủ lớp, lighting bốn

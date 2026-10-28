@@ -1,0 +1,43 @@
+{
+  "id": "stress_v1",
+  "plate_size": [3840, 2160],
+  "noise_downsample": 2,
+  "plates": [
+    {"id": "far", "scroll_scale": 0.15, "seed": 11, "frequency": 0.004, "opaque": true, "blur_lod": 3.0, "tint": [0.62, 0.72, 0.9]},
+    {"id": "mid_far", "scroll_scale": 0.4, "seed": 23, "frequency": 0.006, "opaque": false, "tint": [0.7, 0.75, 0.8]},
+    {"id": "mid", "scroll_scale": 0.7, "seed": 37, "frequency": 0.009, "opaque": false, "tint": [0.85, 0.8, 0.7]},
+    {"id": "play", "scroll_scale": 1.0, "seed": 41, "frequency": 0.012, "opaque": false, "tint": [0.9, 0.85, 0.8]},
+    {"id": "fore", "scroll_scale": 1.25, "seed": 53, "frequency": 0.02, "opaque": false, "tint": [0.4, 0.38, 0.36]}
+  ],
+  "foreground_from": 4,
+  "camera": {"pan_world_px": 1400, "period_seconds": 4.0},
+  "lights": [
+    {"offset": [-1100, -350], "color": [1.0, 0.82, 0.6], "energy": 1.4, "texture_scale": 7.0},
+    {"offset": [250, -150], "color": [0.65, 0.8, 1.0], "energy": 1.1, "texture_scale": 6.0},
+    {"offset": [1200, 300], "color": [1.0, 0.6, 0.45], "energy": 1.2, "texture_scale": 5.0}
+  ],
+  "light_texture_px": 256,
+  "light_grid": {"columns": 8, "rows": 4, "energy": 0.6, "texture_scale": 1.6, "color": [1.0, 0.9, 0.8]},
+  "sun_shaft": {"offset": [-600, -700], "size": [900, 3200], "rotation_degrees": -24, "color": [1.0, 0.88, 0.62, 0.35]},
+  "particles": {"amount": 120, "lifetime": 4.0, "seed": 7, "extents": [1900, 1060], "texture_px": 32, "scale": 1.5, "color": [1.0, 0.95, 0.85, 0.6]},
+  "environment": {"glow_intensity": 0.8, "glow_strength": 1.0, "glow_bloom": 0.1, "glow_hdr_threshold": 0.9},
+  "modulate": {"day": [0.95, 0.92, 0.88], "night": [0.16, 0.18, 0.3]},
+  "actors": [
+    {"position": [-320, 460], "size": [256, 512], "tint": [0.85, 0.55, 0.45]},
+    {"position": [320, 460], "size": [256, 512], "tint": [0.45, 0.6, 0.85]}
+  ],
+  "probe": {"lit_threshold": 0.08, "sample_radius_px": 3},
+  "variants": [
+    {"id": "baseline", "hdr_2d": false, "glow": false, "plate_import": "lossless", "light_grid": false},
+    {"id": "hdr", "hdr_2d": true, "glow": false, "plate_import": "lossless", "light_grid": false},
+    {"id": "hdr_glow", "hdr_2d": true, "glow": true, "plate_import": "lossless", "light_grid": false},
+    {"id": "hdr_glow_bptc", "hdr_2d": true, "glow": true, "plate_import": "vram_bptc", "light_grid": false},
+    {"id": "hdr_glow_lights32", "hdr_2d": true, "glow": true, "plate_import": "lossless", "light_grid": true}
+  ],
+  "captures": [
+    {"id": "night_normal_off", "base": "hdr_glow", "night": true, "normal_map": false, "light_height": 0, "extra_light": {"offset": [0, 300], "color": [1.0, 0.85, 0.65], "energy": 1.5, "texture_scale": 4.0}},
+    {"id": "night_normal_on", "base": "hdr_glow", "night": true, "normal_map": true, "light_height": 0, "extra_light": {"offset": [0, 300], "color": [1.0, 0.85, 0.65], "energy": 1.5, "texture_scale": 4.0}},
+    {"id": "night_normal_on_height", "base": "hdr_glow", "night": true, "normal_map": true, "light_height": 160, "extra_light": {"offset": [0, 300], "color": [1.0, 0.85, 0.65], "energy": 1.5, "texture_scale": 4.0}},
+    {"id": "light_probe", "base": "hdr", "probe": true}
+  ]
+}
