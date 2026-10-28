@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 from check_dialogue_motion import validate as validate_dialogue_motion
 from check_world_art import validate as validate_world_art
+from check_side_rooms import validate as validate_side_rooms
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -26,6 +27,7 @@ def ids(rows, field='id'):
 
 def main():
     validate_world_art()
+    validate_side_rooms()
     validate_dialogue_motion(read('content/ui/dialogue.json'))
     pack = read('content/gameplay/pack.json')
     stats, actors = ids(pack['stats']), ids(pack['roster'])
