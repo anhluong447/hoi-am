@@ -2,9 +2,12 @@
 
 ## Hướng đã chốt
 
-Game 2.5D lấy cảm hứng cách kết hợp sprite và không gian có chiều sâu của
-Octopath Traveller, với bản sắc tòa soạn ven biển riêng của Hồi Âm. Không nhập
-asset hoặc giả định chính xác pipeline nội bộ của tựa game tham khảo.
+Theo [ADR 005](decisions/005-side-scroll-2d.md) (2026-10-28), world chuyển sang
+**Godot 2D side-scroll**, đồ họa high-res painted, cinematic, lighting/effect đầy
+đủ, **không pixel art**. Hướng HD-2D/Octopath-style trước đó
+([ADR 004](decisions/004-hd2d-world.md)) được archive, không còn là mục tiêu world
+mới; mục "World (archived)" bên dưới giữ làm tài liệu lịch sử. Không nhập asset
+hoặc giả định chính xác pipeline nội bộ của tựa game tham khảo.
 
 Mốc trực quan chính cho khám phá là
 [03-hud-map.png](reference/coastal-editorial-v1/03-hud-map.png). Đây là concept,
@@ -23,13 +26,44 @@ UI tĩnh/motion ở source còn G2/G3 mở; port engine không tự đóng các 
 
 ## World
 
-- Theo hướng HD-2D đã được người dùng chốt, room/props lấy chi tiết từ art 2D
-  trên surface/cutout nhiều lớp; geometry đơn giản hỗ trợ collision và bóng.
-  Nhân vật sprite trên plane, di chuyển trên XZ. Xem [ADR 004](decisions/004-hd2d-world.md).
+Hướng hiện tại là 2D side-scroll high-res painted cinematic; chi tiết kỹ thuật ở
+[design doc](superpowers/specs/2026-10-28-side-scroll-environment-design.md) và
+skill `.claude/skills/making-story-side-scrollers/`.
+
+- **Colour script theo buổi**: mỗi phòng có preset Sáng/Chiều/Tối/Đêm
+  (`content/world2d/lighting/<room>.json`) — grade, màu/năng lượng light, màu
+  bóng, mật độ bụi, tint nước. Chuyển buổi nội suy preset, không hard-cut.
+- **Ánh sáng chủ yếu vẽ sẵn trong art** (painted light/shadow trong từng lớp);
+  runtime chỉ thêm tối đa vài light có động cơ (cửa sổ, đèn bàn), một vệt nắng
+  additive và `CanvasModulate`/grade theo buổi. Không rely runtime lighting để
+  tạo mood chính.
+- **Readability kiểm bằng greyscale**: mọi composition phải đọc được khối
+  sáng/tối khi bỏ màu trước khi coi là đạt; nhân vật phải nổi trên nền painted
+  ở mọi buổi, không bị hiệu ứng (bụi, glow, DOF) lấn át.
+- **Kit nhiều lớp**, không phải một background phẳng: sky/far/back/mid/actor/
+  foreground riêng theo `plane` trong content, mỗi lớp có `art_ref` riêng để
+  parallax và occlusion đúng; foreground che nhân vật theo `sort_y`/alpha, không
+  dùng một ảnh concept cắt dán làm nền tĩnh.
+- **Placeholder AI có provenance bắt buộc**: ảnh tạo bằng Codex CLI
+  (`image_generation`), prompt lưu ở `assets/world2d/<room>/source/prompts.json`,
+  `content/world2d/art_manifest_v1.json` ghi `status` (`placeholder_ai` |
+  `final`) và nguồn gốc (tool, prompt, ngày, hash). Placeholder không được coi
+  là art đã duyệt; thay art thật chỉ đổi file + manifest, không đổi layout,
+  collision hay code.
+- PC Forward+ là giả định ban đầu; HDR 2D/glow trên Canvas layer, UI coastal
+  nằm ngoài vùng glow/grade. Web/mobile chưa là acceptance target.
+- Toạ độ layout là world units độc lập độ phân giải ảnh (px/unit khai báo
+  trong art manifest); đổi ảnh khác độ phân giải không được đổi toạ độ.
+
+## World (archived — HD-2D, xem ADR 005)
+
+Mục này giữ nguyên làm tài liệu lịch sử cho hướng HD-2D trước đây
+([ADR 004](decisions/004-hd2d-world.md)); không còn là hướng triển khai tiếp.
+
+- Room/props lấy chi tiết từ art 2D trên surface/cutout nhiều lớp; geometry đơn
+  giản hỗ trợ collision và bóng. Nhân vật sprite trên plane, di chuyển trên XZ.
 - Camera góc nghiêng được kiểm soát. So perspective FOV nhỏ với orthographic ở
   blockout trước khi khóa, ghi camera transform/FOV/size trong evidence.
-- PC Forward+ là giả định ban đầu, phù hợp renderer đã chọn trong project.
-  Web/mobile chưa là acceptance target; nếu trở thành yêu cầu, xem lại renderer/budget.
 - Sprite nearest filtering, pixel density và projected size phải được thử cùng
   camera; tránh default billboard khiến silhouette nghiêng hoặc bóng như tấm bìa.
 - Nhận sáng, alpha depth và bóng của sprite có review riêng; dùng shadow proxy

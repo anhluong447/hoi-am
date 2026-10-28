@@ -19,6 +19,7 @@ content/                         JSON authored: text, definitions, balance, layo
   locales/vi.json                nguồn chữ duy nhất của runtime
   ui/bootstrap.json              text-key mapping của màn boot
   manifest.json                  version và đường dẫn pack đang dùng
+  world2d/                       room/art-manifest/lighting JSON của world 2D side-scroll (ADR 005)
 src/
   domain/                       rules/validators thuần, hai ruleset riêng
   application/game_session.gd    ownership và command boundary
@@ -27,7 +28,8 @@ src/
   presentation/bootstrap/        view scene/script nhận view model
   presentation/theme/            Theme resources và typography
   presentation/controllers/     gameplay/formula/text/dialogue/management models
-  world/                        room/actor/camera/atmosphere scene-script pairs
+  world/                        room/actor/camera/atmosphere scene-script pairs (HD-2D, archived)
+  world/side/                   world 2D side-scroll (ADR 005), rooms/actor/camera 2D
   bootstrap/main.*               composition root, startup và lifecycle
 assets/                         art/fonts/audio runtime và nguồn được chọn
 tests/                          headless contracts, sau đó parity/integration
@@ -132,7 +134,22 @@ cấu trúc nếu thiếu key/parameter. Không fallback thành key hoặc đo�
 View nhận text đã resolve; không bake chữ trong scene/image. Live language
 switching, fallback locale và pluralization chỉ thêm khi có yêu cầu thực tế.
 
-## World 2.5D
+## World 2D side-scroll
+
+Theo [ADR 005](decisions/005-side-scroll-2d.md): hướng triển khai hiện tại cho world
+là Godot 2D side-scroll, art high-res painted cinematic, không pixel. Code mới ở
+`src/world/side/`, content ở `content/world2d/` (schema room/art-manifest/lighting
+có validator thuần, theo [design doc]
+(superpowers/specs/2026-10-28-side-scroll-environment-design.md)). Tiến độ các mốc
+E0–E4 theo dõi ở `docs/world-side/status.json`. World 2D vẫn tuân thủ cùng ràng buộc
+ownership bên dưới (không giữ lịch/energy/tiền/save, chỉ emit target/location ID qua
+signal); location chưa có phòng 2D tạm thời vẫn dùng phòng HD-2D.
+
+## World 2.5D (archived — xem ADR 005)
+
+HD-2D không còn là hướng triển khai tiếp theo; mục này giữ nguyên làm tài liệu
+lịch sử cho workstream đã archive theo [ADR 004](decisions/004-hd2d-world.md).
+Code/content/evidence HD-2D giữ nguyên chỗ cho tới khi mọi location có phòng 2D.
 
 HD-2D workstream theo [ADR 004](decisions/004-hd2d-world.md): visual texture/layers
 tách khỏi collision/shadow/visibility proxies; composition inject world resources.

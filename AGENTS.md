@@ -3,6 +3,15 @@
 - This is the independent Godot migration target. Never modify `../hai-vong/`
   during migration. Read `docs/ARCHITECTURE.md`, `docs/DEVELOPMENT.md`, and the
   current chapter in `docs/migration/` before changing module boundaries.
+- Since 2026-10-28 ([ADR 005](docs/decisions/005-side-scroll-2d.md)) the world
+  direction is Godot 2D side-scrolling, high-res painted cinematic art, no pixel
+  art. New world code lives in `src/world/side/`, content in `content/world2d/`.
+  Imported design docs from hai-vong (`feat/first3-art-direction`) are the
+  current authoring reference, kept byte-exact under `docs/design/` with
+  provenance in `docs/design/SOURCES.json`. HD-2D (ADR 004) is archived, not
+  deleted, and is not the forward direction; do not build new HD-2D content.
+  Use the `making-story-side-scrollers` skill when planning a side-scroll
+  scene, chapter, or vertical slice.
 - No player-facing literals in GDScript, scenes, resources, shaders, or UI shells.
   Author text in `content/locales/vi.json`; resolve it through `TextCatalog`.
   Technical IDs, paths, and developer diagnostics are allowed. Do not bake

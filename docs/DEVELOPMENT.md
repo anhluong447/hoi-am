@@ -38,6 +38,12 @@ Chỉ sửa docs: chạy architecture/reference. Sửa runtime/content: chạy f
 Sau port gameplay: chạy thêm parity fixtures của chapter tương ứng. Sửa world/UI:
 chạy Godot thật với Forward+, kiểm tra input/focus/resize, rồi lưu evidence review.
 
+World 2D side-scroll ([ADR 005](decisions/005-side-scroll-2d.md)) thêm content ở
+`content/world2d/` và code ở `src/world/side/`; status mốc E0–E4 ở
+`docs/world-side/status.json`. `verify_native.py` sẽ thêm test native đi lại 7
+phòng side-scroll ở mốc E2 (xem plan); cho tới lúc đó, HD-2D vẫn là suite native
+hiện có cho các location chưa chuyển.
+
 Browser suite của hai-vong không áp dụng cho scene Godot. Source checkout giữ
 nguyên; reference baselines đã copy có hash lock. Khi cần oracle mới, công cụ
 đọc source phải viết output vào project này hoặc thư mục tạm, không vào hai-vong.

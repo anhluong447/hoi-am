@@ -110,6 +110,8 @@ def main():
             ):
                 issue(path, "Player-facing text in scene/resource")
     for path in (ROOT / "docs").rglob("*.md"):
+        if path.is_relative_to(ROOT / "docs/design"):
+            continue  # byte-locked import; see docs/design/SOURCES.json and check_reference.py
         for target in re.findall(r"\]\(([^)]+)\)", path.read_text(encoding="utf-8")):
             target = target.split("#", 1)[0].strip("<>")
             if not target or re.match(r"[a-zA-Z]+://", target):

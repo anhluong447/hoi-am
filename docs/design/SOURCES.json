@@ -1,0 +1,133 @@
+{
+  "repository": "https://github.com/anhluong447/hai-vong",
+  "branch": "feat/first3-art-direction",
+  "commit": "3aacdbccaa6e7c9f90baebb4926f0f3e2bfa479c",
+  "files": [
+    {
+      "source": "docs/design/narrative/ENVIRONMENTAL-STORYTELLING-PROLOGUE.md",
+      "target": "docs/design/narrative/ENVIRONMENTAL-STORYTELLING-PROLOGUE.md",
+      "sha256": "d81e732f1c41642f8189c984e54ec5c42f8c33ccf4c22fd16ff63a7afd0e3b68",
+      "bytes": 27148
+    },
+    {
+      "source": "docs/design/narrative/NARRATIVE-PROLOGUE-VISION.md",
+      "target": "docs/design/narrative/NARRATIVE-PROLOGUE-VISION.md",
+      "sha256": "daed71617a373fe9cd0f78f9f7551c6a770eb02669f4a88669f76365b2779dd8",
+      "bytes": 26084
+    },
+    {
+      "source": "docs/design/narrative/SCRIPT-EDITORIAL-REVIEW.md",
+      "target": "docs/design/narrative/SCRIPT-EDITORIAL-REVIEW.md",
+      "sha256": "18a2e85b4da67a8a24c6f8b9bc891b458d52fba41c5f2e7822919818e2418c54",
+      "bytes": 41458
+    },
+    {
+      "source": "docs/design/narrative/game_story_bible_v2.md",
+      "target": "docs/design/narrative/game_story_bible_v2.md",
+      "sha256": "79d32f7500cfd4aecd436ce5d04895034b379fb5e10064489eed231190a3d788",
+      "bytes": 121293
+    },
+    {
+      "source": "docs/design/narrative/script_opening_scenes.md",
+      "target": "docs/design/narrative/script_opening_scenes.md",
+      "sha256": "75b584db32cd00fa1a358f70e2c5340a20e6e521bb7a630c1ca9147d3465e7d2",
+      "bytes": 27889
+    },
+    {
+      "source": "docs/design/gameplay/GDD-Defense.md",
+      "target": "docs/design/gameplay/GDD-Defense.md",
+      "sha256": "a4b8b84bbe74c69156fee1a0e14d471b16dc28e20875b7bbb19cd57d7729aade",
+      "bytes": 46224
+    },
+    {
+      "source": "docs/design/gameplay/GDD-Attack.md",
+      "target": "docs/design/gameplay/GDD-Attack.md",
+      "sha256": "5aa48792fa67b0aa5279610f4aa9e9e4de19037245025427f3d2fd282a89f891",
+      "bytes": 44369
+    },
+    {
+      "source": "docs/design/gameplay/RULES.md",
+      "target": "docs/design/gameplay/RULES.md",
+      "sha256": "065dea2e24f3dcbb857017fb222d3659d6ba5fd27f023ba3f1e857881b77f21b",
+      "bytes": 4454
+    },
+    {
+      "source": "docs/history/narrative/First3Days.md",
+      "target": "docs/design/first3/First3Days.md",
+      "sha256": "f55787d3363ee2fb9a82e4ca171a67cf713b6dc2475924005d1d548aae3b2d30",
+      "bytes": 56630
+    },
+    {
+      "source": "docs/guides/FIRST-THREE-DAYS.md",
+      "target": "docs/design/first3/FIRST-THREE-DAYS.md",
+      "sha256": "a5cbb17e717871ee73b63e96f15d695479a5ed9f4d586f375c01146b6890c735",
+      "bytes": 5648
+    },
+    {
+      "source": "docs/design/concept/characters/Diệp Khuê Character Design Sheet.png",
+      "target": "docs/design/concept/characters/Diệp Khuê Character Design Sheet.png",
+      "sha256": "2a2b74d6981f3696d0c761b58151011d84919d5bef20b06bf05f2faabff29e3b",
+      "bytes": 2713151
+    },
+    {
+      "source": "docs/design/concept/characters/Hạ Tuyết Nhi Character Design Sheet.png",
+      "target": "docs/design/concept/characters/Hạ Tuyết Nhi Character Design Sheet.png",
+      "sha256": "083d213d1308adf0f9434270f3cf633f8a6a2056643568012d62d0376e7d6d7c",
+      "bytes": 2764177
+    },
+    {
+      "source": "docs/design/concept/characters/Hồi Âm_ Character Design Sheet.png",
+      "target": "docs/design/concept/characters/Hồi Âm_ Character Design Sheet.png",
+      "sha256": "369bc586860336a4803c08e636312bf4a9b8ddb09021fa22394626873dc769d5",
+      "bytes": 2745488
+    },
+    {
+      "source": "docs/design/concept/characters/Lục Thanh Vân Character Design Sheet.png",
+      "target": "docs/design/concept/characters/Lục Thanh Vân Character Design Sheet.png",
+      "sha256": "79b8ed3126c31367b98286336fffe3b56f242a67c8da67ee73b024c5e809dc30",
+      "bytes": 2743939
+    },
+    {
+      "source": "docs/design/concept/characters/Phan Gia Huy Character Design Sheet.png",
+      "target": "docs/design/concept/characters/Phan Gia Huy Character Design Sheet.png",
+      "sha256": "7355f29a5bf9231722b7adca19145661f995c6138b77e706a77c95bbe6a73f4d",
+      "bytes": 2612821
+    },
+    {
+      "source": "docs/design/concept/characters/Trần Đình Khoa Character Design Sheet.png",
+      "target": "docs/design/concept/characters/Trần Đình Khoa Character Design Sheet.png",
+      "sha256": "5221f3c882f9bdfe244b79ba9b441acdf95409af5d24b3915d256679d1a82f2c",
+      "bytes": 2667440
+    },
+    {
+      "source": "docs/design/concept/characters/Tạ Như Ngọc_ Hồi Âm Character Sheet.png",
+      "target": "docs/design/concept/characters/Tạ Như Ngọc_ Hồi Âm Character Sheet.png",
+      "sha256": "bba1dccdb0a5788de514af941dc60fb44315d6a41591927f2f43e1f699def8e8",
+      "bytes": 2893804
+    },
+    {
+      "source": "docs/design/concept/characters/Vũ Thảo Linh_ Character Design Sheet.png",
+      "target": "docs/design/concept/characters/Vũ Thảo Linh_ Character Design Sheet.png",
+      "sha256": "be5f63af99daa118f6e9c4143d7638b7d76113cb31cd88e4bb270e0e84607f19",
+      "bytes": 2550889
+    },
+    {
+      "source": "docs/design/concept/characters/Đoàn Bảo Long Character Design.png",
+      "target": "docs/design/concept/characters/Đoàn Bảo Long Character Design.png",
+      "sha256": "7d9ef62e8f16233e2f33cc8b06aa798dfba69715c8a4e14959cc05fdcf37bfca",
+      "bytes": 2619578
+    },
+    {
+      "source": "docs/design/concept/locations/Sunset_Corridor.png",
+      "target": "docs/design/concept/locations/Sunset_Corridor.png",
+      "sha256": "486ce436b656c7db3758c37c9c29542c49c7263128b093684bb9a5c89cf549bb",
+      "bytes": 2039529
+    },
+    {
+      "source": "docs/design/concept/locations/bao-chi-hoang-hon.png",
+      "target": "docs/design/concept/locations/bao-chi-hoang-hon.png",
+      "sha256": "72cb4c6ece528ffffa8ff18979254a3a9ad01b0c2dd7f72eef44ac2bb33a8166",
+      "bytes": 2087502
+    }
+  ]
+}
