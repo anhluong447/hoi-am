@@ -26,7 +26,9 @@ func _run() -> void:
 	root.add_child(play)
 	var state: Dictionary = play.setup.session.snapshot()
 	var locations: Dictionary = LOADER.read_dictionary("res://content/world/locations.json").data.locations
-	for id: String in ["club", "library", "cafe", "home", "shop", "job", "school", "waterfront"]:
+	# club/school/home moved to side-scroll rooms (Task 8); HD-2D coverage stays on the rest.
+	for id: String in ["library", "cafe", "shop", "job", "waterfront"]:
+		assert(not locations[id].has("kind"), "Only HD-2D locations run this suite")
 		play.travel(id)
 		await _frames(15)
 		var room: Node3D = play.room
@@ -40,7 +42,7 @@ func _run() -> void:
 		await _capture(id + "-low")
 		room.set_quality("high")
 		room.player.set_physics_process(false)
-		if id in ["school", "waterfront", "job"]:
+		if id in ["waterfront", "job"]:
 			for side: int in [-1, 1]:
 				room.player.position = room.safe_spawn(Vector3(side * 7.6, .05, 3.0))
 				room._motion._process(1.0)
@@ -63,11 +65,10 @@ func _run() -> void:
 			play.close_modal()
 			await _frames(30)
 		_suite.expect(play.setup.session.snapshot() == state, id + ": world/UI review leaves progression unchanged")
-		if id != "club":
-			play.restore_world({"version":1,"location_id":id,"room_id":id,"position":[0,.05,2.5]})
-			await _frames(8)
-			room = play.room
-			_suite.expect(room.player.position.distance_to(Vector3(0,.05,2.5)) < .1, id + ": legacy room ID restores valid position")
+		play.restore_world({"version":1,"location_id":id,"room_id":id,"position":[0,.05,2.5]})
+		await _frames(8)
+		room = play.room
+		_suite.expect(room.player.position.distance_to(Vector3(0,.05,2.5)) < .1, id + ": legacy room ID restores valid position")
 		var old: WeakRef = weakref(room)
 		var destination: String = room._config.portal.to
 		room.player.position = Vector3(0, .05, room._config.portal.position[2] - .8)

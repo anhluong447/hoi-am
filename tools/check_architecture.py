@@ -57,7 +57,9 @@ def main():
                     if key.endswith("_key") and (not isinstance(item, str) or item not in catalog):
                         issue(path, f"Unknown text key: {item}")
                     if key.endswith("_path") and isinstance(item, str) and item.startswith("res://"):
-                        if not (ROOT / item[6:]).is_file():
+                        target = ROOT / item[6:]
+                        # Directory references (e.g. rooms_path) end with "/" and must exist as folders.
+                        if not (target.is_dir() if item.endswith("/") else target.is_file()):
                             issue(path, f"Missing content resource: {item}")
                     walk(item)
             elif isinstance(value, list):

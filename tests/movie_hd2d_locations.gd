@@ -15,7 +15,8 @@ func _run() -> void:
 	var play := PLAY.instantiate()
 	root.add_child(play)
 	var state: Dictionary = play.setup.session.snapshot()
-	for id: String in ["club", "library", "cafe", "home", "shop", "job", "school", "waterfront"]:
+	# club/school/home are side-scroll rooms since Task 8; this movie covers HD-2D locations.
+	for id: String in ["library", "cafe", "shop", "job", "waterfront"]:
 		play.travel(id)
 		for frame: int in 300:
 			if frame == 60:

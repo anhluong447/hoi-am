@@ -6,6 +6,6 @@
 script = ExtResource("1")
 reading_room_extension = true
 
-[node name="World" type="Node3D" parent="."]
+[node name="World" type="Node" parent="."]
 
 [node name="Interface" type="CanvasLayer" parent="."]

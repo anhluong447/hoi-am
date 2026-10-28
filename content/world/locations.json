@@ -1,17 +1,8 @@
 {
   "schema_version": 1,
   "locations": {
-    "school": {
-      "room_id": "school_hd2d_v1",
-      "room_path": "res://content/world/school_hd2d_v1.json",
-      "prototype": false,
-      "art_acceptance": "user_pending"
-    },
-    "club": {
-      "room_id": "newsroom_hd2d_v1",
-      "room_path": "res://content/world/newsroom_hd2d_v1.json",
-      "prototype": false
-    },
+    "school": {"kind": "side", "entry_room": "school_gate_2d", "rooms_path": "res://content/world2d/rooms/", "prototype": false, "art_acceptance": "greybox"},
+    "club": {"kind": "side", "entry_room": "room3_2d", "rooms_path": "res://content/world2d/rooms/", "prototype": false, "art_acceptance": "greybox"},
     "library": {
       "room_id": "library_hd2d_v1",
       "room_path": "res://content/world/library_hd2d_v1.json",
@@ -42,12 +33,7 @@
       "prototype": false,
       "art_acceptance": "user_pending"
     },
-    "home": {
-      "room_id": "home_hd2d_v1",
-      "room_path": "res://content/world/home_hd2d_v1.json",
-      "prototype": false,
-      "art_acceptance": "user_pending"
-    }
+    "home": {"kind": "side", "entry_room": "home_room_2d", "rooms_path": "res://content/world2d/rooms/", "prototype": false, "art_acceptance": "greybox"}
   },
   "legacy_maps": {
     "yard": "school",

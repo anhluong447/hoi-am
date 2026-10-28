@@ -3,6 +3,7 @@ extends "res://tests/test_suite.gd"
 const PLAY = preload("res://src/bootstrap/gameplay/playable.tscn")
 const SESSION = preload("res://src/application/game_session.gd")
 const GRAPH = preload("res://src/domain/dialogue/dialogue_graph.gd")
+const CONTRACT = preload("res://src/domain/gameplay/save_contract.gd")
 
 
 func run() -> void:
@@ -12,6 +13,8 @@ func run() -> void:
 	await tree.physics_frame
 	await tree.physics_frame
 	var initial: Dictionary = play.setup.session.snapshot()
+	expect(play.room.has_method("safe_spawn_x") and play.room._config.id == "room3_2d" and play.controller.location_id == "club", "Playable starts in the side-scroll club room")
+	expect(play.room._light_phase == "sang", "Side room starts on the session phase light")
 	var graph: Dictionary = play.setup.data.playable_dialogue.scenes.club_welcome.duplicate(true)
 	graph.nodes.start.choices.reverse()
 	expect(GRAPH.choices(graph.nodes.start, initial)[1].id == "school", "Authored choice identity survives reordered layout")
@@ -28,6 +31,7 @@ func run() -> void:
 	for _frame: int in 24:
 		await tree.process_frame
 	expect(play.controller.modal.is_empty() and play.room._input_enabled, "End dialogue restores world input")
+	expect(play.room._light_phase == "chieu", "Refresh maps the new session phase onto side-room lighting")
 	var replay := SESSION.new(play.setup.rules.transition, play.setup.validator.validate)
 	replay.replace(initial)
 	replay.execute({"type": "school"})
@@ -50,6 +54,7 @@ func run() -> void:
 		play.open_workspace()
 		expect(not play.controller.workspace().rows.is_empty(), "Real management model " + section)
 	play.close_modal()
+	await _side_doors(tree, play, state)
 	play._quality = "low"
 	play.travel("library")
 	await tree.physics_frame
@@ -69,7 +74,12 @@ func run() -> void:
 	play.restore_world({"version": 1, "location_id": "unknown", "room_id": "missing", "position": [999, 0, 999]})
 	await tree.physics_frame
 	await tree.physics_frame
-	expect(play.controller.location_id == "club" and play.room.player.position.length() < 10, "Unknown room uses authored safe spawn")
+	expect(play.controller.location_id == "club" and play.room._config.id == "room3_2d" and is_equal_approx(play.room.player.position.x, 1600.0), "Unknown room uses the club entry room travel spawn")
+	var world: Dictionary = play.world_snapshot()
+	expect(world == {"version": 1, "location_id": "club", "room_id": "room3_2d"} and CONTRACT.valid_world(world), "Side-room snapshot keeps the v1 location/room shape")
+	play.restore_world({"version": 1, "location_id": "school", "room_id": "corridor_c_2d"})
+	await tree.physics_frame
+	expect(play.controller.location_id == "school" and play.room._config.id == "school_gate_2d" and play.room._input_enabled, "Side-room restore enters the location entry room")
 	play.queue_free()
 	await tree.process_frame
 	await tree.process_frame
@@ -86,3 +96,34 @@ func run() -> void:
 	expect(result.ok and extension.setup.validator.validate(extension.setup.session.snapshot()).ok, "New authored case uses existing command and schema")
 	extension.queue_free()
 	await tree.process_frame
+
+
+func _side_doors(tree: SceneTree, play: Node, state: Dictionary) -> void:
+	play.room.place_player("travel", 3100.0)
+	await tree.physics_frame
+	await tree.physics_frame
+	expect(play.room._nearby == "to_corridor", "Player stands at the corridor door")
+	var event := InputEventAction.new()
+	event.action = "interact"
+	event.pressed = true
+	play.room._unhandled_input(event)
+	expect(not play.room._input_enabled, "Door request locks the mounted room")
+	await tree.process_frame
+	await tree.physics_frame
+	expect(play.room._config.id == "corridor_c_2d" and play.controller.location_id == "school", "Cross-location door enters the authored target room")
+	expect(is_equal_approx(play.room.player.position.x, 4500.0), "Door honours the authored target spawn")
+	expect(play.setup.session.snapshot() == state, "Walking through doors costs no gameplay time")
+	var old: WeakRef = weakref(play.room)
+	play.room.door_requested.emit("class_11a3_2d", "from_corridor")
+	play.room.door_requested.emit("canteen_2d", "from_corridor")
+	await tree.process_frame
+	await tree.process_frame
+	expect(play.room._config.id == "class_11a3_2d" and play.get_node("World").get_child_count() == 1, "Two door requests in one frame mount exactly one room")
+	expect(old.get_ref() == null, "Door transition frees the previous room")
+	expect(play.room._input_enabled, "Mounted room input reopens after the door transition")
+	play.interact("van")
+	expect(not play.room._input_enabled, "Dialogue locks side-room input")
+	play.close_modal()
+	for _frame: int in 24:
+		await tree.process_frame
+	expect(play.room._input_enabled, "Closing dialogue reopens side-room input")

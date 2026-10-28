@@ -6,6 +6,7 @@ signal back_requested
 const STARTUP = preload("res://src/bootstrap/project_startup.gd")
 const CONTROLLER = preload("res://src/presentation/controllers/play_controller.gd")
 const ROOMS = preload("res://src/bootstrap/gameplay/playable_rooms.gd")
+const WORLD = preload("res://src/bootstrap/gameplay/playable_world.gd")
 const HUD = preload("res://src/presentation/coastal/hud_view.tscn")
 const DIALOGUE = preload("res://src/presentation/coastal/dialogue_view.tscn")
 const WORKSPACE = preload("res://src/presentation/workspace/workspace_view.tscn")
@@ -15,7 +16,7 @@ const CONFIRM = preload("res://src/bootstrap/gameplay/personal_confirmation.gd")
 
 var setup: Dictionary
 var controller: RefCounted
-var room: Node3D
+var room: Node
 var _hud: Control
 var _modal: Control
 var _saves: Node
@@ -31,10 +32,7 @@ func _ready() -> void:
 	assert(setup.ok, "Playable content must validate")
 	_resources = STARTUP.ui_resources(setup.data)
 	controller = CONTROLLER.new(setup.session, setup.text, setup.data)
-	var locations := LOADER.read_dictionary("res://content/world/locations.json")
-	var entry: Dictionary = locations.data.locations.club
-	_room_id = entry.room_id
-	_mount_room(LOADER.read_dictionary(entry.room_path).data)
+	WORLD.mount_location(self, "club")
 	if reading_room_extension:
 		controller.location_id = "library"
 		_room_id = "reading_room_extension"
@@ -192,34 +190,21 @@ func _clear_modal() -> void:
 
 func _refresh() -> void:
 	_hud.render(controller.hud())
+	if room.has_method("set_lighting_phase"):
+		room.set_lighting_phase(setup.session.snapshot().phase)
 
 
-func travel(id: String) -> void:
-	var loaded := LOADER.read_dictionary("res://content/world/locations.json")
-	if not loaded.ok or not loaded.data.locations.has(id):
-		id = "club"
-	var definition: Dictionary = loaded.data.locations[id]
-	var config := LOADER.read_dictionary(definition.room_path)
-	_room_id = definition.room_id
-	controller.location_id = id
-	_mount_room(config.data)
-	close_modal()
+func travel(id: String, spawn_id: String = "travel") -> void:
+	WORLD.travel(self, id, spawn_id)
+
+
+func enter_room(room_id: String, spawn_id: String) -> void:
+	WORLD.enter_room(self, room_id, spawn_id)
 
 
 func world_snapshot() -> Dictionary:
-	var p: Vector3 = room.player.position
-	return {"version": 1, "location_id": controller.location_id, "room_id": _room_id, "position": [p.x, p.y, p.z]}
+	return WORLD.snapshot(self)
 
 
 func restore_world(world: Dictionary) -> void:
-	travel(world.location_id)
-	room.set_input_enabled(false)
-	await get_tree().physics_frame
-	if not is_inside_tree():
-		return
-	var compatible: bool = world.room_id == _room_id or room.accepts_saved_room(world.room_id)
-	var position: Array = world.get("position", [INF, INF, INF]) if compatible else [INF, INF, INF]
-	room.player.position = room.safe_spawn(Vector3(position[0], position[1], position[2]))
-	room.player.velocity = Vector3.ZERO
-	room.set_input_enabled(controller.modal.is_empty())
-	_refresh()
+	await WORLD.restore(self, world)

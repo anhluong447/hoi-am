@@ -7,6 +7,8 @@ const ROOM = preload("res://src/world/rooms/newsroom/newsroom.tscn")
 const HUD = preload("res://src/presentation/coastal/hud_view.tscn")
 const RESOURCES = preload("res://src/bootstrap/world_resources.gd")
 const LOADER = preload("res://src/infrastructure/content/json_content_loader.gd")
+## Isolated HD-2D preview: club now enters a side-scroll room, so name the pack.
+const NEWSROOM_PATH := "res://content/world/newsroom_hd2d_v1.json"
 
 var room: Node3D
 var _hud: Control
@@ -23,7 +25,7 @@ func _ready() -> void:
 		get_tree().quit(1)
 		return
 	_text = setup.text
-	_config = LOADER.read_dictionary(setup.data.locations.locations.club.room_path).data
+	_config = LOADER.read_dictionary(NEWSROOM_PATH).data
 	room = ROOM.instantiate()
 	var prepared := RESOURCES.prepare(_config, STARTUP.actor_textures(setup.data), setup.text)
 	assert(prepared.ok, "World preview resources must validate")

@@ -86,7 +86,13 @@ def main():
     assert len(formula['policies']) == 8 and len(formula['subjects']) == 96
     locations = read('content/world/locations.json')['locations']
     assert set(locations) == ids(pack['places'])
-    for definition in locations.values():
+    for location_id, definition in locations.items():
+        if definition.get('kind') == 'side':
+            assert definition['rooms_path'] == 'res://content/world2d/rooms/', location_id
+            entry = read(definition['rooms_path'][6:] + definition['entry_room'] + '.json')
+            assert entry['id'] == definition['entry_room'] and entry['location_id'] == location_id, location_id
+            assert entry['default_spawn'] == 'travel' and 'travel' in entry['spawns'], location_id
+            continue
         authored = read(definition['room_path'][6:])
         assert authored['id'] == definition['room_id']
         assert authored['portal']['to'] in locations

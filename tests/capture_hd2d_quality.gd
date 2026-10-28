@@ -19,6 +19,8 @@ func _run() -> void:
 	root.content_scale_mode = Window.CONTENT_SCALE_MODE_CANVAS_ITEMS
 	var play := PLAY.instantiate()
 	root.add_child(play)
+	# Club now mounts a side-scroll room (Task 8); this HD-2D evidence keeps the newsroom pack.
+	play._mount_room(preload("res://src/infrastructure/content/json_content_loader.gd").read_dictionary("res://content/world/newsroom_hd2d_v1.json").data)
 	var sun: DirectionalLight3D = play.room.get_node("WindowSun")
 	var energy := sun.light_energy
 	var count := 0

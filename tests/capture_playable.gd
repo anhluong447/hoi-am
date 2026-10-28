@@ -21,6 +21,8 @@ func _run() -> void:
 	DirAccess.make_dir_recursive_absolute(_output)
 	_play = PLAY.instantiate()
 	root.add_child(_play)
+	# Club now mounts a side-scroll room (Task 8); this HD-2D evidence keeps the newsroom pack.
+	_play._mount_room(preload("res://src/infrastructure/content/json_content_loader.gd").read_dictionary("res://content/world/newsroom_hd2d_v1.json").data)
 	for _frame: int in 40:
 		await physics_frame
 	await _capture("room-high")
@@ -58,7 +60,7 @@ func _run() -> void:
 	_play.close_modal()
 	_play.travel("library")
 	await _capture("extension-library")
-	_play.travel("club")
+	_play._mount_room(preload("res://src/infrastructure/content/json_content_loader.gd").read_dictionary("res://content/world/newsroom_hd2d_v1.json").data)
 	_play.room.set_camera_preset("perspective")
 	await _capture("room-perspective")
 	var file := FileAccess.open(_output.path_join("integrated-state.json"), FileAccess.WRITE)

@@ -143,6 +143,17 @@ func _playable_checks() -> void:
 	await _settle()
 	for dimensions: Vector2i in [Vector2i(1280, 720), Vector2i(1920, 1080)]:
 		root.size = dimensions
+		play.room.place_player("travel", 1800.0)
+		for _frame: int in 3:
+			await physics_frame
+		await _settle()
+		var anchor: Dictionary = play.room.anchor_for("van")
+		var box: Control = play._hud._prompt_box
+		var centre: float = box.get_global_rect().get_center().x
+		_suite.expect(play._nearby == "van" and anchor.visible and box.visible, "Side-room prompt shows for nearby target at " + str(dimensions))
+		_suite.expect(absf(centre - anchor.position.x) < 2.0 and box.get_global_rect().end.y <= anchor.position.y, "Side-room prompt sits above its canvas anchor at " + str(dimensions))
+	for dimensions: Vector2i in [Vector2i(1280, 720), Vector2i(1920, 1080)]:
+		root.size = dimensions
 		play.open_workspace()
 		await _settle()
 		var panel: PanelContainer = play._modal.get_child(1)

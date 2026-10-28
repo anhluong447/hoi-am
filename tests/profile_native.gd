@@ -14,6 +14,8 @@ func _run() -> void:
 	var started := Time.get_ticks_usec()
 	var play := PLAY.instantiate()
 	root.add_child(play)
+	# Club now mounts a side-scroll room (Task 8); this HD-2D evidence keeps the newsroom pack.
+	play._mount_room(preload("res://src/infrastructure/content/json_content_loader.gd").read_dictionary("res://content/world/newsroom_hd2d_v1.json").data)
 	await process_frame
 	var load_ms := (Time.get_ticks_usec() - started) / 1000.0
 	var rid := root.get_viewport_rid()

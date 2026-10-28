@@ -23,6 +23,7 @@
 | Reading-room extension stays in its F6 scene | Rehearse extension without altering baseline gameplay content | New room/NPC/graph/case work through existing handlers; Vân sprite explicitly used as temporary stand-in |
 | High/Low and effect A/B are renderer-only | Readable sprites/UI and a measurable device budget | Native profile/captures; fog/glow not enabled by default; far DOF stays off UI canvas |
 | Save uses full float precision and semantic JSON equality | Serialization can change integral numeric representation | No float rounding or tolerance is used to hide save changes |
+| Club, school and home enter side-scroll greybox rooms | Side-scroll pivot (ADR 005); other locations stay HD-2D until migrated | Playable/native tests; doors cost no time; side-room saves keep envelope v1 location/room and restore to the entry room travel spawn until envelope v2 |
 
 The gameplay packs remain mock mechanics. The story bible remains reference
 material with its existing proposal/canon distinctions. Captured dialogue graphs

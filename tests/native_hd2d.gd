@@ -3,6 +3,7 @@ extends SceneTree
 
 const PLAY = preload("res://src/bootstrap/gameplay/playable.tscn")
 const SUITE = preload("res://tests/test_suite.gd")
+const LOADER = preload("res://src/infrastructure/content/json_content_loader.gd")
 var _suite := SUITE.new()
 var _output := ""
 
@@ -23,6 +24,11 @@ func _run() -> void:
 	root.content_scale_aspect = Window.CONTENT_SCALE_ASPECT_KEEP
 	var play := PLAY.instantiate()
 	root.add_child(play)
+	await _frames(15)
+	# Club now enters the side-scroll room3_2d; the newsroom HD-2D pack keeps its
+	# art/depth coverage by mounting through the same composition helper.
+	_suite.expect(play.room.has_method("safe_spawn_x") and play.controller.location_id == "club", "Playable club mounts the side-scroll room")
+	play._mount_room(LOADER.read_dictionary("res://content/world/newsroom_hd2d_v1.json").data)
 	await _frames(15)
 	_suite.expect(play.room.has_node("Visuals") and play.room.get_node("Visuals").get_child_count() >= 40, "Playable mounts complete 2D-art newsroom")
 	_suite.expect(play.room.get_node("Geometry").get_children().all(func(body: Node) -> bool: return not body.get_child(0).visible or body.get_child(0).cast_shadow == GeometryInstance3D.SHADOW_CASTING_SETTING_SHADOWS_ONLY), "No solid blockout geometry renders in selected world")
@@ -45,10 +51,11 @@ func _run() -> void:
 		play.room.player.move_and_slide()
 		await physics_frame
 	_suite.expect(play.room.player.position.z >= 0.25, "Painted desk retains solid collision")
-	play.restore_world({"version":1,"location_id":"club","room_id":"newsroom_sample","position":[0,0.05,2.5]})
+	# Legacy restores retarget to library, which remains an HD-2D location.
+	play.restore_world({"version":1,"location_id":"library","room_id":"library","position":[0,0.05,2.5]})
 	await _frames(12)
 	_suite.expect(absf(play.room.player.position.z - 2.5) < 0.05, "Legacy room ID restores a valid position in selected pack")
-	play.restore_world({"version":1,"location_id":"club","room_id":"newsroom_sample","position":[-1,0.05,-0.6]})
+	play.restore_world({"version":1,"location_id":"library","room_id":"library","position":[-1,0.05,-0.6]})
 	await _frames(12)
 	_suite.expect(play.room.player.position.distance_to(Vector3(0,0.05,2.9)) < 0.1, "Legacy position inside furniture falls back safely")
 	play.interact("van")
@@ -61,11 +68,11 @@ func _run() -> void:
 	_suite.expect(not play.room._input_enabled, "World remains locked during dialogue reverse exit")
 	await _frames(24)
 	_suite.expect(play.room._input_enabled, "World unlocks after dialogue closes")
+	play.travel("cafe")
+	await _frames(10)
 	play.travel("library")
 	await _frames(10)
-	play.travel("club")
-	await _frames(10)
-	_suite.expect(play.room.has_node("Visuals") and play.controller.location_id == "club", "Travel remounts injected world art without losing location ID")
+	_suite.expect(play.room.has_node("Visuals") and play.controller.location_id == "library", "Travel remounts injected world art without losing location ID")
 	var motion: Node = play.room._motion
 	play.room.player.set_physics_process(false)
 	play.room.player.position.x += 2.0
