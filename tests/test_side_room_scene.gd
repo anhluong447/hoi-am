@@ -48,7 +48,7 @@ func _room() -> Dictionary:
 			{"id": "beam", "art_ref": "greybox.pillar", "position": [2000.0, 1100.0], "sort_y": 1100.0, "occludes_actor": true},
 		],
 		"doors": [
-			{"id": "to_hall", "x": 200.0, "width": 120.0, "target_room": "hall_2d", "target_spawn": "from_corridor"},
+			{"id": "to_hall", "x": 200.0, "width": 120.0, "target_room": "hall_2d", "target_spawn": "from_corridor", "label_key": "ui.common.quit"},
 			{"id": "to_club", "x": 2800.0, "width": 120.0, "target_room": "room3_2d", "target_spawn": "from_corridor", "target_location": "club"},
 		],
 		"interactions": [
@@ -148,7 +148,12 @@ func run() -> void:
 
 	room.place_player("left", 200.0)
 	await _frames(2)
-	expect(nearby == ["board", ""], "Leaving the target clears nearby")
+	expect(nearby == ["board", "to_hall"], "Nearby id also tracks a nearby door")
+	expect(room.target_label_key("to_hall") == "ui.common.quit", "Door prompt label key resolves via target_label_key")
+	expect(room.target_label_key("to_club") == "", "Door without a label_key has no prompt")
+	await Engine.get_main_loop().process_frame
+	var door_anchor: Dictionary = room.anchor_for("to_hall")
+	expect(door_anchor.visible and door_anchor.position is Vector2, "Door anchor resolves like an interaction anchor")
 	_interact(room)
 	expect(doors == [["hall_2d", "from_corridor"]] and portals.is_empty(), "Same-location door emits door_requested")
 	room.place_player("left", 2800.0)

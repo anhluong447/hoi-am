@@ -1,0 +1,38 @@
+{
+  "kind": "side_room_v1",
+  "id": "room3_2d",
+  "location_id": "club",
+  "title_key": "content.world2d.rooms.room3_2d.title",
+  "height": 1080,
+  "bounds": {"min_x": 0.0, "max_x": 3200.0},
+  "floor_y": 900.0,
+  "default_spawn": "travel",
+  "spawns": {
+    "travel": {"x": 1600.0, "facing": 1},
+    "from_corridor": {"x": 3000.0, "facing": -1}
+  },
+  "layers": [
+    {"id": "sky", "plane": "sky", "scroll_scale": 1.0, "art_ref": "greybox.sky.room3", "position": [0.0, 0.0], "z": 0},
+    {"id": "back", "plane": "back", "scroll_scale": 1.0, "art_ref": "greybox.back.room3", "position": [0.0, 0.0], "z": 0},
+    {"id": "mid", "plane": "mid", "scroll_scale": 1.0, "art_ref": "greybox.mid.room3", "position": [0.0, 800.0], "z": 0}
+  ],
+  "props": [
+    {"id": "club_pillar", "art_ref": "greybox.prop.pillar", "position": [2900.0, 900.0], "sort_y": 920.0, "occludes_actor": true},
+    {"id": "editing_desk", "art_ref": "greybox.prop.desk", "position": [400.0, 900.0], "sort_y": 900.0, "occludes_actor": true}
+  ],
+  "doors": [
+    {"id": "to_corridor", "x": 3100.0, "width": 100.0, "target_room": "corridor_c_2d", "target_spawn": "from_room3", "target_location": "school", "label_key": "content.world2d.rooms.corridor_c_2d.title"}
+  ],
+  "interactions": [
+    {"id": "writing-desk", "x": 400.0, "width": 100.0, "label_key": "content.maps.definitions.ban_lam_viec_khue", "anchor_y": 850.0},
+    {"id": "assignment-board", "x": 900.0, "width": 100.0, "label_key": "content.maps.definitions.bang_phan_cong", "anchor_y": 820.0},
+    {"id": "archive", "x": 1300.0, "width": 100.0, "label_key": "content.maps.definitions.tu_ho_so", "anchor_y": 800.0},
+    {"id": "van", "x": 1800.0, "width": 100.0, "label_key": "content.gameplay.definitions.luc_thanh_van", "anchor_y": 830.0},
+    {"id": "printer", "x": 2200.0, "width": 100.0, "label_key": "content.maps.definitions.may_in_doi_soan", "anchor_y": 850.0},
+    {"id": "club-clock", "x": 2600.0, "width": 100.0, "label_key": "content.maps.definitions.dong_ho_clb", "anchor_y": 800.0}
+  ],
+  "actors": [
+    {"id": "van", "actor_ref": "van", "x": 1800.0, "facing": -1}
+  ],
+  "lighting_ref": "room3"
+}

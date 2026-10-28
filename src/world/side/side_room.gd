@@ -14,6 +14,7 @@ const ACTOR = preload("res://src/world/side/side_actor.tscn")
 const CAMERA = preload("res://src/world/side/side_camera.gd")
 const LAYERS = preload("res://src/world/side/side_layers.gd")
 const TARGETS = preload("res://src/world/side/side_targets.gd")
+const DOORS = preload("res://src/world/side/side_doors.gd")
 const MOTION = preload("res://src/world/side/side_motion.gd")
 const LIGHTING = preload("res://src/world/side/side_lighting.gd")
 const ATMOSPHERE = preload("res://src/world/side/side_atmosphere.gd")
@@ -71,13 +72,7 @@ func _ready() -> void:
 	player.configure(null, height, _tuning)
 	player.z_index = LAYERS.ACTOR_Z
 	actors.add_child(player)
-	var markers := _group("Targets")
-	for definition: Dictionary in _config.interactions:
-		var marker := Node2D.new()
-		marker.name = str(definition.id)
-		marker.position = Vector2(float(definition.x), float(definition.anchor_y))
-		markers.add_child(marker)
-		_markers[definition.id] = marker
+	_markers = DOORS.build_targets(_group("Targets"), _config.interactions, _config.doors, floor_y, height)
 	camera = CAMERA.new()
 	camera.name = "Camera"
 	add_child(camera)
@@ -92,7 +87,7 @@ func _physics_process(delta: float) -> void:
 	if _input_enabled:
 		player.move(axis, delta, _config.bounds)
 	camera.follow(player.position.x, delta, _reduced)
-	var nearest := TARGETS.nearest(_config.interactions, player.position.x) if _input_enabled else ""
+	var nearest := DOORS.nearby(_config.interactions, _config.doors, player.position.x) if _input_enabled else ""
 	if nearest != _nearby:
 		_nearby = nearest
 		nearby_changed.emit(nearest)
@@ -106,14 +101,12 @@ func _unhandled_input(event: InputEvent) -> void:
 	if not _input_enabled:
 		return
 	if event.is_action_pressed("interact"):
-		if not _nearby.is_empty():
-			interaction_requested.emit(_nearby)
-			get_viewport().set_input_as_handled()
+		if _nearby.is_empty():
 			return
-		var door := TARGETS.find(_config.doors, TARGETS.nearest(_config.doors, player.position.x))
+		var door := TARGETS.find(_config.doors, _nearby)
 		if door.is_empty():
-			return
-		if door.has("target_location"):
+			interaction_requested.emit(_nearby)
+		elif door.has("target_location"):
 			portal_requested.emit(str(door.target_location), str(door.target_spawn))
 		else:
 			door_requested.emit(str(door.target_room), str(door.target_spawn))
@@ -149,7 +142,8 @@ func safe_spawn_x(x: float) -> float:
 
 
 func target_label_key(id: String) -> String:
-	return str(TARGETS.find(_config.interactions, id).get("label_key", ""))
+	var key := str(TARGETS.find(_config.interactions, id).get("label_key", ""))
+	return key if not key.is_empty() else DOORS.label_key(_config.doors, id)
 
 
 func accepts_saved_room(id: String) -> bool:

@@ -1,0 +1,28 @@
+{
+  "kind": "side_room_v1",
+  "id": "home_room_2d",
+  "location_id": "home",
+  "title_key": "content.world2d.rooms.home_room_2d.title",
+  "height": 1080,
+  "bounds": {"min_x": 0.0, "max_x": 2600.0},
+  "floor_y": 900.0,
+  "default_spawn": "travel",
+  "spawns": {
+    "travel": {"x": 1300.0, "facing": 1}
+  },
+  "layers": [
+    {"id": "sky", "plane": "sky", "scroll_scale": 1.0, "art_ref": "greybox.sky.home_room", "position": [0.0, 0.0], "z": 0},
+    {"id": "back", "plane": "back", "scroll_scale": 1.0, "art_ref": "greybox.back.home_room", "position": [0.0, 0.0], "z": 0},
+    {"id": "mid", "plane": "mid", "scroll_scale": 1.0, "art_ref": "greybox.mid.home_room", "position": [0.0, 800.0], "z": 0}
+  ],
+  "props": [
+    {"id": "home_wardrobe", "art_ref": "greybox.prop.wardrobe", "position": [2200.0, 900.0], "sort_y": 920.0, "occludes_actor": true}
+  ],
+  "doors": [],
+  "interactions": [
+    {"id": "writing-desk", "x": 600.0, "width": 100.0, "label_key": "world.target.notes", "anchor_y": 850.0},
+    {"id": "club-clock", "x": 1800.0, "width": 100.0, "label_key": "world.target.calendar", "anchor_y": 800.0}
+  ],
+  "actors": [],
+  "lighting_ref": "home"
+}

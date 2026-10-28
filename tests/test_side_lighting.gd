@@ -68,7 +68,7 @@ func _near(a: Color, b: Color) -> bool:
 
 
 func _check_content(phase_map: Dictionary) -> void:
-	expect(phase_map == {"morning": "sang", "investigation": "chieu", "personal": "chieu", "evening": "toi", "bed": "dem", "weekend1": "sang", "weekend2": "chieu"}, "Phase map matches the authored domain mapping")
+	expect(phase_map == {"morning": "sang", "club": "chieu", "investigation": "chieu", "personal": "chieu", "evening": "toi", "bed": "dem", "weekend1": "sang", "weekend2": "chieu"}, "Phase map matches the authored domain mapping")
 	for id: String in PRESETS:
 		var preset := _content("res://content/world2d/lighting/%s.json" % id)
 		expect(V.validate_lighting(preset).ok, "Lighting preset %s validates" % id)

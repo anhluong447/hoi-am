@@ -125,6 +125,8 @@ static func validate_doors(value: Variant, shared_ids: Dictionary, errors: Array
 			errors.append("Door %s target_spawn is required" % id)
 		if door.has("target_location") and not FIELDS.is_id(door.get("target_location")):
 			errors.append("Door %s target_location must be a non-empty string" % id)
+		if door.has("label_key") and not FIELDS.is_id(door.get("label_key")):
+			errors.append("Door %s label_key must be a non-empty string" % id)
 
 
 static func validate_interactions(value: Variant, shared_ids: Dictionary, errors: Array[String]) -> void:
@@ -143,6 +145,26 @@ static func validate_interactions(value: Variant, shared_ids: Dictionary, errors
 			errors.append("Interaction %s label_key is required" % id)
 		if not FIELDS.is_finite_number(interaction.get("anchor_y")):
 			errors.append("Interaction %s anchor_y must be finite" % id)
+
+
+## Doors and interactions must never cover the same x range: both trigger on
+## "interact", and target_label_key/anchor_for assume a nearby id names exactly
+## one of them (closes deferred minor M1).
+static func validate_no_overlaps(doors: Variant, interactions: Variant, errors: Array[String]) -> void:
+	if not doors is Array or not interactions is Array:
+		return
+	for door: Variant in doors:
+		if not door is Dictionary or not FIELDS.is_finite_number(door.get("x")) or not FIELDS.is_positive_number(door.get("width")):
+			continue
+		var door_min := float(door.x) - float(door.width) / 2.0
+		var door_max := float(door.x) + float(door.width) / 2.0
+		for interaction: Variant in interactions:
+			if not interaction is Dictionary or not FIELDS.is_finite_number(interaction.get("x")) or not FIELDS.is_positive_number(interaction.get("width")):
+				continue
+			var target_min := float(interaction.x) - float(interaction.width) / 2.0
+			var target_max := float(interaction.x) + float(interaction.width) / 2.0
+			if door_min < target_max and target_min < door_max:
+				errors.append("Door %s overlaps interaction %s" % [str(door.get("id")), str(interaction.get("id"))])
 
 
 static func validate_actors(value: Variant, errors: Array[String]) -> void:

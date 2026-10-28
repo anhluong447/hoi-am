@@ -1,6 +1,11 @@
 extends "res://tests/test_suite.gd"
 
 const V = preload("res://src/shared/side_room_validation.gd")
+const LOADER = preload("res://src/infrastructure/content/json_content_loader.gd")
+const ROOM_IDS := [
+	"school_gate_2d", "discipline_office_2d", "corridor_c_2d", "class_11a3_2d",
+	"canteen_2d", "room3_2d", "home_room_2d",
+]
 
 
 func _manifest() -> Dictionary:
@@ -136,3 +141,49 @@ func run() -> void:
 	bad_lighting.phases.sang = bad_lighting.phases.sang.duplicate(true)
 	bad_lighting.phases.sang.dust = 1.5
 	expect(not V.validate_lighting(bad_lighting).ok, "dust outside 0..1 rejected")
+
+	bad = room.duplicate(true)
+	bad.doors = [{"id": "overlap_door", "x": 500.0, "width": 60.0, "target_room": "hall_side", "target_spawn": "from_newsroom"}]
+	expect(not V.validate_room(bad, manifest).ok, "Overlapping door/interaction ranges rejected")
+
+	_check_authored_rooms()
+
+
+## Task 7: every authored content/world2d/rooms/*.json file must validate, every
+## door needs a reverse door back to its source room, and every domain phase
+## (content/gameplay/pack.json) must be covered by phase_lighting.json.
+func _check_authored_rooms() -> void:
+	var manifest_loaded := LOADER.read_dictionary("res://content/world2d/art_manifest_v1.json")
+	expect(manifest_loaded.ok, "Side-room art manifest loads")
+	var manifest: Dictionary = manifest_loaded.get("data", {})
+	var rooms: Dictionary = {}
+	for file_name: String in DirAccess.get_files_at("res://content/world2d/rooms"):
+		var loaded := LOADER.read_dictionary("res://content/world2d/rooms/" + file_name)
+		expect(loaded.ok, "Room file loads: %s" % file_name)
+		var authored: Dictionary = loaded.get("data", {})
+		expect(V.validate_room(authored, manifest).ok, "Room %s validates" % file_name)
+		rooms[authored.get("id", file_name)] = authored
+	for room_id: String in ROOM_IDS:
+		expect(rooms.has(room_id), "Room %s is authored" % room_id)
+	expect(rooms.size() == ROOM_IDS.size(), "Exactly seven greybox side rooms are authored")
+	for source_id: String in rooms:
+		for door: Dictionary in rooms[source_id].get("doors", []):
+			var target_id: String = str(door.get("target_room"))
+			var target_exists: bool = rooms.has(target_id)
+			expect(target_exists, "Door %s/%s targets an authored room" % [source_id, door.get("id")])
+			if not target_exists:
+				continue
+			var reversed := false
+			for back: Dictionary in rooms[target_id].get("doors", []):
+				if str(back.get("target_room")) == source_id:
+					reversed = true
+					break
+			expect(reversed, "Door %s/%s has a reverse door back from %s" % [source_id, door.get("id"), target_id])
+
+	var pack_loaded := LOADER.read_dictionary("res://content/gameplay/pack.json")
+	expect(pack_loaded.ok, "Gameplay pack loads")
+	var phase_map_loaded := LOADER.read_dictionary("res://content/world2d/phase_lighting.json")
+	expect(phase_map_loaded.ok, "Phase lighting map loads")
+	var phase_map: Dictionary = phase_map_loaded.get("data", {})
+	for phase: Dictionary in pack_loaded.get("data", {}).get("phases", []):
+		expect(phase_map.has(phase.id), "Domain phase %s is mapped to a lighting phase" % phase.id)

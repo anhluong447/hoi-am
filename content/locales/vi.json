@@ -951,5 +951,12 @@
   "world.newsroom.sign": "CLB BÁO CHÍ\nHỒI ÂM",
   "world.newsroom.motto": "Viết · Quan sát\nLắng nghe · Kết nối",
   "world.target.notes": "Sổ ghi chép",
-  "world.target.calendar": "Lịch sinh hoạt"
+  "world.target.calendar": "Lịch sinh hoạt",
+  "content.world2d.rooms.school_gate_2d.title": "Cổng trường",
+  "content.world2d.rooms.discipline_office_2d.title": "Phòng giám thị",
+  "content.world2d.rooms.class_11a3_2d.title": "Lớp 11A3",
+  "content.world2d.rooms.corridor_c_2d.title": "Hành lang dãy C",
+  "content.world2d.rooms.canteen_2d.title": "Căng tin",
+  "content.world2d.rooms.room3_2d.title": "Phòng số 3",
+  "content.world2d.rooms.home_room_2d.title": "Phòng trọ"
 }

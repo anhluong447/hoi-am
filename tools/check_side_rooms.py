@@ -10,7 +10,12 @@ PLANES = {"sky", "far", "back", "mid", "foreground"}
 PHASES = {"sang", "chieu", "toi", "dem"}
 # E1 recommendation (docs/world-side/evidence/e1-stress-v1/report.json).
 MAX_RUNTIME_LIGHTS = 2
-DOMAIN_PHASES = {"morning", "investigation", "personal", "evening", "bed", "weekend1", "weekend2"}
+
+
+def _domain_phases():
+    """Every domain phase id side rooms must map lighting for (content/gameplay/pack.json)."""
+    pack = read_json(ROOT / "content/gameplay/pack.json")
+    return {phase["id"] for phase in pack.get("phases", [])}
 
 
 def _is_id(value):
@@ -95,14 +100,33 @@ def validate_structure(room, assets, errors, name):
             continue
         if not _is_id(door.get("target_room")) or not _is_id(door.get("target_spawn")):
             fail(f"door {door['id']} requires target_room and target_spawn")
+        if "label_key" in door and not _is_id(door.get("label_key")):
+            fail(f"door {door['id']} label_key must be a non-empty string")
     for interaction in room.get("interactions", []):
         if not claim(interaction.get("id"), "interaction"):
             continue
         if not _is_id(interaction.get("label_key")):
             fail(f"interaction {interaction['id']} requires label_key")
+    _validate_no_overlaps(room.get("doors", []), room.get("interactions", []), fail)
     if not _is_id(room.get("lighting_ref")):
         fail("lighting_ref is required")
     return spawn_ids
+
+
+def _validate_no_overlaps(doors, interactions, fail):
+    """Doors and interactions must never cover the same x range (closes M1)."""
+    for door in doors:
+        if not _is_finite(door.get("x")) or not _is_finite(door.get("width")):
+            continue
+        door_min = door["x"] - door["width"] / 2.0
+        door_max = door["x"] + door["width"] / 2.0
+        for interaction in interactions:
+            if not _is_finite(interaction.get("x")) or not _is_finite(interaction.get("width")):
+                continue
+            target_min = interaction["x"] - interaction["width"] / 2.0
+            target_max = interaction["x"] + interaction["width"] / 2.0
+            if door_min < target_max and target_min < door_max:
+                fail(f"door {door.get('id')} overlaps interaction {interaction.get('id')}")
 
 
 def validate_image_bytes(assets, errors):
@@ -191,7 +215,8 @@ def validate_lighting(errors):
         presets[path.stem] = preset
     map_path = ROOT / "content/world2d/phase_lighting.json"
     phase_map = read_json(map_path) if map_path.is_file() else {}
-    if set(phase_map) != DOMAIN_PHASES or not set(phase_map.values()) <= PHASES:
+    domain_phases = _domain_phases()
+    if set(phase_map) != domain_phases or not set(phase_map.values()) <= PHASES:
         errors.append("content/world2d/phase_lighting.json must map every domain phase to a lighting phase")
     return presets
 

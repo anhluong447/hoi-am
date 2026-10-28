@@ -86,6 +86,7 @@ static func validate_room(room: Dictionary, manifest: Dictionary) -> Dictionary:
 	RULES.validate_props(room.get("props"), assets, shared_ids, errors)
 	RULES.validate_doors(room.get("doors"), shared_ids, errors)
 	RULES.validate_interactions(room.get("interactions"), shared_ids, errors)
+	RULES.validate_no_overlaps(room.get("doors"), room.get("interactions"), errors)
 	RULES.validate_actors(room.get("actors"), errors)
 	if not FIELDS.is_id(room.get("lighting_ref")):
 		errors.append("room.lighting_ref is required")
