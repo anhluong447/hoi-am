@@ -2,6 +2,8 @@ extends RefCounted
 ## Section-level rules for side-room and art-manifest validation; pure, no I/O.
 
 const PLANES := ["sky", "far", "back", "mid", "foreground"]
+## E1 recommendation (docs/world-side/evidence/e1-stress-v1/report.json).
+const MAX_RUNTIME_LIGHTS := 2
 const FIELDS = preload("res://src/shared/side_room_fields.gd")
 
 
@@ -36,6 +38,8 @@ static func validate_phase(phase_id: String, phase: Variant, errors: Array[Strin
 	if not lights is Array:
 		errors.append("Phase %s lights must be an array" % phase_id)
 	else:
+		if lights.size() > MAX_RUNTIME_LIGHTS:
+			errors.append("Phase %s exceeds %d runtime lights" % [phase_id, MAX_RUNTIME_LIGHTS])
 		for light: Variant in lights:
 			if not light is Dictionary or not FIELDS.is_id(light.get("id")) or not FIELDS.is_position(light.get("position")) or not FIELDS.is_color(light.get("color")) or not FIELDS.is_finite_number(light.get("energy")) or not FIELDS.is_finite_number(light.get("radius")):
 				errors.append("Phase %s has an invalid light" % phase_id)
@@ -79,8 +83,10 @@ static func validate_layers(value: Variant, assets: Dictionary, shared_ids: Dict
 			errors.append("Layer %s art_ref is not in the manifest" % id)
 		if not FIELDS.is_position(layer.get("position")):
 			errors.append("Layer %s position must be two finite numbers" % id)
-		if not layer.get("z") is int:
+		if not FIELDS.is_integer(layer.get("z")):
 			errors.append("Layer %s z must be an int" % id)
+		if layer.has("water") and not layer.get("water") is bool:
+			errors.append("Layer %s water must be a bool" % id)
 
 
 static func validate_props(value: Variant, assets: Dictionary, shared_ids: Dictionary, errors: Array[String]) -> void:

@@ -8,6 +8,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PLANES = {"sky", "far", "back", "mid", "foreground"}
 PHASES = {"sang", "chieu", "toi", "dem"}
+# E1 recommendation (docs/world-side/evidence/e1-stress-v1/report.json).
+MAX_RUNTIME_LIGHTS = 2
+DOMAIN_PHASES = {"morning", "investigation", "personal", "evening", "bed", "weekend1", "weekend2"}
 
 
 def _is_id(value):
@@ -78,6 +81,8 @@ def validate_structure(room, assets, errors, name):
             fail(f"layer {layer['id']} art_ref is not in the manifest")
         if not _is_position(layer.get("position")):
             fail(f"layer {layer['id']} position must be two finite numbers")
+        if "water" in layer and not isinstance(layer["water"], bool):
+            fail(f"layer {layer['id']} water must be a bool")
     for prop in room.get("props", []):
         if not claim(prop.get("id"), "prop"):
             continue
@@ -138,15 +143,69 @@ def validate_tuning(errors):
             errors.append(f"content/world2d/tuning.json: {key} must be a finite number > 0")
 
 
+def _is_color(value):
+    return isinstance(value, str) and len(value) == 7 and value[0] == "#" and all(
+        c in "0123456789abcdefABCDEF" for c in value[1:])
+
+
+def validate_phase(phase, fail):
+    if not isinstance(phase, dict):
+        fail("must be a dictionary")
+        return
+    if not _is_color(phase.get("modulate")):
+        fail("modulate must be #rrggbb")
+    sun = phase.get("sun")
+    if not isinstance(sun, dict) or not _is_color(sun.get("color")) or not _is_finite(sun.get("energy"))             or not _is_finite(sun.get("angle")):
+        fail("sun must have color, energy and angle")
+    lights = phase.get("lights")
+    if not isinstance(lights, list):
+        fail("lights must be an array")
+        lights = []
+    if len(lights) > MAX_RUNTIME_LIGHTS:
+        fail(f"exceeds {MAX_RUNTIME_LIGHTS} runtime lights")
+    for light in lights:
+        if not isinstance(light, dict) or not _is_id(light.get("id")) or not _is_position(light.get("position"))                 or not _is_color(light.get("color")) or not _is_finite(light.get("energy"))                 or not _is_finite(light.get("radius")):
+            fail("has an invalid light")
+    dust = phase.get("dust")
+    if not _is_finite(dust) or not 0 <= dust <= 1:
+        fail("dust must be within 0..1")
+    if not _is_color(phase.get("water_tint")):
+        fail("water_tint must be #rrggbb")
+
+
+def validate_lighting(errors):
+    """Lighting presets (id = file stem) and the domain phase -> light phase map."""
+    presets = {}
+    for path in sorted((ROOT / "content/world2d/lighting").glob("*.json")):
+        name = path.relative_to(ROOT).as_posix()
+        preset = read_json(path)
+        phases = preset.get("phases")
+        if not isinstance(preset.get("schema_version"), int) or not isinstance(phases, dict):
+            errors.append(f"{name}: requires int schema_version and phases")
+            continue
+        for phase_id in sorted(PHASES):
+            if phase_id not in phases:
+                errors.append(f"{name}: missing phase {phase_id}")
+                continue
+            validate_phase(phases[phase_id], lambda message, p=phase_id: errors.append(f"{name}: phase {p} {message}"))
+        presets[path.stem] = preset
+    map_path = ROOT / "content/world2d/phase_lighting.json"
+    phase_map = read_json(map_path) if map_path.is_file() else {}
+    if set(phase_map) != DOMAIN_PHASES or not set(phase_map.values()) <= PHASES:
+        errors.append("content/world2d/phase_lighting.json must map every domain phase to a lighting phase")
+    return presets
+
+
 def validate():
     tuning_errors = []
     validate_tuning(tuning_errors)
+    lighting = validate_lighting(tuning_errors)
     if tuning_errors:
         raise AssertionError("; ".join(tuning_errors))
     rooms_dir = ROOT / "content/world2d/rooms"
     room_paths = sorted(rooms_dir.glob("*.json")) if rooms_dir.is_dir() else []
     if not room_paths:
-        print("Side-room check: no rooms authored yet")
+        print(f"Side-room check: no rooms authored yet; {len(lighting)} lighting presets verified")
         return
     manifest_path = ROOT / "content/world2d/art_manifest_v1.json"
     manifest = read_json(manifest_path)
@@ -164,6 +223,8 @@ def validate():
         rooms[room["id"]] = room
         spawn_sets[room["id"]] = validate_structure(room, assets, errors, name)
     for room in rooms.values():
+        if room.get("lighting_ref") not in lighting:
+            errors.append(f"{room['id']}: lighting_ref '{room.get('lighting_ref')}' has no preset")
         for door in room.get("doors", []):
             target_room = door.get("target_room")
             if target_room not in rooms:

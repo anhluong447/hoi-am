@@ -15,11 +15,17 @@ const CAMERA = preload("res://src/world/side/side_camera.gd")
 const LAYERS = preload("res://src/world/side/side_layers.gd")
 const TARGETS = preload("res://src/world/side/side_targets.gd")
 const MOTION = preload("res://src/world/side/side_motion.gd")
+const LIGHTING = preload("res://src/world/side/side_lighting.gd")
+const ATMOSPHERE = preload("res://src/world/side/side_atmosphere.gd")
+const VALIDATION = preload("res://src/shared/side_room_validation.gd")
+const PHASE_SECONDS := 1.5
 
 var player: Node2D
 var camera: Camera2D
-## Last quality id from composition; Task 6 lighting/atmosphere scale with it.
+## "high": shaft motion, dust, water shader; "low": static shaft/water only.
 var quality := "high"
+var lighting: Node2D
+var atmosphere: Node2D
 
 var _config: Dictionary
 var _actors: Dictionary
@@ -31,6 +37,7 @@ var _input_enabled := true
 var _reduced := false
 var _nearby := ""
 var _layers: Node2D
+var _light_phase := "sang"
 
 
 func configure(config: Dictionary, actors: Dictionary, textures: Dictionary) -> void:
@@ -77,6 +84,7 @@ func _ready() -> void:
 	camera.configure(_config.bounds, float(_config.height), _tuning)
 	camera.make_current()
 	place_player(str(_config.default_spawn))
+	_mount_environment()
 
 
 func _physics_process(delta: float) -> void:
@@ -170,10 +178,58 @@ func set_actor_talking(id: String, talking: bool) -> void:
 
 func set_quality(id: String) -> void:
 	quality = id
+	_apply_modes()
 
 
 func set_reduced_motion(reduced: bool) -> void:
 	_reduced = reduced
+	_apply_modes()
+	if reduced and lighting and lighting.is_transitioning():
+		_show_phase(false)
+
+
+## Domain phase id -> lighting phase via the injected phase_map. Before mount
+## it only selects the starting light; unmapped phases keep the current one.
+func set_lighting_phase(phase_id: String) -> void:
+	var mapped := str(_config.get("phase_map", {}).get(phase_id, ""))
+	if not _config.get("lighting", {}).get("phases", {}).has(mapped):
+		return
+	_light_phase = mapped
+	if lighting:
+		_show_phase(not _reduced)
+
+
+func _mount_environment() -> void:
+	var preset: Dictionary = _config.get("lighting", {})
+	if preset.is_empty():
+		return
+	assert(VALIDATION.validate_lighting(preset).ok, "Side room lighting must be a valid preset")
+	lighting = LIGHTING.new()
+	lighting.name = "Lighting"
+	add_child(lighting)
+	lighting.configure(_config.bounds, float(_config.height), LAYERS.water_items(_layers, _config.layers))
+	atmosphere = ATMOSPHERE.new()
+	atmosphere.name = "Atmosphere"
+	atmosphere.z_index = LIGHTING.SHAFT_Z
+	add_child(atmosphere)
+	var spec: Dictionary = _config.bounds.merged({"height": _config.height})
+	atmosphere.configure(spec, hash(str(_config.id)))
+	_apply_modes()
+	_show_phase(false)
+
+
+func _apply_modes() -> void:
+	if not lighting:
+		return
+	lighting.set_modes(quality == "high", _reduced)
+	atmosphere.set_enabled(quality == "high")
+	atmosphere.set_reduced_motion(_reduced)
+
+
+func _show_phase(animate: bool) -> void:
+	var phase: Dictionary = _config.lighting.phases[_light_phase]
+	atmosphere.set_density(float(phase.dust))
+	lighting.show_phase(phase, PHASE_SECONDS if animate else 0.0)
 
 
 func _scroll_layers() -> void:

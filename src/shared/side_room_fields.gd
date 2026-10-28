@@ -32,6 +32,11 @@ static func is_finite_number(value: Variant) -> bool:
 	return (value is float or value is int) and is_finite(float(value))
 
 
+## Godot's JSON parser yields floats for every number; integral floats count.
+static func is_integer(value: Variant) -> bool:
+	return value is int or (value is float and is_finite(value) and value == floorf(value))
+
+
 static func is_positive_number(value: Variant) -> bool:
 	return is_finite_number(value) and float(value) > 0.0
 

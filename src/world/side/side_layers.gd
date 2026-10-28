@@ -40,6 +40,15 @@ static func scroll(parent: Node2D, camera_left: float, min_x: float) -> void:
 			child.screen_offset = Vector2(camera_left - min_x, 0.0)
 
 
+## Visual children of layers flagged "water": true, for the water shader.
+static func water_items(parent: Node2D, layers: Array) -> Array:
+	var items: Array = []
+	for layer: Dictionary in layers:
+		if layer.get("water", false):
+			items.append(parent.find_child(str(layer.id), true, false).get_child(0))
+	return items
+
+
 static func build_props(parent: Node2D, props: Array, textures: Dictionary, manifest: Dictionary, floor_y: float) -> void:
 	var ordered := props.duplicate()
 	ordered.sort_custom(func(a: Dictionary, b: Dictionary) -> bool: return float(a.sort_y) < float(b.sort_y))

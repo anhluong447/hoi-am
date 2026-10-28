@@ -10,7 +10,7 @@ const LIGHTING_PHASES := ["sang", "chieu", "toi", "dem"]
 
 static func validate_manifest(manifest: Dictionary) -> Dictionary:
 	var errors: Array[String] = []
-	if not manifest.get("schema_version") is int:
+	if not FIELDS.is_integer(manifest.get("schema_version")):
 		errors.append("manifest.schema_version must be an int")
 	var assets: Variant = manifest.get("assets")
 	if not assets is Dictionary:
@@ -36,7 +36,7 @@ static func validate_manifest(manifest: Dictionary) -> Dictionary:
 
 static func validate_lighting(preset: Dictionary) -> Dictionary:
 	var errors: Array[String] = []
-	if not preset.get("schema_version") is int:
+	if not FIELDS.is_integer(preset.get("schema_version")):
 		errors.append("lighting.schema_version must be an int")
 	var phases: Variant = preset.get("phases")
 	if not phases is Dictionary:
