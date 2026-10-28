@@ -50,9 +50,7 @@ func move(axis: float, delta: float, bounds: Dictionary) -> void:
 	position.x = clamped
 	travelled += absf(moved)
 	if not is_zero_approx(velocity):
-		facing = 1 if velocity > 0.0 else -1
-		if _visual != null:
-			_visual.scale.x = absf(_visual.scale.x) * float(facing)
+		face(1 if velocity > 0.0 else -1)
 	var stride: float = _tuning.get("stride", 180.0)
 	var bob: float = _tuning.get("bob", 0.0)
 	if _visual != null and stride > 0.0:
@@ -61,3 +59,11 @@ func move(axis: float, delta: float, bounds: Dictionary) -> void:
 
 func stop() -> void:
 	velocity = 0.0
+
+
+func face(direction: int) -> void:
+	if direction != 1 and direction != -1:
+		return
+	facing = direction
+	if _visual != null:
+		_visual.scale.x = absf(_visual.scale.x) * float(facing)
