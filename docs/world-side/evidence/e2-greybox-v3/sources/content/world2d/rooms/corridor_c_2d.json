@@ -1,0 +1,36 @@
+{
+  "kind": "side_room_v1",
+  "id": "corridor_c_2d",
+  "location_id": "school",
+  "title_key": "content.world2d.rooms.corridor_c_2d.title",
+  "height": 1080,
+  "bounds": {"min_x": 0.0, "max_x": 4800.0},
+  "floor_y": 900.0,
+  "default_spawn": "from_gate",
+  "spawns": {
+    "from_gate": {"x": 300.0, "facing": 1},
+    "from_class": {"x": 1800.0, "facing": -1},
+    "from_canteen": {"x": 3000.0, "facing": 1},
+    "from_room3": {"x": 4500.0, "facing": -1}
+  },
+  "layers": [
+    {"id": "sky", "plane": "sky", "scroll_scale": 1.0, "art_ref": "greybox.sky.corridor_c", "position": [0.0, 0.0], "z": 0},
+    {"id": "back", "plane": "back", "scroll_scale": 1.0, "art_ref": "greybox.back.corridor_c", "position": [0.0, 0.0], "z": 0},
+    {"id": "mid", "plane": "mid", "scroll_scale": 1.0, "art_ref": "greybox.mid.corridor_c", "position": [0.0, 800.0], "z": 0}
+  ],
+  "props": [
+    {"id": "hall_locker", "art_ref": "greybox.prop.locker", "position": [2400.0, 900.0], "sort_y": 920.0, "occludes_actor": true}
+  ],
+  "doors": [
+    {"id": "to_gate", "x": 100.0, "width": 100.0, "target_room": "school_gate_2d", "target_spawn": "from_corridor", "label_key": "content.world2d.rooms.school_gate_2d.title"},
+    {"id": "to_class", "x": 1600.0, "width": 100.0, "target_room": "class_11a3_2d", "target_spawn": "from_corridor", "label_key": "content.world2d.rooms.class_11a3_2d.title"},
+    {"id": "to_canteen", "x": 2800.0, "width": 100.0, "target_room": "canteen_2d", "target_spawn": "from_corridor", "label_key": "content.world2d.rooms.canteen_2d.title"},
+    {"id": "to_room3", "x": 4600.0, "width": 100.0, "target_room": "room3_2d", "target_spawn": "from_corridor", "target_location": "club", "label_key": "content.world2d.rooms.room3_2d.title"}
+  ],
+  "interactions": [
+    {"id": "writing-desk", "x": 2200.0, "width": 80.0, "label_key": "world.target.notes", "anchor_y": 880.0},
+    {"id": "club-clock", "x": 3600.0, "width": 80.0, "label_key": "world.target.calendar", "anchor_y": 850.0}
+  ],
+  "actors": [],
+  "lighting_ref": "school_day"
+}

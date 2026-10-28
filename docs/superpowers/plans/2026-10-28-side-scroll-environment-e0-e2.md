@@ -1,14 +1,19 @@
 # Side-scroll environment E0–E2 Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Nhập docs thiết kế mới, đo rủi ro render 2D cinematic, và dựng tầng world 2D side-scroll với 7 phòng greybox đi được, nối vào game, save tương thích.
 
-**Architecture:** Phòng 2D là scene `src/world/side/side_room.tscn` hiện thực cùng hợp đồng mà `playable` đang dùng với phòng 3D (signals + methods), nên composition chỉ rẽ nhánh theo `config.kind`. Layout/art/lighting là JSON trong `content/world2d/`, validate bằng validator thuần trong `src/shared/`. Spec ghi `src/world2d/`; plan đặt ở `src/world/side/` để nằm trong layer `world` sẵn có của `check_architecture.py` (không cần thêm layer). World envelope v2 lưu `x/facing` cho phòng 2D; phòng HD-2D giữ envelope v1.
+**Architecture:** Phòng 2D là scene `src/world/side/side_room.tscn` hiện thực cùng hợp đồng mà `playable` đang dùng với phòng 3D (signals + methods), nên composition chỉ rẽ nhánh theo `config.kind`. Layout/art/lighting là JSON trong `content/world2d/`, validate bằng validator thuần trong `src/shared/`. Spec ghi `src/world2d/`; plan đặt ở `src/world/side/` để nằm trong layer `world` sẵn có của `check_architecture.py` (không cần thêm layer). World envelope v2 lưu `x/facing` cho phòng 2D; phòng HD-2D cũng ghi world v2 với position; decoder giữ tương thích world v1.
 
 **Tech Stack:** Godot 4.7.2 GDScript, Forward+ D3D12, `Parallax2D`, `Camera2D`, `CanvasModulate`, `PointLight2D`, `GPUParticles2D`; Python 3 checks trong `tools/`.
 
 **Spec:** `docs/superpowers/specs/2026-10-28-side-scroll-environment-design.md` (E0, E1, E2). E3/E4 có plan riêng sau review E2.
+
+
+## Tiến độ cập nhật 2026-10-28
+
+Task 1–10 đã hoàn tất phần triển khai theo ledger, checks và evidence; người dùng review E2 trước E3. Gate cuối: 1129 headless / 455 native checks, 0 failures; evidence docs/world-side/evidence/e2-greybox-v3/. E1 đóng với số đo RTX tham chiếu: người dùng đã dừng đo hiệu năng, hoãn iGPU và chọn cấu hình casual theo thiết kế. Điều này thay thế quy tắc suy recommendation từ đo ở Task 2 Step 5; không mở lại profiling. Các điều chỉnh cửa (ưu tiên target_room) và tuning bắt buộc đã được kiểm tra trong Task 9.
 
 ## Global Constraints
 
@@ -44,20 +49,20 @@
 **Interfaces:**
 - Produces: `docs/design/SOURCES.json` = `{"repository": str, "branch": "feat/first3-art-direction", "commit": "3aacdbc…(full sha)", "files": [{"source": str, "target": str, "sha256": str, "bytes": int}]}`
 
-- [ ] **Step 1:** Tạo branch `feature/side-scroll-world` từ `feature/hd2d-world`.
-- [ ] **Step 2: Viết check trước.** Thêm vào `tools/check_reference.py` hàm `validate_design_sources()` đọc `docs/design/SOURCES.json`, assert mỗi `target` tồn tại, SHA-256 và số byte khớp, `commit` là 40 hex. Gọi từ `main()`.
-- [ ] **Step 3:** Chạy `python tools/check_reference.py` → FAIL "docs/design/SOURCES.json" missing.
-- [ ] **Step 4:** Clone nguồn vào scratchpad (`git clone --branch feat/first3-art-direction`), checkout `3aacdbc`, copy: `docs/design/narrative/*.md`, `docs/design/gameplay/{GDD-Defense,GDD-Attack,RULES}.md`, `docs/history/narrative/First3Days.md` → `docs/design/first3/`, `docs/guides/FIRST-THREE-DAYS.md` → `docs/design/first3/`, 11 PNG concept → `docs/design/concept/`. Sinh `SOURCES.json` bằng Python (sha256 + bytes). Không sửa nội dung.
-- [ ] **Step 5:** Chạy `python tools/check_reference.py` → PASS.
-- [ ] **Step 6: Docs hướng mới.**
+- [x] **Step 1:** Tạo branch `feature/side-scroll-world` từ `feature/hd2d-world`.
+- [x] **Step 2: Viết check trước.** Thêm vào `tools/check_reference.py` hàm `validate_design_sources()` đọc `docs/design/SOURCES.json`, assert mỗi `target` tồn tại, SHA-256 và số byte khớp, `commit` là 40 hex. Gọi từ `main()`.
+- [x] **Step 3:** Chạy `python tools/check_reference.py` → FAIL "docs/design/SOURCES.json" missing.
+- [x] **Step 4:** Clone nguồn vào scratchpad (`git clone --branch feat/first3-art-direction`), checkout `3aacdbc`, copy: `docs/design/narrative/*.md`, `docs/design/gameplay/{GDD-Defense,GDD-Attack,RULES}.md`, `docs/history/narrative/First3Days.md` → `docs/design/first3/`, `docs/guides/FIRST-THREE-DAYS.md` → `docs/design/first3/`, 11 PNG concept → `docs/design/concept/`. Sinh `SOURCES.json` bằng Python (sha256 + bytes). Không sửa nội dung.
+- [x] **Step 5:** Chạy `python tools/check_reference.py` → PASS.
+- [x] **Step 6: Docs hướng mới.**
   - `005-side-scroll-2d.md`: bối cảnh, quyết định người dùng 2026-10-28 (Godot 2D side-scroll, high-res cinematic không pixel, docs hai-vong là bản mới nhất, debate ngày 3 là climax làm sau, placeholder AI qua Codex), thay thế quyết định HD-2D (`docs/decisions/004-hd2d-world.md`), hệ quả.
   - `AGENTS.md`: thay câu "independent Godot migration target" bằng hướng mới; thêm: world mới ở `src/world/side/` + `content/world2d/`; docs thiết kế chuẩn ở `docs/design/` (giữ byte); HD-2D archived (không xóa, không là hướng mới); skill `making-story-side-scrollers` dùng khi lên plan cảnh/slice. Giữ nguyên quy tắc text/content/kiến trúc/check và mục dialogue UI 2026-10-11.
   - `ART-DIRECTION.md`: viết lại cho high-res painted cinematic theo skill (colour script theo buổi, light vẽ sẵn + runtime ít, readability greyscale, kit, placeholder AI có provenance). Giữ nguyên phần UI coastal.
   - `ARCHITECTURE.md`/`DEVELOPMENT.md`/`src/world/README.md`: thêm `src/world/side/`, `content/world2d/`, lệnh native mới (Task 10).
   - `docs/world-hd2d/status.json`: thêm `"archived": "2026-10-28 superseded by docs/decisions/005-side-scroll-2d.md"`.
   - `docs/world-side/status.json`: `{"E0":"complete","E1":"pending","E2":"pending","E3":"pending","E4":"pending"}` (cập nhật ở các task sau).
-- [ ] **Step 7:** Chạy gate (không cần native). Expected: tất cả PASS.
-- [ ] **Step 8: Commit** `docs: adopt side-scroll direction and import latest design sources`.
+- [x] **Step 7:** Chạy gate (không cần native). Expected: tất cả PASS.
+- [x] **Step 8: Commit** `docs: adopt side-scroll direction and import latest design sources`.
 
 ### Task 2: E1 — Prototype rủi ro render và đo native
 
@@ -69,15 +74,15 @@
 - Consumes: không (preview độc lập, không session).
 - Produces: `report.json` = `{"machine": {...}, "runs": [{"variant": str, "resolution": [w,h], "hdr_2d": bool, "frames": int, "p50_ms": float, "p95_ms": float, "p99_ms": float, "vram_mib": float}], "recommendation": {"hdr_2d": bool, "plate_import": "lossless"|"vram_bptc", "max_runtime_lights": int}}`
 
-- [ ] **Step 1:** `stress_v1.json` khai báo worst-case: 5 lớp plate 3840×2160 (ảnh nhiễu procedural sinh lúc chạy, không commit ảnh), 3 `PointLight2D`, 1 sun shaft additive, 1 pass blur `CanvasGroup` cho lớp xa, `GPUParticles2D` 120 hạt, `WorldEnvironment` Canvas + glow, actor 2 sprite có normal map phẳng.
-- [ ] **Step 2:** `side_stress_preview.gd`: `func configure(spec: Dictionary, variant: Dictionary) -> void` dựng cảnh từ spec; variant bật/tắt `hdr_2d` (`get_viewport().use_hdr_2d`), glow, normal map, `CanvasModulate` tối (kiểm hiện tượng normal map tối ban đêm), camera pan qua lại liên tục 4 s/chu kỳ.
-- [ ] **Step 3:** `tests/profile_side_stress.gd` (native, không headless): với mỗi variant × độ phân giải (1920×1080, 2560×1440): warm-up 10 s, đo 30 s bằng thời gian thực giữa frame (`Time.get_ticks_usec`), VRAM qua `Performance.RENDER_VIDEO_MEM_USED`, chụp 1 PNG; ghi `report.json`. VSync tắt, cap 120 FPS như HD08.
-- [ ] **Step 4:** `tools/profile_side_stress.py --godot $GODOT` chạy 3 lần, gộp vào report, in bảng.
-- [ ] **Step 5:** Chạy; đọc kết quả. Điền `recommendation` dựa trên đo: `hdr_2d` = true chỉ khi p95 ≤16,7 ms ở 1080p với HDR; `plate_import` = so sánh ảnh chụp + VRAM; ghi rõ light cap quan sát được và hiện tượng normal map tối.
-- [ ] **Step 6:** README evidence: máy, driver, renderer, lệnh, bảng kết quả, giới hạn đo (không phải mọi phòng).
-- [ ] **Step 7:** Gate (verify.py; preview không vào native suite). Cập nhật `docs/world-side/status.json` E1 = `complete` kèm đường dẫn report.
-- [ ] **Step 8: Commit** `perf: measure side-scroll render stress on native hardware`.
-- [ ] **Step 9: DỪNG — người dùng review report E1** trước Task 6 (Task 3–5 có thể tiếp vì không phụ thuộc kết quả).
+- [x] **Step 1:** `stress_v1.json` khai báo worst-case: 5 lớp plate 3840×2160 (ảnh nhiễu procedural sinh lúc chạy, không commit ảnh), 3 `PointLight2D`, 1 sun shaft additive, 1 pass blur `CanvasGroup` cho lớp xa, `GPUParticles2D` 120 hạt, `WorldEnvironment` Canvas + glow, actor 2 sprite có normal map phẳng.
+- [x] **Step 2:** `side_stress_preview.gd`: `func configure(spec: Dictionary, variant: Dictionary) -> void` dựng cảnh từ spec; variant bật/tắt `hdr_2d` (`get_viewport().use_hdr_2d`), glow, normal map, `CanvasModulate` tối (kiểm hiện tượng normal map tối ban đêm), camera pan qua lại liên tục 4 s/chu kỳ.
+- [x] **Step 3:** `tests/profile_side_stress.gd` (native, không headless): với mỗi variant × độ phân giải (1920×1080, 2560×1440): warm-up 10 s, đo 30 s bằng thời gian thực giữa frame (`Time.get_ticks_usec`), VRAM qua `Performance.RENDER_VIDEO_MEM_USED`, chụp 1 PNG; ghi `report.json`. VSync tắt, cap 120 FPS như HD08.
+- [x] **Step 4:** `tools/profile_side_stress.py --godot $GODOT` chạy 3 lần, gộp vào report, in bảng.
+- [x] **Step 5:** Chạy; đọc kết quả. Điền `recommendation` dựa trên đo: `hdr_2d` = true chỉ khi p95 ≤16,7 ms ở 1080p với HDR; `plate_import` = so sánh ảnh chụp + VRAM; ghi rõ light cap quan sát được và hiện tượng normal map tối.
+- [x] **Step 6:** README evidence: máy, driver, renderer, lệnh, bảng kết quả, giới hạn đo (không phải mọi phòng).
+- [x] **Step 7:** Gate (verify.py; preview không vào native suite). Cập nhật `docs/world-side/status.json` E1 = `complete` kèm đường dẫn report.
+- [x] **Step 8: Commit** `perf: measure side-scroll render stress on native hardware`.
+- [x] **Step 9: DỪNG — người dùng review report E1** trước Task 6 (Task 3–5 có thể tiếp vì không phụ thuộc kết quả).
 
 ### Task 3: Schema phòng 2D, art manifest, validator thuần
 
@@ -95,16 +100,16 @@
 - Manifest (`content/world2d/art_manifest_v1.json`): `{"schema_version":1,"assets":{ref:{"kind":"greybox","color":"#rrggbb","size":[w,h]} | {"kind":"image","path":"res://…","size":[w,h],"px_per_unit":num,"pivot":[x,y],"status":"placeholder_ai|final","sha256":str,"provenance":{"tool":str,"prompt_id":str,"date":str}}}}`
 - Lighting (`content/world2d/lighting/<id>.json`): `{"schema_version":1,"phases":{"sang|chieu|toi|dem":{"modulate":"#rrggbb","sun":{"color","energy","angle"},"lights":[{"id","position":[x,y],"color","energy","radius"}],"dust":num(0..1),"water_tint":"#rrggbb"}}}`; map phase domain: `content/world2d/phase_lighting.json` = `{"morning":"sang","investigation":"chieu","personal":"chieu","evening":"toi","bed":"dem","weekend1":"sang","weekend2":"chieu"}`.
 
-- [ ] **Step 1: Test thất bại** `tests/test_side_room.gd` (extends test_suite), fixture dict hợp lệ dựng trong test:
+- [x] **Step 1: Test thất bại** `tests/test_side_room.gd` (extends test_suite), fixture dict hợp lệ dựng trong test:
   - `expect(V.validate_room(valid, manifest).ok, "Valid side room accepted")`
   - không `kind`=`side_room_v1` → reject; `bounds.min_x >= max_x` → reject; spawn `x` ngoài bounds → reject; `x` = NAN → reject; `default_spawn` không có trong `spawns` → reject; `art_ref` không có trong manifest → reject; id trùng giữa layers/props/doors/interactions → reject; `plane` lạ → reject; door thiếu `target_spawn` → reject.
   - `validate_manifest`: image thiếu `sha256`/`status` → reject; `px_per_unit <= 0` → reject; greybox màu sai định dạng → reject.
   - `validate_lighting`: thiếu một trong 4 buổi → reject; `dust` ngoài 0..1 → reject.
-- [ ] **Step 2:** Đăng ký suite trong `run_tests.gd`; chạy `python tools/verify.py --godot $GODOT` → FAIL (script missing).
-- [ ] **Step 3:** Hiện thực ba hàm trong `side_room_validation.gd` (không I/O, không node). Kiểm text key không ở đây (check_architecture đã kiểm `_key`).
-- [ ] **Step 4:** `tools/check_side_rooms.py`: duyệt mọi file trong `content/world2d/rooms/`, áp cùng luật cấu trúc + kiểm `target_room` tồn tại và `target_spawn` có trong phòng đích, ảnh `kind:image` có file và SHA-256 khớp; gọi từ `check_content.py`.
-- [ ] **Step 5:** Chạy gate → PASS.
-- [ ] **Step 6: Commit** `feat: add side-room content schema and validators`.
+- [x] **Step 2:** Đăng ký suite trong `run_tests.gd`; chạy `python tools/verify.py --godot $GODOT` → FAIL (script missing).
+- [x] **Step 3:** Hiện thực ba hàm trong `side_room_validation.gd` (không I/O, không node). Kiểm text key không ở đây (check_architecture đã kiểm `_key`).
+- [x] **Step 4:** `tools/check_side_rooms.py`: duyệt mọi file trong `content/world2d/rooms/`, áp cùng luật cấu trúc + kiểm `target_room` tồn tại và `target_spawn` có trong phòng đích, ảnh `kind:image` có file và SHA-256 khớp; gọi từ `check_content.py`.
+- [x] **Step 5:** Chạy gate → PASS.
+- [x] **Step 6: Commit** `feat: add side-room content schema and validators`.
 
 ### Task 4: Actor đi ngang và camera
 
@@ -117,17 +122,17 @@
   - `side_motion.gd` static `step(velocity: float, axis: float, delta: float, tuning: Dictionary) -> float`; tuning `{"max_speed":360.0,"accel_time":0.10,"decel_time":0.08}` (ref px/s, s). `clamp_x(x: float, bounds: Dictionary, half_width: float) -> float`.
   - `side_actor.gd` (Node2D): `var velocity: float`, `var facing: int`, `var travelled: float`, `func configure(texture: Texture2D, height_ref: float, tuning: Dictionary) -> void`, `func move(axis: float, delta: float, bounds: Dictionary) -> void`, `func stop() -> void`; bob placeholder: offset y = `sin(travelled / stride * TAU) * bob` với `stride`,`bob` trong tuning (`"stride":180.0,"bob":4.0`); `facing` theo dấu vận tốc, flip sprite.
   - `side_camera.gd` (Camera2D): `func configure(bounds: Dictionary, height: float, tuning: Dictionary) -> void`, `func follow(target_x: float, delta: float, reduced: bool) -> void`, `func snap(target_x: float) -> void`; zoom = viewport height / `height`; limits = bounds; dead zone `"camera_dead_zone":120.0`, response `"camera_response":0.08` tại 60 Hz quy đổi `1-(1-r)^(dt*60)`; reduced → snap.
-- [ ] **Step 1: Test thất bại** `tests/test_side_motion.gd`:
+- [x] **Step 1: Test thất bại** `tests/test_side_motion.gd`:
   - từ 0, axis 1, sau 0,10 s (6 bước 1/60) → `velocity ≈ 360` (±1).
   - từ 360, axis 0, sau 0,08 s → `velocity == 0`; không đổi dấu khi hãm.
   - đổi hướng: từ 360, axis −1 → qua 0 rồi âm, không nhảy thẳng −360 trong một bước.
   - `clamp_x(9999, {"min_x":0,"max_x":2000}, 40) == 1960`; NaN axis coi như 0.
   - Actor: `move` tới mép → `velocity == 0` và `travelled` không tăng thêm khi đứng ép mép.
   - Camera: `follow` 120 bước với reduced=false tiến về target, không vượt limit; reduced=true → bằng target ngay (sau clamp).
-- [ ] **Step 2:** Chạy verify → FAIL.
-- [ ] **Step 3:** Hiện thực ba file; actor/camera đọc tuning từ tham số, không tự đọc file.
-- [ ] **Step 4:** Chạy gate → PASS.
-- [ ] **Step 5: Commit** `feat: add side-scroll actor motion and camera`.
+- [x] **Step 2:** Chạy verify → FAIL.
+- [x] **Step 3:** Hiện thực ba file; actor/camera đọc tuning từ tham số, không tự đọc file.
+- [x] **Step 4:** Chạy gate → PASS.
+- [x] **Step 5: Commit** `feat: add side-scroll actor motion and camera`.
 
 ### Task 5: Scene phòng 2D (lớp, props, cửa, tương tác)
 
@@ -145,7 +150,7 @@
   - `side_layers.gd`: `static func build(parent: Node2D, layers: Array, textures: Dictionary, manifest: Dictionary) -> void` tạo `Parallax2D` cho mỗi layer có `scroll_scale != 1`, `Sprite2D`/`ColorRect` greybox; props sort theo `z_index` = `sort_y` so với baseline actor (`floor_y`); prop `occludes_actor` đặt `z_index` > actor.
   - `side_targets.gd`: `static func nearest(targets: Array, x: float) -> String` (target có `|x - t.x| <= t.width/2`, gần nhất thắng; rỗng nếu không có).
 - Input: action `move_left`/`move_right` có sẵn; tương tác/cửa dùng action hiện có của phòng 3D (đọc `newsroom.gd::_unhandled_input` và dùng đúng action đó); menu như phòng 3D.
-- [ ] **Step 1: Test thất bại** `tests/test_side_room_scene.gd` (headless, dùng room fixture dict + manifest greybox):
+- [x] **Step 1: Test thất bại** `tests/test_side_room_scene.gd` (headless, dùng room fixture dict + manifest greybox):
   - mount → `player.position.x == spawns[default].x`; `player.position.y == floor_y`.
   - nhấn `move_right` 12 physics frame → x tăng; session không liên quan (không truyền).
   - `set_input_enabled(false)` rồi nhấn → x không đổi.
@@ -154,10 +159,10 @@
   - `place_player("missing", NAN)` → spawn mặc định; `safe_spawn_x(1e9)` → clamp trong bounds (Review Focus 3).
   - prop `occludes_actor` có `z_index` > player; layer `scroll_scale` 0.3 là con của `Parallax2D`.
   - `anchor_for(id)` trả `visible` true khi target trong màn hình.
-- [ ] **Step 2:** Chạy verify → FAIL.
-- [ ] **Step 3:** Hiện thực; giữ mỗi file ≤200 dòng nonblank.
-- [ ] **Step 4:** Gate → PASS.
-- [ ] **Step 5: Commit** `feat: add side-scroll room scene with doors and targets`.
+- [x] **Step 2:** Chạy verify → FAIL.
+- [x] **Step 3:** Hiện thực; giữ mỗi file ≤200 dòng nonblank.
+- [x] **Step 4:** Gate → PASS.
+- [x] **Step 5: Commit** `feat: add side-scroll room scene with doors and targets`.
 
 ### Task 6: Ánh sáng theo buổi và không khí (sau review E1)
 
@@ -169,13 +174,13 @@
 - Consumes: Task 2 `recommendation`; Task 3 lighting schema; Task 5 room.
 - Produces: `side_room.set_lighting_phase(phase_id: String) -> void` (phase domain, tra `phase_lighting.json` được inject qua `config.phase_map`); `side_lighting.gd` (Node2D) `apply(preset: Dictionary, blend: float)`; `side_atmosphere.gd` `configure(spec: Dictionary, seed: int)`, `set_density(value: float)`, `set_reduced_motion(reduced: bool)`.
 - Quy ước: `CanvasModulate` theo `modulate`; sun shaft = `Sprite2D` additive gradient, góc `sun.angle`; light runtime ≤ `recommendation.max_runtime_lights`; bụi `GPUParticles2D` seed cố định (`seed = hash(room.id)`), số hạt = `dust × 120`; nước = shader trên layer có `"water": true`; grade + dither trong `side_grade.gdshader` trên một `CanvasLayer` dưới UI. Chuyển buổi tween 1,5 s; reduced → đặt ngay.
-- [ ] **Step 1: Test thất bại** `tests/test_side_lighting.gd`:
+- [x] **Step 1: Test thất bại** `tests/test_side_lighting.gd`:
   - mỗi phase domain trong `phase_lighting.json` map ra một buổi có trong preset.
   - `set_lighting_phase("evening")` → `CanvasModulate.color` tiến về `toi.modulate` (sau tween hoặc ngay khi reduced).
   - reduced motion bật **trước** configure → particles `emitting == false`, camera snap (Review Focus 5).
   - số light runtime ≤ giới hạn; UI `CanvasLayer` layer > grade layer.
-- [ ] **Step 2:** verify → FAIL. **Step 3:** hiện thực. **Step 4:** gate → PASS.
-- [ ] **Step 5: Commit** `feat: add side-scroll time-of-day lighting and atmosphere`.
+- [x] **Step 2:** verify → FAIL. **Step 3:** hiện thực. **Step 4:** gate → PASS.
+- [x] **Step 5: Commit** `feat: add side-scroll time-of-day lighting and atmosphere`.
 
 ### Task 7: Bảy phòng greybox
 
@@ -193,10 +198,10 @@
   - `home_room_2d`: `travel`; interaction targets = target của home 3D (giữ id).
   - Target của location `school` 3D đặt trong `corridor_c_2d`.
 - Kích thước tham khảo: chiều cao 1080; Phòng số 3 rộng 3200 ref px, hành lang 4800, phòng khác 2400–3200; `floor_y` 900; greybox phân màu theo plane (sky sáng nhất → foreground tối nhất) để nhìn được chiều sâu.
-- [ ] **Step 1:** Viết 7 file + manifest + text keys.
-- [ ] **Step 2:** `python tools/check_content.py` → PASS (graph cửa hai chiều, spawn tồn tại).
-- [ ] **Step 3:** Thêm vào `tests/test_side_room.gd`: mọi file trong `content/world2d/rooms/` qua `validate_room`; mọi cửa có cửa ngược về phòng nguồn.
-- [ ] **Step 4:** verify → PASS. **Step 5: Commit** `content: add seven greybox side rooms for the first three days`.
+- [x] **Step 1:** Viết 7 file + manifest + text keys.
+- [x] **Step 2:** `python tools/check_content.py` → PASS (graph cửa hai chiều, spawn tồn tại).
+- [x] **Step 3:** Thêm vào `tests/test_side_room.gd`: mọi file trong `content/world2d/rooms/` qua `validate_room`; mọi cửa có cửa ngược về phòng nguồn.
+- [x] **Step 4:** verify → PASS. **Step 5: Commit** `content: add seven greybox side rooms for the first three days`.
 
 ### Task 8: Nối phòng 2D vào game
 
@@ -212,14 +217,14 @@
   - `playable_world.gd`: `travel(play: Node, location_id: String, spawn_id: String = "travel") -> void`, `enter_room(play: Node, room_id: String, spawn_id: String) -> void`, `snapshot(play: Node) -> Dictionary`, `restore(play: Node, world: Dictionary) -> void`.
   - `playable_rooms.mount` rẽ theo `config.get("kind") == "side_room_v1"`; nối `door_requested` → `enter_room.call_deferred`, `portal_requested(location, spawn)` → `travel.call_deferred`; mỗi lần mount khóa input và bỏ qua yêu cầu cửa/portal tiếp theo tới khi mount xong (Review Focus 4).
   - `playable._refresh()` gọi `room.set_lighting_phase(session phase)` nếu room có method (phòng 2D).
-- [ ] **Step 1: Test thất bại** trong `tests/test_playable.gd`:
+- [x] **Step 1: Test thất bại** trong `tests/test_playable.gd`:
   - khởi động playable → phòng là side room `room3_2d`.
   - đặt player tại cửa hành lang của `room3_2d`, bấm tương tác → phòng `corridor_c_2d`, `controller.location_id == "school"`, snapshot session không đổi (không tốn thời gian).
   - phát hai yêu cầu cửa trong cùng frame → đúng một phòng mới, phòng cũ đã free.
   - travel `library` → vẫn mount phòng HD-2D cũ (tương thích).
   - mở dialogue → input phòng bị khóa; đóng → mở lại.
-- [ ] **Step 2:** verify → FAIL. **Step 3:** hiện thực; `playable.gd` ≤200 nonblank sau khi tách. **Step 4:** gate + `verify_native.py` → PASS (suite HD-2D cũ vẫn xanh cho location chưa chuyển; nếu test HD-2D cũ assert club/school/home là 3D, cập nhật đúng test đó sang location còn HD-2D, ghi lý do trong commit).
-- [ ] **Step 5: Commit** `feat: mount side-scroll rooms for school, club and home`.
+- [x] **Step 2:** verify → FAIL. **Step 3:** hiện thực; `playable.gd` ≤200 nonblank sau khi tách. **Step 4:** gate + `verify_native.py` → PASS (suite HD-2D cũ vẫn xanh cho location chưa chuyển; nếu test HD-2D cũ assert club/school/home là 3D, cập nhật đúng test đó sang location còn HD-2D, ghi lý do trong commit).
+- [x] **Step 5: Commit** `feat: mount side-scroll rooms for school, club and home`.
 
 ### Task 9: World envelope v2 và tương thích save
 
@@ -232,15 +237,15 @@
   - v1 như cũ;
   - v2 `{"version":2,"location_id":str,"room_id":str,"x":finite num,"facing":-1|1}` cho phòng 2D, hoặc `{"version":2,"location_id","room_id","position":[3 finite]}` cho phòng HD-2D; có cả `x` và `position` → invalid.
 - `playable_world.snapshot` ghi v2 (x/facing nếu side, position nếu 3D). `restore`: v2 side + room tồn tại → `enter_room` + `place_player(spawn mặc định, x, facing)`; v1 hoặc room HD-2D cũ khi location giờ là side → `travel(location, "travel")` (spawn mặc định).
-- [ ] **Step 1: Test thất bại** `tests/test_saves.gd`:
+- [x] **Step 1: Test thất bại** `tests/test_saves.gd`:
   - fixture v1 thật hiện có (club, position 3D) decode OK; restore → `room3_2d`, player ở spawn `travel` (Review Focus 1); state gameplay giữ nguyên.
   - `world_v2_side.json` round-trip: save tại x=1234, facing −1 → load → x=1234, facing −1, cùng room.
   - `world_v2_corrupt_x.json` (x = "NaN"/chuỗi) → decode `ok == false`, code `invalid_save_envelope`.
   - `world_v2_both_fields.json` → invalid.
   - v2 x ngoài bounds của room → restore clamp về spawn mặc định.
   - legacy tile/press save vẫn đi qua `legacy_world` như cũ.
-- [ ] **Step 2:** verify → FAIL. **Step 3:** hiện thực; validator thuần (domain không đọc file world). **Step 4:** ghi behavior ledger: "Save v1 tại club/school/home vào spawn mặc định phòng 2D, vị trí 3D không chuyển đổi". **Step 5:** gate → PASS.
-- [ ] **Step 6: Commit** `feat: add world envelope v2 for side-scroll rooms with legacy fallback`.
+- [x] **Step 2:** verify → FAIL. **Step 3:** hiện thực; validator thuần (domain không đọc file world). **Step 4:** ghi behavior ledger: "Save v1 tại club/school/home vào spawn mặc định phòng 2D, vị trí 3D không chuyển đổi". **Step 5:** gate → PASS.
+- [x] **Step 6: Commit** `feat: add world envelope v2 for side-scroll rooms with legacy fallback`.
 
 ### Task 10: Native walk-through, evidence greybox, đóng E2
 
@@ -250,10 +255,10 @@
 
 **Interfaces:**
 - Consumes: mọi task trước.
-- [ ] **Step 1:** `tests/native_side_rooms.gd` (không headless): khởi động playable; đi bằng input thật qua đồ thị cửa: room3 → corridor → gate → office → gate → corridor → class → corridor → canteen → corridor → room3; travel home; tại mỗi phòng: chụp PNG 1920×1080 ở 4 buổi (gọi `set_lighting_phase`), assert player trong bounds, prompt HUD hiện khi đứng tại target, input khóa khi mở dialogue Vân ở room3; ghi `report.json` (phòng, checks, frame time p95 khi đi 10 s mỗi phòng).
-- [ ] **Step 2:** Thêm vào `verify_native.py` với log `native-side-rooms.log` và marker hoàn tất.
-- [ ] **Step 3:** Chạy `python tools/verify.py --godot $GODOT` và `python tools/verify_native.py --godot $GODOT` → PASS. Xem lại từng ảnh: greybox đọc được chiều sâu, nhân vật không bị foreground che mặt.
-- [ ] **Step 4:** README evidence: lệnh, máy, số check, giới hạn (greybox, không phải art; frame time chỉ là quan sát, không thay profile E1).
-- [ ] **Step 5:** `status.json`: E2 `complete` + evidence; E3 `next`.
-- [ ] **Step 6: Commit** `test: native walk-through and greybox evidence for side rooms`.
+- [x] **Step 1:** `tests/native_side_rooms.gd` (không headless): khởi động playable; đi bằng input thật qua đồ thị cửa: room3 → corridor → gate → office → gate → corridor → class → corridor → canteen → corridor → room3; travel home; tại mỗi phòng: chụp PNG 1920×1080 ở 4 buổi (gọi `set_lighting_phase`), assert player trong bounds, prompt HUD hiện khi đứng tại target, input khóa khi mở dialogue Vân ở room3; ghi `report.json` (phòng, checks, frame time p95 khi đi 10 s mỗi phòng).
+- [x] **Step 2:** Thêm vào `verify_native.py` với log `native-side-rooms.log` và marker hoàn tất.
+- [x] **Step 3:** Chạy `python tools/verify.py --godot $GODOT` và `python tools/verify_native.py --godot $GODOT` → PASS. Xem lại từng ảnh: greybox đọc được chiều sâu, nhân vật không bị foreground che mặt.
+- [x] **Step 4:** README evidence: lệnh, máy, số check, giới hạn (greybox, không phải art; frame time chỉ là quan sát, không thay profile E1).
+- [x] **Step 5:** `status.json`: E2 `complete` + evidence; E3 `next`.
+- [x] **Step 6: Commit** `test: native walk-through and greybox evidence for side rooms`.
 - [ ] **Step 7: DỪNG — người dùng chơi bản greybox và review E2.** Sau đó viết plan E3 (beauty corner Phòng số 3, placeholder qua Codex) dựa trên report E1 và phản hồi.

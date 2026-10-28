@@ -1,0 +1,150 @@
+{
+  "capture_method": "Unscaled native viewport pixels centered on a black window-sized canvas, restoring the KEEP letterbox; no content resizing.",
+  "captures": 28,
+  "checks": 257,
+  "cpu": "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz",
+  "created_at_utc": "2026-10-28T10:11:28",
+  "driver": "d3d12",
+  "engine": "4.7.2-stable (steam)",
+  "failures": [],
+  "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+  "max_fps": 60,
+  "os": "Windows",
+  "os_version": "10.0.26300",
+  "physics_ticks_per_second": 60,
+  "renderer": "forward_plus",
+  "rooms": [
+    {
+      "id": "room3_2d",
+      "location_id": "club",
+      "prompt_target": "writing-desk",
+      "walk_sample": {
+        "frame_p95_ms": 16.723,
+        "frames": 601,
+        "seconds": 10.016298
+      }
+    },
+    {
+      "id": "corridor_c_2d",
+      "location_id": "school",
+      "prompt_target": "writing-desk",
+      "walk_sample": {
+        "frame_p95_ms": 16.714,
+        "frames": 601,
+        "seconds": 10.016298
+      }
+    },
+    {
+      "id": "school_gate_2d",
+      "location_id": "school",
+      "prompt_target": "to_office",
+      "walk_sample": {
+        "frame_p95_ms": 16.723,
+        "frames": 601,
+        "seconds": 10.016242
+      }
+    },
+    {
+      "id": "discipline_office_2d",
+      "location_id": "school",
+      "prompt_target": "to_gate",
+      "walk_sample": {
+        "frame_p95_ms": 16.72,
+        "frames": 601,
+        "seconds": 10.016237
+      }
+    },
+    {
+      "id": "class_11a3_2d",
+      "location_id": "school",
+      "prompt_target": "to_corridor",
+      "walk_sample": {
+        "frame_p95_ms": 16.724,
+        "frames": 601,
+        "seconds": 10.016245
+      }
+    },
+    {
+      "id": "canteen_2d",
+      "location_id": "school",
+      "prompt_target": "to_corridor",
+      "walk_sample": {
+        "frame_p95_ms": 16.707,
+        "frames": 601,
+        "seconds": 10.016282
+      }
+    },
+    {
+      "id": "home_room_2d",
+      "location_id": "home",
+      "prompt_target": "writing-desk",
+      "walk_sample": {
+        "frame_p95_ms": 16.709,
+        "frames": 601,
+        "seconds": 10.016264
+      }
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Synthetic Godot input; greybox functional evidence. Ten-second wall-clock frame samples at cap 60 are informational; no iGPU, GPU budget or art acceptance claim.",
+  "transitions": [
+    {
+      "from": "room3_2d",
+      "spawn": "from_room3",
+      "to": "corridor_c_2d"
+    },
+    {
+      "from": "corridor_c_2d",
+      "spawn": "from_corridor",
+      "to": "school_gate_2d"
+    },
+    {
+      "from": "school_gate_2d",
+      "spawn": "from_gate",
+      "to": "discipline_office_2d"
+    },
+    {
+      "from": "discipline_office_2d",
+      "spawn": "from_office",
+      "to": "school_gate_2d"
+    },
+    {
+      "from": "school_gate_2d",
+      "spawn": "from_gate",
+      "to": "corridor_c_2d"
+    },
+    {
+      "from": "corridor_c_2d",
+      "spawn": "from_corridor",
+      "to": "class_11a3_2d"
+    },
+    {
+      "from": "class_11a3_2d",
+      "spawn": "from_class",
+      "to": "corridor_c_2d"
+    },
+    {
+      "from": "corridor_c_2d",
+      "spawn": "from_corridor",
+      "to": "canteen_2d"
+    },
+    {
+      "from": "canteen_2d",
+      "spawn": "from_canteen",
+      "to": "corridor_c_2d"
+    },
+    {
+      "from": "corridor_c_2d",
+      "spawn": "from_corridor",
+      "to": "room3_2d"
+    }
+  ],
+  "viewport_texture": [
+    2200,
+    1239
+  ],
+  "window": [
+    1920,
+    1080
+  ]
+}

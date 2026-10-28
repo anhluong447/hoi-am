@@ -1,9 +1,14 @@
 {
   "E0": "complete",
   "E1": "complete",
-  "E2": "pending",
-  "E3": "pending",
+  "E2": "complete",
+  "E3": "next",
   "E4": "pending",
   "E1_report": "docs/world-side/evidence/e1-stress-v1/report.json",
-  "E1_note": "RTX reference only; Intel UHD measurement deferred by user 2026-10-28; recommendation set by design"
+  "E1_note": "RTX reference only; Intel UHD measurement deferred by user 2026-10-28; recommendation set by design",
+  "E2_report": "docs/world-side/evidence/e2-greybox-v3/report.json",
+  "E2_evidence": "docs/world-side/evidence/e2-greybox-v3/README.md",
+  "E2_checks": {"headless": 1129, "native": 455, "native_side_rooms": 265, "failures": 0},
+  "E2_user_review": "pending",
+  "E2_note": "Technical gates and 28 native captures verified; user greybox review required before planning E3. No new export or iGPU performance claim."
 }

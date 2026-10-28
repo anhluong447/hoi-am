@@ -97,7 +97,9 @@ func _choice(id: String) -> void:
 	var model := STARTUP.fixture_model(_setup.data.preview.dialogue, _setup.text)
 	model.selected_choice = id
 	if _capture:
-		view.configure(model, _setup.data.dialogue_ui, _resources)
+		# Rebuild after GUI dispatch: replacing the pressed button during its
+		# release event can route that same release into the replacement controls.
+		view.configure.call_deferred(model, _setup.data.dialogue_ui, _resources)
 	else:
 		model.line = _setup.text.text("ui.coastal.preview.response")
 		view.transition(model)

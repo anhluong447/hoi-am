@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "locations": {
+    "school": {"kind": "side", "entry_room": "school_gate_2d", "rooms_path": "res://content/world2d/rooms/", "prototype": false, "art_acceptance": "greybox"},
+    "club": {"kind": "side", "entry_room": "room3_2d", "rooms_path": "res://content/world2d/rooms/", "prototype": false, "art_acceptance": "greybox"},
+    "library": {
+      "room_id": "library_hd2d_v1",
+      "room_path": "res://content/world/library_hd2d_v1.json",
+      "prototype": false,
+      "art_acceptance": "user_pending"
+    },
+    "cafe": {
+      "room_id": "cafe_hd2d_v1",
+      "room_path": "res://content/world/cafe_hd2d_v1.json",
+      "prototype": false,
+      "art_acceptance": "user_pending"
+    },
+    "shop": {
+      "room_id": "shop_hd2d_v1",
+      "room_path": "res://content/world/shop_hd2d_v1.json",
+      "prototype": false,
+      "art_acceptance": "user_pending"
+    },
+    "job": {
+      "room_id": "job_hd2d_v1",
+      "room_path": "res://content/world/job_hd2d_v1.json",
+      "prototype": false,
+      "art_acceptance": "user_pending"
+    },
+    "waterfront": {
+      "room_id": "waterfront_hd2d_v1",
+      "room_path": "res://content/world/waterfront_hd2d_v1.json",
+      "prototype": false,
+      "art_acceptance": "user_pending"
+    },
+    "home": {"kind": "side", "entry_room": "home_room_2d", "rooms_path": "res://content/world2d/rooms/", "prototype": false, "art_acceptance": "greybox"}
+  },
+  "legacy_maps": {
+    "yard": "school",
+    "newsroom": "club",
+    "club": "club",
+    "library": "library",
+    "harbor": "waterfront",
+    "interaction": "club"
+  }
+}

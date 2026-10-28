@@ -1,8 +1,10 @@
 # Hồi Âm — Godot
 
-Project Godot độc lập cho game tòa soạn học đường ở Hải Vọng. Định hướng:
-HD-2D: không gian/ánh sáng/collision 3D, nhân vật và cảnh vật bằng texture 2D,
-UI coastal 2D; PC/Forward+ là mục tiêu ban đầu.
+Project Godot độc lập cho game tòa soạn học đường ở Hải Vọng. Định hướng hiện tại:
+**2D side-scroll, high-res painted cinematic, không pixel art**, theo
+[ADR 005](docs/decisions/005-side-scroll-2d.md). UI coastal giữ bố cục đã duyệt.
+Mục tiêu là laptop phổ thông không cần GPU rời; runtime hiện giữ Forward+,
+chưa kiểm chứng hiệu năng iGPU.
 
 `../hai-vong/` giữ nguyên làm nguồn đối chứng. Project này có thể phát triển kiến
 trúc riêng, không phụ thuộc JavaScript, HTML hay checkout cũ khi chạy game.
@@ -16,6 +18,8 @@ Mở `project.godot` bằng Godot 4.7.2 và nhấn F5. Màn đầu có vòng ch�
   WASD/mũi tên hoặc stick trái để đi, E/nút A tương tác, Esc/Start mở menu.
   M hoặc nút Địa điểm ở HUD mở danh sách di chuyển.
   Travel không tiêu lượt; các action đời sống được mở theo location.
+  World mới có bảy phòng greybox ở trường, CLB và nhà; dùng trái/phải để đi.
+  Năm địa điểm còn lại tạm giữ phòng HD-2D trong thời gian chuyển đổi.
 - **Sandbox công thức**: 8 benchmarks, chạy từng ngày và debug presets riêng;
   không dùng calendar/handlers/save slots của gameplay.
 
@@ -32,11 +36,12 @@ Ba lối preview vẫn giữ để kiểm tra renderer:
 
 Chapters 00–12 có implementation và evidence kỹ thuật: full gameplay/formula
 parity, save compatibility, native export và extension rehearsal. UI đã được người
-dùng chấp nhận; giữ bố cục và motion thoại đã duyệt. Workstream
-[HD00–HD09](docs/world-hd2d/README.md) thay world bằng tám room packs dùng art 2D
-trong không gian 3D, kèm kiểm thử native, review ảnh/video và profile thực tế.
-Art world cuối còn chờ người dùng nghiệm thu; nội dung/cân bằng vẫn là gameplay
-mock hiện có. Source/prototype và evidence cũ được giữ nguyên.
+dùng chấp nhận; giữ bố cục và motion thoại đã duyệt. Workstream hiện tại là
+[world side-scroll E0–E4](docs/world-side/README.md); E2 dựng bảy phòng greybox,
+E3/E4 làm art placeholder sau review. [HD00–HD09](docs/world-hd2d/README.md)
+đã archive, code/content/evidence giữ nguyên để đối chứng và phục vụ các địa điểm
+chưa chuyển. Art world cuối còn chờ nghiệm thu; nội dung/cân bằng vẫn là gameplay
+mock hiện có. Debate/trial ngày 3 thuộc đợt sau.
 F6 chạy riêng các scene trong `src/bootstrap/previews/`.
 
 ```powershell

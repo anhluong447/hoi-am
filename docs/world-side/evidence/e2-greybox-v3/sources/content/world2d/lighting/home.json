@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "phases": {
+    "sang": {
+      "modulate": "#f3efe6",
+      "sun": {"color": "#fff0d2", "energy": 0.4, "angle": 20.0},
+      "lights": [],
+      "dust": 0.2,
+      "water_tint": "#86bccf"
+    },
+    "chieu": {
+      "modulate": "#fcd9b0",
+      "sun": {"color": "#ffab5a", "energy": 0.7, "angle": 42.0},
+      "lights": [],
+      "dust": 0.35,
+      "water_tint": "#e2a063"
+    },
+    "toi": {
+      "modulate": "#a589a6",
+      "sun": {"color": "#ff8094", "energy": 0.2, "angle": 64.0},
+      "lights": [
+        {"id": "desk_lamp", "position": [700.0, 620.0], "color": "#ffc070", "energy": 0.85, "radius": 320.0}
+      ],
+      "dust": 0.1,
+      "water_tint": "#6c5890"
+    },
+    "dem": {
+      "modulate": "#3a4874",
+      "sun": {"color": "#9fb8ff", "energy": 0.0, "angle": 70.0},
+      "lights": [
+        {"id": "desk_lamp", "position": [700.0, 620.0], "color": "#ffc070", "energy": 1.15, "radius": 360.0},
+        {"id": "window_moon", "position": [1500.0, 340.0], "color": "#8fb0ff", "energy": 0.3, "radius": 560.0}
+      ],
+      "dust": 0.0,
+      "water_tint": "#1d2c4c"
+    }
+  }
+}

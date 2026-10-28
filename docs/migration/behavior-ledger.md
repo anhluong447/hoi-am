@@ -25,6 +25,8 @@
 | Save uses full float precision and semantic JSON equality | Serialization can change integral numeric representation | No float rounding or tolerance is used to hide save changes |
 | Club, school and home enter side-scroll greybox rooms | Side-scroll pivot (ADR 005); other locations stay HD-2D until migrated | Playable/native tests; doors cost no time; side-room saves keep envelope v1 location/room and restore to the entry room travel spawn until envelope v2 |
 | Save v1 tại club/school/home vào spawn mặc định phòng 2D, vị trí 3D không chuyển đổi | World envelope v2 stores side-room `x`/`facing`; HD-2D coordinates have no meaning in a side room | `tests/test_saves.gd` with genuine v1 fixtures (`tests/fixtures/saves/README.md`): v1 and old HD-2D rooms at now-side locations enter the location travel spawn; v2 side `x` outside bounds uses the room default spawn; gameplay state unchanged |
+| Side-room doors refresh the displayed HUD location after successful mount | Cross-location doors updated controller location but left the old label visible until the next modal/travel refresh | Headless door round-trip regression and native per-room rendered-label assertions; progression unchanged |
+| Captured UI preview defers rebuilding choice controls until GUI dispatch finishes | Synchronous rebuilding inside the pressed callback allowed duplicate choice requests and unstable focus in the native fixture | Existing native pointer/rebuilt-focus test reproduced failure, then passed 68 checks after deferral; accepted UI composition and gameplay dialogue flow unchanged |
 
 The gameplay packs remain mock mechanics. The story bible remains reference
 material with its existing proposal/canon distinctions. Captured dialogue graphs

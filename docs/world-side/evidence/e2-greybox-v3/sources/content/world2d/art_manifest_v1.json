@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "assets": {
+    "greybox.sky.school_gate": {"kind": "greybox", "color": "#e9eef4", "size": [3000.0, 1080.0]},
+    "greybox.back.school_gate": {"kind": "greybox", "color": "#aab7c6", "size": [3000.0, 900.0]},
+    "greybox.mid.school_gate": {"kind": "greybox", "color": "#6e7f92", "size": [3000.0, 100.0]},
+
+    "greybox.sky.discipline_office": {"kind": "greybox", "color": "#e9eef4", "size": [2400.0, 1080.0]},
+    "greybox.back.discipline_office": {"kind": "greybox", "color": "#aab7c6", "size": [2400.0, 900.0]},
+    "greybox.mid.discipline_office": {"kind": "greybox", "color": "#6e7f92", "size": [2400.0, 100.0]},
+
+    "greybox.sky.corridor_c": {"kind": "greybox", "color": "#e9eef4", "size": [4800.0, 1080.0]},
+    "greybox.back.corridor_c": {"kind": "greybox", "color": "#aab7c6", "size": [4800.0, 900.0]},
+    "greybox.mid.corridor_c": {"kind": "greybox", "color": "#6e7f92", "size": [4800.0, 100.0]},
+
+    "greybox.sky.class_11a3": {"kind": "greybox", "color": "#e9eef4", "size": [2800.0, 1080.0]},
+    "greybox.back.class_11a3": {"kind": "greybox", "color": "#aab7c6", "size": [2800.0, 900.0]},
+    "greybox.mid.class_11a3": {"kind": "greybox", "color": "#6e7f92", "size": [2800.0, 100.0]},
+
+    "greybox.sky.canteen": {"kind": "greybox", "color": "#e9eef4", "size": [3000.0, 1080.0]},
+    "greybox.back.canteen": {"kind": "greybox", "color": "#aab7c6", "size": [3000.0, 900.0]},
+    "greybox.mid.canteen": {"kind": "greybox", "color": "#6e7f92", "size": [3000.0, 100.0]},
+
+    "greybox.sky.room3": {"kind": "greybox", "color": "#e9eef4", "size": [3200.0, 1080.0]},
+    "greybox.back.room3": {"kind": "greybox", "color": "#aab7c6", "size": [3200.0, 900.0]},
+    "greybox.mid.room3": {"kind": "greybox", "color": "#6e7f92", "size": [3200.0, 100.0]},
+
+    "greybox.sky.home_room": {"kind": "greybox", "color": "#e9eef4", "size": [2600.0, 1080.0]},
+    "greybox.back.home_room": {"kind": "greybox", "color": "#aab7c6", "size": [2600.0, 900.0]},
+    "greybox.mid.home_room": {"kind": "greybox", "color": "#6e7f92", "size": [2600.0, 100.0]},
+
+    "greybox.prop.pillar": {"kind": "greybox", "color": "#33404f", "size": [120.0, 420.0]},
+    "greybox.prop.locker": {"kind": "greybox", "color": "#313b46", "size": [200.0, 260.0]},
+    "greybox.prop.cabinet": {"kind": "greybox", "color": "#2f3844", "size": [160.0, 220.0]},
+    "greybox.prop.desks_row": {"kind": "greybox", "color": "#37414d", "size": [300.0, 140.0]},
+    "greybox.prop.counter": {"kind": "greybox", "color": "#394550", "size": [320.0, 140.0]},
+    "greybox.prop.desk": {"kind": "greybox", "color": "#4a3b2d", "size": [220.0, 110.0]},
+    "greybox.prop.wardrobe": {"kind": "greybox", "color": "#3a3228", "size": [180.0, 260.0]}
+  }
+}

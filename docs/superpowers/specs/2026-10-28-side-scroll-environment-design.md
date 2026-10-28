@@ -1,6 +1,8 @@
 # Môi trường 2D side-scroll cho 3 ngày đầu — design
 
-Ngày: 2026-10-28. Trạng thái: **bản thiết kế chờ người dùng duyệt**, chưa triển khai.
+Ngày: 2026-10-28. Trạng thái: **E2 đã qua gate kỹ thuật, chờ người dùng review**
+theo hướng đã chốt ở ADR 005; E3/E4 chờ review greybox. Quyết định dừng đo hiệu
+năng ở §7.4 vẫn có hiệu lực. Evidence ở `docs/world-side/evidence/e2-greybox-v3/`.
 Skill áp dụng: `.claude/skills/making-story-side-scrollers/`.
 
 ## 1. Ý định và lý do
@@ -18,7 +20,7 @@ nhưng người dùng chọn **làm môi trường trước, debate để sau**.
 
 ## 2. Mục tiêu
 
-1. Tầng world mới `src/world2d/`: phòng side-scroll nhiều lớp parallax, foreground che,
+1. Tầng world mới `src/world/side/`: phòng side-scroll nhiều lớp parallax, foreground che,
    actor đi trái/phải trên một làn, camera follow có giới hạn, cửa nối phòng, điểm tương tác.
 2. Bảy không gian của First3Days đi lại được: cổng trường, phòng giám thị, lớp 11A3,
    hành lang dãy C, Phòng số 3, phòng trọ, căng tin.

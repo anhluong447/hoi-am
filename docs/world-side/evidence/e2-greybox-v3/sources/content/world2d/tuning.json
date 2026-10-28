@@ -1,0 +1,11 @@
+{
+  "max_speed": 360.0,
+  "accel_time": 0.10,
+  "decel_time": 0.08,
+  "stride": 180.0,
+  "bob": 4.0,
+  "camera_dead_zone": 120.0,
+  "camera_response": 0.08,
+  "actor_height": 300.0,
+  "actor_half_width": 40.0
+}

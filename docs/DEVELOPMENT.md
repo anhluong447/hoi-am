@@ -40,9 +40,16 @@ chạy Godot thật với Forward+, kiểm tra input/focus/resize, rồi lưu ev
 
 World 2D side-scroll ([ADR 005](decisions/005-side-scroll-2d.md)) thêm content ở
 `content/world2d/` và code ở `src/world/side/`; status mốc E0–E4 ở
-`docs/world-side/status.json`. `verify_native.py` sẽ thêm test native đi lại 7
-phòng side-scroll ở mốc E2 (xem plan); cho tới lúc đó, HD-2D vẫn là suite native
-hiện có cho các location chưa chuyển.
+`docs/world-side/status.json`. `verify_native.py` chạy walkthrough 7 phòng qua
+input Godot, cửa hai chiều, HUD prompt, khóa thoại và save v1/v2, rồi chạy các
+suite UI/HD-2D hiện có. Side suite chụp bốn buổi mỗi phòng ở 1920×1080 và ghi
+report vào thư mục mới trong `artifacts/native-side-rooms/`; sample đi bộ 10 giây
+mỗi phòng chỉ là quan sát wall-clock ở cap 60 FPS, không phải benchmark GPU.
+
+Để lưu evidence có version, truyền thêm `--side-output
+res://docs/world-side/evidence/<new-version>` cho `verify_native.py`. Thư mục
+phải chưa tồn tại; không ghi đè capture lịch sử. Side suite chạy realtime,
+không `--fixed-fps`; các suite UI/HD-2D vẫn dùng cadence mô phỏng cố định.
 
 Browser suite của hai-vong không áp dụng cho scene Godot. Source checkout giữ
 nguyên; reference baselines đã copy có hash lock. Khi cần oracle mới, công cụ

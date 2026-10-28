@@ -8,9 +8,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--godot', required=True)
     parser.add_argument('--capture', action='store_true')
+    parser.add_argument('--side-output', help='New directory for versioned side-room captures and report')
     args = parser.parse_args()
     if not Path(args.godot).is_file(): raise SystemExit('Expected Godot executable')
     logs = ROOT / 'artifacts/verification'
+    side = [args.godot, '--path', str(ROOT), '--script', 'res://tests/native_side_rooms.gd']
+    if args.side_output:
+        side += ['--', '--output', args.side_output]
+    run(side, timeout=300, log_path=logs / 'native-side-rooms.log',
+        expected=r'Native side rooms: \d+ checks; 0 failures; 28 captures\b')
     run([args.godot, '--path', str(ROOT), '--script', 'res://tests/native_interaction.gd',
          '--fixed-fps', '60', '--quit-after', '900'], log_path=logs / 'native-interaction.log',
         expected=r'Native interaction: \d+ checks; 0 failures\b')

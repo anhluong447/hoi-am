@@ -111,6 +111,13 @@ func _world_envelopes() -> void:
 	loaded = service.import_payload(_fixture("world_v1_side_school"))
 	await _restore(tree, play, loaded.get("world", {}))
 	expect(loaded.ok and play.room._config.id == "school_gate_2d" and is_equal_approx(play.room.player.position.x, 1500.0), "v1 side save enters the location entry room travel spawn")
+	var v1_extra := _fixture("world_v1_side_school")
+	v1_extra.world.x = 1234.0
+	loaded = service.import_payload(v1_extra)
+	expect(loaded.ok, "v1 accepts unknown extra fields without changing its decoder version")
+	var before_restore: Dictionary = setup.session.snapshot()
+	await _restore(tree, play, loaded.get("world", {}))
+	expect(play.room._config.id == "school_gate_2d" and is_equal_approx(play.room.player.position.x, 1500.0) and setup.session.snapshot() == before_restore, "v1 with extra x and no facing uses legacy spawn without changing progression")
 	await _side_round_trip(tree, play, service)
 	for bad: Dictionary in [{"x": NAN}, {"x": INF}, {"x": "1234"}, {"facing": 0}, {"facing": 2}, {"facing": "1"}, {"position": [1.0, 0.0, 2.0]}, {"version": 3}, {"room_id": 4}]:
 		world = {"version": 2, "location_id": "school", "room_id": "corridor_c_2d", "x": 1234.0, "facing": -1}

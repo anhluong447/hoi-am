@@ -111,9 +111,11 @@ func _side_doors(tree: SceneTree, play: Node, state: Dictionary) -> void:
 	await tree.process_frame
 	await tree.physics_frame
 	expect(play.room._config.id == "corridor_c_2d" and play.controller.location_id == "school", "Cross-location door enters the authored target room")
+	expect(play._hud._labels.location.text == play.controller.hud().location, "Cross-location door refreshes the displayed HUD location")
 	expect(is_equal_approx(play.room.player.position.x, 4500.0), "Door honours the authored target spawn")
 	await _walk_door(tree, play, 4600.0)
 	expect(play.room._config.id == "room3_2d" and play.controller.location_id == "club" and is_equal_approx(play.room.player.position.x, 3000.0), "Corridor door returns to room3_2d in club")
+	expect(play._hud._labels.location.text == play.controller.hud().location, "Return door refreshes the displayed HUD location")
 	await _walk_door(tree, play, 3100.0)
 	expect(play.room._config.id == "corridor_c_2d" and play.controller.location_id == "school", "Room3 door re-enters the corridor")
 	expect(play.setup.session.snapshot() == state, "Walking through doors costs no gameplay time")

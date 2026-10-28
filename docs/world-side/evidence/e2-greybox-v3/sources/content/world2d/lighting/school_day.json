@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "phases": {
+    "sang": {
+      "modulate": "#f4f2ec",
+      "sun": {"color": "#fff0d4", "energy": 0.45, "angle": 24.0},
+      "lights": [],
+      "dust": 0.25,
+      "water_tint": "#86bccf"
+    },
+    "chieu": {
+      "modulate": "#ffe0b8",
+      "sun": {"color": "#ffb468", "energy": 0.8, "angle": 38.0},
+      "lights": [],
+      "dust": 0.45,
+      "water_tint": "#e2a063"
+    },
+    "toi": {
+      "modulate": "#b892b4",
+      "sun": {"color": "#ff7c8e", "energy": 0.3, "angle": 64.0},
+      "lights": [],
+      "dust": 0.15,
+      "water_tint": "#6c5890"
+    },
+    "dem": {
+      "modulate": "#4b5b88",
+      "sun": {"color": "#9fb8ff", "energy": 0.0, "angle": 70.0},
+      "lights": [
+        {"id": "lamp_post", "position": [1400.0, 420.0], "color": "#ffcf8a", "energy": 0.9, "radius": 420.0}
+      ],
+      "dust": 0.0,
+      "water_tint": "#1d2c4c"
+    }
+  }
+}

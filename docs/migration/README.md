@@ -1,5 +1,9 @@
 # Roadmap migration theo chapter
 
+Đây là roadmap migration kỹ thuật 00–12 và hướng world lịch sử. Từ 2026-10-28,
+world mới theo [ADR 005](../decisions/005-side-scroll-2d.md): 2D side-scroll,
+high-res painted cinematic; tiến độ hiện hành ở [world-side](../world-side/README.md).
+
 Ngày: 2026-10-10. Source hai-vong giữ nguyên; target hoi-am phát triển độc lập.
 Mục tiêu cuối: game Godot chạy không cần JavaScript/HTML, world 2.5D và UI coastal,
 gameplay có đối chứng. Không xem skeleton, concept hoặc proposal là demo hoàn chỉnh.

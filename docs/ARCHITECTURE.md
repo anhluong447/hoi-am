@@ -3,7 +3,9 @@
 Ngày: 2026-10-10. Trạng thái: Chapters 00–12 có implementation kỹ thuật; full
 gameplay/formula parity, native save/export và extension workflow đã kiểm chứng.
 Production visual/pixel parity vẫn có gate riêng ở review cuối.
-Định hướng Godot 4.7.2, GDScript, PC Forward+, world 3D + sprite + UI 2D.
+Định hướng hiện tại (ADR 005, 2026-10-28): Godot 4.7.2, GDScript, world 2D
+side-scroll high-res painted + UI coastal. Renderer giữ Forward+; mục tiêu laptop
+phổ thông chưa được kiểm chứng trên iGPU. World HD-2D giữ cho location chưa chuyển.
 
 ## Mục tiêu
 

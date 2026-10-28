@@ -1,0 +1,27 @@
+{
+  "kind": "side_room_v1",
+  "id": "class_11a3_2d",
+  "location_id": "school",
+  "title_key": "content.world2d.rooms.class_11a3_2d.title",
+  "height": 1080,
+  "bounds": {"min_x": 0.0, "max_x": 2800.0},
+  "floor_y": 900.0,
+  "default_spawn": "from_corridor",
+  "spawns": {
+    "from_corridor": {"x": 1400.0, "facing": -1}
+  },
+  "layers": [
+    {"id": "sky", "plane": "sky", "scroll_scale": 1.0, "art_ref": "greybox.sky.class_11a3", "position": [0.0, 0.0], "z": 0},
+    {"id": "back", "plane": "back", "scroll_scale": 1.0, "art_ref": "greybox.back.class_11a3", "position": [0.0, 0.0], "z": 0},
+    {"id": "mid", "plane": "mid", "scroll_scale": 1.0, "art_ref": "greybox.mid.class_11a3", "position": [0.0, 800.0], "z": 0}
+  ],
+  "props": [
+    {"id": "classroom_desks", "art_ref": "greybox.prop.desks_row", "position": [1400.0, 900.0], "sort_y": 920.0, "occludes_actor": true}
+  ],
+  "doors": [
+    {"id": "to_corridor", "x": 2600.0, "width": 100.0, "target_room": "corridor_c_2d", "target_spawn": "from_class", "label_key": "content.world2d.rooms.corridor_c_2d.title"}
+  ],
+  "interactions": [],
+  "actors": [],
+  "lighting_ref": "school_day"
+}

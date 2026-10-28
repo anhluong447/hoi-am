@@ -1,0 +1,433 @@
+{
+  "schema_version": 1,
+  "source_base_commit": "51b76f5b39c449fd50bfc47cb6559dd6c1177924",
+  "source_note": "Selected runner/navigation/save/world inputs are copied byte-exact from the tested working tree; other repository dependencies retain their existing content manifests.",
+  "command": "python tools/verify_native.py --godot <Godot 4.7.2> --side-output res://docs/world-side/evidence/e2-greybox-v3",
+  "files": [
+    {
+      "path": "canteen_2d-chieu.png",
+      "bytes": 1272692,
+      "sha256": "ad07c4ebecdc691a89fe4b49784293fac42095ba742ecc640d9d9856d5f7e305"
+    },
+    {
+      "path": "canteen_2d-dem.png",
+      "bytes": 1284700,
+      "sha256": "b06ae09340618612dbe7d2d7951495097867742b736068b1e570a03655c198e9"
+    },
+    {
+      "path": "canteen_2d-sang.png",
+      "bytes": 1214812,
+      "sha256": "0def53d97ad7c8a9bfe3338991532f8058c7c012cd4baaf8dcdd74535d4cef44"
+    },
+    {
+      "path": "canteen_2d-toi.png",
+      "bytes": 1200119,
+      "sha256": "0e3cbf598d3cc04852d49d0f205a4a45f1a547e4688418ec2d8f1e3153996fa8"
+    },
+    {
+      "path": "class_11a3_2d-chieu.png",
+      "bytes": 1286612,
+      "sha256": "17ede49f5e3f1d8120e1acad87d0923c98af327ae1d2a74d525783a28c214a57"
+    },
+    {
+      "path": "class_11a3_2d-dem.png",
+      "bytes": 1342056,
+      "sha256": "a3036a0ccc996b67835832ea2a8087294edca327f575a5cde88743eedd8b5a33"
+    },
+    {
+      "path": "class_11a3_2d-sang.png",
+      "bytes": 1214741,
+      "sha256": "d24fdd6e8aa415ed76c31752d3eabcdea1489b144e34388bf444977dfdb1cd36"
+    },
+    {
+      "path": "class_11a3_2d-toi.png",
+      "bytes": 1206925,
+      "sha256": "1f1fbc5677bde55ffc6786ecdcd33893d0ec55006ed5d78b8ab8e04653cfde82"
+    },
+    {
+      "path": "corridor_c_2d-chieu.png",
+      "bytes": 1360599,
+      "sha256": "e186633e1839e7f1ff859e33e330115eac769cafea1f9ed654115c1ba23c17ac"
+    },
+    {
+      "path": "corridor_c_2d-dem.png",
+      "bytes": 1202308,
+      "sha256": "b2ddb2957710b01a7444ee623a7c808694b26a7eb31b9696b55e9a3edab2a319"
+    },
+    {
+      "path": "corridor_c_2d-sang.png",
+      "bytes": 1292663,
+      "sha256": "8b1e3ef71cda06c3a7e4be4b3debbcf39378561077d0c1723b72a77f2ec2872c"
+    },
+    {
+      "path": "corridor_c_2d-toi.png",
+      "bytes": 1269486,
+      "sha256": "f026ad4d1f2950b822c0b17ac9d3fe8b4dafc13b7acb1a92735e68bc48157f6f"
+    },
+    {
+      "path": "discipline_office_2d-chieu.png",
+      "bytes": 1356650,
+      "sha256": "459c26745484f64b82d4398cf5e829c74e08a26514bc1bd9f6c4d4eee9b5d078"
+    },
+    {
+      "path": "discipline_office_2d-dem.png",
+      "bytes": 1379286,
+      "sha256": "ca8e5fbd3123dc152909132d33ac05d32ca375bc0f53bef747d3511e9c3cce0d"
+    },
+    {
+      "path": "discipline_office_2d-sang.png",
+      "bytes": 1301879,
+      "sha256": "4b3211924b099a7f1c3470abc24034fb53edd77ce2244bc43262463f9190b559"
+    },
+    {
+      "path": "discipline_office_2d-toi.png",
+      "bytes": 1273693,
+      "sha256": "31db94a203260f206d2ed14dfbaf9fae3764441668e7224f58d2444d31ccb882"
+    },
+    {
+      "path": "home_room_2d-chieu.png",
+      "bytes": 1385393,
+      "sha256": "39766cbb97ce3c163185cac76568c933e49f39eb339f134a594a8468ca747de2"
+    },
+    {
+      "path": "home_room_2d-dem.png",
+      "bytes": 1519204,
+      "sha256": "c8352799712a49504f0ee9463f6008d39de0da78e8c2bd60886d18c2e6097338"
+    },
+    {
+      "path": "home_room_2d-sang.png",
+      "bytes": 1305126,
+      "sha256": "eef8616597bf607875150bcf5564ee08495a4845e4cc43fe815acb071a401f43"
+    },
+    {
+      "path": "home_room_2d-toi.png",
+      "bytes": 1388371,
+      "sha256": "13328c003ccb60fd1e004170b9d68dca03d6f9da3b97f4ed794dbccabdba52a7"
+    },
+    {
+      "path": "logs/bootstrap.log",
+      "bytes": 70,
+      "sha256": "1521e333bb184f816cdbffc18ea8fd077a9e9df48d89a494ee532d515e1dbc75"
+    },
+    {
+      "path": "logs/contracts.log",
+      "bytes": 114,
+      "sha256": "03775f86eb1214d3e87719c3d0c817bdd940fade9ac7c1e0ce65c9bf5be052a3"
+    },
+    {
+      "path": "logs/import.log",
+      "bytes": 1171,
+      "sha256": "dbdb010a986a5f9f0e947bf791cb03a06a91d573f0dd64bfd18c3ba720cec39b"
+    },
+    {
+      "path": "logs/native-dialogue-motion.log",
+      "bytes": 216,
+      "sha256": "d62700445f7a937da801d3fc7e7216e8639e6e3752c3727929672427478af409"
+    },
+    {
+      "path": "logs/native-hd2d-locations.log",
+      "bytes": 204,
+      "sha256": "8886d675c65d1ebd7de51e02bb875f9c786cc0e74a5d2ef727ebddfa12a045fc"
+    },
+    {
+      "path": "logs/native-hd2d.log",
+      "bytes": 194,
+      "sha256": "6d553d70c2169703c91232865a102354546c34fd20aae28fa05122e6b2c0305d"
+    },
+    {
+      "path": "logs/native-interaction.log",
+      "bytes": 200,
+      "sha256": "8eecbdc79feb8b710ddd7b00851bc6429cd98775c882b987295ed1642882f08b"
+    },
+    {
+      "path": "logs/native-side-rooms.log",
+      "bytes": 500,
+      "sha256": "bae51725dee65901b5006aad4a136cbd0b46ccfb55ea8f6821bb95351a9622d8"
+    },
+    {
+      "path": "native-interaction-failed-attempt.log",
+      "bytes": 501,
+      "sha256": "a7e38da3a803a54680dc1d72a25628c25bc2dae8a05aedddfe379a90139a1e75"
+    },
+    {
+      "path": "native-side-rooms-capture.log",
+      "bytes": 496,
+      "sha256": "5409625efb6c4cebb826ee87c53ce5b7b25b842ed065ceaf30bd569148fa4975"
+    },
+    {
+      "path": "report.json",
+      "bytes": 3465,
+      "sha256": "71a1948d688cad1610bd966aa8905b5b419766f32cf01c2eb2185f2cd7956a55"
+    },
+    {
+      "path": "room3_2d-chieu.png",
+      "bytes": 1376926,
+      "sha256": "cfefef9a5ccc9ae900f329dd3ab3b16b1a333534ba2d71092194e31505f2af66"
+    },
+    {
+      "path": "room3_2d-dem.png",
+      "bytes": 1519128,
+      "sha256": "ac1d62fa07622ebc8043c44f418364ef93ed4788e180b1fb17fc408d485635b5"
+    },
+    {
+      "path": "room3_2d-sang.png",
+      "bytes": 1249959,
+      "sha256": "b33d1e90024dd3ab5f476c13361e42f111f59a382b5162e8f78feee2109abb5c"
+    },
+    {
+      "path": "room3_2d-toi.png",
+      "bytes": 1440277,
+      "sha256": "d10593f85b55042311fef85bf7e96ebcc833dc9a24eeceb5dac686ce85735606"
+    },
+    {
+      "path": "saves/slot_1.json",
+      "bytes": 4282,
+      "sha256": "135a5db3853740dc64265e6ad672cbcfbed76ff6da7af3ece8275592b92adf63"
+    },
+    {
+      "path": "school_gate_2d-chieu.png",
+      "bytes": 1273731,
+      "sha256": "49425d2d813c11dc9f91a8c0505f77750ab92a7243eec17940d0a75b91b44122"
+    },
+    {
+      "path": "school_gate_2d-dem.png",
+      "bytes": 1286482,
+      "sha256": "d645aae89488f77cf50b0c4175b92de3c29a5c4ea93faa59bb5524ae4a7dfcee"
+    },
+    {
+      "path": "school_gate_2d-sang.png",
+      "bytes": 1209277,
+      "sha256": "b9dcf2d33b76895a0d8d7afb4e24eb505d49b3b0aff925c50110212311da3a86"
+    },
+    {
+      "path": "school_gate_2d-toi.png",
+      "bytes": 1197889,
+      "sha256": "f67df1da516e49fca8a235adb0e5a987d3ac06b569033100a1c13719e27b4573"
+    },
+    {
+      "path": "sources/content/world/actors.json",
+      "bytes": 2769,
+      "sha256": "fd8ac47138b1bf342ea04f175c37c6bb8207c821e50803b68b8e6a3677b106b6"
+    },
+    {
+      "path": "sources/content/world/locations.json",
+      "bytes": 1601,
+      "sha256": "df42ad797c2608eeefe8741f772d0911287f1a3006b4bb46c98d45c244e2a718"
+    },
+    {
+      "path": "sources/content/world2d/art_manifest_v1.json",
+      "bytes": 2727,
+      "sha256": "81620575cd1cac6f2051bbf0faaf5170dcbdd386ef3ddd3cb02757ec2e01bc7e"
+    },
+    {
+      "path": "sources/content/world2d/lighting/home.json",
+      "bytes": 1124,
+      "sha256": "a3acb671a2a5067004f1386bb901af9a407ce801e05b171274a87a79281b1c5e"
+    },
+    {
+      "path": "sources/content/world2d/lighting/room3.json",
+      "bytes": 1126,
+      "sha256": "e8a4bd335dd359c2d090a4c8347d6de8e3888c2efe36330bd1c22caa1ce02651"
+    },
+    {
+      "path": "sources/content/world2d/lighting/school_day.json",
+      "bytes": 899,
+      "sha256": "7cac6c2f7ab8529a7320cf5add9b85a853d64f00f75eb484c7ac9417508eab66"
+    },
+    {
+      "path": "sources/content/world2d/phase_lighting.json",
+      "bytes": 142,
+      "sha256": "2b979d174efc93e760af3472b8c896d723af25c1c61c78ec26bce3fb3f4e2bdb"
+    },
+    {
+      "path": "sources/content/world2d/rooms/canteen_2d.json",
+      "bytes": 1129,
+      "sha256": "8dda88490bf94f08c80a6a770f4ad2e2df97cae6b9358ef72e56ef80ad2ee183"
+    },
+    {
+      "path": "sources/content/world2d/rooms/class_11a3_2d.json",
+      "bytes": 1144,
+      "sha256": "a09eccc42d29ca2a2832fb3a80f2d39622295b3a0282bc9210fca600e850396d"
+    },
+    {
+      "path": "sources/content/world2d/rooms/corridor_c_2d.json",
+      "bytes": 2033,
+      "sha256": "0e9b30020ed9277b81d75184814a34d16fe0afca5dfbff7994d9a935ecd576fd"
+    },
+    {
+      "path": "sources/content/world2d/rooms/discipline_office_2d.json",
+      "bytes": 1166,
+      "sha256": "789010a5428202ed60bf3b362c89b68d74d310e5281d78e82f36538cc25dd258"
+    },
+    {
+      "path": "sources/content/world2d/rooms/home_room_2d.json",
+      "bytes": 1159,
+      "sha256": "6fe33d57aec98bf47f95ae171830a1c44e1ec723884c775e8b6f0eccc4f14cf3"
+    },
+    {
+      "path": "sources/content/world2d/rooms/room3_2d.json",
+      "bytes": 2139,
+      "sha256": "0a03a1f62e20d7b43682b75d305e90058381104a07df895f1ba825a2da5662ab"
+    },
+    {
+      "path": "sources/content/world2d/rooms/school_gate_2d.json",
+      "bytes": 1408,
+      "sha256": "ec886a1f6c08d6d05d33333ecf8ae878c8220d4f587ea9de0b242edb90801e95"
+    },
+    {
+      "path": "sources/content/world2d/stress/stress_v1.json",
+      "bytes": 4333,
+      "sha256": "16429014a859246707c43c4f0907471eaa5d01caa84c6ca8dcad841f21dbe09d"
+    },
+    {
+      "path": "sources/content/world2d/tuning.json",
+      "bytes": 211,
+      "sha256": "e9edfad6e90c2c8cb3387ef2b4232731e0042573daef4eb7421d14050e0b6af6"
+    },
+    {
+      "path": "sources/project.godot",
+      "bytes": 5200,
+      "sha256": "66f45d02d3262fcf80a79ea2f45849cf059988d82b7d61cc4771cfbf2fc22a3a"
+    },
+    {
+      "path": "sources/src/bootstrap/gameplay/playable.gd",
+      "bytes": 6403,
+      "sha256": "c2d82ced0022bb4387ace85f283cafa5ce4ec86198a642822d8f954bf4a0283f"
+    },
+    {
+      "path": "sources/src/bootstrap/gameplay/playable_rooms.gd",
+      "bytes": 2920,
+      "sha256": "945137c42e380c79d99e91a16afc672d50a4bff63847bdbf104ea0f277dc873f"
+    },
+    {
+      "path": "sources/src/bootstrap/gameplay/playable_world.gd",
+      "bytes": 4954,
+      "sha256": "ccbd8fd335ada933f063ca362992951aa5b1366cf7efe743720d1c5464e3a48d"
+    },
+    {
+      "path": "sources/src/bootstrap/previews/ui_preview.gd",
+      "bytes": 3802,
+      "sha256": "102d9b5c273627ef4028e9e43f7a285880cb3e1b60e76c5a72b0095da9abcb57"
+    },
+    {
+      "path": "sources/src/bootstrap/side_resources.gd",
+      "bytes": 2871,
+      "sha256": "6fc6bf88d309fbb02279163ed5e84959b96595953d078aca5123929593c1b98a"
+    },
+    {
+      "path": "sources/src/domain/gameplay/save_contract.gd",
+      "bytes": 3109,
+      "sha256": "5794d9945b01870c5779f65ac4f03ff59145c955e5965a16e7604e8da1176ebf"
+    },
+    {
+      "path": "sources/src/world/side/side_actor.gd",
+      "bytes": 2033,
+      "sha256": "78ae9db28a4cda0f938bcb609c3d5cd2aabdfc909bd8fca7ed4e816ad1353f73"
+    },
+    {
+      "path": "sources/src/world/side/side_actor.tscn",
+      "bytes": 203,
+      "sha256": "ad16c67a9d425e77bea133ec6e870b9a204c7adc70412a8277d7cb6b65814d6d"
+    },
+    {
+      "path": "sources/src/world/side/side_atmosphere.gd",
+      "bytes": 2028,
+      "sha256": "2bd9bb9995244508dbc948afc52eac712acfd052e7d5ea625c77c6e445b2a23b"
+    },
+    {
+      "path": "sources/src/world/side/side_camera.gd",
+      "bytes": 1475,
+      "sha256": "508cd844661535c7120f2d8760edf4051b0b9107de304d7bbf780e63c28d1bb8"
+    },
+    {
+      "path": "sources/src/world/side/side_doors.gd",
+      "bytes": 1660,
+      "sha256": "b456e4b7f0c97558af5a256ac0555c167caca25d0bfe75cc8ab470c4cb1aa729"
+    },
+    {
+      "path": "sources/src/world/side/side_grade.gdshader",
+      "bytes": 887,
+      "sha256": "3850041ed6ced2d5f2ff7ce2e0f452fb99a504a73b8291986f6c528837bb607f"
+    },
+    {
+      "path": "sources/src/world/side/side_layers.gd",
+      "bytes": 4062,
+      "sha256": "d97c747409e85b7f8ca3c64a747945485f4becbfa0cecb3260cf0172b7a3b9d0"
+    },
+    {
+      "path": "sources/src/world/side/side_lighting.gd",
+      "bytes": 7183,
+      "sha256": "92400ef7032576ac8853b5261c59d9a00b6f87198fd17a5c0b04c01550cdcc13"
+    },
+    {
+      "path": "sources/src/world/side/side_motion.gd",
+      "bytes": 954,
+      "sha256": "25ec7440e490e4d87dabd63bafd8e767e7211334fd7407b65202e048a1101750"
+    },
+    {
+      "path": "sources/src/world/side/side_room.gd",
+      "bytes": 7983,
+      "sha256": "21d9d2ea047478d67493650b8ced31c60bbbb6397eec7f366eeb772efb362050"
+    },
+    {
+      "path": "sources/src/world/side/side_room.tscn",
+      "bytes": 175,
+      "sha256": "f70ee32b57881ab096e0f962b93bbea73e72b4bbfb8594a8cba0337b450be2eb"
+    },
+    {
+      "path": "sources/src/world/side/side_targets.gd",
+      "bytes": 568,
+      "sha256": "8810b2dbbbd056891e498d292d86e4650df0ef62407ae0141622547e583d387b"
+    },
+    {
+      "path": "sources/src/world/side/side_water.gdshader",
+      "bytes": 720,
+      "sha256": "a6863f839e1f897ec8cf882152fe604e9e9bda27a8ee35fb5410622d4ddc5dc9"
+    },
+    {
+      "path": "sources/tests/native_dialogue_motion.gd",
+      "bytes": 8729,
+      "sha256": "ff5d87c1dbce47fff7bec93a980dafa10551f6bdd1451591cdffc8cbbb8bd455"
+    },
+    {
+      "path": "sources/tests/native_hd2d.gd",
+      "bytes": 6540,
+      "sha256": "9d9db885b5800c6737af4f6ca9826965d9103cb314d5ff4443807154a6eacef8"
+    },
+    {
+      "path": "sources/tests/native_hd2d_locations.gd",
+      "bytes": 4916,
+      "sha256": "51ddc6d88a6063ae854b10d7afc76f07c59ac43681853ca4b114b7a7c8e46a5c"
+    },
+    {
+      "path": "sources/tests/native_interaction.gd",
+      "bytes": 10401,
+      "sha256": "681c1292d5726b7c158bd72e14dc99f61264d282d641443a08705a4029ff2c90"
+    },
+    {
+      "path": "sources/tests/native_side_rooms.gd",
+      "bytes": 14068,
+      "sha256": "c6281fa33745f5e66d3f41b898c8d50b59a113a21029bd529746f6b7a539f2e2"
+    },
+    {
+      "path": "sources/tests/test_playable.gd",
+      "bytes": 8693,
+      "sha256": "c51723edd5cff6f8f10c33b860b7211a9d14d7fc5161a6bda2458f3b1dd23e7d"
+    },
+    {
+      "path": "sources/tests/test_saves.gd",
+      "bytes": 13163,
+      "sha256": "111cecd34db61477eeff2414e0aed6424d579d3e62166634daea72dc7cad0e26"
+    },
+    {
+      "path": "sources/tools/verify.py",
+      "bytes": 2842,
+      "sha256": "a7145988230bb5f0d207f328e233ca6fd8c865d1a93624295c9bf99b187cfd36"
+    },
+    {
+      "path": "sources/tools/verify_native.py",
+      "bytes": 2336,
+      "sha256": "c24d6937410b13661c845ee4b3d40e9ab218fc55a33963600efe46cc089942ed"
+    }
+  ]
+}

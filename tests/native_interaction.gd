@@ -11,6 +11,8 @@ var _suite := SUITE.new()
 
 
 func _initialize() -> void:
+	root.set_flag(Window.FLAG_NO_FOCUS, true)
+	root.set_flag(Window.FLAG_MOUSE_PASSTHROUGH, true)
 	_run.call_deferred()
 
 

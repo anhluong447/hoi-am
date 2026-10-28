@@ -37,8 +37,8 @@ static func enter_room(play: Node, room_id: String, spawn_id: String) -> void:
 	var locations := _locations()
 	var current: Dictionary = locations.get(play.controller.location_id, {})
 	var room := _side_room(locations, current, room_id)
-	if not room.is_empty():
-		_mount_side(play, current.rooms_path, room_id, spawn_id, room.location_id)
+	if not room.is_empty() and _mount_side(play, current.rooms_path, room_id, spawn_id, room.location_id):
+		play._refresh()
 
 
 ## World envelope v2: side rooms keep x/facing, HD-2D rooms keep position.
@@ -57,7 +57,7 @@ static func snapshot(play: Node) -> Dictionary:
 ## room default spawn); v1 and old HD-2D rooms of now-side locations use the
 ## location travel spawn. HD-2D positions restore through safe_spawn.
 static func restore(play: Node, world: Dictionary) -> void:
-	if world.has("x") and _restore_side(play, world):
+	if world.get("version") == 2 and world.has("x") and _restore_side(play, world):
 		play.close_modal()
 		return
 	travel(play, world.location_id)

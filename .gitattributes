@@ -119,3 +119,7 @@ docs/reviews/dialogue-motion-2026-10-11/** -text whitespace=-trailing-space,cr-a
 docs/reviews/dialogue-motion-focus-wave-2026-10-11/** -text whitespace=-trailing-space,cr-at-eol
 docs/world-hd2d/evidence/** -text whitespace=-trailing-space,cr-at-eol
 assets/world/coastal/v2/source/** -text whitespace=-trailing-space,cr-at-eol
+
+# Side-scroll native evidence and save fixtures preserve recorded hashes.
+docs/world-side/evidence/e2-greybox-v*/** -text whitespace=-trailing-space,cr-at-eol
+tests/fixtures/saves/** -text whitespace=-trailing-space,cr-at-eol
